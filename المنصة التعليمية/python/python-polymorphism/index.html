@@ -1,0 +1,516 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>تعدد الأشكال في بايثون | Python polymorphism</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>تعدد الأشكال في بايثون</h1>
+<article>
+<h2>مفهوم تعدد الأشكال في بايثون</h2>
+<p>تعدد الأشكال أو بوليمورفيزم <span class="inline">( <span class="word">Polymorphism</span> )</span> هو مجرد أسلوب في كتابة الكود يقصد منه بناء دالة تنفذ أوامر مختلفة على حسب الكائن الذي نمرره لها عند إستدعاءها.<br/>
+	في العادة تعدد الأشكال يكون مرتبط بشكل أساسي بالوراثة حيث تكون الدالة مبنية على أساس الكلاس الأب, و لكننا عند إستدعاءها نمرر لها كائن من إحدى الكلاسات التي ترث منه.</p>
+<p>إذاً, تعدد الأشكال يمكن أن يتحقق بأشكال مختلفة على حسب الكود الذي تبنيه أو تستخدمه.<br/>
+	و أحياناً تجد نفسك تستخدم نفس الدالة مع مصفوفة أو مع نص, فتجد أن طريقة عمل هذه الدالة و ما ترجعه لك يختلف تماماً على حسب نوع الكائن الذي تمرره لها.</p>
+</article>
+<article>
+<h2>دوال جاهزة في بايثون تطبق مبدأ تعدد الأشكال</h2>
+<p>من أبرز الدوال التي نستخدمها و التي تطبق مبدأ تعدد الأشكال هي الدالة <code data-enlighter-language="python">len()</code> التي سبق أن تعاملنا معها في أكثر من درس و لكن كل مرة كنا نستخدمها لسبب مختلف.<br/>
+	فمثلاً, عند تمرير نص لهذه الدالة فإنها ترجع عدد أحرفه. و عند تمرير مصفوفة لهذه الدالة فإنها ترجع عدد عناصرها.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف كائن إسمه <code data-enlighter-language="python">string</code> وضعنا فيه نص عادي, و كائن نوعه <code data-enlighter-language="python">list</code> إسمه <code data-enlighter-language="python">aList</code> وضعنا فيه <span class="number">5</span> عناصر.<br/>
+	بعدها قمنا بطباعة ما سترجعه الدالة <code data-enlighter-language="python">len()</code> في حال تمرير الكائن <code data-enlighter-language="python">string</code> و الكائن <code data-enlighter-language="python">aList</code> لها.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# يحتوي على نص string هنا قمنا بتعريف كائن إسمه
+string = 'Python tutorial for beginners'
+
+# وضعنا فيه مجموعة أعداد صحيحة aList إسمه list هنا قمنا بتعريف
+aList = [10, 20, 30, 40, 50]
+
+# len() الذي سترجعه الدالة string هنا قمنا بعرض عدد أحرف الكائن
+print('Number of characters in string is:', len(string))
+
+# len() الذي سترجعه الدالة aList هنا قمنا بعرض عدد عناصر الكائن
+print('Number of elements in aList is:', len(aList))
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			Number of characters in string is: 29<br/>
+			Number of elements in aList is: 5
+		</div>
+</div>
+<br/>
+<p>إذاً, نلاحظ أنه عند تمرير الكائن <code data-enlighter-language="python">string</code> للدالة <code data-enlighter-language="python">len()</code> قامت بإرجاع عدد أحرفه. و عند تمرير الكائن <code data-enlighter-language="python">aList</code> قامت بإرجاع عدد عناصره. مما يعني أن الدالة <code data-enlighter-language="python">len()</code> تقوم بالتشييك على نوع الكائن الذي يمرر لها و على أساس نوعه تقوم بإرجاع القيمة.</p>
+<br/><br/>
+<h3>معلومة تقنية</h3>
+<p>في بايثون, يوجد دالة جاهزة إسمها <code data-enlighter-language="python">isinstance()</code> يمكن استخدامها لمعرفة ما إذا كان الكائن قد تم إنشاؤه من كلاس معين أم لا.<br/>
+	في حال كان منشئاً منه فإنها ترجع <span class="inline"><code data-enlighter-language="python">True</code>,</span> أما إذا لم يكن منشئاً منه فإنها ترجع <span class="inline"><code data-enlighter-language="python">False</code>.</span></p>
+<br/>
+<p>الآن, بما أن الدالة <code data-enlighter-language="python">len()</code> تقوم بالتشييك على نوع الكائن الذي نمرره لها فهذا يعني أنها على الأرجح معرفة كالتالي.</p>
+<pre data-enlighter-language="python">
+def len(obj):
+	
+	# str هو obj هنا كأننا قلنا: هل نوع الكائن الذي تم تمرير مكان الكائن
+	if isinstance(obj, str):
+		# أي نص, سيتم تنفيذ الكود الخاص بحساب عدد أحرفه و من ثم إرجاعه str إذا كان نوع الكائن الذي تم تمريره للدالة هو
+		
+	# list هو objهنا كأننا قلنا: هل نوع الكائن الذي تم تمرير مكان الكائن
+	elif isinstance(obj, list):
+		# أي مصفوفة, سيتم تنفيذ الكود الخاص بحساب عدد عناصرها و من ثم إرجاعه list إذا كان نوع الكائن الذي تم تمريره للدالة هو
+	</pre>
+</article>
+<article>
+<h2>بناء دالة تطبق مبدأ تعدد الأشكال في بايثون</h2>
+<p>في المثال التالي قمنا بتعريف دالة إسمها <code data-enlighter-language="python">print_sum()</code> مصممة للتعامل مع ثلاث أنواع من الكائنات.</p>
+<ul class="explain">
+<li><p>إذا مررت لها عدد صحيح, أي نوعه <span class="inline"><code data-enlighter-language="python">int</code>,</span> فإنها تقوم بطباعة ناتج جمع الأرقام الموجودة فيه.</p></li>
+<li><p>إذا مررت لها نص يمثل عدد صحيح, أي نوعه <span class="inline"><code data-enlighter-language="python">str</code>,</span> فإنها تقوم بتحويل الأحرف الموجودة فيه لأرقام و من ثم تقوم بطباعة ناتج جمع هذه الأرقام.</p></li>
+<li><p>إذا مررت لها مصفوفة نوعها <code data-enlighter-language="python">list</code> تحتوي على أعداد صحيحة أو نصوص تمثل أعداد صحيحة, فإنها تقوم بطباعة ناتج جمع هذه العناصر.</p></li>
+</ul>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# obj تحتوي على باراميتر إسمه print_sum هنا قمنا بتعريف دالة إسمها
+def print_sum(obj):
+
+	# سنستخدمه عند إجراء أي عملية جمع لذلك قمنا بتجهيزه و إعطاءه القيمة 0 s المتغير 
+    s = 0
+
+	# أي إذا كانت قيمته عبارة عن عدد صحيح ,int إذا كان قيمته نوعها obj الكود التالي مهمته حساب ناتج جمع الأرقام الموجودة في الكائن
+    if isinstance(obj, int):
+        while obj:
+            s += obj % 10
+            obj //= 10
+        print('Sum of digits:', s)
+
+	# أي إذا كانت قيمته عبارة عن نص يمثل عدد صحيح ,str إذا كان قيمته نوعها obj الكود التالي مهمته حساب ناتج جمع الأرقام الموجودة في الكائن
+    elif isinstance(obj, str):
+        for c in obj:
+            s += int(c)
+        print('Sum of characters:', s)
+
+	# أي إذا كانت قيمته عبارة عن مصفوفة ,list إذا كان عبارة عن obj الكود التالي مهمته حساب ناتج جمع قيم العناصر الموجودة في الكائن
+    elif isinstance(obj, list):
+        for e in obj:
+            s += int(e)
+        print('Sum of elements:', s)
+
+	# list أو str أو int ليس obj الكود التالي مهتمه طباعة جملة تنبيه في حال كان نوع قيمة الكائن
+	else:
+		print('This function is not made for this type!')
+		
+
+print_sum(12345)              # و تمرير عدد صحيح لها print_sum() هنا قمنا باستدعاء الدالة
+print_sum('12345')            # و تمرير نص يمثل عدد صحيح لها print_sum() هنا قمنا باستدعاء الدالة
+print_sum([1, 2, 3, 4, 5])    # لها list و تمرير مجموعة أعداد كـ print_sum() هنا قمنا باستدعاء الدالة
+print_sum((1, 2, 3, 4, 5))    # لها tuple و تمرير مجموعة أعداد كـ print_sum() هنا قمنا باستدعاء الدالة
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			Sum of digits: 15<br/>
+			Sum of characters: 15<br/>
+			Sum of elements: 15<br/>
+			This function is not made for this type!
+		</div>
+</div>
+</article>
+<article>
+<h2>تطبيق مبدأ تعدد الأشكال مع الوراثة في بايثون</h2>
+<p>في المثال التالي قمنا بتعريف كلاس مجرّد إسمه <code data-enlighter-language="python">BaseCountry</code> يعتبر الكلاس الأساسي لأي كلاس يمثل بلد و بالتالي أي كلاس سننشئه ليمثل بلد ما يجب أن يرث منه. في هذا الكلاس قمنا بتجهيز <span class="number">3</span> دوال مجرّدة أيضاً.<br/>
+	بعدها قمنا بتعريف كلاس إسمه <code data-enlighter-language="python">Egypt</code> و كلاس إسمه <code data-enlighter-language="python">Australia</code> يرثان من الكلاس <code data-enlighter-language="python">BaseCountry</code> و يفعلان <span class="word">Override</span> لكل الدوال التي ورثوها منه.<br/>
+	بعدها قمنا بإنشاء دالة إسمها <code data-enlighter-language="python">print_country_info()</code> مهمتها إستدعاء جميع الدوال الموجودة في الكائن الذي نمرره لها بشرط أن يكون هذا الكائن قد تم إنشاؤه من كلاس يرث من الكلاس <span class="inline"><code data-enlighter-language="python">BaseCountry</code>.</span></p>
+<p>في الأخير قمنا بإنشاء كائن من الكلاس <code data-enlighter-language="python">Egypt</code> و كائن من الكلاس <code data-enlighter-language="python">Australia</code> و تمرير كل كائن منهما للدالة <span class="inline"><code data-enlighter-language="python">print_country_info()</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">BaseCountry.py</span>
+<pre data-enlighter-language="python">
+# يحتوي على 3 دوال فارغة BaseCountry هنا قمنا بإنشاء كلاس إسمه
+class BaseCountry:
+
+    def name(self):
+        pass
+
+    def capital(self):
+        pass
+
+    def language(self):
+        pass
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Egypt.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه BaseCountry الموجود في الموديول BaseCountry هنا قمنا بتضمين الكلاس
+from BaseCountry import BaseCountry
+
+
+# للدوال الثلاثة الموجودة فيه Override و يفعل BaseCountry يرث من الكلاس Egypt هنا قمنا بإنشاء كلاس فارغ إسمه
+class Egypt(BaseCountry):
+
+    def name(self):
+        print('Country: Egypt')
+
+    def capital(self):
+        print('Capital: Cairo')
+
+    def language(self):
+        print('Language: Arabic')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Australia.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه BaseCountry الموجود في الموديول BaseCountry هنا قمنا بتضمين الكلاس
+from BaseCountry import BaseCountry
+
+
+# للدوال الثلاثة الموجودة فيه Override و يفعل BaseCountry يرث من الكلاس Australia هنا قمنا بإنشاء كلاس فارغ إسمه
+class Australia(BaseCountry):
+
+    def name(self):
+        print('Country: Australia')
+
+    def capital(self):
+        print('Capital: Canberra')
+
+    def language(self):
+        print('Language: English')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع التعامل معهم Australia و Egypt ,BaseCountry هنا قمنا بتضمين الكلاسات
+from BaseCountry import BaseCountry
+from Egypt import Egypt
+from Australia import Australia
+
+
+# obj عند استدعاء هذه الدالة, إذا كان الكائن الذي تم تمريره مكان الباراميتر .obj فيها باراميتر واحد إسمه print_country_info هنا قمنا بتعريف دالة إسمها
+# else سيتم إستدعاء الدوال الثلاثة الموجودة فيه. و إن لم يكن كذلك سيتم تنفيذ أمر الطباعة الموضوع في الجملة BaseCountry أصله كائن من كلاس يرث من الكلاس
+def print_country_info(obj):
+    if isinstance(obj, BaseCountry):
+        obj.name()
+        obj.capital()
+        obj.language()
+    else:
+        print('You should pass an object of type BaseCountry')
+    print('----------------------------------------------')
+
+
+# australia إسمه Australia و كائن من الكلاس egypt إسمه Egypt هنا قمنا بإنشاء كائن من الكلاس
+egypt = Egypt()
+australia = Australia()
+
+# لكي يتم إستدعاء الدوال الثلاثة منهم australia و egypt و مررنا لها الكائنين print_country_info() هنا قمنا باستدعاء الدالة
+print_country_info(egypt)
+print_country_info(australia)
+
+# else و تمرير نص عادي لها. لاحظ كيف أنها ستقوم بتنفيذ أمر الطباعة الموضوع في الجملة print_country_info() هنا قمنا باستدعاء الدالة
+print_country_info('A string object')
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			Country: Egypt<br/>
+			Capital: Cairo<br/>
+			Language: Arabic<br/>
+			----------------------------------------------<br/>
+			Country: Australia<br/>
+			Capital: Canberra<br/>
+			Language: English<br/>
+			----------------------------------------------<br/>
+			You should pass an object of type BaseCountry<br/>
+			----------------------------------------------
+		</div>
+</div>
+</article>
+<article>
+<h2>تطبيق مبدأ تعدد الأشكال مع المصفوفات و مع الوراثة في بايثون</h2>
+<p>في المثال التالي قمنا بتعريف كلاس مجرّد إسمه <code data-enlighter-language="python">BaseCountry</code> يعتبر الكلاس الأساسي لأي كلاس يمثل بلد و بالتالي أي كلاس سننشئه ليمثل بلد ما يجب أن يرث منه. في هذا الكلاس قمنا بتجهيز <span class="number">3</span> دوال مجرّدة أيضاً.<br/>
+	بعدها قمنا بتعريف كلاس إسمه <code data-enlighter-language="python">Egypt</code> و كلاس إسمه <code data-enlighter-language="python">Australia</code> يرثان من الكلاس <code data-enlighter-language="python">BaseCountry</code> و يفعلان <span class="word">Override</span> لكل الدوال التي ورثوها منه.</p>
+<p>في الأخير قمنا بإنشاء كائن من الكلاس <code data-enlighter-language="python">Egypt</code> و كائن من الكلاس <code data-enlighter-language="python">Australia</code> و من ثم وضعناهما في <code data-enlighter-language="python">list</code> إسمه <span class="inline"><code data-enlighter-language="python">countries</code>.</span><br/>
+	و بعدها قمنا بإنشاء حلقة تمر على جميع الكائنات الموضوعة في الكائن و تستدعي الدوال الثلالثة من كل كائن تم إنشاؤه من كلاس يرث من الكلاس <span class="inline"><code data-enlighter-language="python">BaseCountry</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">BaseCountry.py</span>
+<pre data-enlighter-language="python">
+# يحتوي على 3 دوال فارغة BaseCountry هنا قمنا بإنشاء كلاس إسمه
+class BaseCountry:
+
+    def name(self):
+        pass
+
+    def capital(self):
+        pass
+
+    def language(self):
+        pass
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Egypt.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه BaseCountry الموجود في الموديول BaseCountry هنا قمنا بتضمين الكلاس
+from BaseCountry import BaseCountry
+
+
+# للدوال الثلاثة الموجودة فيه Override و يفعل BaseCountry يرث من الكلاس Egypt هنا قمنا بإنشاء كلاس فارغ إسمه
+class Egypt(BaseCountry):
+
+    def name(self):
+        print('Country: Egypt')
+
+    def capital(self):
+        print('Capital: Cairo')
+
+    def language(self):
+        print('Language: Arabic')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Australia.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه BaseCountry الموجود في الموديول BaseCountry هنا قمنا بتضمين الكلاس
+from BaseCountry import BaseCountry
+
+
+# للدوال الثلاثة الموجودة فيه Override و يفعل BaseCountry يرث من الكلاس Australia هنا قمنا بإنشاء كلاس فارغ إسمه
+class Australia(BaseCountry):
+
+    def name(self):
+        print('Country: Australia')
+
+    def capital(self):
+        print('Capital: Canberra')
+
+    def language(self):
+        print('Language: English')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع التعامل معهم Australia و Egypt ,BaseCountry هنا قمنا بتضمين الكلاسات
+from BaseCountry import BaseCountry
+from Egypt import Egypt
+from Australia import Australia
+
+
+# australia إسمه Australia و كائن من الكلاس egypt إسمه Egypt هنا قمنا بإنشاء كائن من الكلاس
+egypt = Egypt()
+australia = Australia()
+
+# countries قمنا بتسميته list في australia و egypt هنا قمنا بوضع الكائنين
+countries = [egypt, australia]
+
+# country و في كل مرة تخزن كائن واحد في الكائن countries هنا قمنا بإنشاء حلقة تمر على كل عنصر ( أي كائن ) في الكائن
+# سيتم إستدعاء الدوال الثلاثة الموجودة فيه BaseCountry أصله كائن من كلاس يرث من الكلاس country إذا كان
+for country in countries:
+    if isinstance(country, BaseCountry):
+        country.name()
+        country.capital()
+        country.language()
+        print('------------------')
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			Country: Egypt<br/>
+			Capital: Cairo<br/>
+			Language: Arabic<br/>
+			------------------<br/>
+			Country: Australia<br/>
+			Capital: Canberra<br/>
+			Language: English<br/>
+			------------------
+		</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

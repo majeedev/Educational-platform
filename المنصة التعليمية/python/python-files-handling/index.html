@@ -1,0 +1,607 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس شرحنا طريقة التعامل مع الملفات, ستتعلم كيف تنشئ ملف جديد و كيف تقوم بإنشاء نسخ من الملف و عرض محتوى المجلد و الكثير من الأشياء الأخرى. وضعنا أمثلة شاملة ستساعدك كثيراً في الفهم" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>التعامل مع الملفات في بايثون</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>التعامل مع الملفات في بايثون</h1>
+<article>
+<h2>معالجة الملفات في بايثون</h2>
+<p>التعامل مع الملفات أو معالجة الملفات <span class="inline">( <span class="word">Files Handling</span> )</span> يقصد منها إجراء عملية ما على الملفات على مختلف انواعها <span class="inline">( مثل <span class="word">txt</span> - <span class="word">jpg</span> - <span class="word">mp4</span> ).</span><br/>
+	في هذا الدرس ستتعلم كيف تقرأ محتوى ملف, كيف تنشئ نسخة منه, كيف تعدل محتواه, كيف تحذفه إلخ..</p>
+</article>
+<article>
+<h2>الدالة <code data-enlighter-language="python">open()</code> في بايثون</h2>
+<p>هذه الدالة هي من الدوال الجاهزة في بايثون و هي تستخدم لإنشاء ملف جديد أو لفتح الملف الذي سيتم التعامل معه.<br/>
+	في حال تم إنشاء الملف بشكل صحيح أو تم فتح الملف بشكل صحيح ترجع كائن <code data-enlighter-language="python">file</code> يتيح لك التعامل معه.<br/>
+	في حال لم تستطع إنشاء الملف أو الوصول إليه ترمي إستثناء.</p>
+<br/>
+<h3>بناؤها</h3>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None)
+	</pre>
+<br/>
+<ul class="explain">
+<li><p>مكان البارميتر <code data-enlighter-language="python">file</code> نمرر نص يمثل إسم الملف الذي سيتم إنشاؤه أو التعامل معه.</p></li>
+<li><p><code data-enlighter-language="python">mode</code> هو باراميتر إختياري, نمرر مكانه حرف <span class="inline">( أو أكثر )</span> يمثل كيف سنتعامل مع الملف, مثل: هل تنوي القراءة منه أو الكتابة فيها إلخ..</p></li>
+<li><p><code data-enlighter-language="python">buffering</code> هو باراميتر إختياري, يمكنك أن تمرر مكانه رقم يحدد كيف سيتم تخزين الأحرف بشكل مؤقت في الذاكرة أثناء الكتابة أو القراءة من الملف.</p></li>
+<li><p><code data-enlighter-language="python">encoding</code> هو باراميتر إختياري, يمكنك أن تمرر مكانه إسم الترميز الذي يجب استخدامه عند التعامل مع الملف.</p></li>
+<li><p><code data-enlighter-language="python">errors</code> هو باراميتر إختياري, يمكنك أن تمرر مكانه كلمة لتحدد كيف سيتم التعامل مع الأخطاء التي قد تحدث عند التعامل مع الملف.</p></li>
+<li><p><code data-enlighter-language="python">newline</code> هو باراميتر إختياري, يمكنك أن تمرر مكانه الرمز الذي يمثل نهاية كل سطر في الملف و الذي يجعل النص الذي يوضع بعضه ينزل على سطر جديد.</p></li>
+</ul>
+<br/><br/>
+<p>أهم باراميتر إختياري في هذه الدالة هو الباراميتر <code data-enlighter-language="python">mode</code> لأنه كما سبق و قلنا أن الحرف الذي نمرره مكانه يحدد الهدف من فتح الملف.<br/>
+	في الجدول التالي وضعنا كل الحروف التي يمكن تمريرها مكان هذا الباراميتر.</p>
+<table class="list">
+<tr>
+<th>الحرف</th>
+<th>معناه</th>
+<th>مثال</th>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">'r'</code></td>
+<td>يعتبر إختصار للكلمة <span class="inline"><span class="word">Read</span>,</span> و هو يستخدم لفتح الملف من أجل القراءة منه.<br/>
+			كما أنه <span class="inline">الـ <span class="word">Mode</span></span> الإفتراضي للملف الذي تفتحه.</td>
+<td><a class="open-page center" href="open-r.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">'w'</code></td>
+<td>يعتبر إختصار للكلمة <span class="inline"><span class="word">Write</span>,</span> و هو يستخدم لفتح الملف من أجل الكتابة فيه.<br/>
+			و في حال لم يكن الملف المراد الكتابة فيه موجوداً أصلاً, سيتم إنشاؤه.<br/>
+<span class="note">ملاحظة:</span> هذا الحرف يقوم بحذف النص الذي كان موجوداً في الملف في حال لم يكن فارغاَ.</td>
+<td><a class="open-page center" href="open-w.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">'a'</code></td>
+<td>يعتبر إختصار للكلمة <span class="inline"><span class="word">Append</span>,</span> و هو يستخدم لفتح الملف من أجل الكتابة في آخره. أي لإضافة نص جديد على النص الموجود في الملف.<br/>
+			و في حال لم يكن الملف المراد الكتابة فيه موجوداً أصلاً, سيتم إنشاؤه.</td>
+<td><a class="open-page center" href="open-a.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">'x'</code></td>
+<td>يعتبر إختصار للكلمة <span class="inline"><span class="word">Create</span>,</span> و هو يستخدم لإنشاء ملف جديد فقط في حال لم يكن موجوداً.</td>
+<td><a class="open-page center" href="open-x.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">'t'</code></td>
+<td>يعتبر إختصار للكلمة <span class="inline"><span class="word">Text</span>,</span> و هو يستخدم لتحديد أن محتوى الملف عبارة عن نص عادي.<br/>
+			كما أنه <span class="inline">الـ <span class="word">Mode</span></span> الإفتراضي للملف الذي تفتحه.</td>
+<td><a class="open-page center" href="open-t.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">'b'</code></td>
+<td>يعتبر إختصار للكلمة <span class="inline"><span class="word">Binary</span>,</span> و هو يستخدم لتحديد أن محتوى الملف عبارة عن <span class="word">Binary</span>, أي أحرف لا يمكن أن يفهمها الإنسان العادي.<br/>
+			هذا <span class="inline">الـ <span class="word">Mode</span></span> نستخدمه عند التعامل مع الملفات الغير نصية مثل الصور, الفيدوهات, التسجيلات الصوتية إلخ..<br/>
+<span class="note">ملاحظة:</span> المثال سيعلمك طريقة إنشاء نسخة من أي ملف.</td>
+<td><a class="open-page center" href="open-b.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">'+'</code></td>
+<td>يعتبر إختصار للكلمتين <span class="inline"><span class="word">Read &amp; Write</span>,</span> و هو يستخدم لفتح الملف مع إمكانية القراءة منه و الكتابة فيه في نفس الوقت.
+			</td>
+<td><a class="open-page center" href="open-plus.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>الأحرف المذكورة في الجدول يمكن دمجها مع بعضها, أي يمكنك تحديد أكثر من <span class="word">Mode</span> في وقت واحد.<br/>
+		فمثلاً يمكنك كتابة <code data-enlighter-language="python">'wb'</code> من أجل فتح ملف جديد و وضع فيه نص نوعه <span class="word">Binary</span> كما نفعل في حال أردنا نسخ صورة على سبيل المثال.</p>
+</div>
+<br/>
+<p>في المثال التالي قمنا بإنشاء ملف نصي جديد إسمه <code data-enlighter-language="python">demo.txt</code> في نفس المشروع الذي نعمل فيه.<br/>
+	بعدها قمنا كتابة السطر التالي بداخله <span class="inline"><code data-enlighter-language="python">Python is an easy language to learn.</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# لكي يتم إنشاء الملف و لنستطيع الكتابة فيه أيضاً 'w' و وضعنا الرمز 'demo.txt' هنا قمنا بإنشاء كائن يشير لملف إسمه
+opened_file = open('demo.txt', 'w')
+
+# للكتابة في الملف الذي يشير إليه opened_file من الكائن write() هنا قمنا باستدعاء الدالة
+opened_file.write('Python is an easy language to learn.')
+
+# لإغلاق الإتصال مع الملف المفتوح في الذاكرة opened_file من الكائن close() هنا قمنا باستدعاء الدالة
+opened_file.close()
+		</pre>
+<p><span class="point">•</span>بعد تشغيل الملف <code data-enlighter-language="python">Test.py</code> سيتم إنشاء ملف إسمه <code data-enlighter-language="python">demo.txt</code> في نفس المشروع الذي نعمل فيه و بداخله النص التالي.</p>
+<div class="code-box">
+			Python is an easy language to learn.
+		</div>
+</div>
+</article>
+<article>
+<h2>دوال القراءة و الكتابة في الملفات في بايثون</h2>
+<p>بعد فتح الملف الذي تريد التعامل معه بنجاح بواسطة الدالة <code data-enlighter-language="python">open()</code> يصبح بإمكانك استخدام الدوال التالية من الكائن الذي سترجعه هذه الدالة.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">write(string)</code></span>
+			تستخدم للكتابة في الكائن الذي يمثل الملف المفتوح الذي قام باستدعائها.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">string</code> نمرر النص الذي نريد أن يتم كتابته في الملف.<br/>
+<a class="open-page center" href="file-write.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">writelines(aList)</code></span>
+			تستخدم لكتابة مجموعة نصوص مخزنة في <code data-enlighter-language="python">list</code> في الكائن الذي يمثل الملف المفتوح الذي قام باستدعائها.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">lines</code> نمرر كائن <code data-enlighter-language="python">aList</code> فيه مجموعة النصوص التي نريد أن يتم كتابتها بنفس الترتيب في الملف.<br/>
+<a class="open-page center" href="file-writelines.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">read(n = -1)</code></span>
+			تستخدم للقراءة من الكائن الذي يمثل الملف المفتوح الذي قام باستدعائها.<br/>
+			إذا قمت باستدعائها و لم تمرر لها أي رقم, سترجع كل النص الموجود في الملف دفعة واحد.<br/>
+<code data-enlighter-language="python">n</code> هو باراميتر إختياري يمكنك أن تمرر مكانه رقم يمثل عدد الأحرف التي تريد قراءتها من الملف في حال لم ترد أن تقرأ كل محتوى الملف دفعة واحدة. مع الإشارة إلى أنك في كل مرة تقوم فيها باستدعائها ستعطيك الأحرف التالية الموجودة في الملف.<br/>
+<a class="open-page center" href="file-read.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">readline(limits = -1)</code></span>
+			تستخدم للقراءة سطراً سطراً من الكائن الذي يمثل الملف المفتوح الذي قام باستدعائها.<br/>
+			إذا قمت باستدعائها و لم تمرر لها أي رقم, سترجع السطر التالي الموجود في الملف.<br/>
+<code data-enlighter-language="python">n</code> هو باراميتر إختياري يمكنك أن تمرر مكانه رقم يمثل عدد الأحرف التي تريد قراءتها من السطر التالي في الملف في حال لم ترد أن تقرأ كل محتوى السطر دفعة واحدة. مع الإشارة إلى أنك في كل مرة تقوم فيها باستدعائها ستعطيك الأحرف الموجودة حتى نهاية السطر الحالي في الملف.<br/>
+<a class="open-page center" href="file-readline.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">readlines(limits = -1)</code></span>
+			تستخدم لإرجاع نسخة من النص الموجود في الكائن الذي يمثل الملف المفتوح الذي قام باستدعائها ككائن <span class="inline"><code data-enlighter-language="python">list</code>.</span><br/>
+			كل عنصر في كائن <span class="inline">الـ <code data-enlighter-language="python">list</code></span> الذي ترجعه يمثل سطر موجود في الملف.<br/>
+			إذا قمت باستدعائها و لم تمرر لها أي رقم, سيتم وضع كل الأحرف الموجودة على كل سطر في الملف في عنصر من عناصر الكائن <span class="inline">الـ <code data-enlighter-language="python">list</code>.</span><br/>
+<code data-enlighter-language="python">n</code> هو باراميتر إختياري يمكنك أن تمرر مكانه رقم يمثل عدد الأحرف التي تريد قراءتها من كل سطر في الملف في حال لم ترد أن تقرأ كل محتوى السطر.<br/>
+<a class="open-page center" href="file-readlines.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">tell()</code></span>
+			ترجع رقم آخر حرف في الملف تم الوصول إليه أثناء القراءة من الملف عن طريق الكائن الذي يمثل هذا الملف.<br/>
+<a class="open-page center" href="file-tell.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">seek(offset, from_what=0)</code></span>
+			أثناء القراءة من الملف عن طريق الكائن الذي يمثل هذا الملف, يمكنك إستخدام هذه الدالة في حال أردت الرجوع إلى الوراء في الملف لقراءة الملف من جديد على سبيل المثال.<br/>
+<code data-enlighter-language="python">from_what</code> هو باراميتر إختياري يمكنك أن تمرر إحدى الأرقام التالية مكانه:<br/>
+<ul class="explain">
+<li><p>الرقم <span class="number">0</span> إذا أردت الرجوع إلى أول حرف في الملف.</p></li>
+<li><p>الرقم <span class="number">1</span> إذا أردت البقاء عند حرف الحالي الذي وصلت إليه في الملف.</p></li>
+<li><p>الرقم <span class="number">2</span> إذا أردت الذهاب إلى آخر حرف في الملف.</p></li>
+</ul>
+			مكان الباراميتر <code data-enlighter-language="python">offset</code> تمرر رقم يمثل بعد كم حرف نسبة للبراميتر <code data-enlighter-language="python">from_what</code> تريد أن تبدأ.<br/>
+<b>مثال:</b> إذا قمت باستدعاء الدالة هكذا <code data-enlighter-language="python">seek(0,0)</code> أو هكذا <code data-enlighter-language="python">seek(0)</code> فهذا يعني أنك تريد العودة إلى أول حرف في الملف.<br/>
+<a class="open-page center" href="file-seek.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">close()</code></span>
+			تستخدم لإغلاق الإتصال مع الملف و تنظيف الذاكرة من كل ما له علاقة بهذا الملف.<br/>
+<span class="note">ملاحظة:</span> في حال قمت بفتح الملف بالأساس بواسطة الجملة <code data-enlighter-language="python">with</code> فلا داعي لإغلاق الملف لأنها تقوم بإغلاقه بشكل تلقائي عنك.<br/>
+<a class="open-page center" href="file-close.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>خصائص الملفات في بايثون</h2>
+<p>بالإضافة إلى الدوال السابقة, يصبح بإمكانك الإستفادة من الخصائص التالية من الكائن الذي ترجعه الدالة <span class="inline"><code data-enlighter-language="python">open()</code>.</span></p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الخاصية مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">name</code></span>
+			ترجع إسم الملف الذي يمثله الكائن.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">mode</code></span>
+			ترجع الحرف أو الأحرف المستخدمة لتحديد الهدف من فتح الملف.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">encoding</code></span>
+			ترجع إسم الترميز المستخدم في الملف الذي يمثله الكائن.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">closed</code></span>
+			تستخدم لمعرفة ما إذا كان الكائن الذي يمثل الملف لا يزال مفتوح أم تم إغلاقه.<br/>
+			ترجع <code data-enlighter-language="python">True</code> إن كان كذلك, إن لم يكن كذلك ترجع <span class="inline"><code data-enlighter-language="python">False</code>.</span></td>
+</tr>
+</table>
+<br/><br/>
+<p>في المثال التالي قمنا بإنشاء كائن يشير للملف <code data-enlighter-language="python">demo.txt</code> الذي أنشأناه سابقاً.<br/>
+	بعدها قمنا بعرض خصائص هذا الكائن و التي بدورها تعتبر خصائص الملف نفسه.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# 'demo.txt' هنا قمنا بإنشاء كائن يشير لملف إسمه
+opened_file = open('demo.txt')
+
+# الذي يشير للملف المفتوح في الذاكرة opened_file هنا قمنا بعرض كل خصائص الكائن
+print('File Name:', opened_file.name)
+print('Access Mode:', opened_file.mode)
+print('Encoding Type:', opened_file.encoding)
+print('Is File closed:', opened_file.closed)
+
+# لإغلاق الإتصال مع الملف المفتوح في الذاكرة opened_file من الكائن close() هنا قمنا باستدعاء الدالة
+opened_file.close()
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test.py</code>.</span></p>
+<div class="code-box">
+			File Name: demo.txt<br/>
+			Access Mode: w<br/>
+			Encoding Type: cp1252<br/>
+			Is File closed: False
+		</div>
+</div>
+</article>
+<article>
+<h2>الموديول <code data-enlighter-language="python">os</code> في بايثون</h2>
+<p><code data-enlighter-language="python">os</code> هو موديول جاهز في بايثون يتيح لك إعادة تسمية الملفات, مسح الملفات, إنشاء مجلدات, مسح مجلدات, التنقل بين المجلدات إلخ..</p>
+<p>لإستخدام هذا الموديول يجب تضمينه كالتالي.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+import os
+	</pre>
+<br/><br/>
+<p>الجدول التالي يحتوي على دوال الموديول <code data-enlighter-language="python">os</code> الأكثر استخداماً.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">os.rename(current_file_name, new_file_name)</code></span>
+			تستخدم لتغيير إسم الملف.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">current_file_name</code> نمرر إسم الملف الذي نريد تغيير إسمه.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">new_file_name</code> نمرر الإسم الجديد الذي نريد وضعه للملف.<br/>
+<a class="open-page center" href="os-rename.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">os.remove(file_name)</code></span>
+			تستخدم لمسح الملف.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">file_name</code> نمرر إسم الملف الذي نريد حذفه.<br/>
+<a class="open-page center" href="os-remove.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">os.path.exists(file_name)</code></span>
+			تستخدم لمعرفة ما إن كان الملف موجوداً أم لا.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">file_name</code> نمرر إسم الملف الذي نريد التأكد ما إن كان موجوداً أم لا.<br/>
+			ترجع <code data-enlighter-language="python">True</code> إذا كان الملف موجوداً. و ترجع <code data-enlighter-language="python">False</code> إن لم يكن كذلك.<br/>
+<a class="open-page center" href="os-path-exists.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">os.mkdir(directory_name)</code></span>
+			تستخدم لإنشاء مجلد جديد.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">directory_name</code> نمرر إسم المجلد الذي نريد إنشاؤه.<br/>
+<b>معلومة:</b> إسم الدالة هو إختصار لجملة <span class="inline"><span class="word">Make Directory</span>.</span><br/>
+<a class="open-page center" href="os-mkdir.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">os.rmdir(directory_name)</code></span>
+			تستخدم لمسح المجلد.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">directory_name</code> نمرر إسم المجلد الذي نريد حذفه.<br/>
+<span class="note">ملاحظة:</span> يمكنك حذف المجلد في حال كان فارغاً فقط, أي في حال لم يكن يحتوي على أي ملف بداخله.<br/>
+<b>معلومة:</b> إسم الدالة هو إختصار لجملة <span class="inline"><span class="word">Remove Directory</span>.</span><br/>
+<a class="open-page center" href="os-rmdir.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">os.getcwd()</code></span>
+			تستخدم لمعرفة إسم المجلد الذي تقف بداخله حالياً.<br/>
+<b>معلومة:</b> إسم الدالة هو إختصار لجملة <span class="inline"><span class="word">Get Current Working Directory</span>.</span><br/>
+<a class="open-page center" href="os-getcwd.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>البلوك <code data-enlighter-language="python">with</code> في بايثون</h2>
+<p>يمكنك الإستفادة من إستخدام أسلوب البلوك <code data-enlighter-language="python">with</code> في حال أردت أن يتم إغلاق الملفات التي تفتحها في برامجك بشكل تلقائي و بدون الحاجة لإستدعاء الدالة <span class="inline"><code data-enlighter-language="python">close()</code>.</span></p>
+<br/>
+<p>طريقة تعريف البلوك <span class="inline"><code data-enlighter-language="python">with</code>:</span></p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+with expression [as variable]:
+    #with-block
+	</pre>
+<br/>
+<ul class="explain">
+<li><p><span class="inline"><code data-enlighter-language="python">expression</code>:</span> نضع مكانه الأمر الذي سيرجع لنا كائن يشير الملف الذي تم فتحه في الذاكرة.</p></li>
+<li><p><span class="inline"><code data-enlighter-language="python">variable</code>:</span> نضع مكانه إسم الكائن الذي نريد من خلاله أن نتعامل مع الملف الذي تم فتحه في الذاكرة.</p></li>
+<li><p><span class="inline"><code data-enlighter-language="python">#with-block</code>:</span> مكان هذا التعليق نضع الأوامر التي نريد تنفيذها بعد أن تم فتح الملف بنجاح.</p></li>
+</ul>
+<br/><br/>
+<p>في المثال التالي قمنا بفتح ملف و قراءة النص الموجود فيه بدون الحاجة لإغلاقه عند الإنتهاء منه لأننا وضعنا الكود بداخل بلوك الكلمة <span class="inline"><code data-enlighter-language="python">with</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# بعدها قمنا بطباعة النص الموجود فيه 'demo.txt' يشير للملف opened_file هنا قمنا بإنشاء كائن إسمه
+with open('demo.txt', 'r') as opened_file:
+	print(opened_file.read())
+
+# هنا قمنا بطباعة ما إن كان الملف لا يزال مفتوحاً في الذاكرة أم أنه تم إغلاقه
+print('Is File Closed:', opened_file.closed)
+		</pre>
+<p><span class="point">•</span>بعد تشغيل الملف <code data-enlighter-language="python">Test.py</code> سيتم طباعة كل النص الموجود في الملف <code data-enlighter-language="python">demo.txt</code> الذي إفترضنا أننا أنشأناه سابقاً في نفس المشروع الذي نعمل فيه.<br/>
+<span class="point">•</span>نلاحظ أن الدالة <code data-enlighter-language="python">closed()</code> أرجعت القيمة <code data-enlighter-language="python">True</code> و هذا يعني أنه تم إغلاق الملف من الذاكرة بشكل تلقائي عند إنتهاء البلوك <span class="inline"><code data-enlighter-language="python">with</code>.</span></p>
+<div class="code-box">
+			Python is an easy language to learn.<br/>
+			Is File Closed: True
+		</div>
+</div>
+</article>
+<article>
+<h2>تخزين أحرف عربية في الملف في بايثون</h2>
+<p>إذا حاولت كتابة أحرف عربية في ملف و لم تحدد أن نوع الترميز المستخدم عند التعامل مع الملف هو <span class="word">utf-8</span> سيظهر أمامك الخطأ <span class="inline"><span class="code red">'charmap' codec can't encode</span>.</span><br/>
+	و إذا حاولت قراءة نص عربي موجود في ملف و لم تحدد نوع الترميز ستلاحظ أن النص يظهر بشكل غير مفهوم كالتالي <span class="inline"><code data-enlighter-language="python">Ø§Ù„Ø³Ù„Ø§Ù… Ø¹Ù„ÙŠÙƒÙ…</code>.</span></p>
+<br/>
+<p>في المثال التالي قمنا بإنشاء ملف إسمه <code data-enlighter-language="python">arabic.txt</code> قمنا بتخزين نص عربي فيه و بعدها قمنا بقراءة النص الموجود فيه.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# 'Test.py' سيتم إنشاؤه في نفس المشروع بجانب الملف 'arabic.txt' يشير لملف جديد إسمه opened_file هنا قمنا بإنشاء كائن إسمه
+# لنستطيع التعامل مع الأحرف العربية 'utf-8' حتى يتم إنشاء الملف و يكون لدينا القدرة على الكتابة و القراءة منه في نفس الوقت. كما أننا حددنا نوع الترميز هو 'w+' وضعنا الرمز
+opened_file = open('arabic.txt', 'w+', encoding='utf-8')
+
+# لكتابة نص جديد في الملف الذي يشير إليه و لاحظ أننا أدخلنا نص عربي  opened_file من الكائن write() هنا قمنا باستدعاء الدالة
+opened_file.write('السلام عليكم و رحمة الله و بركاته')
+
+# للعودة لأول الملف seek() هنا قمنا باستدعاء الدالة
+opened_file.seek(0,0)
+
+# الذي يشير للملف المفتوح حتى ترجع كل النص الموجود فيه, بعدها قمنا بطباعة النص الذي سترجعه opened_file من الكائن read() هنا قمنا باستدعاء الدالة
+print(opened_file.read())
+
+# لإغلاق الإتصال مع الملف المفتوح في الذاكرة opened_file من الكائن close() هنا قمنا باستدعاء الدالة
+opened_file.close()
+		</pre>
+<p><span class="point">•</span>بعد تشغيل الملف <code data-enlighter-language="python">Test.py</code> سيتم إنشاء الملف <code data-enlighter-language="python">arabic.txt</code> و تخزين النص العربي بداخله. أيضاً سيتم طباعة النص العربي الموجود في الأساس بداخل الملف كالتالي.</p>
+<div class="code-box">
+			السلام عليكم و رحمة الله و بركاته
+		</div>
+</div>
+</article>
+<article>
+<h2>التعامل مع الملفات بطريقة آمنة في بايثون</h2>
+<p>عند التعامل مع الملفات قد تواجهك عدة مشاكل قد يكون سببها نظام التشغيل أو المستخدم.<br/>
+	لذلك عليك دائماً حماية الكود الذي من خلاله ستتعامل مع الملفات بالجمل <code data-enlighter-language="python">try.. except</code> التي شرحناها سابقاً.</p>
+<br/>
+<p>بعض المشاكل التي قد تحدث معك أثناء التعامل مع الملفات:</p>
+<ul class="explain">
+<li><p>إذا كان مسار الملف الذي تريد التعامل معه مذكور بشكل غير صحيح.</p></li>
+<li><p>إذا كنت تحاول قراءة محتوى ملف غير موجود أصلاً أو تم مسحه.</p></li>
+<li><p>إذا كنت تريد الكتابة بالعربية و لم تحدد أن نوع الترميز الذي يجب أن يستخدم هو <span class="inline"><code data-enlighter-language="python">'utf-8'</code>.</span></p></li>
+<li><p>إذا كنت تحاول التعامل مع صورة أو فيديو و لم تحدد أن نوع هذا الملف هو <span class="word">Binary</span> كما شرحنا قبل قليل.</p></li>
+<li><p>إذا كان الملف عليه صلاحية القراءة فقط <span class="inline">( <span class="word">Read Only</span> )</span> لا يمكنك تعديل النص الموجود فيه بأي شكل أو مسح الملف نفسه من الحاسوب.</p></li>
+<li><p>في حال كنت تريد إنشاء مجلد أو ملف و لم تكن تملك الصلاحيات التي تخولك لذلك. فمثلاً في نظام ويندوز لا تستطيع إنشاء ملف على المسار <span class="word">C:\</span> إذا لم تكن تملك صلاحيات مدير النظام.</p></li>
+</ul>
+<br/>
+<p>في المثال التالي سنقوم بفتح الملف و التعامل معه بداخل بلوك <code data-enlighter-language="python">try.. except</code> لضمان أن لا تحدث أي مشكلة تؤدي إلى تعليق البرنامج و لعرض أي خطأ قد يحدث أيضاً.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# من أجل عرض النص الموجود فيه 'harmash.txt' هنا حاولنا إيجاد و فتح ملف إسمه
+try:
+    opened_file = open('harmash.txt', 'r')
+    print(opened_file.read())
+    opened_file.close()
+
+# و من ثم عرضها كنص عادي ex بما أنه لا يوجد هكذا ملف في المشروع, سيتم تخزين معلومات الخطأ الذي حدث في الكائن
+except Exception as ex:
+    print(ex)
+	
+print('Program still work properly')
+		</pre>
+<p><span class="point">•</span>بعد تشغيل الملف <code data-enlighter-language="python">Test.py</code> سيتم طباعة المشكلة التي حدثت أثناء محاولة القراءة من الملف كنص عادي و لن يؤدي ذلك إلى تعليق البرنامج.</p>
+<div class="code-box">
+			[Errno 2] No such file or directory: 'harmash.txt'<br/>
+			Program still work properly
+		</div>
+</div>
+<br/><br/>
+<p>هنا قمنا بإعادة المثال السابق تماماً لكننا حاولنا فتح الملف بوسطة البلوك <span class="inline"><code data-enlighter-language="python">with</code>.</span><br/>
+	لاحظ أن النتيجة هي نفسها في الحالتين.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# من أجل عرض النص الموجود فيه 'harmash.txt' هنا حاولنا إيجاد و فتح ملف إسمه
+try:
+    with open('harmash.txt', 'r') as opened_file:
+		print(opened_file.read())
+
+# و من ثم عرضها كنص عادي ex بما أنه لا يوجد هكذا ملف في المشروع, سيتم تخزين معلومات الخطأ الذي حدث في الكائن
+except Exception as ex:
+    print(ex)
+	
+print('Program still work properly')
+		</pre>
+<p><span class="point">•</span>بعد تشغيل الملف <code data-enlighter-language="python">Test.py</code> سيتم طباعة المشكلة التي حدثت أثناء محاولة القراءة من الملف كنص عادي و لن يؤدي ذلك إلى تعليق البرنامج.</p>
+<div class="code-box">
+			[Errno 2] No such file or directory: 'harmash.txt'<br/>
+			Program still work properly
+		</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

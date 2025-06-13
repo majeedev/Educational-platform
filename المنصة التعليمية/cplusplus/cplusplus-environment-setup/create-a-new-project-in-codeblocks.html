@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>خطوات إنشاء مشروع جديد في برنامج CodeBlocks لتجربة كود السي بلاس بلاس على الكمبيوتر</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../cplusplus-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../cplusplus-overview/index.html"><span class="en">++C</span> - نظرة عامة</a></li>
+<li><a href="index.html"><span class="en">++C</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../cplusplus-basic-syntax/index.html"><span class="en">++C</span> - أسلوب الكتابة</a></li>
+<li><a href="../cplusplus-cout/index.html"><span class="en">++C</span> - أمر الطباعة   &lt;&lt; cout</a></li>
+<li><a href="../cplusplus-data-types/index.html"><span class="en">++C</span> - أنواع البيانات</a></li>
+<li><a href="../cplusplus-variables/index.html"><span class="en">++C</span> - المتغيرات</a></li>
+<li><a href="../cplusplus-operators/index.html"><span class="en">++C</span> - العوامل</a></li>
+<li><a href="../cplusplus-conditions/index.html"><span class="en">++C</span> - الشروط</a></li>
+<li><a href="../cplusplus-loops/index.html"><span class="en">++C</span> - الحلقات</a></li>
+<li><a href="../cplusplus-numbers/index.html"><span class="en">++C</span> - الأعداد</a></li>
+<li><a href="../cplusplus-strings/index.html"><span class="en">++C</span> - النصوص</a></li>
+<li><a href="../cplusplus-arrays/index.html"><span class="en">++C</span> - المصفوفات</a></li>
+<li><a href="../cplusplus-user-input/index.html"><span class="en">++C</span> - إدخال البيانات</a></li>
+<li><a href="../cplusplus-functions/index.html"><span class="en">++C</span> - الدوال</a></li>
+<li><a href="../cplusplus-references/index.html"><span class="en">++C</span> - المراجع</a></li>
+<li><a href="../cplusplus-pointers/index.html"><span class="en">++C</span> - المؤشرات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../cplusplus-oop/index.html"><span class="en">++C</span> - مفهوم البرمجة كائنية التوجه</a></li>
+<li><a href="../cplusplus-struct/index.html"><span class="en">++C</span> - النوع <span class="en">struct</span></a></li>
+<li><a href="../cplusplus-class/index.html"><span class="en">++C</span> - النوع <span class="en">class</span></a></li>
+<li><a href="../cplusplus-encapsulation/index.html"><span class="en">++Encapsulation - C</span></a></li>
+<li><a href="../cplusplus-inheritance/index.html"><span class="en">++Inheritance - C</span></a></li>
+<li><a href="../cplusplus-overriding/index.html"><span class="en">++Overriding - C</span></a></li>
+<li><a href="../cplusplus-overloading/index.html"><span class="en">++Overloading - C</span></a></li>
+<li><a href="../cplusplus-polymorphism/index.html"><span class="en">++Polymorphism - C</span></a></li>
+<li><a href="../cplusplus-constants/index.html"><span class="en">++C</span> - الثوابت</a></li>
+<li><a href="../cplusplus-enum/index.html"><span class="en">++C</span> - النوع <span class="en">enum</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../cplusplus-exceptions/index.html"><span class="en">++C</span> - الإستثناءات</a></li>
+<!--
+
+<li><a href="../cplusplus-lambda-expressions"><span class="en">Lambda Expressions - ++C</span></a></li>
+<li><a href="../cplusplus-files-io"><span class="en">++C</span> - التعامل مع الملفات</a></li>
+<li><a href="../cplusplus-data-structure"><span class="en">Data Structure - ++C</span></a></li>
+<li><a href="../cplusplus-collection"><span class="en">Collection - ++C</span></a></li>
+<li><a href="../cplusplus-generics"><span class="en">Generics - ++C</span></a></li>
+<li><a href="../cplusplus-networking"><span class="en">++C</span> - الشبكات</a></li>
+<li><a href="../cplusplus-multithreading"><span class="en">++C</span> - تعدد المهام</a></li>
+<li><a href="../cplusplus-jdbc"><span class="en">++C</span> - قواعد البيانات</a></li>
+<li><a href="../cplusplus-serialization"><span class="en">++C</span> - المزامنة</a></li>
+
+
+<li><a href="../cplusplus-date-and-time"><span class="en">++C</span> - التاريخ و الوقت</a></li>
+<li><a href="../cplusplus-regular-expressions"><span class="en">++C</span> - التعابير النمطية</a></li>
+
+<li><a href="../cplusplus-next-step"><span class="en">++C</span> - ما هي خطوتي التالية ؟</a></li>
+-->
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">C++</span>خطوات إنشاء مشروع جديد في برنامج <span class="word">CodeBlocks</span></h1>
+<article>
+<h2>خطوات إنشاء مشروع جديد</h2>
+<ol class="arabic">
+<li><p>أنقر على <span class="inline"><span class="word">File</span>,</span> ثم <span class="inline"><span class="word">New</span>,</span> ثم <span class="word">Project</span> كالتالي.</p></li>
+</ol>
+<p><a href="codeblocks-new-project-1.png" target="_blank"><img alt="" src="codeblocks-new-project-1.png"/></a></p>
+<br/>
+<ol class="arabic" start="2">
+<li><p>أنقر على <span class="word">Console Application</span> ثم على الزر <span class="word">Go</span> كالتالي.</p></li>
+</ol>
+<p><a href="codeblocks-new-project-2.png" target="_blank"><img alt="" src="codeblocks-new-project-2.png"/></a></p>
+<br/>
+<ol class="arabic" start="3">
+<li><p>قم بوضع علامة صح على الخيار <span class="word">Skip this page next time</span> ثم أنقر على <span class="word">Next</span> حتى لا تظهر لك هذه الصفحة مرة أخرى كالتالي.</p></li>
+</ol>
+<p><a href="codeblocks-new-project-3.png" target="_blank"><img alt="" src="codeblocks-new-project-3.png"/></a></p>
+<br/>
+<ol class="arabic" start="4">
+<li><p>أنقر على <span class="word">++C</span> و من ثم أنقر على <span class="word">Next</span> كالتالي.</p></li>
+</ol>
+<p><a href="codeblocks-new-project-4.png" target="_blank"><img alt="" src="codeblocks-new-project-4.png"/></a></p>
+<br/>
+<ol class="arabic" start="5">
+<li><p>قم بتحديد الإسم الذي تريد وضعه للمشروع و مسار المجلد الذي تريد أن يتم فيه حفظه على حاسوبك, ثم أنقر على <span class="word">Next</span> كالتالي.</p></li>
+</ol>
+<p><a href="codeblocks-new-project-5.png" target="_blank"><img alt="" src="codeblocks-new-project-5.png"/></a></p>
+<br/>
+<ol class="arabic" start="6">
+<li><p>لا تعدل أي شيء في هذه الصفحة, أنقر <span class="word">Next</span> كالتالي فقط.</p></li>
+</ol>
+<p><a href="codeblocks-new-project-6.png" target="_blank"><img alt="" src="codeblocks-new-project-6.png"/></a></p>
+<br/>
+<ol class="arabic" start="7">
+<li><p>بعد أن يتم إنشاء المشروع بنجاح سيظهر بداخل قائمة المشاريع كالتالي.</p></li>
+</ol>
+<p><a href="codeblocks-new-project-7.PNG" target="_blank"><img alt="" src="codeblocks-new-project-7.PNG"/></a></p>
+<br/>
+<ol class="arabic" start="8">
+<li><p>لرؤية الملف الأساسي في المشروع و الذي يمكنك كتابة الكود بداخله, إفتح المجلد <code>Sources</code> ثم أنقر على الملف <code>main.cpp</code> كالتالي.</p></li>
+</ol>
+<p><a href="codeblocks-new-project-8.PNG" target="_blank"><img alt="" src="codeblocks-new-project-8.PNG"/></a></p>
+<br/>
+<ol class="arabic" start="9">
+<li><p>لتشغيل هذا البرنامج و الذي سيعرض لك فقط جملة <code>"Hello world!"</code> أنقر على الزر <code>Build and run</code> كالتالي.</p></li>
+</ol>
+<p><a href="codeblocks-new-project-9.png" target="_blank"><img alt="" src="codeblocks-new-project-9.png"/></a></p>
+<br/>
+<ol class="arabic" start="10">
+<li><p>بعد تشغيل البرنامج سيفتح موجه الأمر <span class="inline">(و الذي يسمى <span class="word">CMD</span> أو <span class="word">Console</span>)</span> و يظهر بداخله نتيجة التشغيل كالتالي.</p></li>
+</ol>
+<p><a href="codeblocks-new-project-10.png" target="_blank"><img alt="" src="codeblocks-new-project-10.png"/></a></p>
+</article>
+<article>
+<h2>خطوات تشغيل المشروع بشكل صحيح</h2>
+<p>قبل تشغيل أي مشروع يجب أن تقوم بتحويل كود المشروع لملف تنفيذي نوعه <code>EXE</code> و هنا في حال كان الكود فيه أي مشكلة ستظهر لك.<br/>
+	عندما تقوم بتحويل كل كود المشروع لملف تنفيذي <code>EXE</code> فأنت بذلك تفعل ما يسمى <span class="word">Build</span> للمشروع.<br/>
+<span class="note">ملاحظة:</span> هذا الأمر تفعله بنقرة واحدة فقط و ستتعلم كيف تفعل ذلك بكل سهولة بعد قليل.</p>
+<p>في برنامج <span class="word">CodeBlocks</span> يمكنك أن تحول كود المشروع لملف تنفيذ و تشغله بنقرة واحدة فقط إن أردت و هذا الأمر يسمى <span class="inline"><span class="word">Build and Run</span>.</span></p>
+<p><a href="codeblocks-new-project-11.png" target="_blank"><img alt="" src="codeblocks-new-project-11.png"/></a></p>
+<br/>
+<h3 class="note-title">إنتبه جيداً</h3>
+<div class="note-box">
+<p>إذا قمت بتعديل كود المشروع و حفظته فقط بدون أن تفعل <span class="word">Build</span> - أي بدون أن تقوم بتحويل كود المشروع لملف تنفيذي - ثم قمت بتشغيله فسيظهر لك عند التشغيل نتيجة آخر مرة فعلت فيها <span class="word">Build</span> و ليس نتيجة الكود الذي حفظته آخر مرة.</p>
+<p>لذلك ننصحك دائماً بان تفعل <span class="word">Build</span> في حال أردت فقط التشييك على كود المشروع.<br/>
+		و ننصحك بأن تفعل <span class="word">Build and Run</span> دفعة واحدة في حال أردت التشييك على كود المشروع و تشغيله.</p>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

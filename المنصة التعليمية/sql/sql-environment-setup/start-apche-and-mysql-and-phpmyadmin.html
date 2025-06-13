@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>خطوات تشغيل Apache و MySQL و phpMyAdmin</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../database-icon.png"/></li>
+<li class="title">كيف أبدأ بالتعلم</li>
+<li><a href="../sql-overview/index.html"><span class="en">SQL</span> - نظرة عامة</a></li>
+<li><a href="index.html"><span class="en">SQL</span> - تجهيز بيئة العمل</a></li>
+<li><a href="../sql-basic-syntax/index.html"><span class="en">SQL</span> - أسلوب كتابة الأوامر</a></li>
+<li><a href="../sql-comments/index.html"><span class="en">SQL</span> - التعليقات</a></li>
+<li><a href="../sql-write-first-query/index.html"><span class="en">SQL</span> - كتابة أول إستعلام</a></li>
+<li><a href="../sql-refresh-databases-panel/index.html"><span class="en">SQL</span> - تحديث قائمة قواعد البيانات</a></li>
+<li><a href="../sql-databases-structure-in-general/index.html"><span class="en">SQL</span> - مفاهيم و مصطلحات مهمة</a></li>
+<li class="title">أوامر و دوال SQL</li>
+<li><a href="../sql-create-database/index.html"><span class="en">SQL</span> - أمر إنشاء قاعدة بيانات</a></li>
+<li><a href="../sql-drop-database/index.html"><span class="en">SQL</span> - أمر حذف قاعدة بيانات</a></li>
+<li><a href="../sql-data-types/index.html"><span class="en">SQL</span> - أهم أنواع البيانات</a></li>
+<li><a href="../sql-create-table/index.html"><span class="en">SQL</span> - أمر إنشاء جدول</a></li>
+<li><a href="../sql-drop-table/index.html"><span class="en">SQL</span> - أمر حذف جدول</a></li>
+<li><a href="../sql-use/index.html"><span class="en">SQL</span> - أمر تحديد قاعدة البيانات</a></li>
+<li><a href="../sql-insert-into/index.html"><span class="en">SQL</span> - أمر إضافة سطر في الجدول</a></li>
+<li><a href="../sql-auto-increment/index.html"><span class="en">SQL</span> - الترقيم التلقائي للأسطر</a></li>
+<li><a href="../sql-select/index.html"><span class="en">SQL</span> - أمر جلب بيانات من الجدول</a></li>
+<li><a href="../sql-select-with-concat/index.html"><span class="en">SQL</span> - دمج الأعمدة عند جلبها</a></li>
+<li><a href="../sql-select-repeat-columns-name/index.html"><span class="en">SQL</span> - تكرار إسم الأعمدة في الإستعلام</a></li>
+<li><a href="../sql-select-with-where/index.html"><span class="en">SQL</span> - جلب البيانات ضمن شروط</a></li>
+<li><a href="../sql-select-with-order/index.html"><span class="en">SQL</span> - جلب البيانات مع ترتيبها</a></li>
+<li><a href="../sql-select-distinct/index.html"><span class="en">SQL</span> - جلب بيانات خالية من التكرار</a></li>
+<li><a href="../sql-union/index.html"><span class="en">SQL</span> - دمج الجداول في جدول واحد</a></li>
+<li><a href="../sql-delete/index.html"><span class="en">SQL</span> - أمر حذف بيانات من الجدول</a></li>
+<li><a href="../sql-update/index.html"><span class="en">SQL</span> - أمر تحديث بيانات الجدول</a></li>
+<li><a href="../sql-select-with-limit/index.html"><span class="en">SQL</span> - تحديد عدد الأسطر التي سترجع</a></li>
+<li><a href="../sql-null-values/index.html"><span class="en">SQL</span> - التعامل مع الحقول الفارغة</a></li>
+<li><a href="../sql-min/index.html"><span class="en">SQL</span> - جلب أصغر قيمة في العامود</a></li>
+<li><a href="../sql-max/index.html"><span class="en">SQL</span> - جلب أكبر قيمة في العامود</a></li>
+<li><a href="../sql-count/index.html"><span class="en">SQL</span> - حساب عدد أسطر الجدول</a></li>
+<li><a href="../sql-sum/index.html"><span class="en">SQL</span> - حساب ناتج جمع قيم العامود</a></li>
+<li><a href="../sql-avg/index.html"><span class="en">SQL</span> - حساب متوسط قيم العامود</a></li>
+<li><a href="../sql-select-with-group-by/index.html"><span class="en">SQL</span> - تجميع قيم الحقول المشتركة</a></li>
+<li><a href="../sql-select-with-having/index.html"><span class="en">SQL</span> - شروط على الحقول المجمعة</a></li>
+<li><a href="../sql-insert-into-select/index.html"><span class="en">SQL</span> - نسخ البيانات في جدول آخر</a></li>
+<li><a href="../sql-case/index.html"><span class="en">SQL</span> - وضع قيمة إفتراضية لكل حالة</a></li>
+<li><a href="../sql-unique/index.html"><span class="en">SQL</span> - تخزين قيم موحدة في العامود</a></li>
+<li class="title">العلاقات بين الجداول</li>
+<li><a href="../sql-how-to-relate-tables/index.html"><span class="en">SQL</span> - كيف يتم ربط الجداول</a></li>
+<li><a href="../sql-relationships-types/index.html"><span class="en">SQL</span> - أنواع العلاقات بين الجدوال</a></li>
+<li><a href="../sql-joins/index.html"><span class="en">SQL</span> - طرق ربط معلومات الجداول</a></li>
+<li><a href="../sql-alias-for-tables/index.html"><span class="en">SQL</span> - وضع أسماء مختصرة للجداول</a></li>
+<li><a href="../sql-self-join/index.html"><span class="en">SQL</span> - ربط المعلومات في نفس الجدول</a></li>
+<li class="title">معلومات متقدمة</li>
+<li><a href="../sql-alter/index.html"><span class="en">SQL</span> - تعديل بنية الجدول بعد إنشائه</a></li>
+<li><a href="../sql-default/index.html"><span class="en">SQL</span> - وضع قيم إفتراضية للحقول</a></li>
+<li><a href="../sql-primary-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح رئيسي</a></li>
+<li><a href="../sql-foreign-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح أجنبي</a></li>
+<li><a href="../sql-check/index.html"><span class="en">SQL</span> - وضع شروط لتخزين القيم</a></li>
+<li><a href="../sql-transactions/index.html"><span class="en">SQL</span> - تنفيذ كل الأوامر أو إلغاءها كلها</a></li>
+<li><a href="../sql-indexes/index.html"><span class="en">SQL</span> - الفهارس و أنواعها</a></li>
+<li><a href="../sql-like/index.html"><span class="en">SQL</span> - البحث في الأعمدة النصية</a></li>
+<li><a href="../sql-sub-queries/index.html"><span class="en">SQL</span> - كتابة إستعلامات متداخلة</a></li>
+<li><a href="../sql-connect-to-database/index.html"><span class="en">SQL</span> - الإتصال بقاعدة البيانات عن بعد</a></li>
+<li class="title">بناء قواعد بيانات لمشاريع</li>
+<li><a href="../sql-building-database-from-scratch/index.html"><span class="en">SQL</span> - تصميم قاعدة بيانات من الصفر</a></li>
+<li><a href="../sql-download-ready-made-database/index.html"><span class="en">SQL</span> - تحميل قواعد بيانات جاهزة</a></li>
+<!--
+<li><a href="../sql-backup-database"><span class="en">SQL</span> - إنشاء نسخة من قاعدة البيانات</a></li>
+<li><a href="../sql-stored-procedures"><span class="en">SQL</span> - تعريف دوال و استدعائها</a></li>
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">SQL</span>خطوات تشغيل <span class="word">Apache</span> و <span class="word">MySQL</span> و <span class="word">phpMyAdmin</span></h1>
+<article>
+<h2>طريقة تشغيل <span class="word">Apache</span> و <span class="word">MySQL</span></h2>
+<p>بعد أن قمت بتنصيب برنامج <span class="word">XAMPP</span> و ضبط إعدادات الخادم <span class="word">Apache</span> أصبحت قادر على تشغيل خدمة <span class="word">MySQL</span> و <span class="word">phpMyAdmin</span> في وقت تريده باتباع الخطوات التالية.</p>
+<br/>
+<ol class="arabic" start="1">
+<li><p>قم بفتح برنامج <span class="inline"><span class="word">XAMPP</span>.</span></p></li>
+</ol>
+<p><a href="start-appache-and-mysql-1.png" target="_blank"><img alt="" src="start-appache-and-mysql-1.png"/></a></p>
+<br/>
+<ol class="arabic" start="2">
+<li><p>قم بتشغيل الخادم <span class="word">Apache</span> بالنقر على زر <span class="word">Start</span> كالتالي.</p></li>
+</ol>
+<p><a href="start-appache-and-mysql-2.png" target="_blank"><img alt="" src="start-appache-and-mysql-2.png"/></a></p>
+<br/>
+<ol class="arabic" start="3">
+<li><p>بعد أن يشتغل الخادم <span class="word">Apache</span> بنجاح لاحظ التالي:
+			<ul class="explain" type="disc">
+<li><p>كلمة <span class="word">Apache</span> أصبح لون خلفيتها أخضر للإشارة أنه شغّال.</p></li>
+<li><p>الخادم <span class="word">Apache</span> يعمل على البورت رقم <code>1234</code> الذي قمنا بوضعه سابقاً و البورت <code>443</code> الذي يمكن استخدامه لإجراء إتصال مشفر و لكن هذا لا يهمنا على الإطلاق.</p></li>
+<li><p>كلمة <span class="word">Start</span> تم تبديلها بكلمة <span class="word">Stop</span> و التي يمكنك النقر عليها الآن لإيقاف عمل الخادم.</p></li>
+</ul>
+</p></li>
+</ol>
+<p><a href="start-appache-and-mysql-3.PNG" target="_blank"><img alt="" src="start-appache-and-mysql-3.PNG"/></a></p>
+<br/>
+<ol class="arabic" start="4">
+<li><p>قم بتشغيل خدمة <span class="word">MySQL</span> بالنقر على زر <span class="word">Start</span> كالتالي.</p></li>
+</ol>
+<p><a href="start-appache-and-mysql-4.png" target="_blank"><img alt="" src="start-appache-and-mysql-4.png"/></a></p>
+<br/>
+<ol class="arabic" start="5">
+<li><p>بعد تشغيل خدمة <span class="word">MySQL</span> بنجاح لاحظ التالي:
+			<ul class="explain" type="disc">
+<li><p>كلمة <span class="word">MySQL</span> أصبح لون خلفيتها أخضر للإشارة أنها شغّال.</p></li>
+<li><p>كلمة <span class="word">Start</span> تم تبديلها بكلمة <span class="word">Stop</span> و التي يمكنك النقر عليها الآن لإيقاف عمل الخدمة.</p></li>
+</ul>
+</p></li>
+</ol>
+<p><a href="start-appache-and-mysql-5.png" target="_blank"><img alt="" src="start-appache-and-mysql-5.png"/></a></p>
+<br/>
+<p>إلى هنا نكون قد قمنا بتشغيل <span class="word">Apache</span> و <span class="word">MySQL</span> بنجاح لأن كلاهما تظهر خلفيتهما باللون الأخضر.<br/>
+	الآن أصبح بإمكانك إغلاق نافذة برنامج <span class="word">Apache</span> لأن الخدمات التي قمت بتشغيلها بداخله ستبقى تعمل في الخلفية بشكل عادي جداً.</p>
+<br/>
+<h3 class="note-title">تنبيه</h3>
+<div class="note-box">
+<p>في كل مرة تقوم بها بإطفاء و تشغيل جهازك فإن كل الخدمات التي قمت بتشغيلها من داخل برنامج <span class="word">XAMPP</span> سيتم إيقافها.<br/>
+	لهذا عليك إعادة تشغيلها من جديد في كل مرة تقوم فيها بإعادة تشغيل الجهاز.</p>
+</div>
+</article>
+<article>
+<h2>طريقة تشغيل <span class="word">phpMyAdmin</span></h2>
+<p>بعدما قمت تشغيل <span class="word">Apache</span> و <span class="word">MySQL</span> بنجاح أصبح بإمكانك فتح <span class="word">phpMyAdmin</span> بواسطة أي متصفح.</p>
+<br/>
+<h3>معلومة تقنية</h3>
+<p>خدمة <span class="word">phpMyAdmin</span> عبارة عن صفحة ويب جاهزة مبنية بلغة <span class="word">PHP</span> تستخدم للتعامل مع قواعد بيانات <span class="inline"><span class="word">MySQL</span>.</span><br/>
+	لهذا قبل تشغيل خدمة <span class="word">phpMyAdmin</span> نحتاج تشغيل الخادم <span class="word">Apache</span> لأنه من يفهم أوامر <span class="word">PHP</span> و تشغيل خدمة <span class="word">MySQL</span> لأنها من تفهم أوامر <span class="inline"><span class="word">SQL</span>.</span><br/>
+	و بما أن خدمة <span class="word">phpMyAdmin</span> عبارة عن صفحة ويب فإننا نحتاج بالنهاية إلى متصفح حتى نفتحها بواسطته.</p>
+<br/>
+<p>قم باتباع الخطوات التالية لتشغيل صفحة <span class="inline"><span class="word">phpMyAdmin</span>:</span></p>
+<ol class="arabic" start="1">
+<li><p>تأكد أن <span class="word">Apache</span> و <span class="word">MySQL</span> يعملان و لون خلفيتهما أخضر كالتالي.</p></li>
+</ol>
+<p><a href="start-phpmyadmin-1.PNG" target="_blank"><img alt="" src="start-phpmyadmin-1.PNG"/></a></p>
+<br/>
+<ol class="arabic" start="2">
+<li><p>أغلق برنامج <span class="word">XAMPP</span> لأنه لا داعي لأن تظل نافذته مفتوحة أمامك, حيث أنه يهمك أن تكون خدماته تعمل و ليس نافذته.</p></li>
+</ol>
+<p><a href="start-phpmyadmin-2.PNG" target="_blank"><img alt="" src="start-phpmyadmin-2.PNG"/></a></p>
+<br/>
+<ol class="arabic" start="3">
+<li><p>إفتح أي متصفح تريد مثل <span class="word">Firefox</span> - <span class="word">Chrome</span> - <span class="word">Opera</span> إلخ..</p></li>
+<li><p>أكتب عنوان صفحة <span class="word">phpMyAdmin</span> كالتالي <code>localhost:1234/phpmyadmin</code></p></li>
+<li><p>أنقر على الزر <kbd>Enter</kbd> حتى تفتح الصفحة.</p></li>
+</ol>
+<p><a href="start-phpmyadmin-3.png" target="_blank"><img alt="" src="start-phpmyadmin-3.png"/></a></p>
+<br/>
+<ol class="arabic" start="6">
+<li><p>بعد كتابة الرابط بشكل صحيح ستفتح لك صفحة <span class="word">phpMyAdmin</span> في المتصفح كالتالي.</p></li>
+</ol>
+<p><a href="start-phpmyadmin-4.png" target="_blank"><img alt="" src="start-phpmyadmin-4.png"/></a></p>
+<br/>
+<p>إلى هنا نكون قد أصبحنا قادرين على البدأ بتعلم قواعد البيانات و تنفيذ أوامر <span class="inline"><span class="word">SQL</span>.</span></p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

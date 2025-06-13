@@ -1,0 +1,460 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس شرحنا الوراثة في جافا بتفصيل شامل, و وضعنا الكثير من الأمثلة التس ستجعلك تفهمها بشكل قوي" name="description"/>
+<meta content="inheritance in java,extends keyword in java,super keyword in java,is a relationship in java,instanceof operator in java,class object in java,inheritance type in java,الوراثة في جافا,فكرة الوراثة في جافا,مفهوم الوراثة في جافا,أمثلة شاملة عن الوراثة في جافا,فائدة الوراثة في جافا,الكلمة super في جافا,الكلمة instanceof في جافا, العامل instanceof في جافا, علاقة الكائن و الكلاس الذي يرث منه,علاقة Subclass و Superclass في جافا,كل شيء عن الوراثة في جافا,أمثلة بسيطة عن الوراثة في جافا,شرح عملية الوراثة في جافا بتفصيل شامل" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الوراثة في جافا | Java inheritance</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>الوراثة في جافا</h1>
+<article>
+<h2>مفهوم الوراثة في جافا</h2>
+<p><b>وراثة:</b> تعني <span class="word">Inheritance</span> في اللغة الإنجليزية. و لقد ذكرت هذه الكلمة عدة مرات في دروس سابقة.<br/>
+	في جافا, الكلاس يمكنه أن يرث من كلاس آخر, و بالتالي يحصل على الدوال و المتغيرات الموجودة في هذا الكلاس.</p>
+<p>فكرة الوراثة بسيطة, لكن فائدتها قوية جداً. فمثلاً إذا كنت تريد إنشاء كلاس جديد و لاحظت أنه يوجد كلاس جاهز يحتوي على كودات قد تفيدك يمكنك استغلالها بدل كتابتها من الصفر, أي يمكنك جعل الكلاس الذي قمت بتعريفه يرث هذا الكلاس, و بعدها يمكنك إستخدام جميع المتغيرات و الدوال التي ورثها الكلاس الجديد من الكلاس الجاهز.</p><br/>
+<h3>مفهوم <span class="word">Superclass</span> و <span class="word">Subclass</span></h3>
+<ul class="explain">
+<li><p>الكلاس الذي يرث من كلاس آخر يسمى <span class="word">Subclass</span> و يسمى أيضاً <span class="inline">( <span class="word">derived class</span>, <span class="word">extended class</span> أو <span class="word">child class</span> ).</span></p></li>
+<li><p>الكلاس الذي يورث محتوياته لكلاس آخر يسمى <span class="word">Superclass</span> و يسمى أيضاً <span class="inline">( <span class="word">base class</span> أو <span class="word">parent class</span> ).</span></p></li>
+</ul>
+<br/>
+<h3>مثال</h3>
+<p>الآن لنفترض أننا قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">A</code> يحتوي على متغير إسمه <code data-enlighter-language="java">x</code> و دالة إسمها <span class="inline"><code data-enlighter-language="java">printA()</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس جديد فارغ إسمه <code data-enlighter-language="java">B</code> و قلنا أنه يرث من الكلاس <span class="inline"><code data-enlighter-language="java">A</code></span>. إذاً هذا يعني أن الكلاس <code data-enlighter-language="java">B</code> أصبح يملك نسخة من جميع المتغيرات و الدوال الموجودة في الكلاس <span class="inline"><code data-enlighter-language="java">A</code>.</span></p>
+<p><a href="pic_1.png" target="_blank"><img src="pic_1.png"/></a></p>
+<br/>
+<h3 class="note-title">إنتبه</h3>
+<div class="note-box">
+<p>الـ <span class="word">Subclass</span> يرث كل شيء موجود في <span class="inline">الـ <span class="word">Superclass</span></span> بشكل تلقائي ما عدا الـكونستركتور.<br/>
+        مع العلم أنه يمكن استدعاء كونستركتور <span class="inline">الـ <span class="word">Superclass</span></span> من <span class="inline">الـ <span class="word">Subclass</span> </span> بواسطة الكلمة <code data-enlighter-language="java">super</code> التي سنشرحها لاحقاً في هذا الدرس.</p>
+</div>
+</article>
+<article>
+<h2>الكلمة <code data-enlighter-language="java">extends</code> في جافا</h2>
+<p>الكلمة <code data-enlighter-language="java">extends</code> تستخدم لجعل الكلاس يرث من كلاس آخر.</p><br/>
+<h3>مكان وضع الكلمة <code data-enlighter-language="java">extends</code></h3>
+<p>نضع الكلمة <code data-enlighter-language="java">extends</code> بعد إسم الكلاس, ثم نضع بعدها إسم الكلاس الذي نريد الوراثة منه.<br/>
+	الكود التالي يعني أن الكلاس <code data-enlighter-language="java">B</code> يرث من الكلاس <span class="inline"><code data-enlighter-language="java">A</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+class A {
+
+}
+
+class B extends A {
+
+} 
+		</pre>
+</div>
+<br/>
+<p><span class="note">إنتبه:</span> في حال كنت تحاول الوراثة من كلاس غير موجود سيظهر لك الخطأ التالي: <span class="code red">java.lang.ExceptionInInitializerError</span></p>
+<br/><br/>
+<h3>مثال</h3>
+<p>الآن لنفترض أننا قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">A</code> يحتوي على متغير إسمه <code data-enlighter-language="java">x</code> و دالة إسمها <span class="inline"><code data-enlighter-language="java">printA()</code></span>. بعدها قمنا بإنشاء كلاس جديد فارغ إسمه <code data-enlighter-language="java">B</code> و قلنا أنه يرث من الكلاس <span class="inline"><code data-enlighter-language="java">A</code></span>. إذاً هذا يعني أن الكلاس <code data-enlighter-language="java">B</code> أصبح يملك نسخة من جميع المتغيرات و الدوال الموجودة في الكلاس <span class="inline"><code data-enlighter-language="java">A</code>.</span></p>
+<p>بعد إنشاء هذا الكلاس, سنقوم بإنشاء الكلاس <code data-enlighter-language="java">Main</code> لتجربته.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">A.java</span>
+<pre data-enlighter-language="java">
+public class A {
+ 
+    public int x;
+ 
+    public void printA() {
+        System.out.println("I am from class A");
+    }
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">B.java</span>
+<pre data-enlighter-language="java">
+// A يرث المتغيرات و الدوال الموجودة في الكلاس B هنا قلنا أن الكلاس
+public class B extends A {
+ 
+    // A سيحتوي المتغيرات و الدوال الموجودة في الكلاس B إذاً أي كائن من الكلاس
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // أم لا A لنتأكد إذا كان يحتوي على الأشياء الموجودة في الكلاس B هنا قمنا بإنشاء كائن من الكلاس
+        B b = new B();
+ 
+        // A من الكلاس B التي ورثها الكلاس printA() هنا قمنا باستدعاء الدالة
+        b.printA();
+ 
+        // أيضاً, يمكننا إعطائه قيمة و عرض قيمته x يملك متغير إسمه b و بما أن الكائن
+        b.x = 123;
+        System.out.println("x: " +b.x);
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+I am from class A
+x: 123 
+		</pre>
+</div>
+</article>
+<article>
+<h2>الكلمة <code data-enlighter-language="java">super</code> في جافا</h2>
+<p>الكلمة <code data-enlighter-language="java">super</code> تستخدم للأهداف التالية:</p>
+<ul class="explain">
+<li><p>للتمييز بين الأشياء (المتغيرات و الدوال) الموجودة في <span class="inline">الـ <span class="word">Superclass</span> و <span class="word">Subclass</span> في حال كانت الأسماء مستخدمة في كلا الكلاسَين.</span></p></li>
+<li><p>لإستدعاء الـكونستركتور الموجود في <span class="inline"><span class="inline">الـ <span class="word">Superclass</span>.</span></span></p></li>
+</ul>
+<p>إذاً الكلمة <code data-enlighter-language="java">super</code> تستخدم لإستدعاء الأشياء الموجودة في <span class="inline"><span class="inline">الـ <span class="word">Superclass</span>.</span></span></p>
+<br/><br/>
+<h3>طريقة استخدام الكلمة <code data-enlighter-language="java">super</code> لإستدعاء متغير من <span class="inline">الـ <span class="word">Superclass</span></span></h3>
+<p>نضع الكلمة <span class="inline"><code data-enlighter-language="java">super</code>,</span> بعدها نقطة, ثم نضع إسم المتغير الذي نريد إستدعائه من <span class="inline"><span class="inline">الـ <span class="word">Superclass</span>.</span></span></p>
+<div class="code-box">
+<div>
+<span class="blue">super.</span><span class="red">variableName</span>
+</div>
+</div>
+<p><a class="open-page" href="calling-superclass-variables-example.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>طريقة استخدام الكلمة <code data-enlighter-language="java">super</code> لإستدعاء دالة من الـ <span class="word">Superclass</span></h3>
+<p>نضع الكلمة <span class="inline"><code data-enlighter-language="java">super</code>,</span> بعدها نقطة, ثم نضع إسم الدالة التي نريد إستدعائها من <span class="inline"><span class="inline">الـ <span class="word">Superclass</span>.</span></span></p>
+<div class="code-box">
+<div>
+<span class="blue">super.</span><span class="red">methodName();
+	    </span></div>
+</div>
+<p><a class="open-page" href="calling-superclass-methods-example.html" target="_blank">شاهد المثال »</a></p>
+<br/>
+<h3 class="note-title">إنتبه</h3>
+<div class="note-box">
+<p>في حال قام <span class="inline">الـ <span class="word">Subclass</span></span> بتعريف دالة كانت أصلاً موجودة في <span class="inline">الـ <span class="word">Superclass</span></span> يجب كتابة الكلمة <code data-enlighter-language="java">@Override</code> قبلها مباشرةً, و هكذا سيفهم المترجم أن <span class="inline">الـ <span class="word">Subclass</span></span> قام بتعريف الدالة التي ورثها من <span class="inline">الـ <span class="word">Superclass</span></span> من جديد.</p>
+</div>
+<br/><br/>
+<h3>طريقة استخدامها عند استدعاء كونستركتور</h3>
+<p>يمكن استدعاء كونستركتور <span class="inline">الـ <span class="word">Superclass</span></span> من داخل كونستركتور <span class="inline">الـ <span class="word">Subclass</span></span> من خلال الكلمة <span class="inline"><code data-enlighter-language="java">super</code>.</span></p>
+<div class="code-box">
+<div>
+<span class="blue">super</span><span class="red">()                    <span class="gray">// عند استدعاء كونستركتور فارغ نكتب هكذا فقط</span><br/><br/>
+<span class="gray">// أو هكذا</span><br/><br/>
+<span class="blue">super</span><span class="red">( <span class="black">parameter List</span> )</span>    <span class="gray">// عند استدعاء كونستركتور يحتوي على باراميترات, عليك تمرير قيم له.</span>
+</span></div>
+</div>
+<br/>
+<p>في حال كان <span class="inline">الـ <span class="word">Superclass</span></span> يملك فقط كونستركتور لا يحتوي أي باراميترات (أي مثل كونستركتور إفتراضي), سيقوم المترجم باستدعائه بشكل تلقائي في <span class="inline">الـ <span class="word">Subclass</span></span> حتى لو لم تقم باستدعائه بنفسك.</p>
+<p><a class="open-page" href="calling-superclass-default-constructor.html" target="_blank">شاهد الأمثلة »</a></p>
+<br/>
+<p>و في حال كان <span class="inline">الـ <span class="word">Superclass</span></span> يملك أكثر من كونستركتور, ستكون مجبر على تعريف كونستركتور في <span class="inline">الـ <span class="word">Subclass</span></span> يستدعي أي كونستركتور من الكونستركتورات الموجودة في <span class="inline"><span class="inline">الـ <span class="word">Superclass</span>.</span></span></p>
+<p><a class="open-page" href="calling-a-specific-constructor-from-the-superclass.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<article>
+<h2>أشكال الوراثة في جافا</h2>
+<p>في أي لغة برمجة, يوجد <span class="number">3</span> أشكال أساسية للوراثة كما في الصورة التالية.</p>
+<p><a href="pic_2.png" target="_blank"><img src="pic_2.png"/></a></p>
+<br/>
+<p>جافا لا تدعم تعدد الوراثة كما يوجد في بعض لغات البرمجة الأخرى, أي لا يمكن للكلاس الواحد الوراثة في نفس الوقت من أكثر من كلاس.<br/>
+	إذاً الكلاس الوحد لا يمكنه أن يفعل <code data-enlighter-language="java">extends</code> لأكثر من كلاس , بمعنى أن كل كلاس يمكنه وراثة كلاس واحد.</p>
+<p>جافا تدعم تعدد الوراثة من خلال <span class="inline"><code data-enlighter-language="java">interface</code>,</span> أي من أجل الوراثة من أكثر من كلاس يجب إستخدام الكلمة <code data-enlighter-language="java">interface</code> بدلاً من <span class="inline"><code data-enlighter-language="java">class</code>,</span> و استخدام الكلمة <code data-enlighter-language="java">implements</code> بدلاً من <code data-enlighter-language="java">extends</code> ضمن شروط معينة. ستتعلم تعدد الوراثة في درس لاحق.</p>
+<br/>
+<p>بالنسبة للوراثة المتتالية ( أو المتعددة المستويات ), دائماً آخر كلاس يرث جميع المتغيرات و الدوال الموجودة في الكلاسات الأعلى منه.</p>
+<p><a href="pic_3.png" target="_blank"><img src="pic_3.png"/></a></p>
+</article>
+<article>
+<h2>علاقة الكائنات مع بعضها في جافا</h2>
+<p>لنفترض أننا سنقوم بإنشاء برنامج لحفظ معلومات عن الحيوانات, يجب في البداية تجهيز كلاس أساسي يمثل جميع الخصائص المشتركة بين الحيوانات, بعدها يجب تقسيم الحيوانات إلى أربع فئات أساسية (ثدييات, زواحف, طيور, حيوانات مائية). بعدها يجب تعريف كل حيوان ضمن الفئة التي ينتمي لها.</p>
+<p><a href="pic_4.png" target="_blank"><img src="pic_4.png"/></a></p>
+<br/>
+<p>الآن سنقوم بتمثيل المطلوب في الصورة بلغة جافا.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+// هنا قمنا بتعريف الكلاس الأساسي لجميع الحيوانات
+class Animal { }
+
+// هنا قمنا بتعريف فئات الحيوانات
+class Mammals  extends Animal { }
+class Reptiles extends Animal { }
+class Birds    extends Animal { }
+class Aquatic  extends Animal { }
+
+// هنا قمنا بتعريف 4 حيوانات مع وضع كل حيوان ضمن فئته
+class Dog      extends Mammals { }
+class Snack    extends Reptiles { }
+class Parrot   extends Birds { }
+class Dolphin  extends Aquatic { }
+		</pre>
+</div>
+<br/>
+<p>إذاً هنا يمكننا قراءة الكود كالتالي:</p>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">Dog</code> يعتبر من <span class="inline">الـ <code data-enlighter-language="java">Mammals</code></span> و يعتبر <code data-enlighter-language="java">Animal</code> أيضاً.</p></li>
+<li><p><code data-enlighter-language="java">Snack</code> يعتبر من <span class="inline">الـ <code data-enlighter-language="java">Reptiles</code></span> و يعتبر <code data-enlighter-language="java">Animal</code> أيضاً.</p></li>
+<li><p><code data-enlighter-language="java">Parrot</code> يعتبر من <span class="inline">الـ <code data-enlighter-language="java">Birds</code></span> و يعتبر <code data-enlighter-language="java">Animal</code> أيضاً.</p></li>
+<li><p><code data-enlighter-language="java">Dolphin</code> يعتبر من <span class="inline">الـ <code data-enlighter-language="java">Aquatic</code></span> و يعتبر <code data-enlighter-language="java">Animal</code> أيضاً.</p></li>
+</ul>
+</article>
+<article>
+<h2>العامل <code data-enlighter-language="java">instanceof</code> في جافا</h2>
+<p>العامل <code data-enlighter-language="java">instanceof</code> يستخدم لمعرفة إذا كان الكائن ينتمي إلى كلاس معين أم لا.<br/>
+	يرجع <code data-enlighter-language="java">true</code> في حال كان الكائن ينتمي لكلاس معين, غير ذلك يرجع <span class="inline"><code data-enlighter-language="java">false</code>.</span></p>
+<br/>
+<h3>مثال</h3>
+<p>الآن سنقوم بكتابة الكود السابق و استخدام العامل <code data-enlighter-language="java">instanceof</code> لمعرفة الكلاسات التي ينتمي إليها الكائن.</p>
+<p><span class="note">ملاحظة:</span> هنا قمنا بتعريف جميع الكلاسات <span class="inline">كـ <code data-enlighter-language="java">private</code></span> وراء بعضهم في نفس ملف الجافا لأن جافا تسمح بذلك. لكننا لا ننصح باستخدام هذا الأسلوب في البرامج العادية.<br/>
+	كما أننا سنستخدم العامل <code data-enlighter-language="java">instanceof</code>  في دروس لاحقة.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+// هنا قمنا بتعريف الكلاس الأساسي لجميع الحيوانات
+class Animal { }
+ 
+// هنا قمنا بتعريف فئات الحيوانات
+class Mammals  extends Animal { }
+class Reptiles extends Animal { }
+class Birds    extends Animal { }
+class Aquatic  extends Animal { }
+ 
+// هنا قمنا بتعريف 4 حيوانات مع وضع كل حيوان ضمن فئته
+class Dog      extends Mammals { }
+class Snack    extends Reptiles { }
+class Parrot   extends Birds { }
+class Dolphin  extends Aquatic { }
+ 
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // Dog هنا قمنا بإنشاء كائن من الكلاس
+        Dog dog1 = new Dog();
+ 
+        // dog1 هنا قمنا باختبار الكلاسات التي ينتمي إليها الكائن
+        System.out.println( dog1 instanceof Dog);
+        System.out.println( dog1 instanceof Animal);
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+true
+true
+		</pre>
+</div>
+</article>
+<article>
+<h2>الكلاس <code data-enlighter-language="java">Object</code> في جافا</h2>
+<p>في جافا, يوجد مئات الكلاسات الجاهزة التي تم بناءها بشكل هرمي كما في الصورة التالية.</p>
+<p><a href="pic_5.png" target="_blank"><img src="pic_5.png"/></a></p>
+<p>جميع الكلاسات في جافا ترث بشكل تلقائي من الكلاس <code data-enlighter-language="java">Object</code> لأنه فعلياً يأتي في رأس الهرم و بالتالي فوق الجميع.<br/>
+	إذاً الكلاس <code data-enlighter-language="java">Object</code> هو أعلى <span class="word">Superclass</span> في جافا.</p>
+<p>و إذا لاحظت في الدروس السابقة أن أي كلاس جديد كنا نستخدمه يحتوي على الدوال <span class="inline"><code data-enlighter-language="java">equals()</code>,</span> <span class="inline"><code data-enlighter-language="java">hashcode()</code>,</span> <code data-enlighter-language="java">toString()</code> إلخ..<br/>
+	سبب وجود هذه الدوال في كل كلاس كنا نستخدمه أنه ورثوهم من الكلاس <span class="inline"><code data-enlighter-language="java">Object</code>.</span></p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>العوامل في سي بلاس بلاس - C++ operators</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../cplusplus-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../cplusplus-overview/index.html"><span class="en">++C</span> - نظرة عامة</a></li>
+<li><a href="../cplusplus-environment-setup/index.html"><span class="en">++C</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../cplusplus-basic-syntax/index.html"><span class="en">++C</span> - أسلوب الكتابة</a></li>
+<li><a href="../cplusplus-cout/index.html"><span class="en">++C</span> - أمر الطباعة   &lt;&lt; cout</a></li>
+<li><a href="../cplusplus-data-types/index.html"><span class="en">++C</span> - أنواع البيانات</a></li>
+<li><a href="../cplusplus-variables/index.html"><span class="en">++C</span> - المتغيرات</a></li>
+<li><a href="index.html"><span class="en">++C</span> - العوامل</a></li>
+<li><a href="../cplusplus-conditions/index.html"><span class="en">++C</span> - الشروط</a></li>
+<li><a href="../cplusplus-loops/index.html"><span class="en">++C</span> - الحلقات</a></li>
+<li><a href="../cplusplus-numbers/index.html"><span class="en">++C</span> - الأعداد</a></li>
+<li><a href="../cplusplus-strings/index.html"><span class="en">++C</span> - النصوص</a></li>
+<li><a href="../cplusplus-arrays/index.html"><span class="en">++C</span> - المصفوفات</a></li>
+<li><a href="../cplusplus-user-input/index.html"><span class="en">++C</span> - إدخال البيانات</a></li>
+<li><a href="../cplusplus-functions/index.html"><span class="en">++C</span> - الدوال</a></li>
+<li><a href="../cplusplus-references/index.html"><span class="en">++C</span> - المراجع</a></li>
+<li><a href="../cplusplus-pointers/index.html"><span class="en">++C</span> - المؤشرات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../cplusplus-oop/index.html"><span class="en">++C</span> - مفهوم البرمجة كائنية التوجه</a></li>
+<li><a href="../cplusplus-struct/index.html"><span class="en">++C</span> - النوع <span class="en">struct</span></a></li>
+<li><a href="../cplusplus-class/index.html"><span class="en">++C</span> - النوع <span class="en">class</span></a></li>
+<li><a href="../cplusplus-encapsulation/index.html"><span class="en">++Encapsulation - C</span></a></li>
+<li><a href="../cplusplus-inheritance/index.html"><span class="en">++Inheritance - C</span></a></li>
+<li><a href="../cplusplus-overriding/index.html"><span class="en">++Overriding - C</span></a></li>
+<li><a href="../cplusplus-overloading/index.html"><span class="en">++Overloading - C</span></a></li>
+<li><a href="../cplusplus-polymorphism/index.html"><span class="en">++Polymorphism - C</span></a></li>
+<li><a href="../cplusplus-constants/index.html"><span class="en">++C</span> - الثوابت</a></li>
+<li><a href="../cplusplus-enum/index.html"><span class="en">++C</span> - النوع <span class="en">enum</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../cplusplus-exceptions/index.html"><span class="en">++C</span> - الإستثناءات</a></li>
+<!--
+
+<li><a href="../cplusplus-lambda-expressions"><span class="en">Lambda Expressions - ++C</span></a></li>
+<li><a href="../cplusplus-files-io"><span class="en">++C</span> - التعامل مع الملفات</a></li>
+<li><a href="../cplusplus-data-structure"><span class="en">Data Structure - ++C</span></a></li>
+<li><a href="../cplusplus-collection"><span class="en">Collection - ++C</span></a></li>
+<li><a href="../cplusplus-generics"><span class="en">Generics - ++C</span></a></li>
+<li><a href="../cplusplus-networking"><span class="en">++C</span> - الشبكات</a></li>
+<li><a href="../cplusplus-multithreading"><span class="en">++C</span> - تعدد المهام</a></li>
+<li><a href="../cplusplus-jdbc"><span class="en">++C</span> - قواعد البيانات</a></li>
+<li><a href="../cplusplus-serialization"><span class="en">++C</span> - المزامنة</a></li>
+
+
+<li><a href="../cplusplus-date-and-time"><span class="en">++C</span> - التاريخ و الوقت</a></li>
+<li><a href="../cplusplus-regular-expressions"><span class="en">++C</span> - التعابير النمطية</a></li>
+
+<li><a href="../cplusplus-next-step"><span class="en">++C</span> - ما هي خطوتي التالية ؟</a></li>
+-->
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">C++</span>العوامل</h1>
+<article>
+<h2>مفهوم العوامل في <span class="word">C++</span></h2>
+<p>العوامل <span class="inline">( <span class="word">operators</span> )</span> عبارة عن رموز لها معنى محدد, و يمكننا تقسيم العوامل إلى <span class="number">5</span> مجموعات أساسية كالتالي:</p>
+<ul class="explain">
+<li><p><span class="word">Arithmetic Operators</span></p></li>
+<li><p><span class="word">Comparison Operators</span></p></li>
+<li><p><span class="word">Logical Operators</span></p></li>
+<li><p><span class="word">Bitwise Operators</span></p></li>
+<li><p><span class="word">Assignment Operators</span></p></li>
+</ul><br/>
+<p>هناك أيضاً عوامل أخرى, سنراها في آخر الدرس.</p>
+</article>
+<article>
+<h2>العوامل التي تستخدم في العمليات الحسابية <span class="inline">(<span class="word">Arithmetic Operators</span>)</span></h2>
+<table class="list full-width">
+<tr>
+<th>إسم العامل</th>
+<th>رمزه</th>
+<th>مثال</th>
+<th>شرح الكود</th>
+</tr>
+<tr>
+<td class="center"><span class="word">Assignment</span></td>
+<td class="center"><code data-enlighter-language="cpp">=</code></td>
+<td class="center"><code data-enlighter-language="cpp">a = b</code></td>
+<td>أعطي <code data-enlighter-language="cpp">a</code> قيمة <code data-enlighter-language="cpp">b</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Addition</span></td>
+<td class="center"><code data-enlighter-language="cpp">+</code></td>
+<td class="center"><code data-enlighter-language="cpp">a + b</code></td>
+<td>أضف قيمة <code data-enlighter-language="cpp">b</code> على قيمة <code data-enlighter-language="cpp">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Subtraction</span></td>
+<td class="center"><code data-enlighter-language="cpp">-</code></td>
+<td class="center"><code data-enlighter-language="cpp">a - b</code></td>
+<td>إطرح قيمة <code data-enlighter-language="cpp">b</code> من قيمة <code data-enlighter-language="cpp">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Unary plus</span></td>
+<td class="center"><code data-enlighter-language="cpp">+</code></td>
+<td class="center"><code data-enlighter-language="cpp">+a</code></td>
+<td>أضرب قيمة <code data-enlighter-language="cpp">a</code> بالعامل <code data-enlighter-language="cpp">+</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Unary minus</span></td>
+<td class="center"><code data-enlighter-language="cpp">-</code></td>
+<td class="center"><code data-enlighter-language="cpp">-a</code></td>
+<td>أضرب قيمة <code data-enlighter-language="cpp">a</code> بالعامل <code data-enlighter-language="cpp">-</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Multiplication</span></td>
+<td class="center"><code data-enlighter-language="cpp">*</code></td>
+<td class="center"><code data-enlighter-language="cpp">a * b</code></td>
+<td>أضرب قيمة <code data-enlighter-language="cpp">a</code> بقيمة <code data-enlighter-language="cpp">b</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Division</span></td>
+<td class="center"><code data-enlighter-language="cpp">/</code></td>
+<td class="center"><code data-enlighter-language="cpp">a / b</code></td>
+<td>أقسم قيمة <code data-enlighter-language="cpp">a</code> على قيمة <code data-enlighter-language="cpp">b</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Modulo</span></td>
+<td class="center"><code data-enlighter-language="cpp">%</code></td>
+<td class="center"><code data-enlighter-language="cpp">a % b</code></td>
+<td>للحصول على آخر رقم يبقى عندما نقسم قيمة <code data-enlighter-language="cpp">a</code> على قيمة <code data-enlighter-language="cpp">b</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Increment</span></td>
+<td class="center"><code data-enlighter-language="cpp">++</code></td>
+<td class="center"><code data-enlighter-language="cpp">a++</code></td>
+<td>لإضافة <span class="number">1</span> على قيمة <code data-enlighter-language="cpp">a</code> و تستخدم في الحلقات</td>
+</tr>
+<tr>
+<td class="center"><span class="word">Decrement</span></td>
+<td class="center"><code data-enlighter-language="cpp">--</code></td>
+<td class="center"><code data-enlighter-language="cpp">a--</code></td>
+<td>لإنقاص <span class="number">1</span> من قيمة <code data-enlighter-language="cpp">a</code> و تستخدم في الحلقات</td>
+</tr>
+</table>
+<br/>
+<p>هنا وضعنا مثال لكل عامل موجود في الجدول <a class="open-page" href="arithmetic-operators-examples.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<article>
+<h2>العوامل التي تستخدم في المقارنات <span class="inline">(<span class="word">Comparison Operators</span>)</span></h2>
+<table class="list full-width">
+<tr>
+<th>إسم العامل</th>
+<th>رمزه</th>
+<th>مثال</th>
+<th>شرح الكود</th>
+</tr>
+<tr>
+<td class="center"><span class="word">Equal to</span></td>
+<td class="center"><code data-enlighter-language="cpp">==</code></td>
+<td class="center"><code data-enlighter-language="cpp">(a == b)</code></td>
+<td>هل قيمة <code data-enlighter-language="cpp">a</code> تساوي قيمة <code data-enlighter-language="cpp">b</code> ؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="cpp">true</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Not equal to</span></td>
+<td class="center"><code data-enlighter-language="cpp">!=</code></td>
+<td class="center"><code data-enlighter-language="cpp">(a != b)</code></td>
+<td>هل قيمة <code data-enlighter-language="cpp">a</code> لا تساوي قيمة <code data-enlighter-language="cpp">b</code> ؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="cpp">true</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Greater than</span></td>
+<td class="center"><code data-enlighter-language="cpp">&gt;</code></td>
+<td class="center"><code data-enlighter-language="cpp">(a &gt; b)</code></td>
+<td>هل قيمة <code data-enlighter-language="cpp">a</code> أكبر من قيمة <code data-enlighter-language="cpp">b</code> ؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="cpp">true</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Less than</span></td>
+<td class="center"><code data-enlighter-language="cpp">&lt;</code></td>
+<td class="center"><code data-enlighter-language="cpp">(a &lt; b)</code></td>
+<td>هل قيمة <code data-enlighter-language="cpp">a</code> أصغر من قيمة <code data-enlighter-language="cpp">b</code> ؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="cpp">true</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Greater than<br/><span class="red">or</span> Equal to</span></td>
+<td class="center"><code data-enlighter-language="cpp">&gt;=</code></td>
+<td class="center"><code data-enlighter-language="cpp">(a &gt;= b)</code></td>
+<td>هل قيمة <code data-enlighter-language="cpp">a</code> أكبر أو تساوي قيمة <code data-enlighter-language="cpp">b</code> ؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="cpp">true</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Less than<br/><span class="red">or</span> Equal to</span></td>
+<td class="center"><code data-enlighter-language="cpp">&lt;=</code></td>
+<td class="center"><code data-enlighter-language="cpp">(a &lt;= b)</code></td>
+<td>هل قيمة <code data-enlighter-language="cpp">a</code> أصغر أو تساوي قيمة <code data-enlighter-language="cpp">b</code> ؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="cpp">true</code></td>
+</tr>
+</table>
+<br/>
+<p>هنا وضعنا مثال لكل عامل موجود في الجدول <a class="open-page" href="comparison-operators-examples.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<article>
+<h2>العوامل التي تستخدم في وضع شروط منطقية <span class="inline">(<span class="word">Logical Operators</span>)</span></h2>
+<table class="list full-width">
+<tr>
+<th>إسم العامل</th>
+<th>رمزه</th>
+<th>مثال</th>
+<th>شرح الكود</th>
+</tr>
+<tr>
+<td class="center"><span class="word">AND</span></td>
+<td class="center"><code data-enlighter-language="cpp">&amp;&amp;</code></td>
+<td class="center"><code data-enlighter-language="cpp">(a &amp;&amp; b)</code></td>
+<td>هل قيمة <code data-enlighter-language="cpp">a</code> و <code data-enlighter-language="cpp">b</code> تساويان <code data-enlighter-language="cpp">true</code> ؟<br/>
+			هنا يجب أن يتم تحقيق الشرطين ليرجع <code data-enlighter-language="cpp">true</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">OR</span></td>
+<td class="center"><code data-enlighter-language="cpp">||</code></td>
+<td class="center"><code data-enlighter-language="cpp">(a || b)</code></td>
+<td>هل قيمة <code data-enlighter-language="cpp">a</code> أو <code data-enlighter-language="cpp">b</code> أو كلاهما تساويان <code data-enlighter-language="cpp">true</code> ؟<br/>
+			هنا يكفي أن يتم تحقيق شرط واحد من الشرطين ليرجع <code data-enlighter-language="cpp">true</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">NOT</span></td>
+<td class="center"><code data-enlighter-language="cpp">!</code></td>
+<td class="center"><code data-enlighter-language="cpp">!a</code></td>
+<td>هل قيمة <code data-enlighter-language="cpp">a</code> لا تساوي <code data-enlighter-language="cpp">true</code> ؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="cpp">true</code></td>
+</tr>
+</table>
+<br/>
+<p>هنا وضعنا مثال لكل عامل موجود في الجدول <a class="open-page" href="logical-operators-examples.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<article>
+<h2>العوامل التي تستخدم للتعامل مع الـ <span class="black inline">bits</span> <span class="inline">(<span class="word">Bitwise Operators</span>)</span></h2>
+<table class="list full-width">
+<tr>
+<th>إسم العامل</th>
+<th>رمزه</th>
+<th>مثال</th>
+<th>شرح الكود</th>
+</tr>
+<tr>
+<td class="center"><span class="word">Bitwise AND</span></td>
+<td class="center"><code data-enlighter-language="cpp">&amp;</code></td>
+<td class="center"><code data-enlighter-language="cpp">a &amp; b</code></td>
+<td>العامل <code data-enlighter-language="cpp">&amp;</code> يحسب ناتج جمع <span class="inline">الـ <span class="word">bits</span></span> المشتركة بين <code data-enlighter-language="cpp">a</code> و <code data-enlighter-language="cpp">b</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Bitwise OR</span></td>
+<td class="center"><code data-enlighter-language="cpp">|</code></td>
+<td class="center"><code data-enlighter-language="cpp">a | b</code></td>
+<td>العامل <code data-enlighter-language="cpp">|</code> يحسب ناتج جمع <span class="inline">الـ <span class="word">bits</span></span> المشتركة و الغير مشتركة بين <code data-enlighter-language="cpp">a</code> و <code data-enlighter-language="cpp">b</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Bitwise XOR</span></td>
+<td class="center"><code data-enlighter-language="cpp">^</code></td>
+<td class="center"><code data-enlighter-language="cpp">a ^ b</code></td>
+<td>العامل <code data-enlighter-language="cpp">^</code> يحسب ناتج جمع <span class="inline">الـ <span class="word">bits</span></span> الغير مشتركة بين <code data-enlighter-language="cpp">a</code> و <code data-enlighter-language="cpp">b</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Bitwise compliment OR</span></td>
+<td class="center"><code data-enlighter-language="cpp">~</code></td>
+<td class="center"><code data-enlighter-language="cpp">~a</code></td>
+<td>العامل <code data-enlighter-language="cpp">~</code> يقلب <span class="inline">الـ <span class="word">bits</span></span> التي تساوي <span class="number">0</span> إلى <span class="number">1</span> و يقلب <span class="inline">الـ <span class="word">bits</span></span> التي تساوي <span class="number">1</span> إلى <span class="inline"><span class="number">0</span>,</span><br/> ثم يضيف عليهم <span class="number">1</span> و يحسب ناتج جمعهم, بعدها يضرب الجواب بالعامل <span class="inline">( <code data-enlighter-language="cpp">-</code> )</span> ثم يعطينا جواب سلبي.</td>
+</tr>
+<tr>
+<td class="center"><span class="word">Left shift</span></td>
+<td class="center"><code data-enlighter-language="cpp">&lt;&lt;</code></td>
+<td class="center"><code data-enlighter-language="cpp">a &lt;&lt; 2</code></td>
+<td>العامل <code data-enlighter-language="cpp">&lt;&lt;</code> يزيح <span class="inline">الـ <span class="word">bits</span></span> من آخر اليسار إلى أول اليمين.<br/>
+			العدد <span class="number">2</span> يعني أننا سنزيح آخر إثنين <span class="word">bits</span> و نضعهم في الأول.</td>
+</tr>
+<tr>
+<td class="center"><span class="word">Right shift</span></td>
+<td class="center"><code data-enlighter-language="cpp">&gt;&gt;</code></td>
+<td class="center"><code data-enlighter-language="cpp">a &gt;&gt; 2</code></td>
+<td>العامل <code data-enlighter-language="cpp">&gt;&gt;</code> يزيح <span class="inline">الـ <span class="word">bits</span></span> من أول اليمين إلى آخر اليسار.<br/>
+			العدد <span class="number">2</span> يعني أننا سنزيح أول إثنين <span class="word">bits</span> و نضعهم في الأخير.</td>
+</tr>
+</table>
+<br/>
+<p>هنا وضعنا مثال لكل عامل موجود في الجدول <a class="open-page" href="bitwize-operators-examples.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<article>
+<h2>العوامل التي تستخدم لإعطاء قيم للمتغيرات <span class="inline">(<span class="word">Assignment Operators</span>)</span></h2>
+<table class="list full-width">
+<tr>
+<th>إسم العامل</th>
+<th>رمزه</th>
+<th>مثال</th>
+<th>شرح الكود</th>
+</tr>
+<tr>
+<td class="center"><span class="word">Basic Assignment</span></td>
+<td class="center"><code data-enlighter-language="cpp">=</code></td>
+<td class="center"><code data-enlighter-language="cpp">a = b</code></td>
+<td>ضع قيمة <code data-enlighter-language="cpp">b</code> في <span class="inline"><code data-enlighter-language="cpp">a</code>.</span></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Add AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="cpp">+=</code></td>
+<td class="center"><code data-enlighter-language="cpp">a += b</code></td>
+<td>أضف قيمة <code data-enlighter-language="cpp">a</code> على قيمة <code data-enlighter-language="cpp">b</code> و خزن الناتج في <code data-enlighter-language="cpp">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Susbtract AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="cpp">-=</code></td>
+<td class="center"><code data-enlighter-language="cpp">a -= b</code></td>
+<td>أنقص قيمة <code data-enlighter-language="cpp">a</code> من قيمة <code data-enlighter-language="cpp">b</code> و خزن الناتج في <code data-enlighter-language="cpp">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Multiply AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="cpp">*=</code></td>
+<td class="center"><code data-enlighter-language="cpp">a *= b</code></td>
+<td>أضرب قيمة <code data-enlighter-language="cpp">a</code> بقيمة <code data-enlighter-language="cpp">b</code> و خزن الناتج في <code data-enlighter-language="cpp">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Divide AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="cpp">/=</code></td>
+<td class="center"><code data-enlighter-language="cpp">a /= b</code></td>
+<td>أقسم قيمة <code data-enlighter-language="cpp">a</code> على قيمة <code data-enlighter-language="cpp">b</code> و خزن الناتج في <code data-enlighter-language="cpp">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Modulo AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="cpp">%=</code></td>
+<td class="center"><code data-enlighter-language="cpp">a %= b</code></td>
+<td>أقسم قيمة <code data-enlighter-language="cpp">a</code> على قيمة <code data-enlighter-language="cpp">b</code> و خزن آخر رقم يبقى من عملية القسمة في <code data-enlighter-language="cpp">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Left shift AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="cpp">&lt;&lt;=</code></td>
+<td class="center"><code data-enlighter-language="cpp">a &lt;&lt;= 2</code></td>
+<td>أزح آخر إثنين <span class="word">bits</span> و ضعهم في الأول ثم خزن الناتج في <code data-enlighter-language="cpp">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Right shift AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="cpp">&gt;&gt;=</code></td>
+<td class="center"><code data-enlighter-language="cpp">a &gt;&gt;= 2</code></td>
+<td>أزح أول اثنين <span class="word">bits</span> و ضعهم في الآخر ثم خزن الناتج في <code data-enlighter-language="cpp">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Bitwise AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="cpp">&amp;=</code></td>
+<td class="center"><code data-enlighter-language="cpp">a &amp;= b</code></td>
+<td>أحسب ناتج جمع <span class="inline">الـ <span class="word">bits</span></span> المشتركة بين <code data-enlighter-language="cpp">a</code> و <code data-enlighter-language="cpp">b</code> و خزن الناتج في <code data-enlighter-language="cpp">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Bitwise exclusive OR and Assignment</span></td>
+<td class="center"><code data-enlighter-language="cpp">^=</code></td>
+<td class="center"><code data-enlighter-language="cpp">a ^= b</code></td>
+<td>أحسب ناتج جمع <span class="inline">الـ <span class="word">bits</span></span> الغير مشتركة بين <code data-enlighter-language="cpp">a</code> و <code data-enlighter-language="cpp">b</code> و خزن الناتج في <code data-enlighter-language="cpp">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Bitwise inexclusive OR and Assignment</span></td>
+<td class="center"><code data-enlighter-language="cpp">|=</code></td>
+<td class="center"><code data-enlighter-language="cpp">a |= b</code></td>
+<td>أحسب ناتج جمع <span class="inline">الـ <span class="word">bits</span></span> المشتركة و الغير مشتركة بين <code data-enlighter-language="cpp">a</code> و <code data-enlighter-language="cpp">b</code> و خزن الناتج في <code data-enlighter-language="cpp">a</code></td>
+</tr>
+</table>
+<br/>
+<p>هنا وضعنا مثال لكل عامل موجود في الجدول <a class="open-page" href="assignment-operators-examples.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<article>
+<h2>عوامل أخرى مهمة في <span class="word">C++</span></h2>
+<table class="list full-width">
+<tr>
+<th>إسم العامل</th>
+<th>رمزه</th>
+<th>إستخدامه</th>
+</tr>
+<tr>
+<td class="center"><span class="word">Conditional</span></td>
+<td class="center"><code data-enlighter-language="cpp">?:</code></td>
+<td>يطلق عليه أيضاً إسم <span class="word">Ternary Operator</span> لأنه يأخذ ثلاث عناصر ليعمل.<br/>
+			يمكن إستعماله بدل جمل الشرط <code data-enlighter-language="cpp">if</code> و <code data-enlighter-language="cpp">else</code> في حال كنت تريد إعطاء قيمة للمتغير.</td>
+</tr>
+<tr>
+<td class="center"><span class="word">Size of</span></td>
+<td class="center"><code data-enlighter-language="cpp">sizeof()</code></td>
+<td>يستخدم لمعرفة حجم المساحة المخصصة في الذاكرة لأي شيء يتم تمريره بين القوسين.<br/>
+			الرقم الذي يتم إرجاعه يمثل الحجم <span class="inline">بالـ <span class="word">Byte</span>.</span></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Address</span></td>
+<td class="center"><code data-enlighter-language="cpp">&amp;</code></td>
+<td>يستخدم لمعرفة عنوان المساحة المخصصة في الذاكرة للشيء الذي يتم وضعه بعده مباشرةً.<br/>
+			العنوان الذي يتم إرجاعه يتم إرجاعه بشكل <span class="inline"><span class="word">Hexadecimal</span>.</span></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Pointer</span></td>
+<td class="center"><code data-enlighter-language="cpp">*</code></td>
+<td>يستخدم لوضع مؤشر لشيء تم تعريفه مما يجعلك قادر على الوصول إليه بشكل مباشر من أي مكان تريد من خلال عنوانه في الذاكرة.</td>
+</tr>
+<tr>
+<td class="center"><span class="word">Comma</span></td>
+<td class="center"><code data-enlighter-language="cpp">,</code></td>
+<td>تستخدم الفاصلة لتنفيذ أكثر من عملية حسابية و من ثم إسناد قيمتها كلها في متغير واحد.<br/>
+			مع الإشارة إلى أنه يجب وضع فاصلة بين كل عملتين تفوم بوضعهما.</td>
+</tr>
+</table>
+<br/>
+<p>هنا وضعنا مثال لكل عامل موجود في الجدول <a class="open-page" href="other-operators-examples.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

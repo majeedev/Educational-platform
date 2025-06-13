@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس شرحنا النوع enum في سي بلاس بلاس مع أمثلة شاملة توضح كيفية التعامل معه و الإستفادة منه" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>النوع enum في سي بلاس بلاس | C++ Enumeration</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../cplusplus-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../cplusplus-overview/index.html"><span class="en">++C</span> - نظرة عامة</a></li>
+<li><a href="../cplusplus-environment-setup/index.html"><span class="en">++C</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../cplusplus-basic-syntax/index.html"><span class="en">++C</span> - أسلوب الكتابة</a></li>
+<li><a href="../cplusplus-cout/index.html"><span class="en">++C</span> - أمر الطباعة   &lt;&lt; cout</a></li>
+<li><a href="../cplusplus-data-types/index.html"><span class="en">++C</span> - أنواع البيانات</a></li>
+<li><a href="../cplusplus-variables/index.html"><span class="en">++C</span> - المتغيرات</a></li>
+<li><a href="../cplusplus-operators/index.html"><span class="en">++C</span> - العوامل</a></li>
+<li><a href="../cplusplus-conditions/index.html"><span class="en">++C</span> - الشروط</a></li>
+<li><a href="../cplusplus-loops/index.html"><span class="en">++C</span> - الحلقات</a></li>
+<li><a href="../cplusplus-numbers/index.html"><span class="en">++C</span> - الأعداد</a></li>
+<li><a href="../cplusplus-strings/index.html"><span class="en">++C</span> - النصوص</a></li>
+<li><a href="../cplusplus-arrays/index.html"><span class="en">++C</span> - المصفوفات</a></li>
+<li><a href="../cplusplus-user-input/index.html"><span class="en">++C</span> - إدخال البيانات</a></li>
+<li><a href="../cplusplus-functions/index.html"><span class="en">++C</span> - الدوال</a></li>
+<li><a href="../cplusplus-references/index.html"><span class="en">++C</span> - المراجع</a></li>
+<li><a href="../cplusplus-pointers/index.html"><span class="en">++C</span> - المؤشرات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../cplusplus-oop/index.html"><span class="en">++C</span> - مفهوم البرمجة كائنية التوجه</a></li>
+<li><a href="../cplusplus-struct/index.html"><span class="en">++C</span> - النوع <span class="en">struct</span></a></li>
+<li><a href="../cplusplus-class/index.html"><span class="en">++C</span> - النوع <span class="en">class</span></a></li>
+<li><a href="../cplusplus-encapsulation/index.html"><span class="en">++Encapsulation - C</span></a></li>
+<li><a href="../cplusplus-inheritance/index.html"><span class="en">++Inheritance - C</span></a></li>
+<li><a href="../cplusplus-overriding/index.html"><span class="en">++Overriding - C</span></a></li>
+<li><a href="../cplusplus-overloading/index.html"><span class="en">++Overloading - C</span></a></li>
+<li><a href="../cplusplus-polymorphism/index.html"><span class="en">++Polymorphism - C</span></a></li>
+<li><a href="../cplusplus-constants/index.html"><span class="en">++C</span> - الثوابت</a></li>
+<li><a href="index.html"><span class="en">++C</span> - النوع <span class="en">enum</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../cplusplus-exceptions/index.html"><span class="en">++C</span> - الإستثناءات</a></li>
+<!--
+
+<li><a href="../cplusplus-lambda-expressions"><span class="en">Lambda Expressions - ++C</span></a></li>
+<li><a href="../cplusplus-files-io"><span class="en">++C</span> - التعامل مع الملفات</a></li>
+<li><a href="../cplusplus-data-structure"><span class="en">Data Structure - ++C</span></a></li>
+<li><a href="../cplusplus-collection"><span class="en">Collection - ++C</span></a></li>
+<li><a href="../cplusplus-generics"><span class="en">Generics - ++C</span></a></li>
+<li><a href="../cplusplus-networking"><span class="en">++C</span> - الشبكات</a></li>
+<li><a href="../cplusplus-multithreading"><span class="en">++C</span> - تعدد المهام</a></li>
+<li><a href="../cplusplus-jdbc"><span class="en">++C</span> - قواعد البيانات</a></li>
+<li><a href="../cplusplus-serialization"><span class="en">++C</span> - المزامنة</a></li>
+
+
+<li><a href="../cplusplus-date-and-time"><span class="en">++C</span> - التاريخ و الوقت</a></li>
+<li><a href="../cplusplus-regular-expressions"><span class="en">++C</span> - التعابير النمطية</a></li>
+
+<li><a href="../cplusplus-next-step"><span class="en">++C</span> - ما هي خطوتي التالية ؟</a></li>
+-->
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">C++</span>النوع <code>enum</code></h1>
+<article>
+<h2>مفهوم النوع <code data-enlighter-language="cpp">enum</code> في <span class="word">C++</span></h2>
+<p>النوع <code data-enlighter-language="cpp">enum</code> يستخدم لتعريف قائمة من القيم أو عدة مجموعة قيم ثابتة بشكل منطقي.<br/>
+	في نهاية الأمر تعتبر هذه المجموعة كنوع جديد من البيانات و فيه عدة قيم محتملة يمكن الإختيار منها فقط.</p>
+<p>النوع <code data-enlighter-language="cpp">enum</code> مفيد جداً في حال أردت بناء كود مخصص فقط للتعامل مع نوع محدد من القيم و في حال حاول أي مبرمج آخر عدم الإلتزام بنوع البيانات الذي فرضته أنت و قام بتمرير قيم من نوع آخر فإنه يتم تنبيهه مباشرةً قبل تشغيل الكود و في حال أصر على ذلك و قام بتشغيل الكود فإن مترجم لغة <span class="word">C++</span> سيمنعه وقت التشغيل و يظهر له خطأ.</p>
+<p>بشكل عام, في حال أردت تعريف مجموعة قيم مترابطة يستحيل أن تتبدل فالخيار الأمثل هو تعريف هذه القيم في الأساس بداخل <span class="inline"><code data-enlighter-language="cpp">enum</code>.</span></p>
+<p>أمثلة حول بعض المعلومات الثابتة في الحياة و التي أيضاً تعتبر ثابتة في المنطق هي:</p>
+<ul class="explain">
+<li><p>فصول السنة <span class="inline">( الخريف, الشتاء, الربيع, الصيف )</span></p></li>
+<li><p>الإتجاهات <span class="inline">( الشمال - الجنوب - الشرق - الغرب )</span></p></li>
+<li><p>أيام الأسبوع <span class="inline">( الإثنين - الثلاثاء - الأربعاء إلخ.. )</span></p></li>
+<li><p>أشهر السنة <span class="inline">( كانون الثاني - شباط - آذار إلخ.. )</span></p></li>
+<li><p>الجنس <span class="inline">( ذكر - أنثى )</span></p></li>
+</ul>
+<p>عند التعامل مع هذا النوع الثابت من البيانات و الذي لا نريد لأحد أن يعبث به فإننا نستخدم النوع <code data-enlighter-language="cpp">enum</code> و هذا ما سنراه لاحقاً في الأمثلة.</p>
+</article>
+<article>
+<h2>طريقة تعريف <code data-enlighter-language="cpp">enum</code> في <span class="word">C++</span></h2>
+<p>تعريف <code data-enlighter-language="cpp">enum</code> يشبه كثيراً طريقة تعريف <code data-enlighter-language="cpp">struct</code> و لكن التعامل مع المتغيرات التي نضعها فيه لاحقاً هو ما يختلف.</p>
+<p>عند وضع متغيرات بداخله يمكنك إعطاؤهم قيم بنفسك أو ترك المترجم يعطيهم قيم إفتراضية بنفسه.<br/>
+	إفتراضياً المتغيرات التي تضعها يتم إعطاؤها قيم بالترتيب إبتداءاً من صفر, فمثلاً أولاً أول متغير تكون قيمته <code>0</code> و الثاني تكون قيمته <code>1</code> و هكذا.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف <code data-enlighter-language="cpp">enum</code> إسمه <code>Days</code> يمثل أيام الأسبوع.<br/>
+	بعدها قمنا بإنشاء كائن منه و جعلناه يساوي أحد الثوابت الموجودة في <code>Days</code> و من ثم طباعة قيمته.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">Main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// وضعنا فيه 7 ثوابت Days إسمه enum هنا قمنا بتعريف
+enum Days
+{
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+};
+
+int main()
+{
+	// فقط Days و الهدف منه تخزين إحدى القيم الموجودة في today إسمه Days هنا قمنا بإنشاء كائن من
+    Days today;
+
+	// today في الكائن Days الموجود بالأساس في Monday هنا قمنا بتخزين قيمة الثابت
+    today = Monday;
+
+    // today هنا قمنا بطباعة قيمة الكائن
+    cout &lt;&lt; "today value = " &lt;&lt; today;
+
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-linenumbers="false">
+today value = 0
+		</pre>
+</div>
+<br/>
+<p>في المثال السابق قد تقول لما كل هذا العذاب!<br/>
+	لما لا نقوم بتعريف المتغير <code>today</code> بشكل مباشر كالتالي ؟!</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+int today = 0;
+	</pre>
+<br/><br/>
+<h3>معلومة مهمة</h3>
+<p>في المثال السابق, لو قمت بتعريف <code>today</code> كمتغير عادي, كان بإمكانك وضع أي قيمة تريد فيه مثل <code>20</code> أو أي قيمة أخرى.</p>
+<p>فائدة تعريف <code>today</code> ككائن من <code>Days</code> هو أنك أصبحت مجبر على استخدام الثوابت الموجودة فيه لتحديد قيمة <code>today</code> مما يجعلك تضمن أنه لا يمكن تمرير أي قيمة عشوائية غير القيم التي قمت أنت بتحديدها فمثلاً في المثال السابق يمكنك أن تغيير قيمة الكائن <code>today</code> كالتالي.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+// Days لأنها موجودة في الأصل في Monday يمكنك وضع القيمة
+today = Monday;
+
+// Days لأنها موجودة في الأصل في Friday يمكنك وضع القيمة
+today = Friday;
+	</pre>
+</article>
+<article>
+<h2>مفاهيم مهمة حول النوع <code data-enlighter-language="cpp">enum</code> في <span class="word">C++</span></h2>
+<br/>
+<h3>المفهوم الأول</h3>
+<p>هنا وضعنا مثال يوضح طريقة تعيين قيم للثوابت الموضوعة في <code data-enlighter-language="cpp">enum</code> و كيفية الإستفادة من هذه القيم.</p>
+<p><a class="open-page" href="change-enum-default-values.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المفهوم الثاني</h3>
+<p>هنا وضعنا مثال يعلمك كيف تقوم بالتشييك على قيمة الكائن الذي ننشئه من <code data-enlighter-language="cpp">enum</code> باستخدام الجملة <code data-enlighter-language="cpp">switch</code> مما يجعل كتابة الكود أكثر سهولة و وضوح.</p>
+<p><a class="open-page" href="check-enum-object-value-using-switch.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المفهوم الثالث</h3>
+<p>هنا وضعنا مثال يوضح كيفية تعريف دالة تأخذ باراميتر نوعه <code data-enlighter-language="cpp">enum</code> و كيفية تمرير قيمة لها عند استدعاءها.</p>
+<p><a class="open-page" href="enum-parameter.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

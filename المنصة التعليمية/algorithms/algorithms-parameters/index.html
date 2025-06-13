@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس ستتعلم كيف تمرر قيم للدالة عند إستدعاءها" name="description"/>
+<meta content="arguments vs parameters, التعامل مع الباراميترات, مفهوم الباراميترات, وضع باراميتر للدالة, تمرير باراميتر للدالة, تمرير قيمة للدالة" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>التعامل مع الباراميترات في الخوارزميات</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../algo-icon.png"/></li>
+<li class="title">دروس تمهيدية</li>
+<li><a href="../algorithms-introduction/index.html">مفهوم الخوارزميات</a></li>
+<li><a href="../algorithms-environment-setup/index.html">تجهيز بيئة العمل</a></li>
+<li><a href="../algorithms-the-print-method/index.html">دالة الطباعة <span class="en">Print</span></a></li>
+<li><a href="../algorithms-concatenation/index.html">الدمج أثناء الطباعة</a></li>
+<li><a href="../algorithms-variables/index.html">المتغيرات</a></li>
+<li class="title">الحلقات و الشروط</li>
+<li><a href="../algorithms-loops/index.html">الحلقات و أنواعها</a></li>
+<li><a href="../algorithms-for-loop/index.html">الحلقة <span class="en">For</span></a></li>
+<li><a href="../algorithms-while-and-do-while-loops/index.html">الحلقتين <span class="en">While</span> و <span class="en">Do While</span></a></li>
+<li><a href="../algorithms-setting-conditions/index.html">جمل الشرط</a></li>
+<li><a href="../algorithms-operators/index.html">العوامل</a></li>
+<li><a href="../algorithms-nested-loops/index.html">الحلقات المتداخلة</a></li>
+<li class="title">إدخال بيانات من المستخدم</li>
+<li><a href="../algorithms-the-read-method/index.html">دالة الإدخال <span class="en">Read</span></a></li>
+<li><a href="../algorithms-calculate-the-factorial/index.html">حساب قيمة الـ <span class="en">Factorial</span> للعدد</a></li>
+<li><a href="../algorithms-calculate-the-power/index.html">حساب قيمة الـ <span class="en">Power</span> للعدد</a></li>
+<li class="title">المصفوفات</li>
+<li><a href="../algorithms-arrays-types/index.html">المصفوفات و أنواعها</a></li>
+<li><a href="../algorithms-one-dimensional-arrays/index.html">تعريف مصفوفة ذات بعد واحد</a></li>
+<li><a href="../algorithms-one-dimensional-arrays-length/index.html">حجم المصفوفة ذات البعد الواحد</a></li>
+<li><a href="../algorithms-working-with-one-dimensional-arrays/index.html">التعامل مع مصفوفة ذات بعد واحد</a></li>
+<li><a href="../algorithms-two-dimensional-arrays/index.html">تعريف مصفوفة ذات بعدين</a></li>
+<li><a href="../algorithms-two-dimensional-arrays-length/index.html">حجم المصفوفة ذات البعدين</a></li>
+<li><a href="../algorithms-working-with-two-dimensional-arrays/index.html">التعامل مع مصفوفة ذات بعدين</a></li>
+<li class="title">الدوال</li>
+<li><a href="../algorithms-methods/index.html">تعريف دوال جديدة</a></li>
+<li><a href="index.html">التعامل مع الباراميترات</a></li>
+<li><a href="../algorithms-recursion/index.html">تعريف دوال تستدعي نفسها</a></li>
+<li class="title">أكتب الكود كالمحترفين</li>
+<li><a href="../algorithms-write-less-code/index.html">تقليص حجم الكود</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Algorithms</span>التعامل مع الباراميترات في الخوارزميات</h1>
+<article>
+<h2>مفهوم الباراميتر</h2>
+<p>باراميتر تعني <span class="word">Parameter</span> في اللغة الإنجليزية. الباراميتر عبارة عن متغير من أي نوع مثل <span class="inline">( <code data-enlighter-language="java">int</code> أو <code data-enlighter-language="java">double</code> أو <code data-enlighter-language="java">String</code>.. )</span> يتم تعريفه بين أقواس الدالة.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف دالة إسمها <code data-enlighter-language="java">Demo()</code>, نوعها <code data-enlighter-language="java">int</code>, تملك باراميتر واحد نوعه <code data-enlighter-language="java">int</code> و إسمه <code class="word" span="">a</code>, و ترجع القيمة <span class="number">0</span>.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public static int Demo (int a)
+{
+    return 0;
+} 
+		</pre>
+</div>
+<br/>
+<p class="question">هل أنت مجبر على وضع باراميتر للدالة؟</p>
+<p>كلا أنت لست مجبر, و إنما تضع باراميتر إذا كنت بحاجة له.<br/>
+	لاحظ أننا قمنا بتعرف الدالة <code data-enlighter-language="java">Demo()</code> من جديد بدون إعطائها أي باراميتر.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public static int Demo ()
+{
+    return 0;
+} 
+		</pre>
+</div>
+<br/>
+<p class="question">هل بإمكانك أن تضع أكثر من باراميتر للدالة؟</p>
+<p>نعم بإمكانك وضع العدد الذي تريده من الباراميترات, شرط أن تحدد <span class="red">نوع</span> كل باراميتر تقوم بإضافته و أن تضع <span class="red">فاصلة</span> بين كل باراميترَين.<br/>
+	في المثال التالي قمنا بتعريف دالة إسمها <code data-enlighter-language="java">Demo()</code>, نوعها <code data-enlighter-language="java">void</code>, و تملك الباراميترات التالية:</p>
+<ul class="explain">
+<li><p>الباراميتر الأول إسمه <code data-enlighter-language="java">a</code> و نوعه <code data-enlighter-language="java">int</code>.</p></li>
+<li><p>الباراميتر الثاني إسمه <code data-enlighter-language="java">b</code> و نوعه <code data-enlighter-language="java">double</code>.</p></li>
+<li><p>الباراميتر الثالث إسمه <code data-enlighter-language="java">c</code> و نوعه <code data-enlighter-language="java">String</code>.</p></li>
+<li><p>الباراميتر الرابع إسمه <code data-enlighter-language="java">d</code> و نوعه <code data-enlighter-language="java">boolean</code>.</p></li>
+</ul>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public static void Demo (int a, double b, String c, boolean d)
+{
+
+} 
+		</pre>
+</div>
+<br/>
+<p class="question">ما هي الفائدة من الباراميترات و لم قد أحتاجهم؟</p>
+<p>فائدة الباراميترات أنك من خلالهم تجعل المستخدم يدخل قيمه الخاصة في الدالة فتتغير النتيجة التي ترجعها الدالة حسب القيم التي يقوم هو بإدخالها.</p>
+<br/>
+<p class="question">هل يمكن وضع قيم أولية للباراميترات؟</p>
+<p>كلا, لا يمكن وضع قيم أولية للباراميترات, لأن فكرة الباراميترات الأساسية هي أن يتم إعطائهم القيم عند الإستدعاء.</p>
+<p>إذاً, عند تعريف الباراميتر بداخل الدالة, لا يمكن وضع قيمة أولية له.<br/>
+	أما عند إستدعاء الدالة, فإنه يجب تمرير قيمة مكان كل باراميتر موضوع فيها.</p>
+</article>
+<article>
+<h2>مثال يوضح طريقة التعامل مع الباراميترات و فائدتهم</h2>
+<p>في المثال التالي قمنا بتعريف دالة إسمها <code data-enlighter-language="java">Sum()</code>, نوعها <code data-enlighter-language="java">void</code>, تحتوي على باراميترَين نوعهما <code data-enlighter-language="java">int</code> إسمهم <code data-enlighter-language="java">a</code> و <code data-enlighter-language="java">b</code>.<br/>
+	مهمة هذه الدالة هي طباعة ناتج جمع أي عددين صحيحين نضعهما فيها عند إستدعائها.</p>
+<br/>
+<div class="example-box">
+<h4>نتيجة التشغيل</h4>
+<div class="image-box">
+<a href="lesson-pic-1.png" target="_blank"><img alt="" src="lesson-pic-1.png"/></a><br/>
+</div>
+</div>
+<div class="example-box">
+<h4>كود الجافا</h4>
+<pre data-enlighter-language="java">
+public class Parameters {
+ 
+    public static void Sum (int a, int b)
+    {
+        System.out.print("The sum is: " + (a+b) + "\n");
+    }
+ 
+    public static void main (String[] args)
+    {
+        Sum(3, 4);
+        Sum(5, 9);
+        Sum(10, 20);
+    }
+ 
+}
+		</pre>
+</div>
+<div class="example-box">
+<h4>شرح الكود</h4>
+<div class="explaining-box">
+<ul>
+<li><p>الهدف من هذا المثال هو توضيح فكرة أن الباراميترات تجعل النتيجة التي ترجعها الدالة تتغير على حسب القيم التي ندخلها فيها عند إستدعائها.</p></li>
+<br/><br/>
+<pre data-enlighter-language="java" data-enlighter-lineoffset="3">
+	public static void Sum (int a, int b)
+	{
+		System.out.print("The sum is: " + (a+b) + "\n");
+	}
+				</pre>
+<li><p>هنا قمنا بتعريف دالة إسمها <code data-enlighter-language="java">Sum()</code> و مهمتها طباعة ناتج جمع أي عددين صحيحين نضعهما فيها عند إستدعائها.</p></li>
+<li><p>إذاً عند إستدعاء هذه الدالة يجب أن نمرر لها عددين صحيحين بين أقواسها, و عندها سيحدث التالي:</p></li>
+<ul type="square">
+<li><p>سيقوم الكمبيوتر بوضع هذين العددين في المتغيرَين <code data-enlighter-language="java">a</code> و <code data-enlighter-language="java">b</code> بنفس الترتيب.</p></li>
+<li><p>بعدها سيقوم بتنفيذ أمر الطباعة الموضوع في الدالة و الذي يقضي بعرض ناتج جمع العددين الموجودين في المتغيرَين <code data-enlighter-language="java">a</code> و <code data-enlighter-language="java">b</code>.</p></li>
+</ul>
+</ul>
+<ul>
+<br/><br/>
+<pre data-enlighter-language="java" data-enlighter-lineoffset="8">
+	public static void main (String[] args)
+	{
+		Sum(3, 4);
+		Sum(5, 9);
+		Sum(10, 20);
+	}
+				</pre>
+<li><p>هنا قمنا باستدعاء الدالة <code data-enlighter-language="java">Sum()</code> ثلاث مرات, و كل مرة قمنا بإعطائها عددين مختلفين, و بالتالي سيعمل الكود كالتالي:</p></li>
+<ul type="square">
+<li><p>أول مرة: وضعنا فيها القيمتين <span class="number">3</span> و <span class="number">4</span> و بالتالي سيتم عرض ناتج جمع العددين هكذا:   <code data-enlighter-language="java">The sum is: 7</code>.</p></li>
+<li><p>ثاني مرة: وضعنا فيها القيمتين <span class="number">5</span> و <span class="number">9</span> و بالتالي سيتم عرض ناتج جمع العددين هكذا:   <code data-enlighter-language="java">The sum is: 14</code>.</p></li>
+<li><p>ثالث مرة: وضعنا فيها القيمتين <span class="number">10</span> و <span class="number">20</span> و بالتالي سيتم عرض ناتج جمع العددين هكذا:   <code data-enlighter-language="java">The sum is: 30</code>.</p></li>
+</ul>
+</ul>
+</div>
+</div>
+<div class="example-box">
+<h4>شرح عملية الإستدعاء بتفصيل</h4>
+<p>هكذا كان يتم تمرير الأعداد التي كنا نضعها بين أقواس الدالة <code data-enlighter-language="java">Sum()</code>.</p>
+<div class="image-box">
+<a href="lesson-pic-2.png" target="_blank"><img alt="" src="lesson-pic-2.png"/></a>
+</div>
+</div>
+<br/>
+<h3 class="note-title">إنتبه</h3>
+<div class="note-box">
+<p>إذا قمت باستدعاء دالة تحتوي على باراميتر أو أكثر, عليك إدخال قيمة مكان كل باراميتر موجود في الدالة عند إستدعائها و إلا سيؤدي ذلك إلى ظهور أخطاء في الكود.<br/>
+		أي باراميتر أو متغير عادي تنشئه في حدود الدالة يعتبر خاص لها, أي لا تستطيع التعامل معه بشكل مباشر من خارج حدود الدالة.</p>
+</div>
+</article>
+<article>
+<h2>الفرق بين الكلمتين <span class="word">Parameter</span> و <span class="word">Argument</span></h2>
+<p>أثناء تعريف الدالة, المتغيرات التي نقوم بتعريفها بين أقواسها تسمى <span class="word">Parameters</span>.<br/>
+	بينما عندما نقوم باستدعاء الدالة و نعطيها قيم مكان كل باراميتر موضوع فيها, هذه القيم تسمى <span class="word">Arguments</span>.</p>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<div class="explaining-box">
+<ul>
+<br/>
+<li><p>هنا المتغيرين <code data-enlighter-language="java">a</code> و <code data-enlighter-language="java">b</code> يعتبروا <span class="word">Parameters</span> بالنسبة للدالة.</p></li>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public static void Sum (int a, int b)
+{
+    System.out.print("The sum is: " + (a+b) + "\n");
+} 
+				</pre>
+<br/><br/>
+<li><p>هنا القيمتين <span class="number">3</span> و <span class="number">4</span> يعتبروا <span class="word">Arguments</span> بالنسبة للدالة.</p></li>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public static void main (String[] args)
+{
+    Sum(3, 4);
+} 
+				</pre>
+</ul>
+</div>
+</div>
+</article>
+<article>
+<h2>تمارين شاملة حول التعامل مع الباراميترات</h2>
+<br/>
+<h3>التمرين الأول</h3>
+<p>أكتب دالة إسمها <code data-enlighter-language="java">Sum</code> تعطيها عددين صحيحين عند إستدعاءها, فتقوم بطباعة ناتج جمع هذين العددين فقط.<br/>
+	بعدها أطلب من المستخدم إدخال عددين, ثم قم باستدعائها لطباعة ناتج جمع هذين العددين.</p>
+<p><a class="open-page" href="ex-1.html" target="_blank">الحل و التفسير »</a></p>
+<br/><br/>
+<h3>التمرين الثاني</h3>
+<p>أكتب دالة إسمها <code data-enlighter-language="java">Maximum</code>, تعطيها عددين صحيحين, فترجع العدد الأكبر فقط.<br/>
+	ثم أطلب من المستخدم إدخال عددين.<br/>
+	بعدها قم بعرض العدد الأكبر بين هذين العددين بالإعتماد على الدالة <code data-enlighter-language="java">Maximum</code>.</p>
+<p><a class="open-page" href="ex-2.html" target="_blank">الحل و التفسير »</a></p>
+<br/><br/>
+<h3>التمرين الثالث</h3>
+<p>أكتب دالة إسمها <code data-enlighter-language="java">Average</code>, يعطيها المستخدم علاماته المدرسية, فتحسب له معدله, ثم تطبع له نتيجته كالتالي:<br/>
+	- إذا كان معدله بين <span class="number">10</span> و <span class="number">20</span> ستطبع أنه ناجح.<br/>
+	- إذا كان معدله بين <span class="number">0</span> و <span class="number">9</span> ستطبع أنه راسب.<br/>
+	- إذا لم يكن معدله بين <span class="number">0</span> و <span class="number">20</span> ستطبع أن هناك خطأ في العلامات المدخلة.</p>
+<p>في البرنامج, قم بتخزين أسماء المواد في مصفوفة إسمها <code data-enlighter-language="java">Methods</code>.<br/>
+	ثم أطلب من المستخدم إدخال علامة بين <span class="number">0</span> و <span class="number">20</span> لكل مادة و خزّن العلامات التي سيدخلها المستخدم في مصفوفة إسمها <code data-enlighter-language="java">Notes</code>.<br/>
+	في الأخير قم باستدعاء الدالة <code data-enlighter-language="java">Average</code> لطباعة معدل و نتيجة المستخدم.</p>
+<p><a class="open-page" href="ex-3.html" target="_blank">الحل و التفسير »</a></p>
+<br/><br/>
+<h3>التمرين الرابع</h3>
+<p>أكتب دالة إسمها <code data-enlighter-language="java">FindFirst</code>, عند إستدعائها تعطيها باراميترين, الباراميتر الأول عبارة عن مصفوفة تحتوي على أعداد صحيحة, الباراميتر الثاني عبارة عن عدد صحيح.<br/>
+    مهمة الدالة هي معرفة إذا كان هذا العدد موجود في المصفوفة و لو مرة واحدة فقط.<br/>
+	إذاً ستستمر الدالة بفحص قيم عناصر المصفوفة إلى أن تجد عنصر واحد يحتوي على نفس قيمة المتغير.<br/>
+	في حال وجدت الدالة عنصر في المصفوفة يملك قيمة تساوي قيمة المتغير ستوقف عملية البحث, و ستعرض <span class="word">index</span> أول عنصر وجدت فيه القيمة المطلوبة.</p>
+<p>في البرنامج, قم بإنشاء مصفوفة ذات بعد واحد إسمها <code data-enlighter-language="java">Numbers</code> تحتوي على قيم أولية.<br/>
+	ثم أطلب من المستخدم إدخال أي عدد.<br/>
+	في الأخير قم باستدعاء الدالة <code data-enlighter-language="java">FindFirst()</code> لطباعة ما إذا كان الرقم الذي أدخله المستخدم موجود في المصفوفة أم لا.</p>
+<p><a class="open-page" href="ex-4.html" target="_blank">الحل و التفسير »</a></p>
+<br/><br/>
+<h3>التمرين الخامس</h3>
+<p>أكتب دالة إسمها <code data-enlighter-language="java">FindAll</code>, عند إستدعائها تعطيها باراميترين, الباراميتر الأول عبارة عن مصفوفة تحتوي على أعداد صحيحة, الباراميتر الثاني عبارة عن عدد صحيح.<br/>
+    مهمة الدالة هي معرفة كم عنصر في المصفوفة يملك نفس قيمة هذا العدد.<br/>
+	إذاً ستقوم الدالة بمقارنة جميع قيم عناصر المصفوفة مع قيمة هذا العدد. و كل عنصر تجد قيمته تساوي قيمة هذا العدد, ستعرض <span class="word">index</span> العنصر الذي وجدت فيه القيمة.</p>
+<p>في البرنامج, قم بإنشاء مصفوفة ذات بعد واحد إسمها <code data-enlighter-language="java">Numbers</code> تحتوي على قيم أولية.<br/>
+	ثم أطلب من المستخدم إدخال أي عدد.<br/>
+	في الأخير قم باستدعاء الدالة <code data-enlighter-language="java">FindAll</code> لطباعة <span class="word">index</span> كل عنصر في المصفوفة يحتوي على نفس قيمة هذا العدد.</p>
+<p><a class="open-page" href="ex-5.php" target="_blank">الحل و التفسير »</a></p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

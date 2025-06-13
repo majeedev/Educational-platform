@@ -1,0 +1,796 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس شرحنا فكرة الكائنات بتفصيل, ستتعلم كيف كلاس و تنشئ كائنات منه, و وضعنا الكثير من الأمثلة لتساعدك في الفهم" name="description"/>
+<meta content="class and object in java,object in java,classs in java, " name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الكلاس و الكائن في جافا | java the class and the object</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>الكلاس و الكائن في جافا</h1>
+<article>
+<h2>مفهوم الكلاس في جافا</h2>
+<p><span class="word">Class</span>: نكتبها <b>كلاس</b> في العربية. و الكلاس عبارة عن حاوية كبيرة تستطيع أن تحتوي على كل الكود من متغيرات و دوال و كائنات إلخ..</p>
+<p>لتعريف كلاس جديد يكفي فقط كتابة الكلمة <span class="inline"><code data-enlighter-language="java">class</code>,</span> ثم وضع إسم له, ثم فتح أقواس تحدد بدايته و نهايته. مثال:</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+class ClassName {
+
+} 
+		</pre>
+</div>
+<br/>
+<p>الآن سنقوم بتعريف كلاس جديد يحتوي على <span class="number">4</span> متغيرات, بالإضافة إلى دالة تعرض قيم هذه المتغيرات عندما يتم إستدعاءها.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Person.java</span>
+<pre data-enlighter-language="java">
+class Person {
+
+    String name;
+    String sex;
+    String job;
+    int age;
+
+    void printInfo() {
+        System.out.println("Name: " +name);
+        System.out.println("Sex: " +sex);
+        System.out.println("Job: " +job);
+        System.out.println("Age: " +age);
+    }
+
+} 
+		</pre>
+</div>
+<p>هنا قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">Person</code> يحتوي على <span class="number">4</span> متغيرات بالإضافة إلى دالة تعرض قيم هذه المتغيرات عندما يتم إستدعاءها.</p><br/>
+<h3>مفهوم الخصائص</h3>
+<p>أي متغيرات يتم تعريفها بداخل كلاس و خارج أي دالة تسمى خصائص <span class="inline">(<span class="word">Attributes</span>)</span>, و هذا يعني أن أي كائن من هذا الكلاس سيكون عنده هذه الخصائص.<br/>
+	تستطيع التعامل مع هذه الخصائص من الكائن مباشرةً, بينما المتغيرات العادية لا يمكنك التعامل معها من الكائن.<br/>
+	المتغيرات التي يتم وضعها كباراميترات أو التي يتم تعريفها بداخل الدوال تسمى متغيرات عادية.</p><br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>برنامج <span class="word">Netbeans</span> يلون أسماء الخصائص <span class="green">باللون الأخضر</span>, لكي يساعدك في التفريق بين المتغيرات العادية و المتغيرات التي يتم إعتبارها خصائص.<br/>
+		و تذكر أن المتغيرات تسمى خصائص, لأن أي كائن من هذا الكلاس سيملك نسخته الخاصة منها.</p>
+</div>
+</article>
+<article>
+<h2>مفهوم الكائن في جافا</h2>
+<p><span class="word">object</span>: تعني <b>كائن</b> في اللغة العربية. و الكائن عبارة عن نسخة مطابقة لكلاس معين.</p>
+<p>بما أن الكائن عبارة عن نسخة من الكلاس, يمكننا القول أنه لا يمكن إنشاء كائن إذا لم يكن هناك كلاس.<br/>
+    إذاً في مفهوم برمجة الكائنات نقوم بإنشاء كلاس معين يسمونه <span class="word">blue print</span> أي (النسخة الخام أو النسخة الأصلية) , و بعدها ننشئ نسخة أو أكثر من هذا الكلاس و نفعل بها ما نريد بدون أن نغير محتويات الكلاس الأساسي و هكذا نكون حافظنا على كودات الكلاس الأساسي لأننا نعدل على النسخ و ليس عليه مباشرةً.</p><br/>
+<p>بما أن الكائن عبارة عن نسخة من الكلاس. لتعريف كائن من كلاس معين يجب وضع إسم الكلاس ثم وضع إسم للكائن.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Person ahmad = new Person(); 
+		</pre>
+</div>
+<p>هنا قمنا بتعريف كائن من الكلاس <code data-enlighter-language="java">Person</code> إسمه <span class="inline"><code data-enlighter-language="java">ahmad</code>.</span><br/>
+	إذاً الكائن <code data-enlighter-language="java">ahmad</code> سيكون عنده نسخة خاصة فيه من خصائص الكلاس <span class="inline"><code data-enlighter-language="java">Person</code>.</span></p>
+<p><span class="note">ملاحظة:</span> الكود <code data-enlighter-language="java">new Person()</code> هو الذي يقوم فعلياً بتوليد كائن من الكلاس. و هو يعطي قيم أولية للخصائص الموجودة فيه و ستفهم ذلك لاحقاً.</p>
+<br/>
+<p>سنقوم الآن بكتابة نفس الكود السابق على مرحلتين لتحصل على كائن من الكلاس <span class="inline"><code data-enlighter-language="java">Person</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Person ahmad;             // Person سيمثل كائن من الكلاس ahmad هنا قلنا أن
+ahmad = new Person();     // Person يمثل كائن من الكلاس ahmad هنا أصبح ,ahmad و بعدها قمنا بتخزينه في Person هنا قمنا بتوليد كائن من الكلاس
+		</pre>
+</div>
+<br/><br/>
+<h3>طريقة التعامل مع الكائنات</h3>
+<ul class="explain">
+<li><p>نقوم بإنشاء كائن من الكلاس.</p></li>
+<li><p>بعدها نقوم بإدخال قيم لخصائصه, إستدعاء دواله إلخ..</p></li>
+</ul>
+<br/><br/>
+<h3>لاستدعاء أي شيء موجود في الكائن الذي أنشأناه</h3>
+<ol class="arabic">
+<li><p>نضع إسم الكائن.</p></li>
+<li><p>ثم نقطة.</p></li>
+<li><p>ثم الشيء الذي نريد الوصول إليه ( سواء إسم متغير أو دالة ).</p></li>
+</ol>
+<br/><br/>
+<h3>نصائح عليك إتباعها</h3>
+<ul class="explain">
+<li><p>يفضل إنشاء كل كلاس في ملف جافا خاص.</p></li>
+<li><p>إبدأ إسم الكلاس دائماً بحرف كبير.</p></li>
+<li><p>إبدأ إسم الكائن دائماً بحرف صغير.</p></li>
+</ul>
+</article>
+<article>
+<h2>علاقة الكائن بالكلاس في جافا</h2>
+<p>الكائنات تساعد المبرمج كثيراً, فمثلاً إذا كنت تنوي إنشاء برنامج بسيط لحفظ معلومات أشخاص, هل ستنشئ كلاس لكل شخص ؟!<br/>
+	طبعاً لا, بل تنشئ كلاس واحد فقط يمثل شخص, و تضع فيه الأشياء الأساسية التي تريدها أن تكون موجودة عند كل شخص. ثم تنشئ منه كائنات قدر ما شئت, و عندها يصبح كل كائن من هذا الكلاس عبارة عن شخص له معلوماته الخاصة.</p>
+<p><a href="pic_1.png" target="_blank"><img src="pic_1.png"/></a></p>
+<p>كما تلاحظ قمنا بإنشاء كلاس يحتوي على المعلومات الأساسية التي نريد تعبئتها لكل شخص.<br/>
+	بعدها قمنا بإنشاء <span class="number">4</span> كائنات ( أي <span class="number">4</span> أشخاص ), ثم قمنا بإدخال معلومات خاصة لكل كائن فيهم.</p>
+<p>الآن في حال قمت بإضافة أي متغير أو دالة جديدة في الكلاس <span class="inline"><code data-enlighter-language="java">Person</code>,</span> فإن أي كائن من هذا الكلاس سيملك نسخة من الشيء الجديد الذي أضفته.<br/>
+	و في حال قمت بتعديل كود معين في الكلاس <span class="inline"><code data-enlighter-language="java">Person</code>,</span> فأيضاً سيتم تعديل هذا الكود عند جميع الكائنات من هذا الكلاس.</p>
+<br/><br/>
+<h3>مثال</h3>
+<p>الآن سنقوم بإنشاء الكلاس <code data-enlighter-language="java">Person</code> و إنشاء كائنات منه في الكلاس الذي يحتوي على الدالة <span class="inline"><code data-enlighter-language="java">main()</code>.</span><br/>
+<span class="note">إنتبه:</span> يجب إنشاء الكلاس <code data-enlighter-language="java">Person</code> و الكلاس <code data-enlighter-language="java">Main</code> في نفس المجلد <span class="inline">( أي نفس الـ <span class="word">package</span> )</span> حتى يعمل الكود بشكل صحيح. ستفهم السبب في الدرس التالي.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Person.java</span>
+<pre data-enlighter-language="java">
+public class Person {
+ 
+    // هنا قمنا بتعريف 4 خصائص
+    String name;
+    String sex;
+    String job;
+    int age;
+ 
+    // هنا قمنا بتعريف دالة تطبع محتوى كل خاصية عندما يتم استدعاءها
+    void printInfo() {
+        System.out.println("Name: " +name);
+        System.out.println("Sex: " +sex);
+        System.out.println("Job: " +job);
+        System.out.println("Age: " +age);
+        System.out.println();
+    }
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // Person هنا قمنا بإنشاء كائنات من الكلاس
+        Person p1 = new Person();     // سيمثل محمد p1 الكائن
+        Person p2 = new Person();     //  سيمثل روز p2 الكائن
+        Person p3 = new Person();     // سيمثل أحمد p3 الكائن
+        Person p4 = new Person();     // سيمثل ربيع p4 الكائن
+ 
+        // p1 هنا قمنا بتحديد خصائص الكائن
+        p1.name = "Mhamad";
+        p1.sex  = "Male";
+        p1.job  = "Programmer";
+        p1.age  = 21;
+ 
+        // p2 هنا قمنا بتحديد خصائص الكائن
+        p2.name = "Rose";
+        p2.sex  = "Female";
+        p2.job  = "Secretary";
+        p2.age  = 22;
+ 
+        // p3 هنا قمنا بتحديد خصائص الكائن
+        p3.name = "Ahmad";
+        p3.sex  = "Male";
+        p3.job  = "Doctor";
+        p3.age  = 34;
+ 
+        // p4 هنا قمنا بتحديد خصائص الكائن
+        p4.name = "Rabih";
+        p4.sex  = "Male";
+        p4.job  = "Engineer";
+        p4.age  = 27;
+ 
+        // هنا قمنا بعرض خصائص كل كائن
+        p1.printInfo();
+        p2.printInfo();
+        p3.printInfo();
+        p4.printInfo();
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Name: Mhamad
+Sex: Male
+Job: Programmer
+Age: 21
+
+Name: Rose
+Sex: Female
+Job: Secretary
+Age: 22
+
+Name: Ahmad
+Sex: Male
+Job: Doctor
+Age: 34
+
+Name: Rabih
+Sex: Male
+Job: Engineer
+Age: 27 
+		</pre>
+</div>
+</article>
+<article>
+<h2>مفهوم الكونستركتور في جافا</h2>
+<p><span class="word">Constructor</span>: تكتب <span class="red">كونستركتور</span> بالعربية.<br/>
+	من أهم الأشياء التي عليك التفكير بها بعد إنشاء كلاس جديد, هي تسهيل طريقة خلق كائنات من هذا الكلاس.<br/>
+	من هنا جائت فكرة الكونستركتور و الذي هو عبارة عن دالة لها نوع خاص, يتم إستدعائها أثناء إنشاء كائن لتوليد قيم أولية للخصائص الموجودة فيه.</p>
+<p>بما أنه لا يمكن إنشاء كائن من كلاس إلا من خلال كونستركتور, سيقوم مترجم جافا بتوليد كونستركتور إفتراضي فارغ عنك إذا وجد أن الكلاس الذي قمت بتعريفه لا يحتوي على أي كونستركتور.</p>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<p><span class="point">•</span>إذا قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">Person</code> و لم نقم بتعريف كونستركتور له كما في الكلاس التالي.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+class Person {
+
+} 
+		</pre>
+<p><span class="point">•</span>سيقوم المترجم بإنشاء كونستركتور فارغ بشكل تلقائي عننا كالتالي.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+class Person {
+
+    public Person() {
+
+    }
+
+} 
+		</pre>
+</div>
+<br/><br/>
+<h3>نقاط مهمة حول الكونستركتور</h3>
+<ul class="explain">
+<li><p>كل كلاس يتم إنشاءه, يحتوي على كونستركتور واحد على الأقل. و حتى إن لم تقم بتعريف أي كونستركتور, سيقوم المترجم بإنشاء واحد إفتراضي عنك.</p></li>
+<li><p>في كل مرة يتم إنشاء كائن جديد, يجب استدعاء كونستركتور حتى يتم إنشاء هذا الكائن.</p></li>
+<li><p>القاعدة الأساسية عند تعريف كونستركتور هي أنه يجب أن يحمل نفس إسم الكلاس و يكون نوعه <span class="inline"><code data-enlighter-language="java">public</code>.</span></p></li>
+<li><p>في حال قمت بتعريف كونستركتور, لن يقوم المترجم بإنشاء واحد إفتراضي, أي لن يعود هناك كونستركتور إفتراضي.</p></li>
+<li><p>يمكنك تعريف أكثر من كونستركتور. و يمكنك دائماً إنشاء كونستركتور  فارغ, حتى تستخدمه إن كنت لا تريد إعطاء قيم أولية محددة للخصائص عند إنشاء كائن.</p></li>
+</ul>
+<br/>
+<p>الآن سنرجع إلى الكلاس <span class="inline"><code data-enlighter-language="java">Person</code>,</span> و سنضيف فيه <span class="number">2</span> كونستركتور, واحد فارغ ( أي مثل الإفتراضي ), و آخر يمكننا من خلاله إدخال قيم مباشرةً في الخصائص الموجودة في الكائن بدل إستدعاء كل خاصية موجودة فيه.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<p><span class="point">•</span><span class="note">ملاحظة:</span> قمنا بتعليم الأسطر الجديدة التي قمنا بإضافتها في الكلاس باللون الأصفر.</p>
+<span class="code-title java-file-icon">Person.java</span>
+<pre data-enlighter-highlight="10-12, 16-21" data-enlighter-language="java">
+public class Person {
+ 
+    // هنا قمنا بتعريف 4 خصائص
+    String name;
+    String sex;
+    String job;
+    int age;
+ 
+    // إفتراضي constructor فارغ, أي كأننا قمنا بتعريف constructor هنا قمنا بتعريف
+    public Person() {
+ 
+    }
+ 
+    // ثاني, الهدف منه إعطاء قيم لجميع الخصائص الموجودة في الكائن عند إنشاءه مباشرةً constructor هنا قمنا بتعريف
+    // عليك إدخال 4 قيم من نفس النوع و بالترتيب الموضوع constructor عند استدعاء هذا الـ
+    public Person(String n, String s, String j, int a) {
+        name = n;    // name سيتم وضعه كقيمة للخاصية n الذي سيتم تخزينه في String الـ
+        sex = s;     // sex سيتم وضعه كقيمة للخاصية s الذي سيتم تخزينه في String الـ
+        job = j;     // job سيتم وضعه كقيمة للخاصية j الذي سيتم تخزينه في String الـ
+        age = a;     // age سيتم وضعه كقيمة للخاصية a الذي سيتم تخزينه في int الـ
+    }
+ 
+    // هنا قمنا بتعريف دالة تطبع محتوى كل خاصية عندما يتم استدعاءها
+    void printInfo() {
+        System.out.println("Name: " +name);
+        System.out.println("Sex: " +sex);
+        System.out.println("Job: " +job);
+        System.out.println("Age: " +age);
+        System.out.println();
+    }
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // Person هنا قمنا بإنشاء كائنات من الكلاس
+        Person p1 = new Person("Mhamad", "Male", "Programmer", 21);  // يمثل الشخص محمد مع تحديد كامل خصائصه p1 الكائن
+        Person p2 = new Person("Rose", "Female", "Secretary", 22);   // يمثل الشخص روز  مع تحديد كامل خصائصه p2 الكائن
+        Person p3 = new Person("Ahmad", "Male", "Doctor", 34);       // يمثل الشخص أحمد مع تحديد كامل خصائصه p3 الكائن
+        Person p4 = new Person("Rabih", "Male", "Engineer", 27);     // يمثل الشخص ربيع مع تحديد كامل خصائصه p4 الكائن
+ 
+        // الفارغ, فإضطررنا إلى إدخال قيمة لكل خاصية موجودة فيه constructor هنا قمنا بإنشاء كائن جديد باستخدام الـ
+        Person p5 = new Person();
+ 
+        // p5 هنا قمنا بتحديد خصائص الكائن
+        p5.name = "Lina";
+        p5.sex  = "Female";
+        p5.job  = "Graphic Designer";
+        p5.age  = 24;
+ 
+        // هنا قمنا بعرض خصائص كل كائن
+        p1.printInfo();
+        p2.printInfo();
+        p3.printInfo();
+        p4.printInfo();
+        p5.printInfo();
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Name: Mhamad
+Sex: Male
+Job: Programmer
+Age: 21
+
+Name: Rose
+Sex: Female
+Job: Secretary
+Age: 22
+
+Name: Ahmad
+Sex: Male
+Job: Doctor
+Age: 34
+
+Name: Rabih
+Sex: Male
+Job: Engineer
+Age: 27
+
+Name: Lina
+Sex: Female
+Job: Graphic Designer
+Age: 24 
+		</pre>
+</div>
+<br/><br/>
+<p>المتغيرات التي يتم وضعها في الكلاس تقسم إلى ثلاث فئات أساسية ذكرناها في الجدول التالي.</p>
+<table class="list full-width">
+<tr>
+<th>بالإنجليزية</th>
+<th>معناها</th>
+</tr>
+<tr>
+<td class="left"><span class="word">Local Variables</span></td>
+<td>هي المتغيرات التي يتم تعريفها بداخل أي دالة, كونستركتور, أو بداخل <span class="word">block</span> ( مثل الحلقات, الجملة <code data-enlighter-language="java">switch</code> إلخ.. ).</td>
+</tr>
+<tr>
+<td class="left"><span class="word">Instance Variables</span></td>
+<td>هي المتغيرات التي يتم تعريفها بداخل الكلاس و خارج حدود أي دالة, كونستركتور, أو <span class="inline"><span class="word">block</span>.</span><br/>
+			تسمى أيضاً <span class="inline"><span class="word">Global Variables</span>.</span></td>
+</tr>
+<tr>
+<td class="left"><span class="word">Class Variables</span></td>
+<td>هي المتغيرات التي يتم تعريفها <span class="inline">كـ <code data-enlighter-language="java">static</code></span> بداخل الكلاس و خارج حدود أي دالة, كونستركتور, أو <span class="inline"><span class="word">block</span>.</span></td>
+</tr>
+</table>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+class VariablesTypes {
+
+    // block لأنه تم تعريفهم بداخل الكلاس و خارج أي دالة أو Instance Variables تعتبر ( a, b, c, d ) المتغيرات
+    // ستفهم معناها في الدرس التالي, لكننا وضعناها فقط لتفهم الأسماء المستخدمة ( public, protected, private ) الكلمات
+    int a;
+    public int b;
+    protected int c;
+    private int d;
+
+    // static لأن نوعه Class Variable يعتبر e المتغير
+    static int e;
+
+    // لأنه تم تعريفها بداخل الدالة Local Variables تعتبر ( x, y, z ) المتغيرات
+    public int sum(int x, int y) {
+        int z = x + y;
+        return z;
+    }
+
+} 
+		</pre>
+</div>
+</article>
+<article>
+<h2>الكلمة <code data-enlighter-language="java">this</code> في جافا</h2>
+<p>الكلمة <code data-enlighter-language="java">this</code> هي كلمة محجوزة في لغة جافا, و هي تستخدم للإشارة إلى <span class="inline">الـ <span class="word">Global Variables</span>,</span> و تستخدم أيضاً للإشارة إلى الكائن الحالي. و يمكن استخدامها في أماكن عديدة ستتعرف عليها في دروس مقبلة.</p>
+<p>في هذا الدرس سنستخدمها للتفرقة بين المتغيرات التي تم تعريفها بداخل الدوال <span class="word">Local Variables</span> و بين المتغيرات التي تم تعريفها بداخل الكلاس و خارج الدوال <span class="inline"><span class="word">Global Variables</span>.</span></p>
+<p>سنرجع إلى الكلاس <code data-enlighter-language="java">Person</code> و سنقوم باستخدام الكلمة <code data-enlighter-language="java">this</code> عدة مرات لمعرفة تأثيرها على الكود.</p><br/>
+<p>في هذا المثال لم نغير أي كود كان موجود, لكننا أضفنا كلمة <code data-enlighter-language="java">this</code> في كل مكان كنا نقصد فيه أننا نريد الوصول للخصائص.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title java-file-icon">Person.java</span>
+<pre data-enlighter-language="java">
+public class Person {
+ 
+    String name;
+    String sex;
+    String job;
+    int age;
+ 
+    public Person() {
+ 
+    }
+ 
+    // لأن أسماء الباراميترات الموضوعة ليست نفسها أسماء الخصائص this هنا لا يوجد داعي لاستخدام الكلمة
+    public Person(String n, String s, String j, int a) {
+        this.name = n;     // الموجودة في الكلاس name الموجود في الدالة, سيتم وضعها في الخاصية n القيمة التي سيتم إدخالها في المتغير
+        this.sex  = s;     // الموجودة في الكلاس sex الموجود في الدالة,  سيتم وضعها في الخاصية s القيمة التي سيتم إدخالها في المتغير
+        this.job  = j;     // الموجودة في الكلاس job الموجود في الدالة,  سيتم وضعها في الخاصية j القيمة التي سيتم إدخالها في المتغير
+        this.age  = a;     // الموجودة في الكلاس age الموجود في الدالة,  سيتم وضعها في الخاصية a القيمة التي سيتم إدخالها في المتغير
+    }
+ 
+    // لأن الدالة لا تحتوي على باراميترات و بالتالي سيفهم المترجم أنك تقصد عرض قيم الخصائص الموجودة في الكائن حتى لو لم تستخدمها this هنا لا يوجد داعي لاستخدام الكلمة
+    void printInfo() {
+        System.out.println("Name: " +this.name);
+        System.out.println("Sex: "  +this.sex);
+        System.out.println("Job: "  +this.job);
+        System.out.println("Age: "  +this.age);
+        System.out.println();
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على نفس النتيجة السابقة عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Name: Mhamad
+Sex: Male
+Job: Programmer
+Age: 21
+
+Name: Rose
+Sex: Female
+Job: Secretary
+Age: 22
+
+Name: Ahmad
+Sex: Male
+Job: Doctor
+Age: 34
+
+Name: Rabih
+Sex: Male
+Job: Engineer
+Age: 27
+
+Name: Lina
+Sex: Female
+Job: Graphic Designer
+Age: 24 
+		</pre>
+</div>
+<br/><br/>
+<p>في هذا المثال سنستخدم الكلمة <code data-enlighter-language="java">this</code> عند الحاجة لها فقط.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<p><span class="point">•</span>هنا قمنا بوضع أسماء الباراميترات مثل أسماء الخصائص.<br/>
+		إذاً هنا يجب وضع الكلمة <code data-enlighter-language="java">this</code> إذا كنا نريد الوصول للخصائص و إلا ستحدث أخطاء منطقية في البرنامج.</p>
+<span class="code-title java-file-icon">Person.java</span>
+<pre data-enlighter-language="java">
+public class Person {
+ 
+    String name;
+    String sex;
+    String job;
+    int age;
+ 
+    public Person() {
+ 
+    }
+ 
+    // للتفرقة بين الباراميترات و الخصائص الموجودة في الكائن this هنا يجب إستخدام الكلمة
+    public Person(String name, String sex, String job, int age) {
+        this.name = name;    // الموجودة في الكلاس name الموجود في الدالة, سيتم وضعها في الخاصية name القيمة التي سيتم إدخالها في المتغير
+        this.sex  = sex;     // الموجودة في الكلاس sex الموجود في الدالة,  سيتم وضعها في الخاصية sex القيمة التي سيتم إدخالها في المتغير
+        this.job  = job;     // الموجودة في الكلاس job الموجود في الدالة,  سيتم وضعها في الخاصية job القيمة التي سيتم إدخالها في المتغير
+        this.age  = age;     // الموجودة في الكلاس age الموجود في الدالة,  سيتم وضعها في الخاصية age القيمة التي سيتم إدخالها في المتغير
+    }
+ 
+    // لأن الدالة لا تحتوي على باراميترات و بالتالي سيفهم المترجم أنك تقصد عرض قيم الخصائص الموجودة في الكائن حتى لو لم تستخدمها this هنا لا يوجد داعي لاستخدام الكلمة
+    void printInfo() {
+        System.out.println("Name: " +name);
+        System.out.println("Sex: "  +sex);
+        System.out.println("Job: "  +job);
+        System.out.println("Age: "  +age);
+        System.out.println();
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على نفس النتيجة السابقة عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Name: Mhamad
+Sex: Male
+Job: Programmer
+Age: 21
+
+Name: Rose
+Sex: Female
+Job: Secretary
+Age: 22
+
+Name: Ahmad
+Sex: Male
+Job: Doctor
+Age: 34
+
+Name: Rabih
+Sex: Male
+Job: Engineer
+Age: 27
+
+Name: Lina
+Sex: Female
+Job: Graphic Designer
+Age: 24 
+		</pre>
+</div>
+<br/><br/>
+<p>في هذا المثال وضعنا أسماء الباراميترات في الكونستركتور نفس أسماء الخصائص و لم نستخدم الكلمة <code data-enlighter-language="java">this</code> للتفريق بينهم.<br/>
+	إذاً هنا لن تحدث أخطاء تؤدي إلى إيقاف البرنامج بل ستحدث <span class="red">أخطاء منطقية</span> نلاحظها عند تشغيل البرنامج.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<p><span class="point">•</span>هنا قمنا بوضع أسماء الباراميترات مثل أسماء الخصائص.<br/>
+		سيتسبب هذا الكود بأخطاء منطقية تظهر فقط عند تشغيل البرنامج.</p>
+<span class="code-title java-file-icon">Person.java</span>
+<pre data-enlighter-language="java">
+public class Person {
+ 
+    String name;
+    String sex;
+    String job;
+    int age;
+ 
+    public Person() {
+ 
+    }
+ 
+    // سيسبب مشكلة لأن المترجم لن يستطيع التفرقة بين الباراميترات و الخصائص الموجودة في الكائن this هنا عدم إستخدام الكلمة
+    // غير مفيد و يحتوي على أخطاء منطقية constructor إذاً هذا الـ
+    public Person(String name, String sex, String job, int age) {
+        name = name;    // من جديد name سيتم وضعها في الباراميتر name القيمة التي سيتم إدخالها في المتغير
+        sex  = sex;     // من جديد sex  سيتم وضعها في الباراميتر sex  القيمة التي سيتم إدخالها في المتغير
+        job  = job;     // من جديد job  سيتم وضعها في الباراميتر job  القيمة التي سيتم إدخالها في المتغير
+        age  = age;     // من جديد age  سيتم وضعها في الباراميتر age  القيمة التي سيتم إدخالها في المتغير
+    }
+ 
+    // لأن الدالة لا تحتوي على باراميترات و بالتالي سيفهم المترجم أنك تقصد عرض قيم الخصائص الموجودة في الكائن حتى لو لم تستخدمها this هنا لا يوجد داعي لاستخدام الكلمة
+    void printInfo() {
+        System.out.println("Name: " +name);
+        System.out.println("Sex: "  +sex);
+        System.out.println("Job: "  +job);
+        System.out.println("Age: "  +age);
+        System.out.println();
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<p><span class="point">•</span>لاحظ أن الكائنات التي استخدمت الكونستركتور الأول فقط هي التي حدث فيها أخطاء منطقية.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Name: null
+Sex: null
+Job: null
+Age: 0
+
+Name: null
+Sex: null
+Job: null
+Age: 0
+
+Name: null
+Sex: null
+Job: null
+Age: 0
+
+Name: null
+Sex: null
+Job: null
+Age: 0
+
+Name: Lina
+Sex: Female
+Job: Graphic Designer
+Age: 24 
+		</pre>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

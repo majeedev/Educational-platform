@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="شرح تفصيلي لجميع الدوال التي تتعامل مع الأحرف في جافا مع أمثلة مبسطة لكل فكرة" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>التعامل مع الأحرف في جافا | Java characters</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>التعامل مع الأحرف في جافا</h1>
+<article>
+<h2>مفهوم الأحرف</h2>
+<p><b>أحرف:</b> تعني <span class="word">characters</span> في اللغة الإنجليزية, و نحن عادةً ما نستخدم أنواع البيانات البدائية ( أي الـ<span class="word">primitive</span> ) لتخزين الأحرف.<br/>
+	أي لتعريف متغير بهدف تخزين حرف, نعرفه كـ <code data-enlighter-language="java">char</code> أو <code data-enlighter-language="java">int</code> إذا كنا سنتعامل مع الملفات.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+// a يحتوي على الحرف ch هنا المتغير
+char ch = 'a';
+
+// و الذي يعتبر حرف Ω يحتوي على الرمز unicode هنا المتغير
+char unicode = '\u03A9';
+
+// هنا قمنا بتعريف مصفوفة من الأحرف
+char[] charArray = { 'a', 'b', 'c', 'd', 'e' }; 
+		</pre>
+</div>
+<br/>
+<p>أحياناً يضطر المبرمج أن يستخدم الكائن للنوع و ليس الشكل البدائي للنوع.<br/>
+	من أجل ذلك, جافا تقدم لنا الكلاس <code data-enlighter-language="java">Character</code> الذي يحتوي على مجموعة من الدوال الجاهزة للتعامل مع الأحرف.</p>
+<p>لتخزين حرف ككائن من الكلاس <code data-enlighter-language="java">Character</code>, يمكنك إنشاء كائن من الكلاس <code data-enlighter-language="java">Character</code> و تمرير الحرف الذي تريد تخزينه فيه في الـ <span class="word">Constructor</span>.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Character ch = new Character('a'); 
+		</pre>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>في بعض الحالات يقوم المترجم في جافا بخلق كائن من الكلاس <code data-enlighter-language="java">Character</code> عنا. فمثلاً إذا قمنا بتمرير قيمة بدائية نوعها <code data-enlighter-language="java">char</code> في دالة تأخذ النوع <code data-enlighter-language="java">object</code> كباراميتر, يقوم المترجم في هذه الحالة بشكل تلقائي بتحويل النوع <code data-enlighter-language="java">char</code> للنوع <code data-enlighter-language="java">Character</code> , هذه الخاصية تسمى <span class="word">auto-boxing</span> و عملية تحويل النوع لنوع بدائي من جديد تسمى <span class="word">unboxing</span>.</p>
+</div>
+</article>
+<article>
+<h2>مفهوم الـ <span class="word">Escape Sequences</span></h2>
+<p><span class="word">Escape Sequence</span> تعني مجموعة أحرف متتالية, إذا أتت وراء بعضها فإنها تشكل شيء معين.</p>
+<p>لخلق <span class="word">Escape Sequence</span> نستخدم الرمز <code data-enlighter-language="java">\</code>.<br/>
+	إذاً, أي حرف مسبوق بالرمز <code data-enlighter-language="java">\</code> هو عبارة عن <span class="word">Escape Sequence</span> و يعني شيء معين في جافا.</p>
+<br/>
+<p>في هذه اللائحة وضعنا لك جميع الـ <span class="word">Escape Sequences</span> الموجودين في جافا.</p>
+<table class="list center">
+<tr>
+<th>Escape Sequence</th>
+<th>تعريفه</th>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">\t</code></td>
+<td>يضيف عدة مسافات في مكان وضعها.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">\b</code></td>
+<td>يزيل الحرف الموجود قبلها.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">\n</code></td>
+<td>يجعل المحتوى الذي يأتي بعدها ينزل على سطر جديد.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">\r</code></td>
+<td>يجعل الكود يبدأ في التنفيذ من عندها.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">\f</code></td>
+<td>يضع فاصل بين المحتوى (أي تقسم المحتوى).<br/>
+<span class="note">ملاحظة:</span> لن يظهر لك تأثيرها إلا إذا إستخدمتها مع الملفات.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">\'</code></td>
+<td>لإضافة الرمز <span class="code red">'</span> في مكان وضعها.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">\"</code></td>
+<td>لإضافة الرمز <span class="code red">"</span> في مكان وضعها.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">\u</code></td>
+<td>يستخدم لإضافة أي حرف أو رمز من خلال الـ <span class="word">unicode</span> الخاص فيه.</td>
+</tr>
+</table>
+<br/>
+<p>هنا وضعنا مثال لكل <span class="word">Escape Sequence</span> موجود في الجدول.</p>
+<p><a class="open-page" href="character-escape-sequences.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<article>
+<h2>دوال الكلاس <code data-enlighter-language="java">Character</code></h2>
+<p>الكلاس <code data-enlighter-language="java">Character</code> هو كلاس جاهز في جافا, يحتوي على دوال للتعامل مع الأحرف, ذكرنا لك بعضها في هذا الجدول.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static boolean isLetter(char ch)</code></span>
+			ترجع <code data-enlighter-language="java">true</code> إذا كانت القيمة التي مررناها لها مكان الباراميتر <code data-enlighter-language="java">ch</code> عبارة عن حرف.<br/>
+			غير ذلك ترجع <code data-enlighter-language="java">false</code>.<br/>
+<a class="open-page" href="character-isletter.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static boolean isDigit(char ch)</code></span>
+			ترجع <code data-enlighter-language="java">true</code> إذا كانت القيمة التي مررناها لها مكان الباراميتر <code data-enlighter-language="java">ch</code> عبارة عن رقم.<br/>
+			غير ذلك ترجع <code data-enlighter-language="java">false</code>.<br/>
+<a class="open-page" href="character-isdigit.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static boolean isWhitespace(char ch)</code></span>
+			ترجع <code data-enlighter-language="java">true</code> إذا كانت القيمة التي مررناها لها مكان الباراميتر <code data-enlighter-language="java">ch</code> عبارة عن مسافة فارغة.<br/>
+			غير ذلك ترجع <code data-enlighter-language="java">false</code>.<br/>
+<a class="open-page" href="character-iswhitespace.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static boolean isUpperCase(char ch)</code></span>
+			ترجع <code data-enlighter-language="java">true</code> إذا كانت القيمة التي مررناها لها مكان الباراميتر <code data-enlighter-language="java">ch</code> عبارة عن حرف كبير.<br/>
+			غير ذلك ترجع <code data-enlighter-language="java">false</code>.<br/>
+<a class="open-page" href="character-isuppercase.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static boolean isLowerCase(char ch)</code></span>
+			ترجع <code data-enlighter-language="java">true</code> إذا كانت القيمة التي مررناها لها مكان الباراميتر <code data-enlighter-language="java">ch</code> عبارة عن حرف صغير.<br/>
+			غير ذلك ترجع <code data-enlighter-language="java">false</code>.<br/>
+<a class="open-page" href="character-islowercase.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static char toUpperCase(char ch)</code></span>
+			نمرر لها مكان الباراميتر الـ <code data-enlighter-language="java">ch</code> حرف صغير, فترجع لنا نفس الحرف و لكن كبير.<br/>
+<a class="open-page" href="character-touppercase.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static char toLowerCase(char ch)</code></span>
+			نمرر لها مكان الباراميتر الـ <code data-enlighter-language="java">ch</code> حرف كبير, فترجع لنا نفس الحرف و لكن صغير.<br/>
+<a class="open-page" href="character-tolowercase.html" target="_blank">شاهد المثال »</a>
+</td></tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static String toString(char c)</code></span>
+			تحول قيمة الباراميتر <code data-enlighter-language="java">c</code> لقيمة نوعها <code data-enlighter-language="java">String</code> و ترجعها.<br/>
+<a class="open-page" href="character-tostring.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

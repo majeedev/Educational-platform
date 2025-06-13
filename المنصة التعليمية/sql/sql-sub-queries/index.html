@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس سنتعلم طريقة كتابة إستعلام بداخل" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>SQL Sub Queries | الإستعلامات المتداخلة SQL</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../database-icon.png"/></li>
+<li class="title">كيف أبدأ بالتعلم</li>
+<li><a href="../sql-overview/index.html"><span class="en">SQL</span> - نظرة عامة</a></li>
+<li><a href="../sql-environment-setup/index.html"><span class="en">SQL</span> - تجهيز بيئة العمل</a></li>
+<li><a href="../sql-basic-syntax/index.html"><span class="en">SQL</span> - أسلوب كتابة الأوامر</a></li>
+<li><a href="../sql-comments/index.html"><span class="en">SQL</span> - التعليقات</a></li>
+<li><a href="../sql-write-first-query/index.html"><span class="en">SQL</span> - كتابة أول إستعلام</a></li>
+<li><a href="../sql-refresh-databases-panel/index.html"><span class="en">SQL</span> - تحديث قائمة قواعد البيانات</a></li>
+<li><a href="../sql-databases-structure-in-general/index.html"><span class="en">SQL</span> - مفاهيم و مصطلحات مهمة</a></li>
+<li class="title">أوامر و دوال SQL</li>
+<li><a href="../sql-create-database/index.html"><span class="en">SQL</span> - أمر إنشاء قاعدة بيانات</a></li>
+<li><a href="../sql-drop-database/index.html"><span class="en">SQL</span> - أمر حذف قاعدة بيانات</a></li>
+<li><a href="../sql-data-types/index.html"><span class="en">SQL</span> - أهم أنواع البيانات</a></li>
+<li><a href="../sql-create-table/index.html"><span class="en">SQL</span> - أمر إنشاء جدول</a></li>
+<li><a href="../sql-drop-table/index.html"><span class="en">SQL</span> - أمر حذف جدول</a></li>
+<li><a href="../sql-use/index.html"><span class="en">SQL</span> - أمر تحديد قاعدة البيانات</a></li>
+<li><a href="../sql-insert-into/index.html"><span class="en">SQL</span> - أمر إضافة سطر في الجدول</a></li>
+<li><a href="../sql-auto-increment/index.html"><span class="en">SQL</span> - الترقيم التلقائي للأسطر</a></li>
+<li><a href="../sql-select/index.html"><span class="en">SQL</span> - أمر جلب بيانات من الجدول</a></li>
+<li><a href="../sql-select-with-concat/index.html"><span class="en">SQL</span> - دمج الأعمدة عند جلبها</a></li>
+<li><a href="../sql-select-repeat-columns-name/index.html"><span class="en">SQL</span> - تكرار إسم الأعمدة في الإستعلام</a></li>
+<li><a href="../sql-select-with-where/index.html"><span class="en">SQL</span> - جلب البيانات ضمن شروط</a></li>
+<li><a href="../sql-select-with-order/index.html"><span class="en">SQL</span> - جلب البيانات مع ترتيبها</a></li>
+<li><a href="../sql-select-distinct/index.html"><span class="en">SQL</span> - جلب بيانات خالية من التكرار</a></li>
+<li><a href="../sql-union/index.html"><span class="en">SQL</span> - دمج الجداول في جدول واحد</a></li>
+<li><a href="../sql-delete/index.html"><span class="en">SQL</span> - أمر حذف بيانات من الجدول</a></li>
+<li><a href="../sql-update/index.html"><span class="en">SQL</span> - أمر تحديث بيانات الجدول</a></li>
+<li><a href="../sql-select-with-limit/index.html"><span class="en">SQL</span> - تحديد عدد الأسطر التي سترجع</a></li>
+<li><a href="../sql-null-values/index.html"><span class="en">SQL</span> - التعامل مع الحقول الفارغة</a></li>
+<li><a href="../sql-min/index.html"><span class="en">SQL</span> - جلب أصغر قيمة في العامود</a></li>
+<li><a href="../sql-max/index.html"><span class="en">SQL</span> - جلب أكبر قيمة في العامود</a></li>
+<li><a href="../sql-count/index.html"><span class="en">SQL</span> - حساب عدد أسطر الجدول</a></li>
+<li><a href="../sql-sum/index.html"><span class="en">SQL</span> - حساب ناتج جمع قيم العامود</a></li>
+<li><a href="../sql-avg/index.html"><span class="en">SQL</span> - حساب متوسط قيم العامود</a></li>
+<li><a href="../sql-select-with-group-by/index.html"><span class="en">SQL</span> - تجميع قيم الحقول المشتركة</a></li>
+<li><a href="../sql-select-with-having/index.html"><span class="en">SQL</span> - شروط على الحقول المجمعة</a></li>
+<li><a href="../sql-insert-into-select/index.html"><span class="en">SQL</span> - نسخ البيانات في جدول آخر</a></li>
+<li><a href="../sql-case/index.html"><span class="en">SQL</span> - وضع قيمة إفتراضية لكل حالة</a></li>
+<li><a href="../sql-unique/index.html"><span class="en">SQL</span> - تخزين قيم موحدة في العامود</a></li>
+<li class="title">العلاقات بين الجداول</li>
+<li><a href="../sql-how-to-relate-tables/index.html"><span class="en">SQL</span> - كيف يتم ربط الجداول</a></li>
+<li><a href="../sql-relationships-types/index.html"><span class="en">SQL</span> - أنواع العلاقات بين الجدوال</a></li>
+<li><a href="../sql-joins/index.html"><span class="en">SQL</span> - طرق ربط معلومات الجداول</a></li>
+<li><a href="../sql-alias-for-tables/index.html"><span class="en">SQL</span> - وضع أسماء مختصرة للجداول</a></li>
+<li><a href="../sql-self-join/index.html"><span class="en">SQL</span> - ربط المعلومات في نفس الجدول</a></li>
+<li class="title">معلومات متقدمة</li>
+<li><a href="../sql-alter/index.html"><span class="en">SQL</span> - تعديل بنية الجدول بعد إنشائه</a></li>
+<li><a href="../sql-default/index.html"><span class="en">SQL</span> - وضع قيم إفتراضية للحقول</a></li>
+<li><a href="../sql-primary-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح رئيسي</a></li>
+<li><a href="../sql-foreign-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح أجنبي</a></li>
+<li><a href="../sql-check/index.html"><span class="en">SQL</span> - وضع شروط لتخزين القيم</a></li>
+<li><a href="../sql-transactions/index.html"><span class="en">SQL</span> - تنفيذ كل الأوامر أو إلغاءها كلها</a></li>
+<li><a href="../sql-indexes/index.html"><span class="en">SQL</span> - الفهارس و أنواعها</a></li>
+<li><a href="../sql-like/index.html"><span class="en">SQL</span> - البحث في الأعمدة النصية</a></li>
+<li><a href="index.html"><span class="en">SQL</span> - كتابة إستعلامات متداخلة</a></li>
+<li><a href="../sql-connect-to-database/index.html"><span class="en">SQL</span> - الإتصال بقاعدة البيانات عن بعد</a></li>
+<li class="title">بناء قواعد بيانات لمشاريع</li>
+<li><a href="../sql-building-database-from-scratch/index.html"><span class="en">SQL</span> - تصميم قاعدة بيانات من الصفر</a></li>
+<li><a href="../sql-download-ready-made-database/index.html"><span class="en">SQL</span> - تحميل قواعد بيانات جاهزة</a></li>
+<!--
+<li><a href="../sql-backup-database"><span class="en">SQL</span> - إنشاء نسخة من قاعدة البيانات</a></li>
+<li><a href="../sql-stored-procedures"><span class="en">SQL</span> - تعريف دوال و استدعائها</a></li>
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">SQL</span>الإستعلامات المتداخلة</h1>
+<article>
+<h2>مفهوم الإستعلامات المتدخلة</h2>
+<p>الإستعلام العادي الذي لا يحتوي على أوامر متداخلة يقال له <span class="word">Query</span> فقط.<br/>
+	بينما الإستعلام الذي يحتوي على أوامر متداخلة مثل أمر <code data-enlighter-language="sql">SELECT</code> بداخله أمر <code data-enlighter-language="sql">SELECT</code> فهنا يقال لهذا الإستعلام <span class="word">Sub Query</span> أو <span class="word">Nested Query</span> أو <span class="inline"><span class="word">Inner Query</span>.</span></p>
+<p>الإستعلامات المتداخلة مهمة جداً و هي منطق في العمل نطبقه عند الحاجة لإجراء إحصاءات محددة على أساسسها نقوم بجلب القيم, تعديلها, أو حذفها.<br/>
+	في هذا الدرس لن تتعلم أوامر جديدة في <span class="word">SQL</span> بل ستتعلم المنطق الذي نتبعه لكتابة إستعلامات متداخلة خطوة خطوة.</p>
+<p>كتابة إستعلامات متداخلة يعتبر أصعب شيء قد تتعلمه في قواعد البيانات و قد تحتاج وقت حتى تعتاد عليه و تفهم كيف تفعله بنفسك.<br/>
+	لذا حاول متابعة الدرس بهدوء و تركيز تام و شاهد الفيديوهات الموضوعة ضمن الأمثلة لأنها ستساعدك كثيراً في فهم الطريقة التي تم فيها كتابة الإستعلامات.</p>
+</article>
+<article>
+<h2>أولوية تنفيذ الإستعلامات المتداخلة</h2>
+<p>عند وضع الإستعلامات بداخل بعضها البعض, يتم تنفيذ الإستعلامات الداخلية و من ثم الإستعلامات الخارجية.</p>
+<p>كمثال بسيط, تخيل أن الإستعلام مكتوب على هذا النحو.</p>
+<pre data-enlighter-language="sql">
+SELECT * FROM users
+	WHERE salary = (SELECT MAX(salary) FROM users);
+	</pre>
+<br/>
+<p>هنا سيتم حساب ناتج الإستعلام الداخلي و يتم وضع جوابه مكانه.
+	فمثلاً في حال كان ناتج الإستعلام الداخلي هو <code>1500</code> فإن الإستعلام سيصبح كأنه كالتالي بالضبط.</p>
+<pre data-enlighter-language="sql">
+SELECT * FROM users
+	WHERE salary = 1500;
+	</pre>
+<br/>
+<p>الآن بعد أن أصبح الإستعلام لا يحتوي على أي أوامر متداخلة, سيتم إعطاءك الجواب النهائي.</p>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>أي إستعلام داخلي يجب أن تضعه بين قوسين <code>( )</code> لأن أولية التنفيذ تقررها قاعدة البيانات نسبةً للأقواس.<br/>
+		و بالطبع في حال كان يوجد أكثر من إستعلام داخلي, سيتم تنفيذ أعمق إستعلام بينهم في البداية رجوعاً للإستعلام الأساسي الذي ينتظر نتائج كل الإستعلام الموضوعة فيه حتى يتنفذ كما في المال السابق.</p>
+</div>
+</article>
+<article>
+<h2>تجهيز قاعدة البيانات التي سنطبق عليها</h2>
+<p>قم بتنفيذ الإستعلام التالي حتى تنشئ قاعدة بيانات جديدة إسمها <code>harmash</code> و تنشئ فيها جدول إسمه <code>scientists</code> يحتوي على بيانات 10 علماء.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+-- سيتم حذفها harmash في حال كان يوجد بالأساس قاعدة بيانات إسمها
+DROP DATABASE IF EXISTS harmash;
+
+-- harmash هنا قمنا بإنشاء قاعدة بيانات جديدة إسمها
+CREATE DATABASE harmash;
+
+-- harmash هنا قمنا بتحديد أن أي إستعلام جديد سيتم تنفيذه على قاعدة البيانات
+USE harmash;
+
+-- يتألف من 5 أعمدة scientists هنا قمنا بإنشاء جدول جديد إسمه
+-- لأننا قمنا بتحديدها قبل إستدعاء هذا الأمر harmash سيتم إنشاء هذا الجدول بداخل قاعدة البيانات
+CREATE TABLE scientists (
+    id        INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name      VARCHAR(50),
+    salary    DECIMAL(7,2),
+    country   VARCHAR(50),
+    continent VARCHAR(50)
+);
+
+-- هنا قمنا بإضافة 10 أسطر في الجدول, أي أضفنا معلومات 10 علماء
+-- لاحظ أننا لم نحدد أسماء الأعمدة التي سنضع فيها البيانات لأننا قمنا بملئ جميع المعلومات
+-- في البداية هو حتى يكون عدد القيم الموضوعة يساوي عدد أعمدة الجدول null سبب وضع الكلمة
+-- ستقوم قاعدة البيانات بوضع رقم تعرفة مختلف لكل سطر null مكان الكلمة
+INSERT INTO scientists VALUES (null, "Ahmad", 4200, "KSA", "Asia");
+INSERT INTO scientists VALUES (null, "Rami", 2750, "Egypt", "Africa");
+INSERT INTO scientists VALUES (null, "Said", 3900, "Lebanon", "Asia");
+INSERT INTO scientists VALUES (null, "Noura", 3150, "Algeria", "Africa");
+INSERT INTO scientists VALUES (null, "Amani", 2950, "Morocco", "Africa");
+INSERT INTO scientists VALUES (null, "Mhamad", 3700, "Lebanon", "Asia");
+INSERT INTO scientists VALUES (null, "Wissam", 3550, "Oman", "Asia");
+INSERT INTO scientists VALUES (null, "Mostafa", 4120, "Qatar", "Asia");
+INSERT INTO scientists VALUES (null, "Houssam", 6800, "Germany", "Europe");
+INSERT INTO scientists VALUES (null, "Jana", 7500, "Canada", "North America");
+		</pre>
+</div>
+<br/>
+<p>بعد تنفيذ الإستعلام السابق في <span class="word">phpMyAdmin</span> سيتم إنشاء قاعدة البيانات <code>harmash</code> و إنشاء الجدول <code>scientists</code> بداخلها.<br/>
+	قم بالنقر على إسم قاعدة البيانات <code>harmash</code> من القائمة اليسرى حتى تبدأ بالتعامل معها و تطبيق ما ستتعلمه في هذا الدرس.</p>
+<br/>
+<p>البيانات التي قمنا بإضافتها بشكل إفتراضي في الجدول <span class="inline"><code>scientists</code>.</span></p>
+<div class="responsive-table" style="max-width: 420px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>name</th> <th>salary</th> <th>country</th> <th>continent</th>
+</tr>
+<tr>
+<td>1</td> <td>Ahmad</td> <td>4200.00</td> <td>KSA</td> <td>Asia</td>
+</tr>
+<tr>
+<td>2</td> <td>Rami</td> <td>2750.00</td> <td>Egypt</td> <td>Africa</td>
+</tr>
+<tr>
+<td>3</td> <td>Said</td> <td>3900.00</td> <td>Lebanon</td> <td>Asia</td>
+</tr>
+<tr>
+<td>4</td> <td>Noura</td> <td>3150.00</td> <td>Algeria</td> <td>Africa</td>
+</tr>
+<tr>
+<td>5</td> <td>Amani</td> <td>2950.00</td> <td>Morocco</td> <td>Africa</td>
+</tr>
+<tr>
+<td>6</td> <td>Mhamad</td> <td>3700.00</td> <td>Lebanon</td> <td>Asia</td>
+</tr>
+<tr>
+<td>7</td> <td>Wissam</td> <td>3550.00</td> <td>Oman</td> <td>Asia</td>
+</tr>
+<tr>
+<td>8</td> <td>Mostafa</td> <td>4120.00</td> <td>Qatar</td> <td>Asia</td>
+</tr>
+<tr>
+<td>9</td> <td>Houssam</td> <td>6800.00</td> <td>Germany</td> <td>Europe</td>
+</tr>
+<tr>
+<td>10</td> <td>Jana</td> <td>7500.00</td> <td>Canada</td> <td>North America</td>
+</tr>
+</table>
+</div>
+</article>
+<article>
+<h2>أمثلة شاملة على كتابة إستعلامات متداخلة</h2>
+<br/>
+<h3>المثال الأول</h3>
+<p>الإستعلام التالي يعرض جميع معلومات الموظف الذي ينال أعلى أجر.<br/>
+	هنا يجب معرفة أكبر راتب يتم إعطاؤه للموظفين, بعد معرفته يمكننا إحضار معلومات كل موظف يملك نفس هذا الراتب.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM scientists                             -- scientists هنا قمنا بعرض بيانات جميع الأسطر الموجودة في الجدول
+WHERE salary = (SELECT MAX(salary) FROM scientists)  -- (scientists موجود في الجدول salary أعلى) يساوي salary التي تملك
+		</pre>
+<br/>
+<p>الفيديو التالي يشرح كود الإستعلام بدقة و يشرح كيف حصلنا على النتيجة.</p>
+<div class="image-box">
+<video controls="">
+<source src="ex-1-high.mp4" type="video/mp4"/>
+<source src="ex-1-low.mp4" type="video/mp4"/>
+				متصفحك لا يدعم صيغة الفيديو!
+			</video>
+</div>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 420px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>name</th> <th>salary</th> <th>country</th> <th>continent</th>
+</tr>
+<tr>
+<td>10</td> <td>Jana</td> <td>7500.00</td> <td>Canada</td> <td>North America</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>الإستعلام التالي يعرض أسماء و رواتب العلماء الذين ينالون راتب لا يتجاوز متوسط الرواتب التي يتم إعطاءها للموظفين.<br/>
+	هنا يجب معرفة متوسط الرواتب التي يتم إعطاءها للموظفين, بعد معرفته يمكننا إحضار أسماء و رواتب العلماء الذين يملكون راتب أقل منه.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT name, salary FROM scientists                  -- scientists هنا قمنا بعرض إسم و راتب كل عالم في الجدول
+WHERE salary &lt; (SELECT AVG(salary) FROM scientists)  -- (scientists موجود في الجدول salary متوسط كل) أقل من salary يملك
+		</pre>
+<br/>
+<p>الفيديو التالي يشرح كود الإستعلام بدقة و يشرح كيف حصلنا على النتيجة.</p>
+<div class="image-box">
+<video controls="">
+<source src="ex-2-high.mp4" type="video/mp4"/>
+<source src="ex-2-low.mp4" type="video/mp4"/>
+				متصفحك لا يدعم صيغة الفيديو!
+			</video>
+</div>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 190px;">
+<table class="ltr left">
+<tr>
+<th>name</th> <th>salary</th>
+</tr>
+<tr>
+<td>Ahmad</td> <td>4200.00</td>
+</tr>
+<tr>
+<td>Rami</td> <td>2750.00</td>
+</tr>
+<tr>
+<td>Said</td> <td>3900.00</td>
+</tr>
+<tr>
+<td>Noura</td> <td>3150.00</td>
+</tr>
+<tr>
+<td>Amani</td> <td>2950.00</td>
+</tr>
+<tr>
+<td>Mhamad</td> <td>3700.00</td>
+</tr>
+<tr>
+<td>Wissam</td> <td>3550.00</td>
+</tr>
+<tr>
+<td>Mostafa</td> <td>4120.00</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الثالث</h3>
+<p>الإستعلام التالي يعرض إسم أكثر قارة تم إحضار علماء منها.<br/>
+	هنا يجب معرفة عدد العلماء الموجودين في كل قارة.<br/>
+	بعدها يجب معرفة أكبر عدد علماء تم إيجاده في قارة.<br/>
+	بعدها يجب طباعة إسم و عدد علماء كل قارة عدد علمائها يساوي عدد العلماء الأكبر الذي عرفناه.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<p>الطريقة التالية تعمل مع جميع قواعد البيانات.</p>
+<pre data-enlighter-language="sql">
+SELECT continent, COUNT(id) AS total
+FROM scientists
+GROUP BY continent
+HAVING total = (SELECT MAX(t.total) AS max_count
+                FROM (SELECT continent, COUNT(id) AS total
+                      FROM scientists
+                      GROUP BY continent) AS t)
+		</pre>
+<br/>
+<p>الفيديو التالي يشرح كود الإستعلام بدقة و يشرح كيف حصلنا على النتيجة.</p>
+<div class="image-box">
+<video controls="">
+<source src="ex-3-high.mp4" type="video/mp4"/>
+<source src="ex-3-low.mp4" type="video/mp4"/>
+				متصفحك لا يدعم صيغة الفيديو!
+			</video>
+</div>
+<br/>
+<p>إذا كنت تستخدم قواعد بيانات <span class="word">MySQL</span> يمكنك كتابة الإستعلام نفسه كالتالي.</p>
+<pre data-enlighter-language="sql">
+SELECT continent, COUNT(id) AS total
+FROM scientists
+GROUP BY continent
+HAVING total = (SELECT COUNT(id) AS max_count
+			    FROM scientists
+			    GROUP BY continent
+			    ORDER BY max_count DESC
+			    LIMIT 1);
+		</pre>
+<br/>
+<p>إذا كنت تستخدم قواعد بيانات <span class="word">SQL Server</span> / <span class="word">Access</span> يمكنك كتابة الإستعلام نفسه كالتالي.</p>
+<pre data-enlighter-language="sql">
+SELECT continent, COUNT(id) AS total
+FROM scientists
+GROUP BY continent
+HAVING total = (SELECT TOP 1 COUNT(id) AS max_count
+			    FROM scientists
+			    GROUP BY continent
+			    ORDER BY max_count DESC);
+		</pre>
+<br/>
+<p>إذا كنت تستخدم قواعد بيانات <span class="word">Oracle</span> يمكنك كتابة الإستعلام نفسه كالتالي.</p>
+<pre data-enlighter-language="sql">
+SELECT continent, COUNT(id) AS total
+FROM scientists
+GROUP BY continent
+HAVING total = (SELECT COUNT(id) AS max_count
+			    FROM scientists
+				WHERE ROWNUM &lt;= 1
+			    GROUP BY continent
+			    ORDER BY max_count DESC);
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 150px;">
+<table class="ltr left">
+<tr>
+<th>continent</th> <th>total</th>
+</tr>
+<tr>
+<td>Asia</td> <td>5</td>
+</tr>
+</table>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

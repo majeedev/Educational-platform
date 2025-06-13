@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الكلاس TreeMap في جافا</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>الكلاس <code data-enlighter-language="java">TreeMap</code> في جافا</h1>
+<article>
+<h2>مقدمة</h2>
+<p>الكلاس <code data-enlighter-language="java">TreeMap</code> يعتبر الكلاس الأكثر تطوراً بين كلاسات المجموعة <code data-enlighter-language="java">Tree</code>, و هو يستخدم لتخزين العناصر بشكل <span class="word">Key / Value</span> بالإضافة إلى ترتيب هذه العناصر في الذاكرة بشكل تصاعدي <span class="word">Ascending</span> نسبة للـ <span class="word">keys</span>. و هو يحتوي على دوال أخرى تسهل طريقة الوصول للعناصر.</p>
+<p>إذاً الـ <code data-enlighter-language="java">TreeMap</code> كأنه جدول يتألف من عامودين, الأول يحتوي المفاتيح <span class="inline">( <span class="word">Keys</span> )</span> و الثاني يحتوي على القيم <span class="inline">( <span class="word">Values</span> )</span>.</p>
+<p>هنا كل قيمة يتم تخزينها في كائن الـ <code data-enlighter-language="java">TreeMap</code> يجب إعطاءها <span class="word">Key</span> غير مستخدم, لأن كل <span class="word">Key</span> موضوع يسمح لك بالوصول لقيمة واحدة من القيم الموجودة في كائن الـ <code data-enlighter-language="java">TreeMap</code>.</p>
+<p>خلاصة, كل عنصر يضاف في كائن الـ <code data-enlighter-language="java">TreeMap</code> يجب أن يحتوي على كائنين, الأول يمثل المفتاح و الثاني يمثل قيمته.</p>
+<p><span class="note">ملاحظة:</span> كائن الـ <code data-enlighter-language="java">TreeMap</code> يمكنه إمتلاك مفتاح واحد نوعه <code data-enlighter-language="java">null</code>, و يمكن وضع القيمة <code data-enlighter-language="java">null</code> كقيمة لأي مفتاح موجود فيه.</p>
+<br/>
+<h3>طريقة ترتيب العناصر</h3>
+<p>إفتراضياً, في حال كانت المفاتيح تمثل أرقام, عندها يتم ترتيبهم من العدد الأصغر إلى العدد الأكبر.<br/>
+    أما في حال كانت المفاتيح تمثل نصوص أو كلمات أو أحرف, عندها يتم ترتيبهم ترتيباً أبجدياً.</p>
+<p>كما يمكنك تحديد طريقة ترتيب العناصر بنفسك.</p>
+<br/>
+<h3>بناؤه</h3>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public class TreeMap&amp;ltK,V&gt;
+extends AbstractMap&amp;ltK,V&gt;
+implements NavigableMap&amp;ltK,V&gt;, Cloneable, Serializable
+	</pre>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">K</code> يقصد بها نوع الكائنات التي تمثل مفاتيح.</p></li>
+<li><p><code data-enlighter-language="java">V</code> يقصد بها نوع الكائنات التي تمثل قيم.</p></li>
+</ul>
+<p>إذاً الكلاس <code data-enlighter-language="java">TreeMap</code> يرث من الكلاس <code data-enlighter-language="java">AbstractMap</code>, و يطبق الإنترفيسات <code data-enlighter-language="java">NavigableMap</code> - <code data-enlighter-language="java">Serializable</code> - <code data-enlighter-language="java">Cloneable</code>.</p>
+</article>
+<article>
+<h2>كونستركتورات الكلاس <code data-enlighter-language="java">TreeMap</code></h2>
+<p>الجدول التالي يحتوي على جميع الكونستركتورات الموجودة في الكلاس <code data-enlighter-language="java">TreeMap</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الكونستركتور مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public TreeMap()</code></span>
+			هذا الكونستركتور الإفتراضي في الكلاس <code data-enlighter-language="java">TreeMap</code>, يستخدم لإنشاء كائن نوعه <code data-enlighter-language="java">TreeMap</code> فارغ يرتب العناصر التي يتم إدخالها فيه بشكل تصاعدي <span class="word">Ascending</span>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public TreeMap(Collection c)</code></span>
+			يستخدم هذا الكونستركتور لإنشاء كائن نوعه <code data-enlighter-language="java">TreeMap</code> يحتوي على عناصر كائن الـ <code data-enlighter-language="java">Collection</code> الذي نمرره له كـ <span class="word">Argument</span>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public TreeMap(Map m)</code></span>
+			يستخدم هذا الكونستركتور لإنشاء كائن نوعه <code data-enlighter-language="java">TreeMap</code> يحتوي على عناصر كائن الـ <code data-enlighter-language="java">Map</code> الذي نمرره له كـ <span class="word">Argument</span>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public TreeMap(Comparator c)</code></span>
+			يستخدم هذا الكونستركتور لإنشاء كائن نوعه <code data-enlighter-language="java">TreeMap</code> فارغ يرتب العناصر التي يتم إدخالها فيه على أساس كائن الـ <code data-enlighter-language="java">Comparator</code> الذي نمرره له كـ <span class="word">Argument</span>.<br/>
+			إذاً <code data-enlighter-language="java">c</code> عبارة عن كائن نوعه <code data-enlighter-language="java">Comparator</code> يمثل الطريقة التي سيعتمدها كائن الـ <code data-enlighter-language="java">TreeMap</code> في مقارنة قيم عناصره.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>دوال الكلاس <code data-enlighter-language="java">TreeMap</code></h2>
+<p>الجدول التالي يحتوي على جميع دوال الكلاس <span class="word">TreeMap</span>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Object put(Object key, Object value)</code></span>
+			تستخدم لإضافة عنصر جديد في كائن الـ <code data-enlighter-language="java">TreeMap</code>.<br/>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">key</code> عبارة عن كائن يمثل مفتاح العنصر.</p></li>
+<li><p><code data-enlighter-language="java">value</code> عبارة عن كائن يمثل قيمة العنصر.</p></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Object putAll(Map m)</code></span>
+			تضيف جميع عناصر الكائن <code data-enlighter-language="java">m</code> الذي نمرره لها كـ <span class="word">Argument</span> في كائن الـ <code data-enlighter-language="java">TreeMap</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Object remove(Object key)</code></span>
+			تحذف العنصر الذي يملك المفتاح الذي نمرره لها كـ <span class="word">Argument</span>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void clear()</code></span>
+			تمسح جميع العناصر الموجودة في كائن الـ <code data-enlighter-language="java">TreeMap</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Object clone()</code></span>
+			تنشئ نسخة من كائن الـ <code data-enlighter-language="java">TreeMap</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Object get(Object key)</code></span>
+			ترجع قيمة المفتاح الذي نمرره لها كـ <span class="word">Argument</span>.<br/>
+			في حال كان كائن الـ <code data-enlighter-language="java">TreeMap</code> لا يحتوي على المفتاح الذي مررناه لها, ترجع القيمة <code data-enlighter-language="java">null</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean containsValue(Object value)</code></span>
+			ترجع <code data-enlighter-language="java">true</code> إذا كان كائن الـ <code data-enlighter-language="java">TreeMap</code> يحتوي على القيمة التي نضعها لها كـ <span class="word">Argument</span>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean containsKey(Object value)</code></span>
+			ترجع <code data-enlighter-language="java">true</code> إذا كان كائن الـ <code data-enlighter-language="java">TreeMap</code> يحتوي على المفتاح الذي نضعه لها كـ <span class="word">Argument</span>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Set entrySet()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">Set</code> يملك جميع عناصر <span class="inline">( مفاتيح + قيم )</span> الكائن الـ <code data-enlighter-language="java">TreeMap</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Set keySet()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">Set</code> يملك جميع مفاتيح الكائن الـ <code data-enlighter-language="java">TreeMap</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Collection values()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">Collection</code> يملك جميع قيم الكائن الـ <code data-enlighter-language="java">TreeMap</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean isEmpty()</code></span>
+			ترجع <code data-enlighter-language="java">true</code> في حال كان كائن الـ <code data-enlighter-language="java">TreeMap</code> فارغاً.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int size()</code></span>
+			ترجع عدد العناصر الموجودة في كائن الـ <code data-enlighter-language="java">TreeMap</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Object firstKey()</code></span>
+			ترجع كائن يمثل أول مفتاح <code data-enlighter-language="java">key</code> موجود في كائن الـ <code data-enlighter-language="java">TreeMap</code>.<br/>
+<span class="note">ملاحظة:</span> قيمته ستكون أصغر قيمة لأن المفاتيح في هذا الكائن تترتب فيه بشكل تصاعدي.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Object lastKey()</code></span>
+			ترجع كائن يمثل آخر مفتاح <code data-enlighter-language="java">key</code> موجود في كائن الـ <code data-enlighter-language="java">TreeMap</code>.<br/>
+<span class="note">ملاحظة:</span> قيمته ستكون أكبر قيمة لأن المفاتيح في هذا الكائن تترتب فيه بشكل تصاعدي.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public SortedMap headMap(Object end)</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">SortedMap</code> يحتوي على جميع عناصر كائن الـ <code data-enlighter-language="java">TreeMap</code> الذي قام باستدعائها الموجودة فيه قبل الكائن <code data-enlighter-language="java">end</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public SortedMap tailMap(Object Start)</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">SortedMap</code> يحتوي على جميع عناصر كائن الـ <code data-enlighter-language="java">TreeMap</code> الذي قام باستدعائها إبتداءاً من الكائن <code data-enlighter-language="java">start</code> حتى آخر عنصر موجود فيه.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public SortedMap subMap(Object start, Object end)</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">SortedMap</code> يحتوي على جميع عناصر كائن الـ <code data-enlighter-language="java">TreeMap</code> الذي قام باستدعائها إبتداءاً من الكائن <code data-enlighter-language="java">start</code> وصولاً إلى الكائن <code data-enlighter-language="java">end</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Comparator comparator()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">Comparator</code> يمثل الإنترفيس المستخدم في مقارنة العناصر.<br/>
+			ترجع <code data-enlighter-language="java">null</code> في حال لم تقم بتغيير الإنترفيس الإفتراضي.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>مثال شامل</h2>
+<p>في المثال التالي قمنا بتعريف كائن نوعه <code data-enlighter-language="java">TreeMap</code>, إسمه <code data-enlighter-language="java">tm</code>, ثم أدخلنا فيه <span class="number">12</span> عنصر.</p>
+<p>بعدها قمنا بتخزين جميع المفاتيح في كائن نوعه <code data-enlighter-language="java">Iterator</code>, إسمه <code data-enlighter-language="java">keys</code>.<br/>
+		و قمنا أيضاً بتخزين جميع القيم في كائن نوعه <code data-enlighter-language="java">Iterator</code>, إسمه <code data-enlighter-language="java">values</code>.</p>
+<p>بعدها عرضناهم كجدول يتألف من عامودين من خلال الحلقة <code data-enlighter-language="java">while</code>.<br/>
+		لاحظ أنه تم عرضهم بترتيب تصاعدي حسب المفاتيح.</p>
+<p>في الأخير قمنا بالبحث عن قيمة مفتاح أدخالناه سابقاً.</p>
+<br/>
+<div class="example-box">
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.util.TreeMap;           // TreeMap هنا قمنا باستدعاء الكلاس
+import java.util.iterator;          // iterator هنا قمنا باستدعاء الإنترفيس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // و الذي سنضع فيه كود البلد و إسمه tm إسمه TreeMap هنا قمنا بإنشاء كائن نوعه
+        TreeMap tm = new TreeMap();
+ 
+        // كل عنصر يحتوي على كود البلد كمفتاح و إسمه كقيمة . لاحظ لاحقاً أنه سيتم عرضهم بالتريتب من المفتاح الأصغر إلى المفتاح الأكبر .tm هنا قمنا بإضافة 12 عنصر في الكائن
+        tm.put("+961", "Lebanon");
+        tm.put("+962", "Jordan");
+        tm.put("+963", "Sirya");
+        tm.put("+964", "Iraq");
+        tm.put("+965", "Kuwait");
+        tm.put("+966", "KSA");
+        tm.put("+967", "Yaman");
+        tm.put("+968", "Oman");
+        tm.put("+970", "Palestine");
+        tm.put("+212", "Morocco");
+        tm.put("+281", "Libya");
+        tm.put("+20",  "Egypt");
+ 
+        // أي وضعنا اكواد البلاد فيه .keys بداخل الكائن tm هنا قمنا بتخزين جميع مفاتيح الكائن
+        Iterator keys = tm.keySet().iterator();
+ 
+        // أي وضعنا أسماء البلاد فيه .values بداخل الكائن tm هنا قمنا بتخزين جميع قيم الكائن
+        Iterator values = tm.values().iterator();
+ 
+        System.out.println("The table below contains all Codes &amp; Countries \n");
+        System.out.println("---------------------");
+        System.out.println("Code \t | Country");
+        System.out.println("---------------------");
+ 
+        // لا يزال يحتوي على مفاتيح keys هنا أنشأنا حلقة تستمر في تكرار نفسها طالما أن الكائن
+        // الفكرة هنا المرور على جميع المفاتيح الموجودة و عرض كل مفتاح موجود و قيمته
+        while( keys.hasNext() ) {
+            System.out.println(keys.next() + "\t | " + values.next());
+        }
+        System.out.println("---------------------\n");
+ 
+ 
+        // KSA هنا قمنا بالبحث عن إسم البلد الذي يملك الكود 996+ فكان الجواب
+        System.out.println("Which Country use the code +966 ?");
+        System.out.println(tm.get("+966"));
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+The table below contains all Codes &amp; Countries
+
+---------------------
+Code     | Country
+---------------------
++20      | Egypt
++212     | Morocco
++281     | Libya
++961     | Lebanon
++962     | Jordan
++963     | Sirya
++964     | Iraq
++965     | Kuwait
++966     | KSA
++967     | Yaman
++968     | Oman
++970     | Palestine
+---------------------
+
+Which Country use the code +966 ?
+KSA
+		</pre>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

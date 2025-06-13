@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الجملة switch في جافا - Java switch statement</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>الجملة <code data-enlighter-language="java">switch</code> في جافا</h1>
+<article>
+<h2>تعريف الجملة <code data-enlighter-language="java">switch</code></h2>
+<p><code data-enlighter-language="java">switch</code> نستخدمها إذا كنا نريد إختبار قيمة متغير معين مع لائحة من الإحتمالات نقوم نحن بوضعها, و إذا تساوت هذه القيمة مع أي إحتمال وضعناه ستتنفذ الأوامر التي وضعناها في هذا الإحتمال فقط.</p>
+<p>كل إحتمال نضعه يسمى <span class="word">case.</span></p>
+<p>أنواع المتغيرات التي يمكن إختبار قيمتها باستخدام هذه الجملة هي:<br/>
+<code data-enlighter-language="java">int</code> - <code data-enlighter-language="java">byte</code> - <code data-enlighter-language="java">short</code> - <code data-enlighter-language="java">char</code> - <span class="inline"><code data-enlighter-language="java">enum</code>.</span></p>
+<br/>
+<p class="b">طريقة تعريفها</p>
+<p>يمكننا تعريفها بعدة أشكال, الشكل الأساسي هو التالي:</p>
+<div class="code-box">
+<div>
+<span class="blue">switch</span>(<span class="red">expression</span>) {<br/><br/>
+			    <span class="blue">case</span> <span class="red">value</span>:<br/>
+			        <span class="gray">// Statements</span><br/>
+			        <span class="blue">break</span>;<br/><br/>
+			    <span class="blue">case</span> <span class="red">value</span>:<br/>
+			        <span class="gray">// Statements</span><br/>
+			        <span class="blue">break</span>;<br/><br/>
+			    <span class="blue">default</span>:<br/>
+			        <span class="gray">// Statements</span><br/>
+			        <span class="blue">break</span>;<br/><br/>}
+	    </div>
+</div>
+<br/>
+<ul class="explain">
+<li><p><span class="code blue">switch</span> تعني إختبر قيمة المتغير الموضوع بين قوسين.</p></li>
+<br/>
+<li><p><span class="code red">expression</span> هنا يقصد بها المتغير الذي نريد إختبار قيمته.<br/>
+		نوع المتغير الذي يسمح لنا بإختباره: <code data-enlighter-language="java">int</code> - <code data-enlighter-language="java">byte</code> - <code data-enlighter-language="java">short</code> - <code data-enlighter-language="java">char</code> - <span class="inline"><code data-enlighter-language="java">enum</code>.</span></p></li>
+<br/>
+<li><p><span class="code blue">case</span> تعني حالة, <span class="code red">value</span> تعني قيمة, و <span class="code gray">Statements</span> تعني أوامر.<br/>
+		و يقصد من هذا كله, أنه في حال كانت قيمة الـ <span class="code red">expression</span> تساوي هذه القيمة سيقوم بتنفيذ الأوامر الموضوعة بعد النقطتين <code data-enlighter-language="java">:</code>.<br/>
+		الآن بعد تنفيذ جميع الأوامر الموضوعة بعد النقطتين, يجب وضع <code data-enlighter-language="java">break</code> لكي يخرج من الجملة <code data-enlighter-language="java">switch</code> مباشرةً بدل أن ينتقل للـ <code data-enlighter-language="java">case</code> التالية الموجودة في الجملة <span class="inline"><code data-enlighter-language="java">switch</code>.</span><br/>
+		نستطيع وضع العدد الذي نريده من الـ <code data-enlighter-language="java">case</code> بداخل الجملة <span class="inline"><code data-enlighter-language="java">switch</code>.</span><br/>
+<span class="note">إنتبه:</span> الـ <span class="code red">expression</span> و الـ <span class="code red">value</span> يجب أن يكونا من نفس النوع.</p></li>
+<br/>
+<li><p><code data-enlighter-language="java">default</code> تعني إفتراضياً و هي نفس فكرة الجملة <code data-enlighter-language="java">else</code>, و يمكننا أن لا نضعها أيضاً.<br/>
+		هذه الجملة تنفذ فقط في حال لم تنفذ أي <code data-enlighter-language="java">case</code> موجودة في الجملة <code data-enlighter-language="java">switch</code> و لذلك نضعها بالآخر.</p></li>
+</ul>
+<br/><br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>لا حاجة لوضع <code data-enlighter-language="java">break</code> للحالة الأخيرة لأن البرنامج سيخرج من الجملة <code data-enlighter-language="java">switch</code> في جميع الأحوال.</p>
+</div>
+<br/>
+<p>ستفهم فكرة الجملة <code data-enlighter-language="java">switch</code> من خلال الأمثلة و سنريك كيف يمكنك أن تنفذ نفس الأوامر لأكثر من حالة, من خلال الأمثلة.</p>
+<br/>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<p><span class="point">•</span>سنقوم باختبار قيمة المتغير <code data-enlighter-language="java">x</code> و الذي نوعه <code data-enlighter-language="java">int</code>.</p>
+<p><span class="point">•</span>سنضع عدة حالات و كل حالة تطبع شيء معين.</p>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        int x = 2;
+ 
+        switch( x ) {   // x إختبر قيمة المتغير
+ 
+            case 1:   // في حال كانت تساوي 1 سيتم تنفيذ أمر الطباعة الموضوع فيها
+                System.out.println("x contain 1");
+                break;
+ 
+            case 2:   // في حال كانت تساوي 2 سيتم تنفيذ أمر الطباعة الموضوع فيها
+                System.out.println("x contain 2");
+                break;
+ 
+            case 3:   // في حال كانت تساوي 3 سيتم تنفيذ أمر الطباعة الموضوع فيها
+                System.out.println("x contain 3");
+                break;
+ 
+            default:   // في حال كانت لا تساوي أي قيمة من القيم الموضوعة سيتم تنفيذ أمر الطباعة الموضوع فيها
+                System.out.println("x contain a different value");
+ 
+        }
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+x contain 2
+		</pre>
+<p><span class="point">•</span>نلاحظ أنه تم تنفيذ أمر الطباعة الموجود في الحالة الثانية لأن قيمة المتغير <code data-enlighter-language="java">x</code> تساوي <span class="inline"><span class="number">2</span>.</span></p>
+<p><span class="point">•</span>هنا سأل نفسه التالي: هل قيمة المتغير <code data-enlighter-language="java">x</code> تساوي <span class="number">1</span>؟<br/>
+		فكان جواب الشرط كلا <span class="inline">( <code data-enlighter-language="java">false</code> )</span> , فانتقل إلى الحالة التي تليه.</p>
+<p><span class="point">•</span>ثم سأل نفسه التالي: هل قيمة المتغير <code data-enlighter-language="java">x</code> تساوي <span class="number">2</span>؟<br/>
+		فكان جواب الشرط نعم <span class="inline">( <code data-enlighter-language="java">true</code> )</span> , فقام بتنفيذ أمر الطباعة الموجود في هذه الحالة, و بعدها خرج من جملة الـ <code data-enlighter-language="java">switch</code> بأكملها بسبب الجملة <span class="inline"><code data-enlighter-language="java">break</code>.</span></p>
+</div>
+<br/><br/>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<p><span class="point">•</span>سنقوم باختبار قيمة المتغير <code data-enlighter-language="java">x</code> و الذي نوعه <code data-enlighter-language="java">int</code>.</p>
+<p><span class="point">•</span>سنضع عدة حالات و كل حالة تطبع شيء معين.</p>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        int x = 5;
+ 
+        switch( x ) {   // x إختبر قيمة المتغير
+ 
+            case 1:   // في حال كانت تساوي 1 سيتم تنفيذ أمر الطباعة الموضوع فيها
+                System.out.println("x contain 1");
+                break;
+ 
+            case 2:   // في حال كانت تساوي 2 سيتم تنفيذ أمر الطباعة الموضوع فيها
+                System.out.println("x contain 2");
+                break;
+ 
+            case 3:   // في حال كانت تساوي 3 سيتم تنفيذ أمر الطباعة الموضوع فيها
+                System.out.println("x contain 3");
+                break;
+ 
+            default:   // في حال كانت لا تساوي أي قيمة من القيم الموضوعة سيتم تنفيذ أمر الطباعة الموضوع فيها
+                System.out.println("x contain a different value");
+ 
+        }
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+x contain a different value
+		</pre>
+<p><span class="point">•</span>نلاحظ أن تم تنفيذ أمر الطباعة الموجود في الحالة الإفتراضية لأن قيمة المتغير <code data-enlighter-language="java">x</code> لا تساوي أي قيمة من القيم الموضوعة في الحالات.</p>
+<p><span class="point">•</span>هنا سأل نفسه التالي: هل قيمة المتغير <code data-enlighter-language="java">x</code> تساوي <span class="number">1</span>؟<br/>
+		فكان جواب الشرط كلا <span class="inline">( <code data-enlighter-language="java">false</code> )</span> , فانتقل إلى الحالة التي تليه.</p>
+<p><span class="point">•</span>ثم سأل نفسه التالي: هل قيمة المتغير <code data-enlighter-language="java">x</code> تساوي <span class="number">2</span>؟<br/>
+		فكان جواب الشرط كلا <span class="inline">( <code data-enlighter-language="java">false</code> )</span> , فانتقل إلى الحالة التي تليه.</p>
+<p><span class="point">•</span>ثم سأل نفسه التالي: هل قيمة المتغير <code data-enlighter-language="java">x</code> تساوي <span class="number">3</span>؟<br/>
+		فكان جواب الشرط كلا <span class="inline">( <code data-enlighter-language="java">false</code> )</span> , فانتقل إلى الحالة التي تليه.</p>
+<p><span class="point">•</span>بما أنه لم يجد أي حالة تساوت فيها القيمة مع قيمة المتغير الذي يتم اختباره, قام بتنفيذ الأوامر الموجودة في الحالة الإفتراضية <code data-enlighter-language="java">default</code>, وعندما إنتهى من تنفيذ الأوامر خرج من جملة الـ <code data-enlighter-language="java">switch</code> بأكملها.</p>
+</div>
+</article>
+<article>
+<h2>وضع نفس الأوامر لأكثر من حالة</h2>
+<p>إذا أردت وضع نفس الأوامر لأكثر من حالة, عليك وضع الحالات تحت بعضها, ثم كتابة الأوامر, ثم وضع <span class="inline"><code data-enlighter-language="java">break</code>.</span></p>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<p><span class="point">•</span>سنقوم باختبار قيمة المتغير <code data-enlighter-language="java">x</code> و الذي نوعه <code data-enlighter-language="java">int</code>.</p>
+<p><span class="point">•</span>سنضع ثلاث حالات ينفذون نفس الأوامر.</p>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        int x = 3;
+ 
+        switch( x ) {   // x إختبر قيمة المتغير
+ 
+            case 1:     // في حال كانت تساوي 1 أو 2 أو 3 سيتم تنفيذ أمر الطباعة
+            case 2:
+            case 3:
+                System.out.println("x contain 1 or 2 or 3");
+                break;
+ 
+            default:   // في حال كانت لا تساوي أي قيمة من القيم الموضوعة سيتم تنفيذ أمر الطباعة الموضوع فيها
+                System.out.println("x contain a different value");
+ 
+        }
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+x contain 1 or 2 or 3
+		</pre>
+<p><span class="point">•</span>نلاحظ أنه تم تنفيذ أمر الطباعة الموضوع للحالات الثلاث الأولى لأن قيمة <code data-enlighter-language="java">x</code> تساوي <span class="inline"><span class="number">3</span>.</span></p>
+<p><span class="point">•</span>هنا سأل نفسه التالي: هل قيمة المتغير <code data-enlighter-language="java">x</code> تساوي <span class="number">1</span> أو <span class="number">2</span> أو <span class="number">3</span>؟<br/>
+		فكان جواب الشرط نعم <span class="inline">( <code data-enlighter-language="java">true</code> )</span> , فقام بتنفيذ أمر الطباعة الموضوع لهذه الحالات الثلاث, و بعدها خرج من جملة الـ <code data-enlighter-language="java">switch</code> بأكملها بسبب الجملة <span class="inline"><code data-enlighter-language="java">break</code>.</span></p>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

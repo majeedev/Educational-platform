@@ -1,0 +1,524 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس شرحنا أهم التعابير النمطية (Regular Expressions), ستتعلم كيف تبحث و تغير في محتوى النصوص بطرق كثيرة, و وضعنا الكثير من الأمثلة لتساعدك في الفهم" name="description"/>
+<meta content="regular expressions in python, python regular expressions, regex in python, python regex, التعابير النمطية في بايثون, الأحرف المستخدمة في التعابير النمطية, python Matcher class, python Pattern class, الكلاس Matcher في بايثون, الكلاس Pattern في بايثون, python meta characters, meta characters i python" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>التعابير النمطية في بايثون | Python regular expressions</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>التعابير النمطية في بايثون</h1>
+<article>
+<h2>مفهوم التعابير النمطية في بايثون</h2>
+<p>في البداية, التعابير النمطية يقال لها <span class="word">Regular Expressions</span> أو <span class="word">RegEx</span> و هي عبارة عن نصوص تحتوي على أحرف و رموز لها معاني محددة.<br/>
+	للدقة أكثر, كل حرف أو رمز نضعه في هذا النص يعني شيء معين.</p>
+<p>إذاً, التعابير النمطية تستخدم بهدف البحث في النصوص بطريقة سهلة جداً بدل الحاجة إلى كتابة خوارزميات معقدة من أجل الوصول إلى النتيجة المرجوة.<br/>
+	و بالتالي يمكنك إستغلال التعابير النمطية في حال أردت البحث في النص عن شيء محدد بهدف إجراء تعديل أو تحديث عليه.</p>
+<p>من أشهر الإستخدامات للتعابير النمطية هي عندما تطلب من المستخدم إدخال بريده الإلكتروني و إدخال كلمة سر.<br/>
+	عندها تجد أنك أثناء كتابة البريد الإلكتروني و كلمة المرور فإنه يظهر لك تنبيهات في حال لم تقم بإدخال بريد إلكتروني صحيح أو كلمة سر لها شكل معين.<br/>
+	فمثلاً تجد أنه يطلب منك وضع كلمة سر تتألف من ثمانية أحرف على الأقل و يجب أن تحتوي على حرف كبير, حرف صغير, رقم و رمز.</p>
+<br/>
+<h3>التعامل مع التعابير النمطية</h3>
+<p><code data-enlighter-language="python">re</code> هو موديول جاهز في بايثون يحتوي على دوال و ثوابت جاهزة مخصصة للتعامل مع التعابير النمطية.<br/>
+	لهذا السبب عليك تضمين هذا الموديول عندما تريد التعامل مع التعابير النمطية.</p>
+<p>لتضمين الموديول <code data-enlighter-language="python">re</code> نكتب السطر التالي.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+import re
+	</pre>
+</article>
+<article>
+<h2>دوال الموديول <code data-enlighter-language="python">re</code></h2>
+<p>بعد تضمين الموديول <code data-enlighter-language="python">re</code> نصبح قادرين على إستخدام الدوال الموجودة فيه و التي ذكرنا أهمها في الجدول التالي.</p>
+<table class="list rows-numbers full-width">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">search(pattern, string, flags=0)</code></span>
+			تبحث في النص الذي نمرره له مكان الباراميتر <code data-enlighter-language="python">string</code> لترى ما إذا كان يتطابق أو فيه جزء يتطابق مع التعبير النمطي الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="python">pattern</code>.</span><br/>
+			في حال تم إيجاد جزء أو أكثر في النص يتطابق مع التعبير النمطي, تقوم بإرجاع كائن من الكلاس <code data-enlighter-language="python">Match</code> يحتوي على معلومات أول مكان في هذا النص تطابق مع التعبير النمطي.<br/>
+			في حال لم يتم العثور على النص المراد البحث عنه ترجع <span class="inline"><code data-enlighter-language="python">None</code>.</span><br/>
+<a class="open-page" href="re.search.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">findall(pattern, string, flags=0)</code></span>
+			تبحث في النص الذي نمرره له مكان الباراميتر <code data-enlighter-language="python">string</code> لترى ما إذا كان يتطابق أو فيه جزء يتطابق مع التعبير النمطي الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="python">pattern</code>.</span><br/>
+			في حال تم إيجاد جزء أو أكثر في النص يتطابق مع التعبير النمطي, ترجع <code data-enlighter-language="python">list</code> كل عنصر فيه يمثل الجزء الذي يتطابق مع التعبير النمطي.<br/>
+			في حال لم يتم إيجاد أي تطابق, ترجع <code data-enlighter-language="python">list</code> فارغ.<br/>
+<a class="open-page" href="re.findall.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">finditer(pattern, string, flags=0)</code></span>
+			تبحث في النص الذي نمرره له مكان الباراميتر <code data-enlighter-language="python">string</code> لترى ما إذا كان يتطابق أو فيه جزء يتطابق مع التعبير النمطي الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="python">pattern</code>.</span><br/>
+			في حال تم إيجاد جزء أو أكثر في النص يتطابق مع التعبير النمطي, ترجع <code data-enlighter-language="python">iterator</code> كل عنصر فيه عبارة عن كائن <code data-enlighter-language="python">Match</code> يمثل الجزء الذي يتطابق مع التعبير النمطي.<br/>
+			في حال لم يتم إيجاد أي تطابق, ترجع <code data-enlighter-language="python">list</code> فارغ.<br/>
+<a class="open-page" href="re.finditer.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">split(pattern, string, maxsplit=0, flags=0)</code></span>
+			ترجع نسخة من النص الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">string</code> مقسمة على شكل مصفوفة <span class="inline">( <code data-enlighter-language="python">list</code> )</span> من النصوص.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">pattern</code> نمرر تعبير نمطي يحدد الطريقة التي سيتم على أساسها تقسيم النص و وضع كل قسم فيه في عنصر واحد بداخل المصفوفة.<br/>
+			في حال لم يتم العثور على النص المراد البحث عنه ترجع <code data-enlighter-language="python">list</code> فيه عنصر واحد يحتوي على كل النص الذي تم البحث فيه.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">maxsplit</code> يمكنك تمرير رقم يحدد إلى كم قسم تريد أن يتم تقسيم النص.<br/>
+<a class="open-page" href="re.split.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">sub(pattern, repl, string, count=0, flags=0)</code></span>
+			ترجع نسخة من النص الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">string</code> مع تبديل كل جزئية فيها تتطابق مع التعبير النمطي الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">pattern</code> بالنص الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="python">repl</code>.</span><br/>
+			مكان الباراميتر <code data-enlighter-language="python">count</code> يمكنك تمرير رقم أكبر من صفر يمثل أول كم جزئية يتم العثور عليها تريدها أن تتبدل.<br/>
+<a class="open-page" href="re.sub.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>الأحرف المميزة في بايثون</h2>
+<p>الأحرف المميزة <span class="inline">( <span class="word">Special Characters</span> )</span> عبارة عن رموز لها معنى خاص و لقد ذكرناهم في الجدول التالي.</p>
+<table class="list full-width">
+<tr>
+<th>الرمز</th>
+<th>إستخدامه</th>
+<th>مثال</th>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">^</code></td>
+<td>يستخدم للتشييك على الأحرف الموضوعة في بداية كل سطر في النص.<br/><br/>
+<b>مثال:</b> <code data-enlighter-language="python">"^Hello"</code><br/>
+			هذا التعبير يقصد منه هل النص أو كل سطر فيه يبدأ بكلمة <span class="inline"><code data-enlighter-language="python">Hello</code>.</span></td>
+<td><a class="open-page center" href="special-characters-ex-1.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">$</code></td>
+<td>يستخدم للتشييك على الأحرف الموضوعة في نهاية كل سطر في النص.<br/><br/>
+<b>مثال:</b> <code data-enlighter-language="python">"World$"</code><br/>
+			هذا التعبير يقصد منه هل النص أو كل سطر فيه ينتهي بكلمة <span class="inline"><code data-enlighter-language="python">Hello</code>.</span></td>
+<td><a class="open-page center" href="special-characters-ex-2.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">.</code></td>
+<td>يستخدم للإشارة إلى وجوب وجود أي حرف ما عدا الحرف <code data-enlighter-language="python">/n</code> الذي يشير إلى نهاية السطر.<br/><br/>
+<b>مثال:</b> <code data-enlighter-language="python">"He..o"</code><br/>
+			هذا التعبير يقصد منه هل يوجد <code data-enlighter-language="python">He</code> و بعده حرفين, و بعده يوجد حرف <code data-enlighter-language="python">o</code>.</td>
+<td><a class="open-page center" href="special-characters-ex-3.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">+</code></td>
+<td>يستخدم لمعرفة ما إذا كان الحرف الموضوع قبله موجود مرة واحدة على الأقل في النص.<br/><br/>
+<b>مثال:</b> <code data-enlighter-language="python">"ello+"</code><br/>
+			هذا التعبير يقصد منه هل يوجد <code data-enlighter-language="python">ell</code> و بعده يوجد حرف <code data-enlighter-language="python">o</code> أو أكثر.</td>
+<td><a class="open-page center" href="special-characters-ex-4.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">*</code></td>
+<td>يستخدم في حال عدم الإكتراث ما إذا كان الحرف الموضوع قبله موجود مرة, عدة مرات أو غير موجود على الإطلاق في النص.<br/><br/>
+<b>مثال:</b> <code data-enlighter-language="python">"ello*"</code><br/>
+			هذا التعبير يقصد منه هل يوجد <code data-enlighter-language="python">ell</code> و لا يهم إذا كان يوجد بعده حرف <code data-enlighter-language="python">o</code> أو أكثر.</td>
+<td><a class="open-page center" href="special-characters-ex-5.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">?</code></td>
+<td>يستخدم لمعرفة ما إذا كان الحرف الموضوع قبله موجود مرة واحدة أو غير موجود في النص.<br/><br/>
+<b>مثال:</b> <code data-enlighter-language="python">"ai?"</code><br/>
+			هذا التعبير يقصد منه هل يوجد <code data-enlighter-language="python">a</code> يليه حرف <code data-enlighter-language="python">i</code> واحد.</td>
+<td><a class="open-page center" href="special-characters-ex-6.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">|</code></td>
+<td>يستخدم لمعرفة ما إذا كان النص الموضوع قبله أو النص الموضوع بعده موجود في النص.<br/><br/>
+<b>مثال:</b> <code data-enlighter-language="python">"Hello|Hi"</code><br/>
+			هذا التعبير يقصد منه هل يوجد <code data-enlighter-language="python">Hello</code> أو <span class="inline"><code data-enlighter-language="python">Hi</code>.</span></td>
+<td><a class="open-page center" href="special-characters-ex-7.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">{m}</code></td>
+<td>يستخدم لمعرفة ما إذا كان الحرف الموضوع قبله موجود في النص عدد محدد من المرات.<br/>
+			مكان الحرف <code data-enlighter-language="python">m</code> نمرر عدد المرات.<br/><br/>
+<b>مثال:</b> <code data-enlighter-language="python">"al{2}"</code><br/>
+			هذا التعبير يقصد منه هل يوجد <code data-enlighter-language="python">a</code> يليه حرفين <span class="inline"><code data-enlighter-language="python">l</code>.</span></td>
+<td><a class="open-page center" href="special-characters-ex-8.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">{m,n}</code></td>
+<td>يستخدم لمعرفة ما إذا كان الحرف الموضوع قبله موجود في النص عدد مرات محصور بين عددين.<br/>
+			مكان الحرف <code data-enlighter-language="python">m</code> نمرر عدد المرات الأقل, و مكان الحرف <code data-enlighter-language="python">n</code> نمرر عدد المرات الأكثر.<br/><br/>
+<b>مثال:</b> <code data-enlighter-language="python">"al{1, 2}"</code><br/>
+			هذا التعبير يقصد منه هل يوجد <code data-enlighter-language="python">a</code> يليه حرف أو حرفين <span class="inline"><code data-enlighter-language="python">l</code>.</span></td>
+<td><a class="open-page center" href="special-characters-ex-9.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>وضع <code data-enlighter-language="python">set</code> من الإحتمالات في بايثون</h2>
+<p>القصد هنا هو أن تضع الرمز <code data-enlighter-language="python">[]</code> و بداخله تمرر مجموعة من الأحرف و الرموز الأخرى كما فعلنا في الجدول التالي.</p>
+<table class="list full-width">
+<tr>
+<th>الرمز</th>
+<th>إستخدامه</th>
+<th>مثال</th>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">[abc]</code></td>
+<td>هذا التعبير يقصد منه هل يوجد في النص الحرف <code data-enlighter-language="python">a</code> أو <code data-enlighter-language="python">b</code> أو <span class="inline"><code data-enlighter-language="python">c</code>.</span></td>
+<td><a class="open-page center" href="set-ex-1.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">[^abc]</code></td>
+<td>هذا التعبير يقصد منه هل يوجد في النص أي حرف غير الأحرف <code data-enlighter-language="python">a</code> و <code data-enlighter-language="python">b</code> و <span class="inline"><code data-enlighter-language="python">c</code>.</span></td>
+<td><a class="open-page center" href="set-ex-2.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">[a-f]</code></td>
+<td>هذا التعبير يقصد منه هل يوجد في النص أحد الأحرف الأبجدية الموجودة بين الحرف <code data-enlighter-language="python">a</code> و الحرف <span class="inline"><code data-enlighter-language="python">f</code>.</span><br/>
+			هنا كأننا قلنا: <span class="inline"><code data-enlighter-language="python">[abcdef]</code>.</span></td>
+<td><a class="open-page center" href="set-ex-3.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">[0123]</code></td>
+<td>هذا التعبير يقصد منه هل يوجد في النص الرقم <code data-enlighter-language="python">0</code> أو <code data-enlighter-language="python">1</code> أو <code data-enlighter-language="python">2</code> أو <span class="inline"><code data-enlighter-language="python">3</code>.</span></td>
+<td><a class="open-page center" href="set-ex-4.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">[0-9]</code></td>
+<td>هذا التعبير يقصد منه هل يوجد في النص أحد الأرقام الموجودة بين الرقم <code data-enlighter-language="python">0</code> و الرقم <span class="inline"><code data-enlighter-language="python">9</code>.</span><br/>
+			هنا كأننا قلنا: <span class="inline"><code data-enlighter-language="python">[0123456789]</code>.</span></td>
+<td><a class="open-page center" href="set-ex-5.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">[0-5][0-9]</code></td>
+<td>هذا التعبير يقصد منه هل يوجد في النص أي رقمين بين <code data-enlighter-language="python">00</code> و <span class="inline"><code data-enlighter-language="python">59</code>.</span></td>
+<td><a class="open-page center" href="set-ex-6.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">[a-zA-Z]</code></td>
+<td>هذا التعبير يقصد منه هل يوجد في النص أحد الأحرف الأبجدية الموجودة بين <code data-enlighter-language="python">a</code> و <span class="inline"><code data-enlighter-language="python">z</code>,</span> أو الموجودة بين <code data-enlighter-language="python">A</code> و <span class="inline"><code data-enlighter-language="python">Z</code>.</span><br/>
+			أي كأنك تحاول معرفة ما إن كان يوجد أي حرف من الأحرف الأبجدية سواء كان الحرف كبير <span class="inline">( <span class="word">Capital Letter</span> )</span> أو صغير <span class="inline">( <span class="word">Small Letter</span> ).</span><br/>
+<td><a class="open-page center" href="set-ex-7.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</td></tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">[+]</code></td>
+<td>هذا التعبير يقصد منه هل يوجد في النص الرمز <span class="inline"><code data-enlighter-language="python">+</code>.</span><br/>
+			أي هذا الرمز يعامل هنا كأنه حرف عادي و هذا الأمر ينطبق على باقي الرموز الأخرى مثل <span class="inline"><code data-enlighter-language="python">*</code>,</span> <span class="inline"><code data-enlighter-language="python">.</code>,</span> <span class="inline"><code data-enlighter-language="python">|</code>,</span> <span class="inline"><code data-enlighter-language="python">$</code>,</span> <span class="inline"><code data-enlighter-language="python">)</code>,</span> <span class="inline"><code data-enlighter-language="python">(</code>,</span> <span class="inline"><code data-enlighter-language="python">{</code>,</span> <span class="inline"><code data-enlighter-language="python">}</code>.</span><br/>
+<td><a class="open-page center" href="set-ex-8.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</td></tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">[a\-z]</code></td>
+<td>هذا التعبير يقصد منه هل يوجد الحرف <code data-enlighter-language="python">a</code> أو الرمز <code data-enlighter-language="python">-</code> أو الحرف <code data-enlighter-language="python">z</code> في النص.<br/>
+			إذاً, هنا الرمز <code data-enlighter-language="python">\</code> يجعل الحرف الذي يوضع بعده يعامل كأنه حرف عادي و ليس رمز له معنى خاص.<br/>
+<td><a class="open-page center" href="set-ex-9.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</td></tr>
+<tr>
+<td class="center">
+<code data-enlighter-language="python">[a-]</code><br/>
+<code data-enlighter-language="python">[-a]</code></td>
+<td>كلا التعبيرين يقصد منهما هل يوجد الحرف <code data-enlighter-language="python">a</code> أو الرمز <code data-enlighter-language="python">-</code> في النص.<br/>
+			إذاً, عند عدم وضع الرمز <code data-enlighter-language="python">-</code> بين حرفين أو رقمين فإنه يعامل كأنه حرف عادي و ليس رمز له معنى خاص.<br/>
+<td><a class="open-page center" href="set-ex-10.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</td></tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">[^^]</code></td>
+<td>هذا التعبير يقصد منه هل يوجد في النص أي حرف أو رمز ما عدا الرمز <span class="inline"><code data-enlighter-language="python">^</code>.</span><br/>
+<td><a class="open-page center" href="set-ex-11.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</td></tr>
+</table>
+</article>
+<article>
+<h2>السلاسل المميزة في بايثون</h2>
+<p>السلاسل المميزة <span class="inline">( <span class="word">Special Sequences</span> )</span> عبارة عن مجموعة أحرف يصبح لها معنى خاص حين يتم وضعها بعد الرمز <code data-enlighter-language="python">/</code> و لقد ذكرناهم في الجدول التالي.</p>
+<table class="list full-width">
+<tr>
+<th>الرمز</th>
+<th>إستخدامه</th>
+<th>مثال</th>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\w</code></td>
+<td>يطابق أي حرف بين <code data-enlighter-language="python">a-z</code> أو <code data-enlighter-language="python">A-Z</code> أو أي رقم بين <code data-enlighter-language="python">0-9</code> أو الرمز <span class="inline"><code data-enlighter-language="python">_</code>.</span><br/>
+			هذا الرمز يعتبر إختصار للتعبير النمطي <span class="inline"><code data-enlighter-language="python">[a-zA-Z0-9_]</code>.</span></td>
+<td><a class="open-page center" href="special-sequences-ex-1.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\W</code></td>
+<td>يطابق أي أحرف <span class="red">ليس</span> بين <code data-enlighter-language="python">a-z</code> أو <code data-enlighter-language="python">A-Z</code> أو رقم أو الرمز <span class="inline"><code data-enlighter-language="python">_</code>.</span><br/>
+			هذا الرمز يعتبر إختصار للتعبير النمطي <span class="inline"><code data-enlighter-language="python">[^a-zA-Z0-9_]</code>.</span></td>
+<td><a class="open-page center" href="special-sequences-ex-2.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\d</code></td>
+<td>يطابق أي حرف يمثل رقم بين <code data-enlighter-language="python">0</code> و <span class="inline"><code data-enlighter-language="python">9</code>.</span><br/>
+			هذا الرمز يعتبر إختصار للتعبير النمطي <span class="inline"><code data-enlighter-language="python">[0-9]</code>.</span></td>
+<td><a class="open-page center" href="special-sequences-ex-3.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\D</code></td>
+<td>يطابق أي أحرف <span class="red">لا</span> يمثل رقم بين <code data-enlighter-language="python">0</code> و <span class="inline"><code data-enlighter-language="python">9</code>.</span><br/>
+			هذا الرمز يعتبر إختصار للتعبير النمطي <span class="inline"><code data-enlighter-language="python">[^0-9]</code>.</span></td>
+<td><a class="open-page center" href="special-sequences-ex-4.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\s</code></td>
+<td>يطابق أي حرف يمثل مسافة فارغة.<br/>
+			هذا الرمز يعتبر إختصار للتعبير النمطي <span class="inline"><code data-enlighter-language="python">[ \t\n\r\f\v]</code>.</span></td>
+<td><a class="open-page center" href="special-sequences-ex-5.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\S</code></td>
+<td>يطابق أي حرف <span class="red">لا</span> يمثل مسافة فارغة.<br/>
+			هذا الرمز يعتبر إختصار للتعبير النمطي <span class="inline"><code data-enlighter-language="python">[^ \t\n\r\f\v]</code>.</span></td>
+<td><a class="open-page center" href="special-sequences-ex-6.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\Z</code></td>
+<td>يطابق أي سلسلة أحرف نمررها قبله مع الأحرف الموجودة في نهاية النص.</td>
+<td><a class="open-page center" href="special-sequences-ex-7.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\A</code></td>
+<td>يطابق أي سلسلة أحرف نمررها بعده مع الأحرف الموجودة في بداية النص.</td>
+<td><a class="open-page center" href="special-sequences-ex-8.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\b</code></td>
+<td>يطابق أول أو آخر أي سلسلة أحرف تحتوي على أحرف بين <code data-enlighter-language="python">a-z</code> أو <code data-enlighter-language="python">A-Z</code> أو أي رقم بين <code data-enlighter-language="python">0-9</code> أو الرمز <span class="inline"><code data-enlighter-language="python">_</code>.</span><br/>
+<ul class="explain">
+<li><p>في حال تم وضع التعبير في آخر سلسلة الأحرف فإنه يبحث عن تطابق موجود في آخر كل سلسلة أحرف غير مقطوعة بمسافة فارغة في النص.</p></li>
+<li><p>في حال تم وضع التعبير في أول سلسلة الأحرف فإنه يبحث عن تطابق موجود في أول كل سلسلة أحرف غير مقطوعة بمسافة فارغة في النص.</p></li>
+</ul>
+</td>
+<td><a class="open-page center" href="special-sequences-ex-9.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\B</code></td>
+<td><span class="red">لا</span> يطابق أول أو آخر أي سلسلة أحرف تحتوي على أحرف بين <code data-enlighter-language="python">a-z</code> أو <code data-enlighter-language="python">A-Z</code> أو أي رقم بين <code data-enlighter-language="python">0-9</code> أو الرمز <span class="inline"><code data-enlighter-language="python">_</code>.</span><br/>
+<ul class="explain">
+<li><p>في حال تم وضع التعبير في آخر سلسلة الأحرف فإنه يبحث عن تطابق غير موجود قبل آخر كل سلسلة أحرف غير مقطوعة بمسافة فارغة في النص.</p></li>
+<li><p>في حال تم وضع التعبير في أول سلسلة الأحرف فإنه يبحث عن تطابق غير موجود بعد أول كل سلسلة أحرف غير مقطوعة بمسافة فارغة في النص.</p></li>
+</ul>
+</td>
+<td><a class="open-page center" href="special-sequences-ex-10.html" style="width:96px;" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+<br/><br/>
+<h3 class="note-title">إنتبه</h3>
+<div class="note-box">
+<p>الرمز <code data-enlighter-language="python">\</code> يسمى <span class="inline"><span class="word">Backslash</span>,</span> و هو <span class="word">Escape Character</span> أي حرف له معنى خاص في بايثون كما لاحظت في الجدول السابق.<br/>
+		في حال كنت تريد البحث عن الحرف <code data-enlighter-language="python">\</code> نفسه, فعليك معرفة أن مفسّر لغة بايثون يرا كل <code data-enlighter-language="python">\</code> محرفين, أي يراه <span class="inline"><code data-enlighter-language="python">\\</code>.</span><br/>
+		و بالتالي سيكون عليك وضع <code data-enlighter-language="python">\\\\</code> كلما كنت تقصد <code data-enlighter-language="python">\</code> حتى يفهم مفسر لغة بايثون أنك تريد البحث عن هذا الحرف و لا تقصد شيء آخر.</p>
+<p>إذا لم ترد فعل ذلك فيمكنك ببساطة إعتماد أسلوب يقال له <span class="inline"><span class="word">Raw String</span>,</span> أي أن تضع الحرف <code data-enlighter-language="python">r</code> قبل نص التعبير النمطي مباشرةً كالتالي <span class="inline"><code data-enlighter-language="python">r"\Bea"</code>.</span><br/>
+		طبعاً كنت تستطيع كتابة التعبير السابق هكذا أيضاً <span class="inline"><code data-enlighter-language="python">"\\Bea"</code>.</span></p>
+<p>في النهاية, ننصحك باعتماد أسلوب <span class="inline">الـ <span class="word">Raw String</span></span> لأنه أسهل و أقل تعقيداً.</p>
+</div>
+</article>
+<article>
+<h2>الكائن <code data-enlighter-language="python">Match</code> في بايثون</h2>
+<p>الكائن <code data-enlighter-language="python">Match</code> الذي ترجعه بعض دوال الموديول <code data-enlighter-language="python">re</code> يوفر لك أيضاً أربع دوال أساسية للتعامل مع المعلومات التي يحتويها.</p>
+<table class="list rows-numbers full-width">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">group()</code></span>
+			ترجع سلسلة الأحرف التي تم إيجادها في النص و التي تم تخزينها في كائن <span class="inline">الـ <code data-enlighter-language="python">Match()</code></span> الذي قام باستدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">start()</code></span>
+			ترجع عدد صحيح يمثل <span class="word">Index</span> أول حرف في سلسلة الأحرف التي تم إيجادها في النص و التي تم تخزينها في كائن <span class="inline">الـ <code data-enlighter-language="python">Match()</code></span> الذي قام باستدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">end()</code></span>
+			ترجع عدد صحيح يمثل <span class="word">Index</span> آخر حرف في سلسلة الأحرف التي تم إيجادها في النص و التي تم تخزينها في كائن <span class="inline">الـ <code data-enlighter-language="python">Match()</code></span> الذي قام باستدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">span()</code></span>
+			تم تخزينها
+			ترجع <code data-enlighter-language="python">tuple</code> يمثل أين تم إيجاد سلسلة الأحرف التي تم تخزينها في كائن <span class="inline">الـ <code data-enlighter-language="python">Match()</code></span> الذي قام باستدعائها.<br/>
+			هذا <span class="inline">الـ <code data-enlighter-language="python">tuple</code></span> يحتوي على رقمين فقط. الرقم الأول يمثل <span class="word">Index</span> أول حرف وجد عنده التطابق, الرقم الثاني يمثل <span class="word">Index</span> آخر حرف وجد عنده التطابق.</td>
+</tr>
+</table>
+<br/>
+<p>هنا وضعنا مثال شامل إستخدامنا فيه الدوال الأربعة المذكورة في الجدول.</p>
+<p><a class="open-page center" href="match-object-example.html" target="_blank">شاهد المثال »</a></p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,910 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="شرح تفصيلي لجميع الدوال التي تتعامل مع النصوص في بايثون مع أمثلة مبسطة لكل فكرة" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>التعامل مع النصوص في بايثون | Python Strings</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>التعامل مع النصوص في بايثون</h1>
+<article>
+<h2>مفهوم النصوص في بايثون</h2>
+<p>في عالم البرمجة, نقول للنص <span class="inline">"<span class="word">String</span>"</span> سواء كان يتألف من حرف واحد, كلمة, جملة أو نص كبير جداً.<br/>
+	و من هذا المنطلق نستنتج أن النص عبارة عن سلسلة من الأحرف ليس لها حجم محدد.</p>
+<p>في بايثون تم إنشاء الكلاس أو النوع <code data-enlighter-language="python">str</code> خصيصاً لتخزين القيم النصية.</p>
+<br/><br/>
+<h3>معلومة تقنية</h3>
+<p>النوع <code data-enlighter-language="python">str</code> يعتمد على الترميز <span class="word">Unicode</span> و هذا يعني أنك لن تواجه أي مشكلة عند التعامل مع نصوص عربية, إنجليزية, فرنسية إلخ..</p>
+<p>المتغيرات النصية في بايثون <span class="inline">( التي نوعها <code data-enlighter-language="python">str</code> )</span> تعتبر <span class="word">Immutable</span>. و هذا يعني أنك عندما تقوم بتعريف أي متغير تخزن فيه نص, فإن هذه النص سيحجز له مكان في الذاكرة مهما كان حجمه. و إذا قمت بإعطاء قيمة جديدة لهذا المتغير فإنه سيتم حذف القيمة القديمة من الذاكرة و إنشاء مكان جديد في الذاكرة و وضع القيمة الجديدة فيه لأنه لا يمكن تعديل نفس القيمة في نفس المكان في الذاكرة.</p>
+<br/><br/>
+<h3>طريقة تعريف <code data-enlighter-language="python">str</code></h3>
+<p>لتعريف نص في بايثون نستخدم الرمز <code data-enlighter-language="python">'</code> أو الرمز <code data-enlighter-language="python">"</code> أو الرمز <code data-enlighter-language="python">"""</code>.</p>
+<br/>
+<p class="question">هل يوجد فرق بين هذه الرموز؟</p>
+<p>بالنسبة للرمز <code data-enlighter-language="python">'</code> و الرمز <code data-enlighter-language="python">"</code> فإنه لا يوجد أي فرق بينهما. و يمكن إستخدام أي واحد منهما لتعريف نص يتألف من سطر واحد.<br/>
+	بالنسبة للرمز <code data-enlighter-language="python">'''</code> و الرمز <code data-enlighter-language="python">"""</code> فإنه لا يوجد أي فرق بينهما. و يمكن إستخدام أي واحد منهما لتعريف نص كبير يتألف من عدة أسطر.</p>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف ثلاث متغيرات تحتوي على قيم نصية. لاحظنا أننا قمنا بتعريف كل متغيير بواسطة رمز مختلف.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# هنا قمنا بتعريف ثلاث متغيرات تحتوي على قيم نصية
+name = 'Mhamad'
+job = "Programmer"
+message = '''This string that will span across multiple lines. No need to use newline characters for the next lines.
+The end of lines within this string is counted as a newline when printed.'''
+
+# هنا قمنا بعرض قيم المتغيرات النصية بأسلوب مرتب
+print('Name: ', name)
+print('Job: ', job)
+print('Message: ', message)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Name: Mhamad<br/>
+			Job: Programmer<br/>
+<span class="red">Message: This string that will span across multiple lines. No need to use newline characters for the next lines.<br/>
+			The end of lines within this string is counted as a newline when printed.</span>
+</div>
+</div>
+<br/>
+<p>في المثال التالي قمنا بتعريف نص يحتوي على نفس الرموز التي تستخدم لتعريف النصوص.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# يحتوي على قيمة نصية text هنا قمنا بتعريف متغير إسمه
+text = """In this line we print 'single quotations'
+In this line we print "double quotations" """
+
+# text هنا قمنا بعرض قيمة المتغير
+print(text)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			In this line we print 'single quotations'<br/>
+			In this line we print "double quotations"
+		</div>
+</div>
+<br/><br/>
+<h3>مفهوم الـ <span class="word">Concatenation</span></h3>
+<p><span class="word">Concatenation</span> تعني وضع سلسلة من النصوص بجانب بعضها لعرضها كنص واحد. و هذا الأمر ستحتاجه في أي تطبيق.</p>
+<p>فمثلاً, في البرامج أو المواقع التي تستخدمها تلاحظ أنه عند إنشاء حساب جديد يطلب منك أن تدخل إسمك على مرحلتين كالتالي:<br/>
+	- الإسم <span class="inline">( <span class="word">First Name</span> ).</span><br/>
+	- إسم العائلة <span class="inline">( <span class="word">Last Name</span> ).</span></p>
+<p>بعد أن تنشئ حسابك تلاحظ أنه قام بعرض إسمك الكامل <span class="inline">( الإسم + إسم العائلة ).</span><br/>
+	عند وضع الإسمين بجانب بعضهما و كأنهما نص واحد يكون المبرمج فعلياً قد قام بدمجهما فقط و ليس إعادة كتابتهما من جديد.</p>
+<br/>
+<p>في المثال التالي سنقوم بتعريف المتغير <code data-enlighter-language="python">first_name</code> لنضع فيه الإسم, و المتغير <code data-enlighter-language="python">last_name</code> لنضع فيه إسم العائلة, و المتغير <code data-enlighter-language="python">full_name</code> لنضع فيه الإسم و إسم العائلة.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# و وضعنا فيه نص يمثل الإسم first_name هنا قمنا بإنشاء المتغير
+first_name = 'Mhamad'
+
+# و وضعنا فيه نص يمثل إسم العائلة last_name هنا قمنا بإنشاء المتغير
+last_name = 'Harmush'
+
+# و أضفنا بينهما مسافة فارغة last_name و إسم العائلة الموجود في المتغير first_name و وضعنا فيه الإسم الموجود في المتغير full_name هنا قمنا بإنشاء المتغير
+full_name = first_name + ' ' + last_name
+
+# و يالتالي سيتم عرض الإسم الكامل الذي قمنا بدمجه و وضعه فيه full_name هنا عرضنا قيمة المتغير
+print(full_name)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Mhamad Harmush
+		</div>
+</div>
+<br/><br/>
+<h3>طرق دمج النصوص</h3>
+<p>يمكنك تطبيق الـ <span class="word">Concatenation</span> في بايثون بطريقتين:</p>
+<ul class="explain">
+<li><p>بإستخدام العامل <code data-enlighter-language="python">+</code>.</p></li>
+<li><p>أو باستخدام الدالة <code data-enlighter-language="python">join()</code> التي تعطيك طرق متقدمة أكثر لدمج النصوص. ستجد شرح مفصل لهذه الدالة لاحقاً في هذا الدرس.</p></li>
+</ul>
+<br/><br/>
+<h3>الدمج التلقائي للنصوص</h3>
+<p>في حال وضعت قيمتين نصيّتين بجانب بعضهما و وضعت بينهما مسافة فارغة <span class="inline">( أو عدة مسافات فارغة )</span> فإن مترجم بايثون سيقوم بدمجهمها لك بشكل تلقائي.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+s = 'Mhamad' ' Harmush'  # s هنا قمنا بوضع قيمتين نصيّتين بجانب بعضهما و قمنا بتخزينهما في المتغير
+
+print(s)                 # لنتأكد من أنه قد تم دمج النصين بشكل صحيح s3 هنا عرضنا قيمة المتغير
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Mhamad Harmush
+		</div>
+</div>
+</article>
+<article>
+<h2>الوصول لأحرف النص في بايثون</h2>
+<p>لنفترض أننا قمنا بتعريف متغير إسمه <code data-enlighter-language="python">s</code> و قيمته النص <code data-enlighter-language="python">'welcome to harmash.com'</code></p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="False">
+s = 'welcome to harmash.com'
+		</pre>
+</div>
+<br/>
+<p>سيتم تخزين نص المتغير <code data-enlighter-language="python">s</code> في الذاكرة حرفاً حرفاً و بالترتيب كما في هذه الصورة التالية.</p>
+<p><a href="string.png" target="_blank"><img alt="python string in memory" src="string.png"/></a></p>
+<br/><br/>
+<h3>طرق الوصول لأحرف النص</h3>
+<p>في حال أردت الوصول لأحرف هذا النص, فأمامك خيارين:</p>
+<ul class="explain">
+<li><p>الوصول لأحرف النص من جهة اليسار إلى اليمين. و هذا يحدث بشكل تلقائي عندما تستخدم أرقام أكبر أو تساوي <span class="number">0</span> للوصول لهذه الخانات التي تحتوي الأحرف.</p></li>
+<li><p>الوصول لأحرف النص من جهة اليمين إلى اليسار. و هذا يحدث بشكل تلقائي عندما تستخدم أرقام أصغر من <span class="number">0</span> للوصول لهذه الخانات التي تحتوي الأحرف.</p></li>
+</ul>
+<br/><br/>
+<h3>الوصول لأحرف النص من اليسار إلى اليمين</h3>
+<p>في حال أردت المرور على أحرف هذا النص من اليسار إلى اليمين, سيتم إعتبار أن الخانات قد تم ترقيمها إبتداءاً من الرقم <span class="number">0</span> كالتالي.<br/>
+<b>معلومة:</b> طريقة ترقيم الخانات تسمى <span class="inline">(<span class="word">Forward Indexing</span>).</span></p>
+<p><a href="forward-indexing.png" target="_blank"><img alt="python string forward indexing" src="forward-indexing.png"/></a></p>
+<br/>
+<p>في المثال التالي سنقوم بطباعة محتوى أول <span class="number">7</span> خانات إبتداءاً من الجهة اليسرى و بالتالي سنحصل على الكلمة <code class="data-enlighter-language=python">welcome</code>.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# يحتوي على نص s هنا قمنا بتعريف متغير إسمه
+s = 'welcome to harmash.com'
+
+# و بدأنا من اليسار s هنا قمنا بطباعة أول 7 أحرف موجودة في المتغير
+print(s[0] + s[1] + s[2] + s[3] + s[4] + s[5] + s[6])
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			welcome
+		</div>
+</div>
+<br/><br/>
+<h3>الوصول لأحرف النص من اليمين إلى اليسار</h3>
+<p>في حال أردت المرور على أحرف هذا النص من اليمين إلى اليسار, سيتم إعتبار أن الخانات قد تم ترقيمها إبتداءاً من الرقم <span class="number">1-</span> كالتالي.<br/>
+<b>معلومة:</b> طريقة ترقيم الخانات تسمى <span class="inline">(<span class="word">Backward Indexing</span>).</span></p>
+<p><a href="backward-indexing.png" target="_blank"><img alt="python string backward indexing" src="backward-indexing.png"/></a></p>
+<br/>
+<p>في المثال التالي سنقوم بطباعة محتوى آخر <span class="number">3</span> خانات إبتداءاً من الجهة اليمنى و بالتالي سنحصل على الكلمة <code class="data-enlighter-language=python">com</code>.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# يحتوي على نص s هنا قمنا بتعريف متغير إسمه
+s = 'welcome to harmash.com'
+
+# و بدأنا من اليمين s هنا قمنا بطباعة آخر 3 أحرف موجودة في المتغير
+print(s[-3] + s[-2] + s[-1])
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			com
+		</div>
+</div>
+<br/><br/>
+<h3>معرفة عدد أحرف النص بواسطة الدالة <code data-enlighter-language="python">len(s)</code></h3>
+<p>لمعرفة عدد أحرف أي نص نقوم باستدعاء الدالة <code data-enlighter-language="python">len()</code> و من ثم نمرر لها النص مكان الباراميتر <code data-enlighter-language="python">s</code>.<br/>
+<span class="note">ملاحظة:</span> المسافات الفارغة <span class="inline">( <span class="word">White Spaces</span> )</span> أيضاً يتم حسابها.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+s = 'welcome to harmash.com'     # s هنا قمنا بتعريف متغير نصي إسمه
+
+print('Length of s =', len(s))   # len() الذي سترجعه الدالة s هنا قمنا بطباعة عدد أحرف (خانات) المتغير
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Length of s = 22
+		</div>
+</div>
+<br/><br/>
+<h3>مصطلحات تقنية</h3>
+<ul class="explain">
+<li><p>عدد أحرف النص يسمى <span class="word">Length</span>.</p></li>
+<li><p>رقم الخانة يسمى <span class="word">Index</span>.</p></li>
+<li><p>أرقام الخانات تسمى <span class="word">Indices</span>.</p></li>
+<li><p>إذا قمنا بأخذ جزء من النص. الجزء المأخوذ يسمى <span class="word">Substring</span>.</p></li>
+</ul>
+<br/>
+<p>أنت كمبرمج يمكنك إستغلال أرقام الخانات لتصل لمحتوى النص كالتالي.<br/>
+<p><a href="the-benifit-of-indices.png" target="_blank"><img alt="the benifit of string indices in python" src="the-benifit-of-indices.png"/></a></p>
+</p></article>
+<article>
+<h2>تجزيء النص في بايثون بواسطة العامل <code data-enlighter-language="python">[]</code></h2>
+<p>لأخذ جزء من أي نص نعتمد على أرقام الخانات التي يتم إعطاءها لكل حرف في النص.</p>
+<br/>
+<p>في المثال التالي سنقوم بعرض جزء محدد من النص الذي يحتويه المتغير <code class="data-enlighter-language=python">s</code>.<br/>
+	فعلياً, سنحدد أننا نريد عرض جميع الأحرف الموجودة ابتداءاً من الخانة رقم <span class="number">11</span> وصولاً إلى ما قبل الخانة رقم <span class="number">18</span>.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# يحتوي على نص s هنا قمنا بتعريف متغير إسمه
+s = 'welcome to harmash.com'
+
+# s هنا قمنا بطباعة جميع الأحرف الموجودة إبتداءاً من الخانة رقم 11 وصولاً إلى الخانة الموجودة ما قبل الخانة 18 في المتغير
+print(s[11:18])
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			harmash
+		</div>
+</div>
+<br/>
+<p>في المثال التالي سنقوم بعرض جزء غير محدد من النص الذي يحتويه المتغير <code class="data-enlighter-language=python">s</code>.<br/>
+	فعلياً, سنحدد أننا نريد عرض جميع الأحرف الموجودة ابتداءاً من الخانة رقم <span class="number">11</span> وصولاً إلى آخر خانة.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# يحتوي على نص s هنا قمنا بتعريف متغير إسمه
+s = 'welcome to harmash.com'
+
+# s هنا قمنا بطباعة جميع الأحرف الموجودة إبتداءاً من الخانة رقم 11 وصولاً إلى آخر خانة موجودة في المتغير
+print(s[11:])
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			harmash.com
+		</div>
+</div>
+<br/>
+<p>في المثال التالي سنقوم بعرض جزء غير محدد من النص الذي يحتويه المتغير <code class="data-enlighter-language=python">s</code>.<br/>
+	فعلياً, سنحدد أننا نريد عرض جميع الأحرف الموجودة ابتداءاً من الخانة الأولى وصولاً إلى ما قبل الخانة رقم <span class="number">11</span>.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# يحتوي على نص s هنا قمنا بتعريف متغير إسمه
+s = 'welcome to harmash.com'
+
+# s هنا قمنا بطباعة جميع الأحرف الموجودة إبتداءاً من الخانة الأولى وصولاً إلى ما قبل الخانة رقم 11 في المتغير
+print(s[:11])
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			welcome to 
+		</div>
+</div>
+</article>
+<article>
+<h2>الرموز التي من خلالها نعرف نهاية السطر في بايثون</h2>
+<p>الرمز الذي يتم وضعه للإشارة لنهاية السطر يختلف باختلاف أنواع التقنيات المستخدمة لحفظ البيانات التي نتعامل معها.<br/>
+	الرموز التالية كلها تعني نهاية السطر.</p>
+<table class="list">
+<tr>
+<th>الرمز</th>
+<th>معناه بالإنجليزية</th>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\n</code></td>
+<td class="left"><span class="word">Line Feed</span></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\r</code></td>
+<td class="left"><span class="word">Carriage Return</span></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\r\n</code></td>
+<td class="left"><span class="word">Carriage Return + Line Feed</span></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\v</code> <span class="word">or</span> <code data-enlighter-language="python">\x0b</code></td>
+<td class="left"><span class="word">Line Tabulation</span></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\f</code> <span class="word">or</span> <code data-enlighter-language="python">\x0c</code></td>
+<td class="left"><span class="word">Form Feed</span></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\x1c</code></td>
+<td class="left"><span class="word">File Separator</span></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\x1d</code></td>
+<td class="left"><span class="word">Group Separator</span></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\x1e</code></td>
+<td class="left"><span class="word">Record Separator</span></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\x85</code></td>
+<td class="left"><span class="word">Next Line (C1 Control Code)</span></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\u2028</code></td>
+<td class="left"><span class="word">Line Separator</span></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">\u2029</code></td>
+<td class="left"><span class="word">Paragraph Separator</span></td>
+</tr>
+</table>
+<br/>
+<p>في المثال التالي سنقوم بتخزين نص في المتغير <code class="data-enlighter-language=python">s</code> و ضعنا فيه ثلاث مؤشرات <code class="data-enlighter-language=python">\n</code> لجعل النص يظهر على ثلاث أسطر عند عرضه.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# \n يحتوي على 3 موشرات s هنا قمنا بتعريف متغير نصي إسمه
+s = 'This is fist line.\nThis is second line.\nThis is third line.'
+
+# و الذي سيظهر على 3 أسطر s هنا قمنا بطباعة النص الموجود في المتغير
+print(s)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+This is fist line.<br/>
+This is second line.<br/>
+This is third line.
+		</div>
+<p><span class="point">•</span>لاحظ أن الرمز <code class="data-enlighter-language=python">\n</code> لم يظهر في نهاية كل سطر, بل أدى فقط للنزول على السطر.</p>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>عندما تكون تستخدم هاتفك أو حاسوبك تقوم في العادة بالنقر على الزر <kbd>Enter</kbd> كلما أردت أن تنزل على سطر جديد.<br/>
+		الذي عليك معرفته كمبرمج هو أن سبب النزول على سطر جديد هو أنه قد تم إضافة رمز خاص بدون علمك في المكان الذي نقرت فيه على الزر <kbd>Enter</kbd> للإشارة إلى نهاية السطر. الرمز الذي يضافة يقال له مؤشر نهاية السطر <span class="inline">( <span class="word">End Of Line Flag</span> ).</span></p>
+</div>
+</article>
+<article>
+<h2>الدوال الجاهزة في الكلاس <code data-enlighter-language="python">str</code> للتعامل مع النصوص في بايثون</h2>
+<p>الكلاس <code data-enlighter-language="python">str</code> هو كلاس جاهز في بايثون, يحتوي على دوال كثيرة للتعامل مع محتوى النصوص, سواء للبحث عن أحرف أو كلمات أو جمل, تجزيء النص, تغيير الـ <span class="word">Case</span> للأحرف, دمج النصوص إلخ..</p>
+<br/>
+<p>سنقسم دوال الكلاس <code data-enlighter-language="python">str</code> إلى <span class="number">5</span> فئات أساسية:</p>
+<ul class="explain">
+<li><p>دوال للبحث <span class="inline">(<span class="word">Searching</span>)</span>.</p></li>
+<li><p>دوال للتجزيء <span class="inline">(<span class="word">Substring</span>)</span>.</p></li>
+<li><p>دوال للتبديل <span class="inline">(<span class="word">Replacing</span>)</span>.</p></li>
+<li><p>دوال للمقارنة <span class="inline">(<span class="word">Comparison</span>)</span>.</p></li>
+<li><p>دوال للمعالجة <span class="inline">(<span class="word">Manipulation</span>)</span>.</p></li>
+</ul>
+<br/><br/>
+<h3>معلومة تقنية</h3>
+<p>عند التعامل مع أي دالة من دول الكلاس <code data-enlighter-language="python">str</code>, سواء كان شرح هذه الدالة يقول أن الدالة تبدأ من أول النص إلى آخره أو تبدأ من نهايته إلى أوله. تخيل دائماً أن خانات النص قد تم ترقيمها هكذا.</p>
+<p><a href="forward-indexing-empty-string.png" target="_blank"><img alt="python string forward indexing example" src="forward-indexing-empty-string.png"/></a></p>
+<br/><br/>
+<h3 class="note-title">تذكر</h3>
+<div class="note-box">
+<p>الكلاس <code data-enlighter-language="java">str</code> يعتبر <span class="word">Immutable class</span> و هذا يعني أنك عندما تستدعي أي دالة على نص, فلن تعدل محتوى النص الأصلي الذي قام باستدعائها, بل سترجع نسخة معدلة من هذا النص و سيبقى النص الأصلي كما هو.</p>
+</div>
+</article>
+<article>
+<h2>دوال البحث الموجودة في الكلاس <code data-enlighter-language="python">str</code> في بايثون</h2>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">count(sub[, start[, end]])</code></span>
+			ترجع رقم يمثل عدد المرات التي فيها إيجاد النص الذي تم تمريره مكان الباراميتر <code data-enlighter-language="python">sub</code> في النص الذي قام باستدعائها.<br/>
+<a class="open-page" href="str-count.php" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">find(sub[, start[, end]])</code></span>
+			تبحث في النص الذي قام باستدعائها عن رقم أول خانة تم عندها إيجاد نفس النص أو الحرف الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">sub</code> و ترجعه.<br/>
+			في حال لم يتم العثور على النص المراد البحث عنه ترجع <span class="inline"><span class="number">1-</span> .</span><br/>
+<a class="open-page" href="str-find.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">rfind(sub[, start[, end]])</code></span>
+			الفرق بينها و بين الدالة <code data-enlighter-language="python">find()</code> أنها تبدأ عملية البحث من آخر خانة في النص الذي قام باستدعائها إلى أول خانة فيه.<br/>
+<a class="open-page" href="str-rfind.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">index(sub[, start[, end]])</code></span>
+			تبحث في النص الذي قام باستدعائها عن رقم أول خانة تم عندها إيجاد نفس النص أو الحرف الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">sub</code> و ترجعه.<br/>
+			في حال لم يتم العثور على النص المراد البحث عنه ترمي الإستثناء <span class="inline"><span class="code red">ValueError</span>.</span><br/>
+<a class="open-page" href="str-index.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">rindex(sub[, start[, end]])</code></span>
+			الفرق بينها و بين الدالة <code data-enlighter-language="python">index()</code> أنها تبدأ عملية البحث من آخر خانة في النص الذي قام باستدعائها إلى أول خانة فيه.<br/>
+<a class="open-page" href="str-rindex.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>دوال التجزيء الموجودة في الكلاس <code data-enlighter-language="python">str</code> في بايثون</h2>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">split(sep=None, maxsplit=-1)</code></span>
+			ترجع نسخة من النص الذي قام باستدعائها مقسمة على شكل مصفوفة نصوص.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">sep</code> نمرر نص يحدد الطريقة التي سيتم على أساسها تقسيم النص و وضع كل قسم فيه في عنصر واحد بداخل المصفوفة.
+			<a class="open-page" href="str-split.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">splitlines([keepends])</code></span>
+			ترجع نسخة من النص الذي قام باستدعائها مقسمة على شكل مصفوفة نصوص. كل عنصر في هذه المصفوفة عبارة عن سطر موجود في النص.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">keepends</code> يمكنك تمرير القيمة <code data-enlighter-language="python">True</code> لإبقاء الرموز التي من خلالها عرف مترجم بايثون كيف يفصل الأسطر عن بعضها و من ثم يضيف كل سطر كعنصر في المصفوفة.
+			<a class="open-page" href="str-splitlines.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>دوال التبديل الموجودة في الكلاس <code data-enlighter-language="python">str</code> في بايثون</h2>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">replace(old, new [, count])</code></span>
+			ترجع نسخة من النص الذي قام باستدعائها مع تبديل كل جزئية فيها تتطابق مع النص نمرره لها مكان الباراميتر <code data-enlighter-language="python">old</code> بالنص الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="python">new</code>.</span><br/>
+<a class="open-page" href="str-replace.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">maketrans(x[, y[, z]])</code></span>
+			تستخدم لبناء قاموس يمكن إستخدامه لتبديل أحرف النص بأحرف أخرى.<br/>
+<span class="note">ملاحظة:</span> لتطبيق القاموس الذي قمت بتجهيزه على أي نص, تحتاج استخدام الدالة <span class="inline"><code data-enlighter-language="python">translate()</code>.</span><br/>
+<a class="open-page" href="str-maketrans.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">translate(table)</code></span>
+			ترجع نسخة من النص الذي قام باستدعائها مع تبديل بعض أحرف هذه النسخة بأحرف أخرى أو حذفها بالإعتماد على القاموس الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">table</code>.<br/>
+<span class="note">ملاحظة:</span> القاموس الذي نمرره لهذه الدالة نبنيه بالأساس بواسطة الدالة <code data-enlighter-language="python">translate()</code>.<br/>
+<a class="open-page" href="str-translate.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>دوال المعالجة الموجودة في الكلاس <code data-enlighter-language="python">str</code> في بايثون</h2>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">upper(s)</code></span>
+			ترجع نسخة من النص الذي نمرره لها عند استدعاءها مكان الباراميتر <code data-enlighter-language="python">s</code> كل أحرفه كبيرة.<br/>
+<a class="open-page" href="str-upper.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">lower(s)</code></span>
+			ترجع نسخة من النص الذي نمرره لها عند استدعاءها مكان الباراميتر <code data-enlighter-language="python">s</code> كل أحرفه صغيرة.<br/>
+<a class="open-page" href="str-lower.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">swapcase()</code></span>
+			ترجع نسخة من النص الذي قام باستدعائها مع قلب الأحرف الكبيرة فيها لأحرف صغيرة و الأحرف الصغيرة فيها لأحرف كبيرة.<br/>
+<a class="open-page" href="str-swapcase.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">capitalize(s)</code></span>
+			ترجع نسخة من النص الذي نمرره لها عند استدعاءها مكان الباراميتر <code data-enlighter-language="python">s</code> مع تحويل أول حرف فيه لحرف كبير.<br/>
+			إذاً, هذه الدالة مفيدة في حال كنت تريد أن تبدأ أي جملة تريد عرضها بحرف كبير.<br/>
+<a class="open-page" href="str-capitalize.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">title(s)</code></span>
+			ترجع نسخة من النص الذي نمرره لها عند استدعاءها مكان الباراميتر <code data-enlighter-language="python">s</code> مع تحويل أول حرف من كل كلمة فيه لحرف كبير.<br/>
+			إذاً, هذه الدالة مفيدة في حال كنت ستعرض عنوان, لأنه في العادة يتم وضع أول حرف من كل كلمة في العنوان كحرف كبير.<br/>
+<a class="open-page" href="str-title.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">join(iterable)</code></span>
+			ترجع نص جديد يمثل النص الذي قام باستدعائها مدمجاً بالنص أو بمصفوفة النصوص التي نمرره لها مكان الباراميتر <code data-enlighter-language="python">iterable</code>.<br/>
+<a class="open-page" href="str-join.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">center(width[, fillchar])</code></span>
+			تستخدم لعرض النص الذي قام باستدعائها في وسط السطر, في حال لم يتعدى الطول الذي نحدده للسطر.<br/>
+			فعلياً, ترجع نسخة من النص و تضيف مسافات فارغة حوله عند الحاجة لجعله يظهر كأنه في المنتصف.<br/>
+<ul class="explain">
+<li><p>مكان الباراميتر <code data-enlighter-language="python">width</code> نمرر رقم يحدد طول السطر, عندها في حال كان طول النص أصغر من طول السطر سيتم عرضه في وسطه من خلال إضافة مسافات فارغة قبله و بعده.</p></li>
+<li><p><code data-enlighter-language="python">fillchar</code> هو باراميتر إختياري يمكنك أن تمرر مكانه أي حرف حتى يتم وضعه بدل وضع مسافات فارغة.</p></li>
+</ul>
+<a class="open-page" href="str-center.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">expandtabs(tabsize=8)</code></span>
+			ترجع نسخة من النص الذي قام باستدعائها مع مضاعفة حجم المسافات الفارغة <span class="inline">( <span class="word">Tab Spaces</span> )</span> التي تم إضافتها في النص بواسطة الرمز <code data-enlighter-language="python">\t</code>.<br/>
+			إفتراضياً, الرمز <code data-enlighter-language="python">\t</code> يمثل <span class="number">4</span> مسافات فارغة عند عرض النص, و لكن في النسخة التي ترجعها الدالة <code data-enlighter-language="python">expandtabs()</code> سيتم تحويل كل رمز <code data-enlighter-language="python">\t</code> إلى <span class="number">8</span> مسافات فارغة ما لم تقم بتحديد عدد المسافات بنفسك.<br/>
+<a class="open-page" href="str-expandtabs.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">lstrip()</code></span>
+			ترجع نسخة من النص الذي قام باستدعائها مع إزالة أي مسافة فارغة موجودة في بدايته.<br/>
+<a class="open-page" href="str-lstrip.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">rstrip()</code></span>
+			ترجع نسخة من النص الذي قام باستدعائها مع إزالة أي مسافة فارغة موجودة في نهايته.<br/>
+<a class="open-page" href="str-rstrip.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">strip([chars])</code></span>
+			ترجع نسخة من النص الذي قام باستدعائها مع حذف أي مسافة فارغة موجودة في بدايته و نهايته.<br/>
+			إفتراضياً, هذه الدالة تقوم بحذف المسافات الفارغة الموجودة في أول أو آخر النص لكن إن أردت مسح أحرف معينة <span class="inline">( بدلاً من المسافات الفارغة )</span> في حال وجودها في بداية و نهاية النص, يمكنك تمرير هذه الأحرف مكان الباراميتر <code data-enlighter-language="python">chars</code>.<br/>
+<a class="open-page" href="str-strip.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">ljust(width[, fillchar])</code></span>
+			ترجع نسخة من النص الذي قام باستدعائها مع إضافة مسافات فارغة في نهايته إذا تجاوز عدد أحرفه العدد الذي نمرره مكان الباراميتر <code data-enlighter-language="python">width</code>.<br/>
+			و يمكنك تمرير أي حرف أو رمز مكان الباراميتر <code data-enlighter-language="python">fillchar</code> ليظهر بدلاً من المسافات الفارغة.<br/>
+<a class="open-page" href="str-ljust.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">rjust(width[, fillchar])</code></span>
+			ترجع نسخة من النص الذي قام باستدعائها مع إضافة مسافات فارغة في بدايته إذا تجاوز عدد أحرفه العدد الذي نمرره مكان الباراميتر <code data-enlighter-language="python">width</code>.<br/>
+			و يمكنك تمرير أي حرف أو رمز مكان الباراميتر <code data-enlighter-language="python">fillchar</code> ليظهر بدلاً من المسافات الفارغة.<br/>
+<a class="open-page" href="str-rjust.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>دوال المقارنة الموجودة في الكلاس <code data-enlighter-language="python">str</code> في بايثون</h2>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">startswith(sub[, start[, end]])</code></span>
+			تستخدم لمعرفة ما إذا كان النص الذي قام باستدعائها يبدأ بنص معين أم لا.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">sub</code> يمكنك تمرير نص عادي, أو مصفوفة نصوص نوعها <code data-enlighter-language="python">tuple</code>.<br/>
+			في حال كان نص الباراميتر <code data-enlighter-language="python">sub</code> <span class="inline">( أو نص أحد عناصره في حال كان عبارة عن مصفوفة )</span> موجود في بداية النص الذي قام باستدعائها سترجع <code data-enlighter-language="python">True</code>. غير ذلك ترجع <code data-enlighter-language="python">False</code>.
+<a class="open-page" href="str-startswith.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">endswith(suffix[, start[, end]])</code></span>
+			تستخدم لمعرفة ما إذا كان النص الذي قام باستدعائها ينتهي بنص معين أم لا.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">suffix</code> يمكنك تمرير نص عادي, أو مصفوفة نصوص نوعها <code data-enlighter-language="python">tuple</code>.<br/>
+			في حال كان نص الباراميتر <code data-enlighter-language="python">suffix</code> <span class="inline">( أو نص أحد عناصره في حال كان عبارة عن مصفوفة )</span> موجود في نهاية النص الذي قام باستدعائها سترجع <code data-enlighter-language="python">True</code>. غير ذلك ترجع <code data-enlighter-language="python">False</code>.
+<a class="open-page" href="str-endswith.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">isalpha()</code></span>
+			تستخدم لمعرفة ما إذا كان النص الذي قام باستدعائها يحتوي على حرف أبجدي أو مجموعة أحرف أبجدية فقط أم لا.<br/>
+			ترجع <code data-enlighter-language="python">True</code> إن كان كذلك, غير ذلك ترجع <code data-enlighter-language="python">False</code>.<br/>
+<span class="note">ملاحظة:</span> إسم هذه الدالة مشتق من الكلمة <span class="inline">"<span class="word">Alphabet</span>"</span> التي تعني أحرف أبجدية.<br/>
+<a class="open-page" href="str-isalpha.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">isnumeric()</code></span>
+			تستخدم لمعرفة ما إذا كان النص الذي قام باستدعائها يحتوي على رقم أو مجموعة أرقام فقط أم لا.<br/>
+			ترجع <code data-enlighter-language="python">True</code> إن كان كذلك, غير ذلك ترجع <code data-enlighter-language="python">False</code>.<br/>
+<a class="open-page" href="str-isnumeric.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">isdigit()</code></span>
+			تستخدم لمعرفة ما إذا كان النص الذي قام باستدعائها يحتوي على رقم أو مجموعة أرقام فقط أم لا.<br/>
+			ترجع <code data-enlighter-language="python">True</code> إن كان كذلك, غير ذلك ترجع <code data-enlighter-language="python">False</code>.<br/>
+<span class="note">ملاحظة:</span> هذه الدالة لا تعتبر الرموز التي تمثل قيم رقمية مثل الرمز <span class="number">½</span> كرقم و هذا هو الفرق بينها و بين الدالة <span class="inline"><code data-enlighter-language="python">isnumeric()</code>.</span><br/>
+<a class="open-page" href="str-isdigit.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">isalnum()</code></span>
+			تستخدم لمعرفة نوع أحرف النص الذي قام باستدعائها.<br/>
+<ul class="explain">
+<li><p>ترجع <code data-enlighter-language="python">True</code> في حال كان النص الذي قام باستدعائها يحتوي على أحرف أبجدية و أرقام فقط.</p></li>
+<li><p>ترجع <code data-enlighter-language="python">True</code> في حال كان النص الذي قام باستدعائها يحتوي على أحرف أبجدية فقط.</p></li>
+<li><p>ترجع <code data-enlighter-language="python">True</code> في حال كان النص الذي قام باستدعائها يحتوي على أرقام فقط.</p></li>
+<li><p>ترجع <code data-enlighter-language="python">True</code> في حال كان النص الذي قام باستدعائها يحتوي على حرف أو رقم واحد فقط.</p></li>
+<li><p>غير ذلك ترجع <code data-enlighter-language="python">False</code>.</p></li>
+</ul>
+<span class="note">ملاحظة:</span> إسم هذه الدالة مشتق من الكلمة <span class="inline">"<span class="word">Alphanumeric</span>"</span> التي تعني أحرف أبجدية و أرقام.<br/>
+<a class="open-page" href="str-isalnum.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">islower()</code></span>
+			تستخدم لمعرفة ما إذا كان النص الذي قام باستدعائها يحتوي فقط على أحرف أبجدية صغيرة <span class="inline">(<span class="word">Small Letters</span>)</span> فقط أم لا.<br/>
+			ترجع <code data-enlighter-language="python">True</code> إن كان كذلك, غير ذلك ترجع <code data-enlighter-language="python">False</code>.<br/>
+<a class="open-page" href="str-islower.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">isupper()</code></span>
+			تستخدم لمعرفة ما إذا كان النص الذي قام باستدعائها يحتوي فقط على أحرف أبجدية كبيرة <span class="inline">(<span class="word">Capital Letters</span>)</span> فقط أم لا.<br/>
+			ترجع <code data-enlighter-language="python">True</code> إن كان كذلك, غير ذلك ترجع <code data-enlighter-language="python">False</code>.<br/>
+<a class="open-page" href="str-isupper.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">istitle()</code></span>
+			تستخدم لمعرفة ما إذا كان أول حرف من كل كلمة في النص الذي قام باستدعائها عبارة عن حرف كبير <span class="inline">(<span class="word">Capital Letter</span>)</span> أم لا.<br/>
+			ترجع <code data-enlighter-language="python">True</code> إن كان كذلك, غير ذلك ترجع <code data-enlighter-language="python">False</code>.<br/>
+<a class="open-page" href="str-istitle.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">isspace()</code></span>
+			تستخدم لمعرفة ما إذا كان النص الذي قام باستدعائها يحتوي على مسافة فارغة <span class="inline">(<span class="word">White Space</span>)</span> أو عدة مسافات فارغة فقط أم لا.<br/>
+			ترجع <code data-enlighter-language="python">True</code> إن كان كذلك, غير ذلك ترجع <code data-enlighter-language="python">False</code>.<br/>
+<a class="open-page" href="str-isspace.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>العوامل التي تستخدم للتعامل مع النصوص في بايثون</h2>
+<br/>
+<h3>العامل <code data-enlighter-language="python">+</code></h3>
+<p>هذا العامل يستخدم لدمج نصّين أو أكثر و يرجعهم كنص جديد.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+s1 = 'Mhamad'        # يتألف من كلمة واحدة s1 هنا قمنا بتعريف متغير نصي إسمه
+s2 = 'Harmush'       # يتألف من كلمة واحدة s2 هنا قمنا بتعريف متغير نصي إسمه
+
+s3 = s1 + ' ' + s2   # s2 ثم وضعنا مسافة فارغة, ثم وضعنا النص الموجود في ,s1 هنا قمنا بتعريف متغير نصي وضعنا فيه النص الموجود في
+
+print(s3)            # s3 هنا قمنا بطباعة ما تم وضعه في المتغير
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+Mhamad harmush
+		</div>
+</div>
+<br/><br/>
+<h3>العامل <code data-enlighter-language="python">*</code></h3>
+<p>هذا العامل يستخدم لتكرار النص عة مرات محددة.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+s1 = 'Python '    # يتألف من كلمة واحدة s1 هنا قمنا بتعريف متغير نصي إسمه
+
+s2 = s1 * 5       # s2 خمسة مرات و وضعنا النتيجة النهائية في المتغير s1 هنا قمنا بتكرار النص  الموجود في المتغير
+
+print(s2)         # s2 هنا قمنا بطباعة ما تم وضعه في المتغير
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+Python Python Python Python Python 
+		</div>
+</div>
+<br/><br/>
+<h3>العامل <code data-enlighter-language="python">%</code></h3>
+<p>هذا العامل يستخدم لدمج النصوص و غالباً ما يستخدم أثناء عرض محتوى أي نص بطريقة مرتبة حيث يتم حجز مكان في النص للقيم التي تم تخزينها سابقاً في متغيرات.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+name = 'Mhamad'            # قمنا بتخزين قيمة نصية name في المتغير
+money = 10                 # قمنا بتخزين قيمة عددية money في المتغير
+subject = 'programming'    # قمنا بتخزين قيمة نصية subject في المتغير
+age = 19                   # قمنا بتخزين قيمة عددية age في المتغير
+
+# و الذي ننوي عرضه مكانه name لحجز مكان للنص الموجود في المتغير %s هنا قمنا باستخدام الرمز
+print('Hello my name is %s.' %(name))
+
+# و الذي ننوي عرضه مكانه money لحجز مكان للرقم الموجود في المتغير %d هنا قمنا باستخدام الرمز
+print('I have %d dollars.' %(money))
+
+# age لحجز مكان للرقم الموجود في المتغير %d و الرمز subject لحجز مكان للنص الموجود في المتغير %s هنا قمنا باستخدام الرمز
+print('I learn %s at %d.' %(subject, age))
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+Hello my name is Mhamad.<br/>
+I have 10 dollars.<br/>
+I learn Programming at 19.
+		</div>
+</div>
+<br/><br/>
+<h3>العامل <code data-enlighter-language="python">in</code></h3>
+<p>هذا العامل يستخدم لمعرفة ما إن كان النص يحتوي على كلمة أو جملة معينة فيه, حيث يرجع <code data-enlighter-language="python">True</code> إن كان كذلك و <code data-enlighter-language="python">False</code> إن لم يكن.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+s = 'Python is easy to learn.'    # s هنا قمنا بتعريف متغير نصي إسمه
+
+print('easy' in s)                # s موجود في النص المخزن في المتغير 'easy' لأن النص True هنا قمنا سيتم طباعة
+print('hard' in s)                # s غير موجود في النص المخزن في المتغير 'hard' لأن النص False هنا قمنا سيتم طباعة
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+True<br/>
+False
+		</div>
+</div>
+<br/><br/>
+<h3>العامل <code data-enlighter-language="python">not in</code></h3>
+<p>هذا العامل يستخدم لمعرفة ما إن كان النص لا يحتوي على كلمة أو جملة معينة فيه, حيث يرجع <code data-enlighter-language="python">True</code> إن كان كذلك و <code data-enlighter-language="python">False</code> إن لم يكن.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+s = 'Python is easy to learn.'    # s هنا قمنا بتعريف متغير نصي إسمه
+
+print('easy' not in s)            # s موجود في النص المخزن في المتغير 'easy' لأن النص False هنا قمنا سيتم طباعة
+print('hard' not in s)            # s غير موجود في النص المخزن في المتغير 'hard' لأن النص True هنا قمنا سيتم طباعة
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+True<br/>
+False
+		</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

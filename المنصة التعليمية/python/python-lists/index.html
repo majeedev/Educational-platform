@@ -1,0 +1,728 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الكلاس list في بايثون | Python list</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>الكلاس <code data-enlighter-language="python">list</code> في بايثون</h1>
+<article>
+<h2>مفهوم الكلاس <code class="data-enlighter-language=" python"="">list</code> في بايثون</h2>
+<p>الـ <code class="data-enlighter-language=" python"="">list</code> عبارة عن مصفوفة ليس لها حجم ثابت, يمكنها تخزين قيم من مختلف الأنواع في وقت واحد و يمكنك تبديل قيمها متى شئت.</p>
+<br/>
+<h3>طريقة تعريف <code class="data-enlighter-language=" python"="">list</code></h3>
+<p>لتعريف <code class="data-enlighter-language=" python"="">list</code> نستخدم الرمز <code data-enlighter-language="python">[ ]</code>.<br/>
+	بداخل هذا الرمز يمكنك تمرير القيم بشكل مباشر له بشرط وضع فاصلة بين كل عنصرين. و يمكنك تحديد نوع و عدد العناصر التي تريد وضعها فيه فقط.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code> فارغ, أي لا يحتوي أي عنصر.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+A = []        # A فارغ إسمه list هنا قمنا بتعريف
+print(A)      # ( أي كما قمنا بتعريفه ) كما هو A هنا قمنا بعرض ما يحتويه الكائن
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			[]
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code> وضعنا فيه أعداد صحيحة.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+numbers = [10, 20, 30, 40, 50]       # يحتوي على أعداد صحيحة فقط numbers إسمه list هنا قمنا بتعريف
+print(numbers)                       # ( أي كما قمنا بتعريفه ) كما هو numbers هنا قمنا بعرض محتوى الكائن
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			[10, 20, 30, 40, 50]
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code> وضعنا فيه نصوص.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+names = ['Rami', 'Sara', 'Nada']      # يحتوي على نصوص فقط names إسمه list هنا قمنا بتعريف
+print(names)                          # ( أي كما قمنا بتعريفه ) كما هو names هنا قمنا بعرض ما يحتويه الكائن
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			['Rami', 'Sara', 'Nada']
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code> وضعنا فيه أعداد صحيحة و نصوص.</p>
+<div class="example-box">
+<h4>المثال الرابع</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+data = [1, 'Mhamad', 'Harmush', 1500]      # يحتوي على أعداد صحيحة و نصوص data إسمه list هنا قمنا بتعريف
+print(data)                                # ( أي كما قمنا بتعريفه ) كما هو data هنا قمنا بعرض ما يحتويه الكائن
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			[1, 'Mhamad', 'Harmush', 1500]
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code> إسمه <code class="data-enlighter-language=" python"="">data</code> و يتألف من <span class="number">4</span> عناصر. ثم قمنا بإعطائه <span class="number">4</span> قيم مختلفة في النوع.<br/>
+<span class="note">ملاحظة:</span> الكلمة <code class="data-enlighter-language=" python"="">None</code> وضعنا للإشارة إلى أننا لا نريد وضع قيم إفتراضية للعناصر الموجودة في <span class="inline">hgJ <code class="data-enlighter-language=" python"="">list</code>.</span></p>
+<div class="example-box">
+<h4>المثال الخامس</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# يتألف من 4 عناصر ,None قيمه الإفتراضية هي ,data إسمه list هنا قمنا بتعريف
+data = [None] * 4
+
+# هنا قمنا بوضع قيمة مختلفة في كل عنصر فيه
+data[0] = 100
+data[1] = 5.5
+data[2] = True
+data[3] = 'Hello'
+
+# data هنا قمنا بعرض ما يحتويه الكائن
+print(data)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			[100, 5.5, True, 'Hello']
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code> إسمه <code class="data-enlighter-language=" python"="">numbers</code>, قيم عناصره الإفتراضية هي <span class="inline"><code class="data-enlighter-language=" python"="">0</code>,</span> و يتألف من <span class="number">3</span> عناصر, ثم قمنا بإعطائه <span class="number">3</span> أعداد صحيحة.</p>
+<div class="example-box">
+<h4>المثال السادس</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# يتألف من 3 عناصر قيمتها الإفتراضية هي 0 ,numbers إسمه list هنا قمنا بتعريف
+numbers = [0] * 3
+
+# هنا قمنا بوضع قيمة مختلفة في كل عنصر فيه
+numbers[0] = 10
+numbers[1] = 15
+numbers[2] = 20
+
+# numbers هنا قمنا بعرض ما يحتويه الكائن
+print(numbers)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			[10, 15, 20]
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code>, إسمه <code class="data-enlighter-language=" python"="">languages</code>, قيم عناصره الإفتراضية هي <span class="inline"><code class="data-enlighter-language=" python"="">'Not Specified'</code>,</span> و يتألف من <span class="number">3</span> عناصر, ثم قمنا بإعطائه <span class="number">3</span> قيم نصية.</p>
+<div class="example-box">
+<h4>المثال السابع</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# 'Not Specified' يتألف من 3 عناصر قيمتها الإفتراضية هي ,languages إسمه list هنا قمنا بتعريف
+languages = ['Not Specified'] * 3
+
+# هنا قمنا بوضع قيمة مختلفة في كل عنصر فيه
+languages[0] = 'Arabic'
+languages[1] = 'English'
+languages[2] = 'French'
+
+# languages هنا قمنا بعرض ما يحتويه الكائن
+print(languages)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			['Arabic', 'English', 'French']
+		</div>
+</div>
+</article>
+<article>
+<h2>الوصول لعناصر الـ <code class="data-enlighter-language=" python"="">list</code> في بايثون</h2>
+<p>للوصول لأي عنصر في الـ <code class="data-enlighter-language=" python"="">list</code> سواء للحصول على قيمته أو تغييرها فإننا نستخدم رقم الـ <span class="word">Index</span> الخاص بالعنصر.</p>
+<p>في بايثون, يمكنك الوصول للعناصر الموجودة في <span class="inline">الـ <code class="data-enlighter-language=" python"="">list</code></span> بطريقتين:</p>
+<ul class="explain">
+<li><p>في حال أردت الوصول لعناصر <span class="inline">الـ <code class="data-enlighter-language=" python"="">list</code></span> من اليسار إلى اليمين, أي من أول عنصر تم إدخاله, فإن الـ <span class="word">Index</span> لأول عنصر سيكون <span class="number">0</span>.</p></li>
+<li><p>في حال أردت الوصول لعناصر <span class="inline">الـ <code class="data-enlighter-language=" python"="">list</code></span> من اليمين إلى اليسار, أي من آخر عنصر تم إدخاله, فإن الـ <span class="word">Index</span> لآخر عنصر سيكون <span class="number">1-</span>.</p></li>
+</ul>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code> وضعنا فيه نصوص. بعدها قمنا بعرض قيمة أول و ثاني عنصر فيه.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# وضعنا فيه قيم نصية تمثل أسماء أشخاص names إسمه list هنا قمنا بتعريف
+names = ['Rami', 'Sara', 'Nada', 'Mhamad', 'Salem']
+
+print(names[0])     # names هنا قمنا بعرض قيمة أول عنصر موجود في الكائن
+print(names[1])     # names هنا قمنا بعرض قيمة ثاني عنصر موجود في الكائن
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Rami<br/>
+			Sara
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code> وضعنا فيه نصوص. بعدها قمنا بعرض قيمة آخر و قبل آخر عنصر فيه.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# وضعنا فيه قيم نصية تمثل أسماء أشخاص names إسمه list هنا قمنا بتعريف
+names = ['Rami', 'Sara', 'Nada', 'Mhamad', 'Salem']
+
+print(names[-1])     # names هنا قمنا بعرض قيمة آخر عنصر موجود في الكائن
+print(names[-2])     # names هنا قمنا بعرض قيمة ما قبل آخر عنصر موجود في الكائن
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Salem<br/>
+			Mhamad
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code> وضعنا فيه نصوص. بعدها قمنا بعرض جميع القيم الموضوعة فيه باستخدام الحلقة <code class="data-enlighter-language=" python"="">for</code>.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# وضعنا فيه قيم نصية تمثل أسماء أشخاص names إسمه list هنا قمنا بتعريف
+names = ['Rami', 'Sara', 'Nada', 'Mhamad', 'Salem']
+
+# و من ثم سيتم طباعتها x في المتغير names في كل مرة سيتم وضع قيمة عنصر من عناصر الكائن
+for x in names:
+    print(x)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Rami<br/>
+			Sara<br/>
+			Nada<br/>
+			Mhamad<br/>
+			Salem
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code> وضعنا فيه أعداد صحيحة. بعدها قمنا بحساب ناتج جمع جميع القيم الموضوعة فيه باستخدام الحلقة <code class="data-enlighter-language=" python"="">for</code>.</p>
+<div class="example-box">
+<h4>المثال الرابع</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# وضعنا فيه أعداد صحيحة numbers إسمه list هنا قمنا بتعريف
+numbers = [10, 20, 30, 40, 50]
+
+# numbers هنا قمنا بتعريف متغير سنستخدمه لحفظ ناتج جمع القيم الموجودة في الكائن
+total = 0
+
+# total و من ثم سيتم إضافتها على قيمة المتغير x في المتغير numbers في كل مرة سيتم وضع قيمة عنصر من عناصر الكائن
+for x in numbers:
+    total += x
+
+# numbers و التي ستساوي ناتج جمع القيم الموجودة في الكائن total هنا قمنا بطباعة قيمة المتغير
+print('Total sum is:', total)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Total sum is: 150
+		</div>
+</div>
+</article>
+<article>
+<h2>حذف عناصر <span class="inline">الـ <code class="data-enlighter-language=" python"="">list</code></span> بواسطة الجملة <code class="data-enlighter-language=" python"="">del</code> في بايثون</h2>
+<p>الجملة <code class="data-enlighter-language=" python"="">del</code> تستخدم لحذف المصفوفة كما هي من الذاكرة أو لحذف عناصر محددة منها.</p>
+<br/>
+<h3 class="note-title">إنتبه</h3>
+<div class="note-box">
+<p>عند حذف عنصر في <code class="data-enlighter-language=" python"="">list</code> بواسطة الجملة <code class="data-enlighter-language=" python"="">del</code> فإن مترجم لغة بايثون يقوم بإعادة ترتيب عناصره من جديد و تحديث رقم <span class="inline">الـ <span class="word">Index</span></span> الخاص بكل عنصر.</p>
+</div>
+<br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code> وضعنا فيه أرقام. بعدها قمنا بحذف عنصرين منه.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# وضعنا فيه أعداد صحيحة arr إسمه list هنا قمنا بتعريف
+arr = [10, 20, 30, 40, 50]
+
+del arr[0]    # arr هنا قمنا بحذف أول عنصر موجود في الكائن
+del arr[1]    # arr هنا قمنا بحذف ثاني عنصر موجود في الكائن
+
+print(arr)    # arr هنا قمنا بعرض ما يحتويه الكائن
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			[20, 40, 50]
+		</div>
+<p><span class="point">•</span>الصورة التالية توضح كيف تم إلغاء العناصر.</p>
+<div class="image-box">
+<a href="del-keyword-example.png" target="_blank"><img alt="python del keyword" src="del-keyword-example.png"/></a>
+</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code> وضعنا فيه أرقام. بعدها قمنا بحذف العناصر الموجودة فيه إبتداءاً من العنصر الذي يملك <span class="word">Index</span> رقم <span class="number">0</span> وصولاً إلى العنصر الموجود قبل العنصر الذي يملك <span class="word">Index</span> رقم <span class="number">3</span>. أي قمنا بحذف العناصر <code data-enlighter-language="python">arr[0]</code> - <code data-enlighter-language="python">arr[1]</code> - <code data-enlighter-language="python">arr[2]</code> دفعة واحدة.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# وضعنا فيه أعداد صحيحة arr إسمه list هنا قمنا بتعريف
+arr = [10, 20, 30, 40, 50]
+
+del arr[0:3]    # arr هنا قمنا بحذف أول ثلاث عناصر موجودة في الكائن
+
+print(arr)      # arr هنا قمنا بعرض ما يحتويه الكائن
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			[40, 50]
+		</div>
+<p><span class="point">•</span>الصورة التالية توضح كيف تم إلغاء العناصر.</p>
+<div class="image-box">
+<a href="del-keyword-delete-multiple-elements-example.png" target="_blank"><img alt="python del keyword delete multiple elements" src="del-keyword-delete-multiple-elements-example.png"/></a>
+</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code> وضعنا فيه أرقام. بعدها قمنا بحذفه من الذاكرة. بعدها حاولنا أن نعرض ما يحتويه.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# وضعنا فيه أعداد صحيحة arr إسمه list هنا قمنا بتعريف
+arr = [10, 20, 30, 40, 50]
+
+del arr       # كما هو من الذاكرة arr هنا قمنا بحذف الكائن
+
+print(arr)    # و الذي في الأصل قمنا بحذفه من الذاكرة لذلك سيظهر خطأ عند التشغيل arr هنا حاولنا عرض ما يحتويه الكائن
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+<span class="red">NameError: name 'arr' is not defined</span>
+</div>
+</div>
+</article>
+<article>
+<h2>تجزيء <span class="inline">الـ <code class="data-enlighter-language=" python"="">list</code></span> في بايثون</h2>
+<p>المقصود من تجزيء <span class="inline">الـ <code class="data-enlighter-language=" python"="">list</code></span> هو إرجاع جزء منه سواء لعرضه أو تخزينه.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code> وضعنا فيه أرقام. بعدها قمنا بعرض جزء منه.<br/>
+	فعلياً قمنا بعرض العناصر الموجودة فيه إبتداءاً من العنصر الذي يملك <span class="word">Index</span> رقم <span class="number">0</span> وصولاً إلى العنصر الموجود قبل العنصر الذي يملك <span class="word">Index</span> رقم <span class="number">3</span>.<br/>
+	أي قمنا بعرض قيم العناصر <code data-enlighter-language="python">arr[0]</code> - <code data-enlighter-language="python">arr[1]</code> - <code data-enlighter-language="python">arr[2]</code>.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+arr = [10, 20, 30, 40, 50]    # وضعنا فيه أعداد صحيحة arr إسمه list هنا قمنا بتعريف
+
+print(arr[0: 3])              # arr هنا قمنا بعرض أول ثلاث عناصر موجودة في الكائن
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			[10, 20, 30]
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code> وضعنا فيه أرقام. بعدها قمنا بنسخ جزء منه و وضعه في <code class="data-enlighter-language=" python"="">list</code> ثانية.<br/>
+	فعلياً قمنا بنسخ العناصر الموجودة فيه إبتداءاً من العنصر الذي يملك <span class="word">Index</span> رقم <span class="number">0</span> وصولاً إلى العنصر الموجود قبل العنصر الذي يملك <span class="word">Index</span> رقم <span class="number">3</span>.<br/>
+	أي قمنا بنسخ قيم العناصر <code data-enlighter-language="python">arr[0]</code> - <code data-enlighter-language="python">arr[1]</code> - <code data-enlighter-language="python">arr[2]</code>.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+arr = [10, 20, 30, 40, 50]    # وضعنا فيه أعداد صحيحة arr إسمه list هنا قمنا بتعريف
+
+arr2 = arr[0: 3]              # arr2 و وضعها في كائن جديد إسمه arr هنا قمنا بنسخ أول ثلاث عناصر موجودة في الكائن
+
+print(arr2)                   # arr2 هنا قمنا بعرض ما يحتويه الكائن
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			[10, 20, 30]
+		</div>
+</div>
+</article>
+<article>
+<h2>إستخدام العوامل <code class="data-enlighter-language=" python"="">+</code> و <code class="data-enlighter-language=" python"="">*</code> و <code class="data-enlighter-language=" python"="">in</code> مع <span class="inline">الـ <code class="data-enlighter-language=" python"="">list</code></span> في بايثون</h2>
+<br/>
+<table class="list full-width">
+<tr>
+<th>العامل</th>
+<th>دواعي الإستخدام</th>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">+</code></td>
+<td>العامل <code data-enlighter-language="python">+</code> يستخدم لدمج <code class="data-enlighter-language=" python"="">list</code> أو أكثر في <code class="data-enlighter-language=" python"="">list</code> واحد.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">*</code></td>
+<td>العامل <code data-enlighter-language="python">*</code> يستخدم لتكرار قيمة معينة أو نوع بيانات معين ليمثل نوع القيم التي يمكن وضعها في عناصر <span class="inline">الـ <code class="data-enlighter-language=" python"="">list</code></span> كما فعلنا في بعض الأمثلة السابقة.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">in</code></td>
+<td>العامل <code data-enlighter-language="python">in</code> يستخدم للبحث في <span class="inline">الـ <code class="data-enlighter-language=" python"="">list</code></span> عن قيمة معينة أو للمرور على قيمه عند إستخدامه في الحلقة <code class="data-enlighter-language=" python"="">for</code> كما فعلنا في بعض الأمثلة السابقة.</td>
+</tr>
+</table>
+<br/>
+<p>في المثال التالي قمنا بتخزين إثنين <code class="data-enlighter-language=" python"="">list</code> في <code class="data-enlighter-language=" python"="">list</code> واحد بواسطة العامل <code data-enlighter-language="python">+</code>.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+arr1 = [1, 2, 3]      # وضعنا فيه أعداد صحيحة arr1 إسمه list هنا قمنا بتعريف
+arr2 = [4, 5, 6]      # وضعنا فيه أعداد صحيحة arr2 إسمه list هنا قمنا بتعريف
+
+arr3 = arr1 + arr2    # arr2 و arr1 وضعنا فيه قيم الكائنين arr3 إسمه list هنا قمنا بتعريف
+
+print(arr3)           # arr3 هنا قمنا بعرض ما يحتويه الكائن
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			[1, 2, 3, 4, 5, 6]
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">list</code> وضعنا فيه <span class="number">3</span> عناصر تملك <code class="data-enlighter-language=" python"="">'python'</code> كقيمة لهم بواسطة العامل <code data-enlighter-language="python">*</code>.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+arr = ['python'] * 3     # 'python' وضعنا فيه 3 عناصر قيمتهم النص arr إسمه list هنا قمنا بتعريف
+
+print(arr)               # arr هنا قمنا بعرض ما يحتويه الكائن
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			['python', 'python', 'python']
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي إستخدمنا العامل <code data-enlighter-language="python">in</code> للبحث في <span class="inline">الـ <code class="data-enlighter-language=" python"="">list</code></span> عن قيمة معينة.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+arr = ['Mhamad', 'Rony', 'Rima', 'Sara']     # وضعنا فيه مجموعة قيم نصية arr إسمه list هنا قمنا بتعريف
+
+x = 'Rima'                                   # وضعنا فيه نص x هنا قمنا بتعريف متغير إسمه
+
+print('Is Rima in the list?')
+print(x in arr)                              # True إذا تم إيجادها سيتم عرض .arr في الكائن x هنا سيتم البحث عن قيمة
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Is Rima in the list?<br/>
+			True
+		</div>
+</div>
+</article>
+<article>
+<h2>دوال الكلاس <code data-enlighter-language="python">list</code> في بايثون</h2>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">append(obj)</code></span>
+			تستخدم لإضافة عنصر جديد في آخر <span class="inline">الـ<code data-enlighter-language="python">list</code></span> الذي قام باستدعائها.<br/>
+<a class="open-page" href="list-append.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">extend(iterable)</code></span>
+			تستخدم لإضافة عناصر مصفوفة من أي نوع في آخر <span class="inline">الـ<code data-enlighter-language="python">list</code></span> الذي قام باستدعائها.<br/>
+<a class="open-page" href="list-extend.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">insert(index, obj)</code></span>
+			تستخدم لإضافة عنصر جديد في مكان محدد في <span class="inline">الـ<code data-enlighter-language="python">list</code></span> الذي قام باستدعائها.<br/>
+<a class="open-page" href="list-insert.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">pop([index])</code></span>
+			تستخدم لحذف عنصر محدد في <span class="inline">الـ<code data-enlighter-language="python">list</code></span> الذي قام باستدعائها, أو لحذف آخر عنصر موجود فيه.<br/>
+<a class="open-page" href="list-pop.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">clear()</code></span>
+			تستخدم لحذف جميع عناصر <span class="inline">الـ<code data-enlighter-language="python">list</code></span> الذي قام باستدعائها.<br/>
+<a class="open-page" href="list-clear.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">copy()</code></span>
+			ترجع نسخة من <span class="inline">الـ<code data-enlighter-language="python">list</code></span> الذي قام باستدعائها.<br/>
+<a class="open-page" href="list-copy.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">count(x)</code></span>
+			تستخدم للبحث في <span class="inline">الـ<code data-enlighter-language="python">list</code></span> الذي قام باستدعائها عن قيمة معينة.<br/>
+			ترجع عدد صحيح يمثل كم مرة تم إيجاد عنصر عنده نفس القيمة التي مررناها لها مكان البارميتر <code data-enlighter-language="python">x</code>.<br/>
+<a class="open-page" href="list-count.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">remove(x)</code></span>
+			تستخدم لحذف أول عنصر يتم إيجاده في <span class="inline">الـ<code data-enlighter-language="python">list</code></span> الذي قام باستدعائها يملك نفس القيمة التي نمررها لها مكان البارميتر <code data-enlighter-language="python">x</code>.<br/>
+			في حال لم يتم العثور على القيمة المراد حذفها ترمي الإستثناء <span class="inline"><span class="code red">ValueError</span>.</span><br/>
+<a class="open-page" href="list-remove.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">index(x[, start[, end]])</code></span>
+			تبحث في <span class="inline">الـ<code data-enlighter-language="python">list</code></span> الذي قام باستدعائها عن <span class="word">Index</span> أول عنصر يملك القيمة التي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code> و ترجعه.<br/>
+			في حال لم يتم العثور على القيمة المراد معرفة مكانها ترمي الإستثناء <span class="inline"><span class="code red">ValueError</span>.</span><br/>
+<a class="open-page" href="list-index.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">sort(reverse=False)</code></span>
+			تستخدم لترتيب عناصر <span class="inline">الـ<code data-enlighter-language="python">list</code></span> الذي قام باستدعائها بشكل تصاعدي أو تنازلي.<br/>
+<a class="open-page" href="list-sort.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">reverse(reverse=False)</code></span>
+			تستخدم لعكس ترتيب عناصر <span class="inline">الـ<code data-enlighter-language="python">list</code></span> الذي قام باستدعائها.<br/>
+<a class="open-page" href="list-reverse.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>دوال جاهزة في بايثون للتعامل مع <span class="inline">الـ <code data-enlighter-language="python">list</code></span></h2>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">len(list)</code></span>
+			ترجع عدد صحيح يمثل عدد عناصر <span class="inline">الـ<code data-enlighter-language="python">list</code></span> الذي نمرره لها عند إستدعاءها.<br/>
+<a class="open-page" href="len.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">min(list)</code></span>
+			ترجع أصغر قيمة موجودة في <span class="inline">الـ<code data-enlighter-language="python">list</code></span> الذي نمرره لها عند إستدعاءها.<br/>
+<a class="open-page" href="min.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">max(list)</code></span>
+			ترجع أكبر قيمة في <span class="inline">الـ<code data-enlighter-language="python">list</code></span> الذي نمرره لها عند إستدعاءها.<br/>
+<a class="open-page" href="max.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">list(sequence)</code></span>
+			ترجع نسخة من أي كائن يحتوي مجموعة عناصر نمرره لها عند إستدعاءها ككائن من الكلاس <span class="inline">الـ<code data-enlighter-language="python">list</code>.</span><br/>
+<a class="open-page" href="list.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+</article>
+<!--
+
+	<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language="python">list</code> تتألف من <span class="number">4</span> عناصر, ثم قمنا بإعطائها <span class="number">4</span> قيم, ثم قمنا بإضافة عنصر جديد عليها, ثم عرضنا قيمها و عدد عناصرها.</p>
+	<div class="example-box">
+		<h4>المثال الخامس</h4>
+		<span class="code-title python-file-icon">Test.py</span>
+		<pre data-enlighter-language="python">
+# هنا قمنا بتعريف مصفوفة من النصوص تتألف من 4 عناصر
+languages = [str] * 4
+
+# هنا قمنا بوضع قيمة في كل عنصر فيه
+languages[0] = 'Arabic'
+languages[1] = 'French'
+languages[2] = 'English'
+languages[3] = 'Spanish'
+
+# هنا قمنا بإضافة عنصر جديد على الكائن
+languages.append('German')
+
+# هنا قمنا بعرض قيم الكائن و عدد عناصرها
+print('Stored languages:', languages)
+print('Number of stored languages is:', len(languages))
+		</pre>
+		<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+		<div class="code-box">
+			Stored languages: ['Arabic', 'French', 'English', 'Spanish', 'German']<br>
+			Number of stored languages is: 5
+		</div>
+	</div>
+-->
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

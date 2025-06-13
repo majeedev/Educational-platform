@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>دالة إدخال البيانات Read في الخوارزميات</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../algo-icon.png"/></li>
+<li class="title">دروس تمهيدية</li>
+<li><a href="../algorithms-introduction/index.html">مفهوم الخوارزميات</a></li>
+<li><a href="../algorithms-environment-setup/index.html">تجهيز بيئة العمل</a></li>
+<li><a href="../algorithms-the-print-method/index.html">دالة الطباعة <span class="en">Print</span></a></li>
+<li><a href="../algorithms-concatenation/index.html">الدمج أثناء الطباعة</a></li>
+<li><a href="../algorithms-variables/index.html">المتغيرات</a></li>
+<li class="title">الحلقات و الشروط</li>
+<li><a href="../algorithms-loops/index.html">الحلقات و أنواعها</a></li>
+<li><a href="../algorithms-for-loop/index.html">الحلقة <span class="en">For</span></a></li>
+<li><a href="../algorithms-while-and-do-while-loops/index.html">الحلقتين <span class="en">While</span> و <span class="en">Do While</span></a></li>
+<li><a href="../algorithms-setting-conditions/index.html">جمل الشرط</a></li>
+<li><a href="../algorithms-operators/index.html">العوامل</a></li>
+<li><a href="../algorithms-nested-loops/index.html">الحلقات المتداخلة</a></li>
+<li class="title">إدخال بيانات من المستخدم</li>
+<li><a href="index.html">دالة الإدخال <span class="en">Read</span></a></li>
+<li><a href="../algorithms-calculate-the-factorial/index.html">حساب قيمة الـ <span class="en">Factorial</span> للعدد</a></li>
+<li><a href="../algorithms-calculate-the-power/index.html">حساب قيمة الـ <span class="en">Power</span> للعدد</a></li>
+<li class="title">المصفوفات</li>
+<li><a href="../algorithms-arrays-types/index.html">المصفوفات و أنواعها</a></li>
+<li><a href="../algorithms-one-dimensional-arrays/index.html">تعريف مصفوفة ذات بعد واحد</a></li>
+<li><a href="../algorithms-one-dimensional-arrays-length/index.html">حجم المصفوفة ذات البعد الواحد</a></li>
+<li><a href="../algorithms-working-with-one-dimensional-arrays/index.html">التعامل مع مصفوفة ذات بعد واحد</a></li>
+<li><a href="../algorithms-two-dimensional-arrays/index.html">تعريف مصفوفة ذات بعدين</a></li>
+<li><a href="../algorithms-two-dimensional-arrays-length/index.html">حجم المصفوفة ذات البعدين</a></li>
+<li><a href="../algorithms-working-with-two-dimensional-arrays/index.html">التعامل مع مصفوفة ذات بعدين</a></li>
+<li class="title">الدوال</li>
+<li><a href="../algorithms-methods/index.html">تعريف دوال جديدة</a></li>
+<li><a href="../algorithms-parameters/index.html">التعامل مع الباراميترات</a></li>
+<li><a href="../algorithms-recursion/index.html">تعريف دوال تستدعي نفسها</a></li>
+<li class="title">أكتب الكود كالمحترفين</li>
+<li><a href="../algorithms-write-less-code/index.html">تقليص حجم الكود</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Algorithms</span>دالة إدخال البيانات <code data-enlighter-language="java">Read</code> في الخوارزميات</h1>
+<article>
+<h2>مفهوم إدخال البيانات من المستخدم</h2>
+<p class="question">ما المقصود من إدخال البيانات؟</p>
+<p>في البرامج التي كنا نكتبها سابقاً, كنا نكتب جميع كودات البرنامج ثم نقوم بتشغيله, فيتم تنفيذ كامل البرنامج دفعة واحدة, و عند إنتهائه يعرض لنا الوقت الذي إستغرقه الكمبيوتر منذ أن قمنا بتشغيل البرنامج و حتى إنتهائه.</p>
+<p>ستتعلم في هذا الدرس كيف تتفاعل مع البرنامج عندما يكون شغالاً.<br/>
+	فعلياً, ستجعل البرنامج يطلب منك إدخال معلومات (مثل إسمك, عمرك أو أي عدد), بعدها ستجعله ينتظرك لإدخال المعلومات من لوحة المفاتيح <span class="inline">( أي الـ <span class="word">Keyboard</span> )</span>.</p>
+<br/>
+<p class="question">ما الهدف الحقيقي من هذا الدرس؟</p>
+<p>الهدف الحقيقي من الدرس أن تتعلم طريقة إنشاء برامج تناسب جميع المستخدمين.<br/>
+	من الآن و حتى إنتهاء سلسلة دروس الخوارزميات ستجهز برامجك للمستخدم و تنتظر منه إدخال معلوماته الخاصة, ثم تجعل برنامجك يتعامل مع المعلومات التي قام المستخدم بإدخالها.</p>
+<br/>
+<p class="question">كيف نتعامل مع البيانات التي سيدخلها المستخدم؟</p>
+<p>إذا أردت أن يقوم المستخدم بإدخال المعلومات إلى البرنامج فعليك تجهيز مكان في الذاكرة ( أي تعريف متغيرات ) من أجل تخزين المعلومات التي سيدخلها المستخدم قبل أن تجعل البرنامج يطلب منه إدخال المعلومات.<br/>
+	دائماً عندما تريد من المستخدم أن يدخل أي معلومة, إجعل البرنامج يطلب منه أن يدخلها ثم خزنها في متغير.</p>
+<p>إذاً, سابقاً كنا نضع قيم مباشرةً لجميع المتغيرات التي نستخدمها, أما الآن سنجعل المستخدم هو الذي يضع القيم للمتغيرات.</p>
+</article>
+<article>
+<h2>إدخال بيانات من المستخدم في الخوارزميات</h2>
+<p>في الخوارزميات نستخدم الدالة <code data-enlighter-language="java">Read()</code> لقراءة أي شيء سيدخله المستخدم من لوحة المفاتيح سواء رقم أو نص لأننا نكتب الخوارزمية على الورقة و ليس على الكمبيوتر.<br/>
+	بينما في لغة جافا و في أي لغة برمجة أخرى, نستخدم دالة إدخال تتوافق مع نوع البيانات التي سيتم إدخالها.<br/>
+	لا تقلق إذا لم تفهم المقصود الآن لأنك ستفهم كل شيء من التمارين.</p>
+<br/>
+<h3>مثال</h3>
+<p>في هذا المثال بواسطة دالة الـ <code data-enlighter-language="java">Print()</code> سيطلب البرنامج من المستخدم أن يدخل رقماً,<br/>
+	بعدها سيتم تجهيز متغير إسمه <code data-enlighter-language="java">a</code> في الذاكرة لتخزين الرقم الذي نريد من المستخدم إدخاله أثناء تشغيل البرنامج.<br/>
+	في الأخير بواسطة دالة الـ <code data-enlighter-language="java">Read()</code> سوف يقوم البرنامج بانتظار المستخدم لإدخال الرقم.<br/>
+	بعد أن يتم إدخال الرقم سيتم تخزينه في المتغير <code data-enlighter-language="java">a</code>.</p>
+<div class="example-box">
+<h4>الخوارزمية</h4>
+<div class="image-box">
+<a href="read-a-number-from-the-user.png" target="_blank"><img alt="" src="read-a-number-from-the-user.png"/></a>
+</div>
+</div>
+<div class="example-box">
+<h4>تفاعل المستخدم مع البرنامج</h4>
+<div class="image-box">
+<a href="how-computer-read-data-from-user.png" target="_blank"><img alt="" src="how-computer-read-data-from-user.png"/></a>
+</div>
+</div>
+<br/>
+<h3>خلاصة</h3>
+<p>في الخوارزميات نكتب <code data-enlighter-language="java">Read()</code> في حال أردنا من المستخدم إدخال أي نوع من معلومات.</p>
+</article>
+<article>
+<h2>طريقة جعل البرنامج يقبل المعلومات من المستخدم في لغة جافا</h2>
+<p>في لغة جافا لكي تجعل البرنامج يقبل معلومات من المستخدم عليك إتباع <span class="red">ثلاث</span> خطوات.</p>
+<br/>
+<h3>الخطوة الأولى</h3>
+<p>إستدعاء الكلاس <code data-enlighter-language="java">Scanner</code> الذي يحتوي على دوال إدخال المعلومات من المستخدمين.<br/>
+	أي يجب كتابة السطر التالي فوق كود الكلاس مباشرةً.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+import java.util.Scanner;
+	</pre>
+<br/>
+<h3>الخطوة الثانية</h3>
+<p>إنشاء كائن من هذا الكلاس لأنك لا تستطيع إستخدام دوال الكلاس <code data-enlighter-language="java">Scanner</code> إلا من خلال الكائن الذي يشير إليه.<br/>
+	أي يجب كتابة السطر التالي في الدالة <code data-enlighter-language="java">main()</code>.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Scanner input = new Scanner(System.in);
+	</pre>
+<br/>
+<h3>الخطوة الثالثة</h3>
+<p>إستدعاء إحدى دوال إدخال المعلومات من هذا الكائن و تخزين ما سيدخله المستخدم في متغير من نفس نوع الدالة.<br/>
+	هنا كمثال إستخدمنا الدالة <code data-enlighter-language="java">nextInt()</code>, ستتعرف لاحقاً على دوال أخرى و متى تستخدم كل واحدة منهم.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+int a = input.nextInt();
+	</pre>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>أنت الآن تدرس الخوارزميات و ليس لغة جافا. لذلك ليس مطلوباً منك أن تفهم معنى هذه الأوامر حرفياً, و يكفي أن تفهم فكرتهم و مكان كتابتهم فقط.<br/>
+		مع الإشارة إلى أنك يجب أن تدون هذه الخطوات كملاحظات لأنك ستحتاج كتابتها عند تجربة أي خوارزمية على الكمبيوتر تطلب فيها من المستخدم أن يدخل أي عدد أو نص عند تشغيل البرنامج.</p>
+</div>
+<br/>
+<h3>خطوات إدخال بيانات من المستخدم في جافا</h3>
+<p>المثال التالي يعلمك طريقة جعل البرنامج يطلب من المستخدم أن يدخل رقم و يخزّنه في متغير.<br/>
+	إذاً, عند تشغيل البرنامج سيطلب منك إدخال أي رقم.<br/>
+	بعد إدخال الرقم و النقر على الزر <span class="word">Enter</span> سيقوم بعرض الرقم الذي أدخلته أثناء عمل البرنامج.</p>
+<div class="example-box">
+<h4>كود الجافا</h4>
+<pre data-enlighter-language="java">
+import java.util.Scanner;
+ 
+public class TestScanner {
+ 
+    public static void main (String[] args) {
+ 
+        Scanner input = new Scanner(System.in);
+ 
+        int a;
+ 
+        System.out.print("Enter a number: ");
+        a = input.nextInt();
+ 
+        System.out.print("You have entered the number: " +a+ "\n");
+    }
+ 
+}
+		</pre>
+</div>
+<p>قمنا بتجربة الكود و إدخال الرقم <span class="number">5</span> أثناء التشغيل, فكانت النتيجة كالتالي.</p>
+<div class="example-box">
+<h4>نتيجة الكود</h4>
+<div class="image-box">
+<a href="lesson-example-result.png" target="_blank"><img alt="" src="lesson-example-result.png"/></a>
+</div>
+</div>
+</article>
+<article>
+<h2>دوال إدخال المعلومات الموجودة في الكلاس <code data-enlighter-language="java">Scanner</code></h2>
+<p>لغة جافا توفر لك العديد من الدوال التي تسمح لك بإدخال المعلومات و كل واحدة منهم تستخدم لغرض محدد.</p>
+<br/>
+<h3>أمثلة</h3>
+<ul class="explain">
+<li><p>إذا كنت تريد من المستخدم أن يكتب إسمه, فأنت بحاجة لدالة الإدخال التي تستخدم لقراءة <span class="red">النص</span> الذي سيكتبه المستخدم.</p></li>
+<li><p>في حال كنت تريد من المستخدم أن يكتب عمره, فأنت بحاجة لدالة الإدخال التي تستخدم لقراءة <span class="red">الرقم</span> الذي سيكتبه المستخدم و هكذا.</p></li>
+</ul>
+<br/>
+<p>الجدول التالي يحتوي على الدوال التي سنستخدمها لقراءة المعلومات من المستخدم.</p>
+<table class="list">
+<tr>
+<th>الدوال</th>
+<th>دواعي الإستخدام</th>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">nextLine()</code></td>
+<td>تستخدم لإستقبال نص من المستخدم, أي لإستقبال قيمة نوعها <code data-enlighter-language="java">String</code></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">nextInt()</code></td>
+<td>تستخدم لإستقبال عدد صحيح ( أي بدون فاصلة ) من المستخدم, أي لإستقبال قيمة نوعها <code data-enlighter-language="java">int</code></td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">nextDouble()</code></td>
+<td>تستخدم لإستقبال عدد عشري ( أي يحتوي على فاصلة ) من المستخدم, أي لإستقبال قيمة نوعها <code data-enlighter-language="java">double</code></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>تمارين شاملة حول إدخال البيانات من المستخدم</h2>
+<br/>
+<h3>التمرين الأول</h3>
+<p>أكتب برنامج يطلب من المستخدم إدخال إسمه و مهنته و عمره, ثم يعرض له المعلومات التي قام هو بإدخالها بشكل مرتب.</p>
+<p><a class="open-page" href="ex-1.html" target="_blank">الحل و التفسير »</a></p>
+<br/><br/>
+<h3>التمرين الثاني</h3>
+<p>أكتب برنامج يطلب من المستخدم إعطائه عدد صحيح و خزنه في المتغير <code data-enlighter-language="java">N</code>.<br/>
+	بعدها يقوم بجمع جميع الأرقام من <span class="number">1</span> إلى <code data-enlighter-language="java">N</code>.</p>
+<p><a class="open-page" href="ex-2.html" target="_blank">الحل و التفسير »</a></p>
+<br/><br/>
+<h3>التمرين الثالث</h3>
+<p>أكتب برنامج يطلب من المستخدم إعطائه عدد صحيح ثم يعرض له ناتج جمع جميع الأرقام المفردة الموجودة بين <span class="number">1</span> و العدد الذي أدخله المستخدم.</p>
+<p><a class="open-page" href="ex-3.html" target="_blank">الحل و التفسير »</a></p>
+<br/><br/>
+<h3>التمرين الرابع</h3>
+<p>أكتب برنامج يطلب من المستخدم إعطائه عددين صحيحين ثم يعرض له جميع الأرقام المزدوجة بين هذين العددين.</p>
+<p><a class="open-page" href="ex-4.html" target="_blank">الحل و التفسير »</a></p>
+<br/><br/>
+<h3>التمرين الخامس</h3>
+<p>أكتب برنامج يطلب من المستخدم إعطائه عددين صحيحن, ثم يقارن العددين اللذين قام المستخدم بإدخالهما ثم يخبره نتيجة المقارنة.</p>
+<p><a class="open-page" href="ex-5.php" target="_blank">الحل و التفسير »</a></p>
+<br/><br/>
+<h3>التمرين السادس</h3>
+<p>أكتب برنامج يطلب من المستخدم إعطائه ثلاثة أعداد صحيحة, ثم يقارن الأعداد التي قام المستخدم بإدخالها ثم يخبره فقط من هو العدد الأكبر بينهم.</p>
+<p><a class="open-page" href="ex-6.html" target="_blank">الحل و التفسير »</a></p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

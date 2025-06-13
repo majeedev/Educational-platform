@@ -1,0 +1,690 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>تعدد المهام في بايثون | Python Multithreading</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>تعدد المهام في بايثون</h1>
+<article>
+<h2>مفهوم تعدد المهام في بايثون</h2>
+<p>عندما تستخدم هاتفك أو حاسوبك, ترى أنه يمكنك تشغيل عدة برامج مع بعض في وقت واحد, كل برنامج شغال في الذاكرة يعتبر <span class="word">Process</span>, فمثلاً إذا قمت بتشغيل خمسة برامج مع بعض فهذا يعني أن نظام التشغيل ينظم عمل خمسة <span class="word">Processes</span> مع بعض. آلية تشغيل عدة برامج مع بعض تسمى <span class="inline"><span class="word">Multiprocessing</span>.</span></p>
+<p>من جهة اخرى, في البرنامج الواحد يمكنك تنفيذ عدة أوامر مع بعض و جعل المستخدم يشعر كأنها تتنفذ في وقت واحد, فمثلاً في حال كنت تلعب لعبة مثل لعبة كرة القدم, تجد أنه هناك عدة أشياء تحدث في وقت واحد, فمثلاُ عند تشغيل اللعبة تسمع عدة أصوات ( مثل أغنية حماسية, صوت المعلق, صوت المشجعين, صوت صفارة الحكم في حال وقع خطأ إلخ.. ), بالإضافة إلى أنه يمكنك تحريك اللاعب و مشاهدة توقيت المبارة و الكثير من التفاصيل الأخرى التي تحدث كلها في نفس الوقت لتصنع لك لعبة رائعة. هذه الآلية تسمى <span class="inline"><span class="word">Multithreading</span>,</span> لأن كل جزء شغال في البرنامج يكون عبارة عن مجموعة أوامر موضوعة بداخل <span class="word">Thread</span> خاص.</p>
+<p>إذاً نستخدم آلية <span class="word">Multithreading</span> لجعل البرنامج قادر على تنفيذ عدة أوامر مع بعض و كأنها تتنفذ في وقت واحد, و هذا ما سنتعلمه في هذا الدرس.</p>
+<br/>
+<h3>أهمية تعدد المهام</h3>
+<ul class="explain">
+<li><p>جعل المستخدم قادر على تنفيذ عدة عمليات مع بعض في نفس الوقت.</p></li>
+<li><p>جعل تصميم التطبيقات أجمل و إضافة مؤثرات فيه.</p></li>
+<li><p>كل <span class="word">Thread</span> تقوم بتشغيله, يعمل بشكل منعزل عن باقي الأوامر الموجودة في البرنامج, و بالتالي فإنه في حال وقوع أي خطأ في <span class="inline">الـ <span class="word">Thread</span></span> فإنه لن يؤثر على باقي الأوامر الموجود في البرنامج, كما أنه لا يؤثر على أي <span class="word">Thread</span> آخر شغال في البرنامج.</p></li>
+</ul>
+</article>
+<article>
+<h2>طريقة إنشاء <span class="word">Thread</span> في بايثون</h2>
+<p>في البداية, إبتداءاً من الإصدار <span class="number">2.4</span> في بايثون, أصبح الموديول <code data-enlighter-language="python">threading</code> هو الموديول الذي يستخدم لإنشاء <span class="inline"><span class="word">Threads</span>.</span><br/>
+	هذا الموديول عبارة عن موديول جاهز في بايثون, و هو يحتوي على الكلاس <code data-enlighter-language="python">Thread</code> الذي يستخدم لبناء <span class="word">Thread</span> و التحكم به.</p>
+<br/>
+<h3 class="note-title">إنتبه</h3>
+<div class="note-box">
+<p>قبل هذا الموديول كان يوجد موديول إسمه <code data-enlighter-language="python">_thread</code> يستخدم لهذا الغرض أيضاً لكنه لم يعد يستخدم الآن و سيتم إلغاؤه مستقبلاً.<br/>
+		لذلك ننصح بعدم استخدام الموديول <code data-enlighter-language="python">_thread</code> أو الإعتماد عليه.</p>
+</div>
+<br/><br/>
+<h3>خطوات بناء <span class="word">Thread</span></h3>
+<ol class="arabic">
+<li><p>يجب تضمين الموديول <span class="inline"><code data-enlighter-language="python">threading</code>.</span></p></li>
+<li><p>بناء كلاس يرث من الكلاس <code data-enlighter-language="python">Thread</code> و تفعل <span class="word">Override</span> لدالة إسمها <span class="inline"><code data-enlighter-language="python">run()</code>,</span> و فيها تضع الأوامر التي تريدها أن تتنفذ عندما يتم تشغيل <span class="inline">الـ <span class="word">Thread</span>.</span></p></li>
+</ol>
+<br/><br/>
+<h3>خطوات تشغيل <span class="word">Thread</span></h3>
+<ol class="arabic">
+<li><p>يجب إنشاء كائن من الكلاس الذي يرث من الكلاس <span class="inline"><code data-enlighter-language="python">Thread</code>.</span></p></li>
+<li><p>من هذا الكائن, نقوم باستدعاء دالة جاهزة إسمها <code data-enlighter-language="python">start()</code> و التي ستقوم بشكل تلقائي باستدعاء الدالة <code data-enlighter-language="python">run()</code> و تنفيذ الأوامر الموضوعة فيها.</p></li>
+</ol>
+<br/><br/>
+<p>في المثال التالي قمنا بإنشاء كلاس إسمه <code data-enlighter-language="python">Worker</code> يرث من الكلاس <span class="inline"><code data-enlighter-language="python">Thread</code>.</span></p>
+<p>في الدالة <code data-enlighter-language="python">__init__()</code> الخاصة بهذا الكلاس, قمنا بتعريف خاصية إسمها <code data-enlighter-language="python">name</code> لأننا ننوي إعطاء إسم لكل كائن ننشئه من هذا الكلاس.<br/>
+	كما أننا جعلناها تستدعي الدالة <code data-enlighter-language="python">__init__()</code> الموجودة في الكلاس <code data-enlighter-language="python">Thread</code> لنكون قادرين على معاملة أي كائن ننشئه من هذا الكلاس <span class="inline">كـ <span class="word">Thread</span>.</span></p>
+<p>بعدها فعلنا <span class="word">Override</span> للدالة <code data-enlighter-language="python">run()</code> بهدف أن تطبع الإسم الذي نضعه في الخاصية <code data-enlighter-language="python">name</code> ثلاث مرات عندما يتم تشغيله.</p>
+<p>في الأخير, قمنا بإنشاء كائنين من هذا الكلاس و تشغيلهما في وقت واحد.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Worker.py</span>
+<pre data-enlighter-language="python">
+import threading   # Thread قمنا بتضمين هذا الموديول حتى نستطيع الوراثة من الكلاس
+import time        # التي سنستخدمها في المثال sleep() قمنا بتضمين هذا الموديول لأنها تحتوي على الدالة
+
+
+# Thread يرث من الكلاس Worker هنا قمنا بإنشاء كلاس إسمه
+class Worker(threading.Thread):
+
+	# Thread الموجودة في الكلاس __init__() من أجل إستدعاء الدالة __init__() هنا قمنا بتعريف الدالة
+	# name أيضاً, من أجل تحديد أنه يجب تمرير إسم للكائن الذي يتم إنشاؤه من الكلاس و الذي سيتم تخزينه في الخاصية
+    def __init__(self, name):
+        super(Worker, self).__init__()
+        self.name = name
+
+	# لتحديد ما سيحدث عند تشغيل الكائن الذي ننشئه من هذا الكلاس run() هنا قمنا بتعريف الدالة
+    def run(self):
+		# في البداية سيتم طباعة إسم الكائن و أنه قد بدأ تنفيذه
+        print('Starting', self.name)
+		
+		# sleep() بعدها سيتم طباعة إسم الكائن 3 مرات. و قمنا باستدعاء الدالة
+		# و تمرير الرقم 1 لها لتجعل الحلقة تتوقف مدة ثانية في نهاية كل دورة
+        for i in range(3):
+            print(self.name)
+            time.sleep(1)
+		
+		# في النهاية سيتم طباعة إسم الكائن و أنه قد إنتهى تنفيذه
+        print('Ending', self.name)
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# Worker الذي قمنا بإنشائه في الموديول Worker هنا قمنا بتضمين الكلاس
+from Worker import Worker
+
+# Threads أي قمنا بإنشاء إثنين .Worker هنا قمنا بإنشاء كائنين من الكلاس
+thread1 = Worker('Thread-1')
+thread2 = Worker('Thread-2')
+
+# مرة من كل كائن run() من كلا الكائنين لتشغيلهما. أي سيتم استدعاء الدالة start() هنا قمنا باستدعاء الدالة
+thread1.start()
+thread2.start()
+
+# لجعل مفسّر لغة بايثون thread2 و thread1 من الكائنين join() هنا وضعنا قمنا باستدعاء الدالة
+# قبل أن يتابع تنفيذ باقي الأوامر الموجودة في الملف thread2 و thread1 ينتظر أن يتوقف الكائنين 
+thread1.join()
+thread2.join()
+
+# تماماً, سيتم تنفيذ أمر الطباعة التالي thread2 و thread1 بعد أن يتوقف الكائنين
+print('Both threads are end')
+		</pre>
+<p><span class="point">•</span>سنحصل على نتيجة تشبه النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			Starting Thread-1<br/>
+			Thread-1<br/>
+			Starting Thread-2<br/>
+			Thread-2<br/>
+			Thread-2<br/>
+			Thread-1<br/>
+			Thread-2<br/>
+			Thread-1<br/>
+			Ending Thread-2<br/>
+			Ending Thread-1<br/>
+			Both threads are end
+		</div>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>في المثال السابق, يمكنك حذف السطر <span class="number">12</span> لأن الكلاس <code data-enlighter-language="python">Worker</code> ورث أيضاً خاصية إسمها <code data-enlighter-language="python">name</code> من الكلاس <span class="inline"><code data-enlighter-language="python">Thread</code>.</span><br/>
+		لهذا, يمكنك تمرير الإسم مباشرةً إلى الخاصية التي ورثها الكلاس <code data-enlighter-language="python">Worker</code> بدل تعريفها فيه من جديد.</p>
+</div>
+<br/><br/>
+<h3>معلومة تقنية</h3>
+<p>عند تشغيل أكثر من <span class="word">Thread</span> في وقت واحد, لا يمكنك ضمان أو تحديد أي <span class="word">Thread</span> سيتنفذ أو ينتهي قبل الآخر.<br/>
+	السبب في ذلك أن معالج الحاسوب <span class="inline">( <span class="word">CPU</span> )</span> سيقوم بإرسال كل <span class="word">Thread</span> قمت بتشغيله إلى نواة <span class="inline">( <span class="word">Core</span> )</span> حتى ينفذهم لك في وقت واحد.<br/>
+	و منطقياً, النواة التي عليها ضغط أقل ستنتهي من تنفيذ أوامر <span class="inline">الـ <span class="word">Thread</span></span> بشكل أسرع.</p>
+<p>لهذا السبب, إذا قمت بتشغيل المثال السابق أكثر من مرة, ستجد أنك في كل مرة ستحصل على نتيجة مختلفة عن التشغيل.</p>
+</article>
+<article>
+<h2>مفهوم <span class="inline">الـ <span class="word">Main Thread</span></span> في بايثون</h2>
+<p>في بايثون, كل كود يتنفذ في البرنامج, فإنه حتماً يتنفذ بداخل <span class="word">Thread</span> واحد على الأقل.<br/>
+	أي حتى لو لم تقم بوضع الكود بداخل <span class="word">Thread</span> فإنه سيتم وضعه في <span class="inline"><span class="word">Thread</span>.</span><br/>
+	و بالتالي في حال قمت بتشغيل <span class="word">Thread</span> في البرنامج, فهذا يعني أن البرنامج حالياً يعمل فيه إثنين <span class="word">Threads</span> و ليس <span class="word">Thread</span> واحد.</p>
+<br/>
+<p>في المثال التالي, قمنا بطباعة عدد <span class="inline">الـ <span class="word">Threads</span></span> الذين يتنفذون حالياً علماً بأننا لم نقم بإنشاء أي كائن من كلاس يرث من الكلاس <span class="inline"><span class="word">Thread</span>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Worker.py</span>
+<pre data-enlighter-language="python">
+import threading   # Thread قمنا بتضمين هذا الموديول حتى نستطيع الوراثة من الكلاس
+
+# الذين يعملون حالياً Threads هنا قمنا بطباعة عدد الـ
+print('Active thread(s) count:', threading.active_count())
+
+# تم تشغيله Thread الأساسي في البرنامج. أي أول Thread هنا قمنا بطباعة إسم الـ
+print('Main thread object:', threading.main_thread().name)
+
+# الحالي الذي يتم تنفيذه Thread هنا قمنا بطباعة إسم الـ
+print('Current thread object:', threading.main_thread().name)
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على نتيجة تشبه النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			Active thread(s) count: 1<br/>
+			Main thread object: MainThread<br/>
+			Current thread object: MainThread
+		</div>
+<p><span class="point">•</span>نلاحظ أن عدد <span class="inline">الـ <span class="word">Threads</span></span> الذين يتنفذون حالياً هو <span class="inline"><span class="number">1</span>,</span> و هذا يثبت أن الكود الأساسي في البرنامج يتم وضعه في <span class="inline"><span class="word">Thread</span>.</span></p>
+<p><span class="point">•</span>كما أن إسم <span class="inline">الـ <span class="word">Thread</span></span> الأساسي و إسم <span class="inline">الـ <span class="word">Thread</span></span> الذي يتنفذ حالياً هو <span class="inline"><code data-enlighter-language="python">MainThread</code>.</span></p>
+</div>
+</article>
+<article>
+<h2>دوال الموديول <code data-enlighter-language="python">threading</code> في بايثون</h2>
+<p>الجدول التالي يحتوي على دوال الموديول <code data-enlighter-language="python">threading</code> الأكثر إستخداماً و التي سبق أن استخدمناها في الأمثلة السابقة.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">threading.active_count()</code></span>
+			ترجع عدد <span class="inline">الـ <span class="word">Threads</span></span> الذين يتنفذون في الوقت الحالي الذي تم فيه إستدعاءها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">threading.main_thread()</code></span>
+			ترجع كائن <span class="inline">الـ <code data-enlighter-language="python">thread</code></span> الأساسي في البرنامج.<br/>
+<b>معلومة:</b> <span class="inline">الـ <code data-enlighter-language="python">thread</code></span> الأساسي في البرنامج هو أول <span class="word">Thread</span> بدأ مفسر لغة بايثون بتنفيذ الأوامر الموضوعة فيه.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">threading.current_thread()</code></span>
+			ترجع كائن <span class="inline">الـ <code data-enlighter-language="python">thread</code></span> الذي يتنفذ في الوقت الحالي الذي تم فيه إستدعاءها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">threading.enumerate()</code></span>
+			ترجع كائن <code data-enlighter-language="python">list</code> يحتوي على كل كائن <code data-enlighter-language="python">thread</code> يتنفذ في الوقت الحالي الذي تم فيه إستدعاءها.<br/>
+<span class="note">ملاحظة:</span> لا ترجع أي <code data-enlighter-language="python">thread</code> تم إيقافه أو لم يتم تشغيله من الأساس.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>خصائص و دوال الكلاس <code data-enlighter-language="python">Thread</code> في بايثون</h2>
+<p>الجدول التالي يحتوي على دوال الكلاس <code data-enlighter-language="python">Thread</code> الأكثر إستخداماً و التي سبق أن استخدمناها في الأمثلة السابقة.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">run()</code></span>
+			نفعل لها <span class="word">Override</span> لنضع فيها الأوامر التي نريدها أن تتنفذ عند تشغيل كائن <span class="inline">الـ <code data-enlighter-language="python">Thread</code>.</span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">start()</code></span>
+			تستخدم لتشغيل كائن <span class="inline">الـ <code data-enlighter-language="python">Thread</code></span> الذي قام باستدعائها.<br/>
+			فعلياً, الدالة <code data-enlighter-language="python">start()</code> تقوم فقط باستدعاء الدالة <code data-enlighter-language="python">run()</code> لتنفيذ الأوامر الموضوعة فيها.<br/><br/>
+<span class="note">إنتبه:</span> لا يمكن تشغيل نفس كائن <span class="inline">الـ <code data-enlighter-language="python">Thread</code></span> أكثر من مرة. أي لا يمكن إستدعاء الدالة <code data-enlighter-language="python">start()</code> أكثر من مرة من نفس كائن <span class="inline">الـ <code data-enlighter-language="python">Thread</code>.</span><br/>
+			في حال تم استدعاء الدالة <code data-enlighter-language="python">start()</code> مرتين من نفس كائن <span class="inline">الـ <code data-enlighter-language="python">Thread</code></span> فإنها ترمي الإستثناء <span class="inline"><span class="code red">RuntimeError</span>.</span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">is_alive()</code></span>
+			ترجع <code data-enlighter-language="python">True</code> طالما أن كائن <span class="inline">الـ <code data-enlighter-language="python">Thread</code></span> لم ينتهي تنفيذه بعد حتى لو كان لم يتم البدء بتنفيذه أصلاً.<br/>
+			غير ذلك ترجع <span class="inline"><code data-enlighter-language="python">False</code>.</span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">join(timeout=None)</code></span>
+			تجعل كائن <span class="inline">الـ <code data-enlighter-language="python">Thread</code></span> الذي قام باستدعائها ينتظر إلى أن ينتهي تنفيذ <span class="inline">الـ <code data-enlighter-language="python">Thread</code></span> الذي يعمل قبله قبل أن يبدأ هو بتنفيذ الأوامر الموجودة فيه.<br/>
+			في حال أردت تأخير تنفيذ <span class="inline">الـ <code data-enlighter-language="python">Thread</code></span> الذي سيعمل عند إنتهاء تنفيذ <span class="inline">الـ <code data-enlighter-language="python">Thread</code></span> لمدة محددة فيمكنك تمرير رقم مكان الباراميتر <code data-enlighter-language="python">timeout</code> يمثل هذه المدة, مع الإشارة إلى أن الرقم الذي تمرره يمثل مدة الإنتظار بالثواني. فمثلاً إذا قمت بتمرير الرقم <span class="number">1.5</span> فهذا يعني أنك تقصد ثانية و نصف.<br/><br/>
+<b>معلومة تقنية</b><br/>
+			هذه الدالة مهمة عند الحاجة لجعل <span class="inline">الـ <span class="word">Threads</span></span> يتنفذوا الواحد تلو الآخر بدل أن يتنفذوا في وقت واحد و يسببوا مشكلة يقال لها <span class="inline"><span class="word">Deadlock</span>.</span><br/>
+			و لا تقلق إذا لم تكن تعرف المقصود من مصطلح <span class="inline"><span class="word">Deadlock</span></span> الآن لأنك ستفهمها لاحقاً من الأمثلة.<br/><br/>
+			في حال وجد مترجم لغة بايثون أن عندما سيتم تشغيل <span class="inline">الـ <code data-enlighter-language="python">Thread</code></span> سيحدث <span class="inline"><span class="word">Deadlock</span>,</span> سترمي الإستثناء <span class="inline"><span class="code red">RuntimeError</span>.</span></td>
+</tr>
+</table>
+<br/>
+<p>الجدول التالي يحتوي على خصائص الكلاس <span class="inline"><code data-enlighter-language="python">Thread</code>.</span></p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الخاصية مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">name</code></span>
+			ترجع الإسم الذي تم إعطاؤه لكائن <span class="inline">الـ <code data-enlighter-language="python">Thread</code></span> الذي قام باستدعائها.<br/>
+			فعلياً, عند إنشاء كائن من الكلاس الذي يرث من الكلاس <code data-enlighter-language="python">Thread</code> يمكنك تمرير الإسم الذي تريد إعطاؤه له لحظة إنشاءه.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">ident</code></span>
+			ترجع رقم التعرفة <span class="inline">( <span class="word">ID</span> )</span> الذي يتم توليده بشكل عشوائي و إعطائه لكائن <span class="inline">الـ <code data-enlighter-language="python">Thread</code></span> الذي قام باستدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">daemon</code></span>
+			هذه الخاصية يمكن الإستفادة منها في حال كنت تنوي تشغيل <span class="word">Thread</span> من داخل <span class="word">Thread</span> آخر.<br/>
+			إذا مررت لها القيمة <code data-enlighter-language="python">True</code> قبل أن تقوم بتشغيل <span class="inline">الـ <span class="word">Thread</span></span> الآخر, سيفهم مترجم لغة بايثون أنك تنوي إيقاف <span class="inline">الـ <span class="word">Thread</span></span> الآخر بشكل تلقائي عندما يتوقف <span class="inline">الـ <span class="word">Thread</span></span> الذي قام باستدعائه في الأساس. كما أنه في حال كان <span class="inline">الـ <span class="word">Thread</span></span> الآخر متصل بملف, بقاعدة بيانات, أو بالإنترنت إلخ.. فإن إغلاقه بشكل مفاجئ لا يضمن أن يتم إغلاق الإتصالات التي كان يجريها.<br/><br/>
+			في حال وجد مترجم لغة بايثون أن عندما سيتم تشغيل <span class="inline">الـ <code data-enlighter-language="python">Thread</code></span> سيحدث <span class="inline"><span class="word">Deadlock</span>,</span> سترمي الإستثناء <span class="inline"><span class="code red">RuntimeError</span>.</span></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>المزامنة في بايثون</h2>
+<p>في حال كنت تريد تشغيل أكثر من <span class="word">Thread</span> في نفس الوقت, يجب أن تنتبه جيداً إلى العمليات التي سيجريها كل <span class="word">Thread</span> تنوي تشغيله لأن هذا الأمر قد يسبب لك مشاكل منطقية أو يعطيك نتائج خاطئة كما سنوضح لك في السيناريوهات التالية.</p>
+<br/>
+<h3>السيناريو الأول</h3>
+<p>في حال قمت ببناء <span class="word">Thread</span> مهمته جلب علامات الطالب المخزنة في قاعدة بيانات و من ثم حساب معدله العام, و بعدما تم حساب المعدل و عرض المعدل للطالب, قام <span class="word">Thread</span> آخر بتعديل بعض العلامات في قاعدة البيانات لأنه وجد أن الطالب عنده غياب كثير.<br/>
+	إذاً, النتيجة التي أعطانا إياها <span class="inline">الـ <span class="word">Thread</span></span> الأول في هذه الحالة ليست صحيحة, حيث أنه كان يفترض حساب المعدل بعد أن تم إدخال أيام الغياب ضمن المعادلة التي تحسب له معدله النهائي و تعرض له إن كان ناجحاً بناءاً على معدله النهائي و عدد الأيام التي حضر فيها إلى الجامعة.<br/>
+	فعلى سبيل المثال, قد يكون من شروط الجامعة أنه في حال تغيّب الطالب مدة <span class="number">30</span> يوم خلال الفصل الواحد, يعتبر راسباً في كل المواد.</p>
+<p>إذاً, لحل المشكلة السابقة, كان يجب مزامنة عمل <span class="inline">الـ <span class="word">Thread</span></span> الأول و <span class="inline">الـ <span class="word">Thread</span></span> الثاني.<br/>
+	أي كان يجب تشغيل <span class="inline">الـ <span class="word">Thread</span></span> الذي يجلب أيام الغياب أولاً.<br/>
+	ثم بعد تخزين أيام الغياب و توقف <span class="inline">الـ <span class="word">Thread</span></span> عن العمل, يجب تشغيل <span class="inline">الـ <span class="word">Thread</span></span> الذي يجلب علامات الطالب و يعطيه النتيجة النهائية.</p>
+<br/>
+<h3>السيناريو الثاني</h3>
+<p>في حال كان يوجد <span class="word">Thread</span> يريد تعديل محتوى ملف, و كان يوجد <span class="word">Thread</span> آخر يقوم بقراءة محتوى نفس الملف.<br/>
+	في هذه الحالة, سيحدث أيضاً خطأ و هو أن <span class="inline">الـ <span class="word">Thread</span></span> الذي يقوم بالقراءة, سيقرأ محتوى الملف القديم, بدون معرفة أنه قد تم تحديث محتوى هذا الملف في الوقت الذي كان يقرأ منه و يجري عمليات ما بناءاً على المحتوى الذي قرأه وقتها.<br/>
+	لحل هذه المشكلة, كان يجب مزامنة عمل <span class="inline">الـ <span class="word">Thread</span></span> الذي يقرأ من الملف و <span class="inline">الـ <span class="word">Thread</span></span> الذي يعدل في الملف لضمان أن لا يتعاملا معه في وقت واحد.</p>
+<br/>
+<h3>السيناريو الثالث</h3>
+<p>في حال قمت بتشغيل إثنين <span class="inline"><span class="word">Threads</span>,</span> و في مرحلة ما أصبح الإثنين عالقين بسبب أن <span class="inline">الـ <span class="word">Thread</span></span> الأول بحاجة للوصول إلى شيء يستخدمه <span class="inline">الـ <span class="word">Thread</span></span> الثاني. و بنفس الوقت <span class="inline">الـ <span class="word">Thread</span></span> الثاني بحاجة للوصول إلى شيء يستخدمه <span class="inline">الـ <span class="word">Thread</span></span> الأول. هذه المعضلة تسمى <span class="inline"><span class="word">Deadlock</span>,</span> و هي يمكنك تخليها كما في الصورة التالية.</p>
+<p><a href="deadlock.png" target="_blank"><img src="deadlock.png"/></a></p>
+<p>لحل هذه المشكلة, كان يمكن تشغيل كل <span class="word">Thread</span> على حدا.</p>
+<br/><br/>
+<p>في المثال التالي قمنا بتعديل المثال السابق لجعل <span class="inline">الـ <span class="word">Threads</span></span> الذين ننشأهم من الكلاس <code data-enlighter-language="python">Worker</code> يعملون بطريقة متزامنة, أي الواحد تلو الآخر و ليس مع بعض.<br/>
+	ما فعلناه ببساطة, هو إنشاء كائن من الكلاس <span class="inline"><code data-enlighter-language="python">Lock</code>,</span> ثم وضع الكود الذي نريده أن يتنفذ بشكل متزامن بداخل بلوك من هذا الكائن.<br/>
+<span class="note">ملاحظة:</span> قمنا بتعليم الأسطر التي قمنا بإضافتها على الكود السابق باللون الأصفر.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Worker.py</span>
+<pre data-enlighter-highlight="6,20" data-enlighter-language="python">
+import threading   # Thread قمنا بتضمين هذا الموديول حتى نستطيع الوراثة من الكلاس
+import time        # التي سنستخدمها في المثال sleep() قمنا بتضمين هذا الموديول لأنها تحتوي على الدالة
+
+
+# لأننا سنستخدمه لجعل أي كائن ننشئه من الكلاس يعمل بطريقة متزامنة Lock هنا قمنا بإنشاء كائن من الكلاس
+lock = threading.Lock()
+
+# Thread يرث من الكلاس Worker هنا قمنا بإنشاء كلاس إسمه
+class Worker(threading.Thread):
+
+	# Thread الموجودة في الكلاس __init__() من أجل إستدعاء الدالة __init__() هنا قمنا بتعريف الدالة
+	# name أيضاً, من أجل تحديد أنه يجب تمرير إسم للكائن الذي يتم إنشاؤه من الكلاس و الذي سيتم تخزينه في الخاصية
+    def __init__(self, name):
+        super(Worker, self).__init__()
+        self.name = name
+
+	# لتحديد ما سيحدث عند تشغيل الكائن الذي ننشئه من هذا الكلاس run() هنا قمنا بتعريف الدالة
+    def run(self):
+		# هنا قمنا بجعل الكود يتنفذ بطريقة متزامنة
+		with lock:
+			# في البداية سيتم طباعة إسم الكائن و أنه قد بدأ تنفيذه
+			print('Starting', self.name)
+			
+			# sleep() بعدها سيتم طباعة إسم الكائن 3 مرات. و قمنا باستدعاء الدالة
+			# و تمرير الرقم 1 لها لتجعل الحلقة تتوقف مدة ثانية في نهاية كل دورة
+			for i in range(3):
+				print(self.name)
+				time.sleep(1)
+			
+			# في النهاية سيتم طباعة إسم الكائن و أنه قد إنتهى تنفيذه
+			print('Ending', self.name)
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# Worker الذي قمنا بإنشائه في الموديول Worker هنا قمنا بتضمين الكلاس
+from Worker import Worker
+
+# Threads أي قمنا بإنشاء إثنين .Worker هنا قمنا بإنشاء كائنين من الكلاس
+thread1 = Worker('Thread-1')
+thread2 = Worker('Thread-2')
+
+# مرة من كل كائن run() من كلا الكائنين لتشغيلهما. أي سيتم استدعاء الدالة start() هنا قمنا باستدعاء الدالة
+thread1.start()
+thread2.start()
+
+# لجعل مفسّر لغة بايثون thread2 و thread1 من الكائنين join() هنا وضعنا قمنا باستدعاء الدالة
+# قبل أن يتابع تنفيذ باقي الأوامر الموجودة في الملف thread2 و thread1 ينتظر أن يتوقف الكائنين 
+thread1.join()
+thread2.join()
+
+# تماماً, سيتم تنفيذ أمر الطباعة التالي thread2 و thread1 بعد أن يتوقف الكائنين
+print('Both threads are end')
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			Starting Thread-1     <span class="red">&lt;-- الأول Thread هنا تم البدء بتنفيذ الـ</span><br/>
+			Thread-1<br/>
+			Thread-1<br/>
+			Thread-1<br/>
+			Ending Thread-1       <span class="red">&lt;-- الأول Thread هنا إنتهى تنفيذ أوامر الـ</span><br/>
+			Starting Thread-2     <span class="red">&lt;-- الثاني Thread هنا تم البدء بتنفيذ الـ</span><br/>
+			Thread-2<br/>
+			Thread-2<br/>
+			Thread-2<br/>
+			Ending Thread-2       <span class="red">&lt;-- الثاني Thread هنا إنتهى تنفيذ أوامر الـ</span><br/>
+			Both threads are end
+		</div>
+</div>
+<br/><br/>
+<p>في حال أردت تطبيق أسلوب المزامنة بدون إستخدام أسلوب <span class="inline"><code data-enlighter-language="python">with block:</code>,</span> يجب وضع الكود الذي تريد مزامنته بين الدالتين <code data-enlighter-language="python">acquire()</code> و <span class="inline"><code data-enlighter-language="python">release()</code>.</span><br/>
+	إذاً يمكنك كتابة كود الدالة <code data-enlighter-language="python">run()</code> كالتالي و الحصول على نفس النتيجة.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumber="18">
+	def run(self):
+
+		block.acquire()    # هنا قمنا بجعل الكود الذي سيتم تنفيذه بعدها يعمل بطريقة متزامنة
+		
+		print('Starting', self.name)
+		for i in range(3):
+			print(self.name)
+			time.sleep(1)
+			
+		print('Ending', self.name)
+		
+		block.release()    # هنا قمنا بإيقاف التزامن
+	</pre>
+</article>
+<article>
+<h2>تجميع <span class="inline">الـ <span class="word">Threads</span></span> بداخل <code data-enlighter-language="python">Queue</code> في بايثون</h2>
+<p>في حال أردت تشغيل مجموعة <span class="word">Threads</span> بشكل متزامن, يمكنك إنشاء كائن من الكلاس <code data-enlighter-language="python">Queue</code> و وضعهم فيه.<br/>
+	بعدها تقوم بإنشاء حلقة للمرور على <span class="word">Thread</span> واحد منهم في كل مرة, و من ثم تقوم بتشغيله.</p>
+<br/>
+<p>الجدول التالي يحتوي على دوال الكلاس <code data-enlighter-language="python">Queue</code> الأكثر إستخداماً.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">get()</code></span>
+			ترجع العنصر التالي من كائن <span class="inline">الـ <code data-enlighter-language="python">Queue</code></span> الذي قام باستدعائها و من ثم تقوم بحذفه منها.<br/>
+			في حالتنا سترجع <span class="word">Thread</span> جديد في كل مرة نستدعيها فيها.<br/>
+			في حال كان كائن  <span class="inline">الـ <code data-enlighter-language="python">Queue</code></span> و تم استدعاءها فإنها ترمي الإستثناء <span class="inline"><span class="code red">Empty</span>.</span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">put(item)</code></span>
+			تضيف الكائن الذي نمرره لها كعنصر في كائن <span class="inline">الـ <code data-enlighter-language="python">Queue</code></span> الذي قام باستدعائها.<br/>
+			في حالتنا نمرر لها كائن من كلاس يمثل <span class="inline"><span class="word">Thread</span>.</span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">qsize()</code></span>
+			ترجع عدد العناصر الموجودة في كائن <span class="inline">الـ <code data-enlighter-language="python">Queue</code></span> الذي قام باستدعائها.<br/>
+			في حالتنا عدد <span class="inline">الـ <span class="word">Threads</span></span> الموجودين فيه و الذين لم يتم تنفيذهم بعد.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">empty()</code></span>
+			تستخدم لمعرفة ما إن كان كائن <span class="inline">الـ <code data-enlighter-language="python">Queue</code></span> الذي قام باستدعائها فارغاً أم لا.<br/>
+			ترجع <code data-enlighter-language="python">True</code> إذا كان فارغاً, غير ذلك ترجع <span class="inline"><code data-enlighter-language="python">False</code>.</span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">Full()</code></span>
+			تستخدم لمعرفة ما إن كان كائن <span class="inline">الـ <code data-enlighter-language="python">Queue</code></span> الذي قام باستدعائها ممتلىء أم لا, أي قادر على تخزين عناصر جديدة أم لا.<br/>
+			ترجع <code data-enlighter-language="python">True</code> إذا كان عدد العناصر الموضوعة فيه أقل من عدد العناصر التي يمكنه تخزينها, غير ذلك ترجع <span class="inline"><code data-enlighter-language="python">False</code>.</span></td>
+</tr>
+</table>
+<br/><br/>
+<p>في المثال التالي قمنا قمنا بإنشاء ثلاث كائنات تمثل <span class="word">Threads</span> و وضعناهم بشكل مؤقت في <span class="word">list</span> إسمه <span class="inline"><span class="word">listWorkers</span>.</span>
+	بعدها قمنا بتخزين كائنات <span class="inline">الـ <span class="word">listWorkers</span></span> في <span class="word">Queue</span> إسمه <span class="inline"><code data-enlighter-language="python">queueWorkers</code>.</span><br/>
+	في الآخير قمنا بتشغيل كل <span class="inline">الـ <span class="word">Threads</span></span> الموضوعين في الكائن <span class="inline"><code data-enlighter-language="python">queueWorkers</code>.</span></p>
+<p><span class="note">ملاحظة:</span> جعلنا <span class="inline">الـ <span class="word">Threads</span></span> يعملوا بشكل متزامن.<br/>
+	و بالتالي في حال لم ترد جعلهم يعملوا بشكل متزامن, سيكون عليك فقط إزالة جملة <span class="inline"><code data-enlighter-language="python">with lock:</code></span> الموضوعة في الدالة <span class="inline"><code data-enlighter-language="python">run()</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Worker.py</span>
+<pre data-enlighter-language="python">
+import threading   # Thread قمنا بتضمين هذا الموديول حتى نستطيع الوراثة من الكلاس
+import time        # التي سنستخدمها في المثال sleep() قمنا بتضمين هذا الموديول لأنها تحتوي على الدالة
+
+
+# لأننا سنستخدمه لجعل أي كائن ننشئه من الكلاس يعمل بطريقة متزامنة Lock هنا قمنا بإنشاء كائن من الكلاس
+lock = threading.Lock()
+
+# Thread يرث من الكلاس Worker هنا قمنا بإنشاء كلاس إسمه
+class Worker(threading.Thread):
+
+	# Thread الموجودة في الكلاس __init__() من أجل إستدعاء الدالة __init__() هنا قمنا بتعريف الدالة
+	# name أيضاً, من أجل تحديد أنه يجب تمرير إسم للكائن الذي يتم إنشاؤه من الكلاس و الذي سيتم تخزينه في الخاصية
+    def __init__(self, name):
+        super(Worker, self).__init__()
+        self.name = name
+
+	# لتحديد ما سيحدث عند تشغيل الكائن الذي ننشئه من هذا الكلاس run() هنا قمنا بتعريف الدالة
+    def run(self):
+		# هنا قمنا بجعل الكود يتنفذ بطريقة متزامنة
+		with lock:
+			# في البداية سيتم طباعة إسم الكائن و أنه قد بدأ تنفيذه
+			print('Starting', self.name)
+			
+			# sleep() بعدها سيتم طباعة إسم الكائن 3 مرات. و قمنا باستدعاء الدالة
+			# و تمرير الرقم 1 لها لتجعل الحلقة تتوقف مدة ثانية في نهاية كل دورة
+			for i in range(3):
+				print(self.name)
+				time.sleep(1)
+			
+			# في النهاية سيتم طباعة إسم الكائن و أنه قد إنتهى تنفيذه
+			print('Ending', self.name)
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+from Worker import Worker  # Worker الذي قمنا بإنشائه في الموديول Worker هنا قمنا بتضمين الكلاس
+from queue import Queue    # queue الموجود في الموديول Queue هنا قمنا بتضمين الكلاس
+
+# Thread أي وضعنا فيه 3 كائنات تمثل .Worker وضعنا فيه 3 كائنات من الكلاس list هنا قمنا بإنشاء
+workerList = [
+    Worker('Thread-1'),
+    Worker('Thread-2'),
+    Worker('Thread-3')
+]
+
+# لأننا نريد وضع نفس العناصر بداخله workerList عدد عناصره يساوي عدد عناصر الكائن Queue هنا قمنا بإنشاء كائن
+workerQueue = Queue(len(workerList))
+
+# workerQueue و من ثم تضيفه كعنصر في الكائن workerList في كل دورة ترجع كائن من الكائنات الموجودة في for هنا قمنا بإنشاء حلقة
+# workerQueue في الكائن workerList في النهاية سيتم وضع كل الكائنات الموجودة في الكائن
+for thread in workerList:
+    workerQueue.put(thread)
+
+# غير فارغ workerQueue لا تتوقف عن تكرار ما بداخلها طالما أن الكائن while هنا قمنا بإنشاء حلقة
+# و من ثم تنفيذه workerQueue من الكائن Worker في كل دورة من دورات الحلقة, سيتم إخراج كائن
+while not workerQueue.empty():
+    workerQueue.get().start()
+
+
+# workerList في كل دورة ترجع كائن من الكائنات الموجودة في for هنا قمنا بإنشاء حلقة
+# لكي يجعل مفسّر لغى بايثون لا ينفذ أي أوامر أخرى موجودة بعد الحلقة join() ترجعه سيستدعي الدالة Worker كل كائن
+for thread in workerList:
+    thread.join()
+
+# تماماً, سيتم تنفيذ أمر الطباعة التالي thread3 و thread2 ,thread1 بعد أن تتوقف الكائنات
+print('All threads are end')
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			Starting Thread-1     <span class="red">&lt;-- الأول Thread هنا تم البدء بتنفيذ الـ</span><br/>
+			Thread-1<br/>
+			Thread-1<br/>
+			Thread-1<br/>
+			Ending Thread-1       <span class="red">&lt;-- الأول Thread هنا إنتهى تنفيذ أوامر الـ</span><br/>
+			Starting Thread-2     <span class="red">&lt;-- الثاني Thread هنا تم البدء بتنفيذ الـ</span><br/>
+			Thread-2<br/>
+			Thread-2<br/>
+			Thread-2<br/>
+			Ending Thread-2       <span class="red">&lt;-- الثاني Thread هنا إنتهى تنفيذ أوامر الـ</span><br/>
+			Starting Thread-3     <span class="red">&lt;-- الثالث Thread هنا تم البدء بتنفيذ الـ</span><br/>
+			Thread-3<br/>
+			Thread-3<br/>
+			Thread-3<br/>
+			Ending Thread-3       <span class="red">&lt;-- الثالث Thread هنا إنتهى تنفيذ أوامر الـ</span><br/>
+			All threads are end
+		</div>
+</div>
+</article>
+<article>
+<h2>الفرق بين <span class="inline">الـ <span class="word">Process</span></span> و <span class="inline">الـ <span class="word">Thread</span></span> بشكل عام</h2>
+<p><span class="word">Process</span> تعني برنامج شغال حالياً, و قد قام نظام التشغيل بحجز مساحة خاصة له في الذاكرة.</p>
+<p><span class="word">Thread</span> عبارة عن مجموعة أوامر يتم تنفيذها أثناء تنفيذ أوامر أخرى في نفس البرنامج. يمكنك تشغيل أكثر من <span class="word">Thread</span> في نفس الوقت في البرنامج, و يمكن أيضاً مشاركة المعلومات بينهم. مع ملاحظة أنه يتم إنشاء جميع <span class="inline">الـ <span class="word">Threads</span></span> من ضمن المساحة المحجوزة <span class="inline">للـ <span class="word">Process</span></span> في الذاكرة.</p>
+<a href="difference-between-process-and-threads.png" target="_blank"><img alt="الفرق بين ال process و ال thread" src="difference-between-process-and-threads.png"/></a>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

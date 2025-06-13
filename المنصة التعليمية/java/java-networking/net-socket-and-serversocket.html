@@ -1,0 +1,611 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الكلاس Socket و الكلاس ServerSocket في جافا | Java socket programming</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>الكلاس <code data-enlighter-language="java">Socket</code> و الكلاس <code data-enlighter-language="java">ServerSocket</code> في جافا</h1>
+<article>
+<h3>مقدمة</h3>
+<p>لإجراء إتصال بين جهازي كمبيوتر متصلين مع بعضهما البعض على شبكة النت, نقوم بتجهيز <span class="word">Socket</span> في الكمبيوتر الأول و <span class="word">Socket</span> في الكمبيوتر الثاني.<br/>
+	الـ <span class="word">Socket</span> هي المعلومات الأساسية التي يحتاج إليها البرنامج للتواصل مع برنامج موجود في كمبيوتر آخر.</p>
+<p>للتعامل مع الـ <span class="word">Socket</span> جافا توفر لنا مجموعة من الكلاسات التي يمكننا إستخدامها لإنشاء برامج تجعل المستخدمين قادرين على التواصل فيما بينهم بشكل متزامن عبر شبكة النت كما في الصورة التالية.</p>
+<br/>
+<p><a href="sending-data-from-client-to-server-in-java.png" target="_blank"><img alt="إرسال بيانات من كمبيوتر إلى آخر في جافا." src="sending-data-from-client-to-server-in-java.png"/></a></p>
+<br/>
+<p>في هذا الدرس سنشرح الكلاسات <code data-enlighter-language="java">Socket</code> و <code data-enlighter-language="java">ServerSocket</code> التي يمكن استخدامها لمشاركة البيانات بين أي أجهزة كمبيوتر متصلة بشبكة النت.</p><br/>
+<h3>مصطلحات تقنية</h3>
+<ul class="explain">
+<li><p><span class="word">Server</span>: تعني خادم أو سيرفر في العربية, و هو عبارة عن كمبيوتر له مواصفات عالية, يقدم خدمات للـ <span class="word">Clients</span>.</p></li>
+<li><p><span class="word">Client</span>: تعني عميل أو مستخدم عادي في العربية, و هو عبارة عن أي كمبيوتر عادي يحاول أن يتواصل مع الـ <span class="word">Server</span> للحصول على خدمة منه.</p></li>
+<li><p><span class="word">Remote App</span>: تعني إنشاء تطبيق يستخدم للتحكم في جهاز ما عن بعد و كأن الشخص يجلس أمامه.</p>
+</li></ul>
+</article>
+<article>
+<h2>الكلاس <code data-enlighter-language="java">Socket</code></h2>
+<p>الكلاس <code data-enlighter-language="java">Socket</code> يستخدم لإنشاء إتصال بين برنامج المستخدم و البرنامج الموجود في السيرفر.</p><br/>
+<h3>بناؤه</h3>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public class Socket
+extends Object
+implements Closeable 
+	</pre>
+<br/><br/>
+<h3>كونستركتورات الكلاس <code data-enlighter-language="java">Socket</code></h3>
+<p>الجدول التالي يحتوي على بعض الكونستركتورات الموجودة في الكلاس <code data-enlighter-language="java">Socket</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الكونستركتور مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Socket(String host, int port)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">Socket</code> يجعل برنامج المستخدم متصلاً مع السيرفر بشكل متزامن.<br/><br/>
+<b>باراميترات</b><br/>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">host</code> هو نص يمثل عنوان السيرفر الذي سنحاول الإتصال به من برنامج المستخدم.</p></li>
+<li><p><code data-enlighter-language="java">port</code> هو رقم يمثل البورت الذي سيتم حجزه خصيصاً للبرنامج في جهاز المستخدم.</p></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Socket(InetAddress address, int port)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">Socket</code> يجعل برنامج المستخدم متصلاً مع السيرفر بشكل متزامن.<br/><br/>
+<b>باراميترات</b><br/>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">host</code> هو كائن نوعه <code data-enlighter-language="java">InetAddress</code> يمثل عنوان السيرفر الذي سنحاول الإتصال به من برنامج المستخدم.</p></li>
+<li><p><code data-enlighter-language="java">port</code> هو رقم يمثل البورت الذي سيتم حجزه خصيصاً للبرنامج في جهاز المستخدم.</p></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Socket(String host, int port, InetAddress localAddr, int localPort)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">Socket</code> يجعل برنامج المستخدم متصلاً مع السيرفر بشكل متزامن.<br/>
+			يستخدم في حالة الـ <span class="word">Remote App</span>.<br/><br/>
+<b>باراميترات</b><br/>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">host</code> هو نص يمثل عنوان السيرفر الذي سنحاول الإتصال به من برنامج المستخدم.</p></li>
+<li><p><code data-enlighter-language="java">port</code> هو رقم يمثل البورت المحجوز في السيرفر خصيصاً للبرنامج الذي سنحاول الإتصال به من برنامج المستخدم.</p></li>
+<li><p><code data-enlighter-language="java">localAddr</code> هو كائن نوعه <code data-enlighter-language="java">InetAddress</code> يمثل عنوان كمبيوتر المستخدم الذي يحاول الإتصال بالسيرفر.</p></li>
+<li><p><code data-enlighter-language="java">localPort</code> هو رقم يمثل البورت الذي سيتم حجزه خصيصاً للبرنامج في جهاز المستخدم.</p></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Socket(InetAddress address, int port, InetAddress localAddr, int localPort)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">Socket</code> يجعل برنامج المستخدم متصلاً مع السيرفر بشكل متزامن.<br/>
+			يستخدم في حالة الـ <span class="word">Remote App</span>.<br/><br/>
+<b>باراميترات</b><br/>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">address</code> هو كائن نوعه <code data-enlighter-language="java">InetAddress</code> يمثل عنوان السيرفر الذي سنحاول الإتصال به من برنامج المستخدم.</p></li>
+<li><p><code data-enlighter-language="java">port</code> هو رقم يمثل البورت المحجوز في السيرفر خصيصاً للبرنامج الذي سنحاول الإتصال به من برنامج المستخدم.</p></li>
+<li><p><code data-enlighter-language="java">localAddr</code> هو كائن نوعه <code data-enlighter-language="java">InetAddress</code> يمثل عنوان كمبيوتر المستخدم الذي يحاول الإتصال بالسيرفر.</p></li>
+<li><p><code data-enlighter-language="java">localPort</code> هو رقم يمثل البورت الذي سيتم حجزه خصيصاً للبرنامج في جهاز المستخدم.</p></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Socket()</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">Socket</code> لكنه لا يجعل برنامج المستخدم متصلاً مع السيرفر.<br/>
+			هنا ستضطر أن تستدعي الدالة <code data-enlighter-language="java">connect()</code> بعده حتى تجعل المستخدم يتصل بالسيرفر.</td>
+</tr>
+</table>
+<br/>
+<h3>دوال الكلاس <code data-enlighter-language="java">Socket</code></h3>
+<p>الجدول التالي يحتوي على بعض دوال الكلاس <code data-enlighter-language="java">Socket</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void connect(SocketAddress host, int timeout)</code></span>
+			تحتاج هذه الدالة فقط في حال أنشأت كائن الـ <code data-enlighter-language="java">Socket</code> بواسطة الكونستركتور الذي لا يأخذ أي <span class="word">Argument</span> لتبدأ الإتصال مع السيرفر.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public InetAddress getInetAddress()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">InetAddress</code> يمثل عنوان السيرفر الذي هو على اتصال مع البرنامج من خلال كائن الـ <code data-enlighter-language="java">Socket</code>.<br/>
+			ترجع <code data-enlighter-language="java">null</code> في حال كائن كائن الـ <code data-enlighter-language="java">Socket</code> غير متصل بالسيرفر.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int getPort()</code></span>
+			ترجع رقم البورت الذي يستخدمه كائن الـ <code data-enlighter-language="java">Socket</code> في الكمبيوتر الآخر للتحكم به عن بعد.<br/>
+			ترجع <span class="number">0</span> في حال كان كائن الـ <code data-enlighter-language="java">Socket</code> مغلق أو لم يبدأ عملية الإتصال بعد.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int getLocalPort()</code></span>
+			ترجع رقم البورت الذي يستخدمه كائن الـ <code data-enlighter-language="java">Socket</code> الذي قام باستدعائها للإتصال مع السيرفر.<br/>
+			ترجع <span class="number">1-</span> في حال كان كائن الـ <code data-enlighter-language="java">Socket</code> مغلق أو لم يبدأ عملية الإتصال بعد.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public SocketAddress getRemoteSocketAddress()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">SocketAddress</code> يمثل عنوان الكمبيوتر الذي نتحكم به عن بعد.<br/>
+			ترجع <code data-enlighter-language="java">null</code> في حال كائن كائن الـ <code data-enlighter-language="java">Socket</code> غير متصل بالسيرفر.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public InputStream getInputStream()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">InputStream</code> يستخدم للقراءة من الـ <code data-enlighter-language="java">Socket</code>.<br/>
+            ترمي الإستثناء <span class="code red">IOException</span> في حال حدث خطأ عند نقل البيانات.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public OutputStream getOutputStream()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">OutputStream</code> يستخدم للكتابة في الـ <code data-enlighter-language="java">Socket</code>.<br/>
+            ترمي الإستثناء <span class="code red">IOException</span> في حال حدث خطأ عند نقل البيانات.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void close()</code></span>
+			تغلق الإتصال مع السيرفر, و عندها لن يعود باستطاعتك إستخدام نفس كائن الـ <code data-enlighter-language="java">Socket</code> للإتصال بالسيرفر من جديد.<br/><br/>
+			في حال حدث خطأ عند التعامل مع الـ <code data-enlighter-language="java">Socket</code> يتم رمي الإستثناء <span class="code red">IOException</span><br/>
+			و في حال كائن الـ <code data-enlighter-language="java">Socket</code> الذي قام باستدعاءها معلق ترمي الخطأ <span class="code red">SocketException</span>.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>الكلاس <code data-enlighter-language="java">ServerSocket</code></h2>
+<p>الكلاس <code data-enlighter-language="java">ServerSocket</code> يستخدم لفتح بورت في السيرفر و تلقي أي إتصال من قبل أي مستخدم عادي.</p>
+<br/>
+<h3>بناؤه</h3>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public class ServerSocket
+extends Object
+implements Closeable
+	</pre>
+<br/><br/>
+<h3>كونستركتورات الكلاس <code data-enlighter-language="java">ServerSocket</code></h3>
+<p>الجدول التالي يحتوي على جميع الكونستركتورات الموجودة في الكلاس <code data-enlighter-language="java">ServerSocket</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الكونستركتور مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public ServerSocket()</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">ServerSocket</code> ليس جاهزاً بعد لتلقي أي إتصال.<br/>
+			هنا ستضطر أن تستدعي الدالة <code data-enlighter-language="java">accept()</code> بعده حتى تجعل العملاء قادرين على الإتصال بالسيرفر.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public ServerSocket(int port)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">ServerSocket</code> جاهز لتلقي إتصال من أي عميل على البورت الذي نمرره له كـ <span class="word">Argument</span>.<br/>
+			في حال قمت بتمرير القيمة <span class="number">0</span> كـ <span class="word">Argument</span> فهذا يعني أن السيرفر سيختار أي رقم بورت متوفر عنده.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public ServerSocket(int port, int backlog)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">ServerSocket</code> جاهز لتلقي إتصال مع عدد محدد من العملاء في نفس الوقت و على بورت محدد.<br/><br/>
+<b>باراميترات</b><br/>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">port</code> هو رقم البورت الذي سيتم تلقي إتصلات العملاء من خلاله.</p></li>
+<li><p><code data-enlighter-language="java">backlog</code> هو رقم يمثل عدد العملاء الأقصى الذي يمكنهم الإتصال مع السيرفر في نفس الوقت.</p></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public ServerSocket(int port, int backlog, InetAddress bindAddress)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">ServerSocket</code> جاهز لتلقي إتصال مع عدد محدد من العملاء في نفس الوقت و على بورت محدد و على عنوان واحد.<br/>
+			إذاً يستخدم هذا الكونستركتور في حال كان السيرفر يملك أكثر من عنوان, لكنك تريد الإتصال مع العملاء من عنوان واحد.<br/><br/>
+<b>باراميترات</b><br/>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">port</code> هو رقم البورت الذي سيتم تلقي إتصلات العملاء من خلاله.</p></li>
+<li><p><code data-enlighter-language="java">backlog</code> هو رقم يمثل عدد العملاء الأقصى الذي يمكنهم الإتصال مع السيرفر في نفس الوقت.</p></li>
+<li><p><code data-enlighter-language="java">bindAddress</code> هو كائن نوعه <code data-enlighter-language="java">InetAddress</code> يمثل عنوان السيرفر المخصص للتواصل مع العملاء.</p></li>
+</ul>
+</td>
+</tr>
+</table>
+<br/>
+<h4>دوال الكلاس <code data-enlighter-language="java">Socket</code></h4>
+<p>الجدول التالي يحتوي على بعض دوال الكلاس <code data-enlighter-language="java">Socket</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Socket accept()</code></span>
+			تحتاج هذه الدالة فقط في حال أنشأت كائن الـ <code data-enlighter-language="java">ServerSocket</code> بواسطة الكونستركتور الذي لا يأخذ أي <span class="word">Argument</span> لتجعل السيرفر يقبل الإتصال مع العملاء.<br/><br/>
+			ترمي الإستثناء <span class="code red">SocketException</span> في حال حدث خطأ سببه البروتوكول المستخدم في عملية الإتصال.<br/>
+			ترمي الإستثناء <span class="code red">SocketTimeoutException</span> في حال قمنا باستدعائها قبل استدعاء الدالة <code data-enlighter-language="java">accept()</code>.<br/>
+			ترمي الإستثناء <span class="code red">IllegalArgumentException</span> في حال وضعنا قيمة الباراميتر <code data-enlighter-language="java">size</code> أصغر أو تساوي صفر.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void bind(SocketAddress endpoint)</code></span>
+			في حال أنشأت كائن الـ <code data-enlighter-language="java">ServerSocket</code> بواسطة الكونستركتور الذي لا يأخذ أي <span class="word">Argument</span>, و كان السيرفر يملك أكثر من عنوان, يمكنك استدعاء هذه الدالة قبل استدعاء <code data-enlighter-language="java">accept()</code>, لتحديد العنوان الذي سيتلقى إتصالات العملاء.<br/><br/>
+			مكان الباراميتر <code data-enlighter-language="java">endpoint</code> عليك تمرير كائن من إحدى الكلاسات التي ترث من الكلاس <code data-enlighter-language="java">SocketAddress</code>.<br/>
+			في حال قمت بتمرير القيمة <code data-enlighter-language="java">null</code> مكانه سيتلقى السيرفر إتصالات العملاء على أي عنوان يملكه - في حال كان يملك أكثر من عنوان - و على أي بورت متوفر.<br/><br/>
+		    ترمي الإستثناء <span class="code red">IOException</span> في حال فشلت عملية الإتصال أو في حال كان الإتصال مفتوح أصلاً.<br/>
+		    ترمي الإستثناء <span class="code red">IllegalArgumentException</span> في حال كان الكائن الذي قمنا بتمريره لها لا يتناسب مع البروتوكول المستخدم من قبل كائن الـ <code data-enlighter-language="java">ServerSocket</code> الذي قام باستدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void bind(SocketAddress endpoint, int backlog)</code></span>
+			في حال أنشأت كائن الـ <code data-enlighter-language="java">ServerSocket</code> بواسطة الكونستركتور الذي لا يأخذ أي <span class="word">Argument</span>, و كان السيرفر يملك أكثر من عنوان, يمكنك استدعاء هذه الدالة قبل استدعاء <code data-enlighter-language="java">accept()</code>, لتحديد العنوان الذي سيتلقى إتصالات العملاء.<br/><br/>
+<b>باراميترات</b><br/>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">endpoint</code> هو كائن من إحدى الكلاسات التي ترث من الكلاس <code data-enlighter-language="java">SocketAddress</code> يمثل عنوان السيرفر الذي سيتلقى إتصال العملاء.<br/>
+			    في حال قمت بتمرير القيمة <code data-enlighter-language="java">null</code> مكانه سيتلقى السيرفر إتصالات العملاء على أي عنوان يملكه - في حال كان يملك أكثر من عنوان - و على أي بورت متوفر.</p></li>
+<li><p><code data-enlighter-language="java">backlog</code> هو رقم يمثل عدد العملاء الأقصى الذي يمكنهم الإتصال مع السيرفر في نفس الوقت.</p></li>
+</ul><br/>
+		    ترمي الإستثناء <span class="code red">IOException</span> في حال فشلت عملية الإتصال أو في حال كان الإتصال مفتوح أصلاً.<br/>
+		    ترمي الإستثناء <span class="code red">IllegalArgumentException</span> في حال كان الكائن الذي قمنا بتمريره لها لا يتناسب مع البروتوكول المستخدم من قبل كائن الـ <code data-enlighter-language="java">ServerSocket</code> الذي قام باستدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean isBound()</code></span>
+			ترجع <code data-enlighter-language="java">true</code> في حال كان كائن الـ <code data-enlighter-language="java">ServerSocket</code> جاهزاً لتلقي إتصالات العملاء على أي عنوان يملكه.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void setReceiveBufferSize(int size)</code></span>
+			في حال قمت بإنشاء كائن الـ <code data-enlighter-language="java">ServerSocket</code> باستخدام الكونستركتور الذي لا يأخذ أي <span class="word">Argument</span>, يمكنك إستدعاءها قبل استدعاء الدالة <code data-enlighter-language="java">bind()</code> لتحديد حجم البيانات الأقصى الذي يمكن تبادله بين الخادم و العميل.<br/><br/>
+			ترمي الإستثناء <span class="code red">SocketException</span> في حال حدث خطأ سببه البروتوكول المستخدم في عملية الإتصال.<br/>
+			ترمي الإستثناء <span class="code red">IllegalArgumentException</span> في حال وضعت قيمة الباراميتر <code data-enlighter-language="java">size</code> أصغر أو تساوي صفر.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public InetAddress getInetAddress()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">InetAddress</code> يمثل عنوان كائن الـ <code data-enlighter-language="java">ServerSocket</code>.<br/>
+			ترجع <code data-enlighter-language="java">null</code> في حال كان كائن الـ <code data-enlighter-language="java">ServerSocket</code> غير جاهز للإتصال مع العملاء, أو في حال تم إغلاقه.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public SocketAddress getLocalSocketAddress()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">InetAddress</code> يمثل عنوان كائن الـ <code data-enlighter-language="java">ServerSocket</code> بالإضافة إلى رقم البورت.<br/>
+			ترجع <code data-enlighter-language="java">null</code> في حال كان كائن الـ <code data-enlighter-language="java">ServerSocket</code> غير جاهز للإتصال مع العملاء, أو في حال تم إغلاقه.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int getLocalPort()</code></span>
+			ترجع رقم البورت الذي يستخدمه كائن الـ <code data-enlighter-language="java">ServerSocket</code> لتلقي إتصالات العملاء.<br/>
+			ترجع <span class="number">1-</span> في حال لم يقم كائن الـ <code data-enlighter-language="java">ServerSocket</code> بتحديد البورت الذي سيستخدمه قبل استدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int getReceiveBufferSize()</code></span>
+			ترجع رقم يمثل حجم البيانات الذي يمكن تبادله بين الخادم و العميل خلال عملية الإتصال بالـ <span class="word">KB</span>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void close()</code></span>
+			تغلق الإتصال مع العملاء. عندها لن يعود باستطاعتك إستخدام نفس كائن الـ <code data-enlighter-language="java">ServerSocket</code>لتلقي إتصالات من العملاء.<br/><br/>
+			في حال حدث خطأ عند التعامل مع الـ <code data-enlighter-language="java">Socket</code> يتم رمي الإستثناء <span class="code red">IOException</span><br/>
+			و في حال كائن الـ <code data-enlighter-language="java">Socket</code> الذي قام باستدعاءها معلق ترمي الخطأ <span class="code red">SocketException</span>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean isClosed()</code></span>
+			ترجع <code data-enlighter-language="java">true</code> في حال تم إغلاق كائن الـ <code data-enlighter-language="java">ServerSocket</code> بواسطة الدالة <code data-enlighter-language="java">close()</code>.<br/>
+			غير ذلك ترجع <code data-enlighter-language="java">false</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String toString()</code></span>
+			ترجع نص يمثل عنوان و رقم بورت كائن الـ <code data-enlighter-language="java">ServerSocket</code>.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>أخطاء محتملة</h2>
+<p>بعض الأخطاء التي قد تقع عند إنشاء كائن من الكلاسات <code data-enlighter-language="java">Socket</code> و <code data-enlighter-language="java">ServerSocket</code>.</p>
+<ul class="explain">
+<li><p><span class="code red">UnknownHostException</span> في حال كان لم يتم معرفة الـ <span class="word">IP Address</span> للـ <span class="word">Host Name</span> الذي قمنا بتمريره.</p></li>
+<li><p><span class="code red">SecurityException</span> في حال كان البرنامج ممنوع من الإتصال بالشبكة.</p></li>
+<li><p><span class="code red">IOException</span> في حال حدث خطأ عند نقل البيانات.</p></li>
+<li><p><span class="code red">IllegalArgumentException</span> في حال كان رقم البورت الموضوع ليس بين <span class="number">0</span> و <span class="number">65535</span>.</p></li>
+<li><p><span class="code red">NullPointerException</span> في حال كان عنوان الجهاز الذي يحاول البرنامج الإتصال معه يساوي <code data-enlighter-language="java">null</code>, أي غير محدد.</p></li>
+</ul>
+</article>
+<article>
+<h2>مثال شامل</h2>
+<p>في المثال التالي قمنا بإنشاء برنامجين <span class="inline">( أي مشروعين منفصلين )</span>, واحد للسيرفر إسمه <code data-enlighter-language="java">Server</code> و واحد لأي مستخدم عادي إسمه <code data-enlighter-language="java">Client</code>.<br/>
+	فكرة البرنامج بشكل عام هي جعل البرنامجين قادرين على التواصل مع بعضهما البعض.</p>
+<p><span class="note">ملاحظة:</span> عند تجربتهما عليك تشغيل برنامج السيرفر أولاً, ثم تشغيل برنامج المستخدم العادي كما فعلنا في الفيديو الذي وضعناه مكان نتيجة التشغيل.</p>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<p><span class="point">•</span>هذا البرنامج مصمم للسيرفر, و هو موضوع في مجلد إسمه <code data-enlighter-language="java">server</code>.</p>
+<span class="code-title java-file-icon">Server.java</span>
+<pre data-enlighter-language="java">
+// هنا قمنا باستدعاء الكلاسات التي سنستخدمها لإنشاء الإتصال
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class Server {
+ 
+    public static void main(String[] args) {
+ 
+        try
+        {
+            // Socket لإستقبال أي إتصال من قبل المستخدم, أي لإستقبال أي ServerSocket هنا قمنا بإنشاء كائن من الكلاس
+            ServerSocket ss = new ServerSocket(3333);
+ 
+            // آخر Socket يمكنه تبادل الببانات مع أي كائن Socket و التي ترجع كائن نوعه accept() هنا قمنا باستدعاء الدالة
+            Socket s = ss.accept();
+ 
+            // s سنستخدمه لقراءة محتوى الكائن dis الكائن
+            DataInputStream dis = new DataInputStream(s.getInputStream());
+ 
+            // s سنستخدمه للكتابة في الكائن dos الكائن
+            DataOutputStream dos = new DataOutputStream(s.getOutputStream());
+ 
+            // سنستخدمه لقراءة البيانات التي سيدخلها السيرفر من لوحة المفاتيح br الكائن
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+ 
+            // serverMsg و رسالات السيرفر ستتخزن في المتغير clientMsg رسالات المستخدم ستتخزن في المتغير
+            String serverMsg,clientMsg;
+ 
+            // end هنا سيستمر التواصل بين السيرفر و المستخدم طالما أن المستخدم لم يكتب
+            do{
+                clientMsg = dis.readUTF();
+                System.out.println("client says: "+clientMsg);
+                serverMsg = br.readLine();
+                dos.writeUTF(serverMsg);
+                dos.flush();
+            }
+            while(!clientMsg.equals("end"));
+ 
+            // عند إنتهاء الإتصال قمنا بإغلاق جميع الكائنات التي استخدمناها لإنشاء الإتصال و التي لم يعد لها حاجة
+            dis.close();
+            s.close();
+            ss.close();
+        }
+        catch(Exception e) {
+            System.out.println(e.getMessage());
+        }
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>هذا البرنامج مصمم لأي مستخدم, و هو موضوع في مجلد إسمه <code data-enlighter-language="java">client</code>.</p>
+<span class="code-title java-file-icon">Client.java</span>
+<pre data-enlighter-language="java">
+// هنا قمنا باستدعاء الكلاسات التي سنستخدمها لإنشاء الإتصال
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+import java.net.Socket;
+ 
+public class Client {
+ 
+    public static void main(String[] args) {
+ 
+        try
+        {
+            // 3333 للتواصل مع برنامج آخر موجود على سيرفر و يستخدم البورت Socket هنا قمنا بإنشاء كائن من الكلاس
+            Socket s = new Socket("localhost",3333);
+ 
+            // s سنستخدمه لقراءة محتوى الكائن dis الكائن
+            DataInputStream dis = new DataInputStream(s.getInputStream());
+ 
+            // s سنستخدمه للكتابة في الكائن dos الكائن
+            DataOutputStream dos = new DataOutputStream(s.getOutputStream());
+ 
+            // سنستخدمه لقراءة البيانات التي سيدخلها المستخدم من لوحة المفاتيح br الكائن
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+ 
+            // serverMsg و رسالات السيرفر ستتخزن في المتغير clientMsg رسالات المستخدم ستتخزن في المتغير
+            String serverMsg, clientMsg;
+ 
+            // end هنا سيستمر التواصل بين السيرفر و المستخدم طالما أن المستخدم لم يكتب
+            do{
+                clientMsg = br.readLine();
+                dos.writeUTF(clientMsg);
+                dos.flush();
+                serverMsg = dis.readUTF();
+                System.out.println("server says: "+serverMsg);
+            }
+            while(!clientMsg.equals("end"));
+ 
+            // عند إنتهاء الإتصال قمنا بإغلاق جميع الكائنات التي استخدمناها لإنشاء الإتصال و التي لم يعد لها حاجة
+            dis.close();
+            dos.close();
+            s.close();
+        }
+        catch(Exception e) {
+            System.out.println(e.getMessage());
+        }
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>ستحصل على نتيجة تشبه النتيجة التالية عند التشغيل.</p>
+<div class="image-box">
+<video controls="">
+<source id="video" src="net-socket-and-server-socket-example.mp4" type="video/mp4"/>
+				متصفحك لا يدعم صيغة الفيديو!
+			</video>
+</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

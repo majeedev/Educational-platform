@@ -1,0 +1,666 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الثوابت في سي بلاس بلاس | C++ Constants</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../cplusplus-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../cplusplus-overview/index.html"><span class="en">++C</span> - نظرة عامة</a></li>
+<li><a href="../cplusplus-environment-setup/index.html"><span class="en">++C</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../cplusplus-basic-syntax/index.html"><span class="en">++C</span> - أسلوب الكتابة</a></li>
+<li><a href="../cplusplus-cout/index.html"><span class="en">++C</span> - أمر الطباعة   &lt;&lt; cout</a></li>
+<li><a href="../cplusplus-data-types/index.html"><span class="en">++C</span> - أنواع البيانات</a></li>
+<li><a href="../cplusplus-variables/index.html"><span class="en">++C</span> - المتغيرات</a></li>
+<li><a href="../cplusplus-operators/index.html"><span class="en">++C</span> - العوامل</a></li>
+<li><a href="../cplusplus-conditions/index.html"><span class="en">++C</span> - الشروط</a></li>
+<li><a href="../cplusplus-loops/index.html"><span class="en">++C</span> - الحلقات</a></li>
+<li><a href="../cplusplus-numbers/index.html"><span class="en">++C</span> - الأعداد</a></li>
+<li><a href="../cplusplus-strings/index.html"><span class="en">++C</span> - النصوص</a></li>
+<li><a href="../cplusplus-arrays/index.html"><span class="en">++C</span> - المصفوفات</a></li>
+<li><a href="../cplusplus-user-input/index.html"><span class="en">++C</span> - إدخال البيانات</a></li>
+<li><a href="../cplusplus-functions/index.html"><span class="en">++C</span> - الدوال</a></li>
+<li><a href="../cplusplus-references/index.html"><span class="en">++C</span> - المراجع</a></li>
+<li><a href="../cplusplus-pointers/index.html"><span class="en">++C</span> - المؤشرات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../cplusplus-oop/index.html"><span class="en">++C</span> - مفهوم البرمجة كائنية التوجه</a></li>
+<li><a href="../cplusplus-struct/index.html"><span class="en">++C</span> - النوع <span class="en">struct</span></a></li>
+<li><a href="../cplusplus-class/index.html"><span class="en">++C</span> - النوع <span class="en">class</span></a></li>
+<li><a href="../cplusplus-encapsulation/index.html"><span class="en">++Encapsulation - C</span></a></li>
+<li><a href="../cplusplus-inheritance/index.html"><span class="en">++Inheritance - C</span></a></li>
+<li><a href="../cplusplus-overriding/index.html"><span class="en">++Overriding - C</span></a></li>
+<li><a href="../cplusplus-overloading/index.html"><span class="en">++Overloading - C</span></a></li>
+<li><a href="../cplusplus-polymorphism/index.html"><span class="en">++Polymorphism - C</span></a></li>
+<li><a href="index.html"><span class="en">++C</span> - الثوابت</a></li>
+<li><a href="../cplusplus-enum/index.html"><span class="en">++C</span> - النوع <span class="en">enum</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../cplusplus-exceptions/index.html"><span class="en">++C</span> - الإستثناءات</a></li>
+<!--
+
+<li><a href="../cplusplus-lambda-expressions"><span class="en">Lambda Expressions - ++C</span></a></li>
+<li><a href="../cplusplus-files-io"><span class="en">++C</span> - التعامل مع الملفات</a></li>
+<li><a href="../cplusplus-data-structure"><span class="en">Data Structure - ++C</span></a></li>
+<li><a href="../cplusplus-collection"><span class="en">Collection - ++C</span></a></li>
+<li><a href="../cplusplus-generics"><span class="en">Generics - ++C</span></a></li>
+<li><a href="../cplusplus-networking"><span class="en">++C</span> - الشبكات</a></li>
+<li><a href="../cplusplus-multithreading"><span class="en">++C</span> - تعدد المهام</a></li>
+<li><a href="../cplusplus-jdbc"><span class="en">++C</span> - قواعد البيانات</a></li>
+<li><a href="../cplusplus-serialization"><span class="en">++C</span> - المزامنة</a></li>
+
+
+<li><a href="../cplusplus-date-and-time"><span class="en">++C</span> - التاريخ و الوقت</a></li>
+<li><a href="../cplusplus-regular-expressions"><span class="en">++C</span> - التعابير النمطية</a></li>
+
+<li><a href="../cplusplus-next-step"><span class="en">++C</span> - ما هي خطوتي التالية ؟</a></li>
+-->
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">C++</span>الثوابت</h1>
+<article>
+<h2>مفهوم الثوابت في <span class="word">C++</span></h2>
+<p>الثابت <span class="inline">( <span class="word">Constant</span> )</span> عبارة عن أي شيء يتم تعريفه بشكل لا يمكن إعادة تغيير قيمته.<br/>
+	لتعريف المتغير أو الكائن كثابت نستخدم الكلمة <code data-enlighter-language="cpp">const</code> و عندها نصبح غير قادرين على تغيير قيمته.</p>
+<p>الكلمة <code data-enlighter-language="cpp">const</code> يمكن استخدامها مع الأشياء التالية:</p>
+<ul class="explain">
+<li><p>المتغيرات <span class="inline">(<span class="word">Variables</span>).</span></p></li>
+<li><p>المؤشرات <span class="inline">(<span class="word">Pointers</span>).</span></p></li>
+<li><p>باراميترات لدوال <span class="inline">(<span class="word">Functions Parameters</span>).</span></p></li>
+<li><p>خصائص الكلاس <span class="inline">(<span class="word">Class Member Variables</span>).</span></p></li>
+<li><p>دوال الكلاس <span class="inline">(<span class="word">Class Member Functions</span>).</span></p></li>
+<li><p>الكائنات <span class="inline">(<span class="word">Objects</span>).</span></p></li>
+</ul>
+</article>
+<article>
+<h2>تعريف متغير ثابت في <span class="word">C++</span></h2>
+<p>إذا قمت بتعريف متغير ثابت فلا يمكنك تغيير قيمته لاحقاً و لا بد لك من إعطاؤه قيمة مباشرةً عند تعريفه.<br/>
+	القيمة الموضوعة بداخل المتغير يمكن الحصول عليها بشكل عادي مثل القيمة التي يتم وضعها بداخل متغير عادي و لكن لا يمكن تغييرها فقط.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف متغير ثابت إسمه <code>x</code> قيمته <code>10</code> و من ثم حاولنا إعادة تغيير قيمته.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	// قيمته تساوي 10 x هنا قمنا بتعريف متغير ثابت إسمه
+	const int x = 10;
+	
+	// x هنا قمنا بطباعة قيمة المتغير
+	cout &lt;&lt; "x = " &lt;&lt; x;
+	
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-linenumbers="false">
+x = 10
+		</pre>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف متغير ثابت إسمه <code>x</code> قيمته <code>10</code> و من ثم حاولنا إعادة تغيير قيمته.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	const int x = 10;    // قيمته تساوي 10 x هنا قمنا بتعريف متغير ثابت إسمه
+	
+	x = 5;               // الأمر الذي سيؤدي لحدوث خطأ x هنا حاولنا تغيير قيمة المتغير
+	
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سيظهر الخطأ التالي عند التشغيل و الذي يعني أنه لا يمكن تغيير القيمة الموجودة في المتغير <span class="inline"><code>x</code>.</span></p>
+<div class="code-box">
+<span class="red">
+				error: assignment of read-only variable 'x'
+			</span>
+</div>
+</div>
+</article>
+<article>
+<h2>تعريف مؤشر كثابت في <span class="word">C++</span></h2>
+<p>المؤشر العادي يمكن في أي وقت جعله يشير لأي شيء موجود في الذاكرة كما سبق و شاهدنا.<br/>
+	تعريف المؤشر نفسه كثابت يجعل المؤشر مخصص للشيء الذي تم جعله يشير إليه عند تعريفه مع عدم القدرة على جعله يشير لشيء آخر لاحقاً.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف متغير إسمه <code>x</code> قيمته <code>5</code> و متغير إسمه <code>y</code> قيمته <span class="inline"><code>7</code>.</span><br/>
+	بعدها قمنا بإنشاء مؤشر ثابت إسمه <code>ptr</code> يشير لقيمة المتغير <code>x</code> و من ثم حاولنا جعله يشير لقيمة المتغير <code>y</code> مما سيؤدي لحدوث مشكلة عند التشغيل.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	// y و x هنا قمنا بتعريف المتغيرين
+	int x = 5;
+	int y = 7;
+	
+	// في الذاكرة x و جعله يشير لعنوان المتغير ptr هنا قمنا بتعريف المؤشر الثابت
+	int* const ptr = &amp;x;
+	
+	// في الذاكرة مما سيؤدي لحدوث خطأ عند التشغيل y يشير لعنوان المتغير ptr هنا حاولنا جعل المؤشر
+	ptr = &amp;y;
+	
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سيظهر الخطأ التالي عند التشغيل و الذي يعني أنه لا يمكن تغيير القيمة التي يشير إليها المؤشر <span class="inline"><code>ptr</code>.</span></p>
+<div class="code-box">
+<span class="red">
+				error: assignment of read-only variable 'ptr'
+			</span>
+</div>
+</div>
+</article>
+<article>
+<h2>تعريف مؤشر لثابت في <span class="word">C++</span></h2>
+<p>إذا كنت تملك متغير ثابت يمكنك إنشاء مؤشر له و لكن عندها يجب أن تنشئ المؤشر كثابت أيضاً مما يجعلك غير قادر على جعله يشير لشيء آخر لاحقاً.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف متغير ثابت إسمه <code>x</code> قيمته <code>10</code> و مؤشر ثابت إسمه <code>ptr</code> يشير لقيمته.<br/>
+	في الأخير قمنا بعرض القيمة التي يشير إليها المؤشر <code>ptr</code> في الذاكرة.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	// قيمته تساوي 10 x هنا قمنا بتعريف متغير ثابت إسمه
+	const int x = 10;
+	
+	// في الذاكرة x و جعله يشير لعنوان المتغير الثابت ptr هنا قمنا بتعريف المؤشر الثابت
+	const int* ptr = &amp;x;
+	
+	// ptr هنا قمنا بطباعة قيمة المتغير الثابت الذي يشير إليه المؤشر الثابت
+	cout &lt;&lt; "*ptr = " &lt;&lt; *ptr;
+	
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-linenumbers="false">
+*ptr = 10
+		</pre>
+</div>
+<br/>
+<p>في المثال السابق, المؤشر الثابت <code>ptr</code> الذي قمنا بتعريفه في السطر <span class="number">11</span> يمكننا تعريفه كالتالي و الحصول على نفس النتيجة.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+const int* const ptr = &amp;x;
+	</pre>
+<br/>
+<p>و هذه طريقة مختلفة أيضاً لتعريفه.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+int const* ptr = &amp;x;
+	</pre>
+</article>
+<article>
+<h2>تعريف باراميتر الدالة كثابت في <span class="word">C++</span></h2>
+<p>في حال كنت تنوي تمرير قيمة متغير ثابت لدالة و تريد أن يتم معاملة القيمة التي يتم تمريرها كأنها قيمة ثابتة أيضاً, يجب أن تعرف نوع البارميتر في الدالة كثابت.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف دالة إسمها <code>addOne</code> عند استدعاءها نمرر لها عدد فتقوم بإضافة <code>1</code> عليه و ترجع قيمته.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// عند استدعاءها نمرر لها أي عدد فترجع قيمته مضافاً إليها 1 addOne هنا قمنا بتعريف دالة إسمها
+int addOne(int n)
+{
+	// n هنا قمنا بإضافة 1 على القيمة الموجودة في المتغير
+	n++;
+	
+	// n هنا قمنا بإرجاع قيمة المتغير
+    return n;
+}
+
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+    // قيمته 5 x هنا قمنا بتعريف متغير ثابت إسمه
+    const double x = 5;
+
+	// لها و طباعة الناتج الذي سترجعه x و تمرير قيمة addOne() هنا قمنا بتمرير قيمة باستدعاء الدالة
+    cout &lt;&lt; "5 + 1 = " &lt;&lt; addOne(x);
+
+    return 0;
+}
+
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-linenumbers="false">
+5 + 1 = 6
+		</pre>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بإعادة المثال السابق و لكننا هذه المرة جعلنا القيمة التي يتم تمريرها للدالة يتم إعتبارها قيمة ثابتة مما سيؤدي لحدوث خطأ عند التشغيل.<br/>
+<span class="note">ملاحظة:</span> قمنا بتعليم السطر الذي أجرينا عليه التعديل باللون الأصفر.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-highlight="6" data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// كثابت n هنا قمنا بتعريف الباراميتر
+int addOne(const int n)
+{
+	// n السطر التالي سيسبب خطأ عند التشغيل لأنه لا يسمح بتغيير قيمة الثابت
+	n++;
+    return n;
+}
+
+int main()
+{
+    const double x = 5;
+    cout &lt;&lt; "5 + 1 = " &lt;&lt; addOne(x);
+
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سيظهر الخطأ التالي عند التشغيل و الذي يعني أنه لا يمكن تغيير قيمة الثابت <span class="inline"><code>n</code>.</span></p>
+<div class="code-box">
+<span class="red">
+				error: increment of read-only parameter 'n'
+			</span>
+</div>
+</div>
+<br/><br/>
+<p>أمثلة إضافية على التعامل مع القيم الثابتة التي يتم تمريرها للدوال.</p>
+<p><a class="open-page" href="functions-const-params.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<article>
+<h2>تعريف خصائص ثابتة في الكلاس في <span class="word">C++</span></h2>
+<p>إذا أردت تعريف خصائص ثابتة في الكلاس, بمعنى أنه لا يمكن تغيير القيم التي نعطيهم إياها لاحقاً, فلا بد لك من تمرير قيم لكل خاصية ثابتة قمت بتعريفها في الكائن لحظة إنشاء الكائن و نفعل ذلك من خلال كونستركتور الكائن كما سنرى الآن.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف كلاس إسمه <code>Player</code> يحتوي على متغير ثابت إسمه <code>name</code> بالإضافة إلى كونستركتور يسمح لنا بتمرير قيمة للثابت <span class="inline"><code>name</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// Player هنا قمنا بإنشاء كلاس إسمه
+class Player
+{
+    public:
+		// name هنا قمنا بتعريف متغير (خاصية) ثابت إسمه
+        const string name;
+
+		// هنا قمنا بتعريف كونستركتور يجب إعطاؤه قيمة عند استدعاؤه
+		// name و من ثم يتم وضعها في الخاصية n القيمة التي نمررها لها يتم تخزينها بشكل مؤقت في المتغير
+        Player(string n):name(n)
+        {
+
+        }
+};
+
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+	// name و التي سيتم وضعها كقيمة للخاصية n و تمرير قيمة له مكان الباراميتر player إسمه Player هنا قمنا بإنشاء كائن من الكلاس
+    Player player("Mhamad");
+
+	// player التي يملكها الكائن name هنا قمنا بعرض قيمة الخاصية
+    cout &lt;&lt; "Player Name = " &lt;&lt; player.name;
+
+    return 0;
+}
+
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-linenumbers="false">
+Player Name = Mhamad
+		</pre>
+</div>
+<br/>
+<p>في المثال السابق, إذا أردت تسمية الباراميتر الموضوع في الكونستركتور <code>name</code> كإسم الخاصية و الحصول على نفس النتيجة فسيصبح شكل الكونستركتور كالتالي.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+const string name;
+
+Player(string name):name(name)
+{
+
+}
+	</pre>
+<br/>
+<p><b>معلومة:</b> في حال كنت تريد تمرير قيمة لأكثر من ثابت في الكونستركتور, فيجب أن تضع فواصل بين كل قيمتين كالتالي.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+const string name;
+const int age;
+
+Player(string n, int a):name(n), age(a)
+{
+
+}
+	</pre>
+</article>
+<article>
+<h2>تعريف الكائن كثابت في <span class="word">C++</span></h2>
+<p>إذا أردت إنشاء كائن ثابت بمعنى أنه لا يمكن تغيير قيمة أي خاصية موجودة فيه فيمكنك إنشاء الكائن ككائن ثابت.<br/>
+	عند إنشاء كائن ثابت من كلاس لا يمكنك استدعاء أي دالة في الكلاس تتعامل مع أحد الخصائص الموجودة فيه إلا إذا قمت بجعل الدالة من الأساس ثابتة أيضاً.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف كلاس إسمه <code>Player</code> يحتوي على متغيرين إسمهما <code>name</code> و <code>age</code> كخصائص عادية.<br/>
+	كما أننا قمنا بتعريف كونستركتور يسمح لنا بتمرير قيم للخصائص <code>name</code> و <code>age</code> و دالة ثابتة يمكن استخدامها لعرض قيمهما بشكل مرتب.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// Player هنا قمنا بإنشاء كلاس إسمه
+class Player
+{
+    public:
+		// age و name هنا قمنا بتعريف الخصائص
+        string name;
+        int age;
+
+		// هنا قمنا بتعريف الكونستركتور الذي يسمح لنا بتمرير قيم للخصائص عند تعريف الكائن
+		// لأنه يجب أن نمرر قيم أولية لكل خصائص الكائن في حال كنا سننشئه ككائن ثابت
+        Player(string name, int age)
+        {
+            this-&gt;name = name;
+            this-&gt;age = age;
+        }
+		
+		// كدالة ثابتة حتى نتمكن من استدعاءها في حال قمنا إنشاء كائن ثابت من الكلاس printInfo() هنا قمنا بتعريف الدالة
+        void printInfo() const
+        {
+            cout &lt;&lt; "Name = " &lt;&lt; this-&gt;name &lt;&lt; endl;
+            cout &lt;&lt; "Age = " &lt;&lt; this-&gt;age &lt;&lt; endl;
+        }
+};
+
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+	// مع تمرير قيم أولية للخصائص التي يملكها من خلال الكونستركتور player إسمه Player هنا قمنا بإنشاء كائن ثابت من الكلاس
+    const Player player("Mhamad", 26);
+
+	// حتى تعرض قيم الخصائص الموجودة فيه بشكل مرتب player هنا قمنا باستدعاء الدالة من الكائن الثابت
+    player.printInfo();
+
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-linenumbers="false">
+Name = Mhamad
+Age = 26
+		</pre>
+</div>
+</article>
+<article>
+<h2>الكلمة <code data-enlighter-language="cpp">mutable</code> في <span class="word">C++</span></h2>
+<p>في حال كنت تنوي إنشاء كائن ثابت من الكلاس و لكنك تريد جعل بعض الخصائص الموجودة فيه غير ثابتة بمعنى أنه يمكن تغيير قيمها لاحقاً بعد إنشاء الكائن, يجب أن تعرف الخاصية التي تريد جعل قيمتها غير ثابتة <code data-enlighter-language="cpp">mutable</code> حتى يفهم المترجم أنك تريد ذلك.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف كلاس إسمه <code>Player</code> يحتوي على ثلاث متغيرات إسمهم <code>name</code> و <code>age</code> و <code>job</code> كخصائص في الكلاس.<br/>
+	الخاصية <code>job</code> جعلنا نوعها <code data-enlighter-language="cpp">mutable</code> حتى نستطيع تغيير قيمتها متى أردنا من الكائن الذي ننشئه من الكلاس حتى و إن قمنا بإنشائه ككائن ثابت.<br/>
+	كما أننا قمنا بتعريف كونستركتور يسمح لنا بتمرير قيم للخصائص <code>name</code> و <code>age</code> و دالة ثابتة يمكن استخدامها لعرض قيم كل الخصائص بشكل مرتب.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// Player هنا قمنا بإنشاء كلاس إسمه
+class Player
+{
+    public:
+		// mutable نوعها job و لاحظ أن الخاصية ,job و age ,name هنا قمنا بتعريف الخصائص
+        string name;
+        int age;
+		mutable string job;
+
+		// عند إنشاء كائن لأنه يجب age و name هنا قمنا بتعريف الكونستركتور الذي يسمح لنا بتمرير قيم للخاصيتين 
+		// mutable أن نمرر قيم أولية لكل خاصية موجودة في الكائن في حال كنا سننشئه ككائن ثابت طالما أن نوعها ليس
+        Player(string name, int age)
+        {
+            this-&gt;name = name;
+            this-&gt;age = age;
+        }
+		
+		// كدالة ثابتة حتى نتمكن من استدعاءها في حال قمنا إنشاء كائن ثابت من الكلاس printInfo() هنا قمنا بتعريف الدالة
+        void printInfo() const
+        {
+            cout &lt;&lt; "Name = " &lt;&lt; this-&gt;name &lt;&lt; endl;
+            cout &lt;&lt; "Age = " &lt;&lt; this-&gt;age &lt;&lt; endl;
+            cout &lt;&lt; "Job = " &lt;&lt; this-&gt;job &lt;&lt; endl;
+        }
+};
+
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+	// مع تمرير قيم أولية للخصائص الثابتى التي يملكها من خلال الكونستركتور player إسمه Player هنا قمنا بإنشاء كائن ثابت من الكلاس
+    const Player player("Mhamad", 26);
+	
+	// كما سبق و قلنا mutable و نستطيع فعل ذلك لأن نوعها player التي يملكها الكائن job هنا قمنا بإعطاء قيمة للخاصية
+	player.job = "Programmer";
+
+	// حتى تعرض قيم الخصائص الموجودة فيه بشكل مرتب player هنا قمنا باستدعاء الدالة من الكائن الثابت
+    player.printInfo();
+
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-linenumbers="false">
+Name = Mhamad
+Age = 26
+Job = Programmer
+		</pre>
+</div>
+</article>
+<article>
+<h2>الكلمة <code data-enlighter-language="cpp">#define</code> في <span class="word">C++</span></h2>
+<p>الكلمة <code data-enlighter-language="cpp">#define</code> يمكن أن تستخدم لتعريف متغير قيمته ثابتة مثل الكلمة <code data-enlighter-language="cpp">const</code> و لكن بأسلوب مختلف.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف متغير ثابت إسمها <code>MAX_VALUE</code> قيمته تساوي <span class="inline"><code>1000</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+#define MAX_VALUE 1000
+
+int main()
+{
+	// MAX_VALUE قيمته تساوي قيمة الثابت x هنا قمنا بتعريف متغير إسمه
+	int x = MAX_VALUE;
+	
+	// x هنا قمنا بطباعة قيمة المتغير
+	cout &lt;&lt; "x = " &lt;&lt; x;
+	
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-linenumbers="false">
+x = 1000
+		</pre>
+</div>
+<br/><br/>
+<h3 class="note-title">تنبيه</h3>
+<div class="note-box">
+<p>الكلمة <code data-enlighter-language="cpp">#define</code> قد تسبب مشاكل غير متوقعة في البرنامج لأن نوع القيمة التي يتم وضعها فيها ليس محدداً, لذلك يفضّل تعريف المتغير الثابت دائماً بواسطة الكلمة <code data-enlighter-language="cpp">const</code> بدلاً من الكلمة <span class="inline"><code data-enlighter-language="cpp">#define</code>.</span></p>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

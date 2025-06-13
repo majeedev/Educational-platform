@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>التعامل مع الشبكات في جافا | Java Networking</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>التعامل مع الشبكات في جافا</h1>
+<article>
+<h2>مقدمة</h2>
+<p>شبكة تعني <span class="word">Network</span> في اللغة الإنجليزية, الفكرة الأساسية من الشبكات هي ربط الأجهزة على إختلاف أنواعها مع بعض لخلق نوع من التواصل فيما بينهم. فمثلاً الأجهزة الموصولة على الشبكة سواء كانت كمبيوترات أو هواتف أو سيرفرات, يمكنها مشاركة البيانات مع بعضها البعض بواسطة برامج معينة.<br/>
+<p><span class="word">Network Programming</span> تعني كتابة برنامج يشارك بياناته مع برنامج آخر من خلال شبكة.<br/>
+	في العادة يكون برنامج مثبت على السيرفر و برنامج مثبت عند المستخدم العادي.<br/>
+	الفكرة هنا بناء برامج للمستخدمين تجعلهم قادرين على التواصل مع بعضهم و مشاركة البيانات فيما بينهم.</p>
+<p>عندما نقول مشاركة البيانات من خلال شبكة, نقصد بذلك أن الكمبيوتر سيشارك بياناته مع كمبيوتر آخر.<br/>
+	يمكن أن يكون كلا الكمبيوترات موجودين على نفس الشبكة و يمكن أن يكون كل كمبيوتر منهم في بلد مختلف ( لا يهم ).</p>
+<p>لبناء برامج يمكنها مشاركة البيانات مع بعضها عبر الشبكات, نستخدم الحزمة <code data-enlighter-language="java">java.net</code> التي تحتوي على مجموعة ضخمة من الكلاسات و الإنترفيسات المصممة خصيصياً لمشاركة البيانات عبر الشبكات.</p>
+<br/>
+<h3>فائدة بناء برامج تتواصل مع بعضها من خلال شبكة</h3>
+<ol class="arabic">
+<li><p>مشاركة البيانات بين مختلف المستخدمين على الشبكة.</p></li>
+<li><p>تجميع البيانات التي نريد مشاركتها في مكان واحد, الأمر الذي يجعلنا قادرين على التحكم في طريقة مشاركة هذه البيانات.</p></li>
+</ol>
+<br/>
+<h3>أفكار لبرامج تعمل على الشبكة</h3>
+<p>يوجد أفكار كثيرة لبرامج يستخدمها الناس لمشاركة بياناتهم و التي يمكنك بناءها بنفسك أيضاً, أمثلة:</p>
+<ul class="explain">
+<li><p>برنامج محادثة, مثل <span class="word">MSN</span>, <span class="word">Yahoo</span>, <span class="word">Telegram</span>, <span class="word">Whatsapp</span>.</p></li>
+<li><p>متصفح, حيث يمكنك بناء متصفح مثل <span class="word">Mozilla FireFox</span>, <span class="word">Google Chrome</span>, <span class="word">Internet Explorer</span>,<span class="word">Opera Mini</span>.</p></li>
+<li><p>ألعاب, حيث أنه يمكنك بناء لعبة يستطيع فيها اللاعبين تحدي بعضهم عن بعد.</p></li>
+<li><p>برنامج إختبار, فمثلاً, يمكنك بناء برنامج يجعل الطالب قادراً على إجراء أي إمتحان عن بعد و إرساله إلى مركز المؤسسة التعليمية الرئيسية عند الإنتهاء إلخ..</p></li>
+</ul>
+</p></article>
+<article>
+<h2>مصطلحات أساسية في عالم الشبكات</h2>
+<p>في الجدول التالي وضعنا بعض المصطلحات الأساسية في عالم الشبكات التي سنتطرق إلى بعضها في هذا الدرس.<br/>
+<span class="note">ملاحظة:</span> في مادة الشبكات سنشرحهم بتفصيل و دقة أكثر.</p>
+<table class="list full-width">
+<tr>
+<th>المصطلح</th>
+<th>معناه</th>
+</tr>
+<td class="center"><span class="tech-word">NIC</span></td>
+<td><span class="word">NIC</span> إختصار لـ <span class="word">Network Interface Card</span>, و معناه كرت الشبكة.<br/>
+			كرت الشبكة هو قطعة إلكترونية يتم تركيبها في أي جهاز إلكتروني حتى يستطيع الإتصال بالشبكات.</td>
+
+<tr>
+<td class="center"><span class="tech-word">MAC Address</span></td>
+<td><span class="word">MAC Address</span> إختصار لـ <span class="word">Media Access Control Address</span>, و هو عبارة عن رقم كرت الشبكة الخاصة بالجهاز.<br/>
+			كل كرت شبكة يملك <span class="word">MAC Address</span> موحد.<br/>
+			 الـ <span class="word">MAC Address</span> يتألف من <span class="word">12 bytes</span>, كل <span class="word">byte</span> فيهم يمكن أن يكون رقم بين <span class="number">0</span> و <span class="number">9</span>, أو حرف بين <span class="word">A</span> و <span class="word">F</span>.<br/><br/>
+<b>أمثلة</b><br/>
+<ul class="explain">
+<li><p><span class="code">00:1C:B3:09:85:15</span></p></li>
+<li><p><span class="code">00:B0:D0:86:BB:F7</span></p></li>
+<li><p><span class="code">00:1B:44:11:3A:B7</span></p></li>
+</ul></td>
+</tr>
+<tr>
+<td class="center"><span class="tech-word">IP Address</span></td>
+<td><span class="word">IP Address</span> إختصار لـ <span class="word">Internet Protocol Address</span>, و هو عبارة عن عنوان مؤقت يتم إعطائه لأي جهاز يريد الإتصال بالشبكة.<br/>
+			كل جهاز يريد الإتصال بالشبكة يتم إعطائه <span class="word">IP Address</span> مختلف.<br/>
+		    الـ <span class="word">IP Address</span> يتألف من أربعة أرقام, كل رقم فيهم يمكن أن يكون بين <span class="number">0</span> و <span class="number">255</span>.<br/><br/>
+<b>أمثلة</b><br/>
+<ul class="explain">
+<li><p><span class="code">80.10.5.104</span></p></li>
+<li><p><span class="code">192.168.0.1</span></p></li>
+<li><p><span class="code">210.14.92.65</span></p></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="center"><span class="tech-word">Protocol</span></td>
+<td>في العربية أيضاً نقول <b>بروتوكول</b>, و هو عبارة عن مجموعة قواعد أساسية يجب إتباعها في كل عملية تواصل.<br/>
+			في عالم الشبكات يوجد بروتوكولات كثيرة, كل واحد منهم مصمم لغرض معين.<br/><br/>
+<b>أشهر البروتوكولات</b><br/>
+<ul class="explain">
+<li><p><span class="word">TCP</span>: يستخدم عند نقل بيانات على الشبكة, يضمن وصولها إلى الجهة المطلوبة كما هي تماماً.</p></li>
+<li><p><span class="word">UDP</span>: يستخدم عند نقل بيانات على الشبكة, لا يهمه إذا فقد جزء من البيانات التي تم إرسالها.</p></li>
+<li><p><span class="word">HTTP</span>: يستخدمه المتصفح عندما تقوم بتصفح المواقع.</p></li>
+<li><p><span class="word">FTP</span>: يستخدم عند تحميل أي نوع من الملفات.</p></li>
+<li><p><span class="word">Telnet</span>: يستخدم للتحكم في البرامج عن بعد.</p></li>
+<li><p><span class="word">POP3</span>: يستخدم من قبل العميل لإستقبال الرسائل إلكترونية الواردة في بريده مع إمكانية حذفها.</p></li>
+<li><p><span class="word">SMTP</span>: يستخدم من قبل العميل لإرسال رسائل إلكترونية إلى السيرفر.</p></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="center"><span class="tech-word">Port Number</span></td>
+<td>في العربية نقول <b>رقم البورت</b>.<br/>
+			كل برنامج يرسل أو يستقبل بيانات على الشبكة يحتاج أن يفتح بورت خاص فيه على الجهاز.<br/>
+			رقم البورت يتيح للمستخدم إستخدام أكثر من برنامج يتعاملون مع الشبكة في نفس الوقت.<br/>
+			إذاً رقم البورت يميز البرامج التي تستخدم الشبكة عن بعضها البعض.</td>
+</tr>
+<tr>
+<td class="center"><span class="tech-word">URL</span></td>
+<td>إختصار لـ <span class="word">Uniform Resource Locator</span>, و يعني كل المعلومات المذكورة في الرابط و التي تشير إلى مصدر محدد للبيانات.<br/><br/>
+			المعلومات الأساسية في أي رابط:   <span class="code">protocol<span class="red">://</span>prefix<span class="red">.</span>domain<span class="red">:</span>port<span class="red">/</span>path<span class="red">/</span>filename</span><br/>
+<ol class="arabic">
+<li><p><span class="code">protocol</span> نضع مكانها إسم البروتوكول المستخدم في عملية الإتصال مثل <span class="code brown">http</span></p></li>
+<li><p><span class="code">prefix</span> نضع مكانها في العادة <span class="code brown">www</span></p></li>
+<li><p><span class="code">domain</span> نضع مكانها إسم الموقع مثل <span class="code brown">harmash.com</span></p></li>
+<li><p><span class="code">port</span> نضع مكانها بورت البرنامج أو البروتوكول المستخدم من قبل العميل, فمثلاً الـ <span class="code brown">http</span> يستخدم البورت <span class="code brown">80</span></p></li>
+<li><p><span class="code">path</span> نضع مكانها إسم المجلد الذي نريد الدخول إليه على السيرفر.</p></li>
+<li><p><span class="code">filename</span> نضع مكانها إسم الملف الذي نريد تصفحه أو تحميله إلخ..</p></li>
+</ol>
+<br/>
+<span class="note">ملاحظة:</span> عندما تتصفح أي موقع في النت, حتى لو لم ترا جميع المعلومات التي ذكرناها لك عن الـ <span class="word">URL</span>, تأكد أن المتصفح يكتبها عنك.<br/><br/>
+<b>أمثلة</b><br/>
+<ul class="explain">
+<li><p><a class="blue" href="../../index.html">harmash.com</a>   ( هذا إسم الموقع )</p></li>
+<li><p><a class="blue" href="../../index.html">www.harmash.com</a>   ( <span class="code brown">www</span> هو الـ <span class="word">prefix</span> و الذي لا يوجد حاجة لذكره )</p></li>
+<li><p><a class="blue" href="../../index.html">http://www.harmash.com:80</a>   ( <span class="code brown">80</span> هو رقم البورت )</p></li>
+<li><p><a class="blue" href="http://www.harmash.com/java">http://www.harmash.com:80/java</a>   ( <span class="code brown">java</span> هو إسم مجلد في الموقع )</p></li>
+<li><p><a class="blue" href="http://www.harmash.com/java/java-overview">http://www.harmash.com:80/java/java-overview</a>   ( <span class="code brown">java-overview</span> هو إسم مجلد في الموقع موجود بداخل المجلد <span class="code brown">java</span> )</p></li>
+<li><p><a class="blue" href="http://www.harmash.com/java/java-overview/index.php">http://www.harmash.com:80/java/java-overview/index.php</a>   ( <span class="code brown">index.php</span> هو إسم الملف الذي يفتح في المتصفح )</p></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="center"><span class="tech-word">Socket</span></td>
+<td>الـ <span class="word">Socket</span> عبارة عن مجموعة الكلاسات التي يمكن إستخدامها لإنشاء برامج تجعل المستخدمين قادرين على التواصل فيما بينهم بشكل متزامن عبر شبكة النت. و هي تضمن المعلومات الأساسية التي نحتاجها لإجراء أي عملية إتصال: <span class="code">Socket <span class="red">=</span> IP Address <span class="red">+</span> Port Number <span class="red">+</span> Protocol</span>
+<br/><br/>
+<b>مثال</b><br/>
+			في حال أردنا إرسال بيانات على الشبكة إلى شخص محدد, علينا تحديد المعلومات التالية:<br/>
+<ol class="arabic">
+<li><p>البروتوكول الذي سنعتمده عليه لإجراء هذه العملية.</p></li>
+<li><p>عنوان الشخص الذي سنرسل له البيانات.</p></li>
+<li><p>رقم بورت البرنامج الذي سنستخدمه لإرسال البيانات.</p></li>
+</ol>
+</td>
+</tr>
+</table>
+<br/>
+<h3>خلاصة</h3>
+<p>يمكن الوصول لأي جهاز على الشبكة من خلال الـ <span class="word">IP Address</span> الخاص فيه.<br/>
+	و كل تطبيق يتعامل مع الشبكات سواء لإرسال أو إستقبال بيانات يحتاج إلى رقم بورت خاص فيه  ليميزه عن باقي البرامج التي تستخدم الشبكة.</p>
+</article>
+<article>
+<h2>الكلاسات التي نحتاجها للتعامل مع الشبكات</h2>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الكلاس مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public class URL</code></span>
+			هذا الكلاس مصمم بشكل عام لتجهيز روابط الملفات التي سنتعامل معها عن بعد عبر شبكة الإنترنت.<br/>
+<a class="open-page" href="net-url.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public class URLConnection</code></span>
+			هذا الكلاس عبارة عن <span class="word">Abstract Class</span>, و هو يستخدم للقراءة و الكتابة في الملف الذي يشير له كائن الـ <code data-enlighter-language="java">URL</code>, بالإضافة إلى أنه يمكننا من معرفة و تحديد كافة المعلومات المتعلقة بإجراء الإتصال مع الملف.<br/>
+			فمثلاً يتيح لنا معرفة آخر مرة تم فيها تحديث الملف, تاريخ صلاحية الملف, إسم الكلاس المناسب لإرسال المعلومات منه و استقبالها فيه إلخ..<br/>
+<a class="open-page" href="net-urlconnection.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public class InetAddress</code></span>
+	        هذا الكلاس مصمم لتحليل عنوان الجهاز أو الموقع الذي نحاول الإتصال به عن بعد عبر شبكة النت.<br/>
+<a class="open-page" href="net-inetaddress.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public class Socket  +  public class ServerSocket</code></span>
+			الـ <span class="word">Socket</span> عبارة عن مجموعة من الكلاسات التي يمكن إستخدامها لإنشاء برامج تجعل المستخدمين قادرين على التواصل فيما بينهم بشكل متزامن عبر شبكة النت, لذلك تعتبر أهم كلاسات موجودة في الحزمة <code data-enlighter-language="java">java.net</code> و هي تنقسم لقسمين أساسيين:
+<ul class="explain">
+<li><p>كلاسات مخصصة لبناء برامج تستخدم البروتوكول <span class="word">UDP</span>, مثل الكلاسات <code data-enlighter-language="java">DatagramSocket</code> و <code data-enlighter-language="java">DatagramPacket</code>.</p></li>
+<li><p>كلاسات مخصصة لبناء برامج تستخدم البروتوكول <span class="word">TCP</span>, مثل الكلاسات <code data-enlighter-language="java">Socket</code> و <code data-enlighter-language="java">ServerSocket</code>.</p></li>
+</ul>
+<p>هنا قمنا بشرح الكلاسات <code data-enlighter-language="java">Socket</code> و <code data-enlighter-language="java">ServerSocket</code>.<br/>
+<a class="open-page" href="net-socket-and-serversocket.html" target="_blank">تابع القراءة »</a></p></td>
+</tr>
+</table>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

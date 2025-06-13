@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الإنترفيس ResultSetMetaData في جافا | java sql.ResultSetMetaData</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>الإنترفيس <code data-enlighter-language="java">ResultSetMetaData</code> في جافا</h1>
+<article>
+<h2>مقدمة</h2>
+<p>الإنترفيس <code data-enlighter-language="java">ResultSetMetaData</code> يستخدم لمعرفة معلومات تتعلق بالجدول <span class="inline">( أو الجداول )</span> المخزنة في كائن الـ <code data-enlighter-language="java">ResultSet</code>, مثل:</p>
+<ul class="explain">
+<li><p>أسماء الجداول المخزنة فيه.</p></li>
+<li><p>عدد الأعمدة المخزنة فيه.</p></li>
+<li><p>أسماء الأعمدة المخزنة فيه.</p></li>
+<li><p>أنواع البيانات التي يمكن تخزينها في الأعمدة إلخ..</p></li>
+</ul><br/>
+<p>للحصول على كائن <code data-enlighter-language="java">ResultSetMetaData</code> نستدعي الدالة <code data-enlighter-language="java">getMetaData()</code> من كائن الـ <code data-enlighter-language="java">ResultSet</code>.</p>
+<br/>
+<h3>بناؤه</h3>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public interface ResultSetMetaData
+extends Wrapper
+	</pre>
+</article>
+<article>
+<h2>دوال الإنترفيس <code data-enlighter-language="java">ResultSetMetaData</code></h2>
+<p>الجدول التالي يحتوي على دوال الإنترفيس <code data-enlighter-language="java">ResultSetMetaData</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int getColumnCount()</code></span>
+			ترجع عدد الأعمدة الموجودة في كائن الـ <code data-enlighter-language="java">ResultSet</code>.<br/><br/>
+			ترمي الإستثناء <span class="code red">SQLException</span> في حال حدث خطأ عند محاولة الإتصال بقاعدة البيانات.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getColumnName(int column)</code></span>
+			تستخدم لمعرفة أسماء الأعمدة الموجودة في كائن الـ <code data-enlighter-language="java">ResultSet</code>.<br/>
+			عند إستدعاءها نمرر لها <span class="word">Index</span> العمود الذي نريد معرفة إسمه فترجعه لنا كنص عادي.<br/><br/>
+			ترمي الإستثناء <span class="code red">SQLException</span> في حال حدث خطأ عند محاولة الإتصال بقاعدة البيانات.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getTableName(int column)</code></span>
+			تستخدم لمعرفة إسم الجدول الذي أتى منه العمود الموجود في كائن الـ <code data-enlighter-language="java">ResultSet</code>.<br/>
+			عند إستدعاءها نمرر لها <span class="word">Index</span> العمود فترجع لنا إسم الجدول الذي أتى منه كنص عادي.<br/>
+			ترجع نص فارغ <code data-enlighter-language="java">""</code> في حال لم تستطع تحديد إسم الجدول.<br/><br/>
+			ترمي الإستثناء <span class="code red">SQLException</span> في حال حدث خطأ عند محاولة الإتصال بقاعدة البيانات.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getColumnTypeName(int column)</code></span>
+			تستخدم لمعرفة نوع البيانات الموجودة في كائن الـ <code data-enlighter-language="java">ResultSet</code>.<br/>
+            عند إستدعاءها نمرر لها <span class="word">Index</span> العمود الذي نريد معرفة نوعه.<br/><br/>
+			ترمي الإستثناء <span class="code red">SQLException</span> في حال حدث خطأ عند محاولة الإتصال بقاعدة البيانات.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getColumnClassName(int column)</code></span>
+			تستخدم لمعرفة نوع البيانات المتوفر في لغة جافا و الملائم لتخزين بيانات جدول محدد موجود في كائن الـ <code data-enlighter-language="java">ResultSet</code>.<br/>
+            عند إستدعاءها نمرر لها <span class="word">Index</span> العمود الذي نريد معرفة نوع البيانات التي يمكن تخزينها فيه, فترجعه لنا.<br/><br/>
+			ترمي الإستثناء <span class="code red">SQLException</span> في حال حدث خطأ عند محاولة الإتصال بقاعدة البيانات.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int getColumnDisplaySize(int column)</code></span>
+			ترجع عدد الأحرف الأقصى التي يمكن تخزينها في عمود محدد من الأعمدة الموجودة في كائن الـ <code data-enlighter-language="java">ResultSet</code>.<br/>
+			عند إستدعاءها نمرر لها <span class="word">Index</span> العمود الذي نريد معرفة عدد الأحرف الأقصى التي يمكن تخزينها فيه.<br/><br/>
+			ترمي الإستثناء <span class="code red">SQLException</span> في حال حدث خطأ عند محاولة الإتصال بقاعدة البيانات.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int getPrecision(int column)</code></span>
+			ترجع عدد البيانات الأقصى التي يمكن تخزينها في عمود محدد من الأعمدة الموجودة في كائن الـ <code data-enlighter-language="java">ResultSet</code>.<br/>
+			عند إستدعاءها نمرر لها <span class="word">Index</span> العمود الذي نريد معرفة عدد البيانات الأقصى التي يمكن تخزينها فيه, فترجعه لنا كـ <code data-enlighter-language="java">int</code>.<br/><br/>
+			ترمي الإستثناء <span class="code red">SQLException</span> في حال حدث خطأ عند محاولة الإتصال بقاعدة البيانات.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean isAutoIncrement(int column)</code></span>
+			تستخدم لمعرفة ما إذا كانت الأرقام الموجودة في عمود محدد من الأعمدة الموجودة في كائن الـ <code data-enlighter-language="java">ResultSet</code> تزداد بشكل تلقائي.<br/>
+			عند إستدعاءها نمرر لها <span class="word">Index</span> العمود الذي نريد معرفة ما إذا كانت الأرقام فيه تزداد بشكل تلقائي, فترجع <code data-enlighter-language="java">true</code> إذا كانت كذلك. غير ذلك ترجع <code data-enlighter-language="java">false</code>.<br/><br/>
+			ترمي الإستثناء <span class="code red">SQLException</span> في حال حدث خطأ عند محاولة الإتصال بقاعدة البيانات.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean isCaseSensitive(int column)</code></span>
+			تستخدم لمعرفة ما إذا كان يهم أن نكتب إسم العمود تماماً كما هو معرف في قاعدة البيانات أم لا في حال أردنا الوصول إليه من خلال إسمه. أي للتأكد ما إذا كان يهم إذا كتبنا إسم العمود بأحرف كبيرة أو أحرف صغيرة عند تجهيز الإستعلام.<br/>
+			عند إستدعاءها نمرر لها <span class="word">Index</span> العمود الذي نريد معرفة ما إذا كان يمكن كتابة إسمه بأحرف كبيرة أو صغيرة.<br/>
+			ترجع <code data-enlighter-language="java">true</code> إذا كان حجم الحرف لا يسبب مشكلة. غير ذلك ترجع <code data-enlighter-language="java">false</code>.<br/><br/>
+			ترمي الإستثناء <span class="code red">SQLException</span> في حال حدث خطأ عند محاولة الإتصال بقاعدة البيانات.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean isCurrency(int column)</code></span>
+			تستخدم لمعرفة ما إذا كان العمود الموجود في كائن الـ <code data-enlighter-language="java">ResultSet</code> مخصص لتخزين رقم يمثل قمية مالية <span class="inline">( مثل دولار, ليرة, يورو إلخ.. )</span> أم لا.<br/>
+			عند إستدعاءها نمرر لها <span class="word">Index</span> العمود الذي نريد معرفة ما إذا كان مخصص لتخزين قيمة مالية أم لا.<br/>
+			ترجع <code data-enlighter-language="java">true</code> إذا كان كذلك. غير ذلك ترجع <code data-enlighter-language="java">false</code>.<br/><br/>
+			ترمي الإستثناء <span class="code red">SQLException</span> في حال حدث خطأ عند محاولة الإتصال بقاعدة البيانات.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean isDefinitelyWritable(int column)</code></span>
+			تستخدم لمعرفة ما إذا كانت الكتابة في عمود محدد في كائن الـ <code data-enlighter-language="java">ResultSet</code> مسموحة و مضمونة مئة في المئة أم أنه يوجد إحتمال أن لا يسمح لنا بذلك.<br/>
+			عند إستدعاءها نمرر لها <span class="word">Index</span> العمود الذي نريد معرفة ما إذا كان من الممكن أن نكتب فيه بيانات أم لا.<br/>
+			ترجع <code data-enlighter-language="java">true</code> إذا كان يمكن الكتابة فيه. غير ذلك ترجع <code data-enlighter-language="java">false</code>.<br/><br/>
+			ترمي الإستثناء <span class="code red">SQLException</span> في حال حدث خطأ عند محاولة الإتصال بقاعدة البيانات.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean isReadOnly(int column)</code></span>
+			تستخدم لمعرفة إذا كان يمكن فقط قراءة البيانات الموجودة في عمود محدد في كائن الـ <code data-enlighter-language="java">ResultSet</code> أم لا.<br/>
+			أي يمكن إستخدامها أيضاً لمعرفة ما إذا كان من الممكن الكتابة في العمود أم لا, لأنه إذا كان يمكن فقط القراءة من العمود فهذا يعني أن الكتابة فيه غير مسموحة.<br/>
+			عند إستدعاءها نمرر لها <span class="word">Index</span> العمود الذي نريد معرفة ما إذا كان يمكننا فقط قراءة البيانات الموجودة فيه أم لا.<br/>
+			ترجع <code data-enlighter-language="java">true</code> إذا كان يمكن فقط قراءة بياناته. غير ذلك ترجع <code data-enlighter-language="java">false</code>.<br/><br/>
+			ترمي الإستثناء <span class="code red">SQLException</span> في حال حدث خطأ عند محاولة الإتصال بقاعدة البيانات.</td>
+</tr>
+<!-- 
+	    <tr>
+			<td class="center">13</td>
+		    <td><span class="code-title"><code data-enlighter-language="java">public int isNullable(int column)</span>
+			تستخدم لمعرفة ما إذا كان من الممكن أن نضع القيمة <code data-enlighter-language="java">NULL</code> في عمود محدد من الأعمدة الموجودة في كائن الـ <code data-enlighter-language="java">ResultSet</code> أم لا.<br>
+			عند إستدعاءها نمرر لها <span class="word">Index</span> العمود الذي نريد معرفة ما إذا كان من الممكن أن نضع فيه القيمة <code data-enlighter-language="java">NULL</code> أم لا.<br>
+			
+			ترمي الإستثناء <span class="code red">SQLException</span> في حال حدث خطأ عند محاولة الإتصال بقاعدة البيانات.</td>
+		</tr>
+		-->
+</table>
+</article>
+<article>
+<h2>مثال شامل</h2>
+<p>في المثال التالي سنفترض أننا سنقوم بالإتصال بقاعدة بيانات إسمها <code data-enlighter-language="java">company</code> تمثل قاعدة بيانات لشركة, و مبنية بنظام <span class="word">MySQL</span>.<br/>
+	بعدها سنقوم بجلب جميع البيانات الموجودة في جدول الموظفين <span class="inline">( <span class="word">employee</span> )</span> و تخزينها في كائن من الإنترفيس <code data-enlighter-language="java">ResultSet</code>.<br/>
+	سنفترض أن جدول الموظفين يتألف من أربعة أعمدة <span class="inline">( <code data-enlighter-language="java">id</code>, <code data-enlighter-language="java">name</code>, <code data-enlighter-language="java">email</code>, <code data-enlighter-language="java">phone</code> )</span>. <br/>
+	بعدها سننشئ كائن من الإنترفيس <code data-enlighter-language="java">ResultSetMetaData</code> و نربطه بكائن الـ <code data-enlighter-language="java">ResultSet</code> لعرض خصائص البيانات الموجودة فيه.</p>
+<br/>
+<div class="example-box">
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+// هنا قمنا بإستدعاء الكلاسات و الإنترفيسات التي سنستخدمها للتعامل مع قاعدة البيانات
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSetMetaData;
+import java.sql.ResultSet;
+import java.sql.PreparedStatement;
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        try {
+            // الذي سنعتمد عليه للوصول إلى قاعدة البيانات MYSQL Driver هنا قمنا بتحديد رابط الوصول لبرنامج الـ
+            Class.forName("com.mysql.jdbc.Driver");
+ 
+            // و الذي سنستخدمه لتحديد المعلومات الأساسية التي نحتاجها للإتصال بقاعدة البيانات Connection هنا قمنا بإنشاء كائن من الكلاس
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/company","root","thepassword");
+ 
+            //// و الذي سنستخدمه لإرسال الإستعلام إلى قاعدة البيانات PreparedStatement هنا قمنا بتجهيز كائن نوعه
+            PreparedStatement ps = con.prepareStatement("select * from employee");
+ 
+            // rs هنا قمنا بإرسال الإستعلام إلى قاعدة البيانات و الذي سيرجع لنا جميع الموجودة في جدول الموظفين. بعدها قمنا بتخزين النتيجة في الكائن
+            ResultSet rs = ps.executeQuery();
+ 
+            // rs و الذي سنستخدمه لعرض خصائص البيانات الموجودة في الكائن rsmd هنا قمنا بإنشاء الكائن
+            ResultSetMetaData rsmd = rs.getMetaData();
+ 
+            // rs هنا قمنا بعرض خصائص البيانات الموجودة في الكائن
+            System.out.println("First column:  "+rsmd.getColumnName(1)+" ("+rsmd.getColumnTypeName(1)+")");
+            System.out.println("Second column: "+rsmd.getColumnName(2)+" ("+rsmd.getColumnTypeName(2)+")");
+            System.out.println("Third column:  "+rsmd.getColumnName(3)+" ("+rsmd.getColumnTypeName(3)+")");
+            System.out.println("Fourth column: "+rsmd.getColumnName(4)+" ("+rsmd.getColumnTypeName(4)+")");
+            System.out.println("------------------------------------------------------");
+            System.out.println("Total number of columns: "+rsmd.getColumnCount());
+            System.out.println("------------------------------------------------------");
+            System.out.println("First column is from the table : "+rsmd.getTableName(1));
+            System.out.println("------------------------------------------------------");
+            System.out.println("Is First Column have the property AUTOINCREMENT? "+rsmd.isAutoIncrement(1));
+            System.out.println("Is currancy the datatype of the first column?    "+rsmd.isCurrency(1));
+            System.out.println("Is First Column have the property READONLY?      "+rsmd.isReadOnly(1));
+ 
+            // هنا قمنا بإغلاق الإتصال مع قاعدة البيانات
+            con.close();
+        }
+        catch(Exception e) {
+            System.out.println(e.getMessage());
+        }
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>لو كانت قاعدة البيانات موجودة و قمنا بتشغيل البرنامج, سيظهر لنا نتيجة تشبه النتيجة التالية عند تشغيل البرنامج.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+First column:  id (INT)
+Second column: name (VARCHAR)
+Third column:  email (VARCHAR)
+Fourth column: phone (VARCHAR)
+------------------------------------------------------
+Total number of columns: 4
+------------------------------------------------------
+First column is from the table : employee
+------------------------------------------------------
+Is First Column have the property AUTOINCREMENT? true
+Is currancy the datatype of the first column?    false
+Is First Column have the property READONLY?      false
+		</pre>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

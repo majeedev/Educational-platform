@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس ستتعرف أكثر على طرق إستخدام دالة الطباعة, بالإضافة إلى طريقة عرض سلسلة من الأشياء داخل دالة الطباعة" name="description"/>
+<meta content="الفرق بين طباعة الأرقام و النصوص في البرمجة, الفرق بين طباعة الأرقام و النصوص في الخوارزميات, مفهوم الدمج أثناء العرض, فكرة ال concatenation, ما معنى concatenation, طريقة عرض أكثر من شيء في وقت واحد في الخوارزميات, لما لا يتم عرض ناتج الجمع, لما لا يتم عرض ناتج الضرب, لما لا يتم عرض ناتج الطرح, لما لا يتم عرض ناتج الضرب, أمثلة حول ال concatenation في مادة الخوارزميات" name="keywords"/>
+<!-- Google Analytics -->
+
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css">
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الدمج أثناء الطباعة في الخوارزميات</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></link></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../algo-icon.png"/></li>
+<li class="title">دروس تمهيدية</li>
+<li><a href="../algorithms-introduction/index.html">مفهوم الخوارزميات</a></li>
+<li><a href="../algorithms-environment-setup/index.html">تجهيز بيئة العمل</a></li>
+<li><a href="../algorithms-the-print-method/index.html">دالة الطباعة <span class="en">Print</span></a></li>
+<li><a href="index.html">الدمج أثناء الطباعة</a></li>
+<li><a href="../algorithms-variables/index.html">المتغيرات</a></li>
+<li class="title">الحلقات و الشروط</li>
+<li><a href="../algorithms-loops/index.html">الحلقات و أنواعها</a></li>
+<li><a href="../algorithms-for-loop/index.html">الحلقة <span class="en">For</span></a></li>
+<li><a href="../algorithms-while-and-do-while-loops/index.html">الحلقتين <span class="en">While</span> و <span class="en">Do While</span></a></li>
+<li><a href="../algorithms-setting-conditions/index.html">جمل الشرط</a></li>
+<li><a href="../algorithms-operators/index.html">العوامل</a></li>
+<li><a href="../algorithms-nested-loops/index.html">الحلقات المتداخلة</a></li>
+<li class="title">إدخال بيانات من المستخدم</li>
+<li><a href="../algorithms-the-read-method/index.html">دالة الإدخال <span class="en">Read</span></a></li>
+<li><a href="../algorithms-calculate-the-factorial/index.html">حساب قيمة الـ <span class="en">Factorial</span> للعدد</a></li>
+<li><a href="../algorithms-calculate-the-power/index.html">حساب قيمة الـ <span class="en">Power</span> للعدد</a></li>
+<li class="title">المصفوفات</li>
+<li><a href="../algorithms-arrays-types/index.html">المصفوفات و أنواعها</a></li>
+<li><a href="../algorithms-one-dimensional-arrays/index.html">تعريف مصفوفة ذات بعد واحد</a></li>
+<li><a href="../algorithms-one-dimensional-arrays-length/index.html">حجم المصفوفة ذات البعد الواحد</a></li>
+<li><a href="../algorithms-working-with-one-dimensional-arrays/index.html">التعامل مع مصفوفة ذات بعد واحد</a></li>
+<li><a href="../algorithms-two-dimensional-arrays/index.html">تعريف مصفوفة ذات بعدين</a></li>
+<li><a href="../algorithms-two-dimensional-arrays-length/index.html">حجم المصفوفة ذات البعدين</a></li>
+<li><a href="../algorithms-working-with-two-dimensional-arrays/index.html">التعامل مع مصفوفة ذات بعدين</a></li>
+<li class="title">الدوال</li>
+<li><a href="../algorithms-methods/index.html">تعريف دوال جديدة</a></li>
+<li><a href="../algorithms-parameters/index.html">التعامل مع الباراميترات</a></li>
+<li><a href="../algorithms-recursion/index.html">تعريف دوال تستدعي نفسها</a></li>
+<li class="title">أكتب الكود كالمحترفين</li>
+<li><a href="../algorithms-write-less-code/index.html">تقليص حجم الكود</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+<h1><span class="session">Algorithms</span>الدمج أثناء الطباعة في الخوارزميات</h1>
+<article>
+<h2>تعرف أكثر على طرق إستخدام دالة الطباعة</h2>
+<p>في الدرس السابق تعلمنا أنه باستخدام الدالة <code data-enlighter-language="java">print()</code> يمكننا طباعة أي شيء نضعه فيها بشرط أن نضعه بين <code data-enlighter-language="java">" "</code>.<br/>
+    في هذا الدرس ستعرف متى يجب أن تضع الشيء الذي تريد عرضه على الشاشة بين <code data-enlighter-language="java">" "</code> أو <code data-enlighter-language="java">( )</code> و متى لا.</p><br/>
+<p>نقاط مهمة حول الأشياء التي تضعها في دالة الطباعة:</p>
+<ul class="explain">
+<li><p>أي شيء تضعه بداخل <code data-enlighter-language="java">" "</code> يعتبر نص عادي, بالتالي يتم طباعته تماماً كما هو.</p></li>
+<li><p>أي شيء تضعه بدون <code data-enlighter-language="java">" "</code> لا يعتبر نصاً.</p></li>
+<li><p>إذا أردت أن تطبع أكثر من شيء في دالة الطباعة مثل نص و بجانبه عملية جمع. في هذه الحالة قم بوضع أي عملية كانت سواء جمع, طرح, قسمة, ضرب بين قوسين <code data-enlighter-language="java">( )</code> حتى يفهم الكمبيوتر أنك تريد طباعة ناتج هذه العملية.</p></li>
+</ul>
+<p>لا تقلق ستفهم كل هذه التفاصيل من التمارين.<br/>
+	لا تنسى أيضاً أن الـ <code data-enlighter-language="java">\n</code> تعمل فقط عندما تضعها بين <code data-enlighter-language="java">" "</code> كما قلنا في الدرس السابق.</p>
+</article>
+<article>
+<h2>تأثير رموز التنصيص <code data-enlighter-language="java">" "</code> على الأرقام و العمليات الحسابية</h2>
+<p>كما قلنا في البداية, أي شيء تضعه بداخل <code data-enlighter-language="java">" "</code> يعتبر نص عادي, بالتالي يتم طباعته تماماً كما هو.<br/>
+	التمرين التالي يوضح تأثير الرموز <code data-enlighter-language="java">" "</code> على الأرقام و العمليات الحسابية.</p>
+<br/>
+<h3>التمرين الأول</h3>
+<p>أكتب برنامج يطبع النص <code data-enlighter-language="java">7 + 8</code> ثم يطبع ناتج جمعهم, و الذي يساوي <code data-enlighter-language="java">15</code>.</p>
+<p><a class="open-page" href="ex-1.html" target="_blank">الحل و التفسير »</a></p>
+</article>
+<article>
+<h2>إستخدام العامل <code data-enlighter-language="java">+</code> كعامل دمج و إستخدام القوسين <code data-enlighter-language="java">( )</code> للحصول على ناتج العمليات الحسابية</h2>
+<p>يمكنك وضع عدة أشياء بداخل دالة الطباعة باستخدام العامل <code data-enlighter-language="java">+</code> بين كل شيئين تريد وضعهما في دالة الطباعة.<br/>
+	هذه العملية تسمى <span class="word">Concatenation</span> و هي تعني أنك ستعرض سلسلة من الأشياء.</p>
+<br/>
+<p>نقاط مهمة حول وضع العامل <code data-enlighter-language="java">+</code> في دالة الطباعة:</p>
+<ul class="explain">
+<li><p>إذا وضعته بين رقمين, يعتبر عامل جمع. و بالتالي يعرض ناتج الرقمين.</p></li>
+<li><p>إذا قمت بوضعه بين <code data-enlighter-language="java">" "</code> يعتبر حرفاً عادياً, و بالتالي يُعرض كما هو.</p></li>
+<li><p>إذا وضعته بين شيئين منفصلين سواء نصين أو نص و رقم, فإنه يعتبر عامل دمج.</p></li>
+</ul>
+<br/><br/>
+<h3 class="note-title">نصيحة</h3>
+<div class="note-box">
+<p>إنتبه جيداً لأسلوب الـ <span class="word">Concatenation</span> الذي ستتعلمه من التمرين التالي, و قم بإعادة التمرين عدة مرات حتى تفهمه بشكل ممتاز لأنه رغم بساطته إلا أنك ستستخدمه كثيراً عند بناء تطبيقاتك الخاصة في المستقبل.</p>
+</div>
+<br/><br/>
+<h3>التمرين الثاني</h3>
+<p>أكتب برنامج يطبع النص <code data-enlighter-language="java">7 + 8</code> ثم يطبع ناتج جمعهم, و الذي يساوي <code data-enlighter-language="java">15</code> باستخدام أمر الطباعة مرة احدة فقط.</p>
+<p><a class="open-page" href="ex-2.html" target="_blank">الحل و التفسير »</a></p>
+<br/><br/>
+<h3>التمرين الثالث</h3>
+<p>أكتب برنامج يطبع النص <code data-enlighter-language="java">7 + 8</code> ثم يطبع ناتج جمعهم على نفس السطر, و الذي يساوي <code data-enlighter-language="java">15</code> باستخدام أمر الطباعة مرة احدة فقط.<br/>
+	الفكرة هنا فقط أن تجعل برنامجك مفهوماً بالنسبة لجميع المستخدمين.<br/>
+	لذلك سنعرض العملية الحسابية على سطر واحد كما في مادة الرياضيات و في التطبيقات التي تتميز بتصميمها الجميل.</p>
+<p><a class="open-page" href="ex-3.html" target="_blank">الحل و التفسير »</a></p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+</html>

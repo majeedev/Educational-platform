@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title> التعامل مع ال modules في بايثون | Python Modules</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>التعامل مع <span class="inline">الـ <span class="word">Module</span></span> في بايثون</h1>
+<article>
+<h2>مفهوم <span class="inline">الـ <span class="word">Module</span></span> في بايثون</h2>
+<p>كلمة <span class="word">Module</span> يقال لها <b>موديول</b> في العربية, و تعني ملف بايثون عادي يحتوي على مجموعة متغيرات, دوال و كلاسات يمكنك تضمينها في برنامجك.<br/>
+	إذاً أي ملف إمتداده <code>.py</code> يمثل <span class="word">Module</span> في بايثون.</p>
+<p>فكرة <span class="inline">الـ <span class="word">Module</span></span> هي جعل الكود متاح لإعادة الإستخدام, حيث أن وضع الكود في ملف خاص يتيح لك نقله و إستخدامه في برامجك كلما إحتجت إليه.<br/>
+	بالإضافة ذلك, فإنها تساعدك في تنظيم مشاريعك, فمثلاً في حال كنت تبني برنامج, موقع أو لعبة إلخ.. فإنك ستجد أن تقسيم المشروع الواحد إلى مجموعة <span class="word">Modules</span> أمر ضروري جداً لأنه سيسهل عليك كثيراً تطويره و صيانته في المستقبل.</p>
+</article>
+<article>
+<h2>طريقة إنشاء <span class="word">Module</span> في بايثون</h2>
+<p>لإنشاء <span class="word">Module</span> جديد في أي مشروع إتبع الخطوات التالية:</p>
+<ol class="arabic">
+<li><p>أنقر بزر الماوس الأيمن على إسم المشروع الذي ستنشئ فيه الموديول.</p></li>
+<li><p>مرر الماوس فوق كلمة <span class="inline"><span class="word">New</span>.</span></p></li>
+<li><p>أنقر على <span class="inline"><span class="word">Python File</span>.</span></p></li>
+</ol>
+<p><img src="create-new-module-in-pycharm.png"/></p>
+<br/>
+<ol class="arabic" start="4">
+<li><p>قم بإعطاء الملف أي إسم مثل <span class="inline"><code>MyModule</code>.</span></p></li>
+<li><p>أنقر <span class="word">OK</span> حتى يتم إنشاء ملف بايثون بهذا الإسم في المشروع.</p></li>
+</ol>
+<p><img src="set-module-name-in-pycharm.png"/></p>
+<br/>
+<p>الآن, لاحظ أنه تم إنشاء موديول جديد بداخل نفس المشروع إسمه <span class="inline"><code>MyModule.py</code>.</span></p>
+<p><img src="project-overview.png"/></p>
+</article>
+<article>
+<h2>تحديد <span class="inline">الـ <span class="word">Module</span></span> الأساسي في المشروع في بايثون</h2>
+<p>في المشروع الذي أنشأناه منذ قليل, نلاحظ أن المشروع أصبح يحتوي على ملفين:</p>
+<ul class="explain">
+<li><p><code>Test.py</code></p></li>
+<li><p><code>MyModule.py</code></p></li>
+</ul>
+<p>بما أن المشروع أصبح يحتوي على أكثر من ملف, سيكون عليك دائماً الإنتباه للملف الذي سيتم تنفيذ الأوامر الموضوعة فيه عند النقر على زر التشغيل.</p>
+<br/><br/>
+<h3>طريقة معرفة الموديول الذي سيتنفذ عند النقر على زر التشغيل</h3>
+<p>بكل بساطة, إسم الموديول الذي سيتنفذ عند النقر على زر التشغيل يظهر بجانبه. فمثلاً, نلاحظ أنه لا يزال الموديول <code>Test</code> هو الموديول الذي سيتنفذ عند النقر على زر التشغيل و السبب بذلك أننا لم نقم بتغييره.</p>
+<p><img src="determine-which-module-will-run-in-pycharm.png"/></p>
+<br/><br/>
+<h3>طريقة تحديد الموديول الذي سيتنفذ في المشروع</h3>
+<p>هناك عدة طرق لذلك, أسهل طريقة هي النقر على القائمة المنسدلة و إختيار الموديول الذي تريده أن يعمل عند النقر على زر التشغيل.</p>
+<p><img src="set-main-module-in-pycharm.png"/></p>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>في كل الأمثلة التي سنضعها في هذا الدرس, سنقوم دائماً بتنفيذ الأوامر الموجودة في الموديول <span class="inline"><code>Test</code>.</span><br/>
+		كما أننا سنقوم بتضيمن محتوى الموديول <code>MyModule</code> في الموديول <span class="inline"><code>Test</code>.</span></p>
+</div>
+</article>
+<article>
+<h2>تضمين كل محتوى <span class="inline">الـ <span class="word">Module</span></span> في <span class="word">Module</span> آخر في بايثون</h2>
+<p>في البداية, نستخدم الكلمة المحجوزة <code data-enlighter-language="python">import</code> لتضمين محتوى الموديول في موديول آخر.<br/>
+<span class="note">ملاحظة:</span> إذا فعلت <code data-enlighter-language="python">import</code> لنفس الموديول أكثر من مرة, فإن مفسّر لغة بايثون لا يفعل <code data-enlighter-language="python">import</code> من جديد.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف موديول إسمه <code class="python">MyModule</code> يحتوي على دالة واحدة, و موديول آخر إسمه <span class="inline"><code class="python">Test</code>.</span><br/>
+	بعدها قمنا بتضمين كل محتوى الموديول <code class="python">MyModule</code> في الموديول <span class="inline"><code class="python">Test</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">MyModule.py</span>
+<pre data-enlighter-language="python">
+def greeting():
+    print('Welcome to harmash.com')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# MyModule هنا قمنا بتضمين كل محتوى الموديول
+import MyModule
+
+# MyModule الموجودة في الموديول greeting() هنا قمنا باستدعاء الدالة
+MyModule.greeting()
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الموديول <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+			Welcome to harmash.com
+		</div>
+</div>
+<br/><br/>
+<h3 class="note-title">إنتبه</h3>
+<div class="note-box">
+<p>إذا فعلت <code data-enlighter-language="python">import</code> لكل محتوى الموديول فأنت بذلك كأنك تقوم بإضافة نسخة كاملة عنها في الذاكرة حتى لو كانت تحتوي على <span class="number">1000</span> دالة أو <span class="number">1000</span> كائن.<br/>
+		لذلك يفضل دائماً أن تفعل <code data-enlighter-language="python">import</code> فقط للأشياء التي تحتاجها من الموديول و ليس كل الموديول.</p>
+</div>
+</article>
+<article>
+<h2>تضمين الأشياء التي نحتاجها فقط من <span class="inline">الـ <span class="word">Module</span></span> في بايثون</h2>
+<p>لتحديد الأشياء التي نريد إستخدامها فقط من الموديول نضع الكلمة المحجوزة <code data-enlighter-language="python">from</code> بعدها نضع إسم الموديول, ثم الكلمة <code data-enlighter-language="python">import</code> و بعدها نضع إسم الأشياء التي نريدها من الموديول مع وضع فاصلة بين كل شيئين.</p>
+<p><span class="note">ملاحظة:</span> عند تضمين أشياء من موديول فإننا نذكر أسماءهم فقط في جملة <span class="inline">الـ <code class="python">import</code>.</span><br/>
+	و عند إستخدام الأشياء التي تم جلبها من الموديول فإننا نستخدمها بشكل مباشر بدون الحاجة لذكر إسم الموديول التي أحضرناها منها.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف موديول إسمه <code class="python">MyModule</code> يحتوي على دالتين و كائن نوعه <span class="inline"><code data-enlighter-language="python">dict</code>.</span><br/>
+	ثم قمنا بتعريف موديول آخر إسمه <span class="inline"><code class="python">Test</code>.</span> في هذا الموديول قمنا بتضمين الأشياء التي نحتاجها فقط من الموديول <span class="inline"><code class="python">MyModule</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">MyModule.py</span>
+<pre data-enlighter-language="python">
+# يتألف من 3 عناصر data إسمه dict هنا قمنا بتعريف
+data = {
+    'id': 5,
+    'name': 'Sara',
+    'gender': 'female'
+}
+
+
+# هنا قمنا بتعريف دالة نمرر لها إسم عند إستدعائها فتقوم بطباعة رسالة ترحيب لهذا الإسم
+def login_msg(name):
+    print("Welcome", name)
+
+
+# هنا قمنا بتعريف دالة نمرر لها إسم عند إستدعائها فتقوم بطباعة رسالة وداع لهذا الإسم
+def logout_msg(name):
+    print('Good by', name)
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# MyModule فقط من الموديول login_msg() و الدالة data هنا قمنا بتضمين الكائن
+from MyModule import data, login_msg
+
+# name في المتغير data الموجودة في العنصر name هنا قمنا بتخزين قيمة المفتاح
+name = data['name']
+
+# name و تمرير الإسم الذي نريدها أن تطبعه و الذي في الأساس قمنا بتخزينه في المتغير login_msg() هنا قمنا باستدعاء الدالة
+login_msg(name)
+
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الموديول <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+			Welcome Sara
+		</div>
+</div>
+</article>
+<article>
+<h2>تضمين كل محتوى <span class="inline">الـ <span class="word">Module</span></span> و استدعاءه بإسمه فقط في بايثون</h2>
+<p>في حال أردت تضمين كل محتوى الموديول في موديول آخر مع عدم الإضطرار لذكر إسم الموديول كلما أردت إستخدام موجودة فيه, يمكنك أن تضع الكلمة المفتاحية <code data-enlighter-language="python">from</code> بعدها نضع إسم الموديول, ثم الكلمة المفتاحية <code data-enlighter-language="python">import</code> و بعدها نضع <code data-enlighter-language="python">*</code> فقط.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف موديول إسمه <code class="python">MyModule</code> يحتوي على دالتين و كائن نوعه <span class="inline"><code data-enlighter-language="python">dict</code>.</span><br/>
+	ثم قمنا بتعريف موديول آخر إسمه <span class="inline"><code class="python">Test</code>.</span> في هذا الموديول قمنا بتضمين كل الأشياء الموجودة في الموديول <span class="inline"><code class="python">MyModule</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">MyModule.py</span>
+<pre data-enlighter-language="python">
+# يتألف من 3 عناصر data إسمه dict هنا قمنا بتعريف
+data = {
+    'id': 5,
+    'name': 'Sara',
+    'gender': 'female'
+}
+
+
+# هنا قمنا بتعريف دالة نمرر لها إسم عند إستدعائها فتقوم بطباعة رسالة ترحيب لهذا الإسم
+def login_msg(name):
+    print("Welcome", name)
+
+
+# هنا قمنا بتعريف دالة نمرر لها إسم عند إستدعائها فتقوم بطباعة رسالة وداع لهذا الإسم
+def logout_msg(name):
+    print('Good by', name)
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# MyModule هنا قمنا بتضمين كل شيء موجود في
+from MyModule import *
+
+# name في المتغير data الموجودة في العنصر name هنا قمنا بتخزين قيمة المفتاح
+name = data['name']
+
+# name و تمرير الإسم الذي نريدها أن تطبعه و الذي في الأساس قمنا بتخزينه في المتغير login_msg() هنا قمنا باستدعاء الدالة
+login_msg(name)
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الموديول <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+			Welcome Sara
+		</div>
+</div>
+<br/><br/>
+<h3 class="note-title">تنبيه</h3>
+<div class="note-box">
+<p>يفضل عدم استخدام هذا الأسلوب لأنه قد يسبب لك مشاكل كثيرة أنت بغنى عنها.<br/>
+		فمثلاً في حال قمت باستدعاء أكثر من موديول يحتوون على أشياء تملك نفس الإسم سيحدث تضارب في الأسماء, بالإضافة إلى تشكيل عبئ إضافي على الذاكرة بسبب الأشياء التي قمت بتضمينها و أنت في الأساس لا تحتاجها.</p>
+</div>
+</article>
+<article>
+<h2>إعادة تسمية <span class="inline">الـ <span class="word">Module</span></span> عند تضيمنها في بايثون</h2>
+<p>في حال كنت تريد إعطاء إسم آخر <span class="inline">( <span class="word">Alias</span> )</span> للموديول عند تضمينها لمناداته به بدل مناداته بإسمه الأصلي, فيمكنك ذلك بواسطة الكلمة المفتاحية <span class="inline"><code class="python">as</code>.</span><br/>
+	إذاً, في حال كان إسم الموديول طويل, يمكنك وضع إسم مختصر له بدل الإضطرار إلى كتابة إسمه الكامل كلما أردت الوصول لمحتواه.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف موديول إسمه <code class="python">MyModule</code> يحتوي على دالة واحدة, و موديول آخر إسمه <span class="inline"><code class="python">Test</code>.</span><br/>
+	بعدها قمنا بتضمين كل محتوى الموديول <code class="python">MyModule</code> في الموديول <code class="python">MyModule</code> مع إعطاء الموديول إسم مختصر.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">MyModule.py</span>
+<pre data-enlighter-language="python">
+def greeting():
+    print('Welcome to harmash.com')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# كإختصار لإسم الموديول  'mod'  مع وضع الكلمة MyModule هنا قمنا بتضمين كل محتوى الموديول
+import MyModule as mod
+
+# mod الموجودة في الموديول الذي أسميناه greeting() هنا قمنا باستدعاء الدالة
+mod.greeting()
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الموديول <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+			Welcome to harmash.com
+		</div>
+</div>
+</article>
+<article>
+<h2>تضمين <span class="word">Module</span> جاهزة في بايثون</h2>
+<p>في الدورس السابقة, سبق أن قمنا بتضمين الموديول <code data-enlighter-language="pyhon">math</code> الذي يحتوي على دوال و ثوابت جاهزة يمكن الإستفادة منها عند إجراء عمليات حسابية و شرحنا أهم الدوال الموجودة فيه. لذلك سنقوم الآن باستخدام مودويل جاهز آخر إسمه <span class="inline"><code data-enlighter-language="pyhon">platform</code>.</span></p>
+<br/>
+<p>في المثال التالي قمنا بتضمين مودويل جاهز إسمه <code data-enlighter-language="pyhon">platform</code> و من خلاله قمنا بمعرفة كل خصائص الحاسوب الذي نستخدمه.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# platform هنا قمنا بتضمين كل محتوى الموديول
+import platform
+
+# هنا قمنا بعرض إسم نظام التشغيل
+print('Operating System:', platform.system())
+
+# هنا قمنا بعرض كل المعلومات المتوفرة عن المعالج
+print('Processor:', platform.processor())
+
+# هنا قمنا بعرض إصدار بايثون المنصب على الجهاز
+print('Python Version:', platform.python_version())
+		</pre>
+<br/>
+<p><span class="point">•</span>ستحصل على نتيجة تشبه النتيجة التالية عند التشغيل على حسب مواصفات حاسوبك.</p>
+<div class="code-box">
+Operating System: Windows<br/>
+Processor: Intel64 Family 6 Model 142 Stepping 9, GenuineIntel<br/>
+Python Version: 3.6.4
+		</div>
+</div>
+</article>
+<article>
+<h2>إستخراج أسماء جميع الأشياء الموجودة في <span class="word">Module</span> في بايثون</h2>
+<p>لمعرفة جميع أسماء الأشياء الموجودة في أي موديول, يمكنك تمرير إسم الموديول كقيمة للدالة <code data-enlighter-language="pyhon">dir()</code> و من ثم طباعة ما سترجعه.</p>
+<br/>
+<p>في المثال التالي قمنا بطباعة أسماء جميع الأشياء الموجودة في الموديول <span class="inline"><code data-enlighter-language="pyhon">math</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# math هنا قمنا بتضمين كل محتوى الموديول
+import math
+
+# dir() و التي سترجعها الدالة math هنا قمنا بعرض أسماء جميع الأشياء الموجودة في الموديول
+print(dir(math))
+		</pre>
+<br/>
+<p><span class="point">•</span>ستحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+['__doc__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'log2', 'modf', 'nan', 'pi', 'pow', 'radians', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'tau', 'trunc']
+		</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

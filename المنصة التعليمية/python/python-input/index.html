@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>إدخال بيانات المستخدم في بايثون | Python read user input</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>إدخال بيانات من المستخدم في بايثون</h1>
+<article>
+<h2>مقدمة</h2>
+<p>في الدروس السابقة, كنا نكتب الكود ثم نقوم بتجربته فيتنفذ كما هو, بمعنى أننا كنا أصلاً نعرف ما سيظهر عند تشغيل الكود لأننا كنا نقوم بتحديد قيم المتغيرات قبل تشغيل البرنامج.</p>
+<p>في هذا الدرس ستتعلم كيف تنشئ برنامح يتفاعل مع المستخدم, حيث أنك عندما تقوم بتشغيله سيطلب من المستخدم إدخال بيانات, و بعد إدخالها سيقوم البرنامج بمعالجتها و فعل شيء معين بها.</p>
+</article>
+<article>
+<h2>الدالة <code data-enlighter-language="python">input()</code> في بايثون</h2>
+<p>لجعل المستخدم قادر على إدخال بيانات في البرنامج أثناء اشتغاله نستخدم دالة جاهزة إسمها <span class="inline"><code data-enlighter-language="python">input()</code>.</span></p>
+<p>في كل مرة تقوم فيها باستدعاء هذه الدالة يقوم مفسّر لغة بايثون بانتظارك لإدخال ما تريد من لوحة المفاتيح <span class="inline">( <span class="word">Keyboard</span> ).</span><br/>
+	بعد الإنتهاء من الإدخال و النقر على الزر <kbd>Enter</kbd> سيتم إرجاع الشيء الذي قمت بإدخاله كنص في المكان الذي تم منه إستدعاء الدالة <span class="inline"><code data-enlighter-language="python">input()</code>.</span></p>
+<br/>
+<h3>معلومة تقنية</h3>
+<p>عند استدعاء الدالة <code data-enlighter-language="python">input()</code> فإنك حتى لو قمت بإدخال رقم فإنها سترجعه كنص.<br/>
+	لذلك في حال كنت تريد من المستخدم أن يدخل رقم, سيكون عليك تحويل ما ترجعه الدالة لرقم.</p>
+</article>
+<article>
+<h2>أمثلة على إدخال البيانات من المستخدم في بايثون</h2>
+<br/>
+<p>في المثال التالي قمنا بإنشاء برنامج يطلب من المستخدم إدخال إسمه, ثم يعرضه له.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# name هنا قمنا بإظهار رسالة تطلب من المستخدم أن يدخل إسمه. الإسم الذي سيدخله سيتم تخزينه في المتغير
+name = input("What's your name? ")
+
+# name هنا قمنا بعرض جملة ترحيب مبنية على إسم المستخدم الذي قمنا بتخزينه قبل قليل في المتغير
+print("Nice to meet you", name)
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code></span> مع الإشارة إلى أننا قمنا بتعليم البيانات التي إنتظرنا البرنامج لإدخالها من لوحة المفاتيح باللون الأصفر.</p>
+<div class="code-box">
+			What's your name? <span class="yellow-bg">mhamad</span><br/>
+			Nice to meet you mhamad
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بإنشاء برنامج يطلب من المستخدم إدخال عددين صحيحين, ثم يعرضه له ناتج جمعهما.</p>
+<p>لاحظ أننا وضعنا الدالة <code data-enlighter-language="python">input()</code> بداخل الدالة <code data-enlighter-language="python">int()</code> حتى يتم تحويل الرقم الذي سيدخله المستخدم إلى عدد صحيح قبل تخزينه في المتغير.<br/>
+	لو لم نفعل ذلك لتم إعتبار الأرقام التي أدخلها المستخدم عبارة عن نصوص و بالتالي كان ذلك سيسبب خطأ منطقي إظهار ناتج الجمع.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# a بعدها سيتم تخزين العدد في المتغير .int إلى النوع str هنا قمنا بإظهار رسالة تطلب من المستخدم أن يدخل عدد. العدد الذي سيدخله سيتم تحويله من النوع
+a = int(input("Enter a: "))
+
+# b بعدها سيتم تخزين العدد في المتغير .int إلى النوع str هنا قمنا بإظهار رسالة تطلب من المستخدم أن يدخل عدد. العدد الذي سيدخله سيتم تحويله من النوع
+b = int(input("Enter b: "))
+
+# هنا قمنا بعرض ناتج جمع العددين اللذين تم إدخالهما
+print('a + b =', a + b)
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code></span> مع الإشارة إلى أننا قمنا بتعليم البيانات التي إنتظرنا البرنامج لإدخالها من لوحة المفاتيح باللون الأصفر.</p>
+<div class="code-box">
+			Enter a: <span class="yellow-bg">5</span><br/>
+			Enter b: <span class="yellow-bg">7</span><br/>
+			a + b = 12<br/>
+</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بإنشاء برنامج يطلب من المستخدم إدخال عدد يمثل عدد عناصر مصفوفة, ثم يطلب منه إدخال قيمة لكل عنصر في المصفوفة.<br/>
+	في الأخير يعرض له البرنامج كل قيمة قام بإدخالها فيها على سطر واحد.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# n بعدها سيتم تخزين العدد في المتغير .int إلى النوع str العدد الذي سيدخله سيتم تحويله من النوع .aList هنا قمنا بإظهار رسالة تطلب من المستخدم أن يدخل عدد عناصر الكائن
+n = int(input("Enter the length of the list: "))
+
+# عدد عناصره يساوي العدد الذي أدخله المستخدم, و القيمة الأولية لكل عنصر فيه هي 0 aList إسمه list هنا قمنا بإنشاء
+aList = [0] * n
+
+# واحداً i و طبعاً, في بداية كل دورة في هذه الحلقة ستزيد قيمة المتغير .aList تبدأ من 0 إلى عنصر في الكائن for هنا قمنا بإنشاء حلقة
+for i in range(len(aList)):
+	# بعدها سيتم وضعها في العنصر .int إلى النوع str في كل دورة سيطلب من المستخدم إدخال قيمة لعنصر جديد. بعدها سيتم تحويل نوع القيمة التي يدخلها من النوع
+    aList[i] = int(input('Enter aList[' + str(i) + ']: '))
+
+print('aList contain the following values:')
+
+# val و تخزنه في الكائن aList هنا قمنا بإنشاء حلقة تجلب في كل دورة قيمة عنصر من عناصر الكائن
+for val in aList:
+	# تضيف مسافة فارغة بعد عرض القيمة بدلاً من النزول على سطر جديد print() مع جعل الدالة val هنا قمنا بطباعة القيمة المخزنة في المتغير
+    print(val, end=' ')
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code></span> مع الإشارة إلى أننا قمنا بتعليم البيانات التي إنتظرنا البرنامج لإدخالها من لوحة المفاتيح باللون الأصفر.</p>
+<div class="code-box">
+			Enter the length of the list: <span class="yellow-bg">5</span><br/>
+			Enter aList[0]: <span class="yellow-bg">10</span><br/>
+			Enter aList[1]: <span class="yellow-bg">20</span><br/>
+			Enter aList[2]: <span class="yellow-bg">30</span><br/>
+			Enter aList[3]: <span class="yellow-bg">40</span><br/>
+			Enter aList[4]: <span class="yellow-bg">50</span><br/>
+			The list contain the following values:<br/>
+			10 20 30 40 50 
+		</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

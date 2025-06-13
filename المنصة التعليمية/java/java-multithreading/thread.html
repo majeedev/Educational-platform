@@ -1,0 +1,1020 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الكلاس Thread في جافا | Java util.Thread</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>الكلاس <code data-enlighter-language="java">Thread</code> في جافا</h1>
+<article>
+<h2>مقدمة</h2>
+<p>يستخدم الكلاس <code data-enlighter-language="java">Thread</code> لجعل البرنامج قادر على تنفيذ عدة أوامر مع بعض في وقت واحد, و هو يملك عدة دوال و خصائص تجعلك قادراً على التحكم بطريقة تنفيذ هذه الأوامر.</p>
+<p>كل كائن نوعه <code data-enlighter-language="java">Thread</code> تقوم بإنشائه, يكون الهدف منه تنفيذ مجموعة أوامر أثناء تنفيذ أوامر أخرى.</p>
+<p>كل كائن <code data-enlighter-language="java">Thread</code> تقوم بإنشاءه, يتم إعطاءه رقم تعرفة <span class="inline">( <span class="word">id</span> )</span> و إسم <span class="inline">( <span class="word">name</span> )</span> خاص فيه, بالتالي يمكن الوصول لكائن الـ <code data-enlighter-language="java">Thread</code> من خلال رقم التعرفة أو الإسم الذي أعطي له.</p>
+<p>بالإضافة إلى ذلك, يملك كل كائن <code data-enlighter-language="java">Thread</code> رقم بين <span class="number">1</span> و <span class="number">10</span> يحدد أولية التنفيذ <span class="inline">( <span class="word">Priority</span> )</span>.<br/>
+	 كائن الـ <code data-enlighter-language="java">Thread</code> الذي يملك أعلا <span class="word">Priority</span> يتم تنفيذ أوامره في الأول. لذلك, تلاعب بهذا الرقم فقط في حال كان عندك كائن <code data-enlighter-language="java">Thread</code> أهم من غيره.<br/>
+	تلقائياً, أي كائن <code data-enlighter-language="java">Thread</code> تقوم بإنشائه, يتم إعطائه <span class="word">Priority</span> تساوي <span class="number">5</span> حتى يتم تنفيذ جميع أوامر كائنات الـ <code data-enlighter-language="java">Thread</code> بشكل متوازي و عادل.</p>
+<br/>
+<h3>بناؤه</h3>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public class Thread
+extends Object
+implements Runnable
+	</pre>
+<p>بما أن الكلاس <code data-enlighter-language="java">Thread</code> يطبق الإنترفيس <code data-enlighter-language="java">Runnable</code>, فهذا يؤكد أنهما مصممان لنفس الغرض, و هو جعل البرنامج قادراً على تنفيذ عدة أوامر مع بعض في وقت واحد.</p>
+<br/><br/>
+<h3>خطوات بناء <span class="word">Thread</span> بواسطة الكلاس <code data-enlighter-language="java">Thread</code></h3>
+<ol class="arabic">
+<li><p>نفعل <code data-enlighter-language="java">extends</code> للكلاس <code data-enlighter-language="java">Thread</code>.</p></li>
+<li><p>نفعل <span class="word">Override</span> للدالة <code data-enlighter-language="java">run()</code> لنضع جميع الأوامر التي نريدها أن تتنفذ عند تشغيل كائن الـ <code data-enlighter-language="java">Thread</code>.</p></li>
+</ol>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">MyThread.java</span>
+<pre data-enlighter-language="java">
+public class MyThread extends Thread {
+
+    @Override
+    public void run(){
+        // start() هنا تضع الأوامر التي تريد تنفيذها عند إستدعاء الدالة
+    }
+
+} 
+		</pre>
+</div>
+<br/>
+<h3>خطوات إنشاء الـ <code data-enlighter-language="java">Thread</code> و تشغيله</h3>
+<ol class="arabic">
+<li><p>ننشئ كائن من الكلاس الذي يرث من الكلاس <code data-enlighter-language="java">Thread</code>.</p></li>
+<li><p>نستدعي الدالة <code data-enlighter-language="java">start()</code> لتشغيل كائن الـ <code data-enlighter-language="java">Thread</code>.</p></li>
+</ol>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+
+    public static void main(Strigns[] args)){
+
+        MyThread t = new MyThread();
+        t.start();
+
+    }
+
+} 
+		</pre>
+</div>
+<br/>
+<h3 class="note-title">إنتبه</h3>
+<div class="note-box">
+<p>في حال قمت بتشغل كائن الـ <code data-enlighter-language="java">Thread</code> بواسطة الدالة <code data-enlighter-language="java">run()</code> بدل الدالة <code data-enlighter-language="java">start()</code>, عندها ستعامل الدالة <code data-enlighter-language="java">run()</code> كدالة عادية, أي سيتم إيقاف باقي الأوامر الموجودة في الدالة <code data-enlighter-language="java">main()</code> حتى يتم تنفيذ الأوامر الموجودة بداخل الدالة <code data-enlighter-language="java">run()</code> ثم العودة للدالة <code data-enlighter-language="java">main()</code> لمتابعة تنفيذ باقي الأوامر الموجودة فيها.</p>
+</div>
+</article>
+<article>
+<h2>الحالات التي يمر بها الـ <code data-enlighter-language="java">Thread</code> <span class="inline">(<span class="word">Thread States</span>)</span></h2>
+<p>عندما تتعامل مع الـ <code data-enlighter-language="java">Thread</code> فأنت بذلك تقوم بتغيير حالته, فمرة تنشئه, و مرة تجهزه و تشغله, و قد توقفه عن العمل مدة معينة ثم تعيده للعمل بعد مدة, و عند الإنتهاء يتم مسحه من الذاكرة لتوفير مساحة التخزين.</p>
+<p>في الجدول التالي ذكرنا الحالات التي يمر بها الـ <code data-enlighter-language="java">Thread</code>.</p>
+<table class="list full-width">
+<tr>
+<th>الحالة</th>
+<th>معناها</th>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">NEW</code></td>
+<td>هذه الحالة تعني أن كائن الـ <code data-enlighter-language="java">Thread</code> قد تم إنشاءه في الذاكرة.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">RUNNABLE</code></td>
+<td>هذه الحالة تعني أن كائن الـ <code data-enlighter-language="java">Thread</code> أصبح جاهزاً و يمكن تنفيذ أوامره.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">TIMED_WAITING</code></td>
+<td>هذه الحالة تعني أن كائن الـ <code data-enlighter-language="java">Thread</code> قد تم إيقافه عن التنفيذ لمدة معينة.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">BLOCKED</code></td>
+<td>هذه الحالة تعني أن كائن الـ <code data-enlighter-language="java">Thread</code> موقوف لحين تنفيذ أوامر <code data-enlighter-language="java">Thread</code> آخر.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">WAITING</code></td>
+<td>هذه الحالة تعني أن كائن الـ <code data-enlighter-language="java">Thread</code> تم إيقافه عن التنفيذ لبعض الوقت ريثما ينتهي تنفيذ أوامر <code data-enlighter-language="java">Thread</code> آخر.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">TERMINATED</code></td>
+<td>هذه الحالة تعني أن كائن الـ <code data-enlighter-language="java">Thread</code> تم إيقافه نهائياً, و تم مسحه من الذاكرة.</td>
+</tr>
+</table>
+<br/>
+<p><span class="note">ملاحظة:</span> بعد أن تصبح حالة كائن الـ <code data-enlighter-language="java">Thread</code> تساوي <code data-enlighter-language="java">TERMINATED</code> يمكن إعطاء رقم التعرفة و إسم الكائن السابق لكائن <code data-enlighter-language="java">Thread</code> آخر.</p>
+</article>
+<article>
+<h3>كونستركتورات الكلاس <code data-enlighter-language="java">Thread</code></h3>
+<p>في الجدول التالي ذكرنا جميع كونستركتورات الكلاس <code data-enlighter-language="java">Thread</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الكونستركتور مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Thread()</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">Thread</code> ليس له إسم محدد.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Thread(String name)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">Thread</code> مع تحديد إسمه.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Thread(Runnable target)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">Thread</code> من كائن نوعه <code data-enlighter-language="java">Runnable</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Thread(Runnable target, String name)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">Thread</code> من كائن نوعه <code data-enlighter-language="java">Runnable</code> مع تحديد إسمه.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Thread(ThreadGroup group, String name)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">Thread</code> و يضعه ضمن مجموعة محددة, مع تحديد إسمه.<br/><br/>
+<b>باراميترات</b>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">group</code> عبارة عن كائن نوعه <code data-enlighter-language="java">ThreadGroup</code> يمثل مجموعة من الـ <span class="word">Threads</span>.</p></li>
+<li><p><code data-enlighter-language="java">name</code> عبارة عن إسم يتم إعطاءه لكائن الـ <code data-enlighter-language="java">Thread</code> الذي سيتم إنشاءه و وضعه ضمن المجموعة المذكورة.</p></li>
+</ul><br/>
+			يرمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">Thread</code> الحالي لا يملك صلاحية إنشاء كائن <code data-enlighter-language="java">Thread</code> جديد بداخل المجموعة المشار إليها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Thread(ThreadGroup group, Runnable target)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">Thread</code> من كائن نوعه <code data-enlighter-language="java">Runnable</code> و يضعه ضمن مجموعة محددة.<br/><br/>
+<b>باراميترات</b>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">group</code> عبارة عن كائن نوعه <code data-enlighter-language="java">ThreadGroup</code> يمثل مجموعة من الـ <span class="word">Threads</span>.</p></li>
+<li><p><code data-enlighter-language="java">target</code> عبارة عن كائن نوعه <code data-enlighter-language="java">Runnable</code> يمثل كائن الـ <code data-enlighter-language="java">Thread</code> الذي سيتم إنشاءه و وضعه ضمن المجموعة المذكورة.</p></li>
+</ul><br/>
+			يرمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">Thread</code> الحالي لا يملك صلاحية إنشاء كائن <code data-enlighter-language="java">Thread</code> جديد بداخل المجموعة المشار إليها.</td>
+
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Thread(ThreadGroup group, Runnable target, String name)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">Thread</code> من كائن نوعه <code data-enlighter-language="java">Runnable</code> و يضعه ضمن مجموعة محددة, مع تحديد إسمه.<br/><br/>
+<b>باراميترات</b>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">group</code> عبارة عن كائن نوعه <code data-enlighter-language="java">ThreadGroup</code> يمثل مجموعة من الـ <span class="word">Threads</span>.</p></li>
+<li><p><code data-enlighter-language="java">target</code> عبارة عن كائن نوعه <code data-enlighter-language="java">Runnable</code> يمثل كائن الـ <code data-enlighter-language="java">Thread</code> الذي سيتم إنشاءه و وضعه ضمن المجموعة المذكورة.</p></li>
+<li><p><code data-enlighter-language="java">name</code> عبارة عن إسم يتم إعطاءه لكائن الـ <code data-enlighter-language="java">Thread</code> الذي سيتم إنشاءه و وضعه ضمن المجموعة المذكورة.</p></li>
+</ul><br/>
+			يرمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">Thread</code> الحالي لا يملك صلاحية إنشاء كائن <code data-enlighter-language="java">Thread</code> جديد بداخل المجموعة المشار إليها.</td>
+
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Thread(ThreadGroup group, Runnable target, String name, long stackSize)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">Thread</code> من كائن نوعه <code data-enlighter-language="java">Runnable</code> و يضعه ضمن مجموعة محددة, مع تحديد إسمه, و تحديد المساحة القصوى التي يمكن أن تحجز له في الذاكرة.<br/><br/>
+<b>باراميترات</b>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">group</code> عبارة عن كائن نوعه <code data-enlighter-language="java">ThreadGroup</code> يمثل مجموعة من الـ <span class="word">Threads</span>.</p></li>
+<li><p><code data-enlighter-language="java">target</code> عبارة عن كائن نوعه <code data-enlighter-language="java">Runnable</code> يمثل كائن الـ <code data-enlighter-language="java">Thread</code> الذي سيتم إنشاءه و وضعه ضمن المجموعة المذكورة.</p></li>
+<li><p><code data-enlighter-language="java">name</code> عبارة عن إسم يتم إعطاءه لكائن الـ <code data-enlighter-language="java">Thread</code> الذي سيتم إنشاءه و وضعه ضمن المجموعة المذكورة.</p></li>
+<li><p><code data-enlighter-language="java">stackSize</code> عبارة عن المساحة القصوى التي يمكن أن يحتلها كائن الـ <code data-enlighter-language="java">Thread</code> في الذاكرة.</p></li>
+</ul><br/>
+			يرمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">Thread</code> الحالي لا يملك صلاحية إنشاء كائن <code data-enlighter-language="java">Thread</code> جديد بداخل المجموعة المشار إليها.</td>
+
+</tr>
+</table>
+</article>
+<article>
+<h3>دوال الكلاس <code data-enlighter-language="java">Thread</code></h3>
+<p>الجدول التالي يحتوي على دوال الكلاس <code data-enlighter-language="java">Thread</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void run()</code></span>
+			تستخدم لتجهيز الأوامر التي ستنفذ عند تشغيل الـ <code data-enlighter-language="java">Thread</code>.<br/>
+			الكلاس الذي يرث من الكلاس <code data-enlighter-language="java">Thread</code> يجب أن يفعل لها <span class="word">Override</span>, و يضع بداخلها الأوامر التي يريدها أن تتنفذ عند تشغيل الـ <code data-enlighter-language="java">Thread</code>.<br/>
+<span class="note">ملاحظة:</span> لتشغيل الـ <code data-enlighter-language="java">Thread</code> عليك إستدعاء الدالة <code data-enlighter-language="java">start()</code> و التي بدورها تقوم باستدعاء الدالة <code data-enlighter-language="java">run()</code>, أي تنفذ الأوامر الموجودة فيها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void start()</code></span>
+			تستخدم لتشغيل كائن الـ <code data-enlighter-language="java">Thread</code>, أي لتنفيذ الأوامر التي تم وضعها في الدالة <code data-enlighter-language="java">run()</code>.<br/>
+			ترمي الإستثناء <span class="code red">IllegalThreadStateException</span> في حال كان كائن الـ <code data-enlighter-language="java">Thread</code> شغالا قبل استدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void sleep(long milliseconds)</code></span>
+			توقف تنفيذ أوامر كائن الـ <code data-enlighter-language="java">Thread</code> الذي قام باستدعائها لمدة محددة. بعد إنتهاء هذه المدة يعود للعمل من جديد.<br/>
+<code data-enlighter-language="java">milliseconds</code> هو المدة التي سيتوقف فيها كائن الـ <code data-enlighter-language="java">Thread</code> بالـ <span class="word">Milli Seconds</span>.<br/>
+			فمثلاً إذا وضعت <span class="number">1000</span> مكان هذا الباراميتر, سؤدي ذلك إلى إيقاف كائن الـ <code data-enlighter-language="java">Thread</code> عن التنفيذ لثانية واحدة.<br/>
+			ترمي الإستثناء <span class="code red">IllegalThreadStateException</span> في حال تم إعطاءها قيمة أصغر من <span class="number">0</span>.<br/>
+			ترمي الإستثناء <span class="code red">InterruptedException</span> في حال تم إيقاف كائن الـ <code data-enlighter-language="java">Thread</code> في فترة إنتظاره.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void suspend()</code></span>
+			توقف تنفيذ أوامر كائن الـ <code data-enlighter-language="java">Thread</code> الذي قام باستدعائها لمدة غير محددة, بحيث لا يمكنه العودة للعمل من جديد إلا إذا قام باستدعاء الدالة <code data-enlighter-language="java">resume()</code> بعدها.<br/>
+			ترمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">Thread</code> الحالي لا يملك صلاحية التعديل على كائن الـ <code data-enlighter-language="java">Thread</code> المتوقف عن العمل.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void resume()</code></span>
+			تكمل تنفيذ أوامر كائن الـ <code data-enlighter-language="java">Thread</code> بعد أن كان قد توقف عن تنفيذها بسبب الدالة <code data-enlighter-language="java">suspend()</code>.<br/>
+			ترمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">Thread</code> الحالي لا يملك صلاحية التعديل على كائن الـ <code data-enlighter-language="java">Thread</code> المتوقف عن العمل.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void stop()</code></span>
+			توقف كائن الـ <code data-enlighter-language="java">Thread</code> الذي قام باستدعائها, بحيث لا يمكنه العودة للعمل من جديد.<br/>
+			ترمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">Thread</code> الحالي لا يملك صلاحية التعديل على كائن الـ <code data-enlighter-language="java">Thread</code> المتوقف عن العمل.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final void join()</code></span>
+			تجعل البرنامج لا يتابع تنفيذ الأوامر الموجودة في الدالة <code data-enlighter-language="java">main()</code> حتى يتم تنفيذ جميع الأوامر الموجودة في كائن الـ <code data-enlighter-language="java">Thread</code> الذي قام باستدعائها, أي حتى تصبح حالته تساوي <code data-enlighter-language="java">TERMINATED</code>.<br/>
+<span class="note">ملاحظة:</span> لا يهمها إذا كان يوجد أكثر من كائن <code data-enlighter-language="java">Thread</code> آخر شغال في نفس الوقت. بمعنى أنه إذا كان هناك كائن <code data-enlighter-language="java">Thread</code> آخر شغال فإنه سيستمر في العمل بشكل طبيعي, لكن باقي الأوامر الموجودة في الدالة <code data-enlighter-language="java">main()</code> لن يتم تنفيذهم حتى تنفيذ جميع أوامر كائن الـ <code data-enlighter-language="java">Thread</code> الذي قام باستدعائها.<br/><br/>
+			ترمي الإستثناء <span class="code red">InterruptedException</span> في حال تم إيقاف كائن الـ <code data-enlighter-language="java">Thread</code> من قبل أي كائن <code data-enlighter-language="java">Thread</code> آخر.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void interrupt()</code></span>
+			ترسل إشارة إلى الـ <span class="word">JVM</span> لمقاطعة عمل كائن الـ <code data-enlighter-language="java">Thread</code> في حال كان شغالاً.<br/>
+			في حال كان كائن الـ <code data-enlighter-language="java">Thread</code> متوقفاً لمدة بسبب إحدى الدوال مثل <code data-enlighter-language="java">join()</code> و <code data-enlighter-language="java">wait()</code> و <code data-enlighter-language="java">sleep()</code>, فإنها لا تؤثر عليه أبداً.<br/>
+			في حال كان كائن الـ <code data-enlighter-language="java">Thread</code> غير شغال بعد لا تؤثر عليه أيضاً.<br/><br/>
+			ترمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">Thread</code> الحالي لا يملك صلاحية التعديل على كائن الـ <code data-enlighter-language="java">Thread</code> المتوقف عن العمل.<br/><br/>
+<b>معلومة:</b> قد تحتاج هذه الدالة في حال كنت تريد إيقاف كائن الـ <code data-enlighter-language="java">Thread</code> ريثما تنتهي من تنفيذ أوامر أخرى أكثر أهمية, في حال نجحت هذه الدالة تكون مدة إيقاف كائن الـ <code data-enlighter-language="java">Thread</code> عن العمل غير محددة.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean isInterrupted()</code></span>
+			تستخدم لمعرفة إذا كان كائن الـ <code data-enlighter-language="java">Thread</code> قد توقف بسبب استدعاء الدالة <code data-enlighter-language="java">interrupt()</code> أم لا.<br/>
+			ترجع <code data-enlighter-language="java">true</code> في حال تم استدعاء الدالة <code data-enlighter-language="java">interrupt()</code> قبلها و قد تمكنت هذه الأخيرة من مقاطعة كائن الـ <code data-enlighter-language="java">Thread</code> أثناء تنفيذ الأوامر.<br/>
+			غير ذلك ترجع <code data-enlighter-language="java">false</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public long getId()</code></span>
+			ترجع رقم الـ <span class="word">ID</span> الذي تم إعطاءه لكائن الـ <code data-enlighter-language="java">Thread</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Thread.State getState()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">Thread.State</code> يمثل حالة كائن الـ <code data-enlighter-language="java">Thread</code> الذي قام باستدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final boolean isAlive()</code></span>
+			ترجع <code data-enlighter-language="java">true</code> في حال لم يكن كائن الـ <code data-enlighter-language="java">Thread</code> الذي قام باستدعائها في الحالة <code data-enlighter-language="java">TERMINATED</code>.<br/>
+			غير ذلك ترجع <code data-enlighter-language="java">false</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String toString()</code></span>
+			ترجع نص يمثل معلومات كائن الـ <code data-enlighter-language="java">Thread</code> الذي قام باستدعائها. المعلومات عبارة عن <span class="inline">( <span class="word">Group</span> - <span class="word">Priority</span> - <span class="word">Name</span> )</span>.<br/>
+<ul class="explain">
+<li><p><span class="word">Name</span>: هو إسم كائن الـ <code data-enlighter-language="java">Thread</code>.</p></li>
+<li><p><span class="word">Priority</span>: هو أولية التفيذ المعطاة لكائن الـ <code data-enlighter-language="java">Thread</code>.</p></li>
+<li><p><span class="word">Group</span>: هو إسم المجموعة التي ينتمي لها كائن الـ <code data-enlighter-language="java">Thread</code>.</p></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final void setName(String name)</code></span>
+			تستخدم لإعطاء إسم لكائن الـ <code data-enlighter-language="java">Thread</code>.<br/>
+			ترمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">Thread</code> الحالي لا يملك صلاحية تغييرها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final String getName()</code></span>
+			ترجع إسم كائن الـ <code data-enlighter-language="java">Thread</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final int setPriority(int newPriority)</code></span>
+			تستخدم لتغيير قيمة الـ <span class="word">Priority</span> المعطاة لكائن الـ <code data-enlighter-language="java">Thread</code>.<br/>
+<ul class="explain">
+<li><p>الـ <span class="word">Priority</span> التي تعطى إفتراضياً لأي <code data-enlighter-language="java">Thread</code> جديد هي <span class="number">5</span>, و هي تساوي قيمة الثابت <code data-enlighter-language="java">NORM_PRIORITY</code>.<br/>
+<li><p>أعلا <span class="word">Priority</span> يمكن إعطاءها للـ <code data-enlighter-language="java">Thread</code> هي <span class="number">10</span>, و هي تساوي قيمة الثابت <code data-enlighter-language="java">MAX_PRIORITY</code>.<br/>
+<li><p>أدنى <span class="word">Priority</span> يمكن إعطاءها للـ <code data-enlighter-language="java">Thread</code> هي <span class="number">1</span>, و هي تساوي قيمة الثابت <code data-enlighter-language="java">MIN_PRIORITY</code>.<br/>
+</p></li></p></li></p></li></ul><br/>
+			ترمي الإستثناء <span class="code red">IllegalArgumentException</span> في حال كانت القيمة التي قمت بتمريرها أصغر من <span class="number">1</span> أو أكبر من <span class="number">10</span>.<br/>
+			و ترمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">Thread</code> الحالي لا يملك صلاحية تغييرها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final int getPriority()</code></span>
+			ترجع رقم بين <span class="number">1</span> و <span class="number">10</span> عبارة عن قيمة الـ <span class="word">Priority</span> التي يملكها كائن الـ <code data-enlighter-language="java">Thread</code> الذي قام باستدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final void setDaemon(boolean on)</code></span>
+			تستخدم لتحويل كائن الـ <code data-enlighter-language="java">Thread</code> الذي قام باستدعائها إلى <span class="word">Daemon Thread</span>.<br/>
+			في حال قمت بتمرير القيمة <code data-enlighter-language="java">true</code> لها كـ <span class="word">Argument</span>, سيتم معاملة كائن الـ <code data-enlighter-language="java">Thread</code> كــ <span class="word">Daemon Thread</span><br/>
+			غير ذلك سيتم إعتباره <span class="word">Thread</span> عادي.<br/><br/>
+			ترمي الإستثناء <span class="code red">IllegalArgumentException</span> في حال كان كائن الـ <code data-enlighter-language="java">Thread</code> شغالا أثناء استدعاءها.<br/>
+			و ترمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">Thread</code> الحالي لا يملك صلاحية تغييرها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final boolean isDaemon()</code></span>
+			تستخدم لمعرفة إذا كان كائن الـ <code data-enlighter-language="java">Thread</code> الذي قام باستدعائها هو <span class="word">Daemon Thread</span> أم لا.<br/>
+			ترجع <code data-enlighter-language="java">true</code> إذا كان كذلك, غير ذلك ترجع <code data-enlighter-language="java">false</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static int activeCount()</code></span>
+			تستخدم لمعرفة عدد الـ <span class="word">threads</span> الذين يعملون في البرنامج لحظة استدعائها.<br/>
+			تستخدم فقط في حالة الـ <span class="word">Debugging</span>.<br/>
+<span class="note">ملاحظة:</span> في حال لم يكن هناك أي <code data-enlighter-language="java">Thread</code> شغال أو معرف في البرنامج, فإنها أيضاً ترجع <span class="number">1</span> و الذي هو عبارة عن البرنامج نفسه.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static Thread currentThread()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">Thread</code> يشير إلى كائن الـ <code data-enlighter-language="java">Thread</code> الذي قام باستدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final ThreadGroup getThreadGroup()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">ThreadGroup</code> يمثل المجموعة التي ينتمي إليها كائن الـ <code data-enlighter-language="java">Thread</code> الذي قام باستدعائها.<br/>
+			ترجع <code data-enlighter-language="java">true</code> في حال كانت حالة كائن الـ <code data-enlighter-language="java">Thread</code> تساوي <code data-enlighter-language="java">TERMINATED</code>.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>أمثلة شاملة</h2>
+<br/>
+<h3>المثال الأول</h3>
+<p>المثال التالي عبارة عن برنامج يعرض الوقت الحالي للجهاز.</p>
+<p>في البداية قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">RealTime</code> يرث من الكلاس <code data-enlighter-language="java">Thread</code>.<br/>
+	بعدها فعلنا <span class="word">Override</span> للدالة <code data-enlighter-language="java">run()</code> لجعلها تطبع الوقت الحالي.</p>
+<p>ثم قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">Main</code> لتجربة هذا الـ <span class="word">Thread</span>.<br/>
+	في الكلاس <code data-enlighter-language="java">Main</code> قمنا بإنشاء كائن من الكلاس <code data-enlighter-language="java">RealTime</code> ثم قمنا بتشغيله بواسطة الدالة <code data-enlighter-language="java">start()</code>.</p>
+<div class="example-box">
+<span class="code-title java-file-icon">RealTime.java</span>
+<pre data-enlighter-language="java">
+import java.util.Date;		// Date هنا قمنا باستدعاء الكلاس
+ 
+public class RealTime extends Thread {
+ 
+    @Override
+    public void run() {
+        // true لا ترجع isInterrupted() طالما أن الدالة
+        while(!Thread.currentThread().isInterrupted())
+        {
+            // سيتم طباعة الوقت الحالي
+            System.out.printf("Current time: %tr \n", new Date());
+ 
+            // لثانية واحدة Thread بعدها سيتم إيقاف كائن الـ
+            try {
+                Thread.sleep(1000);
+            }
+            catch(Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // t إسمه RealTime هنا قمنا بإنشاء كائن من الكلاس
+        RealTime t = new RealTime();
+ 
+        // لعرض الوقت t هنا قمنا بتشغيل الكائن
+        t.start();
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>عند تشغيل البرنامج, سيتم عرض الوقت الحالي كل ثانية كالتالي.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Current time: 09:02:15 AM
+Current time: 09:02:16 AM
+Current time: 09:02:17 AM
+Current time: 09:02:18 AM
+Current time: 09:02:19 AM
+Current time: 09:02:20 AM
+Current time: 09:02:21 AM
+Current time: 09:02:22 AM
+Current time: 09:02:23 AM
+Current time: 09:02:24 AM
+Current time: 09:02:25 AM
+Current time: 09:02:26 AM
+Current time: 09:02:27 AM
+....
+		</pre>
+</div>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>المثال التالي عبارة عن برنامج لإختبار قدرة المستخدم في العمليات الحسابية, فهو يقوم بخلق عمليات جمع عشوائية خلال مدة معينة, و إنتظار المستخدم للإجابة عليها, و في الأخير سيتم عرض النتيجة النهائية له.</p>
+<p>في البداية قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">ExamTimer</code> يرث من الكلاس <code data-enlighter-language="java">Thread</code>.<br/>
+	بعدها فعلنا <span class="word">Override</span> للدالة <code data-enlighter-language="java">run()</code> حتى نجعل أي كائن من الكلاس <code data-enlighter-language="java">ExamTimer</code> ينتظر مدة <span class="number">20</span> ثانية بعد تشغيله, ثم يتوقف مباشرةً عن العمل.</p>
+<p>ثم قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">Main</code>, و الذي سيستخدم الكلاس <code data-enlighter-language="java">ExamTimer</code> كمؤقت.<br/>
+	في الكلاس <code data-enlighter-language="java">Main</code> فعلنا الأشياء التالية:</p>
+<ul class="explain">
+<li><p>أنشأنا كائن من الكلاس <code data-enlighter-language="java">ExamTimer</code> إسمه <code data-enlighter-language="java">et</code>.</p></li>
+<li><p>قمنا بتشغيل الكائن <code data-enlighter-language="java">et</code> بواسطة الدالة <code data-enlighter-language="java">start()</code>.</p></li>
+<li><p>قمنا بتعريف المتغيرات <code data-enlighter-language="java">num1</code> و <code data-enlighter-language="java">num2</code> لتخزين الأرقام العشوائية التي سيتم توليدها في البرنامج.</p></li>
+<li><p>قمنا بتعريف المتغير <code data-enlighter-language="java">userAnswer</code> لتخزين العدد الذي سيدخله المستخدم في كل مرة.</p></li>
+<li><p>قمنا بتعريف المتغيرات <code data-enlighter-language="java">operationsCounter</code>, <code data-enlighter-language="java">correctAnswersCounter</code> و <code data-enlighter-language="java">wrongAnswersCounter</code> كعدادات في البرنامج.<br/>
+<code data-enlighter-language="java">operationsCounter</code>: لتخزين عدد العمليات التي تظهر أمام المستخدم.<br/>
+<code data-enlighter-language="java">correctAnswersCounter</code>: لتخزين عدد إجابات المستخدم الصحيحة.<br/>
+<code data-enlighter-language="java">wrongAnswersCounter</code>: لتخزين عدد إجابات المستخدم الخاطئة.</p></li>
+<li><p>قمنا بتعريف حلقة <code data-enlighter-language="java">while</code> تستمر في توليد أرقام العشوائية, إعداد عمليات جمع و إنتظار المستخدم لإدخال الإجابة بالإعتماد على الدالة <code data-enlighter-language="java">isAlive()</code> التي تبقي الحلقة تعيد تنفيذ الأوامر الموجودة فيها طالما أن مدة الإنتظار المحددة للكائن <code data-enlighter-language="java">et</code> غير منتهية بعد.</p></li>
+</ul>
+<div class="example-box">
+<span class="code-title java-file-icon">ExamTimer.java</span>
+<pre data-enlighter-language="java">
+public class ExamTimer extends Thread {
+ 
+    @Override
+    public void run() {
+        // لثانية واحدة Thread بعدها سيتم إيقاف كائن الـ
+        try {
+            Thread.sleep(20000);
+        }
+        catch(Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.util.Scanner;		// Scanner هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // و الذي سنستخدمه لإدخال بيانات من المستخدم input إسمه Scanner هنا قمنا بإنشاء كائن من الكلاس
+        Scanner input = new Scanner(System.in);
+ 
+        // et إسمه ExamTimer هنا قمنا بإنشاء كائن من الكلاس
+        ExamTimer et = new ExamTimer();
+ 
+        int num1;                           // سنستخدم هذا المتغير لتخزين أول رقم عشوائي يظهر في عملية الجمع
+        int num2;                           // سنستخدم هذا المتغير لتخزين ثاني رقم عشوائي يظهر في عملية الجمع
+        int userAnswer;                     // سنستخدم هذا المتغير لتخزين العدد الذي سيدخله المستخدم للإجابة على عمليأت الجمع
+        int operationsCounter = 0;          // سنخزن عدد العمليات الحسابية التي ستظهر عند تشغيل البرنامج فيه
+        int correctAnswersCounter = 0;      // سنخزن عدد الإجابات الصحيحة في هذا المتغير
+        int wrongAnswersCounter = 0;        // سنخزن عدد الإجابات الخطئ من ي هذا المتغير
+ 
+        // الأمر الذي سيجعله في حالة إنتظار مدة 20 ثانية فقط و بعدها سيتوقف كلياً et هنا قمنا بتشغيل الكائن
+        et.start();
+ 
+        System.out.println("---------- Quiz ---------");
+ 
+        // طالما أن مدة العشرين ثانية لم تنقضي بعد سيستمر في تنفيذ الأوامر الموجودة في هذه الحلقة
+        while(et.isAlive())
+        {
+            num1 = (int)(Math.random()*10);             // num1 سيتم تخزين رقم عشوائي بين 1 و 9 في المتغير
+            num2 = (int)(Math.random()*10);             // num2 سيتم تخزين رقم عشوائي بين 1 و 9 في المتغير
+ 
+            System.out.print(num1+" + "+num2+" = ");    // num2 و num1 هنا سيطلب من المستخدم معرفة ناتج جمع العددين
+            userAnswer = input.nextInt();               // هنا سيتم إنتظار المستخدم لإدخال الجواب
+ 
+            if(userAnswer == num1+num2)                 // إذا كانت إجابته صحيحة, سيتم إضافة عدد الإجابات الصحيحة واحداً
+                correctAnswersCounter++;
+ 
+            else                                        // إذا كانت إجابته خاطئة, سيتم إضافة عدد الإجابات الخطأ واحداً
+                wrongAnswersCounter++;
+ 
+            operationsCounter++;                        // في الأخير سيتم إضافة عدد عمليات الجمع واحداً
+        }
+ 
+        System.out.println("Time end..\n");
+ 
+        // بعد إنتهاء مدة العشرين ثانية سيتم طباعة عدد عمليات الجمع, عدد الأجوبة الصحيحة و عدد الأجوبة الخاطئة
+        System.out.println("--------- Result --------");
+        System.out.println("Number of operations:      " +operationsCounter);
+        System.out.println("Number of correct answers: " +correctAnswersCounter);
+        System.out.println("Number of wrong answers:   " +wrongAnswersCounter);
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>عند تشغيل البرنامج, سنحصل على نتيجة تشبه النتيجة التالية عند التشغيل.<br/>
+		الأرقام التي قمنا بتعليمها باللون الأصفر هي التي قمنا بإدخالها عند تجربة البرنامج.</p>
+<div class="code-box">
+            ---------- Quiz ---------<br/>
+            0 + 8 = <span class="yellow-bg">8</span><br/>
+            5 + 7 = <span class="yellow-bg">11</span><br/>
+            8 + 8 = <span class="yellow-bg">16</span><br/>
+            6 + 6 = <span class="yellow-bg">12</span><br/>
+            3 + 9 = <span class="yellow-bg">12</span><br/>
+            7 + 4 = <span class="yellow-bg">14</span><br/>
+            9 + 4 = <span class="yellow-bg">13</span><br/>
+            Time end..<br/><br/>
+            --------- Result --------<br/>
+            Number of operations:      7<br/>
+            Number of correct answers: 5<br/>
+            Number of wrong answers:   2
+		</div>
+</div>
+<br/><br/>
+<h3>المثال الثالث</h3>
+<p>في المثال التالي قمنا تشغيل أكثر من كائن <code data-enlighter-language="java">Thread</code> في وقت واحد. الهدف هنا جعلك تدرك أن الأوامر لا تتنفذ فعلياً في وقت واحد لكنها تتنفذ بسرعة عالية جداً تجعل المستخدم يظن أنها تحدث في وقت واحد.</p>
+<p>في البداية قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">MyThread</code> يرث من الكلاس <code data-enlighter-language="java">Thread</code>.<br/>
+	بعدها فعلنا <span class="word">Override</span> للدالة <code data-enlighter-language="java">run()</code> حتى نجعل أي كائن من الكلاس <code data-enlighter-language="java">MyThread</code> يطبع إسمه كل ثانية.</p>
+<p>ثم قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">Main</code>, و الذي قمنا فيه بإنشاء ثلاث كائنات من الكلاس <code data-enlighter-language="java">MyThread</code> و تشغيلهم مع بعض.</p>
+<div class="example-box">
+<span class="code-title java-file-icon">MyThread.java</span>
+<pre data-enlighter-language="java">
+public class MyThread extends Thread {
+ 
+    // Thread كإسم لكائن الـ name و تمرير قيمة المتغير Thread سيتم مناداة الكونستركتور الذي ورثه من الكلاس MyThread عند إنشاء كائن من الكلاس
+    public MyThread(String name) {
+        super(name);
+    }
+ 
+ 
+    @Override
+    public void run() {
+ 
+        // true ترجع isInterrupted() طالما أن الدالة
+        while (!this.isInterrupted())
+        {
+            // الذي قام بإستدعائها Thread سيتم طباعة إسم كائن الـ
+            System.out.println(this.getName());
+ 
+            // بعدها سيتم إيقافه مدة ثانية واحدة
+            try {
+                Thread.sleep(1000);
+            }
+            catch(Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // مع إعطاء كل واحد منهم إسم مختلف ( t1 - t2 - t3 ) إسمهم MyThread هنا قمنا بإنشاء ثلاث كائنات من الكلاس
+        MyThread t1 = new MyThread("Thread 1");
+        MyThread t2 = new MyThread("Thread 2");
+        MyThread t3 = new MyThread("Thread 3");
+ 
+        // كل ثانية ( t1 - t2 - t3 ) هنا قمنا بتشغيل جميع الكائنات, و بالتالي سيتم طباعة أسماء الكائنات
+        t1.start();
+        t2.start();
+        t3.start();
+ 
+    }
+
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>عند تشغيل البرنامج, نلاحظ أنه يطبع ثلاثة أسطر كل ثانية .</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Thread 1
+Thread 3
+Thread 2
+
+Thread 3
+Thread 2
+Thread 1
+
+Thread 2
+Thread 3
+Thread 1
+
+Thread 2
+Thread 3
+Thread 1
+
+Thread 3
+Thread 2
+Thread 1
+... 
+		</pre>
+</div>
+<br/><br/>
+<h3>المثال الرابع</h3>
+<p>المثال التالي هو نفسه المثال السابق لكننا قمنا باستخدام الدالة <code data-enlighter-language="java">run()</code> بدلاً من الدالة <code data-enlighter-language="java">start()</code> حتى تعرف الفرق الحقيقي بينهما و ضرورة تشغيل كائن الـ <code data-enlighter-language="java">Thread</code> بواسطة الدالة <code data-enlighter-language="java">start()</code>.</p>
+<p>في البداية قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">MyThread</code> يرث من الكلاس <code data-enlighter-language="java">Thread</code>.<br/>
+	بعدها فعلنا <span class="word">Override</span> للدالة <code data-enlighter-language="java">run()</code> حتى نجعل أي كائن من الكلاس <code data-enlighter-language="java">MyThread</code> يطبع إسمه ثم ينتظر مدة ثانية قبل أن يطبعه من جديد.</p>
+<p>ثم قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">Main</code>, و الذي قمنا فيه بإنشاء ثلاث كائنات من الكلاس <code data-enlighter-language="java">MyThread</code> و تشغيلهم بواسطة الدالة <code data-enlighter-language="java">run()</code>.</p>
+<p>لاحظ كيف سيبقى البرنامج ينفذ أوامر أول كائن من الكلاس <code data-enlighter-language="java">MyThread</code> لأن الدالة <code data-enlighter-language="java">run()</code> تجعل البرنامج لا ينفذ أوامر أكثر من كائن <code data-enlighter-language="java">Thread</code> في وقت واحد.</p>
+<div class="example-box">
+<span class="code-title java-file-icon">MyThread.java</span>
+<pre data-enlighter-language="java">
+public class MyThread extends Thread {
+ 
+    // Thread كإسم لكائن الـ name و تمرير قيمة المتغير Thread سيتم مناداة الكونستركتور الذي ورثه من الكلاس MyThread عند إنشاء كائن من الكلاس
+    public MyThread(String name) {
+        super(name);
+    }
+ 
+ 
+    @Override
+    public void run() {
+ 
+        // true ترجع isInterrupted() طالما أن الدالة
+        while (!this.isInterrupted())
+        {
+            // الذي قام بإستدعائها Thread سيتم طباعة إسم كائن الـ
+            System.out.println(this.getName());
+ 
+            // بعدها سيتم إيقافه مدة ثانية واحدة
+            try {
+                Thread.sleep(1000);
+            }
+            catch(Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // مع إعطاء كل واحد منهم إسم مختلف ( t1 - t2 - t3 ) إسمهم MyThread هنا قمنا بإنشاء ثلاث كائنات من الكلاس
+        MyThread t1 = new MyThread("Thread 1");
+        MyThread t2 = new MyThread("Thread 2");
+        MyThread t3 = new MyThread("Thread 3");
+ 
+        // مع بعض ( t1 - t2 - t3 ) هنا حاولنا تشغيل الكائنات
+        t1.run();       // آخر يعمل غيره Thread لأنه لا يوجد Thread سيتم تشغل هذا الـ
+        t2.run();       // آخر يعمل قبله Thread لأنه يوجد Thread لن يتم تشغيل هذا الـ
+        t3.run();       // آخر يعمل قبله Thread لأنه يوجد Thread لن يتم تشغيل هذا الـ
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>عند تشغيل البرنامج, نلاحظ أنه يطبع ثلاثة أسطر كل ثانية .</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Thread 1
+Thread 1
+Thread 1
+Thread 1
+Thread 1
+Thread 1
+Thread 1
+Thread 1
+Thread 1
+Thread 1
+Thread 1
+Thread 1
+Thread 1
+Thread 1
+Thread 1
+Thread 1
+Thread 1
+Thread 1
+... 
+		</pre>
+</div>
+<br/><br/>
+<h3>المثال الخامس</h3>
+<p>في المثال التالي قمنا بإنشاء برنامج يظهر أمام المستخدم لائحة فيها أربع خيارات: تشغيل صوت التنبيه, إيقافه, إعادته للعمل, إيقافه نهائياً.<br/>
+	ميزة هذا البرنامج أنه يمكن تشغيل الإنذار أو إيقافه في نفس الوقت الذي يطلب فيه من المستخدم إدخال رقم الخيار.</p>
+<p>في البداية قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">Alert</code> يرث من الكلاس <code data-enlighter-language="java">Thread</code>.<br/>
+	بعدها فعلنا <span class="word">Override</span> للدالة <code data-enlighter-language="java">start()</code> لأننا لا نريد جعل البرنامج يعلق في حال قام المستخدم باستدعاء الدالة <code data-enlighter-language="java">start()</code> مرة ثانية.<br/>
+	فعلياً قلنا أن أي إستدعاء جديد للدالة <code data-enlighter-language="java">start()</code> بعد إستدعائها في المرة الأولى سيتم إستدعاء الدالة <code data-enlighter-language="java">resume()</code> بدلاً منها.</p>
+<p>بعدها فعلنا <span class="word">Override</span> للدالة <code data-enlighter-language="java">run()</code> حتى نجعل أي كائن من الكلاس <code data-enlighter-language="java">Alert</code> يصدر صوت تنبيه عند تشغيله.</p>
+<p>ثم قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">Main</code> لتجربة الكلاس <code data-enlighter-language="java">Alert</code>.<br/>
+	عند تشغيل البرنامج ظهر لك أربع خيارات: تشغيل صوت التنبيه, إيقافه, إعادته للعمل, إيقافه نهائياً.<br/>
+	ستلاحظ أن البرنامج قادر على تشغيل صوت التنبيه في نفس الوقت الذي يطلب فيه من المستخدم إدخال رقم الخيار.</p>
+<p><span class="note">إنتبه:</span> إرفع صوت الحاسوب إلا أعلا مستوى حتى تسمع صوت التنبيه عند تشغيله.</p>
+<div class="example-box">
+<span class="code-title java-file-icon">Alert.java</span>
+<pre data-enlighter-language="java">
+import java.awt.Toolkit;		// لأننا سنستخدمه للحصول على صوت التنبيه Toolkit هنا قمنا باستدعاء الكلاس
+ 
+public class Alert extends Thread {
+ 
+    // حتى نضمن أن لا يتم إستدعاءها مرتين start() سنستخدم هذا المتغير كشرط أساسي في الدالة
+    private boolean isStarted = false;
+ 
+ 
+    // start() للدالة Override هنا فعلنا
+    @Override
+    public void start() {
+ 
+        // false تساوي isStarted إذا كانت قيمة المتغير
+        if (isStarted == false) {
+            // Thread و المسؤولة عن تشغيل كائن الـ Thread الموجودة في الكلاس start() سيتم إستدعاء الدالة
+            // مرتين Thread التي تشغل كائن الـ start() حتى لا يتم تنفيذ الدالة isStarted بعدها سيتم تغيير قيمة المتغير
+            super.start();
+            isStarted = true;
+        }
+        else {
+            resume();
+        }
+ 
+    }
+ 
+ 
+    @Override
+    public void run() {
+ 
+        // true ترجع isInterrupted() طالما أن الدالة
+        while (!this.isInterrupted())
+        {
+            // سيتم إصدار صوت المنبه كل ثانية
+            try {
+                Toolkit.getDefaultToolkit().beep();
+                Thread.sleep(1000);
+            }
+            catch(Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.util.Scanner;		// Scanner هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // و الذي سنستخدمه لإدخال بيانات من المستخدم input إسمه Scanner هنا قمنا بإنشاء كائن من الكلاس
+        Scanner input = new Scanner(System.in);
+ 
+        // سنستخدم هذا المتغير لتخزين العدد الذي سيدخله المستخدم
+        int userInput;
+ 
+        // alert إسمه Alert هنا قمنا بإنشاء كائن من الكلاس
+        Alert alert = new Alert();
+ 
+        // هنا قمنا بطباعة شكل لائحة من الخيارات أمام المستخدم
+        System.out.println("----- Alert Menu ------\n"
+                          +"| Enter (1) to Start  |\n"
+                          +"| Enter (2) to Pause  |\n"
+                          +"| Enter (3) to Resume |\n"
+                          +"| Enter (4) to Stop   |\n"
+                          +"-----------------------");
+ 
+        // interrupt() بواسطة الدالة alert() هذه الحلقة تستمر في تنفيذ ما في داخلها طالما أنه لم يتم إيقاف الكائن
+        while(!alert.isInterrupted())
+        {
+            // هنا سيتم إنتظار المستخدم ليدخل رقم الخيار الذي يريد
+            System.out.print("User input &gt;&gt; ");
+            userInput = input.nextInt();
+ 
+            // هنا سيتم فحص القيمة التي أدخلها المستخدم
+            switch(userInput)
+            {
+                // في حال قام بإدخال الرقم 1 سيتم تشغيل التنبيه
+                case 1:
+                    alert.start();
+                    break;
+ 
+                // في حال قام بإدخال الرقم 2 سيتم إيقاف التنبيه مع إمكانية تشغيله من جديد
+                case 2:
+                    alert.suspend();
+                    break;
+ 
+                // في حال قام بإدخال الرقم 3 سيتم إعادة التنبيه للعمل من جديد
+                case 3:
+                    alert.resume();
+                    break;
+ 
+                // في حال قام بإدخال الرقم 4 سيتم إيقاف التنبيه مع عدم إمكانية تشغيله من جديد
+                case 4:
+                    alert.interrupt();
+                    alert.stop();
+                    break;
+ 
+                // في حال قام بإدخال رقم أكبر من 4 أو أصغر من واحد سيتم إظهار خطأ له
+                default:
+                    System.out.println("Option &lt;"+userInput+"&gt; Not Found!");
+                    break;
+            }
+ 
+        }
+ 
+    }
+
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>قم بتشغيل البرنامج و أدخل نفس القيم التي قمنا بتعليمها باللون الأصفر لتلاحظ كيف يعمل.<br/>
+		لا تنسى رفع صوت حاسوبك إلى أعلا مستوى حتى تسمع صوت التنبيه و هو يعمل.</p>
+<div class="code-box">
+		----- Alert Menu ------<br/>
+        | Enter (1) to Start  |<br/>
+        | Enter (2) to Pause  |<br/>
+        | Enter (3) to Resume |<br/>
+        | Enter (4) to Stop   |<br/>
+        -----------------------<br/>
+        User input &gt;&gt; <span class="yellow-bg">1</span><br/>
+        User input &gt;&gt; <span class="yellow-bg">2</span><br/>
+        User input &gt;&gt; <span class="yellow-bg">3</span><br/>
+        User input &gt;&gt; <span class="yellow-bg">2</span><br/>
+        User input &gt;&gt; <span class="yellow-bg">3</span><br/>
+        User input &gt;&gt; <span class="yellow-bg">4</span>
+</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

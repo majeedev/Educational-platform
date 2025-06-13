@@ -1,0 +1,541 @@
+@charset "UTF-8";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0px none;
+    outline: 0px none;
+    vertical-align: baseline;
+    background: none repeat scroll 0% 0% transparent;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+	box-sizing: border-box;
+	direction: rtl;
+}
+
+@font-face {
+	font-family: "quran";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/Uthmani-Hafs.otf") format("opentype");
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	max-width: 1100px;
+	margin: auto;
+	font-family: quran;
+	overflow: hidden;
+	text-align: center;
+	background: #9bb5b6 url('../images/pattern_base.png') repeat;
+	visibility: hidden;
+}
+
+.sura {
+	display: none;
+}
+
+.intro {
+	text-align: center;
+	padding: 7px 5px 10px 5px;
+	font-size: 22px;
+	font-weight: bold;
+	background: #f9f8e8;
+}
+
+.verses-number {
+	background: #c0bfa3;
+	/* border-right: 1px solid #666565; */
+    border-bottom: 0px;
+    text-align: center;
+    width: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 42px;
+}
+
+.verses-text {
+    border-bottom: 1px solid #b7b669;
+    padding: 10px;
+    text-align: justify;
+    line-height: 40px;
+    font-size: 22px;
+}
+
+.verses-number span {
+	background: url('../images/verses.png') center no-repeat;
+    display: block;
+    text-align: center;
+	color: #3b18ef;
+	position: sticky;
+	top: 0px;
+}
+
+#table_box {
+	width: 100%;
+	max-width: 600px;
+	display: inline-block;
+	box-shadow: 3px 5px 16px black;
+	border-radius: 10px;
+}
+
+#table_scroller {
+	overflow-y: auto;
+	direction: ltr;
+	width: 100%;
+	background: #f9f8e8;
+	position: relative;
+	border-right: 1px solid #555;
+	border-left: 1px solid #555;
+}
+
+#table_top_menu {
+    background: #3e3e3e;
+    color: white;
+    width: 100%;
+    height: 50px;
+    display: block;
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+#table_title {
+	cursor: pointer;
+}
+
+#table_title:hover {
+	color: cyan;
+}
+
+#verses_numbers_bg {
+	display: none;
+	background: #c0bfa3;
+	/* border-right: 1px solid #666565; */
+	position: absolute;
+	top:0px;
+	left:0px;
+	width: 50px;
+}
+
+#azkar_menu {
+	display: none;
+    float: left;
+    padding: 0px 15px;
+    border-right: 1px dashed gray;
+	cursor: pointer;
+}
+
+#azkar_menu:hover {
+	background: #111;
+	color: cyan;
+}
+
+#suar_menu {
+	display: none;
+    float: right;
+    padding: 0px 15px;
+    border-left: 1px dashed gray;
+	cursor: pointer;
+}
+
+#suar_menu:hover {
+	background: #111;
+	color: cyan;
+}
+
+#verses_table {
+    border-collapse: collapse;
+    width: 100%;
+    z-index: 5;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+	text-align: right;
+}
+
+#verses_table p {
+    padding: 0px 10px 10px 10px;
+}
+
+.blank-line {
+	height: 22px;
+}
+
+.one-row span {
+    padding: 10px 10px 0px 10px;
+}
+
+#verses_table .one-row {
+    padding: 10px 0px;
+    text-align: justify;
+    line-height: 34px;
+    font-size: 22px;
+	border-bottom: 1px solid #b7b669;
+}
+
+#verses_table tr:nth-child(odd) {background-color:#F3F9BB;}
+#verses_table tr:nth-child(even) {background-color:#f9f8e8;}
+
+.radius-top {
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+.radius-bottom {
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+/*=====================================*/
+
+#quran_menu {
+	background: #3e3e3e;
+	height: 50px;
+	width: 100%;
+	max-width: 600px;
+}
+
+#quran_menu a {
+	float: right;
+	font-size: 20px;
+	line-height: 50px;
+	height: 50px;
+	width: 33.33%;
+	color: white;
+	cursor: pointer;
+}
+
+#quran_menu a img{
+	width: 32px;
+	padding-top: 9px;
+}
+
+#stop_signs_menu {
+	border-left: 1px dashed gray;
+	border-right: 1px dashed gray;
+	display: block;
+}
+
+#stop_signs_menu:hover {
+	background: #111;
+}
+
+#prev_sura:hover {
+	background: #111;
+}
+
+#next_sura:hover {
+	background: #111;
+}
+
+#stop_signs_box {
+	width: 100%;
+	background: #f9f8e8;
+	display: none;
+	text-align: right;
+}
+
+#stop_signs_box h2 {
+	color: black;
+	background: #f9f8e8;
+	text-align: center;
+	padding: 3px 5px;
+}
+
+#stop_signs_box p {
+	color: black;
+	background: #f9f8e8;
+	padding: 10px;
+}
+
+.sign {
+	padding: 0px 10px;
+	text-align: left;
+	vertical-align: top;
+}
+
+#signs_table {
+	display: table;
+	width: 100%;
+	line-height: 34px;
+	font-size: 22px;
+}
+
+/*=====================================*/
+
+#suar_inside_quran {
+	width: 100%;
+	background: #f9f8e8;
+	display: none;
+}
+
+#suar_inside_quran a {
+    color: black;
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    font-size: 21px;
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #c2c17b;
+	padding-left: 7px;
+	z-index: 2;
+	position: relative;
+}
+
+#suar_inside_quran a:hover {
+    background-color: #E9DC4A;
+}
+
+#suar_inside_quran a.active {
+    background-color: #E9DC4A;
+}
+
+#suar_inside_quran a span {
+    width: 30px;
+	display: inline-block;
+	text-align: center;
+	font-size: 19px;
+	height: 39px;
+	line-height: 39px;
+	margin-left: 7px;
+	font-weight: normal;
+	border-left: 1px solid #666565;
+	background: #c0bfa3;
+}
+
+/*=====================================*/
+
+#azkar_inside_quran {
+	width: 100%;
+	background: #f9f8e8;
+	display: none;
+}
+
+#azkar_inside_quran a {
+    color: black;
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    font-size: 21px;
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #c2c17b;
+	padding-left: 7px;
+	z-index: 2;
+	position: relative;
+}
+
+#azkar_inside_quran a:hover {
+    background-color: #E9DC4A;
+}
+
+#azkar_inside_quran a.active {
+    background-color: #E9DC4A;
+}
+
+#azkar_inside_quran a span {
+    width: 30px;
+	display: inline-block;
+	text-align: center;
+	font-size: 19px;
+	height: 39px;
+	line-height: 39px;
+	margin-left: 7px;
+	font-weight: normal;
+	border-left: 1px solid #666565;
+	background: #c0bfa3;
+}
+
+.opened-menu {
+	background: #222;
+	color: cyan;
+}
+
+/*=====================================*/
+
+
+#suar_box  {
+	position: relative;
+	border: 1px solid #555;
+	width: 100%;
+	max-width: 190px;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 20px;
+	border-radius: 10px;
+	box-shadow: 3px 5px 16px black;
+}
+
+#suar_title {
+    background-color: #3e3e3e;
+    color: white;
+    width: 100%;
+    height: 50px;
+    display: block;
+    line-height: 50px;
+	font-size: 24px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+#suar_content {
+	position: relative;
+	overflow-y: scroll;
+	direction: ltr;
+	width: 100%;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background: #cec5c5;
+}
+
+#suar_content a {
+    color: black;
+    display: block;
+	text-align: right;
+    text-decoration: none;
+	font-size: 21px;
+	height: 34px;
+	line-height: 33px;
+	border-bottom: 1px dotted #555;
+	z-index: 2;
+	position: relative;
+}
+
+#suar_content a:hover {
+    background-color: #E9DC4A;
+}
+
+#suar_content a.active {
+    background-color: #E9DC4A;
+    color: black;
+}
+
+#suar_content a span {
+    width: 30px;
+    display: inline-block;
+    background: gray;
+    text-align: center;
+    font-size: 19px;
+    color: white;
+    height: 34px;
+    line-height: 34px;
+    margin-left: 7px;
+    font-weight: normal;
+}
+
+#suar_numbers_bg {
+	background: gray;
+	border-right: 1px solid #666565;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 30px;
+	height: 100%;
+	z-index: 1;
+}
+
+#suar_inside_quran #suar_numbers_bg {
+	background: #c0bfa3;
+	border-left: 1px solid #666565;
+	border-right: 0px;
+}
+/*=====================================*/
+
+#azkar_box  {
+	border: 1px solid #555;
+	width: 100%;
+	max-width: 190px;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 20px;
+	border-radius: 10px;
+	box-shadow: 3px 5px 16px black;
+}
+
+#azkar_title {
+    background-color: #3e3e3e;
+    color: white;
+    width: 100%;
+    height: 50px;
+    display: block;
+    line-height: 50px;
+	font-size: 24px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+#azkar_content {
+	position: relative;
+	overflow-y: scroll;
+	direction: ltr;
+	width: 100%;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background: #cec5c5;
+}
+
+.sub_title {
+	font-size: 25px;
+	color: #324f83;
+	font-weight: bold;
+	background: none;
+	padding: 5px 10px;
+	height: auto;
+	line-height: normal;
+}
+
+#azkar_content a {
+    color: black;
+    display: block;
+	text-align: right;
+    text-decoration: none;
+	font-size: 21px;
+	height: 34px;
+	line-height: 33px;
+	border-bottom: 1px dotted #555;
+	z-index: 2;
+	position: relative;
+}
+
+#azkar_content a:hover {
+    background-color: #E9DC4A;
+}
+
+#azkar_content a.active {
+    background-color: #E9DC4A;
+    color: black;
+}
+
+#azkar_content a span {
+    width: 30px;
+    display: inline-block;
+    background: gray;
+    text-align: center;
+    font-size: 19px;
+    color: white;
+    height: 34px;
+    line-height: 34px;
+    margin-left: 7px;
+    font-weight: normal;
+}
+
+#azkar_numbers_bg {
+	background: gray;
+	border-right: 1px solid #666565;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 30px;
+	height: 100%;
+	z-index: 1;
+}
+
+#azkar_inside_quran #azkar_numbers_bg {
+	background: #c0bfa3;
+	border-left: 1px solid #666565;
+	border-right: 0px;
+}

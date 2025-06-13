@@ -1,0 +1,511 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس شرحنا فكرة الكائنات بتفصيل, ستتعلم كيف كلاس و تنشئ كائنات منه, و وضعنا الكثير من الأمثلة لتساعدك في الفهم" name="description"/>
+<meta content="class and object in python,object in python,classs in python, " name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الكلاس و الكائن في بايثون | python classes and objects</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>الكلاس و الكائن في بايثون</h1>
+<article>
+<h2>مفهوم الكلاس في بايثون</h2>
+<p>الكلاس عبارة عن حاوية تستطيع أن تضع بداخلها متغيرات, مصفوفات, دوال إلخ..<br/>
+	لتعريف كلاس جديد نكتب <code data-enlighter-language="python">class</code>, ثم نضع له إسم, ثم نضع نقطتين.</p>
+<br/>
+<p>في المثال التالي قمنا بإنشاء كلاس إسمه <span class="inline"><code data-enlighter-language="python">MyClass</code>,</span> وضعنا فيه متغير إسمه <span class="inline"><code data-enlighter-language="python">x</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+class MyClass:
+	x = 3
+		</pre>
+</div>
+</article>
+<article>
+<h2>مفهوم الكائن في بايثون</h2>
+<p>الكائن عبارة عن نسخة من الكلاس.<br/>
+	لإنشاء نسخة من كلاس معين, نقوم بتعريف متغير قيمته تساوي إسم الكلاس, ثم نضع قوسين.</p>
+<br/>
+<p>في المثال التالي قمنا بإنشاء كلاس إسمه <span class="inline"><code data-enlighter-language="python">MyClass</code>,</span> وضعنا فيه متغير إسمه <span class="inline"><code data-enlighter-language="python">x</code>.</span> ثم قمنا بإنشاء كائن من هذا الكلاس إسمه <span class="inline"><code data-enlighter-language="python">obj</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# MyClass هنا قمنا بتعريف كلاس إسمه
+class MyClass:
+    x = 0
+
+
+# obj إسمه MyClass هنا قمنا بإنشاء كائن من الكلاس
+obj = MyClass()
+
+# obj الموجود في الكائن x هنا قمنا بتغيير قيمة المتغير
+obj.x = 10
+
+# obj الموجود في الكائن x هنا قمنا بعرض قيمة المتغير
+print('obj.x =', obj.x)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			obj.x = 10
+		</div>
+</div>
+</article>
+<article>
+<h2>مفهوم الخصائص في بايثون</h2>
+<p>أي متغير تقوم بتعريفه بشكل مباشر في الكلاس يقال له خاصيّة <span class="inline">( <code data-enlighter-language="python">Property</code> ).</span><br/>
+	السبب في ذلك أن كل نسخة تنشئها من الكلاس ستملك نسختها الخاصة من هذا المتغير.</p>
+<br/>
+<p>في المثال التالي قمنا بإنشاء كلاس إسمه <span class="inline"><code data-enlighter-language="python">MyClass</code>,</span> وضعنا فيه متغير إسمه <span class="inline"><code data-enlighter-language="python">x</code>.</span><br/>
+	ثم قمنا بإنشاء كائنين من هذا الكلاس إسمهما <code data-enlighter-language="python">o1</code> و <span class="inline"><code data-enlighter-language="python">o2</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# MyClass هنا قمنا بتعريف كلاس إسمه
+class MyClass:
+    x = 0
+
+
+# o2 و الثاني إسمه o1 الأول إسمه ,MyClass هنا قمنا بإنشاء كائنين من الكلاس
+o1 = MyClass()
+o2 = MyClass()
+
+# o2 الموجود في الكائن x و قيمة o1 الموجود في الكائن x هنا جعلنا قمنا بتغيير قيمة
+o1.x = 10
+o2.x = 20
+
+# o2 الموجود في الكائن x و قيمة o1 الموجود في الكائن x هنا قمنا بعرض قيمة المتغير
+print('o1.x =', o1.x)
+print('o2.x =', o2.x)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			o1.x = 10<br/>
+			o2.x = 20
+		</div>
+<p><span class="point">•</span>نلاحظ أن كل كائن أنشأناه من الكلاس <code data-enlighter-language="python">MyClass</code> يملك نسخة خاصة فيه من المتغير <span class="inline"><code data-enlighter-language="python">x</code>.</span></p>
+</div>
+</article>
+<article>
+<h2>الكلمة <code data-enlighter-language="python">self</code> في بايثون</h2>
+<p>عند تعريف دالة بداخل كلاس, بايثون تجبرك على وضع الكلمة <code data-enlighter-language="python">self</code> أو أي كلمة أخرى كأول باراميتر فيها و من ثم وضع العدد الذي تريده من الباراميترات.<br/>
+	إذاً, حتى لو لم تكن تنوي أن تضع في الدالة أي باراميتر, فإنك مجبر على وضع الكلمة <code data-enlighter-language="python">self</code> أو أي كلمة آخرى كباراميتر فيها.</p>
+<br/>
+<h3 class="note-title">نصيحة</h3>
+<div class="note-box">
+<p>بما أن أغلب المبرمجين يضعون كلمة <code data-enlighter-language="python">self</code> كأول باراميتر في الدالة فالأفضل أن تستخدم هذه الكلمة أيضاً حتى تكون تعمل بنفس الطريقة التي يعمل بها أغلب المبرمجين حول العالم.</p>
+</div>
+<br/>
+<h3>سبب وضع الكلمة <code data-enlighter-language="python">self</code> كأول باراميتر في الدالة</h3>
+<p>وضع الكلمة <code data-enlighter-language="python">self</code> كأول باراميتر في الدالة يجعل مفسّر لغة بايثون قادر على الوصول إلى الخصائص الموجودة في نفس الكلاس. أي عند وضع هذه الكلمة كبارامتير في الدالة, تصبح هذه الكلمة بمثابة مؤشر للكلاس نفسه مما يجعلك قادر على الوصول إلى أي شيء تم تعريفه بداخل الكلاس عن طريقها.</p>
+<br/>
+<p>في المثال التالي قمنا بإنشاء كلاس إسمه <span class="inline"><code data-enlighter-language="python">Comparator</code>,</span> وضعنا فيه دالة إسمها <code data-enlighter-language="python">print_max</code> فيها باراميترين فقط <span class="inline">( <code data-enlighter-language="python">a</code> و <code data-enlighter-language="python">b</code> ).</span><br/>
+	لاحظ أننا مجبرين على وضع الكلمة <code data-enlighter-language="python">self</code> كأول باراميتر في الدالة حتى و لو لم نكن بحاجتها و عند إستدعاء الدالة لا نلقي لها بالاً.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# Salary هنا قمنا بتعريف كلاس إسمه
+class Comparator:
+
+	# بعدها تطبع القيمة الأكبر بينهما .b و a هنا قمنا بتعريف دالة تأخذ قيمتين عند إستدعاءها و تخزنهما في الباراميترين
+    def print_max(self, a, b):
+        if a &gt; b:
+            print(a, 'is bigger')
+        elif a &lt; b:
+            print(b, 'is bigger')
+        else:
+            print('They are equal')
+
+
+# comparator إسمه Comparator هنا قمنا بإنشاء كائن من الكلاس
+comparator = Comparator()
+
+# و تمرير قيمتين لها حتى تطبع قيمة العدد الأكبر بينهما print_max() هنا قمنا باستدعاء الدالة
+comparator.print_max(2, 6)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			6 is bigger
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بإنشاء كلاس إسمه <code data-enlighter-language="python">Salary</code> يحتوي على دوال خاصة لطباعة راتب الموظف بدون إقتطاع الضرائب و بعد إقتطاع الضرائب.<br/>
+	الراتب سنخزنه في متغير إسمه <span class="inline"><code data-enlighter-language="python">value</code>.</span><br/>
+	الدالة التي تطبع الراتب كما هو قمنا بتسميتها <span class="inline"><code data-enlighter-language="python">print_salary</code>.</span><br/>
+	الدالة التي تطبع الراتب بعد إقتطاع الضرائب قمنا بتسميتها <span class="inline"><code data-enlighter-language="python">print_net_salary</code>.</span></p>
+<p><span class="note">ملاحظة:</span> عند استدعاء الدالة <code data-enlighter-language="python">print_net_salary()</code> نمرر لها رقم يمثل نسبة الضرائب بالمئة و على أساسها سيتم حساب و طباعة الراتب الصافي.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# Salary هنا قمنا بتعريف كلاس إسمه
+class Salary:
+
+	# هذا المتغير سنخزن فيه الراتب
+    value = 0
+
+	# كما هو ( value و مهمتها طباعة الراتب ( أي قيمة المتغير - self هنا قمنا بتعريف دالة لا يوجد فيها أي باراميتر - باستثناء الكلمة
+    def print_salary(self):
+        print('Salary:', self.value)
+
+	# و مهمتها طباعة الراتب بعد إقتطاع نسبة الضرائب منه - self هنا قمنا بتعريف دالة يوجد فيها باراميتر واحد - بالإضافة إلى الكلمة
+	# rate_percentage سنضع فيه بشكل مؤقت المبلغ الذي سيتم إقتطاعه على حسب نسبة الضريبة التي سيتم تمريرها مكان الباراميتر rate المتغير
+    def print_net_salary(self, rate_percentage):
+        rate = self.value / rate_percentage
+        print('Net Salary:', self.value-rate)
+
+
+# salary إسمه Salary هنا قمنا بإنشاء كائن من الكلاس
+salary = Salary()
+
+# salary الموجود في الكائن salary هنا قمنا بتغيير قيمة المتغير
+salary.value = 1500
+
+# لتطبع قيمة الراتب كما هو print_salary() هنا قمنا باستدعاء الدالة
+salary.print_salary()
+
+# لتطبع قيمة الراتب بعد إقتطاع نسبة 10% منه print_net_salary() هنا قمنا باستدعاء الدالة
+salary.print_net_salary(10)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Salary: 1500<br/>
+			Net Salary: 1350.0
+		</div>
+</div>
+</article>
+<article>
+<h2>الدالة <code data-enlighter-language="python">__init__()</code> في بايثون</h2>
+<p>في البداية, كل كلاس موجود في بايثون أو تنشئه بنفسك, يملك مجموعة دوال جاهزة أهمها الدالة <span class="inline"><code data-enlighter-language="python">__init__()</code>.</span>
+	هذه الدالة تمكن المبرمج من تمرير قيم لخصائص الكائن مباشرةً عند إنشائه.</p>
+<p>قبل قليل قلنا أنه عند إنشاء كائن من أي كلاس نكتب إسم الكلاس ثم نضع قوسين.<br/>
+	الآن عليك معرفة أنك تستطيع تمرير قيم للخصائص بشكل مباشر بين هذين القوسين بشرط أن تكون جهزت الكلاس لهذا الأمر.</p>
+<br/>
+<h3>التعامل مع الدالة <code data-enlighter-language="python">__init__()</code></h3>
+<p>في البداية عليك تعريف هذه الدالة تماماً مثل أي دالة تقوم بتعريفها.<br/>
+	بين أقواس الدالة يمكنك مباشرةً تمرير أسماء الخصائص التي تريد أن وضعها في الكلاس و تريد إعطاءها قيم أولية مباشرةً عند إنشاء كائنات من الكلاس.</p>
+<br/>
+<p>في المثال التالي قمنا بإنشاء كلاس إسمه <span class="inline"><code data-enlighter-language="python">Person</code>,</span> يحتوي على دالة إسمها <code data-enlighter-language="python">__init__()</code> فيها باراميترين فقط <span class="inline">( <code data-enlighter-language="python">name</code> و <code data-enlighter-language="python">age</code> ),</span> و بالتالي عند إنشاء كائن من هذا الكلاس, سصبح هذين الباراميترين عبارة عن خصائص لهذا الكائن.<br/>
+	بعدها قمنا بتعريف دالة إسمها <code data-enlighter-language="python">print_info()</code> في الكلاس <code data-enlighter-language="python">Person</code> مهتمها عرض قيم هذين الباراميترين.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# Salary هنا قمنا بتعريف كلاس إسمه
+class Person:
+
+	# ( age و name ) و وضعنا فيها باراميترين __init__() هنا قمنا بتعريف الدالة
+	# __init__() لأنهما موضوعين كباراميترات في الدالة Person سيتم وضعهما كخصائص في الكلاس age و name تذكر أن
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+	# بشكل مرتب Person مهمتها طباعة قيم خصائص الكلاس print_info() هنا قمنا بتعريف دالة إسمها
+    def print_info(self):
+        print('Name:', self.name)
+        print('Age:', self.age)
+		print('-----------------')
+
+
+# p2 و الثاني إسمه p1 الأول إسمه ,Person هنا قمنا بإنشاء كائنين من الكلاس
+p1 = Person('Ahmad', 24)
+p2 = Person('Maria', 19)
+
+# حتى تطبع قيم خصائصهم بشكل مرتب p2 و p1 من الكائنين print_info() هنا قمنا باستدعاء الدالة
+p1.print_info()
+p2.print_info()
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Name: Ahmad<br/>
+			Age: 24<br/>
+			-----------------<br/>
+			Name: Maria<br/>
+			Age: 19<br/>
+			-----------------
+		</div>
+</div>
+</article>
+<article>
+<h2>العلاقة بين الكلاس و الكائن في بايثون</h2>
+<p>الفكرة الأساسية من الكلاس هي تجهيز الشكل العام لحفظ البيانات و توفير طرق سهلة الإستخدام للوصول إلى هذه البيانات و التعامل معها بسلاسلة.<br/>
+	إذاً الكلاس بطبيعته لا يحفظ أي معلومة, لهذا يقال له نسخة خام <span class="inline">( <span class="word">Blue Print</span> ).</span></p>
+<p>الفكرة الأساسية من الكائن هي إنشاء نسخة مطابقة من الكلاس و إدخال البيانات التي تريد فيها مع إحترام أي شروط موضعة في الكلاس الأساسي.<br/>
+	إذاً لا يمكن إنشاء كائن بدون كلاس لأن الكائن بطبيعته يمثل نسخ من كلاس محدد.</p>
+<br/>
+<h3>فائدة الكلاس</h3>
+<ul class="explain">
+<li><p>الخصائص التي يجب أن يمتكلها كل كائن, يتم تعريفها مرة واحدة في الكلاس الأساسي و ليس لكل كائن على حدة.</p></li>
+<li><p>إذا أردت إضافة, حذف أو تعديل خصائص الكائنات, نعدّل في الكلاس الأساسي فقط لأن الكائنات هي نسخة مطابقة للكلاس.</p></li>
+<li><p>الكلاس يمكن وضعه في ملف خاص و هذا الأمر سيساعدك كثيراً في المستقبل عند ترتيب كود المشروع - الذي قد يتكون من عشرات الكلاسات - بطريقة سهلة المراجعة و التطوير.</p></li>
+<li><p>القدرة على تجميع الكائنات و تناقلها دفعة واحدة سواء لتخزينها في قاعدة بيانات أو لنقلها بين شاشة و أخرى الخ..<br/>
+		هذه الأشياء سنشرحها بتفصيل في مستوى متقدم.</p></li>
+</ul>
+<br/>
+<p>الآن, إذا كنت تنوي إنشاء برنامج بسيط لحفظ معلومات عدد غير محدد من الأشخاص. و كل شخص عنده إسم, جنس, عمر و وظيفة. ماذا ستفعل؟!<br/>
+	بكل بساطة الحل هو أن تنشئ كلاس واحد فقط يمثل شخص, و تضع فيه الأشياء الأساسية التي تريدها أن تكون موجودة عند كل شخص. ثم تنشئ منه كائنات قدر ما شئت, و عندها يصبح كل كائن من هذا الكلاس عبارة عن شخص له معلوماته الخاصة كما في الصورة التالية.</p>
+<p><a href="pic_1.png" target="_blank"><img src="pic_1.png"/></a></p>
+<p>كما تلاحظ قمنا بإنشاء كلاس يحتوي على المعلومات الأساسية التي نريد تعبئتها لكل شخص.<br/>
+	بعدها قمنا بإنشاء <span class="number">4</span> كائنات ( أي <span class="number">4</span> أشخاص ), ثم قمنا بإدخال معلومات خاصة لكل كائن فيهم.</p>
+<p>الآن في حال قمت بإضافة أي متغير أو دالة جديدة في الكلاس <code data-enlighter-language="python">Person</code>, فإن أي كائن من هذا الكلاس سيملك نسخة من الشيء الجديد الذي أضفته.<br/>
+	و في حال قمت بتعديل كود معين في الكلاس <code data-enlighter-language="python">Person</code>, فأيضاً سيتم تعديل هذا الكود عند جميع الكائنات من هذا الكلاس.</p>
+<br/><br/>
+<h3>مثال</h3>
+<p>الآن سنقوم بإنشاء الكلاس <code data-enlighter-language="python">Person</code> و من ثم إنشاء <span class="number">4</span> كائنات منه.<br/>
+<span class="note">ملاحظة:</span> سنقوم بوضع الكلاس <code data-enlighter-language="python">Person</code> في ملف <span class="inline">( أي موديول )</span> خاص و من ثم سنقوم بتضمينه في البرنامج من أجل ترتيب الكود فقط.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Person.py</span>
+<pre data-enlighter-language="python">
+# Person هنا قمنا بتعريف كلاس إسمه
+class Person:
+
+    # كقيمة إفتراضية None و أعطيناهم ( age و job ,gender ,name ) و وضعنا فيها 4 باراميترات __init__() هنا قمنا بتعريف الدالة
+    # __init__() لأنهم موضوعين كباراميترات في الدالة Person سيتم وضعهم كخصائص في الكلاس age و gender و job و name تذكر أن
+    def __init__(self, name=None, gender=None, job=None, age=None):
+        self.name = name
+        self.gender = gender
+        self.job = job
+        self.age = age
+
+    # بشكل مرتب Person مهمتها طباعة قيم خصائص الكلاس print_info() هنا قمنا بتعريف دالة إسمها
+    def print_info(self):
+        print('Name:', self.name)
+        print('Gender:', self.gender)
+        print('Job:', self.job)
+        print('Age:', self.age)
+        print('-----------------')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# Person الموجود في الموديول Person هنا قمنا بتضمين الكلاس
+from Person import Person
+
+# مع تبديل قيم خصائصهم الإفتراضية p4 و p3, p2 ,p1 إسمهم Person هنا قمنا بإنشاء 4 كائنات من الكلاس
+p1 = Person('Mhamad', 'Male', 'Programmer', 21)
+p2 = Person('Rose', 'Female', 'Secretary', 22)
+p3 = Person('Ahmad', 'Male', 'Doctor', 34)
+p4 = Person('Rabih', 'Male', 'Engineer', 27)
+
+# حتى تطبع قيم خصائصهم بشكل مرتب p4 و p3, p2 ,p1 من الكائنات print_info() هنا قمنا باستدعاء الدالة
+p1.print_info()
+p2.print_info()
+p3.print_info()
+p4.print_info()
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الموديول <span class="inline"><code data-enlighter-language="python">test</code>.</span></p>
+<div class="code-box">
+			Name: Mhamad<br/>
+			Gender: Male<br/>
+			Job: Programmer<br/>
+			Age: 21<br/>
+			-----------------<br/>
+			Name: Rose<br/>
+			Gender: Female<br/>
+			Job: Secretary<br/>
+			Age: 22<br/>
+			-----------------<br/>
+			Name: Ahmad<br/>
+			Gender: Male<br/>
+			Job: Doctor<br/>
+			Age: 34<br/>
+			-----------------<br/>
+			Name: Rabih<br/>
+			Gender: Male<br/>
+			Job: Engineer<br/>
+			Age: 27<br/>
+			-----------------
+		</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

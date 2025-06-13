@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="شرح تفصيلي لجميع الدوال التي تتعامل مع الأعداد في بايثون مع أمثلة مبسطة لكل فكرة" name="description"/>
+<meta content="python numbers, numbers in python, الأعداد في بايثون, الأعداد, python math module, python random module" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>التعامل مع الأعداد في بايثون | Python numbers</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>التعامل مع الأعداد في بايثون</h1>
+<article>
+<h2>مفهوم الأعداد في بايثون</h2>
+<p>في البداية, <b>أعداد</b> تعني <span class="word">numbers</span> في اللغة الإنجليزية.<br/>
+	في هذا الدرس ستتعرف على أنواع الأعداد و الدوال الجاهزة في بايثون للتعامل معها.</p>
+<br/>
+<h3>معلومة تقنية</h3>
+<p>المتغيرات العددية في بايثون تعتبر كلها <span class="word">Immutable</span>, و هذا يعني أنك عندما تقوم بتعريف أي متغير و تعطيه قيمة عددية فإن هذه القيمة يحجز لها مكان في الذاكرة.<br/>
+	لكن إذا قمت بإعطاء قيمة جديدة لهذا المتغير فإنه سيتم حذف القيمة القديمة من الذاكرة و إنشاء مكان جديد في الذاكرة و وضع القيمة الجديدة فيه لأنه لا يمكن تعديل نفس القيمة في نفس المكان في الذاكرة.</p>
+</article>
+<article>
+<h2>أنواع الأعداد في بايثون</h2>
+<p>عند تعريف متغير و تخزين عدد فيه,  فإن مفسّر لغة بايثون سيقوم بشكل تلقائي بتحديد نوع هذا المتغير بناءاً على نوع القيمة العددية التي تم إسنادها إليه.<br/>
+	فإذا وضعت فيه عدد صحيح, يصبح نوعه <code data-enlighter-language="python">int</code>. و إذا وضعت فيه عدد عشري <span class="inline">( أي يحتوي على فاصلة )</span>, يصبح نوعه <code data-enlighter-language="python">float</code> و هكذا.</p>
+<br/>
+<p>أنواع الأعداد في بايثون تنقسم إلى <span class="number">3</span> أنواع كما في الجدول التالي.</p>
+<table class="list full-width">
+<tr>
+<th>النوع</th>
+<th>إستخدامه</th>
+<th>مثال</th>
+</tr>
+<tr>
+<td class="left"><code data-enlighter-language="python">int</code></td>
+<td>يستخدم لتخزين أعداد صحيحة.</td>
+<td class="left"><code data-enlighter-language="python">x = 3</code></td>
+</tr>
+<tr>
+<td class="left"><code data-enlighter-language="python">float</code></td>
+<td>يستخدم لتخزين أعداد تحتوي على فاصلة عشرية.</td>
+<td class="left"><code data-enlighter-language="python">x = 1.5</code></td>
+</tr>
+<tr>
+<td class="left"><code data-enlighter-language="python">complex</code></td>
+<td>يستخدم لتخزين أعداد مركبة <span class="inline">(<span class="word">Complex Number</span>)</span> و التي غالباً ما يحتاجها المهندسون عند إجراء عمليات حاسبية معقدة.<br/>
+<span class="note">ملاحظة:</span> هنا يجب وضع الحرف <code data-enlighter-language="python">J</code> أو <code data-enlighter-language="python">j</code> مباشرةً بعد العدد حتى يعرف مفسّر بايثون أنك تقصد عدد مركب و ليس عدد عادي.</td>
+<td class="left"><code data-enlighter-language="python">x = 4J</code></td>
+</tr>
+</table>
+<br/>
+<p>في المثال التالي قمنا بتعريف ثلاث متغيرات و كل متغير وضعنا فيه قيمة عددية مختلفة في النوع و القيمة. بعدها قمنا بعرض نوع كل متغير منهم.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+x = 3            # قيمته عبارة عن عدد صحيح ,x هنا قمنا بتعريف متغير إسمه
+y = 1.5          #  قيمته عبارة عن عدد عشري ,y هنا قمنا بتعريف متغير إسمه
+z = 4J           #   قيمته عبارة عن عدد مركب ,z هنا قمنا بتعريف متغير إسمه
+
+print(type(x))   # x هنا طبعنا نوع قيمة المتغير
+print(type(y))   # y هنا طبعنا نوع قيمة المتغير
+print(type(z))   # z هنا طبعنا نوع قيمة المتغير
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			&lt;class 'int'&gt;<br/>
+			&lt;class 'float'&gt;<br/>
+			&lt;class 'complex'&gt;
+		</div>
+</div>
+</article>
+<article>
+<h2>عرض الأعداد الصحيحة بأشكال مختلفة في بايثون</h2>
+<p>في بايثون يمكنك حفظ أعداد صحيحة بشكل <span class="word">Hexa-Decimal</span> و بشكل <span class="word">Octal</span>.<br/>
+<span class="note">ملاحظة:</span> لست مضطراً أن تفهم الكود التالي لأن عرض الأعداد بأشكال مختلفة تتعلمه في مادة تسمى عمارة الحاسب و في مادة الشبكات.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+a = 0xA03                         # Hexa-decimal قيمته عبارة عن عدد صحيح لكننا كتبناها كـ ,a هنا قمنا بتعريف متغير إسمه
+b = 0o42                          # Octal قيمته عبارة عن عدد صحيح لكننا كتبناها كـ ,b هنا قمنا بتعريف متغير إسمه
+
+print('a =', a)                   # a هنا قمنا بطباعة قيمة المتغير
+print('b =', b)                   # b هنا قمنا بطباعة قيمة المتغير
+
+print('type of a is:', type(a))   # a هنا قمنا بطباعة نوع قيمة المتغير
+print('type of b is:', type(b))   # b هنا قمنا بطباعة نوع قيمة المتغير
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			a = 2563<br/>
+			b = 34<br/>
+			type of a is: &lt;class 'int'&gt;<br/>
+			type of b is: &lt;class 'int'&gt;<br/>
+</div>
+<p><span class="point">•</span>نلاحظ أنه عند طباعة قيم المتغيرين <code data-enlighter-language="python">a</code> و <code data-enlighter-language="python">b</code> فإنها عرضت كأعداد صحيحة عادية و مفهومة.</p>
+<p><span class="point">•</span>و نلاحظ أيضاً أنه تم إعتبار قيم المتغيرين <code data-enlighter-language="python">a</code> و <code data-enlighter-language="python">b</code> هو أعداد صحيحة <code data-enlighter-language="python">int</code>.</p>
+</div>
+</article>
+<article>
+<h2>دوال تحويل أنواع الأعداد الموجودة في بايثون</h2>
+<p>الجدول التالي يحتوي على دوال جاهزة في بايثون تستخدم لتحويل أنواع الأعداد و لتحديد أنواع الأعداد التي نريد تخزينها بداخل المتغيرات.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">int( x )</code></span>
+			ترجع قيمة العدد الذي نمرره لها مكان المتغير <code data-enlighter-language="python">x</code> كعدد صحيح نوعه <code data-enlighter-language="python">int</code>.<br/>
+<a class="open-page" href="int-x.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">int( x, base )</code></span>
+			ترجع قيمة النص الذي نمرره لها مكان المتغير <code data-enlighter-language="python">x</code> كعدد صحيح نوعه <code data-enlighter-language="python">int</code>.<br/>
+			مكان المتغير <code data-enlighter-language="python">base</code> نمرر عدد يمثل الطريقة التي نريد بها تحويل قيمة المتغير <code data-enlighter-language="python">x</code>.<br/>
+<a class="open-page" href="int-x-base.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">float( x )</code></span>
+			ترجع قيمة المتغير الذي نمرره لها مكان المتغير <code data-enlighter-language="python">x</code> كعدد عشري (أي يحتوي على فاصلة) نوعه <code data-enlighter-language="python">float</code>.<br/>
+<a class="open-page" href="float.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">complex( real, imag )</code></span>
+			ترجع قيمة المتغير <code data-enlighter-language="python">real</code> و المتغير <code data-enlighter-language="python">imag</code> كعدد مركب <span class="inline">(<span class="word">Complex Number</span>)</span>.<br/>
+			العدد المركب بطبيعته يحتوي على قيمتين:<br/>
+			- الأولى هي قيمة المتغير <code data-enlighter-language="python">real</code> كالقيمة الحقيقية <span class="inline">(<span class="word">Real Part</span>)</span>.<br/>
+			- الثانية هي قيمة المتغير <code data-enlighter-language="python">imag</code> كقيمة الخيالية <span class="inline">(<span class="word">Imaginary Part</span>)</span>.<br/>
+<span class="note">ملاحظة:</span> في حال قمت بتمرير قيمة واحدة لها, فإنك هنا فعلياً تدخل القيمة الحقيقية للعدد المركب, و القيمة الوهمية تعتبر <span class="number">0</span>.<br/>
+<a class="open-page" href="complex.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>دوال التعامل مع الأعداد الموجودة في بايثون</h2>
+<p>في الجدول التالي ذكرنا بعض الدوال الجاهزة في بايثون و التي تستخدم للتعامل مع الأعداد.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">abs( x )</code></span>
+			ترجع القيمة المطلقة للعدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code>.<br/>
+<a class="open-page" href="abs.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">round( x [, n] )</code></span>
+			ترجع أقرب عدد صحيح للعدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code>.<br/>
+<a class="open-page" href="round.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">max( x1, x2, ... )</code></span>
+			ترجع العدد الأكبر بين مجموعة الأعداد التي نمررها لها كـ <span class="word">Arguments</span>.<br/>
+<a class="open-page" href="max.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">min( x1, x2, ... )</code></span>
+			ترجع العدد الأصغر بين مجموعة الأعداد التي نمررها لها كـ <span class="word">Arguments</span>.<br/>
+<a class="open-page" href="min.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>معنى كلمة <code data-enlighter-language="python">Module</code> في بايثون</h2>
+<p>في بايثون, كلمة <span class="word">Module</span> تعني ملف بايثون عادي يمكنه أن يحتوي على متغيرات, دوال, كلاسات إلخ..<br/>
+	لنستدعي هذا الملف <span class="inline">( أي الـ <span class="word">Module</span> )</span> في برنامجنا بكل بساطة نفعل له <code data-enlighter-language="python">import</code> و هكذا نصبح قادرين على الوصول إلى الأشياء الموجودة فيه و استخدامها في برنامجنا.</p>
+<p>كلمة <span class="word">Module</span> تكتب <b>موديل</b> في اللغة العربية و سنعتمدها في الشروحات.</p>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>سنشرح طريقة إنشاء <span class="word">Module</span> و التعامل معه بتفصيل في درس خاص لاحقاً في هذه الدورة.<br/>
+		كما أنك ستتعرف في هذه الدورة على العديد من الـ <span class="word">Modules</span> الموجودين في بايثون و سنتعرف في هذا الدرس على اثنين منهم هما <code data-enlighter-language="python">math</code> و <code data-enlighter-language="python">random</code>.</p>
+</div>
+</article>
+<article>
+<h2>دوال و ثوابت الموديل <code data-enlighter-language="python">math</code> في بايثون</h2>
+<p><code data-enlighter-language="python">math</code> هو موديل جاهز في بايثون يحتوي على دوال تستخدم في العمليات الحسابية و الهندسية, ذكرنا بعضها في هذا الجدول.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">ceil( x )</code></span>
+			ترجع العدد الصحيح الأكبر أو الذي يساوي العدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code>.<br/>
+<a class="open-page" href="math-ceil.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<td><span class="code-title"><code data-enlighter-language="python">floor( x )</code></span>
+			ترجع العدد الصحيح الأصغر أو الذي يساوي العدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code>.<br/>
+<a class="open-page" href="math-floor.html" target="_blank">تابع القراءة »</a></td>
+
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">pow(x, y)</code></span>
+			ترجع الناتج من مضاعفة قيمة العدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code> مضاعف بقيمة الباراميتر <code data-enlighter-language="python">y</code>.<br/>
+<a class="open-page" href="math-pow.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">sqrt( x )</code></span>
+			ترجع قيمة الجزر التربيعي <span class="inline">(<span class="word">square root</span>)</span> للعدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code>.<br/>
+<a class="open-page" href="math-sqrt.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">exp( x )</code></span>
+			ترجع قيمة الـ <span class="word">exponential</span> للعدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code>.<br/>
+<a class="open-page" href="math-exp.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">log( x [,base] )</code></span>
+			ترجع قيمة الـ <span class="word">Logarithm</span> للعدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code> مع إمكانية تحديد نوع الوحدة لهذا العدد.<br/>
+<a class="open-page" href="math-log.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">log2( x )</code></span>
+			ترجع قيمة الـ <span class="word">Logarithm Base 2</span> للعدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code>.<br/>
+			يمكن إستدعاء هذه الدالة بدل إستدعاء الدالة <code data-enlighter-language="python">log(x, 2)</code>.<br/>
+<a class="open-page" href="math-log2.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">log10( x )</code></span>
+			ترجع قيمة الـ <span class="word">Logarithm Base 10</span> للعدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code>.<br/>
+			يمكن إستدعاء هذه الدالة بدل إستدعاء الدالة <code data-enlighter-language="python">log(x, 10)</code>.<br/>
+<a class="open-page" href="math-log10.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">sin( x )</code></span>
+			ترجع قيمة الـ <span class="word">sine</span> للعدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code>.<br/>
+<a class="open-page" href="math-sin.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">cos( x )</code></span>
+			ترجع قيمة الـ <span class="word">cosine</span> للعدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code>.<br/>
+<a class="open-page" href="math-cos.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">tan( x )</code></span>
+			ترجع قيمة الـ <span class="word">tangent</span> للعدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code>.<br/>
+<a class="open-page" href="math-tan.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">asin( x )</code></span>
+			ترجع قيمة الـ <span class="word">arc sine</span> للعدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code>.<br/>
+<a class="open-page" href="math-asin.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">acos( x )</code></span>
+			ترجع قيمة الـ <span class="word">arc cosine</span> للعدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code>.<br/>
+<a class="open-page" href="math-acos.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">atan( x )</code></span>
+			ترجع قيمة الـ <span class="word">arc tangent</span> للعدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code>.<br/>
+<a class="open-page" href="math-atan.php" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">degrees( x )</code></span>
+			تحول قيمة العدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code> لـ <span class="word">Degrees</span>.<br/>
+<a class="open-page" href="math-degrees.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">radians( x )</code></span>
+			تحول قيمة العدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">x</code> لـ <span class="word">Radians</span>.<br/>
+<a class="open-page" href="math-radians.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">gcd( x, y )</code></span>
+			ترجع عدد صحيح يمثل القاسم المشترك الأكبر <span class="inline">(<span class="word">Greatest Common Divisor</span>)</span> بين العددين اللذين نمررهما لها مكان الباراميترين <code data-enlighter-language="python">x</code> و <code data-enlighter-language="python">y</code>.<br/>
+<a class="open-page" href="math-gcd.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+</table>
+<br/><br/>
+<p>الموديل <code data-enlighter-language="python">math</code> يحتوي أيضاً على الثوابت التالية التي تتعلق بالرياضيات.</p>
+<table class="list">
+<tr>
+<th>إسم الثابت</th>
+<th>تعريفه</th>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">E</code></td>
+<td>يحتوي على قيمة الـ <span class="word">Exponential</span>.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="python">PI</code></td>
+<td>يحتوي على قيمة الـ <span class="word">PI</span>.</td>
+</tr>
+</table>
+<p><a class="open-page" href="math-constants.html" target="_blank">شاهد المثال »</a></p>
+</article>
+<article>
+<h2>دوال الموديل <code data-enlighter-language="python">random</code> في بايثون</h2>
+<p><code data-enlighter-language="python">random</code> هو موديل جاهز في بايثون يحتوي على دوال تستخدم في العمليات الحسابية و الهندسية, ذكرنا بعضها في هذا الجدول.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">random()</code></span>
+			ترجع عدد عشري عشوائي بين <span class="number">0.0</span> و <span class="number">1.0</span>.<br/>
+<a class="open-page" href="random-random.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">uniform( a, b )</code></span>
+			ترجع عدد عشري عشوائي بين القيمة التي نمررها لها مكان الباراميتر <code data-enlighter-language="python">a</code> و القيمة التي نمررها لها مكان الباراميتر <code data-enlighter-language="python">b</code>.<br/>
+<a class="open-page" href="random-uniform.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">randrange ( [start,] stop [,step] )</code></span>
+			ترجع عدد صحيح عشوائي بين <span class="number">0</span> و القيمة التي نمررها لها مكان الباراميتر <code data-enlighter-language="python">stop</code>.<br/>
+			أو ترجع عدد صحيح عشوائي بين القيمة التي نمررها لها مكان الباراميتر <code data-enlighter-language="python">start</code> و القيمة التي نمررها لها مكان الباراميتر <code data-enlighter-language="python">stop</code>.<br/>
+<a class="open-page" href="random-randrange.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">choice( seq )</code></span>
+			ترجع قيمة عشوائية من بين عناصر أي سلسلة <span class="inline">(<span class="word">Sequence</span>)</span> نمررها لها.<br/>
+			السلسلة ممكن أن تكون مصفوفة من الأعداد, أو نص عادي (أي سلسلة من الأحرف).<br/>
+			فمثلاً, إذا مررنا لها مصفوفة من الأعداد, ترجع عدد عشوائي من ضمن هذه المصفوفة. و إذا مررنا لها نص, ترجع حرف عشوائي من ضمن هذا النص.<br/>
+<a class="open-page" href="random-choice.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">shuffle( x )</code></span>
+			نمرر لها مصفوفة مكان الباراميتر <code data-enlighter-language="python">x</code> فتبدل أماكن عناصرها بشكل عشوائي.<br/>
+<a class="open-page" href="random-shuffle.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+</table>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

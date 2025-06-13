@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس سنتعرف على الأوامر CASE و WHEN و ELSE و END و كيف نستخدمهم لوضع قيمة إفتراضية لكل حالة" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>SQL Case | وضع قيمة إفتراضية لكل حالة في SQL</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../database-icon.png"/></li>
+<li class="title">كيف أبدأ بالتعلم</li>
+<li><a href="../sql-overview/index.html"><span class="en">SQL</span> - نظرة عامة</a></li>
+<li><a href="../sql-environment-setup/index.html"><span class="en">SQL</span> - تجهيز بيئة العمل</a></li>
+<li><a href="../sql-basic-syntax/index.html"><span class="en">SQL</span> - أسلوب كتابة الأوامر</a></li>
+<li><a href="../sql-comments/index.html"><span class="en">SQL</span> - التعليقات</a></li>
+<li><a href="../sql-write-first-query/index.html"><span class="en">SQL</span> - كتابة أول إستعلام</a></li>
+<li><a href="../sql-refresh-databases-panel/index.html"><span class="en">SQL</span> - تحديث قائمة قواعد البيانات</a></li>
+<li><a href="../sql-databases-structure-in-general/index.html"><span class="en">SQL</span> - مفاهيم و مصطلحات مهمة</a></li>
+<li class="title">أوامر و دوال SQL</li>
+<li><a href="../sql-create-database/index.html"><span class="en">SQL</span> - أمر إنشاء قاعدة بيانات</a></li>
+<li><a href="../sql-drop-database/index.html"><span class="en">SQL</span> - أمر حذف قاعدة بيانات</a></li>
+<li><a href="../sql-data-types/index.html"><span class="en">SQL</span> - أهم أنواع البيانات</a></li>
+<li><a href="../sql-create-table/index.html"><span class="en">SQL</span> - أمر إنشاء جدول</a></li>
+<li><a href="../sql-drop-table/index.html"><span class="en">SQL</span> - أمر حذف جدول</a></li>
+<li><a href="../sql-use/index.html"><span class="en">SQL</span> - أمر تحديد قاعدة البيانات</a></li>
+<li><a href="../sql-insert-into/index.html"><span class="en">SQL</span> - أمر إضافة سطر في الجدول</a></li>
+<li><a href="../sql-auto-increment/index.html"><span class="en">SQL</span> - الترقيم التلقائي للأسطر</a></li>
+<li><a href="../sql-select/index.html"><span class="en">SQL</span> - أمر جلب بيانات من الجدول</a></li>
+<li><a href="../sql-select-with-concat/index.html"><span class="en">SQL</span> - دمج الأعمدة عند جلبها</a></li>
+<li><a href="../sql-select-repeat-columns-name/index.html"><span class="en">SQL</span> - تكرار إسم الأعمدة في الإستعلام</a></li>
+<li><a href="../sql-select-with-where/index.html"><span class="en">SQL</span> - جلب البيانات ضمن شروط</a></li>
+<li><a href="../sql-select-with-order/index.html"><span class="en">SQL</span> - جلب البيانات مع ترتيبها</a></li>
+<li><a href="../sql-select-distinct/index.html"><span class="en">SQL</span> - جلب بيانات خالية من التكرار</a></li>
+<li><a href="../sql-union/index.html"><span class="en">SQL</span> - دمج الجداول في جدول واحد</a></li>
+<li><a href="../sql-delete/index.html"><span class="en">SQL</span> - أمر حذف بيانات من الجدول</a></li>
+<li><a href="../sql-update/index.html"><span class="en">SQL</span> - أمر تحديث بيانات الجدول</a></li>
+<li><a href="../sql-select-with-limit/index.html"><span class="en">SQL</span> - تحديد عدد الأسطر التي سترجع</a></li>
+<li><a href="../sql-null-values/index.html"><span class="en">SQL</span> - التعامل مع الحقول الفارغة</a></li>
+<li><a href="../sql-min/index.html"><span class="en">SQL</span> - جلب أصغر قيمة في العامود</a></li>
+<li><a href="../sql-max/index.html"><span class="en">SQL</span> - جلب أكبر قيمة في العامود</a></li>
+<li><a href="../sql-count/index.html"><span class="en">SQL</span> - حساب عدد أسطر الجدول</a></li>
+<li><a href="../sql-sum/index.html"><span class="en">SQL</span> - حساب ناتج جمع قيم العامود</a></li>
+<li><a href="../sql-avg/index.html"><span class="en">SQL</span> - حساب متوسط قيم العامود</a></li>
+<li><a href="../sql-select-with-group-by/index.html"><span class="en">SQL</span> - تجميع قيم الحقول المشتركة</a></li>
+<li><a href="../sql-select-with-having/index.html"><span class="en">SQL</span> - شروط على الحقول المجمعة</a></li>
+<li><a href="../sql-insert-into-select/index.html"><span class="en">SQL</span> - نسخ البيانات في جدول آخر</a></li>
+<li><a href="index.html"><span class="en">SQL</span> - وضع قيمة إفتراضية لكل حالة</a></li>
+<li><a href="../sql-unique/index.html"><span class="en">SQL</span> - تخزين قيم موحدة في العامود</a></li>
+<li class="title">العلاقات بين الجداول</li>
+<li><a href="../sql-how-to-relate-tables/index.html"><span class="en">SQL</span> - كيف يتم ربط الجداول</a></li>
+<li><a href="../sql-relationships-types/index.html"><span class="en">SQL</span> - أنواع العلاقات بين الجدوال</a></li>
+<li><a href="../sql-joins/index.html"><span class="en">SQL</span> - طرق ربط معلومات الجداول</a></li>
+<li><a href="../sql-alias-for-tables/index.html"><span class="en">SQL</span> - وضع أسماء مختصرة للجداول</a></li>
+<li><a href="../sql-self-join/index.html"><span class="en">SQL</span> - ربط المعلومات في نفس الجدول</a></li>
+<li class="title">معلومات متقدمة</li>
+<li><a href="../sql-alter/index.html"><span class="en">SQL</span> - تعديل بنية الجدول بعد إنشائه</a></li>
+<li><a href="../sql-default/index.html"><span class="en">SQL</span> - وضع قيم إفتراضية للحقول</a></li>
+<li><a href="../sql-primary-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح رئيسي</a></li>
+<li><a href="../sql-foreign-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح أجنبي</a></li>
+<li><a href="../sql-check/index.html"><span class="en">SQL</span> - وضع شروط لتخزين القيم</a></li>
+<li><a href="../sql-transactions/index.html"><span class="en">SQL</span> - تنفيذ كل الأوامر أو إلغاءها كلها</a></li>
+<li><a href="../sql-indexes/index.html"><span class="en">SQL</span> - الفهارس و أنواعها</a></li>
+<li><a href="../sql-like/index.html"><span class="en">SQL</span> - البحث في الأعمدة النصية</a></li>
+<li><a href="../sql-sub-queries/index.html"><span class="en">SQL</span> - كتابة إستعلامات متداخلة</a></li>
+<li><a href="../sql-connect-to-database/index.html"><span class="en">SQL</span> - الإتصال بقاعدة البيانات عن بعد</a></li>
+<li class="title">بناء قواعد بيانات لمشاريع</li>
+<li><a href="../sql-building-database-from-scratch/index.html"><span class="en">SQL</span> - تصميم قاعدة بيانات من الصفر</a></li>
+<li><a href="../sql-download-ready-made-database/index.html"><span class="en">SQL</span> - تحميل قواعد بيانات جاهزة</a></li>
+<!--
+<li><a href="../sql-backup-database"><span class="en">SQL</span> - إنشاء نسخة من قاعدة البيانات</a></li>
+<li><a href="../sql-stored-procedures"><span class="en">SQL</span> - تعريف دوال و استدعائها</a></li>
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">SQL</span>وضع قيمة إفتراضية لكل حالة</h1>
+<article>
+<h2>مفهوم القيم الإفتراضية لكل حالة</h2>
+<p>أحياناً, بعد جلب البيانات من الجداول قد تكون بحاجة لعرض قيم أخرى بدلاً من البيانات نفسها.<br/>
+	مثلاً في حال قمت ببناء قاعدة بيانات لمدرسة و فيها قمت بحفظ علامات الطلاب لكل مادة.<br/>
+	الآن, في حال أردت عرض علامات الطلاب في مادة معينة, قد تقوم بعرضها بشكل مختلف عن الشكل الذي حفظتها فيه كالتالي:</p>
+<ul class="explain">
+<li><p><code>A</code> في حال كانت علامة الطالب بين <code>90</code> و <span class="inline"><code>100</code>.</span></p></li>
+<li><p><code>B</code> في حال كانت علامة الطالب بين <code>89</code> و <span class="inline"><code>80</code>.</span></p></li>
+<li><p><code>C</code> في حال كانت علامة الطالب بين <code>79</code> و <span class="inline"><code>70</code>.</span></p></li>
+<li><p><code>D</code> في حال كانت علامة الطالب بين <code>69</code> و <span class="inline"><code>60</code>.</span></p></li>
+<li><p><code>F</code> في حال كانت علامة الطالب بين <code>59</code> و <span class="inline"><code>0</code>.</span></p></li>
+<li><p><code>Error</code> إذا لم تكن علامة الطالب بين <code>0</code> و <span class="inline"><code>100</code>.</span></p></li>
+</ul>
+<p>إذاً في هذه الحالة سنضع قائمة من الإحتمالات على العامود الذي سيتم فيه عرض علامات الطلاب حتى نعرض الحرف المناسب بناءاً عليها.</p>
+<p>قائمة الإحتمالات التي يمكننا وضعها على أي عامود في الجدول الذي سيرجع في النتيجة النهائية تتيح لنا تغيير قيمة العامود في حال كانت تطابق شرط محدد و تتيح لنا وضع قيمة إفتراضية بدل القيمة الحالية في حال لم تتطابق القيمة مع أي شرط.</p>
+<br/>
+<h3>الشكل العام لوضع قائمة إحتمالات على أي عامود</h3>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    WHEN conditionN THEN resultN
+    ELSE result
+END;
+	</pre>
+<br/>
+<ul class="explain">
+<li><p>لوضع قائمة من القيم الإفتراضية التي سيتم وضعها مكان قيم العامود الأصلية, نضع الكلمتين <code data-enlighter-language="sql">CASE</code> و <code data-enlighter-language="sql">End</code> في المكان الذي كنا ننوي فيه عرض قيم العامود.</p></li>
+<li><p>أي شرط تريد وضعه على قيم العامود, تضع قبله الكلمة <code data-enlighter-language="sql">WHEN</code> و بعده الكلمة <code data-enlighter-language="sql">THEN</code> التي تضع من بعدها القيمة التي سيتم وضعها في حال تحقق الشرط.</p></li>
+<li><p>إذا أردت وضع قيمة إفتراضية يتم وضعها في حال لم يتطابق أي شرط, فيمكنك وضع الكلمة <code data-enlighter-language="sql">ELSE</code> و وضع القائمة الإفتراضية بعدها.</p></li>
+</ul>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>عند وضع قائمة إحتمالات, تأكد من وضع إحتمالات لكل القيم, لأنه في حال مرور قيمة لا توجد إطلاقاً ضمن قائمة الإحتمالات الموضوعة, سيتم وضع القيمة <code data-enlighter-language="sql">Null</code> مكانها في النتيجة النهائية.</p>
+</div>
+</article>
+<article>
+<h2>تجهيز قاعدة البيانات التي سنطبق عليها</h2>
+<p>قم بتنفيذ الإستعلام التالي حتى تنشئ قاعدة بيانات جديدة إسمها <code>harmash</code> و تنشئ فيها جدول إسمه <code>employees</code> يحتوي على بيانات 10 موظفين.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+-- سيتم حذفها harmash في حال كان يوجد بالأساس قاعدة بيانات إسمها
+DROP DATABASE IF EXISTS harmash;
+
+-- harmash هنا قمنا بإنشاء قاعدة بيانات جديدة إسمها
+CREATE DATABASE harmash;
+
+-- harmash هنا قمنا بتحديد أن أي إستعلام جديد سيتم تنفيذه على قاعدة البيانات
+USE harmash;
+
+-- يتألف من ستة أعمدة students هنا قمنا بإنشاء جدول جديد إسمه
+-- لأننا قمنا بتحديدها قبل إستدعاء هذا الأمر harmash سيتم إنشاء هذا الجدول بداخل قاعدة البيانات
+CREATE TABLE students (
+	id   INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50),
+	math INT
+);
+
+-- هنا قمنا بإضافة 10 أسطر في الجدول, أي أضفنا معلومات 10 طلاب
+-- لاحظ أننا لم نحدد أسماء الأعمدة التي سنضع فيها البيانات لأننا قمنا بملئ جميع المعلومات
+-- في البداية هو حتى يكون عدد القيم الموضوعة يساوي عدد أعمدة الجدول null سبب وضع الكلمة
+-- ستقوم قاعدة البيانات بوضع رقم تعرفة مختلف لكل سطر null مكان الكلمة
+INSERT INTO students VALUES (null, "Ahmad", 82);
+INSERT INTO students VALUES (null, "Rami", 87);
+INSERT INTO students VALUES (null, "Said", 73);
+INSERT INTO students VALUES (null, "Noura", 92);
+INSERT INTO students VALUES (null, "Amani", 78);
+INSERT INTO students VALUES (null, "Mhamad", 65);
+INSERT INTO students VALUES (null, "Ahmad", 45);
+INSERT INTO students VALUES (null, "Mostafa", 95);
+INSERT INTO students VALUES (null, "Jana", 68);
+INSERT INTO students VALUES (null, "Houssam", 120);
+		</pre>
+</div>
+<br/>
+<p>بعد تنفيذ الإستعلام السابق في <span class="word">phpMyAdmin</span> سيتم إنشاء قاعدة البيانات <code>harmash</code> و إنشاء الجدول <code>students</code> بداخلها.<br/>
+	قم بالنقر على إسم قاعدة البيانات <code>harmash</code> من القائمة اليسرى حتى تبدأ بالتعامل معها و تطبيق ما ستتعلمه في هذا الدرس.</p>
+<br/>
+<p>البيانات التي قمنا بإضافتها بشكل إفتراضي في الجدول <span class="inline"><code>students</code>.</span></p>
+<div class="responsive-table" style="max-width: 250px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>name</th> <th>math</th>
+</tr>
+<tr>
+<td>1</td> <td>Ahmad</td> <td>82</td>
+</tr>
+<tr>
+<td>2</td> <td>Rami</td> <td>87</td>
+</tr>
+<tr>
+<td>3</td> <td>Said</td> <td>73</td>
+</tr>
+<tr>
+<td>4</td> <td>Noura</td> <td>92</td>
+</tr>
+<tr>
+<td>5</td> <td>Amani</td> <td>78</td>
+</tr>
+<tr>
+<td>6</td> <td>Mhamad</td> <td>65</td>
+</tr>
+<tr>
+<td>7</td> <td>Ahmad</td> <td>45</td>
+</tr>
+<tr>
+<td>8</td> <td>Mostafa</td> <td>95</td>
+</tr>
+<tr>
+<td>9</td> <td>Jana</td> <td>68</td>
+</tr>
+<tr>
+<td>10</td> <td>Houssam</td> <td>120</td>
+</tr>
+</table>
+</div>
+</article>
+<article>
+<h2>أمثلة حول وضع حالات للقيم التي سترجع</h2>
+<br/>
+<h3>المثال الأول</h3>
+<p>الإستعلام التالي يقوم بعرض <code>id</code> كل طالب, <code>name</code> كل طالب, بالإضافة إلى ما إن كان الطالب ناجح في مادة الرياضيات أم لا.</p>
+<p>طباعة ما إن كان الطلاب ناجح في المادة أم لا وضعناها كالتالي:</p>
+<ul class="explain">
+<li><p>إذا كانت العلامة بين <code>60</code> و <code>100</code> فعندها يعتبر ناجحاً.</p></li>
+<li><p>إذا كانت العلامة بين <code>0</code> و <code>59</code> فعندها يعتبر راسباً.</p></li>
+<li><p>غير ذلك, هناك خطأ في العلامة المدخلة و يجب مراجعة الأستاذ.</p></li>
+</ul>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT                 -- لجلب بيانات من جدول SELECT هنا قمنا باستخدام الأمر
+	id AS 'Id',        -- هنا قمنا بتحديد أول عامود سيتم عرض قيمه مع تغيير إسم العامود
+    name AS 'Name',    -- هنا قمنا بتحديد ثاني عامود سيتم عرض قيمه مع تغيير إسم العامود
+    CASE               -- هنا قمنا بتحديد ما سيتم عرضه في العامود الثالث, سيتم عرض قيمه من القائمة التالية
+    	WHEN math BETWEEN 60 AND 100 THEN 'Passed'   -- 'Passed' بين 60 و 100 سيتم وضع القيمة math إذا كانت قيمة الحقل
+    	WHEN math BETWEEN 0  AND 59  THEN 'Failed'   -- 'Failed' بين 0 و 59 سيتم وضع القيمة math إذا كانت قيمة الحقل
+    	ELSE 'Refer to Professor'                    -- 'Refer to Professor' أي قيمة أخرى, سيتم وضع الجملة math إذا كانت قيمة الحقل
+    END AS 'Math Note'                               -- هنا قمنا بتغيير إسم العامود
+FROM
+	students;          -- هنا قمنا بتحديد إسم الجدول الذي سيتم جلب البيانات منه
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 260px;">
+<table class="ltr left">
+<tr>
+<th>Id</th> <th>Name</th> <th>Math Note</th>
+</tr>
+<tr>
+<td>1</td> <td>Ahmad</td> <td>Passed</td>
+</tr>
+<tr>
+<td>2</td> <td>Rami</td> <td>Passed</td>
+</tr>
+<tr>
+<td>3</td> <td>Said</td> <td>Passed</td>
+</tr>
+<tr>
+<td>4</td> <td>Noura</td> <td>Passed</td>
+</tr>
+<tr>
+<td>5</td> <td>Amani</td> <td>Passed</td>
+</tr>
+<tr>
+<td>6</td> <td>Mhamad</td> <td>Passed</td>
+</tr>
+<tr>
+<td>7</td> <td>Ahmad</td> <td>Failed</td>
+</tr>
+<tr>
+<td>8</td> <td>Mostafa</td> <td>Passed</td>
+</tr>
+<tr>
+<td>9</td> <td>Jana</td> <td>Passed</td>
+</tr>
+<tr>
+<td>10</td> <td>Houssam</td> <td>Refer to Professor</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>الإستعلام التالي يقوم بعرض معلومات الطالب كما هي, و علامة مادة الرياضيات <code>math</code> يعرضها مرة ثانية على شكل أحرف كالتالي:</p>
+<ul class="explain">
+<li><p><code>A</code> في حال كانت علامة الطالب بين <code>90</code> و <span class="inline"><code>100</code>.</span></p></li>
+<li><p><code>B</code> في حال كانت علامة الطالب بين <code>89</code> و <span class="inline"><code>80</code>.</span></p></li>
+<li><p><code>C</code> في حال كانت علامة الطالب بين <code>79</code> و <span class="inline"><code>70</code>.</span></p></li>
+<li><p><code>D</code> في حال كانت علامة الطالب بين <code>69</code> و <span class="inline"><code>60</code>.</span></p></li>
+<li><p><code>F</code> في حال كانت علامة الطالب بين <code>59</code> و <span class="inline"><code>0</code>.</span></p></li>
+<li><p><code>Error</code> إذا لم تكن علامة الطالب بين <code>0</code> و <span class="inline"><code>100</code>.</span></p></li>
+</ul>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT                           -- لجلب بيانات من جدول SELECT هنا قمنا باستخدام الأمر
+	id AS 'Id',                  -- هنا قمنا بتحديد أول عامود سيتم عرض قيمه مع تغيير إسم العامود
+    name AS 'Name',              -- هنا قمنا بتحديد ثاني عامود سيتم عرض قيمه مع تغيير إسم العامود
+    math AS 'Math (Percent)',    -- هنا قمنا بتحديد ثالث عامود سيتم عرض قيمه مع تغيير إسم العامود
+    CASE                         -- هنا قمنا بتحديد ما سيتم عرضه في العامود الرابع, سيتم عرض قيمه من القائمة التالية
+    	WHEN math BETWEEN 90 AND 100 THEN 'A'    -- 'A' بين 90 و 100 سيتم وضع الحرف math إذا كانت قيمة الحقل
+    	WHEN math BETWEEN 80 AND 89  THEN 'B'    -- 'B' بين 80 و 89 سيتم وضع الحرف math إذا كانت قيمة الحقل
+    	WHEN math BETWEEN 70 AND 79  THEN 'C'    -- 'C' بين 70 و 79 سيتم وضع الحرف math إذا كانت قيمة الحقل
+    	WHEN math BETWEEN 60 AND 69  THEN 'D'    -- 'D' بين 60 و 69 سيتم وضع الحرف math إذا كانت قيمة الحقل
+    	WHEN math BETWEEN 0  AND 59  THEN 'E'    -- 'E' بين 0 و 59 سيتم وضع الحرف math إذا كانت قيمة الحقل
+    	ELSE 'Refer to Professor'                -- 'Refer to Professor' أي قيمة أخرى, سيتم وضع الجملة math إذا كانت قيمة الحقل
+    END AS 'Math (Letter)'                       -- هنا قمنا بتغيير إسم العامود
+FROM
+	students;                    -- هنا قمنا بتحديد إسم الجدول الذي سيتم جلب البيانات منه
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 390px;">
+<table class="ltr left">
+<tr>
+<th>Id</th> <th>Name</th> <th>Math (Percent)</th> <th>Math (Letter)</th>
+</tr>
+<tr>
+<td>1</td> <td>Ahmad</td> <td>82</td> <td>B</td>
+</tr>
+<tr>
+<td>2</td> <td>Rami</td> <td>87</td> <td>B</td>
+</tr>
+<tr>
+<td>3</td> <td>Said</td> <td>73</td> <td>C</td>
+</tr>
+<tr>
+<td>4</td> <td>Noura</td> <td>92</td> <td>A</td>
+</tr>
+<tr>
+<td>5</td> <td>Amani</td> <td>78</td> <td>C</td>
+</tr>
+<tr>
+<td>6</td> <td>Mhamad</td> <td>65</td> <td>D</td>
+</tr>
+<tr>
+<td>7</td> <td>Ahmad</td> <td>45</td> <td>E</td>
+</tr>
+<tr>
+<td>8</td> <td>Mostafa</td> <td>95</td> <td>A</td>
+</tr>
+<tr>
+<td>9</td> <td>Jana</td> <td>68</td> <td>D</td>
+</tr>
+<tr>
+<td>10</td> <td>Houssam</td> <td>120</td> <td>Refer to Professor</td>
+</tr>
+</table>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

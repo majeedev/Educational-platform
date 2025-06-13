@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس سنتعرف على كيفية تعيين العامود كمفتاح رئيسي" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>SQL Primary key | تعيين العامود كمفتاح رئيسي في SQL</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../database-icon.png"/></li>
+<li class="title">كيف أبدأ بالتعلم</li>
+<li><a href="../sql-overview/index.html"><span class="en">SQL</span> - نظرة عامة</a></li>
+<li><a href="../sql-environment-setup/index.html"><span class="en">SQL</span> - تجهيز بيئة العمل</a></li>
+<li><a href="../sql-basic-syntax/index.html"><span class="en">SQL</span> - أسلوب كتابة الأوامر</a></li>
+<li><a href="../sql-comments/index.html"><span class="en">SQL</span> - التعليقات</a></li>
+<li><a href="../sql-write-first-query/index.html"><span class="en">SQL</span> - كتابة أول إستعلام</a></li>
+<li><a href="../sql-refresh-databases-panel/index.html"><span class="en">SQL</span> - تحديث قائمة قواعد البيانات</a></li>
+<li><a href="../sql-databases-structure-in-general/index.html"><span class="en">SQL</span> - مفاهيم و مصطلحات مهمة</a></li>
+<li class="title">أوامر و دوال SQL</li>
+<li><a href="../sql-create-database/index.html"><span class="en">SQL</span> - أمر إنشاء قاعدة بيانات</a></li>
+<li><a href="../sql-drop-database/index.html"><span class="en">SQL</span> - أمر حذف قاعدة بيانات</a></li>
+<li><a href="../sql-data-types/index.html"><span class="en">SQL</span> - أهم أنواع البيانات</a></li>
+<li><a href="../sql-create-table/index.html"><span class="en">SQL</span> - أمر إنشاء جدول</a></li>
+<li><a href="../sql-drop-table/index.html"><span class="en">SQL</span> - أمر حذف جدول</a></li>
+<li><a href="../sql-use/index.html"><span class="en">SQL</span> - أمر تحديد قاعدة البيانات</a></li>
+<li><a href="../sql-insert-into/index.html"><span class="en">SQL</span> - أمر إضافة سطر في الجدول</a></li>
+<li><a href="../sql-auto-increment/index.html"><span class="en">SQL</span> - الترقيم التلقائي للأسطر</a></li>
+<li><a href="../sql-select/index.html"><span class="en">SQL</span> - أمر جلب بيانات من الجدول</a></li>
+<li><a href="../sql-select-with-concat/index.html"><span class="en">SQL</span> - دمج الأعمدة عند جلبها</a></li>
+<li><a href="../sql-select-repeat-columns-name/index.html"><span class="en">SQL</span> - تكرار إسم الأعمدة في الإستعلام</a></li>
+<li><a href="../sql-select-with-where/index.html"><span class="en">SQL</span> - جلب البيانات ضمن شروط</a></li>
+<li><a href="../sql-select-with-order/index.html"><span class="en">SQL</span> - جلب البيانات مع ترتيبها</a></li>
+<li><a href="../sql-select-distinct/index.html"><span class="en">SQL</span> - جلب بيانات خالية من التكرار</a></li>
+<li><a href="../sql-union/index.html"><span class="en">SQL</span> - دمج الجداول في جدول واحد</a></li>
+<li><a href="../sql-delete/index.html"><span class="en">SQL</span> - أمر حذف بيانات من الجدول</a></li>
+<li><a href="../sql-update/index.html"><span class="en">SQL</span> - أمر تحديث بيانات الجدول</a></li>
+<li><a href="../sql-select-with-limit/index.html"><span class="en">SQL</span> - تحديد عدد الأسطر التي سترجع</a></li>
+<li><a href="../sql-null-values/index.html"><span class="en">SQL</span> - التعامل مع الحقول الفارغة</a></li>
+<li><a href="../sql-min/index.html"><span class="en">SQL</span> - جلب أصغر قيمة في العامود</a></li>
+<li><a href="../sql-max/index.html"><span class="en">SQL</span> - جلب أكبر قيمة في العامود</a></li>
+<li><a href="../sql-count/index.html"><span class="en">SQL</span> - حساب عدد أسطر الجدول</a></li>
+<li><a href="../sql-sum/index.html"><span class="en">SQL</span> - حساب ناتج جمع قيم العامود</a></li>
+<li><a href="../sql-avg/index.html"><span class="en">SQL</span> - حساب متوسط قيم العامود</a></li>
+<li><a href="../sql-select-with-group-by/index.html"><span class="en">SQL</span> - تجميع قيم الحقول المشتركة</a></li>
+<li><a href="../sql-select-with-having/index.html"><span class="en">SQL</span> - شروط على الحقول المجمعة</a></li>
+<li><a href="../sql-insert-into-select/index.html"><span class="en">SQL</span> - نسخ البيانات في جدول آخر</a></li>
+<li><a href="../sql-case/index.html"><span class="en">SQL</span> - وضع قيمة إفتراضية لكل حالة</a></li>
+<li><a href="../sql-unique/index.html"><span class="en">SQL</span> - تخزين قيم موحدة في العامود</a></li>
+<li class="title">العلاقات بين الجداول</li>
+<li><a href="../sql-how-to-relate-tables/index.html"><span class="en">SQL</span> - كيف يتم ربط الجداول</a></li>
+<li><a href="../sql-relationships-types/index.html"><span class="en">SQL</span> - أنواع العلاقات بين الجدوال</a></li>
+<li><a href="../sql-joins/index.html"><span class="en">SQL</span> - طرق ربط معلومات الجداول</a></li>
+<li><a href="../sql-alias-for-tables/index.html"><span class="en">SQL</span> - وضع أسماء مختصرة للجداول</a></li>
+<li><a href="../sql-self-join/index.html"><span class="en">SQL</span> - ربط المعلومات في نفس الجدول</a></li>
+<li class="title">معلومات متقدمة</li>
+<li><a href="../sql-alter/index.html"><span class="en">SQL</span> - تعديل بنية الجدول بعد إنشائه</a></li>
+<li><a href="../sql-default/index.html"><span class="en">SQL</span> - وضع قيم إفتراضية للحقول</a></li>
+<li><a href="index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح رئيسي</a></li>
+<li><a href="../sql-foreign-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح أجنبي</a></li>
+<li><a href="../sql-check/index.html"><span class="en">SQL</span> - وضع شروط لتخزين القيم</a></li>
+<li><a href="../sql-transactions/index.html"><span class="en">SQL</span> - تنفيذ كل الأوامر أو إلغاءها كلها</a></li>
+<li><a href="../sql-indexes/index.html"><span class="en">SQL</span> - الفهارس و أنواعها</a></li>
+<li><a href="../sql-like/index.html"><span class="en">SQL</span> - البحث في الأعمدة النصية</a></li>
+<li><a href="../sql-sub-queries/index.html"><span class="en">SQL</span> - كتابة إستعلامات متداخلة</a></li>
+<li><a href="../sql-connect-to-database/index.html"><span class="en">SQL</span> - الإتصال بقاعدة البيانات عن بعد</a></li>
+<li class="title">بناء قواعد بيانات لمشاريع</li>
+<li><a href="../sql-building-database-from-scratch/index.html"><span class="en">SQL</span> - تصميم قاعدة بيانات من الصفر</a></li>
+<li><a href="../sql-download-ready-made-database/index.html"><span class="en">SQL</span> - تحميل قواعد بيانات جاهزة</a></li>
+<!--
+<li><a href="../sql-backup-database"><span class="en">SQL</span> - إنشاء نسخة من قاعدة البيانات</a></li>
+<li><a href="../sql-stored-procedures"><span class="en">SQL</span> - تعريف دوال و استدعائها</a></li>
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">SQL</span>تعيين العامود كمفتاح رئيسي</h1>
+<article>
+<h2>مفهوم المفتاح الرئيسي <span class="inline">( <span class="word">Primary Key</span> )</span></h2>
+<p>المفتاح الرئيسي هو العامود الذي نضعه في الجدول بهدف جعلنا قادرين على الوصول إلى كل سطر فيه بسهولة سواء بهدف الحصول على قيمه, تعديلها أو لحذف السطر كما هو من الجدول. بالإضافة إلى ذلك, فأننا نستخدمه لربط قيم الجداول ببعضها البعض و هذه الأمور سبق و شرحناها بتفصيل ممل.</p>
+<p>كمثال بسيط, في الجدول التالي يمكننا الوصول لأي سطر من خلال رقم <code>id</code> السطر.</p>
+<div class="responsive-table" style="max-width: 250px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th>
+</tr>
+<tr>
+<td>1</td> <td>Ahmad</td> <td>Eid</td>
+</tr>
+<tr>
+<td>2</td> <td>Ramez</td> <td>Morad</td>
+</tr>
+<tr>
+<td>3</td> <td>Hassan</td> <td>Mortada</td>
+</tr>
+<tr>
+<td>4</td> <td>Saad</td> <td>Alkassem</td>
+</tr>
+<tr>
+<td>5</td> <td>Zaher</td> <td>Fahmi</td>
+</tr>
+</table>
+</div>
+<br/>
+<h3>معلومة تقنية</h3>
+<p>العامود الذي يتم تعيينه كمفتاح رئيسي لا يسمح بأن يتم تخزين قيم مكررة فيه.<br/>
+	بمعنى آخر, جميع قيم المفتاح الرئيسي تعتبر موحدة <span class="inline">( <code data-enlighter-language="sql">UNIQUE</code> )</span> حتى و إن لم نعرفها كذلك.</p>
+<br/>
+<h3>تعيين المفتاح الرئيسي</h3>
+<p>في أغلب الأوقات, تحتاج وضع عامود واحد في الجدول ليكون بمثابة المفتاح الرئيسي للوصول لكل سطر فيه و هذا الأمر تطرقنا له كثيراً في الدروس السابقة حيث كنا نضع عامود واحد إسمه <code>id</code> كمفتاح رئيسي في أي جدول ننشئه, و لكن في بعض الحالات قد تجد أنك بحاجة إلى تكوين مفتاح رئيسي في الجدول من عامودين أو أكثر و ليس من عامود واحد فقط.</p>
+</article>
+<article>
+<h2>تعيين العامود كمفتاح رئيسي عند إنشاء الجدول</h2>
+<p>إذا كنت تنوي تعيين عامود كمفتاح رئيسي في الجدول, يمكنك إضافة الخاصية <code data-enlighter-language="sql">PRIMARY KEY</code> إلى تعريف العامود فقط.<br/>
+	عندها سيصبح العامود لا يقبل أن تخزن فيه قيم موحدة و سيجبرك على إدخال قيم بنفسك له.</p>
+<br/>
+<h3>المثال الأول</h3>
+<p>في المثال التالي, عند إنشاء جدول جديد قمنا بإنشاء عامود نوعه <code data-enlighter-language="sql">INT</code> و تعيينه كمفتاح رئيسي في الجدول.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+CREATE TABLE users (
+    id         INT PRIMARY KEY,   -- users كمفتاح رئيسي للجدول id هنا قمنا بتعريف العامود
+    first_name VARCHAR(50),
+    last_name  VARCHAR(50)
+);
+		</pre>
+</div>
+<br/>
+<h3>المثال الثاني</h3>
+<p>في المثال التالي, عند إنشاء جدول جديد قمنا بإنشاء عامود نوعه <code data-enlighter-language="sql">VARCHAR</code> و تعيينه كمفتاح رئيسي في الجدول.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+CREATE TABLE users (
+    username   VARCHAR(50) PRIMARY KEY,   -- users كمفتاح رئيسي للجدول username هنا قمنا بتعريف العامود
+    first_name VARCHAR(50),
+    last_name  VARCHAR(50)
+);
+		</pre>
+</div>
+</article>
+<article>
+<h2>تعيين أكثر من عامود كمفتاح رئيسي عند إنشاء الجدول</h2>
+<p>لتعيين أكثر من عامود كمفتاح رئيسي في الجدول, يجب إضافة قيد <span class="inline">( <code data-enlighter-language="sql">CONSTRAINT</code> )</span> على الجدول نحدد فيه كل الأعمدة التي نريدها أن تكون بمثابة مفتاح رئيسي.<br/>
+	إنتبه لنقطة مهمة جداً, و هي أنه عند تعيين عامودين كمفتاح رئيسيي, فإن كل عامود منهم يعتبر عامود عادي جداً و لكنهما مع بعض يشكلان مفتاح واحد.</p>
+<br/>
+<h3>الشكل العام لإضافة قيد خاص بتعيين المفتاح الرئيسي</h3>
+<p>لإضافة <code data-enlighter-language="sql">CONSTRAINT</code> خاص بتحديد الأعمدة التي نريد تعيينها بمثابة <code data-enlighter-language="sql">PRIMARY KEY</code> واحد يجب كتابتة الإستعلام كالتالي.</p>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+CREATE TABLE table_name (
+    column1 datatype NOT NULL,
+    column2 datatype NOT NULL,
+	...,
+	CONSTRAINT PK_table_name PRIMARY KEY (column1, column2)
+);
+	</pre>
+<br/>
+<h3>مثال</h3>
+<p>في المثال التالي, عند إنشاء جدول جديد قمنا بإنشاء عامود نوعه <code data-enlighter-language="sql">INT</code> و عامود نوعه <code data-enlighter-language="sql">VARCHAR</code> و تعيينهما كمفتاح رئيسي في الجدول.</p>
+<p>لتعيين هذين العامودين كمفتاح واحد فعلنا التالي:</p>
+<ul class="explain">
+<li><p>العامود <code>id</code> قمنا بتعريفه <code>INT NOT NULL</code> لأننا نريد إدخال قيمة رقمية و أن لا يسمح بترك الحقل فارغاً.</p></li>
+<li><p>العامود <code>username</code> قمنا بتعريفه <code>VARCHAR(50) NOT NULL</code> لأننا نريد إدخال قيم نصية لا يتعدى طولها 50 حرف و أن لا يسمح بترك الحقل فارغاً.</p></li>
+<li><p>قمنا بإضافة <code data-enlighter-language="sql">CONSTRAINT</code> نوعه <code data-enlighter-language="sql">PRIMARY KEY</code> بإسم <code>pk_users</code> ليكون مشابهاً لإسم الجدول فقط.</p></li>
+<li><p>ذكرنا فيه إسم العامودين اللذين نريد وضعهما كمفتاح رئيسي في الجدول بين أقواس القيد <span class="inline"><code data-enlighter-language="sql">PRIMARY KEY</code>.</span></p></li>
+</ul>
+<br/>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+CREATE TABLE users (
+	id         INT NOT NULL,
+    username   VARCHAR(50) NOT NULL,
+    first_name VARCHAR(50),
+    last_name  VARCHAR(50),
+	CONSTRAINT pk_users PRIMARY KEY (id, username)
+);
+		</pre>
+</div>
+<br/>
+<p>الآن, لاحظ أن العامود <code>username</code> يمكنه أن يحتوي على قيم مكررة و العامود <code>id</code> كذلك أيضاً.<br/>
+	السببب الذي يجعل ذلك لا يشكل مشكلة هو أن كل عامود منهما لا يشكل مفتاح رئيسي لوحده, بل قيمتهما مع بعضهما هي ما تشكل المفتاح الرئيسي في كل سطر.</p>
+<div class="responsive-table" style="max-width: 350px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>username</th> <th>first_name</th> <th>last_name</th>
+</tr>
+<tr>
+<td>1</td> <td style="background:lightpink;">ahmad</td> <td>Ahmad</td> <td>Eid</td>
+</tr>
+<tr>
+<td style="background:lightblue;">2</td> <td style="background:lightpink;">ahmad</td> <td>Ahmad</td> <td>Rashad</td>
+</tr>
+<tr>
+<td style="background:lightblue;">2</td> <td>hassan</td> <td>Hassan</td> <td>Mortada</td>
+</tr>
+<tr>
+<td>3</td> <td>saad</td> <td>Saad</td> <td>Alkassem</td>
+</tr>
+</table>
+</div>
+<br/>
+<ul class="explain">
+<li><p><code>1ahmad</code> هو مفتاح السطر الأول.</p></li>
+<li><p><code>2ahmad</code> هو مفتاح السطر الثاني.</p></li>
+<li><p><code>2hassan</code> هو مفتاح السطر الثالث.</p></li>
+<li><p><code>3saad</code> هو مفتاح السطر الرابع.</p></li>
+</ul>
+<br/>
+<p>إذاً في حال كان المفتاح الرئيسي يتألف من أكثر من عامود, يمكننا جعل الأعمدة تقبل أن يكون فيها قيم مكررة و لكن لا يمكننا تكرار نفس قيم الأعمدة الموجودة على نفس السطر في سطر آخر.</p>
+<p>في الجدول السابق ممنوع تكرار نفس <span class="inline">الـ <span class="word">id</span></span> و <span class="inline">الـ <span class="word">username</span></span> في أكثر من سطر. أي ممنوع إدخال قيم مكررة كالتالي.</p>
+<div class="responsive-table" style="max-width: 350px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>username</th> <th>first_name</th> <th>last_name</th>
+</tr>
+<tr>
+<td style="background:lightpink;">1</td> <td style="background:lightpink;">ahmad</td> <td>Ahmad</td> <td>Eid</td>
+</tr>
+<tr>
+<td style="background:lightpink;">1</td> <td style="background:lightpink;">ahmad</td> <td>Ahmad</td> <td>Rashad</td>
+</tr>
+</table>
+</div>
+</article>
+<article>
+<h2>تعيين المفتاح الرئيسي بعد إنشاء الجدول</h2>
+<p>إذا كنت تنوي تعيين المفتاح الرئيسي بعد إنشاء الجدول, يجب أن تتأكد أولاً أن العامود أو الأعمدة التي تنوي وضعها كمفتاح رئيسي لا تحتوي على حقول فارغة.</p>
+<br/>
+<p>في حال كنت تنوي تعيين عامود واحد كمفتاح رئيسي, يمكنك استخدام الأمر <code data-enlighter-language="sql">ALTER</code> لتعيينه كالتالي.</p>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+ALTER TABLE table_name
+ADD PRIMARY KEY (column_name);
+	</pre>
+<br/>
+<p>في حال كنت تنوي تعيين أكثر من عامود واحد كمفتاح رئيسي, يجب إضافة <code data-enlighter-language="sql">CONSTRAINT</code> لتعيينه كالتالي.</p>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+ALTER TABLE table_name
+ADD CONSTRAINT pk_constraint_name PRIMARY KEY (column1, column2, ..); 
+	</pre>
+<br/><br/>
+<h3>المثال الأول</h3>
+<p>الإستعلام التالي يقوم بتعيين العامود <code>id</code> الموجود في الجدول <code>users</code> كمفتاح رئيسي.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+ALTER TABLE users
+ADD PRIMARY KEY (id);
+		</pre>
+</div>
+<br/>
+<h3>المثال الثاني</h3>
+<p>الإستعلام التالي يقوم بتعيين العامودين <code>id</code> و <code>username</code> الموجودين في الجدول <code>users</code> كمفتاح رئيسي.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+ALTER TABLE users
+ADD CONSTRAINT pk_users PRIMARY KEY (id, username); 
+		</pre>
+</div>
+</article>
+<article>
+<h2>حذف المفتاح الرئيسي</h2>
+<p>في حال أردت إلغاء المفتاح الرئيسي الذي قمت بتعيينه سابقاً. يمكنك تعديل العامود بواسطة الأمر <code data-enlighter-language="sql">ALTER
+	</code> مع الإشارة إلى أن طريقة فعل ذلك تختلف من قاعدة بيانات لأخرى.</p>
+<br/>
+<h3>في قواعد بيانات <span class="word">MySQL</span></h3>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+ALTER TABLE table_name
+DROP PRIMARY KEY;
+	</pre>
+<br/>
+<p>الإستعلام التالي يقوم بإلغاء تعيين المفتاح الرئيسي الموضوع في الجدول <span class="inline"><code>users</code>.</span><br/>
+	هنا لا داعي لذكر إسم المفتاح الرئيسي الذي تنوي إلغاؤه.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="sql">
+ALTER TABLE users
+DROP PRIMARY KEY;
+		</pre>
+</div>
+<br/><br/>
+<h3>في قواعد بيانات <span class="word">SQL Server</span> / <span class="word">Oracle</span> / <span class="word">Access</span></h3>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+ALTER TABLE table_name
+DROP CONSTRAINT pk_constraint_name;
+	</pre>
+<br/>
+<p>الإستعلام التالي يقوم بحذف القيد <code>pk_users</code> الذي تم وضعه سابقاً لتعيين المفتاح الرئيسي في الجدول <span class="inline"><code>users</code>.</span><br/>
+	هنا يجب ذكر إسم القيد الذي يمثل المفتاح الرئيسي الذي تنوي إلغاؤه.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="sql">
+ALTER TABLE users
+DROP CONSTRAINT pk_users;
+		</pre>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

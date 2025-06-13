@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>أمر الطباعة cout في C++</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../cplusplus-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../cplusplus-overview/index.html"><span class="en">++C</span> - نظرة عامة</a></li>
+<li><a href="../cplusplus-environment-setup/index.html"><span class="en">++C</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../cplusplus-basic-syntax/index.html"><span class="en">++C</span> - أسلوب الكتابة</a></li>
+<li><a href="index.html"><span class="en">++C</span> - أمر الطباعة   &lt;&lt; cout</a></li>
+<li><a href="../cplusplus-data-types/index.html"><span class="en">++C</span> - أنواع البيانات</a></li>
+<li><a href="../cplusplus-variables/index.html"><span class="en">++C</span> - المتغيرات</a></li>
+<li><a href="../cplusplus-operators/index.html"><span class="en">++C</span> - العوامل</a></li>
+<li><a href="../cplusplus-conditions/index.html"><span class="en">++C</span> - الشروط</a></li>
+<li><a href="../cplusplus-loops/index.html"><span class="en">++C</span> - الحلقات</a></li>
+<li><a href="../cplusplus-numbers/index.html"><span class="en">++C</span> - الأعداد</a></li>
+<li><a href="../cplusplus-strings/index.html"><span class="en">++C</span> - النصوص</a></li>
+<li><a href="../cplusplus-arrays/index.html"><span class="en">++C</span> - المصفوفات</a></li>
+<li><a href="../cplusplus-user-input/index.html"><span class="en">++C</span> - إدخال البيانات</a></li>
+<li><a href="../cplusplus-functions/index.html"><span class="en">++C</span> - الدوال</a></li>
+<li><a href="../cplusplus-references/index.html"><span class="en">++C</span> - المراجع</a></li>
+<li><a href="../cplusplus-pointers/index.html"><span class="en">++C</span> - المؤشرات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../cplusplus-oop/index.html"><span class="en">++C</span> - مفهوم البرمجة كائنية التوجه</a></li>
+<li><a href="../cplusplus-struct/index.html"><span class="en">++C</span> - النوع <span class="en">struct</span></a></li>
+<li><a href="../cplusplus-class/index.html"><span class="en">++C</span> - النوع <span class="en">class</span></a></li>
+<li><a href="../cplusplus-encapsulation/index.html"><span class="en">++Encapsulation - C</span></a></li>
+<li><a href="../cplusplus-inheritance/index.html"><span class="en">++Inheritance - C</span></a></li>
+<li><a href="../cplusplus-overriding/index.html"><span class="en">++Overriding - C</span></a></li>
+<li><a href="../cplusplus-overloading/index.html"><span class="en">++Overloading - C</span></a></li>
+<li><a href="../cplusplus-polymorphism/index.html"><span class="en">++Polymorphism - C</span></a></li>
+<li><a href="../cplusplus-constants/index.html"><span class="en">++C</span> - الثوابت</a></li>
+<li><a href="../cplusplus-enum/index.html"><span class="en">++C</span> - النوع <span class="en">enum</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../cplusplus-exceptions/index.html"><span class="en">++C</span> - الإستثناءات</a></li>
+<!--
+
+<li><a href="../cplusplus-lambda-expressions"><span class="en">Lambda Expressions - ++C</span></a></li>
+<li><a href="../cplusplus-files-io"><span class="en">++C</span> - التعامل مع الملفات</a></li>
+<li><a href="../cplusplus-data-structure"><span class="en">Data Structure - ++C</span></a></li>
+<li><a href="../cplusplus-collection"><span class="en">Collection - ++C</span></a></li>
+<li><a href="../cplusplus-generics"><span class="en">Generics - ++C</span></a></li>
+<li><a href="../cplusplus-networking"><span class="en">++C</span> - الشبكات</a></li>
+<li><a href="../cplusplus-multithreading"><span class="en">++C</span> - تعدد المهام</a></li>
+<li><a href="../cplusplus-jdbc"><span class="en">++C</span> - قواعد البيانات</a></li>
+<li><a href="../cplusplus-serialization"><span class="en">++C</span> - المزامنة</a></li>
+
+
+<li><a href="../cplusplus-date-and-time"><span class="en">++C</span> - التاريخ و الوقت</a></li>
+<li><a href="../cplusplus-regular-expressions"><span class="en">++C</span> - التعابير النمطية</a></li>
+
+<li><a href="../cplusplus-next-step"><span class="en">++C</span> - ما هي خطوتي التالية ؟</a></li>
+-->
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">C++</span>أمر الطباعة <code>cout &gt;&gt;</code></h1>
+<article>
+<h2>أمر الطباعة <code>cout</code></h2>
+<p>بشكل عام, نستخدم الأمر <code data-enlighter-language="cpp">cout</code> لطباعة أي شيء نريد في الكونسول.<br/>
+	عند إستخدام الأمر <code data-enlighter-language="cpp">cout</code> يجب أن تضع العامل <code data-enlighter-language="cpp">&lt;&lt;</code> قبل أي شيء تريد تمريره له حتى يتم طباعته.</p>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+int main()
+{
+    std::cout &lt;&lt; "Harmash.com";
+    return 0;
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Harmash.com
+		</pre>
+</div>
+<br/>
+<h3>شرح الكود</h3>
+<ul class="explain">
+<li><p>الأمر <code data-enlighter-language="cpp">#include &lt;iostream&gt;</code> الموجود في السطر الأول يقوم بتضمين الحزمة <code>iostream</code> التي تحتوي على الأوامر الأساسية التي نحتاجها في التطبيقات التي تعتبر <span class="word">Console Application</span> و التي سنستخدمها في أغلب البرامج مثل أمر الطباعة <code data-enlighter-language="cpp">cout</code> و غيره من الأوامر و الدوال الجاهزة التي ستمر معك لاحقاً في الدورة.</p></li>
+<li><p>سبب وضع <code data-enlighter-language="cpp">std::</code> قبل <code data-enlighter-language="cpp">cout</code> هو أن الأمر <code data-enlighter-language="cpp">cout</code> موجود فيه.</p></li>
+<li><p>الدالة <code>main()</code> التي قمنا بتعريفها ابتداءاً من السطر الثالث يجب أن يكون نوعها <code data-enlighter-language="cpp">int</code> لأنها تمثل نقطة البداية في البرنامج.</p></li>
+<li><p>وضع <code data-enlighter-language="cpp">return 0;</code> في السطر السادس و كآخر أمر في الدالة <code>main()</code> هو أمر متعارف عليه, و فكرته إرسال الرقم <span class="number">0</span> لنظام التشغيل عند انتهاء أو إغلاق البرنامج بشكل طبيعي. هكذا سيتمكن نظام التشغيل من التفريق بين الإنهاء الطبيعي للبرنامج والإنهاء المفاجئ <span class="inline">( <span class="word">Crash</span> )</span> الذي يحدث نتيجة خطأ ما.</p></li>
+</ul>
+<br/><br/>
+<h3>مبادئ الطباعة الأساسية</h3>
+<p>عليك مراعاة المبادئ التالية عند استخدام الأمر <span class="inline"><code data-enlighter-language="cpp">cout</code>.</span></p>
+<ul class="explain">
+<li><p>لعرض رقم, ضعه كما هو.</p></li>
+<li><p>لعرض قيمة متغير, ضعه كما هو.</p></li>
+<li><p>لعرض حرف يجب وضعه بين <span class="inline"><code data-enlighter-language="cpp">' '</code>.</span></p></li>
+<li><p>لعرض  كلمة أو نص, يجب وضعه بين <span class="inline"><code data-enlighter-language="cpp">" "</code>.</span></p></li>
+</ul>
+</article>
+<article>
+<h2>طباعة عدة أشياء دفعة واحدة بواسطة الأمر <code data-enlighter-language="cpp">cout</code> في <span class="word">C++</span></h2>
+<p>لدمج عدة أشياء مختلفة و عرضها باستخدام الأمر <code data-enlighter-language="cpp">cout</code> نضع الرمز <code data-enlighter-language="cpp">&lt;&lt;</code> بين كل شيئين نريد طباعتهما.</p>
+<br/>
+<p>في المثال التالي,  قمنا بإنشاء برنامج يحتوي على متغيرين <code>name</code> و <span class="inline"><code>year</code>.</span><br/>
+	بعدها قمنا بعرضهما كجملة واحدة.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+int main()
+{
+    char *name = "Ali";
+    int year   = 1996;
+
+    std::cout &lt;&lt; "Hello my name is " &lt;&lt; name &lt;&lt; ", I born in " &lt;&lt; year;
+    return 0;
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Hello my name is Ali, I born in 1996
+		</pre>
+</div>
+</article>
+<article>
+<h2>عرض المحتوى على سطر جديد <span class="word">C++</span></h2>
+<p>عند عرض المحتوى بواسطة الأمر <code data-enlighter-language="cpp">cout</code> يمكنك تحديد نهاية السطر من خلال وضع العامل <code data-enlighter-language="cpp">endl</code> و عندها سيظهر أي شيء تطبعه بعده على سطر جديد.<br/>
+<b>معلومة:</b> <code data-enlighter-language="cpp">endl</code> إختصار لجملة <span class="inline"><span class="word">End Line</span>.</span></p>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+int main()
+{
+    std::cout &lt;&lt; "Harmash.com" &lt;&lt; std::endl &lt;&lt; "C++ course";
+    return 0;
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Harmash.com
+C++ course
+		</pre>
+</div>
+<br/>
+<p>سبب وضع <code data-enlighter-language="cpp">std::</code> قبل العامل <code data-enlighter-language="cpp">endl</code> هو أن العامل <code data-enlighter-language="cpp">endl</code> موجود فيه.</p>
+</article>
+<article>
+<h2>أهمية الكلمة <code data-enlighter-language="cpp">using</code> في <span class="word">C++</span></h2>
+<p>في البداية, سنشرح الكلملة <code data-enlighter-language="cpp">using</code> بتفصيل ممل في درس لاحق نظراً لأهميتها في المشاريع.<br/>
+	الآن, إذا أردت أن تكتب الأمرين <code data-enlighter-language="cpp">cout</code> و <code data-enlighter-language="cpp">endl</code> بشكل مباشر بدون الحاجة لأن تكتب قبلهما <span class="inline"><code data-enlighter-language="cpp">std::</code>,</span> قم بتضيمن النطاق <code data-enlighter-language="cpp">std</code> مرة واحدة في الملف و عندها تصبح قادر على استخدام أي شيء موجود فيه بشكل مباشر.</p>
+<p>لتضمين النطاق <code data-enlighter-language="cpp">std</code> في الملف <code>main.cpp</code> نكتب <code data-enlighter-language="cpp">using namespace std;</code> فوق الدالة <span class="inline"><code data-enlighter-language="cpp">main()</code>.</span></p>
+<br/>
+<p>الآن, سنعيد نفس المثال السابق مع تضمين النطاق <code data-enlighter-language="cpp">std</code> بشكل مباشر.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+using namespace std;   // std هنا قمنا بتضيمن النطاق
+
+int main()
+{
+    cout &lt;&lt; "Harmash.com" &lt;&lt; endl &lt;&lt; "C++ course";
+    return 0;
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Harmash.com
+C++ course
+		</pre>
+</div>
+</article>
+<article>
+<h2>النزول على سطر جديد بواسطة الرمز <code data-enlighter-language="cpp">\n</code> في <span class="word">C++</span></h2>
+<p>إذا أردت النزول على سطر جديد بدون الحاجة لكتابة <code data-enlighter-language="cpp">&lt;&lt; endl</code> فيمكنك تمرير <code data-enlighter-language="cpp">\n</code> كنص.<br/>
+<span class="note">ملاحظة:</span> أغلب المبرمجين يفضلون تمرير <code data-enlighter-language="cpp">\n</code> بدل كتابة <code data-enlighter-language="cpp">&lt;&lt; endl</code> لأنها مختصرة أكثر.</p>
+<p><b>معلومة:</b> <code data-enlighter-language="cpp">\n</code> إختصار لجملة <span class="inline"><span class="word">New Line</span>.</span></p>
+<br/>
+<p>في المثال التالي قمنا بتمرير <code data-enlighter-language="cpp">\n</code> كنص للأمر <code data-enlighter-language="cpp">cout</code> من أجل النزول على سطر جديد.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+	cout &lt;&lt; "Harmash.com\nC++ course";
+	return 0;
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Harmash.com
+C++ course
+		</pre>
+</div>
+<br/><br/>
+<p>هنا قمنا بإعادة المثال السابق تماماً مع كتابة أمرين <code data-enlighter-language="cpp">cout</code> هذه المرة.<br/>
+<span class="note">ملاحظة:</span> هذا الأسلوب أسهل من ناحية القراءة و التعديل و لهذا ننصح باعتماده بدلاً من الأسلوب السابق.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+	cout &lt;&lt; "Harmash.com\n";
+	cout &lt;&lt; "C++ course";
+	return 0;
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Harmash.com
+C++ course
+		</pre>
+</div>
+</article>
+<article>
+<h2>وضع عدة مسافات فارغة بواسطة الرمز <code data-enlighter-language="cpp">\t</code> في <span class="word">C++</span></h2>
+<p>إذا أردت وضع عدة مسافات فارغة دفعة واحدة و بشكل مرتب فالأفضل أن تستخدم الرمز <code data-enlighter-language="cpp">\t</code> بدل وضع المسافات بنفسك.<br/>
+	من الأشياء التي قد تجعلك تستخدم <code data-enlighter-language="cpp">\t</code> هي أنه عند طباعة عدة أسطر تجده يحاول عرضهم لك بشكل متناسق لإظهار المحتوى بشكل أسهل للقراءة.</p>
+<p><b>معلومة:</b> <code data-enlighter-language="cpp">\t</code> إختصار لجملة <span class="inline"><span class="word">Tab Space</span>.</span></p>
+<br/>
+<p>في المثال التالي قمنا بوضع الرمز <code data-enlighter-language="cpp">\t</code> بين الكلمات من أجل وضع مسافة تلقائية بينهم بشكل مرتب.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    cout &lt;&lt; "Name:\tAli Rabeei\n";
+    cout &lt;&lt; "Job:\tProgrammer";
+    return 0;
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Name:   Ali Rabeei
+Job:    Programmer
+		</pre>
+</div>
+</article>
+<article>
+<h2>إصدار صوت تنبيه بواسطة الرمز <code data-enlighter-language="cpp">\a</code> في <span class="word">C++</span></h2>
+<p>إذا أردت إصدار صوت تنبيه لجعل المستخدم ينتبه للكونسول, يمكنك ذلك بكل سهولة من خلال تمرير الرمز <code data-enlighter-language="cpp">\a</code> كنص للأمر <span class="inline"><code data-enlighter-language="cpp">cout</code>.</span></p>
+<p><b>معلومة:</b> <code data-enlighter-language="cpp">\a</code> إختصار لكلمة <span class="inline"><span class="word">Alert</span>.</span></p>
+<br/>
+<p>في المثال التالي قمنا باستخدام الرمز <code data-enlighter-language="cpp">\a</code> لتشغيل صوت تنبيه في جهاز المستخدم.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    cout &lt;&lt; "Yes, you hear the alert :)\a";
+    return 0;
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>لا تنسى رفع صوت الحاسوب حتى تسمع صوت التنبيه عند التشغيل و سيظهر لك النص التالي أيضاً.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Yes, you hear the alert :)
+		</pre>
+</div>
+</article>
+<article>
+<h2>المسافات الفارغة و ترتيب الكود في <span class="word">C++</span></h2>
+<p>لغة <span class="word">C++</span> لا تتأثر بالمساحات البيضاء <span class="inline">( <span class="word">White Spaces</span> )</span> مثل المسافات والأسطر الفارغة حتى انه يمكن كتابة بعض البرامج بالكامل في سطر واحد و لكن لا ننصح ابداً بذلك و يفضل ترك مسافات و أسطر فارغة حتى تكون قادر على مراجعة و استيعاب الكود بسهولة تامة عند الرجوع إليه.</p>
+<br/>
+<p>في المثال التالي قمنا بكتابة نفس المثال السابق على سطر واحد.<br/>
+<span class="note">تنبيه:</span> رغم أن الأسلوب التالي لا يوجد فيه أي مشكلة برمجياً, إلاّ أننا ننصحك بعدم إعتماد هذا الأسلوب إطلاقاً عند كتابة الكود.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+using namespace std; int main() {cout &lt;&lt; "Harmash.com"&lt;&lt;endl&lt;&lt;"C++ course";return 0;}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Harmash.com
+C++ course
+		</pre>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

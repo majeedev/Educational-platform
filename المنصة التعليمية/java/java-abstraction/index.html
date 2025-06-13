@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس شرحنا مفهوم الـ abstraction في جافا بتفصيل شامل, و وضعنا أمثلة شاملة لتوضيح فائدة الـ abstraction" name="description"/>
+<meta content="abstract in java,java abstract keyword,abstraction in java,abstraction conditions in java,concrete class in java,abstract class in java,abstract method in java,abstract function in java,abstract class example in java,abstract method example in java,abstract function in java,مفهوم absraction في جافا,معنى كلمة absract في جافا,طريقة تعريف abstract class في جافا,فائدة absract في جافا,أمثلة حول abstract في جافا,أمثلة حول abstract class في جافا,أمثلة حول method class في جافا,أمثلة حول abstract function في جافا" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>التجريد في جافا | Java Abstraction</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>التجريد في جافا</h1>
+<article>
+<h2>مفهوم الـ <span class="word">Abstraction</span></h2>
+<p><b>تجريد:</b> تعني <span class="word">Abstraction</span> في اللغة الإنجليزية, و هو أسلوب مهم جداً يستخدم لتسهيل كتابة الأوامر على المبرمجين, فهو يجعلك قادراً على تنفيذ ما تريد دون الحاجة إلى معرفة كافة التفاصيل التي تم فيها تنفيذ ذلك. إذاً الـ <span class="word">Abstraction</span> يجعلك تتعامل مع الأشياء بسطحية بدل أن تغوص في معرفة تفاصيل الكودات المعقدة.</p>
+<p>فمثلاً إذا كنت تنوي بناء برنامج يتيح لمستخدميه إرسال إقتراحات حول التطبيق من خلال البريد الإلكتروني, في هذه الحالة لن يكون عليك القلق بتاتاً حول طريقة تعامل أوامر جافا مع البروتوكولات التي تعمل عندما يتم إرسال رسائل إلكترونية من خلال هذا التطبيق, لأنك لست مسؤولاً عنها, فعلياً هذه وظيفة شركة <span class="word">Sun</span> التي تقوم بتطوير لغة جافا. و هم يخبرونك أنه لإرسال بريد إلكتروني إستخدم هذه الأوامر البسيطة فقط.</p>
+<p>إذاً الـ <span class="word">Abstraction</span> هو أسلوب يستخدم لإخفاء تفاصيل تنفيذ البرنامج. لتطبيق مفهوم الـ <span class="word">Abstraction</span> نستخدم الكلمة <code data-enlighter-language="java">abstract</code> ضمن شروط محددة.</p>
+<br/>
+<h3>مصطلحات تقنية</h3>
+<p>إذا أردت تعريف الشيء كـ <code data-enlighter-language="java">abstract</code>, أكتب فقط الكلمة <code data-enlighter-language="java">abstract</code> قبله.</p>
+<ul class="explain">
+<li><p>الكلاس المعرف كـ <code data-enlighter-language="java">abstract</code> يسمى <span class="word">Abstract Class</span>.</p></li>
+<li><p>الكلاس العادي الغير معرف كـ <code data-enlighter-language="java">abstract</code> يسمى <span class="word">Concrete Class</span>.</p></li>
+<li><p>الدالة المعرفة كـ <code data-enlighter-language="java">abstract</code> تسمى <span class="word">Abstract Method</span> أو <span class="word">Abstract Function</span>.</p></li>
+</ul>
+</article>
+<article>
+<h2><span class="word">Abstract Class</span></h2>
+<p>إذا وضعت الكلمة <code data-enlighter-language="java">abstract</code> قبل إسم الكلاس, ستتغير قليلاً طريقة التعامل معه لأنه لم يعد كلاس عادي. و عندها سيراه المترجم كـ <span class="word">Abstract Class</span>.</p>
+<br/>
+<h3>نقاط مهمة حول الـ <span class="word">Abstract Class</span></h3>
+<ul class="explain">
+<li><p>الكلاس العادي لا يمكنه أن يحتوي على دوال نوعها <code data-enlighter-language="java">abstract</code>.</p></li>
+<li><p>الـ <span class="word">Abstract Class</span> يمكنه أن يحتوي على دوال عادية, و يمكنه أن يحتوي على دوال نوعها <code data-enlighter-language="java">abstract</code>.</p></li>
+<li><p>إذا قمت بتعريف الكلاس كـ <code data-enlighter-language="java">abstract</code>, فهذا يعني أن هذا الكلاس لا يمكن إنشاء كائنات منه.</p></li>
+<li><p>بما أنه لا يمكن إنشاء كائنات من <span class="word">Abstract Class</span>, فهذا يعني أنه للإستفادة من هذا الكلاس, يجب وراثته.</p></li>
+<li><p>الكلاس الذي يرث من كلاس نوعه <code data-enlighter-language="java">abstract</code>, يجب أن يفعل <span class="word">Override</span> لجميع الدوال المعرفة كـ <code data-enlighter-language="java">abstract</code>.</p></li>
+</ul>
+<br/><br/>
+<h3>طريقة تعريف كلاس نوعه <code data-enlighter-language="java">abstract</code></h3>
+<p>نكتب فقط الكلمة <code data-enlighter-language="java">abstract</code> قبل الكلمة <code data-enlighter-language="java">class</code>.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+abstract class Example {
+
+} 
+		</pre>
+</div>
+</article>
+<article>
+<h2><span class="word">Abstract Method</span></h2>
+<p>إذا كنت تريد بناء دالة و جعل الكلاس الذي يرثها هو المسؤول عن كتابتة محتواها, قم بتعريفها كـ <code data-enlighter-language="java">abstract</code>.</p>
+<br/>
+<h3>نقاط مهمة حول الـ <span class="word">Abstract Method</span></h3>
+<ul class="explain">
+<li><p>إذا وضعت الكلمة <code data-enlighter-language="java">abstract</code> قبل إسم الدالة, فهذا يعني أنها دالة من النوع <code data-enlighter-language="java">abstract</code>.</p></li>
+<li><p>الدالة التي نوعها <code data-enlighter-language="java">abstract</code> هي دالة لها إسم و نوع محدد, لكنها لا تحتوي على <span class="word">body</span> (جسم), أي لا تملك أقواس بداية و نهاية <code data-enlighter-language="java">{ }</code>.</p></li>
+<li><p>الدالة العادية تحتوي على أقواس البداية و النهاية <code data-enlighter-language="java">{ }</code>.</p></li>
+<li><p>الـ <span class="word">Abstract Method</span> يجب وضع فاصلة منقوطة <code data-enlighter-language="java">;</code> في آخرها بدل أقواس البداية و النهاية.</p></li>
+<li><p>الكلاس الذي يرث من كلاس نوعه <code data-enlighter-language="java">abstract</code>, يجب أن يفعل <span class="word">Override</span> لكل دوالة نوعها <code data-enlighter-language="java">abstract</code>, أي يجب أن يكتب الـ <span class="word">body</span> لهذه الدوال.</p></li>
+</ul>
+<br/><br/>
+<h3>طريقة تعريف دوال نوعها <code data-enlighter-language="java">abstract</code></h3>
+<p>نكتب فقط الكلمة <code data-enlighter-language="java">abstract</code> بعد <span class="word">Modifier</span> الدالة.</p>
+<div class="example-box">
+<h4>أمثلة</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public abstract void print();
+
+public abstract int getId();
+
+public abstract void setId(int id); 
+		</pre>
+</div>
+<br/><br/>
+<p><span class="note">إنتبه:</span> عندما تفعل <span class="word">Override</span> لدالة نوعها <code data-enlighter-language="java">abstract</code>, يجب أن لا تعرفها كـ <code data-enlighter-language="java">abstract</code> من جديد.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<p><span class="point">•</span>لنفترض أننا قمنا بتعريف دالة إسمها <code data-enlighter-language="java">displayMessage()</code> كـ <code data-enlighter-language="java">abstract</code>.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public abstract void displayMessage(); 
+		</pre>
+<br/>
+<p><span class="point">•</span>لا يجب أن نكتب <code data-enlighter-language="java">abstract</code> عندما تفعل لها <span class="word">Override</span>.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+@Override
+public abstract void displayMessage() {       // abstract methods cannot have a body &lt;-- [ abstract سيظهر لك هذا التنبيه بسبب الكلمة ]
+
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>لتصحيح هذا الخطأ, نمسح فقط الكلمة <code data-enlighter-language="java">abstract</code>.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+@Override
+public void displayMessage() {               // نلاحظ أن التنبيه إختفى
+
+} 
+		</pre>
+</div>
+</article>
+<article>
+<h2>أمثلة شاملة</h2>
+<p>وضعنا هنا ثلاثة أمثلة بسيطة و مترابطة تعلمك الأساسيات.</p>
+<p><a class="open-page" href="abstraction-examples.html" target="_blank">شاهد الأمثلة »</a></p>
+<br/>
+<p>وضعنا هنا مثال بسيط حول <span class="word">Abstract Class</span> يرث من <span class="word">Abstract Class</span>.</p>
+<p><a class="open-page" href="abstract-class-inherit-from-another-abstract-class-example.html" target="_blank">شاهد المثال »</a></p>
+<br/>
+<p>وضعنا هنا مثال مهم يعلمك متى تحتاج إلى إنشاء <span class="word">Abstract Class</span>.</p>
+<p><a class="open-page" href="abstraction-important-example.html" target="_blank">شاهد المثال »</a></p>
+<br/>
+<p>سترى فائدة الـ <span class="word">Abstraction</span> أيضاً في دروس متقدمة عندما تستخدم كلاسات جاهزة تتيح لك التعامل مع الشبكات <span class="inline">(<span class="word">Networks</span>)</span>, الواجهات <span class="inline">(<span class="word">GUI</span>)</span> و قواعد البيانات <span class="inline">(<span class="word">DataBases</span>)</span> بكل سهولة. كما أنك ستراها عندما تعمل على بناء مشاريع كبيرة, تجبرك على إستخدام هذا الأسلوب لتسهيل العمل في المشروع.</p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>تمارين خوارزميات و هياكل البيانات - التعقيد Complexity</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../algorithms-and-data-structure.png"/></li>
+<li class="title">تعرف على الدورة</li>
+<li><a href="../overview/index.html">نظرة عامة</a></li>
+<li><a href="../how-to-start/index.html">الطريقة الصحيحة للتعلم</a></li>
+<li class="title">رسم أشكال هندسية</li>
+<li><a href="../drawing-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../drawing-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../drawing-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../drawing-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../drawing-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../drawing-test-6/index.html">التحدي السادس</a></li>
+<li><a href="../drawing-test-7/index.html">التحدي السابع</a></li>
+<li><a href="../drawing-test-8/index.html">التحدي الثامن</a></li>
+<li><a href="../drawing-test-9/index.html">التحدي التاسع</a></li>
+<li><a href="../drawing-test-10/index.html">التحدي العاشر</a></li>
+<li class="title">التعامل مع الأرقام و النصوص</li>
+<li><a href="../numbers-and-strings-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../numbers-and-strings-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../numbers-and-strings-test-3/index.html">التحدي الثالث</a></li>
+<li class="title">إجراء عمليات حسابية</li>
+<li><a href="../math-operations-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../math-operations-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../math-operations-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../math-operations-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../math-operations-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../math-operations-test-6/index.html">التحدي السادس</a></li>
+<li><a href="../math-operations-test-7/index.html">التحدي السابع</a></li>
+<li><a href="../math-operations-test-8/index.html">التحدي الثامن</a></li>
+<li><a href="../math-operations-test-9/index.html">التحدي التاسع</a></li>
+<li class="title">التعامل مع المصفوفات</li>
+<li><a href="../arrays-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../arrays-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../arrays-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../arrays-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../arrays-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../arrays-test-6/index.html">التحدي السادس</a></li>
+<li class="title">تراكيب البيانات</li>
+<li><a href="../data-structure-about-section/index.html">حول هذا القسم</a></li>
+<li><a href="../data-structure-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../data-structure-test-2/index.html">التحدي الثاني</a></li>
+<li class="title">حساب وقت الخوارزميات</li>
+<li><a href="index.html">مفهوم التعقيد ( Complexity )</a></li>
+<li><a href="../big-o-notation/index.html">حساب الـ Big-O Notation</a></li>
+<li><a href="../choosing-best-algorithms/index.html">إختيار الخوارزمية الأفضل</a></li>
+<li><a href="../calculate-execution-time/index.html">عرض مدة تنفيذ الكود</a></li>
+<li><a href="../useful-resources/index.html">مصادر مفيدة</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Algorithms &amp; Data Structure</span>التعقيد ( <span class="word">Complexity</span> )</h1>
+<article>
+<h2>مفهوم التعقيد <span class="inline">( <span class="word">Complexity</span> )</span></h2>
+<p>في البداية, إذا قمت بدراسة و فهم جميع التحديات السابقة الموضوعة في الدورة فكن على يقين أنك وصلت لمرحلة متقدمة جداً و أنك أصبحت قادر على حل أي مسألة برمجية تمر معك مهما كانت معقدة. الشيء الأخير الذي بقي عليك معرفته هو كيفية قياس أداء الخوارزميات التي تقوم بكتابتها مما يساعدك في تحسين أداء برامجك لأقصى حدود ممكنة. فمثلاً في حال كنت تستطيع أداء المطلوب منك بأكثر من طريقة ستصبح قادر على معرفة ما هو الحل الأفضل بينهم.</p>
+<p>معنى كلمة <span class="word">Complexity</span> بشكل عام هو تقدير أداء الخوارزميات بهدف معرفة ما إن كانت فعالة أم لا, و لمعرفة ما هي أفضل خوارزمية يجب استخدامها في حال كان يوجد عدة طرق لأداء المطلوب.</p>
+<p>عند قياس أداء الخوارزمية فإننا ننظر للمساحة التي تحتاجها من الذاكرة <span class="inline">( <span class="word">Space Complexity</span> )</span> و الوقت الذي تستغرقه للإنتهاء <span class="inline">( <span class="word">Time Complexity</span> ).</span><br/>
+	في وقتنا الحالي أصبحنا نركز فقط على الوقت الذي تستغرقه الخوارزمية حتى تتنفذ لأن ذاكرات الأجهزة <span class="inline">( <span class="word">RAMs</span> )</span> أصبحت كبيرة جداً و لا تشكل أي عائق بالنسبة للمبرمجين كما كانت قديماً. لهذا أصبح تركيز المبرمجين ينصب بشكل خاص على حساب الوقت الذي تستغرقه الخوارزمية حتى تتنفذ و ليس على المساحة التي تحتاجها.</p>
+</article>
+<article>
+<h2>حساب الوقت الذي تحتاجه الخوارزمية حتى تتنفذ <span class="inline">( <span class="word">Time Complexity</span> )</span></h2>
+<p>عندما نقوم بتقدير الوقت الذي تحتاجه الخوارزمية حتى تتنفذ فإننا دائماً نهتم بمعرفة أسوء إحتمال ممكن أن يحدث, أي أطول فترة قد تستغرقها الخوارزمية حتى تتنفذ.<br/>
+	أي لا تفكر أبداً بتعليق آمالك على أفضل نتائج ممكن أن تحدث و تقول إن شاء الله لا يحدث الأسوء, بل بالاساس أكتب كودك بأفضل طريقة ممكنة حتى تتجنب حدوث الإحتمالات السيئة.</p>
+<p>لتوضيح ما نقصده بالإحتمالات السيئة, تخيل أننا تتعامل مع مصفوفة فيها مليون رقم و نريد البحث فيها لنعرف ما إن كانت تملك الرقم <span class="number">10</span> أم لا.<br/>
+	هنا عندنا ثلاث إحتمالات للمكان الذي قد نجد فيه الرقم المراد البحث عنه:</p>
+<ul class="explain">
+<li><p>قد نجد الرقم الذي نبحث عنه في أول عنصر في المصفوفة, و هذا يعتبر أفضل إحتمال <span class="inline">( <span class="word">Best Case</span> )</span> ممكن لأننا لن نضطر إلى متابعة البحث.</p></li>
+<li><p>قد نجد الرقم الذي نبحث عنه قبل الوصول لآخر عنصر فيها, و هذا يعتبر الإحتمال الوسطي <span class="inline">( <span class="word">Average Case</span> )</span> لأننا لم نضطر إلى المرور على جميع العناصر.</p></li>
+<li><p>قد نجد الرقم الذي نبحث عنه في آخر عنصر في المصفوفة, و هذا يعتبر أسوء إحتمال <span class="inline">( <span class="word">Worst Case</span> )</span> ممكن لأننا سنضطر إلى المررور على جميع العناصر الموضوعة قبله.</p></li>
+</ul>
+<p>كما سبق و قلنا, عند تقدير وقت تنفيذ الخوارزمية فإننا لا ننظر لأفضل إحتمال ممكن أو للإحتمال الوسطي بل ننظر لأسوء إحتمال ممكن.<br/>
+	و هنا أسوء إحتمال ممكن هو أن نضطر للمرور على المليون عنصر و نشيّك على قيمهم حتى نعرف ما إن كانت القيمة التي نبحث عنها موجودة أم لا.</p>
+</article>
+<article>
+<h2>الفرق بين الرموز المستخدمة لتقييم أداء الخوارزمية</h2>
+<p>في عالم البرمجة, نستخدمها الرموز التالية لتقييم أداء عمل الخوارزمية:</p>
+<ul class="explain">
+<li><p>تقدير وقت أفضل إحتمال ممكن يرمز له بالرمز <b>Ω</b> و يقال له <span class="inline"><span class="word">Omega Notation</span>.</span></p></li>
+<li><p>تقدير وقت الإحتمال الوسطي يرمز له بالرمز <b>Θ</b> و يقال له <span class="inline"><span class="word">Theta Notation</span>.</span></p></li>
+<li><p>تقدير وقت أسوء إحتمال ممكن يرمز له بالرمز <b>Ο</b> و يقال له <span class="inline"><span class="word">Big O Notation</span>.</span><br/>
+<span class="word">O</span> إختصار لكلمة <span class="word">Order</span> و بالتالي يمكنك قراءتها أيضاً <span class="inline"><span class="word">Big Order Notation</span>.</span></p></li>
+</ul>
+<p>بما أننا لا نهتم بمعرفة أفضل الإحتمالات الممكنة و الإحتمال الوسطية فإننا لا نهتم بتاتاً <span class="inline">الـ <span class="word">Omega Notation</span></span> و <span class="inline">الـ <span class="word">Omega Notation</span>.</span><br/>
+	و بما أننا نهتم فقط بمعرفة أسوء الإحتمالات الممكنة فإننا نركز على حساب <span class="inline">الـ <span class="word">Big O Notation</span></span> دون سواها.</p>
+<br/>
+<h3>مثال</h3>
+<p>إذا فرضنا أننا كنا نريد البحث عن قيمة معينة بداخل مصفوفة و كنا قد بدأنا عملية البحث من أول عنصر فيها فالإحتمال الأفضل, الوسطي, و الأسوء سيكونوا كالتالي.</p>
+<p><a href="best-case-vs-average-case-vs-worst-case.png" target="_blank"><img src="best-case-vs-average-case-vs-worst-case.png"/></a></p>
+<p>إذاً أسوء إحتمال ممكن هنا هو أن نضطر إلى الوصول لآخر عنصر في المصفوفة أثناء البحث لأن ذلك سيتطلب المرور على جميع العناصر السابقة.<br/>
+	و بالتالي هنا حساب <span class="inline">الـ <span class="word">Big O Notation</span></span> سيكون مرتكزاً على تقدير الوقت الذي نحتاجه للوصول لآخر عنصر في المصفوفة لأن هذا أسوء إحتمال ممكن.</p>
+</article>
+<article>
+<h2>الخطوات التي يتم حسابها ضمن الوقت الذي تستغرقه الخوارزمية</h2>
+<p>في البداية من المهم جداً معرفة أن حجم الكود و ترتيبه لا علاقة له بالمدة التي يحتاجها حتى يتنفذ.<br/>
+	أي قد تكتب كود يتألف من 5 أسطر يحتاج وقت ليتنفذ أكثر من كود يتألف من 100 سطر كما في المثال التالي.</p>
+<pre data-enlighter-group="group1" data-enlighter-language="python" data-enlighter-title="Python">
+# "Hello World" الأوامر الخمسة التالية مهمتها فقط طباعة الجملة
+print('Hello World')
+print('Hello World')
+print('Hello World')
+print('Hello World')
+print('Hello World')
+
+# مليون مرة لذا من الطبيعي أن يستغرق تنفيذه وقت أطول من الأوامر الخمسة السابقة "Hello World" الحلقة التالية مهمتها طباعة عبارة
+for i in range(0, 1000000):
+	print('Hello World')
+
+# إذاً عدد أسطر الكود ليس له علاقة بالمدة التي يحتاجها حتى يتنفذ
+	</pre>
+<pre data-enlighter-group="group1" data-enlighter-language="java" data-enlighter-title="Java">
+public class Main {
+    
+    public static void main(String[] args) {
+        
+		// "Hello World" الأوامر الخمسة التالية مهمتها فقط طباعة الجملة
+        System.out.println("Hello World");
+        System.out.println("Hello World");
+        System.out.println("Hello World");
+        System.out.println("Hello World");
+        System.out.println("Hello World");
+
+		// مليون مرة لذا من الطبيعي أن يستغرق تنفيذه وقت أطول من الأوامر الخمسة السابقة "Hello World" الحلقة التالية مهمتها طباعة عبارة
+        for (int i = 0; i &lt; 1000000; i++)
+        {
+            System.out.println("Hello World");
+        }
+        
+		// إذاً عدد أسطر الكود ليس له علاقة بالمدة التي يحتاجها حتى يتنفذ
+    }
+    
+}
+	</pre>
+<pre data-enlighter-group="group1" data-enlighter-language="csharp" data-enlighter-title="C#">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+		// "Hello World" الأوامر الخمسة التالية مهمتها فقط طباعة الجملة
+        Console.WriteLine("Hello World");
+        Console.WriteLine("Hello World");
+        Console.WriteLine("Hello World");
+        Console.WriteLine("Hello World");
+        Console.WriteLine("Hello World");
+
+		// مليون مرة لذا من الطبيعي أن يستغرق تنفيذه وقت أطول من الأوامر الخمسة السابقة "Hello World" الحلقة التالية مهمتها طباعة عبارة
+        for (int i = 0; i &lt; 1000000; i++)
+        {
+            Console.WriteLine("Hello World");
+        }
+		
+		// إذاً عدد أسطر الكود ليس له علاقة بالمدة التي يحتاجها حتى يتنفذ
+    }
+}
+	</pre>
+<pre data-enlighter-group="group1" data-enlighter-language="cpp" data-enlighter-title="C++">
+#include &lt;iostream&gt;
+
+int main() {
+
+	// "Hello World" الأوامر الخمسة التالية مهمتها فقط طباعة الجملة
+	std::cout &lt;&lt; "Hello World\n";
+	std::cout &lt;&lt; "Hello World\n";
+	std::cout &lt;&lt; "Hello World\n";
+	std::cout &lt;&lt; "Hello World\n";
+	std::cout &lt;&lt; "Hello World\n";
+
+	// مليون مرة لذا من الطبيعي أن يستغرق تنفيذه وقت أطول من الأوامر الخمسة السابقة "Hello World" الحلقة التالية مهمتها طباعة عبارة
+	for (int i = 0; i &lt; 1000000; i++)
+	{
+		std::cout &lt;&lt; "Hello World\n";
+	}
+
+	// إذاً عدد أسطر الكود ليس له علاقة بالمدة التي يحتاجها حتى يتنفذ
+	return 0;
+
+}
+	</pre>
+<pre data-enlighter-group="group1" data-enlighter-language="c" data-enlighter-title="C">
+#include &lt;stdio.h&gt;
+
+void main() {
+    
+	// "Hello World" الأوامر الخمسة التالية مهمتها فقط طباعة الجملة	printf("Hello World\n");
+	printf("Hello World\n");
+	printf("Hello World\n");
+	printf("Hello World\n");
+	printf("Hello World\n");
+
+    // مليون مرة لذا من الطبيعي أن يستغرق تنفيذه وقت أطول من الأوامر الخمسة السابقة "Hello World" الحلقة التالية مهمتها طباعة عبارة
+	for (int i = 0; i &lt; 1000000; i++)
+    {
+        printf("Hello World\n");
+    }
+
+	// إذاً عدد أسطر الكود ليس له علاقة بالمدة التي يحتاجها حتى يتنفذ
+    
+}
+	</pre>
+<br/><br/>
+<h3>كيفية حساب عدد خطوات الخوارزمية <span class="inline">( <span class="word">Step Execution</span> )</span></h3>
+<p>إذا كنا سنحسب عدد خطوات تنفيذ الخوارزمية السابقة, سنقول: <code>1000,000 + 5</code> لأنها أوامر الطباعة التي سيتم تنفيذها.<br/>
+	الجواب هو: <code>1000,005</code> خطوة.</p>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>نحن لن نقوم بحساب عدد الأوامر التي سيتم تنفيذها عند تشغيل الخوارزمية, بل سندرس طريقة كتابة الخوارزمية.<br/>
+		بالإجمال, الشكل العام لكتابة الخوارزمية هو ما سنعتمد عليه لتقدير الوقت الذي تحتاجه حتى تتنفذ.</p>
+<p>إذاً حساب عدد الأوامر <span class="inline">( <span class="word">Step Execution</span> )</span> التي ستتنفذ من بداية لنهاية الخوارزمية لا يهمنا.<br/>
+		بل يهمنا فقط معرفة كيف يتم تقدير أكبر وقت قد تحتاجه الخوارزمية حتى تتنفذ <span class="inline">( <span class="word">Big O Notation</span> ).</span></p>
+</div>
+<!--
+	<br>
+	<p>الأوامر التي يتم حسابها ضمن عدد خطوات الخوارزمية حتى تتنفذ هي التالية:</p>
+	<ul class="explain">
+		<li><p>أي أمر مهمته إعطاء قيمة, مثل أن نقول <span class="inline"><code>x = 10</code>.</span></p></li>
+		<li><p>أي أمر مهمته إرجاع قيمة, مثل أن نقول <span class="inline"><code>return x</code>.</span></p></li>
+		<li><p>أي أمر مهمته تنفيذ مهمة ما, مثل أوامر الطباعة التي نستخدمها و التي لا نعرف كيف تم برمجتها في الأساس.</p></li>
+	</ul>
+	<p>عندما قلنا أنه يتم حسابها, فنحن بذلك لا نقصد أنه يعتبر لها أهمية و تأثير على أداء الخوارزمية, بل تعتبر مهمة فقط في حال كان سيتم تنفيذها عدة مرات غير محددة. بمعنى آخر نسبة لما يدخله المستخدم.</p>
+	-->
+</article>
+<article>
+<h2>كيفية تقدير أطول مدة قد يستغرقها تنفيذ الكود <span class="inline">( <span class="word">Big O Notation</span> )</span></h2>
+<p>عند حساب <span class="inline">الـ <span class="word">Big O Notation</span></span> لا نقوم بقراءة كل أمر موضوع في الكود و نحسب الوقت الذي سيتنفذ خلاله كما نفعل في حال كنا نريد حساب عدد خدوات تنفيذ الخوارزمية, بل نهتم فقط نهتم فقط بالكود الذي سيتم تنفيذه أكثر من مرة. أي يهمنا:</p>
+<ul class="explain">
+<li><p>الكود الموضوع بداخل حلقة <span class="inline">( <span class="word">Loop</span> ).</span></p></li>
+<li><p>الكود الموضوع بداخل عدة حلقات متداخلة <span class="inline">( <span class="word">Nested Loops</span> ).</span></p></li>
+<li><p>الكود الموضوع بداخل دالة تستدعي نفسها <span class="inline">( <span class="word">Recursive Function</span> ).</span></p></li>
+</ul>
+<br/>
+<p>إذا كنا سنكتب <span class="inline">الـ <span class="word">Big O Notation</span></span> لخوارزمية المثال السابق فإننا سنتجاهل كل أوامر الطباعة و نركز على الحلقة التي تحتوي على أمر الطباعة.<br/>
+	لذا سيتم تقدير الوقت الذي تحتاجه الخوارزمية بالمعادلة: <span class="inline"><code>O(1)</code>.</span><br/>
+	الرقم <span class="number">1</span> هنا لا يمثل قيمة فعلية بل يقصد به أننا نعرف كم مرة بالضبط ستتنفذ الأوامر الموضوعة في الحلقة.</p>
+<br/>
+<p>في الدروس القادمة سنتعرف على أنواع <span class="inline">الـ <span class="word">Big O Notation</span></span> و كيف يتم مقارنتها, بالإضافة إلى كيفية عرض الوقت الذي تستغرقه الخوارزمية حتى تتنفذ.</p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

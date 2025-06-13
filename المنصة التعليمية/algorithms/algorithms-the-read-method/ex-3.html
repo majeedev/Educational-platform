@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>دالة إدخال البيانات Read في الخوارزميات - التمرين الثالث</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../algo-icon.png"/></li>
+<li class="title">دروس تمهيدية</li>
+<li><a href="../algorithms-introduction/index.html">مفهوم الخوارزميات</a></li>
+<li><a href="../algorithms-environment-setup/index.html">تجهيز بيئة العمل</a></li>
+<li><a href="../algorithms-the-print-method/index.html">دالة الطباعة <span class="en">Print</span></a></li>
+<li><a href="../algorithms-concatenation/index.html">الدمج أثناء الطباعة</a></li>
+<li><a href="../algorithms-variables/index.html">المتغيرات</a></li>
+<li class="title">الحلقات و الشروط</li>
+<li><a href="../algorithms-loops/index.html">الحلقات و أنواعها</a></li>
+<li><a href="../algorithms-for-loop/index.html">الحلقة <span class="en">For</span></a></li>
+<li><a href="../algorithms-while-and-do-while-loops/index.html">الحلقتين <span class="en">While</span> و <span class="en">Do While</span></a></li>
+<li><a href="../algorithms-setting-conditions/index.html">جمل الشرط</a></li>
+<li><a href="../algorithms-operators/index.html">العوامل</a></li>
+<li><a href="../algorithms-nested-loops/index.html">الحلقات المتداخلة</a></li>
+<li class="title">إدخال بيانات من المستخدم</li>
+<li><a href="index.html">دالة الإدخال <span class="en">Read</span></a></li>
+<li><a href="../algorithms-calculate-the-factorial/index.html">حساب قيمة الـ <span class="en">Factorial</span> للعدد</a></li>
+<li><a href="../algorithms-calculate-the-power/index.html">حساب قيمة الـ <span class="en">Power</span> للعدد</a></li>
+<li class="title">المصفوفات</li>
+<li><a href="../algorithms-arrays-types/index.html">المصفوفات و أنواعها</a></li>
+<li><a href="../algorithms-one-dimensional-arrays/index.html">تعريف مصفوفة ذات بعد واحد</a></li>
+<li><a href="../algorithms-one-dimensional-arrays-length/index.html">حجم المصفوفة ذات البعد الواحد</a></li>
+<li><a href="../algorithms-working-with-one-dimensional-arrays/index.html">التعامل مع مصفوفة ذات بعد واحد</a></li>
+<li><a href="../algorithms-two-dimensional-arrays/index.html">تعريف مصفوفة ذات بعدين</a></li>
+<li><a href="../algorithms-two-dimensional-arrays-length/index.html">حجم المصفوفة ذات البعدين</a></li>
+<li><a href="../algorithms-working-with-two-dimensional-arrays/index.html">التعامل مع مصفوفة ذات بعدين</a></li>
+<li class="title">الدوال</li>
+<li><a href="../algorithms-methods/index.html">تعريف دوال جديدة</a></li>
+<li><a href="../algorithms-parameters/index.html">التعامل مع الباراميترات</a></li>
+<li><a href="../algorithms-recursion/index.html">تعريف دوال تستدعي نفسها</a></li>
+<li class="title">أكتب الكود كالمحترفين</li>
+<li><a href="../algorithms-write-less-code/index.html">تقليص حجم الكود</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Algorithms</span>دالة إدخال البيانات <code data-enlighter-language="java">Read</code> في الخوارزميات - التمرين الثالث</h1>
+<article>
+<h3>المطلوب</h3>
+<p>أكتب برنامج يطلب من المستخدم إعطائه عدد صحيح ثم يعرض له ناتج جمع جميع الأرقام المفردة الموجودة بين <span class="number">1</span> و العدد الذي أدخله المستخدم.</p>
+<p><a href="ex-3-pic-1.png" target="_blank"><img alt="" src="ex-3-pic-1.png"/></a></p>
+<br/>
+<h3>إرشادات</h3>
+<p>المتغير <code data-enlighter-language="java">S</code> هو المتغير الذي سيحتوي على مجموع كل الأرقام المفردة الموجودة من <span class="number">1</span> إلى <code data-enlighter-language="java">N</code>.<br/>
+	الـ <code data-enlighter-language="java">i</code> هو المتغير ( العداد ) الذي يزيد واحد في كل دورة.<br/>
+	الـ <code data-enlighter-language="java">N</code> هو المتغير الذي يخزن العدد الذي سيدخله المستخدم.<br/>
+	الحلقة تبدأ من <span class="number">1</span> و تتوقف عند <code data-enlighter-language="java">N</code> , أي عند العدد الذي أدخله المستخدم.</p>
+<br/>
+<div class="example-box">
+<h4>النتيجة المطلوبة</h4>
+<p>لنفترض أن المستخدم أدخل الرقم <span class="number">10</span> عندما طلب منه إدخال عدد.</p>
+<div class="image-box">
+<a href="ex-3-pic-2.png" target="_blank"><img alt="" src="ex-3-pic-2.png"/></a>
+</div>
+</div>
+<div class="example-box">
+<h4>الخوارزمية</h4>
+<div class="image-box">
+<a href="ex-3-pic-3.png" target="_blank"><img alt="" src="ex-3-pic-3.png"/></a>
+</div>
+</div>
+<div class="example-box">
+<h4>كود الجافا</h4>
+<pre data-enlighter-language="java">
+import java.util.Scanner;
+ 
+public class Sum_Odd_Numbers {
+ 
+    public static void main (String[] args) {
+ 
+        Scanner input = new Scanner(System.in);
+ 
+        int S = 0;
+        int N;
+ 
+        System.out.print("Enter a value for N : ");
+        N = input.nextInt();
+ 
+        for (int i=1; i &lt;=N; i++)
+        {
+            if ( i%2 == 1 )
+            {
+                S = S + i;
+            }
+        }
+ 
+        System.out.print("The sum is: " +S+ "\n" );
+ 
+    }
+ 
+}
+		</pre>
+</div>
+<div class="example-box">
+<h4>شرح الكود</h4>
+<div class="explaining-box">
+<ul>
+<br/>
+<pre data-enlighter-language="java" data-enlighter-lineoffset="12">
+		System.out.print("Enter a value for N : ");
+		N = input.nextInt();
+				</pre>
+<li><p>قيمة المتغير <code data-enlighter-language="java">N</code> سيدخلها المستخدم, إذاً المستخدم هو الذي يعطي قيمة للمتغير <code data-enlighter-language="java">N</code> و بالتالي هو من سيحدد عدد دورات الحلقة و القيمة النهائية للمتغير <code data-enlighter-language="java">S</code>.</p></li>
+<br/><br/>
+<pre data-enlighter-language="java" data-enlighter-lineoffset="15">
+		for (int i=1; i &lt;=N; i++)
+		{
+			if ( i%2 == 1 )
+			{
+				S = S + i;
+			}
+		}
+				</pre>
+<li><p>هنا في كل دورة من دورات الحلقة, إذا كانت قيمة العداد <code data-enlighter-language="java">i</code> عبارة عن رقم مفرد سيتم إضافتها على قيمة المتغير <code data-enlighter-language="java">S</code>.</p></li>
+<br/><br/>
+<pre data-enlighter-language="java" data-enlighter-lineoffset="23">
+		System.out.print("The sum is: " +S+ "\n" );
+				</pre>
+<li><p>هنا قمنا بعرض قيمة المتغير <code data-enlighter-language="java">S</code> النهائية.</p></li>
+</ul>
+</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

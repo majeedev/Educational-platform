@@ -1,0 +1,611 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الدوال في بايثون | python functions</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>الدوال في بايثون</h1>
+<article>
+<h2>مفهوم الدوال في بايثون</h2>
+<p><b>دالة:</b> تعني <span class="word">Method</span> او <span class="word">Function</span> في اللغة الإنجليزية, و هي عبارة عن مجموعة أوامر مجمعة في مكان واحد و تتنفذ عندما نقوم باستدعائها.<br/>
+	كما أن بايثون تحتوي على مجموعة كبيرة جداً من الدوال الجاهزة التي سبق أن إستخدامنا بعضها مثل الدوال <code data-enlighter-language="python">print()</code> و <code data-enlighter-language="python">min()</code> و <code data-enlighter-language="python">max()</code> و غيرهم من الدوال التي تطرقنا إليها في دروس سابقة.</p>
+<br/>
+<h3>مصطلحات تقنية</h3>
+<p>الدوال الجاهزة في بايثون, يقال لها <span class="inline"><span class="word">Built-in Functions</span>.</span><br/>
+	الدوال التي يقوم المبرمج بتعريفها, يقال لها <span class="inline"><span class="word">User-defined Functions</span>.</span></p>
+</article>
+<article>
+<h2>تعريف دوال جديدة في بايثون</h2>
+<p>الشكل الأساسي الذي يجب إتباعه عند تعريف أي دالة في بايثون هو التالي:</p>
+<div class="code-box">
+<div>
+<span class="blue">def</span> <b>functionname</b>():<br/>
+		        <b>function_suite</b>
+</div>
+</div>
+<p><span class="point">•</span> <span class="code blue">def</span>: تعني أنك تعرف دالة جديدة.<br/>
+<span class="point">•</span> <span class="code black">functionname</span>: نضع مكانها الإسم الذي نعطيه للدالة, و الذي من خلاله يمكننا استدعاءها.<br/>
+<span class="point">•</span> <span class="code black">()</span>: بداخل القوسين يمكنك وضع باراميترات و يجب أن تضع <code data-enlighter-language="python">:</code> مباشرةً بعد القوسين و من ثم تنزل على سطر جديد لتبدأ بكتابة الأوامر التي ستتنفذ عند إستدعاء الدالة.<br/>
+<span class="point">•</span> <span class="code b">function_suite</span>: تعني الأوامر التي سنضعها في الدالة و التي ستتنفذ عند إستدعاءها.</p>
+<br/>
+<h3 class="note-title">إنتبه</h3>
+<div class="note-box">
+<p>أنت مجبر على وضع <span class="number">4</span> مسافات فارغة قبل الأوامر التي ستضعها في الدالة حتى يعرف مفسّر لغة بايثون أن هذه الاوامر موجودة بداخل الدالة.<br/>
+		للترتيب و لكتابة الكود كما يفعل باقي المبرمجين, قم بإضافة سطرين فارغين بعد تعريف الدالة.</p>
+</div>
+<br/>
+<p>في المثال التالي قمنا بتعريف دالة إسمها <code class="data-enlighter-language=" python"="">my_function</code> وضعنا فيها أمر طباعة واحد فقط. بعدها قمنا باستدعائها.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# my_function هنا قمنا بتعريف دالة إسمها
+def my_function():
+    print('My first function is called')
+
+
+# حتى يتنفذ الأمر الموضوع فيها my_function هنا قمنا باستدعاء الدالة
+my_function()
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			My first function is called
+		</div>
+</div>
+<br/><br/>
+<h3>جميع المعلومات التي يمكن ذكرها عند تعريف دالة جديدة</h3>
+<p>قبل قليل تكلمنا عن الأشياء الأساسية التي يجب أن تكون متوفرة عند تعريف أي دالة.<br/>
+	الآن, عليك معرفة أنه يمكنك وضع مزيد من التفاصيل بشرط أن تضيفها ضمن ترتيب محدد و ليس شرطاً أن تضيفها كلها.</p>
+<div class="code-box">
+<div>
+<span class="blue">def</span> <b>functionname</b>(<span class="red">parameters</span>):<br/>
+		        <span class="green">""" function_docstring """</span><br/>
+		        <b>function_suite</b><br/>
+			    <span class="blue">return</span> [expression]
+	    </div>
+</div>
+<p><span class="point">•</span> <span class="code blue">def</span>: تعني أنك تعرف دالة جديدة.<br/>
+<span class="point">•</span> <span class="code black">functionname</span>: نضع مكانها الإسم الذي نعطيه للدالة, و الذي من خلاله يمكننا استدعاءها.<br/>
+<span class="point">•</span> <span class="code red">parameters</span>: المقصود بها الباراميترات التي نمررها لها عند إستدعاءها <span class="inline">( وضع الباراميترات هو أمر إختياري ).</span><br/>
+<span class="point">•</span> <span class="code green">""" function_docstring """</span>: نضع مكانها نص الهدف منه تفسير ما تفعله الدالة بشكل مختصر <span class="inline">( وضع التفسير هو أمر إختياري ).</span><br/>
+<span class="point">•</span> <span class="code black b">function_suite</span>: تعني الأوامر التي نضعها في الدالة.<br/>
+<span class="point">•</span> <span class="code"><span class="blue">return</span> [expression]</span>: نضع مكانها ما يمكن أن ترجعه الدالة في المكان الذي تم إستدعاءها منه <span class="inline">( إرجاع قيمة هو أمر إختياري ).</span></p>
+<br/>
+<p>هنا قمنا بتعريف دالة إسمها <code data-enlighter-language="python">greeting</code>, عند إستدعاءها نمرر لها إسم فتطبع رسالة ترحيب للإسم الذي تم تمريره لها.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# تحتوي على باراميتر واحد. عند إستدعاءها نمرر لها إسم, فتطبع جملة ترحيب بإسم الشخص الذي نمرره لها greeting هنا قمنا بتعريف دالة إسمها
+def greeting(name):
+	""" This function print hello message based on the specified name """
+    print('Hello '+name+', welcome to our company.')
+
+
+# user هنا قمنا بتخزين إسم الشخص الذي سنمرره للدالة في المتغير
+user = 'Ahmad'
+
+# حتى تطبع رسالة ترحيب له user و تمرير إسم الشخص الذي قمنا بتخزينه في المتغير greeting() هنا قمنا باستدعاء الدالة
+greeting(user)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Hello Ahmad, welcome to our company.
+		</div>
+</div>
+<br/><br/>
+<p>هنا قمنا بكتابة نفس الدالة السابقة لكننا قمنا هذه المرة بطباعة الشرح الموضوع في الدالة <span class="inline">( أي الـ <span class="word">doc string</span> )</span> و ليس إستدعاءها.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# تحتوي على باراميتر واحد. عند إستدعاءها نمرر لها إسم, فتطبع جملة ترحيب بإسم الشخص الذي نمرره لها greeting هنا قمنا بتعريف دالة إسمها
+def greeting(name):
+	""" This function print hello message based on the specified name """
+    print('Hello '+name+', welcome to our company.')
+
+
+# greeting() هنا قمنا بطباعة الشرح المرفق بالدالة
+print(greeting.__doc__)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			This function print hello message based on the specified name
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف دالة إسمها <code class="data-enlighter-language=" python"="">get_sum</code>, عند إستدعاءها نمرر لها عددين فترجع لنا ناتج جمعهما.</p>
+<div class="example-box">
+<h4>المثال الرابع</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# عند إستدعاءها نمرر لها عددين فتقوم بإرجاع ناتج جمعهما get_sum هنا قمنا بتعريف دالة إسمها
+def get_sum(a, b):
+    """This method returns the sum of the numbers that you passed in a and b"""
+    return a + b;
+
+
+# x في المتغير get_sum() هنا قمنا بتخزين ناتج العددين 3 و 5 الذي سترجعه الدالة
+x = get_sum(3, 5)
+
+# و التي ستساوي 8 x هنا قمنا بعرض قيمة المتغير
+print(x)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			8
+		</div>
+</div>
+</article>
+<article>
+<h2>وضع قيم إفتراضية للباراميترات في بايثون</h2>
+<p>بايثون تتيح لك وضع قيم إفتراضية للباراميترات مما يجعلك عند إستدعاء الدالة مخيّر على تمرير قيم مكان الباراميترات بدل أن تكون مجبراً على ذلك.</p>
+<br/>
+<h3>مصطلحات تقنية</h3>
+<p>القيمة الإفتراضية التي نضعها للباراميتر يقال لها <span class="inline"><span class="word">Default Argument</span>.</span></p>
+<br/>
+<p>في المثال التالي قمنا بتعريف دالة إسمها <span class="inline"><code data-enlighter-language="python">print_language</code>.</span><br/>
+	هذه الدالة فيها باراميتر واحد إسمه <code data-enlighter-language="python">language</code> يملك النص <code data-enlighter-language="python">'English'</code> كقيمة إفتراضية.<br/>
+	كل ما تفعله هذه الدالة عند إستدعاءها هو طباعة قيمة الباراميتر <span class="inline"><code data-enlighter-language="python">language</code>.</span></p>
+<p><span class="note">ملاحظة:</span> بما أن الباراميتر <code data-enlighter-language="python">language</code> يملك قيمة بشكل إفتراضية, فهذا يعني أنك لم تعد مجبر على تمرير قيمة له عند إستدعاء الدالة لأنه أصلاً يملك قيمة.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# و يمكنك عدم تمرير قيمة لأنه أصلاً يملك قيمة language عند إستدعاءها يمكنك تمرير قيمة لها مكان الباراميتر .print_language هنا قمنا بتعريف دالة إسمها 
+def print_language(language='English'):
+    print('Your language is:', language)
+
+
+# 'English' و بالتالي ستظل قيمته language بدون تمرير قيمة مكان الباراميتر print_language() هنا قمنا باستدعاء الدالة
+print_language()
+
+# 'Arabic' و بالتالي ستصبح قيمته language للباراميتر 'Arabic' مع تمرير القيمة print_language() هنا قمنا باستدعاء الدالة
+print_language('Arabic')
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Your language is: English<br/>
+			Your language is: Arabic
+		</div>
+</div>
+</article>
+<article>
+<h2>تحديد أسماء الباراميترات التي سيتم إعطاءها قيم في بايثون</h2>
+<p>في أغلب لغات البرمجة عندما تقوم بإستدعاء دالة تحتوي على عدة باراميترات, تكون مجبر على تمرير قيم لهذه الباراميترات بنفس الترتيب الذي تم وضعهم فيه.<br/>
+	في لغة بايثون عندما تقوم باستدعاء دالة تحتوي على عدة باراميترات, يمكنك إعطاء قيم لهذا الباراميترات بدون الحاجة إلى التقيد بنفس الترتيب الذي تم وضعهم فيه حيث أنك تستطيع بداخل أقواس الدالة ذكر إسم الباراميتر و إسناد قيمة إليه و عندها لا يهم إن اتبعت الترتيب الموضوع أم لا.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف دالة إسمها <code data-enlighter-language="python">print_info</code> تحتوي على باراميترين <code data-enlighter-language="python">name</code> و <span class="inline"><code data-enlighter-language="python">salary</code>.</span><br/>
+	بعدها قمنا باستدعائها مرتين:<br/>
+	- في المرة الأولى, قمنا بتمرير قيم للباراميترات بالترتيب الذي تم وضعهم فيه.<br/>
+	- في المرة الثاني قمنا بتمرير نفس القيم للباراميترات و لكن بدون التقيد بالترتيب الموضوعين فيه.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# salary و قيمة مكان الباراميتر name عند إستدعاءها يجب أن نمرر لها قيمة مكان الباراميتر print_info هنا قمنا بتعريف دالة إسمها
+def print_info(name, salary):
+    print('Name:', name)
+    print('Salary:', salary)
+    print('------------------')
+
+
+# بنفس الترتيب الموضوعين فيه salary و الرقم 1500 للباراميتر name للباراميتر 'Nader' مع تمرير النص print_info هنا قمنا بإستدعاء الدالة
+print_info('Nader', 1500)
+
+# name سيتم وضعه في الباراميتر 'Nader' و النص salary مع تحديد أن الرقم 1500 سيتم وضعه في الباراميتر print_info هنا قمنا بإستدعاء الدالة
+print_info(salary=1500, name='Nader')
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Name: Nader<br/>
+			Salary: 1500<br/>
+			------------------<br/>
+			Name: Nader<br/>
+			Salary: 1500<br/>
+			------------------<br/>
+</div>
+</div>
+</article>
+<article>
+<h2>بناء دوال تقبل عدد غير محدد من القيم عند إستدعاءها في بايثون</h2>
+<p>في بعض الأحيان قد تحتاج إلى بناء دالة تعالج عدد غير محدد من القيم عند استدعاءها. أي مهما كان عدد القيم التي ستمررها لها فإنها يجب أن تعالجهم كلهم.</p>
+<p>لبناء دالة يمكن تمرير عدد غير محدد من القيم لها عند إستدعاءها عليك تجهيز باراميتر واحد لهذا الأمر.<br/>
+	ببساطة ضع <code data-enlighter-language="python">*</code> قبل إسم الباراميتر و عندها سيفهم مفسّر لغة بايثون أنه يمكنك تمرير عدد غير محدد من القيم لهذا الباراميتر. عندها سيتم تجميع كل القيم التي تمررها للدالة بداخل <code data-enlighter-language="python">tuple</code> مما يجعلك قادراً على التعامل معهم بكل سهولة.</p>
+<br/>
+<h3>مصطلحات تقنية</h3>
+<p>في حال كان عدد القيم التي يمكن تمريرها للباراميتر غير محدد يقال لهذه القيم <span class="inline"><span class="word">Variable-length Arguments</span>.</span></p>
+<br/>
+<br/>
+<p>في المثال التالي قمنا بتعريف دالة إسمها <code data-enlighter-language="python">print_args</code> تقبل عدد غير محدد من القيم عند إستدعاءها بعدها تقوم فقط بعرض هذه القيم بواسطة الحلقة <span class="inline"><code data-enlighter-language="python">for</code>.</span><br/>
+	جميع القيم التي سيتم تمريرها لها, سيتم تخزينها في باراميتر واحد إسمه <span class="inline"><code data-enlighter-language="python">*args</code>.</span></p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# عند إستدعاءها يمكننا تمرير عدد غير محدد من القيم لها. بعدها ستقوم بطباعة القيم التي مررناها لها print_args هنا قمنا بتعريف دالة إسمها
+def print_args(*args):
+    for e in args:
+		print(e)
+
+		
+# مع تمرير 10 قيم لها print_args() هنا قمنا بإستدعاء الدالة
+print_args(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			1<br/>
+			2<br/>
+			3<br/>
+			4<br/>
+			5<br/>
+			6<br/>
+			7<br/>
+			8<br/>
+			9<br/>
+			10
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف دالة إسمها <code data-enlighter-language="python">print_average</code> تقبل عدد غير محدد من القيم عند إستدعاءها.<br/>
+	الهدف من هذه الدالة طباعة متوسط القيم التي تم تمريرها إليها و الذي يساوي ناتج جمع القيم التي تمريرها مقسوماً على عددهم.<br/>
+	جميع القيم التي سيتم تمريرها لها, سيتم تخزينها في باراميتر واحد إسمه <span class="inline"><code data-enlighter-language="python">*values</code>.</span></p>
+<p><span class="note">ملاحظة:</span> قمنا بالإعتماد على الدالتين <code data-enlighter-language="python">sum()</code> و <code data-enlighter-language="python">len()</code> الجاهزتين في بايثون لنحصل على ناتج جمع القيم التي تم تمريرها و عددهم.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# عند إستدعاءها يمكننا تمرير عدد غير محدد من القيم لها. بعدها ستقوم بطباعة متوسط القيم التي مررناها لها print_average هنا قمنا بتعريف دالة إسمها
+def print_average(*values):
+    print(sum(values)/len(values))
+
+
+# مع تمرير 4 قيم لها print_total() هنا قمنا بإستدعاء الدالة
+print_average(1, 2, 3, 4)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			2.5
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف دالة إسمها <code data-enlighter-language="python">print_user_average</code>, الهدف منها طباعة إسم الشخص و متوسط العلامات التي نالها.<br/>
+	إذاً, عند إستدعاءها يجب أن نمرر لها قيمتين على الأقل:<br/>
+	- القيمة الأولى تمثل إسم شخص و الذي سنقوم بتخزينه في باراميتر إسمه <span class="inline"><code data-enlighter-language="python">user</code>.</span><br/>
+	- القيمة الثانية أو مجموعة القيم الثانية تمثل علامات هذا الشخص و التي سنقوم بتخزينها في باراميتر واحد إسمه <span class="inline"><code data-enlighter-language="python">*notes</code>.</span></p>
+<p><span class="note">ملاحظة:</span> قمنا بالإعتماد على الدالتين <code data-enlighter-language="python">sum()</code> و <code data-enlighter-language="python">len()</code> الجاهزتين في بايثون لنحصل على ناتج جمع القيم التي تم تمريرها و عددهم.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# notes و علاماته مكان الباراميتر user عند إستدعاءها يجب أن نمرر لها إسم الشخص مكان الباراميتر .print_user_average هنا قمنا بتعريف دالة إسمها
+# و عندها ستقوم بحساب معدل الشخص ( بناءاً على علاماته ) و من ثم عرض إسمه و معدله بشكل مرتب
+def print_user_average(user, *notes):
+    avg = sum(notes)/len(notes)
+    print('The average of', user, 'is:', avg)
+
+
+# مع تمرير إسم الشخص و 4 قيم ( و التي تمثل علامات الشخص ) لها print_user_average() هنا قمنا بإستدعاء الدالة
+print_user_average('Ahmad', 1, 2, 3, 4)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			The average of Ahmad is: 2.5
+		</div>
+</div>
+</article>
+<article>
+<h2>التفريق بين المتغيرات المعرفة بداخل الدوال و خارجها في بايثون
+<p>عند تعريف دوال جديدة عليك الإنتباه لأسماء المتغيرات التي تنوي تعريفها بداخلها حتى لا يحدث تضارب بينها و بين باقي المتغيرات الموجودة أصلاً في الكود.<br/>
+	فمثلاً, في حال قمت بتعريف متغير عادي, ثم قمت بتعريف دالة وضعت فيها متغير يحمل نفس إسم المتغير الموجود خارج الدالة. عندها سيتجاهل مفسّر لغة بايثون المتغير الذي تم تعريفه خارج الدالة و بالتالي لن تستطيع الوصول إليه من الدالة, أي لن تستطيع حتى أن تعرض قيمته.<br/>
+	في حال كنت تريد إعلام مفسّر لغة بايثون أنك تريد التعامل مع المتغير الموجود خارج الدالة سواء من أجل عرض قيمته أو تغييرها سيكون عليك وضع الكلمة المفتاحية <code data-enlighter-language="python">global</code> قبل إسم المتغير و على سطر منفرد.</p>
+<br/>
+<h3>مصطلحات تقنية</h3>
+<p>المتغيرات التي يتم تعريفها بداخل الدوال, يقال لها <span class="word">Local Variables</span> و هذه التسمية تعني أنه لا يمكن الوصول لها من خارج الدالة بشكل مباشر.<br/>
+	المتغيرات التي يتم تعريفها خارج الدوال, يقال لها <span class="word">Global Variables</span> و هذه التسمية تعني أنه يمكن الوصول لها من أي مكان في الكود حتى من داخل الدوال.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف متغير إسمه <code data-enlighter-language="python">x</code>, ثم قمنا بتعريف دالة إسمها <code data-enlighter-language="python">test</code> تقوم فقط بطباعة قيمته.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# قيمته تساوي 1 x هنا قمنا بتعريف متغير إسمه
+x = 1
+
+
+# الذي تم تعريفه خارجها x تطبع قيمة المتغير test هنا قمنا بتعريف دالة إسمها
+def test():
+    print('Global x =', x)
+
+
+# الذي تم تعريفه خارجها x و التي ستطبع قيمة المتغير test() هنا قمنا باستدعاء الدالة
+test()
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Global x = 1
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف متغير إسمه <code data-enlighter-language="python">x</code>, ثم قمنا بتعريف دالة إسمها <code data-enlighter-language="python">test</code> تحتوي أيضاً على متغير إسمه <code data-enlighter-language="python">x</code> تقوم فقط بطباعة قيمته.<br/>
+<span class="note">تذكر:</span> سيتم طباعة قيمة <code data-enlighter-language="python">x</code> الذي تم تعريفه بداخل الدالة و ليس الموجود خارجها لأن مفسّر لغة بايثون سيتجاهل المتغير الخارجي.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# قيمته تساوي 1 x هنا قمنا بتعريف متغير إسمه
+x = 1
+
+
+# الذي تم تعريفه بداخلها x تطبع قيمة المتغير test هنا قمنا بتعريف دالة إسمها
+def test():
+    x = 5
+    print('Local x =', x)
+
+
+# الذي تم تعريفه بداخلها x و التي ستطبع قيمة المتغير test() هنا قمنا باستدعاء الدالة
+test()
+
+# الموجود خارج الدالة. لاحظ أن قيمته لم تتغير x هنا قمنا بطباعة قيمة المتغير
+print('Global x =', x)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Local x = 5<br/>
+			Global x = 1
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف متغير إسمه <code data-enlighter-language="python">x</code> قيمته <span class="number">1</span>, ثم قمنا بتعريف دالة إسمها <code data-enlighter-language="python">test</code> تقوم فقط بتغيير قيمته إلى <span class="inline"><span class="number">5</span>.</span><br/>
+<span class="note">تذكر:</span> لتغيير قيمة متغير من داخل دالة لكنه في الأساس موجود خارجها يجب وضع الكلمة المفتاحية <code data-enlighter-language="python">global</code> قبل إسم المتغير و على سطر منفرد.
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# قيمته تساوي 1 x هنا قمنا بتعريف متغير إسمه
+x = 1
+
+
+# الذي تم تعريفه خارجها x تقوم بتغير قيمة test هنا قمنا بتعريف دالة إسمها
+def test():
+    global x
+    x = 5
+
+
+# global الذي قمنا بتعريفه في الأساس خارجها و الذي وصلنا إليه بواسطة الكلمة x حتى تقوم بتغيير قيمة المتغير test() هنا قمنا باستدعاء الدالة
+test()
+
+# الموجودة في خارج الدالة. لاحظ أنها بقيت كما هي x هنا قمنا بطباعة قيمة
+print('Global x =', x)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Global x = 5
+		</div>
+</div>
+</p></h2></article>
+<article>
+<h2>تعريف دوال بأسلوب <span class="word">Lambda</span> في بايثون</h2>
+<p>في حال كنت تريد تعريف دالة تتألف من سطر واحد فقط و ترجع قيمة عند إستدعاءها, يمكنك تعريفها <span class="inline">كـ <span class="word">Anonymous Function</span>.</span> و عندها تستخدم الكلمة المفتاحية <code data-enlighter-language="python">lambda</code> لتعريفها و ليس الكلمة <span class="inline"><code data-enlighter-language="python">def</code>.</span></p>
+<br/>
+<p>الشكل الأساسي الذي يجب إتباعه عند تعريف دالة بأسلوب <span class="word">Lambda</span> في بايثون هو التالي:</p>
+<div class="code-box">
+<div>
+<span class="blue">lambda</span> <span class="red">[arg1 [,arg2,.....argn]]</span><b>:expression</b>
+</div>
+</div>
+<p><span class="point">•</span> <span class="code blue">lambda</span>: تعني أنك تعرف دالة جديدة ليس لها إسم.<br/>
+<span class="point">•</span> <span class="code red">[arg1 [,arg2,.....argn]]</span>: يقصد منها فقط الباراميترات التي يمكنك وضعها للدالة مع الإشارة إلى أنه يجب وضع فاصلة بين كل باراميترين.<br/>
+<span class="point">•</span> <span class="code b">:expression</span>: تعني الأمر الذي سيرجع القيمة عندما تتنفذ الدالة مع الإشارة إلى أنه يجب وضع الرمز <code data-enlighter-language="python">:</code> هو أمر إجباري.</p>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>عندما تقوم بتعريف <span class="word">Anonymous Function</span> فأنت فعلياً تقوم بتعريف دالة ليس لها إسم. و بما أنه لا يمكن إستدعاء دالة إلا من خلال مناداتها باسمها, فالحل هو أن تشير للدالة بإسم متغير. أي تقوم بتعريف متغير و تجعله يساوي الدالة التي قمت بتعريفها و عندها سيتم إعتبار إسم المتغير هو إسم الدالة الذي من خلاله يمكن مناداتها.</p>
+</div>
+<br/>
+<p>في المثال التالي قمنا بتعريف دالة <span class="inline">كـ <span class="word">Anonymous Function</span></span> عند استدعاءها نمرر لها عددين فترجع ناتج طرح العدد الأول من العدد الثاني.<br/>
+	قمنا بإسناد الدالة إلى كائن إسمه <code data-enlighter-language="python">total_pay</code> حتى نستطيع مناداته من خلالها.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# total_pay هنا قمنا بتعريف دالة يجب أن نمرر لها قيمتين عند إستدعاءها حتى ترجع ناتج طرحهما و يمكن مناداتها بواسطة الكائن
+total_pay = lambda price, tax: price - tax
+
+# و كل ما ستفعله هو إرجاع ناتج طرح القيمة الاولى من القيمة الثانية total_pay هنا قمنا بإستدعاء الدالة بواسطة الكائن
+print(total_pay(500, 40))
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			460
+		</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

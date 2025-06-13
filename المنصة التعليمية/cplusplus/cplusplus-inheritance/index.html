@@ -1,0 +1,608 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس شرحنا الوراثة في سي بلاس بلاس بتفصيل شامل, و وضعنا الكثير من الأمثلة التس ستجعلك تفهمها بشكل قوي" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الوراثة في سي بلاس بلاس | C++ inheritance</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../cplusplus-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../cplusplus-overview/index.html"><span class="en">++C</span> - نظرة عامة</a></li>
+<li><a href="../cplusplus-environment-setup/index.html"><span class="en">++C</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../cplusplus-basic-syntax/index.html"><span class="en">++C</span> - أسلوب الكتابة</a></li>
+<li><a href="../cplusplus-cout/index.html"><span class="en">++C</span> - أمر الطباعة   &lt;&lt; cout</a></li>
+<li><a href="../cplusplus-data-types/index.html"><span class="en">++C</span> - أنواع البيانات</a></li>
+<li><a href="../cplusplus-variables/index.html"><span class="en">++C</span> - المتغيرات</a></li>
+<li><a href="../cplusplus-operators/index.html"><span class="en">++C</span> - العوامل</a></li>
+<li><a href="../cplusplus-conditions/index.html"><span class="en">++C</span> - الشروط</a></li>
+<li><a href="../cplusplus-loops/index.html"><span class="en">++C</span> - الحلقات</a></li>
+<li><a href="../cplusplus-numbers/index.html"><span class="en">++C</span> - الأعداد</a></li>
+<li><a href="../cplusplus-strings/index.html"><span class="en">++C</span> - النصوص</a></li>
+<li><a href="../cplusplus-arrays/index.html"><span class="en">++C</span> - المصفوفات</a></li>
+<li><a href="../cplusplus-user-input/index.html"><span class="en">++C</span> - إدخال البيانات</a></li>
+<li><a href="../cplusplus-functions/index.html"><span class="en">++C</span> - الدوال</a></li>
+<li><a href="../cplusplus-references/index.html"><span class="en">++C</span> - المراجع</a></li>
+<li><a href="../cplusplus-pointers/index.html"><span class="en">++C</span> - المؤشرات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../cplusplus-oop/index.html"><span class="en">++C</span> - مفهوم البرمجة كائنية التوجه</a></li>
+<li><a href="../cplusplus-struct/index.html"><span class="en">++C</span> - النوع <span class="en">struct</span></a></li>
+<li><a href="../cplusplus-class/index.html"><span class="en">++C</span> - النوع <span class="en">class</span></a></li>
+<li><a href="../cplusplus-encapsulation/index.html"><span class="en">++Encapsulation - C</span></a></li>
+<li><a href="index.html"><span class="en">++Inheritance - C</span></a></li>
+<li><a href="../cplusplus-overriding/index.html"><span class="en">++Overriding - C</span></a></li>
+<li><a href="../cplusplus-overloading/index.html"><span class="en">++Overloading - C</span></a></li>
+<li><a href="../cplusplus-polymorphism/index.html"><span class="en">++Polymorphism - C</span></a></li>
+<li><a href="../cplusplus-constants/index.html"><span class="en">++C</span> - الثوابت</a></li>
+<li><a href="../cplusplus-enum/index.html"><span class="en">++C</span> - النوع <span class="en">enum</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../cplusplus-exceptions/index.html"><span class="en">++C</span> - الإستثناءات</a></li>
+<!--
+
+<li><a href="../cplusplus-lambda-expressions"><span class="en">Lambda Expressions - ++C</span></a></li>
+<li><a href="../cplusplus-files-io"><span class="en">++C</span> - التعامل مع الملفات</a></li>
+<li><a href="../cplusplus-data-structure"><span class="en">Data Structure - ++C</span></a></li>
+<li><a href="../cplusplus-collection"><span class="en">Collection - ++C</span></a></li>
+<li><a href="../cplusplus-generics"><span class="en">Generics - ++C</span></a></li>
+<li><a href="../cplusplus-networking"><span class="en">++C</span> - الشبكات</a></li>
+<li><a href="../cplusplus-multithreading"><span class="en">++C</span> - تعدد المهام</a></li>
+<li><a href="../cplusplus-jdbc"><span class="en">++C</span> - قواعد البيانات</a></li>
+<li><a href="../cplusplus-serialization"><span class="en">++C</span> - المزامنة</a></li>
+
+
+<li><a href="../cplusplus-date-and-time"><span class="en">++C</span> - التاريخ و الوقت</a></li>
+<li><a href="../cplusplus-regular-expressions"><span class="en">++C</span> - التعابير النمطية</a></li>
+
+<li><a href="../cplusplus-next-step"><span class="en">++C</span> - ما هي خطوتي التالية ؟</a></li>
+-->
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">C++</span>الوراثة</h1>
+<article>
+<h2>مفهوم الوراثة في <span class="word">C++</span></h2>
+<p>في البداية, كلمة <b>وراثة</b> تعني تضمين محتوى كلاس في كلاس آخر.<br/>
+	في <span class="word">C++</span>, الكلاس يمكنه أن يرث من كلاس آخر حتى يحصل على الدوال و المتغيرات الموجودة فيه.</p>
+<p>إذاً فكرة الوراثة بسيطة لكن فائدتها قوية جداً. فمثلاً إذا كنت تريد إنشاء كلاس جديد و لاحظت أنه يوجد كلاس جاهز يحتوي على كودات قد تفيدك يمكنك استغلالها بدل كتابتها من الصفر, أي يمكنك جعل الكلاس الذي قمت بتعريفه يرث هذا الكلاس, و بعدها يمكنك إستخدام جميع المتغيرات و الدوال التي ورثها الكلاس الجديد من الكلاس الجاهز.</p>
+<br/>
+<h3>مصطلحات تقنية</h3>
+<ul class="explain">
+<li><p>الوراثة تسمى <span class="word">Inheritance</span> في اللغة الإنجليزية.</p></li>
+<li><p>الكلاس الذي يرث من كلاس آخر يقال له الكلاس الإبن, و يسمى <span class="word">Subclass</span> و يقال له أيضاً <span class="inline">( <span class="word">Derived Class</span>, <span class="word">Extended Class</span> أو <span class="word">Child Class</span> )</span>.</p></li>
+<li><p>الكلاس الذي يورّث محتوياته لكلاس آخر يسمى الكلاس الأب, و يسمى <span class="word">Superclass</span> و يقال له أيضاً <span class="inline">( <span class="word">Base Class</span> أو <span class="word">Parent Class</span> )</span>.</p></li>
+</ul>
+</article>
+<article>
+<h2>أشكال الوراثة في <span class="word">C++</span>
+<p>في <span class="word">C++</span> يوجد <span class="number">4</span> أشكال للوراثة كما في الجدول التالي.</p>
+<p><a href="inheritance-type.png" target="_blank"><img src="inheritance-type.png"/></a></p>
+<br/>
+<p>إذاَ أشكال الوراثة في <span class="word">C++</span> هي كالتالي:</p>
+<ul class="explain">
+<li><p><b>وراثة فردية:</b> تعني كلاس يرث من كلاس واحد فقط.</p></li>
+<li><p><b>وراثة متتالية:</b> تعني كلاس يرث من كلاس واحد و هذا الكلاس كان في الأصل يرث من كلاس آخر.</p></li>
+<li><p><b>وراثة هرمية:</b> تعني أن الكلاس موروث من قبل أكثر من كلاس.</p></li>
+<li><p><b>وراثة متعددة:</b> تعني أن الكلاس يرث من أكثر من كلاس.</p></li>
+</ul>
+</h2></article>
+<article>
+<h2>كيفية جعل الكلاس يرث من كلاس آخر في <span class="word">C++</span></h2>
+<p>لجعل الكلاس يرث من كلاس آخر نتبع الأسلوب التالي.</p>
+<div class="code-box">
+<div>
+<span class="blue">class</span> derived-class <span class="red">:</span> <span class="blue">access-specifier</span> base-class<br/>
+			{<br/><br/>}
+	    </div>
+</div>
+<br/>
+<ul class="explain">
+<li><p><span class="code black">derived-class</span>:   يقصد بها إسم الكلاس الإبن.</p></li>
+<li><p><span class="code black">base-class</span>:   يقصد بها إسم الكلاس  الأب.</p></li>
+<li><p><span class="code blue">access-specifier</span>:   يقصد بها تحديد كيف يمكن الوصول للأشياء التي تم تضمينها في الكلاس الأب في الكلاس الإبن.</p></li>
+</ul>
+<br/>
+<p>إذاَ بالمبدأ لجعل الكلاس يرث من كلاس آخر نضع بعد إسم الكلاس نقطتين فوق بعض, ثم إسم الكلاس الذي نريده أن يرث منه.<br/>
+	مكان الكلمة <span class="code blue">access-specifier</span> يمكنك وضع <code data-enlighter-language="cpp">public</code> أو <code data-enlighter-language="cpp">private</code> أو <code data-enlighter-language="cpp">protected</code> أو عدم وضع أي كلمة منهم و عندها سيتم إعتبار أنك وضعت الكلمة <span class="inline"><code data-enlighter-language="cpp">private</code>.</span></p>
+</article>
+<article>
+<h2>كلمات الوصول في <span class="word">C++</span></h2>
+<p>عندما تجعل الكلاس يرث من كلاس آخر يمكنك استخدام إحدى كلمات الوصول <span class="inline">(<span class="word">Access Specifier</span> )</span> لتحدد كيف يمكن الوصول للأشياء التي ورثها الكلاس الإبن من الكلاس الأب.</p>
+<br/>
+<h3>الكلمة <code data-enlighter-language="cpp">public</code></h3>
+<p>تستخدم لتحديد أن الأشياء التي سيرثها الكلاس الإبن من الكلاس الأب سيكون الوصول لها ممكناً من أي مكان.</p>
+<p>مثال: <code data-enlighter-language="cpp">class B : public A</code><br/>
+	هنا أي شيء يرثه الكلاس <code>B</code> من الكلاس <code>A</code> سيتم إعتبار كأنه تم تعريفه <code data-enlighter-language="cpp">public</code> في الكلاس <span class="inline"><code>B</code>.</span></p>
+<br/><br/>
+<h3>الكلمة <code data-enlighter-language="cpp">private</code></h3>
+<p>تستخدم لتحديد أن الأشياء التي سيرثها الكلاس الإبن من الكلاس الأب يمكن الوصول لها من نفس الكلاس فقط.</p>
+<p>مثال: <code data-enlighter-language="cpp">class B : private A</code><br/>
+	هنا أي شيء يرثه الكلاس <code>B</code> من الكلاس <code>A</code> سيتم إعتبار كأنه تم تعريفه <code data-enlighter-language="cpp">private</code> في الكلاس <span class="inline"><code>B</code>.</span></p>
+<br/><br/>
+<h3>الكلمة <code data-enlighter-language="cpp">protected</code></h3>
+<p>تستخدم لتحديد أن الأشياء التي سيرثها الكلاس الإبن من الكلاس الأب يمكن الوصول لها من نفس اكلاس و من أي كلاس آخر يرثها.</p>
+<p>مثال: <code data-enlighter-language="cpp">class B : protected A</code><br/>
+	هنا أي شيء يرثه الكلاس <code>B</code> من الكلاس <code>A</code> سيتم إعتبار كأنه تم تعريفه <code data-enlighter-language="cpp">protected</code> في الكلاس <span class="inline"><code>B</code>.</span></p>
+</article>
+<article>
+<h2>أمثلة تطبيقية على الوراثة في <span class="word">C++</span></h2>
+<br/>
+<h3>مثال عن الوراثة الفردية</h3>
+<p>في المثال التالي قمنا بتعريف كلاس إسمه <code data-enlighter-language="cpp">A</code> يحتوي على متغير إسمه <code data-enlighter-language="cpp">x</code> و دالة إسمها <span class="inline"><code data-enlighter-language="cpp">printMessage()</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="cpp">B</code> يحتوي على متغير إسمه <code data-enlighter-language="cpp">y</code> و يرث من الكلاس <span class="inline"><code data-enlighter-language="cpp">A</code>.</span></p>
+<p>شكل الوراثة سيكون كالتالي.</p>
+<p><a href="single-inheritance.png" target="_blank"><img src="single-inheritance.png"/></a></p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// printMessage و دالة إسمها x يحتوي على متغير إسمه A هنا قمنا بتعريف كلاس إسمه
+class A {
+	
+	public:	
+		int x = 10;
+	
+		void printMessage()
+		{
+			cout &lt;&lt; "Hello from class A \n";
+		}
+
+};
+
+// y و يحتوي على متغير إسمه A يرث من الكلاس B هنا قمنا بتعريف كلاس إسمه
+class B: public A {
+
+	public:
+		int y = 20;
+	
+};
+
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+	// b إسمه B هنا قمنا بإنشاء كائن من الكلاس
+	B b;
+	
+	// B و الذي تم تعريفه في الكلاس b الموجود في الكائن y هنا قمنا بطباعة قيمة المتغير
+	cout &lt;&lt; "y = " &lt;&lt; b.y &lt;&lt; "\n";
+	
+	// A من الكلاس B  و الذي ورثه الكلاس b الموجود في الكائن x هنا قمنا بطباعة قيمة المتغير
+	cout &lt;&lt; "x = " &lt;&lt; b.x &lt;&lt; "\n";
+	
+	// A من الكلاس B و التي ورثها الكلاس b الموجودة في الكائن printMessage() هنا قمنا باستدعاء الدالة
+	b.printMessage();
+
+	return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+y = 20
+x = 10
+Hello from class A
+		</pre>
+</div>
+<br/><br/>
+<h3>مثال عن الوراثة المتتالية</h3>
+<p>في المثال التالي قمنا بتعريف كلاس إسمه <code data-enlighter-language="cpp">A</code> يحتوي على دالة إسمها <span class="inline"><code data-enlighter-language="cpp">printA()</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="cpp">B</code> يحتوي على دالة إسمها <code data-enlighter-language="cpp">printB()</code> و يرث من الكلاس <span class="inline"><code data-enlighter-language="cpp">A</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="cpp">C</code> يحتوي على دالة إسمها <code data-enlighter-language="cpp">printC()</code> و يرث من الكلاس <span class="inline"><code data-enlighter-language="cpp">B</code>.</span></p>
+<p>شكل الوراثة سيكون كالتالي.</p>
+<p><a href="multi-level-inheritance.png" target="_blank"><img src="multi-level-inheritance.png"/></a></p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// printA يحتوي على دالة إسمها A هنا قمنا بتعريف كلاس إسمه
+class A {
+	
+	public:	
+		void printA()
+		{
+			cout &lt;&lt; "Hello from class A \n";
+		}
+
+};
+
+// printB و يحتوي على دالة إسمها A يرث من الكلاس B هنا قمنا بتعريف كلاس إسمه
+class B: public A {
+
+	public:
+		void printB()
+		{
+			cout &lt;&lt; "Hello from class B \n";
+		}
+	
+};
+
+// printC و يحتوي على دالة إسمها B يرث من الكلاس C هنا قمنا بتعريف كلاس إسمه
+class C: public B {
+
+	public:
+		void printC()
+		{
+			cout &lt;&lt; "Hello from class C \n";
+		}
+	
+};
+
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+	// c إسمه C هنا قمنا بإنشاء كائن من الكلاس
+	C c;
+	
+	// c هنا قمنا باستدعاء جميع الدوال الموجودة في الكائن
+	c.printA();
+	c.printB();
+	c.printC();
+
+	return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Hello from class A
+Hello from class B
+Hello from class C
+		</pre>
+</div>
+<br/><br/>
+<h3>مثال عن الوراثة المتعددة</h3>
+<p>في المثال التالي قمنا بتعريف كلاس إسمه <code data-enlighter-language="cpp">A</code> يحتوي على دالة إسمها <span class="inline"><code data-enlighter-language="cpp">printA()</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="cpp">B</code> يحتوي على دالة إسمها <span class="inline"><code data-enlighter-language="cpp">printB()</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="cpp">C</code> يحتوي على دالة إسمها <code data-enlighter-language="cpp">printC()</code> و يرث من الكلاس <code data-enlighter-language="cpp">A</code> و الكلاس <span class="inline"><code data-enlighter-language="cpp">B</code>.</span></p>
+<p>شكل الوراثة سيكون كالتالي.</p>
+<p><a href="multiple-inheritance.png" target="_blank"><img src="multiple-inheritance.png"/></a></p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// printA يحتوي على دالة إسمها A هنا قمنا بتعريف كلاس إسمه
+class A {
+	
+	public:	
+		void printA()
+		{
+			cout &lt;&lt; "Hello from class A \n";
+		}
+
+};
+
+// printB يحتوي على دالة إسمها B هنا قمنا بتعريف كلاس إسمه
+class B {
+
+	public:
+		void printB()
+		{
+			cout &lt;&lt; "Hello from class B \n";
+		}
+	
+};
+
+// printC و يحتوي على دالة إسمها B و يرث من الكلاس A يرث من الكلاس C هنا قمنا بتعريف كلاس إسمه
+class C: public A, public B {
+
+	public:
+		void printC()
+		{
+			cout &lt;&lt; "Hello from class C \n";
+		}
+	
+};
+
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+	// c إسمه C هنا قمنا بإنشاء كائن من الكلاس
+	C c;
+	
+	// c هنا قمنا باستدعاء جميع الدوال الموجودة في الكائن
+	c.printA();
+	c.printB();
+	c.printC();
+
+	return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Hello from class A
+Hello from class B
+Hello from class C
+		</pre>
+</div>
+<br/><br/>
+<h3>مثال عن الوراثة الهرمية</h3>
+<p>في المثال التالي قمنا بتعريف كلاس إسمه <code data-enlighter-language="cpp">A</code> يحتوي على دالة إسمها <span class="inline"><code data-enlighter-language="cpp">printA()</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="cpp">B</code> يحتوي على دالة إسمها <code data-enlighter-language="cpp">printB()</code> و يرث من الكلاس <span class="inline"><code data-enlighter-language="cpp">A</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="cpp">C</code> يحتوي على دالة إسمها <code data-enlighter-language="cpp">printC()</code> و يرث من الكلاس <code data-enlighter-language="cpp">A</code> أيضاً.</p>
+<p>شكل الوراثة سيكون كالتالي.</p>
+<p><a href="hierarchical-inheritance.png" target="_blank"><img src="hierarchical-inheritance.png"/></a></p>
+<div class="example-box">
+<h4>المثال الرابع</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// printA يحتوي على دالة إسمها A هنا قمنا بتعريف كلاس إسمه
+class A {
+	
+	public:	
+		void printA()
+		{
+			cout &lt;&lt; "Hello from class A \n";
+		}
+
+};
+
+// printB و يحتوي على دالة إسمها A يرث من الكلاس B هنا قمنا بتعريف كلاس إسمه
+class B : public A {
+
+	public:
+		void printB()
+		{
+			cout &lt;&lt; "Hello from class B \n";
+		}
+	
+};
+
+// printC و يحتوي على دالة إسمها A يرث من الكلاس C هنا قمنا بتعريف كلاس إسمه
+class C: public A {
+
+	public:
+		void printC()
+		{
+			cout &lt;&lt; "Hello from class C \n";
+		}
+	
+};
+
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+	// و استدعاء جميع الدوال الموجودة فيه b إسمه B هنا قمنا بإنشاء كائن من الكلاس
+	B b;
+	b.printA();
+	b.printB();
+		
+	// و استدعاء جميع الدوال الموجودة فيه c إسمه C هنا قمنا بإنشاء كائن من الكلاس
+	C c;
+	c.printA();
+	c.printC();
+
+	return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Hello from class A
+Hello from class B
+Hello from class A
+Hello from class C
+		</pre>
+</div>
+</article>
+<article>
+<h2>مشكلة الوراثة المتعددة في <span class="word">C++</span></h2>
+<p>عندما يقوم الكلاس بوارثة أكثر من كلاس في وقت واحد فيوجد إحتمال كبير أن يرث خصائص و دوال عندها نفس الإسم مما يؤدي لحدوث تضارب في الأسماء فتجد المترجم لا يظهر لك خطأ عند كتابة الكود, بل يظهر لك خطأ عندما تقوم بتشغيل الكود.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف كلاس إسمه <code>A</code> يحتوي على دالة إسمها <span class="inline"><code>printMessage()</code>,</span> و كلاس إسمه <code>B</code> يحتوي على دالة إسمها <code>printMessage()</code> أيضاً.<br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code>C</code> يرث من الكلاس <code>A</code> و الكلاس <span class="inline"><code>B</code>.</span></p>
+<p>إذاً هنا الكلاس  <code>C</code> يرث دالة إسمها <code>printMessage()</code> من الكلاس <code>A</code> و دالة إسمها <code>printMessage()</code> من الكلاس <span class="inline"><code>B</code>,</span> و شكل الوراثة هو كالتالي.</p>
+<p><a href="multiple-inheritance.png" target="_blank"><img src="multiple-inheritance.png"/></a></p>
+<p>بالمنطق, سيظهر لنا مشكلة عند محاولة إستدعاء الدالة <code>printMessage()</code> من الكلاس <code>C</code> لأن المترجم لن يعرف ما إذا كنا نريد استدعاء الدالة التي ورثها من الكلاس <code>A</code> أو التي ورثها من الكلاس <span class="inline"><code>B</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// printMessage يحتوي على دالة إسمها A هنا قمنا بتعريف كلاس إسمه
+class A {
+	
+	public:	
+		void printMessage()
+		{
+			cout &lt;&lt; "Hello from class A \n";
+		}
+
+};
+
+// printMessage يحتوي على دالة إسمها B هنا قمنا بتعريف كلاس إسمه
+class B {
+
+	public:
+		void printMessage()
+		{
+			cout &lt;&lt; "Hello from class A \n";
+		}
+	
+};
+
+// B و الكلاس A يرث من الكلاس C هنا قمنا بتعريف كلاس إسمه
+class C : public A, public B {
+	
+};
+
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+	// c إسمه C هنا قمنا بإنشاء كائن من الكلاس
+	C c;
+
+	// الذي يملك دالتين بهذا الإسم c من الكائن printMessage() هنا قمنا باستدعاء الدالة
+	c.printMessage();
+	
+	return 0;
+}
+		</pre>
+<p><span class="point">•</span>سيظهر لنا الخطأ التالي عند التشغيل.</p>
+<div class="code-box">
+<span class="red">error: request for member 'printMessage' is ambiguous|</span>
+</div>
+</div>
+<br/>
+<p>في النهاية عليك الحذر جيداً إذا كنت تنوي إنشاء كلاس يرث من أكثر من كلاس في نفس الوقت حتى لا تقع في هذه المشكلة.</p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

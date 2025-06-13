@@ -1,0 +1,129 @@
+﻿@charset "UTF-8";
+.ar {
+  font-family: droid_arabic_naskh_regular;
+}
+.en {
+  font-family: Helvetica, Arial, Sans-Serif;
+}
+.home-methods-container {
+  max-width: 1300px;
+  text-align: center;
+  margin: auto;
+}
+p {
+  color: #4a4343;
+}
+.home-method-box {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 360px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  background-color: #e7e7e7;
+  border-radius: 5px;
+  border: 1px solid#555;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.home-method-box:hover {
+  margin-top: -7px;
+  box-shadow: 3px 5px 15px#555;
+}
+.home-method-box h3 {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  direction: rtl;
+  text-align: center;
+  background: #086a87;
+  font-weight: 400;
+  font-size: 16px;
+}
+.home-method-box p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 26px;
+  min-height: 100px;
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+  color: #333;
+}
+.home-method-box span {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 8px 0;
+  font-family: droid_arabic_naskh_regular;
+  font-size: 15px;
+}
+.home-method-box span a:hover {
+  color: #0ff;
+  background: #000;
+}
+.home-logo-box {
+  display: block;
+  position: relative;
+}
+.home-logo-box a {
+  display: block;
+  text-align: center;
+}
+.home-lesson-logo {
+  display: inline-block;
+}
+#home_full_content {
+  display: block;
+  float: left;
+  width: 100%;
+  background: #f7f6f6;
+  direction: rtl;
+  padding-bottom: 20px;
+}
+#home_full_main {
+  display: block;
+  float: left;
+  width: 100%;
+  background: #f7f6f6;
+  direction: rtl;
+  padding-bottom: 20px;
+}
+p {
+  line-height: 36px;
+  font-size: 15px;
+}
+h1 {
+  padding-bottom: 10px;
+  line-height: 41px;
+}
+@media (max-width: 784px) {
+  .home-method-box {
+    max-width: 560px;
+  }
+  .home-method-box p {
+    min-height: auto;
+  }
+}
+
+.its-ad {
+    display: inline-block !important;
+    font-size: 14px !important;
+    position: absolute !important;
+    right: 12px !important;
+    background: none !important;
+    color: black !important;
+    font-weight: bold !important;
+    top: 5px !important;
+}

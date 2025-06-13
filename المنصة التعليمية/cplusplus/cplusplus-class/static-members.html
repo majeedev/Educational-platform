@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="أمثلة شاملة حول كيفية تعريف متغيرات و دوال مشتركة بالإضافة إلى كيفية التعامل معها." name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>المتغيرات و الدوال المشتركة في سي بلاس بلاس | C++ Static Members</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../cplusplus-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../cplusplus-overview/index.html"><span class="en">++C</span> - نظرة عامة</a></li>
+<li><a href="../cplusplus-environment-setup/index.html"><span class="en">++C</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../cplusplus-basic-syntax/index.html"><span class="en">++C</span> - أسلوب الكتابة</a></li>
+<li><a href="../cplusplus-cout/index.html"><span class="en">++C</span> - أمر الطباعة   &lt;&lt; cout</a></li>
+<li><a href="../cplusplus-data-types/index.html"><span class="en">++C</span> - أنواع البيانات</a></li>
+<li><a href="../cplusplus-variables/index.html"><span class="en">++C</span> - المتغيرات</a></li>
+<li><a href="../cplusplus-operators/index.html"><span class="en">++C</span> - العوامل</a></li>
+<li><a href="../cplusplus-conditions/index.html"><span class="en">++C</span> - الشروط</a></li>
+<li><a href="../cplusplus-loops/index.html"><span class="en">++C</span> - الحلقات</a></li>
+<li><a href="../cplusplus-numbers/index.html"><span class="en">++C</span> - الأعداد</a></li>
+<li><a href="../cplusplus-strings/index.html"><span class="en">++C</span> - النصوص</a></li>
+<li><a href="../cplusplus-arrays/index.html"><span class="en">++C</span> - المصفوفات</a></li>
+<li><a href="../cplusplus-user-input/index.html"><span class="en">++C</span> - إدخال البيانات</a></li>
+<li><a href="../cplusplus-functions/index.html"><span class="en">++C</span> - الدوال</a></li>
+<li><a href="../cplusplus-references/index.html"><span class="en">++C</span> - المراجع</a></li>
+<li><a href="../cplusplus-pointers/index.html"><span class="en">++C</span> - المؤشرات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../cplusplus-oop/index.html"><span class="en">++C</span> - مفهوم البرمجة كائنية التوجه</a></li>
+<li><a href="../cplusplus-struct/index.html"><span class="en">++C</span> - النوع <span class="en">struct</span></a></li>
+<li><a href="index.html"><span class="en">++C</span> - النوع <span class="en">class</span></a></li>
+<li><a href="../cplusplus-encapsulation/index.html"><span class="en">++Encapsulation - C</span></a></li>
+<li><a href="../cplusplus-inheritance/index.html"><span class="en">++Inheritance - C</span></a></li>
+<li><a href="../cplusplus-overriding/index.html"><span class="en">++Overriding - C</span></a></li>
+<li><a href="../cplusplus-overloading/index.html"><span class="en">++Overloading - C</span></a></li>
+<li><a href="../cplusplus-polymorphism/index.html"><span class="en">++Polymorphism - C</span></a></li>
+<li><a href="../cplusplus-constants/index.html"><span class="en">++C</span> - الثوابت</a></li>
+<li><a href="../cplusplus-enum/index.html"><span class="en">++C</span> - النوع <span class="en">enum</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../cplusplus-exceptions/index.html"><span class="en">++C</span> - الإستثناءات</a></li>
+<!--
+
+<li><a href="../cplusplus-lambda-expressions"><span class="en">Lambda Expressions - ++C</span></a></li>
+<li><a href="../cplusplus-files-io"><span class="en">++C</span> - التعامل مع الملفات</a></li>
+<li><a href="../cplusplus-data-structure"><span class="en">Data Structure - ++C</span></a></li>
+<li><a href="../cplusplus-collection"><span class="en">Collection - ++C</span></a></li>
+<li><a href="../cplusplus-generics"><span class="en">Generics - ++C</span></a></li>
+<li><a href="../cplusplus-networking"><span class="en">++C</span> - الشبكات</a></li>
+<li><a href="../cplusplus-multithreading"><span class="en">++C</span> - تعدد المهام</a></li>
+<li><a href="../cplusplus-jdbc"><span class="en">++C</span> - قواعد البيانات</a></li>
+<li><a href="../cplusplus-serialization"><span class="en">++C</span> - المزامنة</a></li>
+
+
+<li><a href="../cplusplus-date-and-time"><span class="en">++C</span> - التاريخ و الوقت</a></li>
+<li><a href="../cplusplus-regular-expressions"><span class="en">++C</span> - التعابير النمطية</a></li>
+
+<li><a href="../cplusplus-next-step"><span class="en">++C</span> - ما هي خطوتي التالية ؟</a></li>
+-->
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">C++</span>المتغيرات و الدوال المشتركة</h1>
+<article>
+<h2>مفهوم الأشياء المشتركة في <span class="word">C++</span></h2>
+<p>الأشياء المشتركة <span class="inline">( <span class="word">Static Members</span> )</span> عبارة عن أي شيء يتم تعريفه في الكلاس بشكل يكون موّحداً بالنسبة لجميع الكائنات التي يتم إنشاءها منه.<br/>
+	بشكل عام لجعل الشيئ الذي يتم تعريفه في الكلاس مشترك بين جميع الكائنات التي قد ننشئها منه نستخدم الكلمة <code data-enlighter-language="cpp">static</code> كما سنرى بعد قليل في الأمثلة.</p>
+<br/>
+<h3>فوائد الأشياء المشتركة
+<p>الأشياء المشتركة لها عدة استخدامات و فوائد فعلى سبيل المثال إذا أردت جميع الكائنات التي يتم إنشاءها من كلاس محدد تملك نفس قيمة متغير موجود في هذا الكلاس, يمكنك جعل نوع المتغير <code data-enlighter-language="cpp">static</code> و عندها سيصبج مشترك بين جميع الكائنات.</p>
+<p>من ناحية الذاكرة, بما أن المتغير المشترك يكون نفسه موضوع لجميع الكائنات التي يتم إنشاؤها من نفس الكلاس, فهذا يعني أنك لو قمت بإنشاء 50 كائن من الكلاس فإنه لن يتم إنشاء 50 نسخة من المتغير في الذاكرة, بل سيكون هناك نسخة واحدة منه مشتركة بين جميع الكائنات.</p>
+<p>في هذا الدرس سنتعرف على كيفية تعريف متغيرات و دوال مشتركة و كيفية التعامل معها.</p>
+</h3></article>
+<article>
+<h2>المتغيرات المشتركة</h2>
+<p>تعريف المتغير في الكلاس كمتغير مشترك يجعلك قادر على الوصول لقيمة هذا المتغير بشكل مباشر من الكلاس, أي بدون الحاجة لإنشاء كائن منه.<br/>
+	عند تعريف المتغير المشترك, لا يسمح لك بإعطائه قيمة أولية بداخل الكلاس حيث أنك يجب أن تعطيه قيمة أولية خارج الكلاس.</p>
+<p>بعد إسناد قيمة أولية للمتغير المشترك, تستطيع تغيير قيمته لاحقاً من خلال أي كائن يمكنه الوصول إليها.</p>
+<br/>
+<p>المتغير المشترك يجب تعريفه على مرحتلين:</p>
+<ul class="explain">
+<li><p>يجب تعريفه بداخل الكلاس بدون إعطائه قيمة أولية مع الإشارة إلى أنه يجب تحديد نوعه <span class="inline"><code data-enlighter-language="cpp">static</code>.</span></p></li>
+<li><p>يجب إعطاؤه قيمة أولية خارج الكلاس.</p></li>
+</ul>
+<br/><br/>
+<p>في المثال التالي, قمنا بتعريف كلاس إسمه <code>Demo</code> يحتوي على متغير عادي إسمه <code>x</code> و متغير مشترك إسمه <span class="inline"><code>y</code>.</span><br/>
+	المتغير المشترك <code>y</code> قمنا بإعطائه <code>0</code> كقيمة أولية خارج الكلاس كما يفترض.<br/>
+	بعدها قمنا بإنشاء ثلاث كائنات من الكلاس <code>Demo</code> و إعطاء قيمة مختلفة للمتغير <code>x</code> الخاص بكل الكائن.<br/>
+	في النهاية قمنا بتغيير قيمة المتغير المشترك <code>y</code> مرة واحدة حتى نلاحظ كيف أنها تغيرت بالنسبة لجميع الكائنات.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// Demo هنا قمنا بتعريف الكلاس
+class Demo {
+
+	// y و المتغير المشترك x هنا قمنا بتعريف المتغير
+	public:
+		int x;
+		static int y;
+
+};
+
+// القيمة 0 كقيمة أولية y هنا قمنا بإعطاء المتغير المشترك
+int Demo::y = 0;
+
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+	// Demo هنا قمنا بتعريف ثلاث كائنات من الكلاس
+    Demo demo1, demo2, demo3;
+
+	// التي يملكها كل كائن قمنا بإنشائه x هنا قمنا بتغيير قيمة المتغير
+    demo1.x = 10;
+    demo2.x = 20;
+    demo3.x = 30;
+
+	// التي يملكها كل كائن قمنا بإنشائه x هنا قمنا بطباعة قيمة المتغير
+    cout &lt;&lt; "demo1.x = " &lt;&lt; demo1.x &lt;&lt; endl;
+    cout &lt;&lt; "demo2.x = " &lt;&lt; demo2.x &lt;&lt; endl;
+    cout &lt;&lt; "demo3.x = " &lt;&lt; demo3.x &lt;&lt; endl;
+
+	// التي هي نفسها لكل الكائنات و بالطبع الآن قيمته هي 0 لأننا لم نقم بتغيير قيمته الأولية y هنا قمنا بطباعة قيمة المتغير المشترك
+    cout &lt;&lt; "Demo.y = " &lt;&lt; demo1.y &lt;&lt; endl;
+    cout &lt;&lt; "Demo.y = " &lt;&lt; demo2.y &lt;&lt; endl;
+    cout &lt;&lt; "Demo.y = " &lt;&lt; demo3.y &lt;&lt; endl;
+
+	// demo1 إلى 5 من خلال الكائن y هنا قمنا بتغيير قيمة
+	// سيتم إعتبار أنها تغييرت بالنسبة لجميع الكائنات لأنها مشتركة فيما بينهم demo3 أو demo2 أو demo1 ملاحظة: سواء غيرناها من خلال الكائن
+    demo1.y = 5;
+
+	// demo1 من جديد للتأكد ما إن كانت حقاً أصبحت تساوي 5 أم لا بالنسبة لجميع الكائنات و ليس فقط الكائن y هنا قمنا بطباعة قيمة المتغير المشترك
+    cout &lt;&lt; "Demo.y = " &lt;&lt; demo1.y &lt;&lt; endl;
+    cout &lt;&lt; "Demo.y = " &lt;&lt; demo2.y &lt;&lt; endl;
+    cout &lt;&lt; "Demo.y = " &lt;&lt; demo3.y &lt;&lt; endl;
+
+    return 0;
+}
+
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+demo1.x = 10
+demo2.x = 20
+demo3.x = 30
+Demo.y = 0
+Demo.y = 0
+Demo.y = 0
+Demo.y = 5
+Demo.y = 5
+Demo.y = 5
+		</pre>
+</div>
+</article>
+<article>
+<h2>الدوال المشتركة</h2>
+<p>فكرة الدوال المشتركة ببساطة هي تعريف دالة في كلاس يمكن استدعاءها بشكل مباشر منه بدون الحاجة لإنشاء كائن منه.<br/>
+	الدالة التي يتم تعريفها كدالة مشتركة يمكنها فقط التعامل مع المتغيرات المشتركة, أي التي نوعها <code data-enlighter-language="cpp">static</code> مثلها.</p>
+<p>بالنسبة لطريقة تعريف دالة مشتركة فهي نفسها طريقة تعريف دالة عادية مع إضافة الكلمة <code data-enlighter-language="cpp">static</code> إليها.</p>
+<br/><br/>
+<p>في المثال التالي, سنستخدم متغير و دالة مشتَركين لمعرفة عدد الكائنات التي يتم إنشاؤها من الكلاس.</p>
+<p>في البداية قمنا بتعريف كلاس إسمه <code>Demo</code> يحتوي على متغير مشترك إسمه <code>counter</code> و دالة مشتركة إسمها <code>getCounter</code> عند استدعاءها تقوم بإرجاع قيمة المتغير <code>counter</code> فقط.</p>
+<p>في الكلاس <code>Demo</code> قمنا بتعديل الكونستركتور الإفتراضي لجعله يقوم بإضافة <code>1</code> على قيمة المتغير <code>counter</code> كلما تم إستدعاؤه.<br/>
+	بمعنى آخر, كلما قمنا بإنشاء كائن - من خلال الكونستركتور الإفتراضي - سيتم إضافة <code>1</code> على قيمة المتغير <code>counter</code> و بالتالي فإن قيمة <code>coutner</code> ستمثل عدد الكائنات التي يتم إنشاءها من الكلاس <span class="inline"><code>Demo</code>.</span></p>
+<p>في النهاية قمنا بإنشاء ثلاث كائنات من الكلاس <code>Demo</code> و من ثم إستدعاء الدالة <code>getCounter()</code> لمعرفة عدد الكائنات التي تم إنشاؤها.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// Demo هنا قمنا بتعريف الكلاس
+class Demo {
+
+	public:
+		// counter هنا قمنا بتعريف المتغير المشترك
+		static int counter;
+		
+		// كلما تم استدعاؤه counter هنا قمنا بتعريف الكونستركتور و جعلناه يزيد 1 على قيمة المتغير المشترك
+		Demo()
+		{
+			counter++;
+		}
+		
+		// فقط عندما يتم استدعاءها counter و قلنا أنها ترجع قيمة المشترك getCounter() هنا قمنا بتعريف الدالة المشتركة
+		static int getCounter()
+		{
+			return counter;
+		}
+
+};
+
+
+// القيمة 0 كقيمة أولية counter هنا قمنا بإعطاء المتغير المشترك
+int Demo::counter = 0;
+
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+	// Demo هنا قمنا بتعريف ثلاث كائنات من الكلاس
+    Demo demo1, demo2, demo3;
+	
+	// لطباعة عدد الكائنات التي تم إنشاءها منه Demo من الكلاس getCounter() هنا قمنا باستدعاء الدالة
+	cout &lt;&lt; "total created object = " &lt;&lt; Demo::getCounter();
+
+    return 0;
+}
+
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+total created object = 3
+		</pre>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

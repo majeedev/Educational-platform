@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>أنواع المتغيرات في بايثون | Python data types</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>أنواع المتغيرات في بايثون</h1>
+<article>
+<h2>مفهوم المتغيرات في بايثون</h2>
+<p><b>متغير:</b> تعني <span class="word">variable</span> في اللغة الإنجليزية.<br/>
+	الآن, نريدك أن تفهم المتغيرات على أنها فقط أماكن يتم حجزها في الذاكرة لتخزين البيانات أثناء تشغيل البرنامج.</p>
+<p>في بايثون, المبرمج غير مسؤول عن تحديد أنواع المتغيرات التي يعرّفها في برنامجه.<br/>
+	فعلياً, عندما تقوم بتعريف متغير و تضع فيه أي قيمة, سيقوم مفسّر لغة بايثون بتحديد نوع هذا المتغير بناءاً على القيمة التي أسندتها إليه بشكل تلقائي وقت التشغيل.</p>
+<p>في بايثون يجب إسناد قيمة إلى المتغير أثناء تعريفه.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+var = 5       # و قيمته 5 var هنا قمنا بتعريف متغير إسمه
+print(var)    # var هنا قمنا بطباعة قيمة المتغير
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			5
+		</div>
+</div>
+<br/>
+<p>في بايثون يمكن تعريف عدة متغيرات متساوية في القيمة في وقت واحد.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+x = y = z = 10      # 10 هنا قمنا بتعريف ثلاث متغيرات قيمتها
+
+print('x = ', x)    # x هنا قمنا بطباعة قيمة المتغير
+print('y = ', y)    # y هنا قمنا بطباعة قيمة المتغير
+print('z = ', z)    # z هنا قمنا بطباعة قيمة المتغير
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			x = 10<br/>
+			y = 10<br/>
+			z = 10
+		</div>
+</div>
+</article>
+<article>
+<h2>معرفة نوع المتغير في بايثون</h2>
+<p>لمعرفة نوع أي متغير يمكنك إستخدام الدالة <code data-enlighter-language="python">type()</code>.<br/>
+<span class="note">تذكر:</span> نوع المتغير في بايثون غير ثابت لأنه يتغير بشكل تلقائي على حسب نوع القيمة التي يتم تخزينها فيه.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+var = 10           # var هنا وضعنا رقم في المتغير
+print(type(var))   # لأنها عبارة عن رقم int لاحظ أن نوعها سيكون .var هنا طبعنا نوع قيمة المتغير
+
+var = 'harmash'    # var هنا وضعنا نص في المتغير
+print(type(var))   # لأنها عبارة عن نص str لاحظ أن نوعها سيكون .var هنا طبعنا نوع قيمة المتغير
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			&lt;class 'int'&gt;<br/>
+			&lt;class 'str'&gt;
+		</div>
+</div>
+</article>
+<article>
+<h2>أنواع المتغيرات في بايثون</h2>
+<p>تنقسم أنواع المتغيرات في بايثون إلى <span class="number">7</span> أنواع أساسية و هي:</p>
+<ul class="explain">
+<li><p>أرقام <span class="inline">(<span class="word">Numbers</span>).</span></p></li>
+<li><p>نصوص <span class="inline">(<span class="word">Strings</span>).</span></p></li>
+<li><p>منطقية <span class="inline">(<span class="word">Booleans</span>).</span></p></li>
+<li><p>مصفوفات ليس لها حجم ثابت يقال لها <span class="word">Lists</span>.</p></li>
+<li><p>مصفوفات حجمها و قيمها ثابتة, و غير قابلة للتغيير يقال لها <span class="word">Tuples</span>.</p></li>
+<li><p>مصفوفات ليس لها حجم ثابت, و لا يمكن حذف قيمها, و يمكن إضافة قيم جديدة فيها يقال لها <span class="word">Sets</span>.</p></li>
+<li><p>جداول تخزن البيانات فيها بطريقة مفايتح <span class="inline">(<span class="word">Keys</span>)</span> و قيم <span class="inline">(<span class="word">Values</span>)</span> يقال لها <span class="word">Dictionaries</span>.</p></li>
+</ul>
+</article>
+<article>
+<h2>الأرقام في بايثون</h2>
+<p>عند تعريف متغير و تخزين رقم فيه,  فإن مفسّر لغة بايثون سيقوم بشكل تلقائي بتحديد نوع هذا المتغير بناءاً على نوع القيمة الرقمية التي تم إسنادها إليه.<br/>
+	فإذا وضعت فيه عدد صحيح, يصبح نوعه <code data-enlighter-language="python">int</code>. و إذا وضعت فيه عدد عشري <span class="inline">( أي يحتوي على فاصلة )</span>, يصبح نوعه <code data-enlighter-language="python">float</code> و هكذا.</p>
+<br/>
+<p>أنواع الأرقام في بايثون تنقسم إلى <span class="number">3</span> أنواع كما في الجدول التالي.</p>
+<table class="list full-width">
+<tr>
+<th>النوع</th>
+<th>إستخدامه</th>
+<th>مثال</th>
+</tr>
+<tr>
+<td class="left"><code data-enlighter-language="python">int</code></td>
+<td>يستخدم لتخزين أعداد صحيحة.</td>
+<td class="left"><code data-enlighter-language="python">x = 3</code></td>
+</tr>
+<tr>
+<td class="left"><code data-enlighter-language="python">float</code></td>
+<td>يستخدم لتخزين أعداد تحتوي على فاصلة عشرية.</td>
+<td class="left"><code data-enlighter-language="python">x = 1.5</code></td>
+</tr>
+<tr>
+<td class="left"><code data-enlighter-language="python">complex</code></td>
+<td>يستخدم لتخزين أعداد مركبة <span class="inline">(<span class="word">Complex Number</span>)</span> و التي غالباً ما يحتاجها المهندسون عند إجراء عمليات حاسبية معقدة.<br/>
+<span class="note">ملاحظة:</span> هنا يجب وضع الحرف <code data-enlighter-language="python">J</code> أو <code data-enlighter-language="python">j</code> مباشرةً بعد العدد حتى يعرف مفسّر بايثون أنك تقصد عدد مركب و ليس عدد عادي.</td>
+<td class="left"><code data-enlighter-language="python">x = 4J</code></td>
+</tr>
+</table>
+<br/>
+<p>في المثال التالي قمنا بتعريف ثلاث متغيرات و كل متغير وضعنا فيه قيمة رقمية مختلفة في النوع و القيمة. بعدها قمنا بعرض نوع كل متغير منهم.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+x = 3            # قيمته عبارة عن عدد صحيح ,x هنا قمنا بتعريف متغير إسمه
+y = 1.5          #  قيمته عبارة عن عدد عشري ,y هنا قمنا بتعريف متغير إسمه
+z = 4J           #   قيمته عبارة عن عدد مركب ,z هنا قمنا بتعريف متغير إسمه
+
+print(type(x))   # x هنا طبعنا نوع قيمة المتغير
+print(type(y))   # y هنا طبعنا نوع قيمة المتغير
+print(type(z))   # z هنا طبعنا نوع قيمة المتغير
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			&lt;class 'int'&gt;<br/>
+			&lt;class 'float'&gt;<br/>
+			&lt;class 'complex'&gt;
+		</div>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>صحيح أن مفسّر بايثون يقوم بتحديد أنواع القيم بشكل تلقائي عنك لكن هذا لا يعني أنك غير قادر على تحويل أنواع الأرقام إلى النوع الذي يناسبك.<br/>
+		ستتعرف على دوال خاصة للتعامل مع الأرقام و ستتعلم طريقة تحويل أنواع الأرقام في درس خاص لاحقاً في هذه الدورة.</p>
+</div>
+</article>
+<article>
+<h2>النصوص في بايثون</h2>
+<p>لتعريف نص في بايثون نستخدم الرمز <code data-enlighter-language="python">'</code> أو الرمز <code data-enlighter-language="python">"</code> أو الرمز <code data-enlighter-language="python">"""</code>.</p>
+<br/>
+<p class="question">هل يوجد فرق بين هذه الرموز؟</p>
+<p>بالنسبة للرمز <code data-enlighter-language="python">'</code> و الرمز <code data-enlighter-language="python">"</code> فإنه لا يوجد أي فرق بينهما. و يمكن إستخدام أي واحد منهما لتعريف نص يتألف من سطر واحد.<br/>
+	بالنسبة للرمز <code data-enlighter-language="python">'''</code> و الرمز <code data-enlighter-language="python">"""</code> فإنه لا يوجد أي فرق بينهما. و يمكن إستخدام أي واحد منهما لتعريف نص كبير يتألف من عدة أسطر.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف ثلاث متغيرات تحتوي على قيم نصية. لاحظ أننا قمنا بتعريف كل متغيير بواسطة رمز مختلف.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# هنا قمنا بتعريف ثلاث متغيرات تحتوي على قيم نصية
+name = 'Mhamad'
+job = "Programmer"
+message = '''This string that will span across multiple lines. No need to use newline characters for the next lines.
+The end of lines within this string is counted as a newline when printed.'''
+
+# هنا قمنا بعرض قيم المتغيرات النصية بأسلوب مرتب
+print('Name: ', name)
+print('Job: ', job)
+print('Message: ', message)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Name: Mhamad<br/>
+			Job: Programmer<br/>
+			Message: This string that will span across multiple lines. No need to use newline characters for the next lines.<br/>
+			The end of lines within this string is counted as a newline when printed. 
+		</div>
+</div>
+<br/>
+<p>في المثال التالي قمنا بتعريف نص يحتوي على نفس الرموز التي تستخدم لتعريف النصوص.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# يحتوي على قيمة نصية text هنا قمنا بتعريف متغير إسمه
+text = """In this line we print 'single quotations'
+In this line we print "double quotations" """
+
+# text هنا قمنا بعرض قيمة المتغير
+print(text)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			In this line we print 'single quotations'<br/>
+			In this line we print "double quotations"
+		</div>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>هناك أساليب و دوال خاصة للتعامل مع النصوص سنشرحها في درس خاص لاحقاً في هذه الدورة.</p>
+</div>
+</article>
+<article>
+<h2>القيم المنطقية في بايثون</h2>
+<p>النوع <code data-enlighter-language="python">bool</code> يستخدم في العادة عند وضع شروط منطقية أو لمعرفة ما إذا تم تنفيذ أمر معين بنجاح أم لا.<br/>
+	عند إسناد القيمة <code data-enlighter-language="python">True</code> أو القيمة <code data-enlighter-language="python">False</code> إلى المتغير فإنه يصبح من النوع <code data-enlighter-language="python">bool</code>.</p>
+<br/>
+<h3>معلومة تقنية</h3>
+<p>في الواقع القيمة <code data-enlighter-language="python">True</code> تساوي <span class="number">1</span> و القيمة <code data-enlighter-language="python">False</code> تساوي <span class="number">0</span>.<br/>
+	في بايثون يفضل إستخدام الصفر و الواحد بدلاً من إستخدام القيم المحجوزة <code data-enlighter-language="python">True</code> و <code data-enlighter-language="python">False</code> عند التشييك على قيمة المتغير أو على ما سترجعه الدالة.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف متغير إسمه <code data-enlighter-language="python">check</code> و أعطيناه القيمة <code data-enlighter-language="python">True</code> ثم إستخدمناه في وضع شرط.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# True و قيمته check هنا قمنا بتعريف إسمه
+check = True
+
+# True تساوي check سيتم تنفيذ أمر الطباعة الموضوع هنا إذا كانت قيمة المتغير
+if check == True:
+    print('check = True')
+
+# False أي إذا كانت تساوي True تساوي check سيتم تنفيذ أمر الطباعة الموضوع هنا إذا لم تكن قيمة المتغير
+else:
+    print('check = False')
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			check = True
+		</div>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>بدل الأمر <code data-enlighter-language="python">if check == True:</code> كان يمكنك كتابة <code data-enlighter-language="python">if check == 1:</code> أو كتابة <code data-enlighter-language="python">if check:</code> فقط و الحصول على نفس النتيجة.</p>
+</div>
+</article>
+<article>
+<h2>تخزين البيانات في <span class="word">List</span> في بايثون</h2>
+<p>الـ <span class="word">List</span> عبارة عن مصفوفة حجمها غير ثابت و يمكنها تخزين قيم من مختلف الأنواع في وقت واحد.<br/>
+	في بايثون نستخدم الرمز <code data-enlighter-language="python">[ ]</code> لتعريف مصفوفة أحادية <span class="inline">( أي ذات بعد واحد )</span> ليس لها حجم ثابت.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف <span class="number">4</span> مصفوفات.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+A = []                                 # هنا قمنا بتعريف مصفوفة فارغة
+B = [10, 20, 30, 40, 50]               # هنا قمنا بتعريف مصفوفة تحتوي على أعداد صحيحة فقط
+C = ['Mhamad', 'Samer', 'Abdullah']    # هنا قمنا بتعريف مصفوفة تحتوي على نصوص فقط
+D = [1, 'two', 'three', 4]             # هنا قمنا بتعريف مصفوفة تحتوي على أعداد صحيحة و نصوص
+		</pre>
+</div>
+<br/>
+<p>في المثال التالي قمنا بتعريف مصفوفة تتألف من <span class="number">4</span> عناصر, ثم قمنا بإعطائها <span class="number">4</span> قيم, ثم قمنا بإضافة عنصر جديد عليها, ثم عرضنا قيمها و عدد عناصرها.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# هنا قمنا بتعريف مصفوفة من النصوص تتألف من 4 عناصر
+languages = [str] * 4
+
+# هنا قمنا بوضع قيمة في كل عنصر فيها
+languages[0] = 'Arabic'
+languages[1] = 'French'
+languages[2] = 'English'
+languages[3] = 'Spanish'
+
+# هنا قمنا بإضافة عنصر جديد على المصفوفة
+languages.append('German')
+
+# هنا قمنا بعرض قيم المصفوفة و عدد عناصرها
+print('Stored languages:', languages)
+print('Number of stored languages is:', len(languages))
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Stored languages: ['Arabic', 'French', 'English', 'Spanish', 'German']<br/>
+			Number of stored languages is: 5
+		</div>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>ستتعرف على دوال خاصة للتعامل مع الـ <span class="word">Lists</span> و سبب إستخدامهم و ستتعلم طرق كثيرة للتعامل معهم في درس خاص لاحقاً في هذه الدورة.</p>
+</div>
+</article>
+<article>
+<h2>تخزين البيانات في <span class="word">Tuple</span> في بايثون</h2>
+<p>الـ <span class="word">Tuple</span> عبارة عن مصفوفة حجمها ثابت و قيمها غير قابلة للتغيير و يمكنها تخزين قيم من مختلف الأنواع في وقت واحد.<br/>
+	في بايثون نستخدم الرمز <code data-enlighter-language="python">( )</code> لتعريف مصفوفة أحادية <span class="inline">( أي ذات بعد واحد )</span> حجمها و قيمها ثابتة.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف <span class="number">4</span> مصفوفات.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+A = ()                                 # هنا قمنا بتعريف مصفوفة فارغة
+B = (10, 20, 30, 40, 50)               # هنا قمنا بتعريف مصفوفة تحتوي على أعداد صحيحة فقط
+C = ('Mhamad', 'Samer', 'Abdullah')    # هنا قمنا بتعريف مصفوفة تحتوي على نصوص فقط
+D = (1, 'two', 'three', 4)             # هنا قمنا بتعريف مصفوفة تحتوي على أعداد صحيحة و نصوص
+		</pre>
+</div>
+<br/>
+<p>في المثال التالي قمنا بتعريف مصفوفة تتألف من <span class="number">4</span> عناصر ثابتة, ثم عرضنا قيمها و عدد عناصرها.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# هنا قمنا بتعريف مصفوفة ليس لها نوع محدد و تتألف من 4 عناصر
+languages = ('Arabic', 'French', 'English', 'Spanish')
+
+# هنا قمنا بعرض قيم المصفوفة و عدد عناصرها
+print('Stored languages:', languages)
+print('Number of stored languages is:', len(languages))
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Stored languages: ('Arabic', 'English', 'French', 'Spanish')<br/>
+			Number of stored languages is: 4
+		</div>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>ستتعرف على دوال خاصة للتعامل مع الـ <span class="word">Tuples</span> و سبب إستخدامهم و ستتعلم طرق كثيرة للتعامل معهم في درس خاص لاحقاً في هذه الدورة.</p>
+</div>
+</article>
+<article>
+<h2>تخزين البيانات في <span class="word">Set</span> في بايثون</h2>
+<p>الـ <span class="word">Set</span> عبارة عن مصفوفة ليس لها حجم ثابت و قيمها غير قابلة للتغيير و يمكنها تخزين قيم من مختلف الأنواع في وقت واحد.<br/>
+	في بايثون نستخدم الرمز <code data-enlighter-language="python">{ }</code> لتعريف مصفوفة أحادية <span class="inline">( أي ذات بعد واحد )</span> ليس لها حجم ثابت و قيمها غير قابلة للتغيير.</p>
+<p>في مصفوفات <span class="inline">الـ <span class="word">Set</span></span> يتم تخزين البيانات بشكل عشوائي و ليس بالترتيب كما تم إدخالهم, و السبب في أنه في هذا النوع من المصفوفات لا يتم إعطاء رقم <span class="word">Index</span> خاص لكل عنصر.<br/>
+	لهذا السبب أيضاً, لا يمكنك الوصول لعنصر محدد في <span class="word">Set</span> بشكل مباشر لأنه في الأساس لا يملك رقم <span class="inline"><span class="word">Index</span>.</span></p>
+<br/>
+<p>في المثال التالي قمنا بتعريف <span class="number">4</span> مصفوفات.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+A = {}                                 # هنا قمنا بتعريف مصفوفة فارغة
+B = {10, 20, 30, 40, 50}               # هنا قمنا بتعريف مصفوفة تحتوي على أعداد صحيحة فقط
+C = {'Mhamad', 'Samer', 'Abdullah'}    # هنا قمنا بتعريف مصفوفة تحتوي على نصوص فقط
+D = {1, 'two', 'three', 4}             # هنا قمنا بتعريف مصفوفة تحتوي على أعداد صحيحة و نصوص
+		</pre>
+</div>
+<br/>
+<p>في المثال التالي قمنا بتعريف مصفوفة تتألف من <span class="number">4</span> عناصر ثابتة, ثم عرضنا قيمها و عدد عناصرها.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# هنا قمنا بتعريف مصفوفة ليس لها نوع محدد و تتألف من 4 عناصر
+languages = {'Arabic', 'French', 'English', 'Spanish'}
+
+# هنا قمنا بعرض قيم المصفوفة و عدد عناصرها
+print('Stored languages:', languages)
+print('Number of stored languages is:', len(languages))
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Stored languages: ('Arabic', 'English', 'French', 'Spanish')<br/>
+			Number of stored languages is: 4
+		</div>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>ستتعرف على دوال خاصة للتعامل مع الـ <span class="word">Sets</span> و سبب إستخدامهم و ستتعلم طرق كثيرة للتعامل معهم في درس خاص لاحقاً في هذه الدورة.</p>
+</div>
+</article>
+<article>
+<h2>تخزين البيانات في <span class="word">Dictionary</span> في بايثون</h2>
+<p>عند إستخدام الـ <span class="word">List</span> أو <span class="word">Tuple</span> فإنك تتعامل مع عناصرهم من خلال أرقام الـ <span class="word">Indices</span>.<br/>
+	فكرة الـ <span class="word">Dictionary</span> هي وضع مفتاح لكل قيمة. عندها تصل لقيمة كل عنصر موجود من خلال المفتاح الخاص فيه.</p>
+<p>إذاً الـ <span class="word">Dictionary</span> عبارة جدول تخزن فيه البيانات بطريقة مفاتيح <span class="inline">(<span class="word">Keys</span>)</span> و قيم <span class="inline">(<span class="word">Values</span>)</span>.<br/>
+	بالنسبة لنوع البيانات التي تخزنها بداخل الـ <span class="word">Dictionary</span> فعندك الحرية في تخزين مفاتيح و قيم من أي نوع تريد.</p>
+<p>في بايثون نستخدم الرمز <code data-enlighter-language="python">{ }</code> لتعريف <span class="word">Dictionary</span>.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف <span class="word">Dictionary</span> يتألف من <span class="number">5</span> عناصر, ثم عرضنا قيمة العنصر الثالث من خلال المفتاح الخاص فيه.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# يتألف من 5 عناصر dictionary هنا قمنا بتعريف
+dictionary = {
+    1: 'One',
+    2: 'Tow',
+    3: 'Three',
+    4: 'Four',
+    5: 'Five'
+}
+
+# هنا قمنا بعرض قيمة العنصر الذي يحمل المفتاح رقم 3
+print(dictionary[3])
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Three
+		</div>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>ستتعرف على دوال خاصة للتعامل مع الـ <span class="word">Dictionaries</span> و سبب إستخدامهم و ستتعلم طرق كثيرة للتعامل معهم في درس خاص لاحقاً في هذه الدورة.</p>
+</div>
+</article>
+<article>
+<h2>هل كل شيء في بايثون عبارة عن كائن؟</h2>
+<p>الجواب هو نعم. رغم أننا نقول متغير للكائن الذي يحتوي على قيمة رقمية أو نصية, إلا أنه في الواقع عبارة عن كائن و ليس متغير عادي كما يوجد في لغات البرمجة الأخرى.</p>
+<p>في حال كنت تستخدم برنامج <span class="word">PyCharm</span>, تلاحظ أنه عند كتابة إسم أي متغير و وضع نقطة مباشرةً بعده, فإنه يظهر لك أنه يمكن إستدعاء دوال أو خصائص موجودة فيه!<br/>
+	لاحظ الصورة التالية.</p>
+<a href="every-thing-is-an-object-in-python.gif" target="_blank"><img alt="هل كل شيء في بايثون عبارة عن كائن" src="every-thing-is-an-object-in-python.gif"/></a>
+<p>إذاً لو لم تكن هذه المتغيرات في الحقيقة عبارة عن كائنات لما ظهر لنا أي شيء عند وضع النقطة.</p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+﻿@charset "UTF-8";
+
+input{
+    height: 30px;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#IPAddress{direction:ltr;}
+
+#table_result tr:hover {background-color:#D4D4D4; color:#00F}
+
+#table_result td {direction:ltr; text-align:left; font-family: monospace;}
+
+#ads {
+	padding-top: 15px;
+	margin-top: 40px;
+	display: block;
+    background: #d4d4d4;
+	text-align: center;
+}

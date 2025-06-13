@@ -1,0 +1,862 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+
+
+<!-- Mirrored from harmash.com/java/java-data-structure/vector.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Jun 2020 17:01:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66898688-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+
+    <!-- web style -->
+    <link rel="icon" type="image/x-icon" href="../../template/images/harmash_x.png" />
+    <link rel="stylesheet" type="text/css" href="../../template/css/style-2020-6-21.min.css" />
+
+    <!-- jquery -->
+    <script src="../../template/js/jquery.min.js"></script>
+
+    <!-- web scripts -->
+    <script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+
+    <!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+    <link rel="stylesheet" type="text/css" href="../../template/css/EnlighterJS.min.css" />
+    <meta name="EnlighterJS" content="Advanced javascript based syntax highlighting" data-indent="4"
+        data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" />
+
+    <title>الكلاس Vector في جافا</title>
+
+    <style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <ul>
+            <li id="menu"><img src="../../template/images/ic_menu.png"></li>
+            <li id="library">المكتبة ▾</li>
+            <li id="search"><img src="../../template/images/ic_search.png"></li>
+            <li id="blog"><a href="../../blog/index.html">مقالات</a></li>
+            <li id="home"><a href="../../index.html"><img src="../../template/images/ic_home.png"></a></li>
+            <li id="logo" style="float: left;"><a href="../../index.html">HARMASH.COM</a></li>
+        </ul>
+    </div>
+    <div id="container">
+        <div id="container_row">
+            <div id="side_nav">
+                <ul><li id="method_img"><img src="../java-icon.png"></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class & Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+            </div>
+            <div id="main">
+                <div id="loader_box">
+                    <div class="lds-facebook">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                
+                <div id="top_ads"></div>
+
+                <div class="next-and-previous-lessons">
+                    <a class="next-page">
+                        <span class="next-page-text"></span><span class="cursor">»</span>
+                    </a>
+                    <a class="previous-page">
+                        <span class="cursor">»</span><span class="previous-page-text"></span>
+                    </a>
+                </div>
+                <div id="hsoub_ad">
+                    <div>
+                        <div>
+                            <span class="its-ad">إعلان</span>
+                            <img style="max-width: 110px;" src="../../ads/hsoub/hsoub2.png">
+                        </div>
+                        <a rel="nofollow" href="https://academy.hsoub.com/learn/javascript-application-development/">
+                            دورة تطوير التطبيقات باستخدام لغة JavaScript
+                        </a>
+                        <a rel="nofollow" href="https://academy.hsoub.com/learn/front-end-web-development/">
+                            دورة تطوير واجهات المستخدم
+                        </a>
+                        <a rel="nofollow" href="https://academy.hsoub.com/learn/hybrid-mobile-application-development/">
+                            دورة تطوير تطبيقات الجوال باستخدام تقنيات الويب
+                        </a>
+                        <a rel="nofollow" href="https://academy.hsoub.com/learn/php-web-application-development/">
+                            دورة تطوير تطبيقات الويب باستخدام لغة PHP
+                        </a>
+                        <a rel="nofollow" href="https://academy.hsoub.com/learn/ruby-web-application-development/">
+                            دورة تطوير تطبيقات الويب باستخدام لغة Ruby
+                        </a>
+                        <a rel="nofollow" href="https://academy.hsoub.com/learn/computer-science/">
+                            دورة علوم الحاسوب
+                        </a>
+                    </div>
+                </div>
+                <h1><span class="session">Java</span>الكلاس <code data-enlighter-language="java">Vector</code> في جافا</h1>
+<article>
+    <h2>مقدمة</h2>
+	<p>الكلاس <code data-enlighter-language="java">Vector</code> يستخدم لإنشاء مصفوفات متطورة مقارنةً مع المصفوفات العادية <span class="word">Arrays</span>, حيث يوفر لك مجموعة من الدوال التي تمكنك من البحث فيها, التشييك على عناصرها, إضافة عناصر جديدة, حذف عناصر منها, و معالجة أكثر من عنصر فيها في نفس الوقت إلخ..</p>
+	<p>أهم ميزة في المصفوفات التي نوعها <code data-enlighter-language="java">Vector</code> هي أن عدد العناصر فيها غير ثابت, حيث أنه يزيد عند إضافة عنصر جديد فيها و ينقص عند حذف عنصر منها بشكل تلقائي, و هذه الميزة غير موجودة في المصفوفات العادية.</p>
+	<p>كما أنك تستطيع الوصول للعناصر الموجودة فيها عن طريق أرقام الـ <span class="word">Index</span> التي تعطى بالترتيب لكل عنصر يضاف فيها.</p>
+</article>
+<article>
+    <h2>كونستركتورات الكلاس <code data-enlighter-language="java">Vector</code></h2>
+	<p>الجدول التالي يحتوي على جميع الكونستركتورات الموجودين في الكلاس <code data-enlighter-language="java">Vector</code>.</p>
+	<table class="list full-width rows-numbers">
+	    <tr>
+			<th colspan="2">الكونستركتور مع تعريفه</th>
+		</tr>
+		<tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public Vector()</code></span>
+			هذا الكونستركتور الإفتراضي في الكلاس <code data-enlighter-language="java">Vector</code>, يستخدم لإنشاء كائن نوعه <code data-enlighter-language="java">Vector</code> حجمه <span class="number">10</span>, أي يمكن أن يحتوي على <span class="number">10</span> عناصر.<br>
+			هنا كلما امتلأ الـ <code data-enlighter-language="java">Vector</code> سيحجز مكان لـ <span class="number">10</span> عناصر جديدة في الذاكرة.</td>
+		</tr>
+		<tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public Vector(int size)</code></span>
+			يستخدم هذا الكونستركتور لتحديد حجم كائن الـ <code data-enlighter-language="java">Vector</code> الأولي.<br>
+			الرقم الذي نضعه <span class="inline">كـ <span class="word">Argument</span></span> في هذا الكونستركتور يحدد عدد العناصر الذي يمكن أن يحتويه كائن الـ <code data-enlighter-language="java">Vector</code>, و يحدد أيضاً عدد العناصر الذي سيحجز له في الذاكرة كلما امتلأ.</td>
+		</tr>
+		<tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public Vector(int size, int increment)</code></span>
+			يستخدم هذا الكونستركتور لتحديد حجم كائن الـ <code data-enlighter-language="java">Vector</code> الأولي و تحديد كم عنصر جديد سيضاف فيه كلما امتلأ.<br>
+			الرقم الذي نضعه مكان الباراميتر <code data-enlighter-language="java">size</code> يحدد عدد العناصر الذي يمكن أن يحتويه كائن الـ <code data-enlighter-language="java">Vector</code>.<br>
+			الرقم الذي نضعه مكان الباراميتر <code data-enlighter-language="java">increment</span> يحدد أيضاً عدد العناصر الذي سيحجز له في الذاكرة كلما امتلأ.</td>
+		</tr>
+		<tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public Vector(Collection c)</code></span>
+			يستخدم هذا الكونستركتور لإنشاء كائن نوعه <code data-enlighter-language="java">Vector</code> يحتوي على عناصر كائن الـ <code data-enlighter-language="java">Collection</code> الذي نمرره له <span class="inline">كـ <span class="word">Argument</span>.</span></td>
+		</tr>
+    </table>
+</article>
+<article>
+    <h2>دوال الكلاس <code data-enlighter-language="java">Vector</code></h2>
+	<p>الجدول التالي يحتوي على جميع دوال الكلاس <span class="word">Vector.</span></p>
+	<table class="list full-width rows-numbers">
+	    <tr>
+			<th colspan="2">الدالة مع تعريفها</th>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public void add(int index, Object element)</code></span>
+			تستخدم لإضافة عنصر جديد في مكان محدد في كائن الـ <code data-enlighter-language="java">Vector</code>.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public boolean add(Object o)</code></span>
+			تستخدم لإضافة عنصر جديد في آخر كائن الـ <code data-enlighter-language="java">Vector</code>.<br>
+			ترجع <code data-enlighter-language="java">true</code> إذا تمت الإضافة بنجاح.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public boolean addAll(Collection c)</code></span>
+			تستخدم لإضافة جميع العناصر الموجودين في كائن الـ <code data-enlighter-language="java">Collection</code> بالترتيب في آخر كائن الـ <code data-enlighter-language="java">Vector</code>.<br>
+			ترجع <code data-enlighter-language="java">true</code> إذا تمت الإضافة بنجاح.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public boolean addAll(int index, Collection c)</code></span>
+			تستخدم لإضافة جميع العناصر الموجودين في كائن الـ <code data-enlighter-language="java">Collection</code> بالترتيب في مكان محدد في كائن الـ <code data-enlighter-language="java">Vector</code>.<br>
+			ترجع <code data-enlighter-language="java">true</code> إذا تمت الإضافة بنجاح.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public void addElement(Object o)</code></span>
+			تستخدم لإضافة عنصر جديد في آخر كائن الـ <code data-enlighter-language="java">Vector</code> مع زيادة عدد العناصر واحداً.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public int capacity()</code></span>
+			ترجع حجم كائن الـ <code data-enlighter-language="java">Vector</code> المحجوز في الذاكرة.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public void clear()</code></span>
+			تمسح جميع العناصر الموجودة في كائن الـ <code data-enlighter-language="java">Vector</code>.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public Object clone()</code></span>
+			تنشئ نسخة من كائن الـ <code data-enlighter-language="java">Vector</code>.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public boolean contains(Object elem)</code></span>
+			ترجع <code data-enlighter-language="java">true</code> إذا كان كائن الـ <code data-enlighter-language="java">Vector</code> يحتوي على الكائن الذي نضعه لها <span class="inline">كـ <span class="word">Argument</span>.</span></td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public boolean containsAll(Collection c)</code></span>
+			ترجع <code data-enlighter-language="java">true</code> إذا كان كائن الـ <code data-enlighter-language="java">Vector</code> يحتوي على جميع العناصر الموجودة في كائن الـ <code data-enlighter-language="java">Collection</code> الذي نضعه لها <span class="inline">كـ <span class="word">Argument</span>.</span></td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public void copyInto(Object[] anArray)</code></span>
+			تنسخ محتوى كائن الـ <code data-enlighter-language="java">Vector</code> في مصفوفة من نفس النوع.<br>
+			<span class="note">ملاحظة:</span> حجم المصفوفة التي سيتم نسخ القيم فيها يجب أن لا يكون أصغر من حجم كائن الـ <code data-enlighter-language="java">Vector</code>. كما أن نوع المصفوفة التي سيتم النسخ فيها يجب أن يتناسب مع نوع القيم المراد تخزينها فيها.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public Object elementAt(int index)</code></span>
+			ترجع العنصر الموجود على <span class="inline">الـ <span class="word">index</span></span> الذي نمرره لها <span class="inline">كـ <span class="word">Argument</span>.</span></td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public Enumeration elements()</code></span>
+			ترجع كائن نوع <code data-enlighter-language="java">Enumeration</code> يحتوي على جميع عناصر كائن الـ <code data-enlighter-language="java">Vector</code>.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public void ensureCapacity(int minCapacity)</code></span>
+			تحدد عدد العناصر الأقل الذي يجب أن يحجز للكائن <code data-enlighter-language="java">Vector</code> في الذاكرة.<br>
+			إذا كان العدد الموضوع فيها أكبر من عدد العناصر المحجوز للكائن <code data-enlighter-language="java">Vector</code>, عندها يتم تكبير حجمه.<br>
+			إذا كان العدد الموضوع فيها أصغر من عدد العناصر الموجودة في كائن الـ <code data-enlighter-language="java">Vector</code>, لن تفعل أي شيء.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public boolean equals(Object o)</code></span>
+			تقارن كائن الـ <code data-enlighter-language="java">Vector</code> مع أي مصفوفة نمررها لها <span class="inline">كـ <span class="word">Argument</span>.</span><br>
+			ترجع <code data-enlighter-language="java">true</code> في حال كان كائن الـ <code data-enlighter-language="java">Vector</code> يتطابق مع المصفوفة في عدد و قيم العناصر الموضوعة فيهما و بنفس الترتيب.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public Object firstElement()</code></span>
+			ترجع أول عنصر موجود في كائن الـ <code data-enlighter-language="java">Vector</code>, أي العنصر الموجود على <span class="inline">الـ <span class="word">index</span></span> رقم <span class="inline"><span class="number">0</span>.</span></td>
+			</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public Object get(int index)</code></span>
+			ترجع العنصر الموجود على <span class="inline">الـ <span class="word">index</span></span> الذي نمرره لها <span class="inline">كـ <span class="word">Argument</span>.</span></td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public int hashCode()</code></span>
+			ترجع الـ <span class="word">Hash Code</span> للعنصر الذي قام باستدعائها.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public int indexOf(Object elem)</code></span>
+			تبحث في كائن الـ <code data-enlighter-language="java">Vector</code> عن أي قيمة نمررها لها <span class="inline">كـ <span class="word">Argument</span>.</span><br>
+			ترجع رقم أول <span class="word">Index</span> يحتوي على القيمة المطلوبة في حال وجود نفس القيمة في أكثر من عنصر.<br>
+			ترجع <span class="number">1-</span> في حال عدم إيجاد القيمة المطلوبة.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public int indexOf(Object elem, int index)</code></span>
+			تبحث في كائن الـ <code data-enlighter-language="java">Vector</code> عن أي قيمة نمررها لها <span class="inline">كـ <span class="word">Argument</span>.</span><br>
+			تبدأ عملية البحث من رقم <span class="inline">الـ <span class="word">index</span></span> الذي نضعه مكان الباراميتر الثاني.<br>
+			ترجع رقم أول <span class="word">Index</span> يحتوي على القيمة المطلوبة في حال وجود نفس القيمة في أكثر من عنصر.<br>
+			ترجع <span class="number">1-</span> في حال عدم إيجاد القيمة المطلوبة.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public void insertElementAt(Object obj, int index)</code></span>
+			تستخدم لإضافة عنصر جديد في مكان محدد في كائن الـ <code data-enlighter-language="java">Vector</code>.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public boolean isEmpty()</code></span>
+			ترجع <code data-enlighter-language="java">true</code> في حال كان كائن الـ <code data-enlighter-language="java">Vector</code> فارغاً.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public Object lastElement()</code></span>
+			ترجع آخر عنصر موجود في كائن الـ <code data-enlighter-language="java">Vector</code>.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public int lastIndexOf(Object elem)</code></span>
+			تبحث في كائن الـ <code data-enlighter-language="java">Vector</code> عن أي قيمة نمررها لها <span class="inline">كـ <span class="word">Argument</span>.</span><br>
+			ترجع رقم آخر <span class="word">Index</span> يحتوي على القيمة المطلوبة في حال وجود نفس القيمة في أكثر من عنصر.<br>
+			ترجع <span class="number">1-</span> في حال عدم إيجاد القيمة المطلوبة.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public int lastIndexOf(Object elem, int index)</code></span>
+			تبحث في كائن الـ <code data-enlighter-language="java">Vector</code> عن أي قيمة نمررها لها <span class="inline">كـ <span class="word">Argument</span>.</span><br>
+			تبدأ عملية البحث من رقم <span class="inline">الـ <span class="word">index</span></span> الذي نضعه مكان الباراميتر الثاني.<br>
+			ترجع رقم آخر <span class="word">Index</span> يحتوي على القيمة المطلوبة في حال وجود نفس القيمة في أكثر من عنصر.<br>
+			ترجع <span class="number">1-</span> في حال عدم إيجاد القيمة المطلوبة.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public Object remove(int index)</code></span>
+			تحذف عنصر محدد من كائن الـ <code data-enlighter-language="java">Vector</code>.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public boolean remove(Object o)</code></span>
+			تحذف أول عنصر يتم إيجاده في كائن الـ <code data-enlighter-language="java">Vector</code> في حال كان يتطابق مع الكائن الذي نمرره لها <span class="inline">كـ <span class="word">Argument</span>.</span><br>
+			ترجع <code data-enlighter-language="java">true</code> إذا تم حذف العنصر بنجاح.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public boolean removeAll(Collection c)</code></span>
+			تحذف مجموعة متتالية من العناصر الموجود في كائن الـ <code data-enlighter-language="java">Vector</code> في حال كانت تتطابق مع كائن الـ <code data-enlighter-language="java">Collection</code> الذي نمرره لها <span class="inline">كـ <span class="word">Argument</span>.</span><br>
+			ترجع <code data-enlighter-language="java">true</code> إذا تم حذف جميع العناصر بنجاح.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public boolean removeAllElements()</code></span>
+			تحذف جميع العناصر من كائن الـ <code data-enlighter-language="java">Vector</code>, و تجعل حجمه يساوي <span class="inline"><span class="number">0</span>.</span><br>
+			ترجع <code data-enlighter-language="java">true</code> إذا تم حذف جميع العناصر بنجاح.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public boolean removeElement(Object obj)</code></span>
+			تحذف أول عنصر يتم إيجاده في كائن الـ <code data-enlighter-language="java">Vector</code> في حال كان يتطابق مع الكائن الذي نمرره لها <span class="inline">كـ <span class="word">Argument</span>.</span><br>
+			ترجع <code data-enlighter-language="java">true</code> إذا تم حذف العنصر بنجاح.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public void removeElementAt(int index)</code></span>
+			تحذف عنصر محدد من عناصر كائن الـ <code data-enlighter-language="java">Vector</code>.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public boolean retainAll(Collection c)</code></span>
+			تبقي عناصر كائن الـ <code data-enlighter-language="java">Vector</code> الموجودة في كائن الـ <code data-enlighter-language="java">Collection</code> الذي نمرره لها كـ <span class="word">Argument</span>, و تحذف جميع العناصر الأخرى.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public Object set(int index, Object element)</code></span>
+			تبدل عنصر محدد في كائن الـ <code data-enlighter-language="java">Vector</code> بعنصر جديد, و ترجعه أيضاً.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public void setElementAt(Object obj, int index)</code></span>
+			تبدل عنصر محدد في كائن الـ <code data-enlighter-language="java">Vector</code> بعنصر جديد.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public void setSize(int newSize)</code></span>
+			تحدد عدد عناصر كائن الـ <code data-enlighter-language="java">Vector</code>.<br>
+			إذا كان العدد الموضوع فيها أكبر من عدد عناصر كائن الـ <code data-enlighter-language="java">Vector</code>, عندها توضع القيمة <code data-enlighter-language="java">null</code> مكان كل عنصر فارغ <span class="inline">( أي غير مستخدم ).</span><br>
+			إذا كان العدد الموضوع فيها أصغر من عدد العناصر كائن الـ <code data-enlighter-language="java">Vector</code>, عندها يتم حذف العناصر التي لم يعد كائن الـ <code data-enlighter-language="java">Vector</code> قادراً على تخزينها.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public int size()</code></span>
+			ترجع عدد العناصر الموجودة في كائن الـ <code data-enlighter-language="java">Vector</code>.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public List subList(int fromIndex, int toIndex)</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">List</code> يمثل العناصر الموجودة في كائن الـ <code data-enlighter-language="java">Vector</code> إبتداءاً من <code data-enlighter-language="java">fromIndex</code> وصولاً إلى ما قبل <code data-enlighter-language="java">toIndex</code>.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public Object[] toArray()</code></span>
+			ترجع مصفوفة نوعها <code data-enlighter-language="java">Object</code> تحتوي على جميع العناصر الموجودة في كائن الـ <code data-enlighter-language="java">Vector</code>.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public String toString()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">String</code> يمثل العناصر الموجودة في كائن الـ <code data-enlighter-language="java">Vector</code>.</td>
+		</tr>
+	    <tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">public void trimToSize()</code></span>
+			تصغر حجم كائن الـ <code data-enlighter-language="java">Vector</code> في الذاكرة, حيث أنها تحذف جميع الأماكن المحجوزة له في الذاكرة و التي لم يضطر إلى استخدامها لأنها ما زالت فارغة <span class="inline">( أي لا تحتوي على عنصر ).</span></td>
+		</tr>
+	</table>
+</article>
+<article>
+    <h2>أمثلة شاملة</h2>
+	<p>في كل مثال موضوع استخدامنا كونستركتور مختلف و دوال جديدة.</p>
+	<br><br>
+	<h3>المثال الأول</h3>
+	<p>في المثال التالي وضحنا الفرق بين حجم كائن الـ <code data-enlighter-language="java">Vector</code> في الذاكرة و بين عدد عناصره المستخدمة.</p>
+	<p>استخدامنا فيه الدوال التالية: <code data-enlighter-language="java">add()</code> - <code data-enlighter-language="java">capacity()</code> - <code data-enlighter-language="java">size()</code> - <code data-enlighter-language="java">trimToSize()</code>.</p>
+	<div class="example-box">
+	    <span class="code-title java-file-icon">Main.java</span>
+        <pre data-enlighter-language="java">
+import java.util.Vector;                                         // Vector هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Vector v = new Vector();                                 // باستخدام الكونستركتور الإفتراضي v إسمه Vector هنا قمنا بإنشاء كائن من الكلاس
+ 
+        System.out.println("capacity = " + v.capacity());        // في الذاكرة و الذي سيكون 10 لأن هذا الكائن أنشئ بواسطة الكونستركتور الإفتراضي v هنا عرضنا عدد العناصر المحجوز للكائن
+        System.out.println("size     = " + v.size() + "\n");     // و الذي سيكون 0 لأننا لم ندخل فيه أي كائن بعد v هنا عرضنا عدد عناصر الكائن
+ 
+        v.add("A");                                              // v هنا قمنا بإضافة 11 عنصر في الكائن
+        v.add("B");
+        v.add("C");
+        v.add("D");
+        v.add("E");
+        v.add("F");
+        v.add("G");
+        v.add("H");
+        v.add("I");
+        v.add("J");
+        v.add("K");
+ 
+        System.out.println("capacity = " + v.capacity());        // و الذي أصبح 20 لأن الكونستركتور الإفتراضي يحجز 10 أماكن جديدة كلما إمتلأ v هنا عرضنا عدد العناصر المحجوز للكائن
+        System.out.println("size     = " + v.size() + "\n");     // و الذي أصبح 11 لأننا أضفنا فيه 11 عنصراً v هنا عرضنا عدد عناصر الكائن
+ 
+        v.trimToSize();                                          // و التي لم يحتاجها v هنا قمنا بحذف الأماكن المحجوزة في الذاكرة من أجل الكائن
+ 
+        System.out.println("capacity = " + v.capacity());        // هنا عرضنا حجم المصفوفة في الذاكرة و عدد عناصرها, لاحظ أنهما أصبحا متساويان
+        System.out.println("size     = " + v.size());
+ 
+    }
+ 
+}
+		</pre>
+		<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+		<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+capacity = 10
+size     = 0
+
+capacity = 20
+size     = 11
+
+capacity = 11
+size     = 11 
+		</pre>
+	</div>
+	<br><br>
+	<h3>المثال الثاني</h3>
+	<p>في المثال التالي قمنا بتحديد حجم كائن الـ <code data-enlighter-language="java">Vector</code> في الذاكرة من خلال الكونستركتور.<br>
+	ثم قمنا بإضافة بعض العناصر فيه.<br>
+	بعدها قمنا بتحديد عدد عناصره و حجمه في الذاكرة بواسطة الدالة <code data-enlighter-language="java">setSize()</code>.<br>
+	في الأخير قمنا بعرض جميع عناصره بواسطة الحلقة <span class="inline"><code data-enlighter-language="java">for</code>.</span></p>
+	<div class="example-box">
+	    <span class="code-title java-file-icon">Main.java</span>
+        <pre data-enlighter-language="java">
+import java.util.Vector;                                         // Vector هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Vector v = new Vector(5);                                // يمكنه إحتواء 5 عناصر v إسمه Vector هنا قمنا بإنشاء كائن من الكلاس
+ 
+        System.out.println("capacity = " + v.capacity());        // في الذاكرة و الذي سيكون 5 v هنا عرضنا عدد العناصر المحجوز للكائن
+        System.out.println("size     = " + v.size() + "\n");     // و الذي سيكون 0 لأننا لم ندخل فيه أي كائن بعد v هنا عرضنا عدد عناصر الكائن
+ 
+        v.add("A");                                              // v هنا قمنا بإضافة 5 عناصر في الكائن
+        v.add("B");
+        v.add("C");
+        v.add("D");
+        v.add("E");
+ 
+        System.out.println("capacity = " + v.capacity());        // هنا عرضنا حجم المصفوفة في الذاكرة و عدد عناصرها, لاحظ أنهما أصبحا متساويان
+        System.out.println("size     = " + v.size() + "\n");
+ 
+        v.setSize(12);                                           // مكان كل عنصر غير مستخدم null في الذاكرة بـ 12 عنصر و تم وضع القيمة v هنا قمنا بتحديد حجم الكائن
+ 
+        System.out.println("capacity = " + v.capacity());        // هنا عرضنا حجم المصفوفة في الذاكرة و عدد عناصرها يساويان 12
+        System.out.println("size     = " + v.size() + "\n");
+ 
+        for(int i=0; i&lt;v.size(); i++) {                          // هنا أنشأنا حلقة تعرض جميع العناصر الموجودة فيها
+            System.out.println("v[" +i+ "] = " +v.get(i));
+        }
+ 
+    }
+ 
+}
+		</pre>
+		<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+		<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+capacity = 5
+size     = 0
+
+capacity = 5
+size     = 5
+
+capacity = 12
+size     = 12
+
+v[0] = A
+v[1] = B
+v[2] = C
+v[3] = D
+v[4] = E
+v[5] = null
+v[6] = null
+v[7] = null
+v[8] = null
+v[9] = null
+v[10] = null
+v[11] = null 
+		</pre>
+	</div>
+	<br><br>
+	<h2>المثال الثالث</h2>
+	<p>في المثال التالي قمنا بإضافة كائن نوعه <code data-enlighter-language="java">Vector</code>في كائن آخر نوعه <code data-enlighter-language="java">Vector</code>.<br>
+	لاحظ هنا أنه عند إضافة كائن بواسطة الدالة <code data-enlighter-language="java">add(Collection c)</code> فإن جميع عناصره توضع في عنصر واحد.</p>
+	<div class="example-box">
+	    <span class="code-title java-file-icon">Main.java</span>
+        <pre data-enlighter-language="java">
+import java.util.Vector;                                         // Vector هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Vector v1 = new Vector();                                // v1 إسمه Vector هنا قمنا بإنشاء كائن من الكلاس
+        Vector v2 = new Vector();                                // v2 إسمه Vector هنا قمنا بإنشاء كائن من الكلاس
+ 
+        v1.add("A");                                             // v1 هنا قمنا بإضافة 5 عناصر في الكائن
+        v1.add("B");
+        v1.add("C");
+        v1.add("D");
+        v1.add("E");
+ 
+        v2.add(v1);                                              // v2 في أول عنصر في الكائن v1 هنا قمنا بإضافة جميع عناصر الكائن
+ 
+        System.out.println("v1 size = " + v1.size());            // يحتوي على 5 عناصر v1 لاحظ أن الكائن
+        System.out.println("v2 size = " + v2.size() + "\n");     // يحتوي على عنصر واحد فقط v2 لكن الكائن
+ 
+        System.out.println("v2[0] = " +v2.get(0));               // عبارة عن مصفوفة فيها 5 كائنات v2 لاحظ أن العنصر الذي يحتويه الكائن
+ 
+    }
+ 
+}
+		</pre>
+		<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+		<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+v1 size = 5
+v2 size = 1
+
+v2[0] = [A, B, C, D, E] 
+		</pre>
+	</div>
+	<br><br>
+	<h3>المثال الرابع</h3>
+	<p>في المثال التالي قمنا باستخدام الدوال التالية التي تستخدم في البحث و التشييك:<br>
+	<code data-enlighter-language="java">firstElement()</code> - <code data-enlighter-language="java">lastElement()</code> - <code data-enlighter-language="java">indexOf()</code> - <code data-enlighter-language="java">lastIndexOf()</code> - <code data-enlighter-language="java">elementAt()</code> - <code data-enlighter-language="java">contains()</code>.</p>
+	<div class="example-box">
+	    <span class="code-title java-file-icon">Main.java</span>
+        <pre data-enlighter-language="java">
+import java.util.Vector;             // Vector هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // v إسمه Vector هنا قمنا بإنشاء كائن من الكلاس
+        Vector v = new Vector();
+ 
+        // v هنا قمنا بإضافة 9 عناصر في الكائن
+        v.add("A");
+        v.add("B");
+        v.add("C");
+        v.add("D");
+        v.add("E");
+        v.add("A");
+        v.add("B");
+        v.add("C");
+        v.add("Z");
+ 
+        // v هنا عرضنا العنصر الأول و الأخير الموجودين في الكائن
+        System.out.println("First element: " + v.firstElement());
+        System.out.println("Last element:  " + v.lastElement() + "\n");
+ 
+        // v هنا عرضنا خامس عنصر موجود في الكائن
+        System.out.println("Element at v[4]: " + v.elementAt(4) + "\n");
+ 
+        // v موجودين في الكائن 'C' أول و آخر كائن index هنا عرضنا
+        System.out.println("First index of the object 'C': " + v.indexOf("C"));
+        System.out.println("Last index of the object 'C':  " + v.lastIndexOf("C") + "\n");
+ 
+        // F و D عن الكائنين v هنا بحثنا في عناصر الكائن
+        System.out.println("Does it contain a 'D' object? " + v.contains("D"));
+        System.out.println("Does it contain a 'F' object? " + v.contains("F"));
+ 
+    }
+ 
+}
+		</pre>
+		<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+		<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+First element: A
+Last element: Z
+
+Element at v[4]: E
+
+First index of the object 'C': 2
+Last index of the object 'C': 7
+
+Does it contain a 'D' object? true
+Does it contain a 'F' object? false 
+		</pre>
+	</div>
+    <br><br>
+	<h4>المثال الخامس</h4>
+	<p>في المثال التالي قمنا بنسخ عناصر كائن الـ <code data-enlighter-language="java">Vector</code> بداخل مصفوفة جديدة نوعها <code data-enlighter-language="java">Object</code> بواسطة الدالة <code data-enlighter-language="java">copyInto()</code>.</p>
+	<div class="example-box">
+	    <span class="code-title java-file-icon">Main.java</span>
+        <pre data-enlighter-language="java">
+import java.util.Vector;             // Vector هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // v إسمه Vector هنا قمنا بإنشاء كائن من الكلاس
+        Vector v = new Vector();
+ 
+        // v هنا قمنا بإضافة 3 عناصر في الكائن
+        v.add("A");
+        v.add("B");
+        v.add("C");
+ 
+        // v عدد عناصرها يساوي عدد عناصر الكائن ,Object هنا قمنا بإنشاء مصفوفة نوعها
+        Object[] arr = new Object[v.size()];
+ 
+        // arr بنفس الترتيب في المصفوفة v هنا قمنا بنسخ عناصر الكائن
+        v.copyInto(arr);
+ 
+        // arr هنا أنشأنا حلقة تعرض جميع العناصر الموجودة في الحلقة
+        for(int i=0; i&lt;arr.length; i++) {
+            System.out.println("arr[" +i+ "] = " +arr[i]);
+        }
+ 
+    }
+ 
+}
+		</pre>
+		<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+		<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+arr[0] = A
+arr[1] = B
+arr[2] = C
+		</pre>
+	</div>
+    <br><br>
+	<h3>المثال السادس</h3>
+    <p>في المثال التالي قمنا بإنشاء نسخة ثانية من كائن الـ <code data-enlighter-language="java">Vector</code> في كائن جديد نوعه <code data-enlighter-language="java">Object</code> بواسطة الدالة <code data-enlighter-language="java">clone()</code>.<br>
+	بعدها قمنا بمسح جميع عناصر كائن الـ <code data-enlighter-language="java">Vector</code> الأساسي بواسطة الدالة <code data-enlighter-language="java">clone()</code>.</p>
+	<div class="example-box">
+	    <span class="code-title java-file-icon">Main.java</span>
+        <pre data-enlighter-language="java">
+import java.util.Vector;             // Vector هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // v إسمه Vector هنا قمنا بإنشاء كائن من الكلاس
+        Vector v = new Vector();
+ 
+        // v هنا قمنا بإضافة 3 عناصر في الكائن
+        v.add("A");
+        v.add("B");
+        v.add("C");
+ 
+        // o في الكائن v هنا قمنا بنسخ عناصر الكائن
+        Object o = v.clone();
+ 
+        // v هنا قمنا بمسح جميع عناصر الكائن
+        v.clear();
+ 
+        // o و v هنا قمنا بعرض عناصر كل من الكائنات
+        System.out.println("v = " +v);
+        System.out.println("o = " +o);
+ 
+    }
+ 
+}
+		</pre>
+		<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+		<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+v = []
+o = [A, B, C] 
+		</pre>
+	</div>
+</article>
+
+					<div id="bottom_ads"></div>
+    	        	
+					<div class="next-and-previous-lessons">
+					    <a class="next-page">
+					        <span class="next-page-text"></span><span class="cursor">»</span>
+					    </a>
+					    <a class="previous-page">
+					        <span class="cursor">»</span><span class="previous-page-text"></span>
+					    </a>
+					</div>
+    	    	</div><!-- end main -->
+			</div><!-- end container_row -->
+		</div><!-- end container -->
+		
+		<div id="footer">
+
+			<div id="donate_for_us">
+			    <h3>ترغب بتقديم دعم مادي للموقع</h3>
+			    <p>يمكنك التبرع عبر Paypal أو Patreon بالمبلغ الذي تريده</p>
+			    <p>
+			        <a id="paypal_btn"
+			            href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=JPFDBADGZSTQL&amp;source=url"
+			            target="_blank">تبرع عبر Paypal</a>
+			        <a id="patreon_btn" href="https://www.patreon.com/harmashcom" target="_blank">تبرع عبر Patreon</a>
+			    </p>
+			</div>
+
+			<div id="follow_us">
+			    <img class="harmash-logo" src="../../template/images/harmash-logo.png"><br>
+			    <a href="https://twitter.com/harmashcom"><img class="twitter" src="../../template/images/twitter.png"></a>
+			    <a href="https://www.facebook.com/harmashcom"><img class="facebook" src="../../template/images/facebook.png"></a>
+				<a href="http://www.youtube.com/channel/UCoKizUSSJw6Ymu2cpdPtUpA"><img class="youtube" src="../../template/images/youtube.png"></a>
+				<a href="https://telegram.me/harmashcom"><img class="telegram" src="../../template/images/telegram.png"></a>
+			</div>
+
+			<p id="about"> هرمش هو موقع تعليمي مجاني يهتم بعلوم الكمبيوتر و يقدم إليك المعرفة بشكل مبسّط و مفصّل, و هو المكان المناسب لأي شخص يطمح بأن يصبح مبرمجاً محترفاً و مبدعاً في العالم الرقمي.</p>
+			
+			<p class="footer-faq"><a href="../../faq/index.html">●&nbsp الأسئلة الشائعة &nbsp</a> <a href="../../ads/index.html">●&nbsp أعلن في الموقع &nbsp</a></p>
+			
+			<p id="developped_by">تم تطوير الموقع و كتابة جميع الدروس من قبل المبرمج<br>
+				<a href="../../MhamadHarmush/index.html" target="_blank">● &nbsp محمد هرموش &nbsp ●</a></p>
+			
+			<p id="copy_right">جميع الحقوق محفوظة للموقع &nbsp ٢٠٢٠ - ٢٠١٤ ©</p>
+			
+			<p id="copy_right_details_ar">محتوى الموقع يخضع لرخصة (CC BY-NC-ND 4.0) التي لا تسمح باستخدام الشروحات لأغراض تجارية, إجراء تعديل عليها و نشرها في موقع آخر, وضع الشروحات في تطبيق أو في كتاب إلا في حال أخذ موافقة صريحة من إدارة الموقع.</p>
+			
+			<p id="copy_right_logo">
+				<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+				<img alt="Creative Commons License" style="border-width:0" src="../../../licensebuttons.net/l/by-nc-nd/4.0/88x31.png" /></a>
+			</p>
+			
+			<p id="copy_right_details_en"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">© 2020 Harmash. All Content is licensed under CC BY-NC-ND 4.0 unless mentioned otherwise.</a></p>
+
+		</div>
+		
+		<div id="library_box">
+		    <h3>دورات</h3>
+<ul>
+    <li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+    <li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+    <li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+    <li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+    <li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+    <li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+    <li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+    <li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+    <li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+    <li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+
+<div style="clear:both; padding:20px 0px;"></div>
+
+<h3>أدوات</h3>
+<ul>
+	<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png">محرر الويب</a></li>
+	<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png">نظام الألوان</a></li>
+	<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png">محول الوحدات</a></li>
+	<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png">محلل عناوين الشبكات</a></li>
+</ul>
+
+<div style="clear:both; padding:10px 0px;"></div>		</div>
+
+		<div id="search_box"></div>
+		
+		<div id="ads_alert">
+		    <div class="white-container">
+		        <div>
+		            <a class="ads-close-btn" id="ads_close_btn_1">إخفاء الرسالة</a>
+		        </div>
+		        <div class="red-box">
+		            <h3>من فضلك إسمح لنا بعرض الإعلانات</h3>
+		            <p>أي قم بإيقاف مانع الإعلانات <b>(Ad Block)</b> عن موقعنا</p>
+		        </div>
+		        <div class="green-box">
+		            <h3>سبب عرض الإعلانات في الموقع</h3>
+		            <p>بالنسبة لك فإن عرض الإعلانات في الموقع لا يكلفك أي شيء و لا يضايقك إطلاقاً لأننا لا نعرض إعلانات
+		                منبثقة بشكل مفاجئ أو بشكل مخادع ضمن الشرح.</p>
+		            <p> بالنسبة لنا فإنه الطريقة الوحيدة التي تمكننا من إبقاء الموقع متاح بشكل مجاني للجميع لأن عرض
+		                الإعلانات
+		                يساعدنا في تغطية تكاليف الإستضافة التي يجب دفعها بشكل دائما حتى لا يتم إيقاف الموقع.</p>
+		        </div>
+		        <div class="blue-box">
+		            <h3>طريقة إيقاف مانع الإعلانات</h3>
+		            <p>إذا كنت لا تعرف كيف توقف مانع الإعلانات <b>(Ad Block)</b> إبحث في
+		                جوجل أو يوتيوب عن <span class="word">"How to disable adblock"</span> و سيظهر لك خطوات بسيطة جداً
+		                لفعل ذلك.</p>
+		            <p style="margin-top: 10px;">نتمنى أن تستفيدوا من موقعنا و أن نقدم لكم مزيد من الدورات المجانية و
+		                نعتذر لإزعاجكم بهذا الطلب.
+		            </p>
+		        </div>
+		        <div>
+		            <a class="ads-close-btn" id="ads_close_btn_2">إخفاء الرسالة</a>
+		        </div>
+		    </div>
+		</div>
+
+		<script type="text/javascript" src="../../template/js/MooTools-Core-1.6.0.min.js"></script>
+		<script type="text/javascript" src="../../template/js/EnlighterJS.min.js"></script>
+	</body>
+
+
+<!-- Mirrored from harmash.com/java/java-data-structure/vector.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Jun 2020 17:01:16 GMT -->
+</html>

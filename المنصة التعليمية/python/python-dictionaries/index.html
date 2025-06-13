@@ -1,0 +1,607 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الكلاس dict في بايثون | Python dict</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>الكلاس <code data-enlighter-language="python">dict</code> في بايثون</h1>
+<article>
+<h2>مفهوم الكلاس <code data-enlighter-language="python">dict</code> في بايثون</h2>
+<p>في البداية, كلمة <code data-enlighter-language="python">dict</code> إختصار لكلمة <span class="word">dictionary</span> و التي تعني قاموس أو معجم.</p>
+<p><span class="inline">الـ <code data-enlighter-language="python">dict</code></span> عبارة عن جدول يتألف من عامودين, الأول يحتوي المفاتيح <span class="inline">( <span class="word">Keys</span> )</span> و الثاني يحتوي القيم <span class="inline">( <span class="word">Values</span> )</span> الخاصة بكل عنصر.</p>
+<p>كل عنصر يتم إضافته في <code data-enlighter-language="python">dict</code> يجب إعطاؤه قيمتين. الأولى تمثل المفتاح <span class="inline">( <span class="word">Key</span> )</span> و الثانية تمثل قيمته <span class="inline">( <span class="word">Value</span> ).</span></p>
+<p>المفاتيح تستخدم للوصول إلى القيم, لهذا لا يمكن وجود عنصرين في <span class="inline">الـ <code data-enlighter-language="python">dict</code></span> عندهم نفس المفتاح. إذاً, كل <span class="word">Key</span> موضوع يسمح لك بالوصول لقيمة واحدة من القيم الموجودة في <span class="inline">الـ <code data-enlighter-language="python">dict</code>.</span></p>
+<br/>
+<h3>طريقة تعريف <code class="data-enlighter-language=" python"="">dict</code></h3>
+<p>لتعريف <code class="data-enlighter-language=" python"="">dict</code> نستخدم الرمز <span class="inline"><code data-enlighter-language="python">{ }</code> .</span><br/>
+	بداخل هذا الرمز يمكنك تمرير العناصر بشكل مباشر له بشرط وضع فاصلة بين كل عنصرين.<br/>
+	لا تنسى أن كل عنصر يجب أن يملك قيمتين, الأولى تمثل المفتاح و الثانية تمثل القيمة. بين كل مفتاح و قيمة نضع الرمز <span class="inline"><code data-enlighter-language="python">:</code> .</span><br/>
+<br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">dict</code> فارغ, أي لا يحتوي أي عنصر.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+data = {}        # data فارغ إسمه dict هنا قمنا بتعريف
+print(data)      # ( أي كما قمنا بتعريفه ) كما هو data هنا قمنا بعرض ما يحتويه الكائن
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			{}
+		</div>
+</div>
+<br/><br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>سواء كنت تقوم بتعريف <code data-enlighter-language="python">dict</code> أو <code data-enlighter-language="python">set</code> فإنك تستخدم الرمز <code data-enlighter-language="python">{ }</code> كما لاحظت في المثال السابق.<br/>
+		لهذا لا نلاحظ وجود أي فرق بين عرض ما يحتويه <code data-enlighter-language="python">dict</code> فارغ أو <code data-enlighter-language="python">set</code> فارغ.</p>
+<p>بمجرد أن تضيف عنصر واحد بين الرمز <code data-enlighter-language="python">{ }</code> و تعطيه مفتاح و قيمة, عندها سيفهم مفسّر لغة بايثون أنك تقصد تعريف <code data-enlighter-language="python">dict</code> و ليس <span class="inline"><code data-enlighter-language="python">set</code>.</span></p>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">dict</code> وضعنا فيه ثلاث عناصر.<br/>
+	المفاتيح وضعناها كأرقام, و القيم وضعناها كنصوص مع الإشارة إلى أنه يمكنك وضع أي نوع تريد.<br/>
+	كما أننا قمنا تعريف كل عنصر <span class="inline">( أي كل مفتاح و قيمة )</span> على سطر منفرد لتكون قراءته أسهل فقط.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# data يتألف من ثلاث عناصر, إسمه dict هنا قمنا بتعريف
+data = {
+    1: 'Admin',
+    2: 'Editor',
+    3: 'Reader'
+}
+
+# ( أي كما قمنا بتعريفه ) كما هو data هنا قمنا بعرض ما يحتويه الكائن
+print(data)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			{1: 'Admin', 2: 'Editor', 3: 'Reader'}
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">dict</code> وضعنا فيه ثلاث عناصر.<br/>
+	المفاتيح وضعناها كنصوص, و القيم وضعناها كأرقام و نصوص.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# data يتألف من ثلاث عناصر, إسمه dict هنا قمنا بتعريف
+data = {
+    'id': 1,
+    'name': 'Mhamad',
+    'mobile': 70123456
+}
+
+# ( أي كما قمنا بتعريفه ) كما هو data هنا قمنا بعرض ما يحتويه الكائن
+print(data)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			{'id': 1, 'name': 'Mhamad', 'mobile': 70123456}
+		</div>
+</div>
+</p></article>
+<article>
+<h2>الوصول لقيم عناصر <span class="inline">الـ <code class="data-enlighter-language=" python"="">dict</code></span> في بايثون</h2>
+<p>للوصول لأي عنصر في <span class="inline">الـ <code class="data-enlighter-language=" python"="">dict</code></span> سواء للحصول على قيمته أو تغييرها أو حذفها فإننا نستخدم المفتاح الخاص بالعنصر.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">dict</code> وضعنا فيه ثلاث عناصر, بعدها قمنا باستخدام الرمز <code data-enlighter-language="python">[]</code> لعرض قيمة العنصر الذي يملك المفتاح رقم <span class="inline"><span class="number">1</span>.</span></p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# data يتألف من ثلاث عناصر, إسمه dict هنا قمنا بتعريف
+data = {
+    1: 'Admin',
+    2: 'Editor',
+    3: 'Reader'
+}
+
+# 1 هنا قمنا بطباعة قيمة العنصر الذي يملك المفتاح رقم
+print(data[1])
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Admin
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">dict</code> وضعنا فيه ثلاث عناصر, بعدها قمنا باستخدام الدالة <code data-enlighter-language="python">get()</code> لعرض قيمة العنصر الذي يملك المفتاح رقم <span class="inline"><span class="number">1</span>.</span></p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# data يتألف من ثلاث عناصر, إسمه dict هنا قمنا بتعريف
+data = {
+    1: 'Admin',
+    2: 'Editor',
+    3: 'Reader'
+}
+
+# 1 هنا قمنا بطباعة قيمة العنصر الذي يملك المفتاح رقم
+print(data.get(1))
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Admin
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">dict</code> وضعنا فيه ثلاث عناصر, بعدها قمنا بعرض جميع المفاتيح الموضوعة فيه باستخدام الحلقة <span class="inline"><code class="data-enlighter-language=" python"="">for</code>.</span></p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# data يتألف من ثلاث عناصر, إسمه dict هنا قمنا بتعريف
+data = {
+    1: 'Admin',
+    2: 'Editor',
+    3: 'Reader'
+}
+
+# و من ثم سيتم طباعته key في المتغير data في كل مرة سيتم وضع مفتاح عنصر من عناصر الكائن
+for key in data:
+    print(key)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			1<br/>
+			2<br/>
+			3
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">dict</code> وضعنا فيه ثلاث عناصر, بعدها قمنا بعرض جميع المفاتيح الموضوعة فيه باستخدام الحلقة <span class="inline"><code class="data-enlighter-language=" python"="">for</code>.</span></p>
+<div class="example-box">
+<h4>المثال الرابع</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# data يتألف من ثلاث عناصر, إسمه dict هنا قمنا بتعريف
+data = {
+    1: 'Admin',
+    2: 'Editor',
+    3: 'Reader'
+}
+
+# و من ثم سيتم طباعة قيمة هذا المفتاح key في المتغير data في كل مرة سيتم وضع مفتاح عنصر من عناصر الكائن
+for key in data:
+    print(data[key])
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Admin<br/>
+			Editor<br/>
+			Reader
+		</div>
+</div>
+</article>
+<article>
+<h2>إضافة عناصر في <span class="inline">الـ <code class="data-enlighter-language=" python"="">dict</code></span> في بايثون</h2>
+<p>لإضافة عنصر جديد في <span class="inline">الـ <code class="data-enlighter-language=" python"="">dict</code></span> فإننا نمرر مفتاح جديد و من بعدها نضع القيمة التي يساويها.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">dict</code> وضعنا فيه ثلاث عناصر.<br/>
+	بعدها قمنا بإضافة عنصر جديد على كائن <span class="inline">الـ <code class="data-enlighter-language=" python"="">dict</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# data يتألف من ثلاث عناصر, إسمه dict هنا قمنا بتعريف
+data = {
+    1: 'Admin',
+    2: 'Editor',
+    3: 'Reader'
+}
+
+# 'Author' مفتاحه الرقم 4, و قيمته النص ,data هنا قمنا بإضافة عنصر جديد في الكائن
+data[4] = 'Author'
+
+# data هنا قمنا بعرض ما أصبح يحتويه الكائن
+print(data)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			{1: 'Admin', 2: 'Editor', 3: 'Reader', 4: 'Author'}
+		</div>
+</div>
+</article>
+<article>
+<h2>تبديل قيم عناصر <span class="inline">الـ <code class="data-enlighter-language=" python"="">dict</code></span> في بايثون</h2>
+<p>لتبديل قيمة أي عنصر في <span class="inline">الـ <code class="data-enlighter-language=" python"="">dict</code></span> فإننا نمرر مفتاح العنصر الذي نريد تبديل قيمته و من بعدها نضع القيمة الجديدة.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">dict</code> وضعنا فيه ثلاث عناصر.<br/>
+	بعدها قمنا بتبديل قيمة العنصر الذي يملك مفتاح يساوي <span class="inline"><span class="number">3</span>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# data يتألف من ثلاث عناصر, إسمه dict هنا قمنا بتعريف
+data = {
+    1: 'Admin',
+    2: 'Editor',
+    3: 'Reader'
+}
+
+# 'Subscriber' وضعنا بدلاً منها النص .data هنا قمنا بتبديل قيمة العنصر الذي يملك المفتاح رقم 3 في الكائن
+data[3] = 'Subscriber'
+
+# data هنا قمنا بعرض ما أصبح يحتويه الكائن
+print(data)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			{1: 'Admin', 2: 'Editor', 3: 'Subscriber'}
+		</div>
+</div>
+</article>
+<article>
+<h2>حذف عناصر <span class="inline">الـ <code class="data-enlighter-language=" python"="">dict</code></span> بواسطة الجملة <code class="data-enlighter-language=" python"="">del</code> في بايثون</h2>
+<p>الجملة <code class="data-enlighter-language=" python"="">del</code> تستخدم لحذف <span class="inline">الـ <code class="data-enlighter-language=" python"="">dict</code></span> كما هو من الذاكرة أو لحذف عناصر محددة منه.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">dict</code> وضعنا فيه أرقام. بعدها قمنا بحذف عنصرين منه.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# data يتألف من ثلاث عناصر, إسمه dict هنا قمنا بتعريف
+data = {
+    1: 'Admin',
+    2: 'Editor',
+    3: 'Reader'
+}
+
+# data هنا قمنا بحذف العنصر الذي يملك المفتاح رقم 3 في الكائن
+del data[3]
+
+# data هنا قمنا بعرض ما أصبح يحتويه الكائن
+print(data)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			{1: 'Admin', 2: 'Editor'}
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">dict</code> يتألف من ثلاث عناصر. بعدها قمنا بحذفه من الذاكرة. بعدها حاولنا أن نعرض ما يحتويه.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# data يتألف من ثلاث عناصر, إسمه dict هنا قمنا بتعريف
+data = {
+    1: 'Admin',
+    2: 'Editor',
+    3: 'Reader'
+}
+
+# كما هو من الذاكرة data هنا قمنا بحذف الكائن
+del data
+
+# و الذي في الأصل قمنا بحذفه من الذاكرة لذلك سيظهر خطأ عند التشغيل data هنا حاولنا عرض ما يحتويه الكائن
+print(data)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+<span class="red">NameError: name 'data' is not defined</span>
+</div>
+</div>
+</article>
+<article>
+<h2>معرفة ما إذا كان <span class="inline">الـ <code class="data-enlighter-language=" python"="">dict</code></span> يحتوي على مفتاح معين في بايثون</h2>
+<p>العامل <code data-enlighter-language="python">in</code> يستخدم للبحث في <span class="inline">الـ <code class="data-enlighter-language=" python"="">dict</code></span> عن مفتاح معين أو للمرور على قيمه عند إستخدامه في الحلقة <code class="data-enlighter-language=" python"="">for</code> كما فعلنا في بعض الأمثلة السابقة.</p>
+<p>عند استخدام العامل <code data-enlighter-language="python">in</code> للبحث في <span class="inline">الـ <code class="data-enlighter-language=" python"="">dict</code></span> عن مفتاح ما فإنه يرجع <code data-enlighter-language="python">True</code> في حال تم إيجاد عنصر يملك هذا المفتاح.<br/>
+	و يرجع <code data-enlighter-language="python">False</code> في حال لم يجد عنصر يملك هذا المفتاح.</p>
+<br/>
+<p>في المثال التالي إستخدمنا العامل <code data-enlighter-language="python">in</code> للبحث في <span class="inline">الـ <code class="data-enlighter-language=" python"="">dict</code></span> عن عنصر يملك مفتاح يساوي <span class="inline"><span class="number">2</span>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# data يتألف من ثلاث عناصر, إسمه dict هنا قمنا بتعريف
+data = {
+    1: 'Admin',
+    2: 'Editor',
+    3: 'Reader'
+}
+
+# True عن المفتاح رقم 2. إذا تم إيجاد عنصر يملك هذا المفتاح سيتم عرض القيمة data هنا سيتم البحث في الكائن
+print(2 in data)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Is Rima in the dict?<br/>
+			True
+		</div>
+</div>
+</article>
+<article>
+<h2>معرفة عدد عناصر <span class="inline">الـ <code class="data-enlighter-language=" python"="">dict</code></span> في بايثون</h2>
+<p>لمعرفة عدد عناصر كائن نوعه <code class="data-enlighter-language=" python"="">dict</code> نستخدم الدالة <span class="inline"><code data-enlighter-language="python">len()</code>.</span></p>
+<p>في المثال التالي قمنا بتعريف <code class="data-enlighter-language=" python"="">dict</code> يتألف من ثلاث عناصر. بعدها قمنا بطابعة عدد عناصره بواسطة الدالة <span class="inline"><code data-enlighter-language="python">len()</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# data يتألف من ثلاث عناصر, إسمه dict هنا قمنا بتعريف
+data = {
+    1: 'Admin',
+    2: 'Editor',
+    3: 'Reader'
+}
+
+# len() الذي سترجعه الدالة data هنا قمنا بعرض عدد عناصر الكائن
+print(len(data))
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			3
+		</div>
+</div>
+</article>
+<article>
+<h2>دوال الكلاس <code data-enlighter-language="python">dict</code> في بايثون</h2>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">clear()</code></span>
+			تستخدم لحذف جميع عناصر <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> الذي قام باستدعائها.<br/>
+<a class="open-page" href="dict-clear.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">copy()</code></span>
+			ترجع نسخة من <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> الذي قام باستدعائها.<br/>
+<a class="open-page" href="dict-copy.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">popitem()</code></span>
+			ترجع آخر عنصر تم إضافته في كائن <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> الذي قام باستدعائها و من ثم تحذفه منه.<br/>
+			في حال لم يتم العثور على القيمة المراد حذفها ترمي الإستثناء <span class="inline"><span class="code red">KeyError</span>.</span><br/>
+<a class="open-page" href="dict-popitem.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">pop(key[, default])</code></span>
+			تبحث في كائن <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> الذي قام باستدعائها عن العنصر الذي يملك نفس المفتاح الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">key</code> و من ثم تحذفه منه.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">default</code> يمكنك تمرير قيمة إفتراضية يتم إرجاعها فقط في حال لم يتم العثور على عنصر يملك المفتاح الذي مررناه لها مكان الباراميتر <span class="inline"><code data-enlighter-language="python">key</code>.</span><br/>
+			في حال لم يتم العثور على المفتاح المراد حذف العنصر الذي يملكه و لم تمرر لها قيمة مكان الباراميتر <code data-enlighter-language="python">default</code> ترمي الإستثناء <span class="inline"><span class="code red">KeyError</span>.</span><br/>
+<a class="open-page" href="dict-pop.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">get(key[, default])</code></span>
+			تبحث في كائن <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> الذي قام باستدعائها عن قيمة المفتاح الذي نمرره لها مكان الباراميتر <code data-enlighter-language="python">key</code> و ترجعها.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">default</code> يمكنك تمرير قيمة إفتراضية يتم إرجاعها فقط في حال لم يتم العثور على عنصر يملك المفتاح الذي مررناه لها مكان الباراميتر <span class="inline"><code data-enlighter-language="python">key</code>.</span><br/>
+			في حال لم يتم العثور على المفتاح المراد حذف العنصر الذي يملكه و لم تمرر لها قيمة مكان الباراميتر <code data-enlighter-language="python">default</code> فإنها ترجع <span class="inline"><code data-enlighter-language="python">None</code>.</span><br/>
+<a class="open-page" href="dict-get.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">keys()</code></span>
+			ترجع مصفوفة نوعها <code data-enlighter-language="python">dict_keys</code> فيها جميع المفاتيح الموجودة في كائن <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> الذي قام باستدعائها.<br/>
+<span class="note">ملاحظة:</span> مصفوفة المفاتيح التي يتم إرجاعها, هي ليست نسخة عن المفاتيح الموجودة في كائن <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> بل هي نفسها. و بالتالي أي تعديل يتم إجراؤه على المفاتيح من كائن <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> ينعكس على مصفوفة المفاتيح و العكس كذلك.<br/>
+<a class="open-page" href="dict-keys.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">values()</code></span>
+			ترجع مصفوفة نوعها <code data-enlighter-language="python">dict_keys</code> فيها جميع القيم الموجودة في كائن <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> الذي قام باستدعائها.<br/>
+<span class="note">ملاحظة:</span> مصفوفة القيم التي يتم إرجاعها, هي ليست نسخة عن القيم الموجودة في كائن <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> بل هي نفسها. و بالتالي أي تعديل يتم إجراؤه على القيم من كائن <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> ينعكس على مصفوفة القيم و العكس كذلك.<br/>
+<a class="open-page" href="dict-values.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">items()</code></span>
+			ترجع مصفوفة نوعها <code data-enlighter-language="python">dict_items</code> فيها جميع العناصر الموجودة في كائن <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> الذي قام باستدعائها.<br/>
+<span class="note">ملاحظة:</span> مصفوفة العناصر التي يتم إرجاعها, هي ليست نسخة عن العناصر الموجودة في كائن <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> بل هي نفسها. و بالتالي أي تعديل يتم إجراؤه على العناصر من كائن <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> ينعكس على مصفوفة العناصر و العكس كذلك.<br/>
+<a class="open-page" href="dict-items.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">fromkeys(seq[, value])</code></span>
+			تستخدم لإنشاء <code data-enlighter-language="python">dict</code> جديد مبني على قيم مصفوفة نمررها له.<br/>
+			عند إستدعاءها نمرر لها كائن يمثل مصفوفة من أي نوع مكان الباراميتر <span class="inline"><code data-enlighter-language="python">seq</code>,</span> عناصر هذا الكائن يتم وضعها كمفاتيح في كائن <span class="inline">الـ <code data-enlighter-language="python">dict</code></span> الذي سيتم إرجاعه.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">value</code> يمكنك تمرير القيمة الإفتراضية التي تريد وضعها لجميع عناصر كائن <span class="inline">الـ <code data-enlighter-language="python">dict</code></span> الذي سيتم إرجاعه.<br/>
+			و في حال لم تقم بتمرير قيمة إفتراضية مكان الباراميتر <code data-enlighter-language="python">value</code> ستكون جميع قيمه تساوي <span class="inline"><code data-enlighter-language="python">None</code>.</span><br/>
+<a class="open-page" href="dict-fromkeys.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">setdefault(key[, default])</code></span>
+			تستخدم للحصول على قيمة مفتاح موجود في كائن <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> الذي قام باستدعائها, أو لإضافة عنصر جديد فيه مع إرجاع قيمته أيضاً.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">key</code> نمرر مفتاح العنصر الذي إن كان موجوداً في كائن <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> سيتم إرجاع قيمته فقط, و إن لم يكن موجوداً سيتم إضافته و إرجاع قيمته.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">default</code> يمكنك تمرير القيمة الإفتراضية التي تريد وضعها للعنصر في حال تم إضافته لأنه إفتراضياً إن تم إضافة عنصر جديد ستكون قيمته <span class="inline"><code data-enlighter-language="python">None</code>.</span><br/>
+<a class="open-page" href="dict-setdefault.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">update([other])</code></span>
+			تستخدم لتحديث قيم عناصر <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> الذي قام باستدعائها على أساس المفاتيح الموجودة فيه.<br/>
+			مكان الباراميتر <code data-enlighter-language="python">other</code> يمكننا أن نمرر كائن <code data-enlighter-language="python">dict</code> فيه عنصر واحد أو مجموعة العناصر التي نريد تحديث قيمها أو إضافتها في كائن <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> الذي قام باستدعائها.<br/>
+			أي عنصر نمرره مكان الباراميتر <code data-enlighter-language="python">other</code> يملك مفتاح غير موجود في كائن <span class="inline">الـ<code data-enlighter-language="python">dict</code></span> الذي قام باستدعائها سيتم إضافته فيه.<br/>
+<a class="open-page" href="dict-update.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>التغليف في سي بلاس بلاس | C++ Encapsulation</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../cplusplus-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../cplusplus-overview/index.html"><span class="en">++C</span> - نظرة عامة</a></li>
+<li><a href="../cplusplus-environment-setup/index.html"><span class="en">++C</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../cplusplus-basic-syntax/index.html"><span class="en">++C</span> - أسلوب الكتابة</a></li>
+<li><a href="../cplusplus-cout/index.html"><span class="en">++C</span> - أمر الطباعة   &lt;&lt; cout</a></li>
+<li><a href="../cplusplus-data-types/index.html"><span class="en">++C</span> - أنواع البيانات</a></li>
+<li><a href="../cplusplus-variables/index.html"><span class="en">++C</span> - المتغيرات</a></li>
+<li><a href="../cplusplus-operators/index.html"><span class="en">++C</span> - العوامل</a></li>
+<li><a href="../cplusplus-conditions/index.html"><span class="en">++C</span> - الشروط</a></li>
+<li><a href="../cplusplus-loops/index.html"><span class="en">++C</span> - الحلقات</a></li>
+<li><a href="../cplusplus-numbers/index.html"><span class="en">++C</span> - الأعداد</a></li>
+<li><a href="../cplusplus-strings/index.html"><span class="en">++C</span> - النصوص</a></li>
+<li><a href="../cplusplus-arrays/index.html"><span class="en">++C</span> - المصفوفات</a></li>
+<li><a href="../cplusplus-user-input/index.html"><span class="en">++C</span> - إدخال البيانات</a></li>
+<li><a href="../cplusplus-functions/index.html"><span class="en">++C</span> - الدوال</a></li>
+<li><a href="../cplusplus-references/index.html"><span class="en">++C</span> - المراجع</a></li>
+<li><a href="../cplusplus-pointers/index.html"><span class="en">++C</span> - المؤشرات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../cplusplus-oop/index.html"><span class="en">++C</span> - مفهوم البرمجة كائنية التوجه</a></li>
+<li><a href="../cplusplus-struct/index.html"><span class="en">++C</span> - النوع <span class="en">struct</span></a></li>
+<li><a href="../cplusplus-class/index.html"><span class="en">++C</span> - النوع <span class="en">class</span></a></li>
+<li><a href="index.html"><span class="en">++Encapsulation - C</span></a></li>
+<li><a href="../cplusplus-inheritance/index.html"><span class="en">++Inheritance - C</span></a></li>
+<li><a href="../cplusplus-overriding/index.html"><span class="en">++Overriding - C</span></a></li>
+<li><a href="../cplusplus-overloading/index.html"><span class="en">++Overloading - C</span></a></li>
+<li><a href="../cplusplus-polymorphism/index.html"><span class="en">++Polymorphism - C</span></a></li>
+<li><a href="../cplusplus-constants/index.html"><span class="en">++C</span> - الثوابت</a></li>
+<li><a href="../cplusplus-enum/index.html"><span class="en">++C</span> - النوع <span class="en">enum</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../cplusplus-exceptions/index.html"><span class="en">++C</span> - الإستثناءات</a></li>
+<!--
+
+<li><a href="../cplusplus-lambda-expressions"><span class="en">Lambda Expressions - ++C</span></a></li>
+<li><a href="../cplusplus-files-io"><span class="en">++C</span> - التعامل مع الملفات</a></li>
+<li><a href="../cplusplus-data-structure"><span class="en">Data Structure - ++C</span></a></li>
+<li><a href="../cplusplus-collection"><span class="en">Collection - ++C</span></a></li>
+<li><a href="../cplusplus-generics"><span class="en">Generics - ++C</span></a></li>
+<li><a href="../cplusplus-networking"><span class="en">++C</span> - الشبكات</a></li>
+<li><a href="../cplusplus-multithreading"><span class="en">++C</span> - تعدد المهام</a></li>
+<li><a href="../cplusplus-jdbc"><span class="en">++C</span> - قواعد البيانات</a></li>
+<li><a href="../cplusplus-serialization"><span class="en">++C</span> - المزامنة</a></li>
+
+
+<li><a href="../cplusplus-date-and-time"><span class="en">++C</span> - التاريخ و الوقت</a></li>
+<li><a href="../cplusplus-regular-expressions"><span class="en">++C</span> - التعابير النمطية</a></li>
+
+<li><a href="../cplusplus-next-step"><span class="en">++C</span> - ما هي خطوتي التالية ؟</a></li>
+-->
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">C++</span><span class="word">Encapsulation</span></h1>
+<article>
+<h2>مفهوم التغليف في <span class="word">C++</span></h2>
+<p>التغليف <span class="inline">( <span class="word">Encapsulation</span> )</span> عبارة عن أسلوب يمكن اتباعه لإخفاء خصائص الكلاس <span class="inline">( <span class="word">Global Variables</span> )</span> و جعل الكائنات التي تنشئها منه و الكلاسات الأخرى التي تقوم بتضمينه قادرة على التعامل مع هذه الخصائص فقط من خلال دوال يقوم بإنشائها المبرمج الأساسي للكلاس.</p>
+<p>إذاً فائدة التغليف أنه يتيح لك وضع شروط لتخزين القيم في الخصائص, كما أنه يتيح لك الحصول على القيم بالطريقة التي تريدها.</p>
+<br/>
+<h3>الأسلوب المتبع في عملية التغليف</h3>
+<p>بما أن فكرة التغليف الأساسية هي إخفاء البيانات من جهة و إتاحة التعامل معها من جهة أخرى.</p>
+<p>أول ما يجب أن يخطر في بالك هو أنه يجب جعل نوع جميع الخصائص <span class="inline">( أي المتغيرات التي ستحفظ البيانات )</span> الموجودة في الكلاس <code data-enlighter-language="cpp">private</code> لأن تعريف جعلها <code data-enlighter-language="cpp">private</code> يعني أنه يمكن الوصول إليهم فقط من داخل الكلاس الموجودين فيه.</p>
+<p>ثاني شيىء عليك التفكير فيه هو إيجاد طريقة للوصول إلى هذه الخصائص من الخارج.<br/>
+	لفعل ذلك عليك تجهيز دوال نوعها <code data-enlighter-language="cpp">public</code> للتعامل مع هذه الخصائص, لأن الدوال التي نوعها <code data-enlighter-language="cpp">public</code> يمكن الوصول إليهم من أي مكان.</p>
+<p>إذاً لتحقيق مبدأ التغليف, عليك جعل نوع الخصائص <code data-enlighter-language="cpp">private</code> و جعل نوع الدوال التي تستخدم للوصول إليهم <span class="inline"><code data-enlighter-language="cpp">public</code>.</span></p>
+<br/>
+<h3>مفهوم دوال <span class="inline">الـ <span class="word">Setter</span></span> و <span class="inline">الـ <span class="word">Getter</span></span></h3>
+<p>عند التعامل مع أي متغير <span class="inline">( أو خاصية )</span> فعندك خيارين و هما إما إعطاءه قيمة جديدة و إما الحصول على القيمة الموجودة فيه.<br/>
+	بما أنه يجب بناء دوال للتعامل مع كل خاصية من الخصائص الموجودة في الكلاس, ينصح بإعتماد أسماء متعارف عليها كالتالي:</p>
+<ul class="explain">
+<li><p>إبدأ إسم كل دالة الهدف منها إعطاء قيمة للخاصية بالكلمة <span class="word">set</span> ثم إسم الخاصية.</p></li>
+<li><p>إبدأ إسم كل دالة الهدف منها الحصول على قيمة الخاصية بالكلمة <span class="word">get</span> ثم إسم الخاصية.</p></li>
+</ul>
+</article>
+<article>
+<h2>أمثلة شاملة حول التغليف في <span class="word">C++</span></h2>
+<p>الآن سنقوم بإنشاء كلاس إسمه <code data-enlighter-language="cpp">Employee</code> و فكرته تخزين معلومات الموظفين مثل الإسم <span class="inline"><code data-enlighter-language="cpp">name</code>,</span> الراتب <span class="inline"></span><code data-enlighter-language="cpp">salary</code>, العمر <span class="inline"><code data-enlighter-language="cpp">age</code>.</span><br/>
+	بعدها سنقوم بتجربة إنشاء كائن من الكلاس <code data-enlighter-language="cpp">Employee</code> في الدالة <code data-enlighter-language="cpp">main()</code> و التعامل معه.</p>
+<p><span class="note">ملاحظة:</span> هنا قمنا بتعريف كل شيء بشكل عادي بدون تطبيق أي مبدأ من مبادئ التغليف.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// يحتوي على 3 خصائص Employee هنا قمنا بتعريف كلاس إسمه
+class Employee {
+
+    public:
+		string name;       // لأنه عبارة عن نص string الإسم نوعه
+		int age;           // لأنه عبارة عن رقم int العمر نوعه
+		double salary;     // لأنه عبارة عن رقم كبير يمكن أن يحتوي على فاصلة double الراتب نوعه
+ 
+};
+
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+    // e إسمه Employee هنا قمنا بإنشاء كائن من الكلاس
+    Employee e;
+ 
+    // e هنا قمنا بإعطاء قيم لخصائص الكائن
+    e.name = "Mhamad";
+    e.age = 21;
+    e.salary = 950;
+ 
+    // e هنا قمنا بعرض قيم خصائص الكائن
+    cout &lt;&lt; "Name: " &lt;&lt; e.name &lt;&lt; "\n";
+    cout &lt;&lt; "Age: " &lt;&lt; e.age &lt;&lt; "\n";
+    cout &lt;&lt; "Salary: " &lt;&lt; e.salary;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Name: Mhamad
+Age: 21
+Salary: 950
+		</pre>
+</div>
+<br/><br/>
+<p>الآن سنقوم بإعادة المثال السابق مع جعل نوع الخصائص <code data-enlighter-language="cpp">private</code> و سنقوم بتعريف دوال نوعها <code data-enlighter-language="cpp">public</code> للتعامل مع هذه الخصائص.</p>
+<p><span class="note">ملاحظة:</span> في هذا المثال قمنا بتطبيق مبدأ التغليف.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// Employee هنا قمنا بتعريف الكلاس
+class Employee {
+
+	// و بالتالي لم يعد ممكناً الوصول لهم بشكل مباشر من خارج الكلاس private لاحظ أننا جعلنا نوع الخصائص
+    private:
+		string name;
+		int age;
+		double salary;
+		
+	// حتى نستطيع من الوصول من خارج الكلاس public هنا قمنا بتعريف جميع الدوال التي سنتعامل من خلالها مع الخصائص كـ
+    public:
+		// name هذه الدالة ترجع قيمة المخزنة الخاصية
+		string getName() {
+			return name;
+		}
+ 
+		// age هذه الدالة ترجع قيمة المخزنة الخاصية
+		int getAge() {
+			return age;
+		}
+ 
+		// salary هذه الدالة ترجع قيمة المخزنة الخاصية
+		double getSalary() {
+			return salary;
+		}
+ 
+		// name هذه الدالة نعطيها إسم فتقوم بوضعه للخاصية
+		void setName(string n) {
+			name = n;
+		}
+		
+		// age هذه الدالة نعطيها رقم فتقوم بوضعه للخاصية
+		void setAge(int a) {
+			age = a;
+		}
+ 
+		// salary هذه الدالة نعطيها رقم فتقوم بوضعه للخاصية
+		void setSalary(double s) {
+			salary = s;
+		}
+};
+
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+    // e إسمه Employee هنا قمنا بإنشاء كائن من الكلاس
+    Employee e;
+ 
+    // Setter من خلال دوال الـ e هنا قمنا بوضع قيم لخصائص الكائن
+    e.setName("Mhamad");
+    e.setAge(21);
+    e.setSalary(950);
+ 
+    // Getter من خلال دوال الـ e هنا قمنا بعرض قيم خصائص الكائن
+    cout &lt;&lt; "Name: " &lt;&lt; e.getName() &lt;&lt; "\n";
+    cout &lt;&lt; "Age: " &lt;&lt; e.getAge() &lt;&lt; "\n";
+    cout &lt;&lt; "Salary: " &lt;&lt; e.getSalary();
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Name: Mhamad
+Age: 21
+Salary: 950
+		</pre>
+</div>
+<br/><br/>
+<p>الآن سنعيد المثال السابق مع إضافة شرط على الدالة <code>setName()</code> يحدد أنه عند إدخال الإسم يجب أن يتألف من أكثر من حرفين.<br/>
+	و إضافة شرط على الدالة <code>getName()</code> لجعلها ترجع <code>Not defined</code> إذا كان لا يوجد إسم مدخل في الخاصية <span class="inline"><code>name</code>.</span></p>
+<p><span class="note">ملاحظة:</span> قمنا بتعليم الشروط و التعديلات الجديدة باللون الأصفر.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-highlight="17-24, 39-46, 66" data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// Employee هنا قمنا بتعريف الكلاس
+class Employee {
+
+	// private لاحظ أننا أبقينا نوع الخصائص
+    private:
+		string name;
+		int age;
+		double salary;
+		
+    public:
+		// name في حال لم يتم يكن هناك إسم مدخل في الخاصية "Not defined" لجعلها ترجع العبارة getName() هنا وضعنا شرط في الدالة
+		string getName() {
+			if (name == "")
+            {
+                return "Not defined";
+            }
+            else
+            {
+                return "Mr." + name;
+            }
+		}
+ 
+		// لم نجري أي تعديل على هذه الدالة
+		int getAge() {
+			return age;
+		}
+ 
+		// لم نجري أي تعديل على هذه الدالة
+		double getSalary() {
+			return salary;
+		}
+ 
+		// فقط في حال كان الإسم الذي نمرره لها يتألف من أكثر من حرفين name لجعلها تقبل تخزين الإسم في الخاصية setName() هنا وضعنا شرط في الدالة
+		void setName(string n) {
+			if (n.length() &lt; 3)
+			{
+				cout &lt;&lt; "Name is too short, name can't be less then 3 characters!\n";
+			}
+			else
+			{
+				name = n;
+			}
+		}
+		
+		// لم نجري أي تعديل على هذه الدالة
+		void setAge(int a) {
+			age = a;
+		}
+ 
+		// age هذه الدالة نعطيها رقم فتقوم بوضعه للخاصية
+		void setSalary(double s) {
+			salary = s;
+		}
+};
+
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+    // e إسمه Employee هنا قمنا بإنشاء كائن من الكلاس
+    Employee e;
+ 
+    e.setName("dj");     // كإسم لأنه يتألف من حرفين فقط "dj" هنا لن يقبل أن ندخل
+    e.setAge(21);
+    e.setSalary(950);
+ 
+    cout &lt;&lt; "Name: " &lt;&lt; e.getName() &lt;&lt; "\n";    // لأن الإسم الذي أدخلناه سابقاً لم يتم قبلوه "Not defined" هنا يفترضي أن ترجع الدالة عبارة
+    cout &lt;&lt; "Age: " &lt;&lt; e.getAge() &lt;&lt; "\n";
+    cout &lt;&lt; "Salary: " &lt;&lt; e.getSalary();
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Name is too short, name can't be less then 3 characters!
+Name: Not defined
+Age: 21
+Salary: 950
+		</pre>
+<p><span class="point">•</span>لاحظ أنه لم يقبل الإسم الذي أدخلناه عن طريق الدالة <code>setName()</code> لأنه أصغر من ثلاثة أحرف, لذلك طبع الرسالة التي قمنا بتجهيزها في حال تم إدخال إسم أصغر من ثلاثة أحرف.<br/>
+<span class="point">•</span> و بما أنه لم يضع الإسم الذي قمنا بإدخاله في الخاصية <code>name</code> لاحظ أن الدالة <code>getName()</code> قامت بإرجاع القيمة <code>Not defined</code> التي قمنا بتجهيزها في حال لم يتم إدخال أي إسم فيه.</p>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

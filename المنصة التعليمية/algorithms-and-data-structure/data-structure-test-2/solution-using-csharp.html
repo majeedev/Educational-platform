@@ -1,0 +1,805 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>تمارين خوارزميات و هياكل البيانات - التحدي الثاني - الحل بلغة C#</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../algorithms-and-data-structure.png"/></li>
+<li class="title">تعرف على الدورة</li>
+<li><a href="../overview/index.html">نظرة عامة</a></li>
+<li><a href="../how-to-start/index.html">الطريقة الصحيحة للتعلم</a></li>
+<li class="title">رسم أشكال هندسية</li>
+<li><a href="../drawing-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../drawing-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../drawing-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../drawing-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../drawing-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../drawing-test-6/index.html">التحدي السادس</a></li>
+<li><a href="../drawing-test-7/index.html">التحدي السابع</a></li>
+<li><a href="../drawing-test-8/index.html">التحدي الثامن</a></li>
+<li><a href="../drawing-test-9/index.html">التحدي التاسع</a></li>
+<li><a href="../drawing-test-10/index.html">التحدي العاشر</a></li>
+<li class="title">التعامل مع الأرقام و النصوص</li>
+<li><a href="../numbers-and-strings-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../numbers-and-strings-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../numbers-and-strings-test-3/index.html">التحدي الثالث</a></li>
+<li class="title">إجراء عمليات حسابية</li>
+<li><a href="../math-operations-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../math-operations-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../math-operations-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../math-operations-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../math-operations-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../math-operations-test-6/index.html">التحدي السادس</a></li>
+<li><a href="../math-operations-test-7/index.html">التحدي السابع</a></li>
+<li><a href="../math-operations-test-8/index.html">التحدي الثامن</a></li>
+<li><a href="../math-operations-test-9/index.html">التحدي التاسع</a></li>
+<li class="title">التعامل مع المصفوفات</li>
+<li><a href="../arrays-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../arrays-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../arrays-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../arrays-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../arrays-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../arrays-test-6/index.html">التحدي السادس</a></li>
+<li class="title">تراكيب البيانات</li>
+<li><a href="../data-structure-about-section/index.html">حول هذا القسم</a></li>
+<li><a href="../data-structure-test-1/index.html">التحدي الأول</a></li>
+<li><a href="index.html">التحدي الثاني</a></li>
+<li class="title">حساب وقت الخوارزميات</li>
+<li><a href="../algorithms-complexity/index.html">مفهوم التعقيد ( Complexity )</a></li>
+<li><a href="../big-o-notation/index.html">حساب الـ Big-O Notation</a></li>
+<li><a href="../choosing-best-algorithms/index.html">إختيار الخوارزمية الأفضل</a></li>
+<li><a href="../calculate-execution-time/index.html">عرض مدة تنفيذ الكود</a></li>
+<li><a href="../useful-resources/index.html">مصادر مفيدة</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Algorithms &amp; Data Structure</span>التحدي الثاني - الحل بلغة <span class="word">C#</span></h1>
+<article>
+<h3>فكرة المشروع</h3>
+<p>في هذا التمرين سنفترض أننا نقوم بتخزين بيانات لمؤسسة صغيرة.<br/>
+	البيانات التي نريد تخزينها هي التالية:</p>
+<ul class="explain">
+<li><p>الموظفين الذين يعملون في المؤسسة (الإسم, الهاتف, الجنس, دوام العمل, أيام العمل).</p></li>
+<li><p>الزبائن الذين يشترون من المؤسسة (الإسم, الهاتف, الجنس, البريد الإلكتروني).</p></li>
+<li><p>المنتجات التي تبيعها المؤسسة (إسم المنتج و سعره).</p></li>
+<li><p>الفواتير الخاصة ببيع المنتجات (تاريخ البيع, هل تم الدفع أم لا, بيانات المشتري, المنتجات التي تم شراءها).</p></li>
+</ul>
+<p><span class="note">ملاحظة:</span> رقم التعرفة لكل من الأشخاص, المنتجات, الفواتير يجب أن يتم إعطاؤه لهم بشكل تلقائي.</p>
+<br/>
+<h3>الشكل العام لأقسام المشروع</h3>
+<p><a href="classes-structure.png" target="_blank"><img src="classes-structure.png"/></a></p>
+<br/>
+<h3>شرح أقسام المشروع</h3>
+<p><code>Person</code> يمثل المعلومات المشتركة بين الموظف و الزبون.<br/>
+<code>Client</code> يمثل المعلومات الإضافية الخاصة بالزبون و غير موجودة عند الموظف.<br/>
+<code>Employee</code> يمثل المعلومات الإضافية الخاصة الموظف و غير موجودة عند الزبون.<br/>
+<code>Product</code> يمثل أي منتج تبيعه الشركة.<br/>
+<code>Order</code> يمثل فواتير بيع المنتجات و لاحظ أن كل فاتورة سيتم فيها بيع مجموعة من المنتجات و كل فاتورة سيتم إصدارها لشخص محدد.<br/>
+<code>add_product()</code>: مهمتها إضافة منتج جديد.<br/>
+<code>add_person()</code>: مهمتها إضافة شخص جديد سواء موظف أو زبون.<br/>
+<code>add_order()</code>: مهمتها إضافة فاتورة جديدة.<br/>
+<code>remove_product()</code>: مهمتها حذف منتج من خلال <code>id</code> المنتج الذي نمرره لها عند إستدعاءها.<br/>
+<code>remove_person()</code>: مهمتها حذف شخص من خلال <code>id</code> الشخص الذي نمرره لها عند إستدعاءها.<br/>
+<code>remove_order()</code>: مهمتها حذف فاتورة من خلال <code>id</code> الفاتورة الذي نمرره لها عند إستدعاءها.<br/>
+<code>print_person_info()</code>: مهمتها عرض كل معلومات الشخص من خلال <code>id</code> الشخص الذي نمرره لها عند إستدعاءها.<br/>
+<code>print_product_details()</code>: مهمتها عرض كل معلومات المنتج من خلال <code>id</code> المنتج الذي نمرره لها عند إستدعاءها.<br/>
+<code>print_order_details()</code>: مهمتها عرض كل معلومات الفاتورة من خلال <code>id</code> الفاتورة الذي نمرره لها عند إستدعاءها.<br/>
+<code>print_person_orders()</code>: مهمتها عرض كل فواتير الشخص من خلال <code>id</code> الشخص الذي نمرره لها عند إستدعاءها.<br/>
+<code>print_extra_info()</code>: مهمتها عرض كل المعلومات المتوفرة حول الشخص سواء كان موظف أو زبون.</p>
+<p>قم بتحويل الرسم إلى كود. ثم قم بإنشاء مجموعة موظفين, زبائن, منتجات و فواتير. و قم بتجربة جميع الدوال في البرنامج.</p>
+<br/>
+<h3>معلومة</h3>
+<p>لإعطاء رقم <code>id</code> موحد لكل كائن يتم إنشاؤه, يمكنك تعريف متغير ثابت <span class="inline">( <code>static</code> )</span> في الكلاس و جعله أيضاً <code>private</code> حتى لا يمكن تعديل قيمته بشكل يدوي من خارج هذا الكلاس.	بعدها تقوم فقط بجعل قيمته تزيد <span class="number">1</span> كلما قمت بإنشاء كائن من هذا الكلاس و من ثم تضع قيمته في المتغير <span class="inline"><code>id</code>.</span></p>
+<p><span class="note">ملاحظة:</span> سنقوم بإنشاء متغير نوعه <code data-enlighter-language="java">private static</code> إسمه <code>idIncrementer</code> في الكلاسات <span class="inline"><code>Person</code>,</span> <code>Product</code> و <code>Order</code> من أجل هذا الهدف فقط.</p>
+<br/>
+<div class="example-box">
+<h4>الحل بلغة #C</h4>
+<span class="code-title java-file-icon">Person.cs</span>
+<pre data-enlighter-language="csharp">
+// الذي وضعنا فيه المعلومات الأساسية التي يجب أن يملكها أي شخص Person هنا قمنا بتعريف الكلاس
+// لأننا لا نريد أن يتم إنشاء كائنات منه بل من الكلاسات التي ترث منه abstract ملاحظة: قمنا بتعريفه كـ
+abstract class Person
+{
+    // هنا قمنا بتعريف الخصائص الأساسية التي يجب أن يملكها أي شخص
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Phone { get; set; }
+    public string Gender { get; set; }
+
+    // لأننا بنفس الوقت نريده أن يكون موحداً لجميع private و static قمنا بتعريفه كـ idIncrementer المتغير
+    // الكائنات التي ننشئها من الكلاسات التي ترث من هذا الكلاس و لا يمكن التعامل معه بشكل مباشر من أي كلاس آخر
+    private static int idIncrementer = 0;
+
+    // هنا قمنا بتعريف كونستركتور للكلاس حتى نستطيع إسناد قيم للخصائص بشكل مباشر من أي كلاس يرث هذا الكونستركتور
+    // id تزيد 1 في كل مرة نستدعي فيها هذا الكونستركتور و من ثم يتم وضعها في الخاصية idIncrementer لاحظ أيضاً أننا قمنا بتحديد أن قيمة
+    // الخاصة بالكائن الذي سيملكها. القيم الأخرى التي سيتم تمريرها للكائن سيتم تخزينها بشكل مباشر في خصائص الكائن
+    // و لكننا نستطيع إستدعاؤه من الكلاسات التي ترثه Main إنتبه: هذا الكونستركتور لا نستطيع إستدعاؤه بشكل مباشر من الكلاس
+    public Person(string name, string phone, string gender)
+    {
+        idIncrementer++;
+        this.Id = idIncrementer;
+        this.Name = name;
+        this.Phone = phone;
+        this.Gender = gender;
+    }
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Client.cs</span>
+<pre data-enlighter-language="csharp">
+// الذي وضعنا فيه المعلومات الأساسية التي يجب أن يملكها أي زبون Client هنا قمنا بتعريف الكلاس
+// Email لأن الزبون عبارة عن شخص عادي و لكنه يملك الخاصية الإضافية Person هذا الكلاس يرث من الكلاس
+class Client : Person
+{
+    // هنا قمنا بتعريف الخاصية الإضافية التي سيملكها الزبون
+    // Id, Name, Phone, Gender, Email :أصبح يملك الخصائص التالية Client إذاً الكلاس
+    public string Email { get; set; }
+
+    // هنا قمنا بتعريف كونستركتور للكلاس حتى نستطيع إسناد قيم للخصائص بشكل مباشر بواسطته
+    // base() عن طريق الدالة Person سيتم إسناد قيم لها من خلال كونستركتور الكلاس Name, Phone, Gender الخصائص
+    // Id سيتولى أمر توليد قيمة للخاصية Person أيضاَ, لا تنسى أن كونستركتور الكلاس
+    public Client(string name, string phone, string gender, string email) : base(name, phone, gender)
+    {
+        this.Email = email;
+    }
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Employee.cs</span>
+<pre data-enlighter-language="csharp">
+// الذي وضعنا فيه المعلومات الأساسية التي يجب أن يملكها أي موظف Employee هنا قمنا بتعريف الكلاس
+// WorkingTime و Salary لأن الموظف عبارة عن شخص عادي و لكنه يملك خصائص إضافية هي Person هذا الكلاس يرث من الكلاس
+class Employee : Person
+{
+    // هنا قمنا بتعريف الخاصية الإضافية التي سيملكها العميل
+    // Id, Name, Phone, Gender, Salary, WorkingTime :أصبح يملك الخصائص التالية Employee إذاً الكلاس
+    public float Salary { get; set; }
+    public string WorkingTime { get; set; }
+
+    // هنا قمنا بتعريف كونستركتور للكلاس حتى نستطيع إسناد قيم للخصائص بشكل مباشر بواسطته
+    // base() عن طريق الدالة Person سيتم إسناد قيم لها من خلال كونستركتور الكلاس Name, Phone, Gender الخصائص
+    // id سيتولى أمر توليد قيمة للخاصية Person أيضاَ, لا تنسى أن كونستركتور الكلاس
+    public Employee(string name, string phone, string gender, float salary, string workingTime) : base(name, phone, gender)
+    {
+        this.Salary = salary;
+        this.WorkingTime = workingTime;
+    }
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Product.cs</span>
+<pre data-enlighter-language="csharp">
+// الذي وضعنا فيه المعلومات الأساسية التي يجب أن يملكها أي منتج Product هنا قمنا بتعريف الكلاس
+class Product
+{
+    // هنا قمنا بتعريف الخاصية الإضافية التي سيملكها المنتج
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public float Price { get; set; }
+
+    // لأننا بنفس الوقت نريده أن يكون موحداً private و static قمنا بتعريفه كـ idIncrementer المتغير
+    // لجميع الكائنات التي ننشئها من هذا الكلاس و لا يمكن التعامل معه بشكل مباشر من أي كلاس آخر
+    private static int idIncrementer;
+
+    // هنا قمنا بتعريف كونستركتور للكلاس حتى نستطيع إسناد قيم للكائن الذي ننشئه من هذا الكلاس بشكل مباشر
+    // Id تزيد 1 في كل مرة و من ثم يتم وضعها في الخاصية idIncrementer لاحظ أننا قمنا بتحديد أن قيمة
+    // الخاصة بالكائن. القيم الأخرى التي سيتم تمريرها للكائن سيتم تخزينها بشكل مباشر في خصائص الكائن
+    public Product(string name, float price)
+    {
+        idIncrementer++;
+        this.Id = idIncrementer;
+        this.Name = name;
+        this.Price = price;
+    }
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Order.cs</span>
+<pre data-enlighter-language="csharp">
+using System.Collections.Generic;
+
+// الذي وضعنا فيه المعلومات الأساسية التي يجب أن تمكلها أي فاتورة Order هنا قمنا بتعريف الكلاس
+class Order
+{
+    // هنا قمنا بتعريف الخصائص الأساسية التي يجب أن تملكها أي فاتورة
+    public int Id { get; set; }
+    public string Date { get; set; }
+    public bool IsPaid { get; set; }
+    public Person Person { get; set; }
+    public List&lt;Product&gt; Products { get; set; }
+
+    // لأننا بنفس الوقت نريده أن يكون موحداً private و static قمنا بتعريفه كـ idIncrementer المتغير
+    // لجميع الكائنات التي ننشئها من هذا الكلاس و لا يمكن التعامل معه بشكل مباشر من أي كلاس آخر
+    private static int idIncrementer;
+
+    // هنا قمنا بتعريف كونستركتور للكلاس حتى نستطيع إسناد قيم للكائن الذي ننشئه من هذا الكلاس بشكل مباشر
+    // Id تزيد 1 في كل مرة و من ثم يتم وضعها في الخاصية idIncrementer لاحظ أننا قمنا بتحديد أن قيمة
+    // الخاصة بالكائن. القيم الأخرى التي سيتم تمريرها للكائن سيتم تخزينها بشكل مباشر في خصائص الكائن
+    public Order(string date, bool isPaid, Person person, List&lt;Product&gt; products)
+    {
+        idIncrementer++;
+        this.Id = idIncrementer;
+        this.Date = date;
+        this.IsPaid = isPaid;
+        this.Person = person;
+        this.Products = products;
+    }
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Company.cs</span>
+<pre data-enlighter-language="csharp">
+// يمثل كل ما تحتويه الشركة من أشخاص, فواتير, منتجات, و الدوال التي يمكن استخدامها للتعامل معهم Company الكلاس
+using System;
+using System.Collections.Generic;
+
+class Company
+{
+    // سنضع فيه كل معلومات الفواتير Orders سنضع فيه كل معلومات المنتجات. الكائن Products سنضع فيه كل معلومات الأشخاص. الكائن Persons الكائن
+    public List&lt;Person&gt; Persons { get; set; }
+    public List&lt;Product&gt; Products { get; set; }
+    public List&lt;Order&gt; Orders { get; set; }
+
+    // Orders و Products و Persons هنا قمنا بتعريف كونستركتور الكلاس و الذي قمنا فيه بإنشاء الكائنات
+    public Company()
+    {
+        Persons = new List&lt;Person&gt;();
+        Products = new List&lt;Product&gt;();
+        Orders = new List&lt;Order&gt;();
+    }
+
+    // Products بداخل المصفوفة Product يمكن استخدامها لإضافة كائن من الكلاس AddProduct() الدالة 
+    public void AddProduct(Product product)
+    {
+        Products.Add(product);
+    }
+
+    // Persons بداخل المصفوفة Person يمكن استخدامها لإضافة كائن من الكلاس AddPerson() الدالة 
+    public void AddPerson(Person person)
+    {
+        Persons.Add(person);
+    }
+
+    // Orders بداخل المصفوفة Order يمكن استخدامها لإضافة كائن من الكلاس AddOrder() الدالة 
+    public void AddOrder(Order order)
+    {
+        Orders.Add(order);
+    }
+
+    // الخاص به id بالإعتماد على رقم الـ Products موضوع بداخل المصفوفة Product يمكن استخدامها لإلغاء كائن من الكلاس RemoveProduct() الدالة 
+    public void RemoveProduct(int id)
+    {
+        // product و كل كائن نمر عليه سنضعه بشكل مؤقته بداخل الكائن Products بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+        foreach (Product product in Products)
+        {
+            // الذي مررناه للدالة سيتم حذفه و من ثم الخروج من الدالة id يملك نفس رقم الـ product في حال كان الكائن
+            if (product.Id == id)
+            {
+                Products.Remove(product);
+                return;
+            }
+        }
+
+        // الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ Products في حال لم يتم إيجاد أي كائن في المصفوفة 
+        Console.WriteLine("Product with id " + id + " is not found!");
+        Console.WriteLine("----------------------");
+    }
+
+    // الخاص به id بالإعتماد على رقم الـ Persons موضوع بداخل المصفوفة Person يمكن استخدامها لإلغاء كائن من الكلاس RemovePerson() الدالة 
+    public void RemovePerson(int id)
+    {
+        // person و كل كائن نمر عليه سنضعه بشكل مؤقته بداخل الكائن Persons بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+        foreach (Person person in Persons)
+        {
+            // الذي مررناه للدالة سيتم حذفه و من ثم الخروج من الدالة id يملك نفس رقم الـ person في حال كان الكائن
+            if (person.Id == id)
+            {
+                Persons.Remove(person);
+                return;
+            }
+        }
+
+        // الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ Persons في حال لم يتم إيجاد أي كائن في المصفوفة 
+        Console.WriteLine("Person with id " + id + " is not found!");
+        Console.WriteLine("----------------------");
+    }
+
+    // الخاص به id بالإعتماد على رقم الـ Orders موضوع بداخل المصفوفة Order يمكن استخدامها لإلغاء كائن من الكلاس RemoveOrder() الدالة 
+    public void RemoveOrder(int id)
+    {
+        // order و كل كائن نمر عليه سنضعه بشكل مؤقته بداخل الكائن Orders بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+        foreach (Order order in Orders)
+        {
+            // الذي مررناه للدالة سيتم حذفه و من ثم الخروج من الدالة id يملك نفس رقم الـ order في حال كان الكائن
+            if (order.Id == id)
+            {
+                Orders.Remove(order);
+                return;
+            }
+        }
+
+        // الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ Orders في حال لم يتم إيجاد أي كائن في المصفوفة 
+        Console.WriteLine("Order with id " + id + " is not found!");
+        Console.WriteLine("----------------------");
+    }
+
+    // الخاص به id بالإعتماد على رقم الـ Persons يمكن استخدامها لطباعة كل المعلومات المتوفرة حول شخص موضوع بداخل المصفوفة PrintPersonInfo() الدالة 
+    public void PrintPersonInfo(int id)
+    {
+        // person و كل كائن نمر عليه سنضعه بشكل مؤقته بداخل الكائن Persons بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+        foreach (Person person in Persons)
+        {
+            // الذي مررناه للدالة سيتم طباعة كل معلوماته و من ثم الخروج من الدالة id يملك نفس رقم الـ person في حال كان الكائن
+            if (person.Id == id)
+            {
+                Console.WriteLine("Person with id " + id + " info.");
+                Console.WriteLine("Name: " + person.Name);
+                Console.WriteLine("Phone: " + person.Phone);
+                Console.WriteLine("Gender: " + person.Gender);
+
+                // ( type-casting سيتم تحديد أن الكائن أصله منه ( أي سنفعل ,Client تم إنشاؤه من الكلاس person إذا كان الكائن
+                // Client التي يملكها الشخص فقط في حال كان عبارة عن كائن من الكلاس Email حتى نستطيع طباعة الخاصية
+                if (person is Client)
+                {
+                    Console.WriteLine("Email: " + ((Client)person).Email);
+                }
+                // ( type-casting سيتم تحديد أن الكائن أصله منه ( أي سنفعل ,Employee تم إنشاؤه من الكلاس person إذا كان الكائن
+                // Employee التي يملكها الشخص فقط في حال كان عبارة عن كائن من الكلاس WorkingTime و Salary حتى نستطيع طباعة الخاصيتين
+                else if (person is Employee)
+                {
+                    Console.WriteLine("Salary: " + ((Employee)person).Salary + "$");
+                    Console.WriteLine("Working time: " + ((Employee)person).WorkingTime);
+                }
+
+                // بعدها سيتم رسم هذا الخط و من ثم الخروج من الدالة
+                Console.WriteLine("----------------------");
+                return;
+            }
+        }
+
+        // الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ Persons في حال لم يتم إيجاد أي كائن في المصفوفة 
+        Console.WriteLine("Person with id " + id + " is not found!");
+        Console.WriteLine("----------------------");
+    }
+
+    // الخاص به id بالإعتماد على رقم الـ Products يمكن استخدامها لطباعة كل المعلومات المتوفرة حول منتج موضوع بداخل المصفوفة PrintProductDetails() الدالة 
+    public void PrintProductDetails(int id)
+    {
+        // product و كل كائن نمر عليه سنضعه بشكل مؤقته بداخل الكائن Products بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+        foreach (Product product in Products)
+        {
+            // الذي مررناه للدالة سيتم طباعة كل معلوماته و من ثم الخروج من الدالة id يملك نفس رقم الـ product في حال كان الكائن
+            if (product.Id == id)
+            {
+                Console.WriteLine("Product with id " + id + " details.");
+                Console.WriteLine("Name: " + product.Name);
+                Console.WriteLine("Price: " + product.Price + "$");
+                Console.WriteLine("----------------------");
+                return;
+            }
+        }
+
+        // الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ Products في حال لم يتم إيجاد أي كائن في المصفوفة 
+        Console.WriteLine("Product with id " + id + " is not found!");
+        Console.WriteLine("----------------------");
+    }
+
+
+    // الخاص بها id بالإعتماد على رقم الـ Orders يمكن استخدامها لطباعة كل معلومات فاتورة موضوعة بداخل المصفوفة PrintProductDetails() الدالة 
+    public void PrintOrderDetails(int id)
+    {
+        // سنستخدمه لحساب ناتج جمع جميع أسعار المنتجات التي نجدها في الفاتورة totalSum المتغير
+        float totalSum = 0;
+
+        // order و كل كائن نمر عليه سنضعه بشكل مؤقته بداخل الكائن Orders بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+        foreach (Order order in Orders)
+        {
+            // الذي مررناه للدالة سيتم طباعة كل معلوماته و من ثم الخروج من الدالة id يملك نفس رقم الـ order في حال كان الكائن
+            if (order.Id == id)
+            {
+                Console.WriteLine("Order with id " + id + " details.");
+                Console.WriteLine("Date: " + order.Date);
+                Console.WriteLine("Is paid: " + ((order.IsPaid) ? "yes" : "no"));
+                Console.WriteLine("Ordered by: " + order.Person.Name);
+                Console.WriteLine("Products:");
+
+                // order الموضوعة في الكائن Products هنا سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+                // product كل كائن نمر عليه ( و الذي يمثل منتج ) سنضعه بشكل مؤقته بداخل الكائن
+                // totalSum سعر كل منتج يتم إيجاده في هذه المصفوفة سيتم إضافته على قيمة المتغير
+                foreach (Product product in order.Products)
+                {
+                    totalSum += product.Price;
+                    Console.WriteLine("- " + product.Name + ": " + product.Price + "$");
+                }
+
+                // و الذي يمثل ثمن كل المشتريات الموضوعة في الفاتورة و من ثم الخروج من الدالة totalSum هنا سيتم عرض ناتج الجمع الذي تم تخزينه في المتغير
+                Console.WriteLine("Total: " + totalSum + "$");
+                Console.WriteLine("----------------------");
+                return;
+            }
+        }
+
+        // الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ Orders في حال لم يتم إيجاد أي كائن في المصفوفة 
+        Console.WriteLine("Order with id " + id + " is not found!");
+        Console.WriteLine("----------------------");
+    }
+
+    // الخاص به id بالإعتماد على رقم الـ Persons يمكن استخدامها لطباعة كل معلومات الفواتير التابعة لشخص موضوع بداخل المصفوفة PrintProductDetails() الدالة 
+    public void PrintPersonOrders(int id)
+    {
+        // person و كل كائن نمر عليه سنضعه بشكل مؤقته بداخل الكائن Persons بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+        foreach (Person person in Persons)
+        {
+            // الذي مررناه للدالة سيتم طباعة كل فواتيره و من ثم الخروج من الدالة id يملك نفس رقم الـ person في حال كان الكائن
+            if (person.Id == id)
+            {
+                Console.WriteLine("All Orders made by person with id " + id + ":");
+
+                // order و كل كائن نمر عليه سنضعه بشكل مؤقته بداخل الكائن Orders بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+                foreach (Order order in Orders)
+                {
+                    // ( الذي مررناه للدالة سيتم طباعة معلوماته ( أي معلومات الفاتورة id يملك نفس رقم الـ order الموضوع في الكائن person في حال كان الكائن
+                    if (order.Person.Id == id)
+                    {
+                        Console.WriteLine("&gt; Order: #" + order.Id);
+                        Console.WriteLine("  Date: " + order.Date);
+                        Console.WriteLine("  Is paid: " + ((order.IsPaid) ? "yes" : "no"));
+                        Console.WriteLine("  Ordered by: " + order.Person.Name);
+                        Console.WriteLine("  Products:");
+
+                        // سنستخدمه لحساب ناتج جمع جميع أسعار المنتجات التي نجدها في كل فاتورة totalSum المتغير
+                        float totalSum = 0;
+
+                        // order الموضوعة في الكائن Products هنا سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+                        // product كل كائن نمر عليه ( و الذي يمثل منتج ) سنضعه بشكل مؤقته بداخل الكائن
+                        // totalSum سعر كل منتج يتم إيجاده في هذه المصفوفة سيتم إضافته على قيمة المتغير
+                        foreach (Product product in order.Products)
+                        {
+                            totalSum += product.Price;
+                            Console.WriteLine("  - " + product.Name + ": " + product.Price + "$");
+                        }
+
+                        // و الذي يمثل ثمن كل المشتريات الموضوعة في الفاتورة totalSum هنا سيتم عرض ناتج الجمع الذي تم تخزينه في المتغير
+                        Console.WriteLine("  Total Price: " + totalSum + "$");
+                    }
+                }
+
+                // بعدها سيتم رسم هذا الخط و من ثم الخروج من الدالة
+                Console.WriteLine("----------------------");
+                return;
+            }
+        }
+
+        // الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ Persons في حال لم يتم إيجاد أي كائن في المصفوفة 
+        Console.WriteLine("Person with id " + id + " is not found!");
+        Console.WriteLine("----------------------");
+    }
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Program.cs</span>
+<pre data-enlighter-language="csharp">
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // أي كأننا قمنا بإنشاء شخصين Person هنا قمنا بإنشاء كائنين من كلاسات ترث من الكلاس
+        // و بالتالي فإنه يمثل شخص يعتبر زبون Client عبارة عن كائن من الكلاس person1
+        // و بالتالي فإنه يمثل شخص يعتبر موظف Employee عبارة عن كائن من الكلاس person2
+        Client person1 = new Client("Mhamad", "+96170123456", "Male", "mhamad@example.com");
+        Employee person2 = new Employee("Nadine", "+9631249392", "Female", 800f, "8:00 AM to 3:00 PM");
+
+        // و التي تمثل 6 منتجات Product هنا قمنا بتعريف 6 كائنات من الكلاس
+        Product product1 = new Product("Keyboard", 15f);
+        Product product2 = new Product("Camera", 45f);
+        Product product3 = new Product("HDD 1TB", 70f);
+        Product product4 = new Product("SSD 1TB", 274.66f);
+        Product product5 = new Product("Mouse", 8f);
+        Product product6 = new Product("Table", 44.55f);
+
+        // product3 و product2 و product1 وضعنا فيه الكائنات List هنا قمنا بتعريف كائن من الكلاس
+        // و الذي سننئه بعد قليل order1 لأننا ننوي وضعها في مصفوفة المنتجات التي تم شراءها في الفاتورة التي يمثلها الكائن
+        List&lt;Product&gt; order1Products = new List&lt;Product&gt;();
+        order1Products.Add(product1);
+        order1Products.Add(product2);
+        order1Products.Add(product3);
+
+        // product4 وضعنا فيه الكائن List هنا قمنا بتعريف كائن من الكلاس
+        // و الذي سننئه بعد قليل order2 لأننا ننوي وضعها في مصفوفة المنتجات التي تم شراءها في الفاتورة التي يمثلها الكائن
+        List&lt;Product&gt; order2Products = new List&lt;Product&gt;();
+        order2Products.Add(product4);
+
+        // product5 و product6 وضعنا فيه الكائنات List هنا قمنا بتعريف كائن من الكلاس
+        // و الذي سننئه بعد قليل order3 لأننا ننوي وضعها في مصفوفة المنتجات التي تم شراءها في الفاتورة التي يمثلها الكائن
+        List&lt;Product&gt; order3Products = new List&lt;Product&gt;();
+        order3Products.Add(product5);
+        order3Products.Add(product6);
+
+        // و التي تمثل فواتير Order هنا قمنا بتعريف 3 كائنات من الكلاس
+        // person1 وضعناهما لنفس الشخص الذي يمثله الكائن order2 و order1 لاحظ أن الفاتورتين
+        Order order1 = new Order("2020-1-1", true, person1, order1Products);
+        Order order2 = new Order("2020-2-7", true, person1, order2Products);
+        Order order3 = new Order("2020-5-4", false, person2, order3Products);
+
+        // لأننا نريد تخزين الأشخاص و المنتجات و الفواتير بشكل مرتب بداخله Company هنا قمنا بإنشاء كائن من الكلاس
+        Company company = new Company();
+
+        // AddPerson() بواسطة الدالة company التي يمكلها الكائن Persons هنا قمنا بإضافة الشخصين في المصفوفة
+        company.AddPerson(person1);
+        company.AddPerson(person2);
+
+        // AddProduct() بواسطة الدالة company التي يمكلها الكائن Products هنا قمنا بإضافة المنتجات في المصفوفة
+        company.AddProduct(product1);
+        company.AddProduct(product2);
+        company.AddProduct(product3);
+        company.AddProduct(product4);
+        company.AddProduct(product5);
+        company.AddProduct(product6);
+
+        // AddOrder() بواسطة الدالة company التي يمكلها الكائن Orders هنا قمنا بإضافة الفواتير في المصفوفة
+        company.AddOrder(order1);
+        company.AddOrder(order2);
+        company.AddOrder(order3);
+
+        // PrintPersonInfo() الخاص بهم و بواسطة الدالة id هنا قمنا بطباعة معلومات كلا الشخصين بالإعتماد على رقم التعرفة
+        // تذكر: رقم التعرفة الخاص بكل شخص تم إنشاؤه بشكل تلقائي عند إنشاء كل شخص بداخل الكونستركتور
+        company.PrintPersonInfo(1);
+        company.PrintPersonInfo(2);
+
+        // PrintProductDetails() الخاص بهم و بواسطة الدالة id هنا قمنا بطباعة معلومات كل المنتجات بالإعتماد على رقم التعرفة
+        // تذكر: رقم التعرفة الخاص بكل منتج تم إنشاؤه بشكل تلقائي عند إنشاء كل منتج بداخل الكونستركتور
+        company.PrintProductDetails(1);
+        company.PrintProductDetails(2);
+        company.PrintProductDetails(3);
+        company.PrintProductDetails(4);
+        company.PrintProductDetails(5);
+        company.PrintProductDetails(6);
+
+        // PrintPersonOrders() الخاص بهم و بواسطة الدالة id هنا قمنا بطباعة الفواتير التي يملكها كل شخص بالإعتماد على رقم التعرفة
+        company.PrintPersonOrders(1);
+        company.PrintPersonOrders(2);
+
+        // RemoveOrder() هنا قمنا الفاتورة التي تملك رقم التعرفة 1 بواسطة الدالة
+        // PrintOrderDetails() بعدها حاولنا طباعة معلومات الفاتورة التي قمنا بحذفها بواسطة الدالة
+        // بعدها قمنا بطباعة جمبع الفواتير التي يمكلها الشخص الذي يملك رقم التعرفة 1 و الذي كان يملك الفاتورة التي تم حذفها
+        // لاحظ أن الفاتورة المحذوفة أيضاَ لم تظر ضمن فواتيره
+        company.RemoveOrder(1);
+        company.PrintOrderDetails(1);
+        company.PrintPersonOrders(1);
+
+        Console.ReadKey();
+    }
+}
+		</pre>
+<br/>
+<p>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Person with id 1 info. <span class="red">  --&gt; الموضوعة في السطر 55 PrintPersonInfo() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Mhamad
+			<br/>Phone: +96170123456
+			<br/>Gender: Male
+			<br/>Email: mhamad@example.com
+			<br/>----------------------
+			<br/>Person with id 2 info. <span class="red">  --&gt; الموضوعة في السطر 56 PrintPersonInfo() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Nadine
+			<br/>Phone: +9631249392
+			<br/>Gender: Female
+			<br/>Salary: 800.0$
+			<br/>Working time: 8:00 AM to 3:00 PM
+			<br/>----------------------
+			<br/>Product with id 1 details. <span class="red">  --&gt; الموضوعة في السطر 60 PrintProductDetails() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Keyboard
+			<br/>Price: 15.0$
+			<br/>----------------------
+			<br/>Product with id 2 details. <span class="red">  --&gt; الموضوعة في السطر 61 PrintProductDetails() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Camera
+			<br/>Price: 45.0$
+			<br/>----------------------
+			<br/>Product with id 3 details. <span class="red">  --&gt; الموضوعة في السطر 62 PrintProductDetails() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: HDD 1TB
+			<br/>Price: 70.0$
+			<br/>----------------------
+			<br/>Product with id 4 details. <span class="red">  --&gt; الموضوعة في السطر 63 PrintProductDetails() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: SSD 1TB
+			<br/>Price: 274.66$
+			<br/>----------------------
+			<br/>Product with id 5 details. <span class="red">  --&gt; الموضوعة في السطر 64 PrintProductDetails() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Mouse
+			<br/>Price: 8.0$
+			<br/>----------------------
+			<br/>Product with id 6 details. <span class="red">  --&gt; الموضوعة في السطر 65 PrintProductDetails() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Table
+			<br/>Price: 44.55$
+			<br/>----------------------
+			<br/>All Orders made by person with id 1: <span class="red">  --&gt; الموضوعة في السطر 68 PrintPersonOrders() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>&gt; Order: #1
+			<br/>  Date: 2020-1-1
+			<br/>  Is paid: yes
+			<br/>  Ordered by: Mhamad
+			<br/>  Products:
+			<br/>  - Keyboard: 15.0$
+			<br/>  - Camera: 45.0$
+			<br/>  - HDD 1TB: 70.0$
+			<br/>  Total Price: 130.0$
+			<br/>&gt; Order: #2
+			<br/>  Date: 2020-2-7
+			<br/>  Is paid: yes
+			<br/>  Ordered by: Mhamad
+			<br/>  Products:
+			<br/>  - SSD 1TB: 274.66$
+			<br/>  Total Price: 274.66$
+			<br/>----------------------
+			<br/>All Orders made by person with id 2: <span class="red">  --&gt; الموضوعة في السطر 69 PrintPersonOrders() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>&gt; Order: #3
+			<br/>  Date: 2020-5-4
+			<br/>  Is paid: no
+			<br/>  Ordered by: Nadine
+			<br/>  Products:
+			<br/>  - Mouse: 8.0$
+			<br/>  - Table: 44.55$
+			<br/>  Total Price: 52.55$
+			<br/>----------------------
+			<br/>Order with id 1 is not found! <span class="red">  --&gt; الموضوعة في السطر 75 PrintOrderDetails() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>----------------------
+			<br/>All Orders made by person with id 1: <span class="red">  --&gt; الموضوعة في السطر 76 PrintPersonOrders() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>&gt; Order: #2
+			<br/>  Date: 2020-2-7
+			<br/>  Is paid: yes
+			<br/>  Ordered by: Mhamad
+			<br/>  Products:
+			<br/>  - SSD 1TB: 274.66$
+			<br/>  Total Price: 274.66$
+			<br/>----------------------
+		</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

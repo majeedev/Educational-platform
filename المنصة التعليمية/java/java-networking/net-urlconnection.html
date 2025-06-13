@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الكلاس URLConnection في جافا | Java inet.URLConnection</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>الكلاس <code data-enlighter-language="java">URLConnection</code> في جافا</h1>
+<article>
+<h2>مقدمة</h2>
+<p>الكلاس <code data-enlighter-language="java">URLConnection</code> عبارة عن <span class="word">Abstract Class</span>, و هو يستخدم للقراءة و الكتابة في الملف الذي يشير له كائن الـ <code data-enlighter-language="java">URL</code>, بالإضافة إلى أنه يمكننا من معرفة و تحديد كافة المعلومات المتعلقة بإجراء الإتصال مع الملف.<br/>
+	فمثلاً يتيح لنا معرفة آخر مرة تم فيها تحديث الملف, تاريخ صلاحية الملف, إسم الكلاس المناسب لإرسال المعلومات منه و استقبالها فيه إلخ..</p>
+<br/>
+<h3>بناؤه</h3>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public abstract class URLConnection
+extends Object
+	</pre>
+<br/>
+<h3>حقول الملف <span class="inline">( <span class="word">File Header Fields</span> )</span></h3>
+<p>كل ملف موجود في أي موقع, يمكن وضع معلومات خاصة فيه لا يراها المستخدم العادي, لكنها تكون مهمة جداً للبرنامج أو للسيرفر الذي يملك هذا الملف.<br/>
+	هذه المعلومات تفيد في عملية تحديث محتوى الملف, صلاحيات التعامل معه, نوعه, الترميز المتبع فيه إلخ..</p>
+<p>جميع هذه المعلومات مع بعضها تسمى <b>حقول الملف</b>.<br/>
+	سنتعرف لاحقاً على دوال مصممة خصيصياً لإضافة حقول جديدة تحدد طريقة تعامل البرنامج مع الملف.</p><br/>
+<h3>التعامل مع الملفات عن بعد</h3>
+<p>للوصول إلى الملفات عن بعد سواء لقراءة محتواها أو التعديل عليها, عليك اتباع الخطوات التالية:</p>
+<ol class="arabic">
+<li><p>إنشاء كائن من الكلاس <code data-enlighter-language="java">URL</code> يمثل رابط لملف موجود في موقع معين.</p></li>
+<li><p>إستدعاء الدالة <code data-enlighter-language="java">openConnection()</code> و التي ترجع كائن نوعه <code data-enlighter-language="java">URLConnection</code> يسمح لنا بالتعامل مع هذا الملف.</p></li>
+<li><p>معرفة البروتوكول المستخدم في إجراء عملية الإتصال.</p></li>
+<li><p>تحويل كائن الـ <code data-enlighter-language="java">URLConnection</code> إلى كائن من إحدى الكلاسات التي ترث منه, يكون مخصص للتعامل مع البروتوكول المستخدم في عملية الإتصال.</p></li>
+</ol>
+<br/><br/>
+<h3>تحويل نوع كائن الـ <code data-enlighter-language="java">URLConnection</code></h3>
+<p>الكلاس <code data-enlighter-language="java">URLConnection</code> عبارة عن <span class="word">Abstract Class</span>, تم تصميمه لإنشاء إتصال مع الملف الذي يشير إليه كائن الـ <code data-enlighter-language="java">URL</code> مهما كان البروتوكول المستخدم في عملية الإتصال, لكن في حال أردت أن تتعامل مع هذا الملف, سيكون عليك تحويل نوع كائن الـ <code data-enlighter-language="java">URLConnection</code> إلى نوع يلائم البروتوكول المستخدم لإجراء هذا الإتصال.</p>
+<p>إذاً نوع البروتوكول المستخدم لإجراء الإتصال هو الذي يحدد النوع الذي يجب تحويل كائن الـ <code data-enlighter-language="java">URLConnection</code> إليه, أمثلة:</p>
+<ul class="explain">
+<li><p>في حال كان البروتوكول <code data-enlighter-language="java">http</code> هو المستخدم في إجراء الإتصال, سيكون عليك تحويل نوع الكائن إلى النوع <code data-enlighter-language="java">HttpURLConnection</code>.</p></li>
+<li><p>في حال كان البروتوكول <code data-enlighter-language="java">https</code> هو المستخدم في إجراء الإتصال, سيكون عليك تحويل نوع الكائن إلى النوع <code data-enlighter-language="java">HttpsURLConnection</code>.</p></li>
+<li><p>في حال كان البروتوكول <code data-enlighter-language="java">ftp</code> هو المستخدم في إجراء الإتصال, سيكون عليك تحويل نوع الكائن إلى النوع <code data-enlighter-language="java">FtpURLConnection</code>.</p></li>
+<li><p>في حال كان البروتوكول <code data-enlighter-language="java">jar</code> هو المستخدم في إجراء الإتصال, سيكون عليك تحويل نوع الكائن إلى النوع <code data-enlighter-language="java">JarURLConnection</code> إلخ..</p></li>
+</ul>
+</article>
+<article>
+<h2>كونستركتورات الكلاس <code data-enlighter-language="java">URLConnection</code></h2>
+<p>الكلاس <code data-enlighter-language="java">URLConnection</code> يملك الكونستركتور التالي فقط.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الكونستركتور مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">protected URLConnection(URL url)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">URLConnection</code> يمثل كافة المعلومات المتعلقة بالملف الذي يشير له كائن الـ <code data-enlighter-language="java">URL</code>, أي يمثل صلة الوصل بين البرنامج و الملف الذي يشير له كائن الـ <code data-enlighter-language="java">URL</code> الذي نمرره له كـ <span class="word">Argument</span>.<br/>
+			بما أنه معرف كـ <code data-enlighter-language="java">protected</code>, فهذا يعني أنه لا يمكن إستخدامه إلا في حال قمنا بإنشاء كلاس يرث منه و يفعل <span class="word">Override</span> للدالة <code data-enlighter-language="java">connect()</code> الموجودة فيه.<br/><br/>
+<span class="note">ملاحظة:</span> لست بحاجة إلى إستخدام هذا الكونستركتور لأنك لن تقوم ببناء كلاس خاص للتعامل مع الشبكات.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>دوال الكلاس <code data-enlighter-language="java">URLConnection</code></h2>
+<p>الجدول التالي يحتوي على دوال الكلاس <code data-enlighter-language="java">URLConnection</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getContent()</code></span>
+			ترجع كائن يمثل إسم الكلاس الذي يجب استخدامه للتعامل مع محتوى الملف الذي يشير إليه كائن الـ <code data-enlighter-language="java">URLConnection</code>.<br/>
+			في حال حدث خطأ بسبب الملف يتم رمي الإستثناء <span class="code red">IOException</span><br/>
+			و في حال كان البروتوكول المستخدم غير ملائم للتعامل مع الملف, يتم رمي الإستثناء <span class="code red">UnknownServiceException</span>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getContentEncoding()</code></span>
+			ترجع نص يمثل قيمة الحقل <code data-enlighter-language="java">content-encoding</code> في حال تم تحديدها في كائن الـ <code data-enlighter-language="java">URLConnection</code>.<br/>
+			و ترجع <code data-enlighter-language="java">null</code> في حال كانت قيمته غير معروفة.<br/><br/>
+<b>معلومة:</b> هذا الحقل يحدد الطريقة التي سيتم فيها تجزيء الملف عند إرساله إلى الجهة المطلوبة, و هو عبارة عن إسم الترميز المستخدم من قبل البروتوكول المعنمد عليه للتعامل مع هذا الملف.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public long getContentLengthLong()</code></span>
+			ترجع نص يمثل قيمة الحقل <code data-enlighter-language="java">content-encoding</code> في حال تم تحديدها في كائن الـ <code data-enlighter-language="java">URLConnection</code>.<br/>
+			و ترجع <span class="number">1-</span> في حال كانت غير محددة.<br/><br/>
+<b>معلومة:</b> هذا الحقل يمثل حجم البيانات الأساسية المتعلقة بهذا الإتصال في حال قمت بتحديده, أي عدد الأحرف المتوقع إستقبالها.<br/>
+			طبعاً لا ضرورة لتحديدها لأنه سيقوم بذلك بشكل تلقائي في حال لم تفعل ذلك.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getContentType()</code></span>
+			ترجع نص يمثل قيمة الحقل <code data-enlighter-language="java">Content-Type</code>و هو عبارة نوع الملف الذي يشير إليه كائن الـ <code data-enlighter-language="java">URLConnection</code>.<br/>
+			و ترجع <code data-enlighter-language="java">null</code> في حال كان النوع غير معروف.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int getDate()</code></span>
+			ترجع قيمة الحقل <code data-enlighter-language="java">date</code>, و هو عبارة عن رقم يمثل التاريخ و الوقت الذي قام فيه السيرفر بإرسال الملف الذي يشير إليه كائن الـ <code data-enlighter-language="java">URLConnection</code>.<br/>
+			الرقم الذي ترجعه عبارة عن عدد الـ <span class="word">milliseconds</span> الموجودة إعتباراً من التاريخ <code data-enlighter-language="java">1/1/1970 00:00:00 GMT</code>.<br/>
+			ترجع <span class="number">0</span> في حال كان الوقت غير معروف.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int getLastModified()</code></span>
+			ترجع قيمة الحقل <code data-enlighter-language="java">last-modified</code> في حال كانت مذكورة في الملف الذي يشير إليه كائن الـ <code data-enlighter-language="java">URLConnection</code>, و هو عبارة عن رقم يمثل تاريخ آخر مرة تم فيها تعديل هذا الملف.<br/>
+			الرقم الذي ترجعه عبارة عن عدد الـ <span class="word">milliseconds</span> الموجودة إعتباراً من التاريخ <code data-enlighter-language="java">1/1/1970 00:00:00 GMT</code>.<br/>
+			ترجع <span class="number">0</span> في حال كان الوقت غير معروف.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public long getExpiration()</code></span>
+			ترجع قيمة الحقل <code data-enlighter-language="java">expires</code> في حال كانت مذكورة في الملف الذي يشير إليه كائن الـ <code data-enlighter-language="java">URLConnection</code>, و هو عبارة عن رقم يمثل تاريخ صلاحية الملف.<br/>
+			الرقم الذي ترجعه عبارة عن عدد الـ <span class="word">milliseconds</span> الموجودة إعتباراً من التاريخ <code data-enlighter-language="java">1/1/1970 00:00:00 GMT</code>.<br/>
+			ترجع <span class="number">0</span> في حال كانت غير مذكورة في الملف.<br/><br/>
+<b>معلومة:</b> في العادة أي ملف نطلبه من موقع ما يتم إعطائه تاريخ صلاحية, هذا التاريخ يضمن لك أن زوار الموقع سيحصلون دائماً على آخر تحديث فعلته لهذا الملف.<br/>
+			فمثلاً, عندما تقوم بفتح أي صفحة من النت, يقوم المتصفح بحفظ هذه الصفحة على القرص الصلب, و في حال طلبت نفس الصفحة من جديد حتى و لو كان بعد سنة, سيقوم المتصفح أولاً بالبحث في الصفحات المخزنة فيه سابقاً, و في حال وجد أن هذه الصفحة أصلاً موجودة عنده, يعرضها لك بسرعة بدل أن تنتظره ليحملها لك من النت. إذاً هنا المشكلة تكون أنك ستحصل دائماً على النسخة القديمة للصفحة.<br/>
+			الحل لهذه المشكلة كان بإعطاء الملفات تاريخ صلاحية. فمثلاً تجعل الصفحة صالحة لمدة يوم واحد, عندها في إذا قام المستخدم بطلب نفس الصفحة التي طلبها في اليوم السابق, سيجد المتصفح أن الصفحة التي يمكلها إنتهت صلاحيتها و بالتالي سيطلبها له من السيرفر من جديد و عندها سيحصل على آخر تحديث تم إجراءه على الصفحة.<br/>
+			إذاً هذا الحقل مهم جداً و يجب ذكره في جميع الملفات التي ترفع في النت.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public long getIfModifiedSince()</code></span>
+			ترجع قيمة الحقل <code data-enlighter-language="java">ifModifiedSince</code> في حال كانت مذكورة في الملف, و هو عبارة عن رقم يمثل تاريخ آخر مرة علم فيها المستخدم أن الملف قد تم تحديثه.<br/>
+			الرقم الذي ترجعه عبارة عن عدد الـ <span class="word">milliseconds</span> الموجودة إعتباراً من التاريخ <code data-enlighter-language="java">1/1/1970 00:00:00 GMT</code>.<br/>
+			ترجع <span class="number">0</span> في حال كان الوقت غير معروف.<br/><br/>
+<b>معلومة:</b> هنا مثلاً يتم تصميم البرنامج لمقارنة آخر مرة قام فيها هو بتعديل محتوى الملف مع آخر مرة قام فيها أي أحد بتعديل محتوى هذا الملف.<br/>
+			في حال وجد نفسه هو آخر من قام بتحديث الملف, يعلم عندها أن المعلومات المذكورة فيه لم تتغير و بالتالي يمكنه إستعمال النسخة التي يملكها من هذا الملف بدل تحميلها من النت من جديد.<br/>
+			لكن في حال وجد أن هذا الملف قد تم تحديثه من قبل شخص آخر, عندها سيقوم بتحميل النسخة الموجودة في السيرفر من جديد و تجاهل النسخة التي يملكها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void setDoInput(boolean input)</code></span>
+			تحدد قيمة الحقل <code data-enlighter-language="java">doinput</code> في كائن الـ <code data-enlighter-language="java">URLConnection</code>.<br/>
+			إذا قمت بتمرير القيمة <code data-enlighter-language="java">true</code> لها كـ <span class="word">Argument</span>, فهذا يعني أنك تنوي استخدام كائن الـ <code data-enlighter-language="java">URLConnection</code> لقراءة محتوى الملف.<br/>
+			ترمي الإستثناء <span class="code red">IllegalStateException</span> في حال كان الكائن متصلاً بالملف قبل استدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean getDoInput()</code></span>
+			ترجع قيمة الحقل <code data-enlighter-language="java">doinput</code> في حال قمنا بتحديدها في كائن الـ <code data-enlighter-language="java">URLConnection</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void setDoOutput(boolean output)</code></span>
+			تحدد قيمة الحقل <code data-enlighter-language="java">doinput</code> في كائن الـ <code data-enlighter-language="java">URLConnection</code>.<br/>
+			إذا قمت بتمرير القيمة <code data-enlighter-language="java">true</code> لها كـ <span class="word">Argument</span>, فهذا يعني أنك تنوي استخدام كائن الـ <code data-enlighter-language="java">URLConnection</code> للكتابة في الملف.<br/>
+			ترمي الإستثناء <span class="code red">IllegalStateException</span> في حال كان الكائن متصلاً بالملف قبل استدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean getDoOutput()</code></span>
+			ترجع قيمة الحقل <code data-enlighter-language="java">dooutput</code> في حال قمنا بتحديدها في كائن الـ <code data-enlighter-language="java">URLConnection</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void setUseCaches(boolean usecaches)</code></span>
+			تحدد قيمة الحقل <code data-enlighter-language="java">usecaches</code> في كائن الـ <code data-enlighter-language="java">URLConnection</code>.<br/>
+			إذا قمت بتمرير القيمة <code data-enlighter-language="java">true</code> لها كـ <span class="word">Argument</span>, فهذا يعني أنك تريد الإحتفاظ بنسخة من الملف في القرص الصلب.<br/>
+			ترمي الإستثناء <span class="code red">IllegalStateException</span> في حال كان الكائن متصلاً بالملف قبل استدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean getUseCaches()</code></span>
+			ترجع قيمة الحقل <code data-enlighter-language="java">usecaches</code> في حال قمنا بتحديدها في كائن الـ <code data-enlighter-language="java">URLConnection</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public InputStream getInputStream()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">InputStream</code> يستخدم للقراءة من الملف.<br/>
+			في حال حدث خطأ بسبب الملف يتم رمي الإستثناء <span class="code red">IOException</span><br/>
+			و في حال كان البروتوكول المستخدم غير ملائم للتعامل مع الملف, يتم رمي الإستثناء <span class="code red">UnknownServiceException</span>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public OutputStream getOutputStream()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">OutputStream</code> يستخدم للكتابة في الملف.<br/>
+			في حال حدث خطأ بسبب الملف يتم رمي الإستثناء <span class="code red">IOException</span><br/>
+			و في حال كان البروتوكول المستخدم غير ملائم للتعامل مع الملف, يتم رمي الإستثناء <span class="code red">UnknownServiceException</span>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getHeaderField(String name)</code></span>
+			ترجع قيمة أي حقل نمرره لها كـ <span class="word">Argument</span> كنص.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Map&lt;String,List&lt;String&gt;&gt; getHeaderFields()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">Map</code> يحتوي على جميع أسماء و قيم الحقول الموجودة في <span class="word">Header</span> كائن الـ <code data-enlighter-language="java">Connection</code> بشكل <span class="word">key / value</span>.<br/><br/>
+<b>معلومة:</b> هذه الدالة ترجع لك جميع معلومات الإتصال دفعة واحدة كجدول, و بالتالي تسهل عليك جلب جميع المعلومات المتعلقة بعملية الإتصال مع الملف.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public URL getURL()</code></span>
+			ترجع كائن الـ <code data-enlighter-language="java">URL</code> المستخدم من قبل كائن الـ <code data-enlighter-language="java">Connection</code>.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>أمثلة شاملة</h2>
+<br/>
+<h3>المثال الأول</h3>
+<p>في المثال التالي قمنا بتعريف كائن نوعه <code data-enlighter-language="java">URL</code> يشير إلى صفحتنا في فيسبوك <a href="https://www.facebook.com/harmashcom">https://www.facebook.com/harmashcom</a>.<br/>
+	بعدها قمنا باستدعاء الدالة <code data-enlighter-language="java">openConnection()</code> و التي ترجع كائن نوعه <code data-enlighter-language="java">URLConnection</code> يتيح لنا تجهيز معلومات الإتصال.<br/>
+	بعدها قمنا باستدعاء الدالة <code data-enlighter-language="java">getHeaderFields()</code> و التي ترجع كائن نوعه <code data-enlighter-language="java">Map</code> يمثل جميع الحقول الموجودة في كائن الـ <code data-enlighter-language="java">URLConnection</code>.<br/>
+	بعدها قمنا بإنشاء حلقة <span class="word">For Each</span> تعرض لنا في كل دورة معلومات حقل واحد, أي <span class="word">Entry</span> واحد.</p>
+<p><span class="note">ملاحظة:</span> الإنترفيس <code data-enlighter-language="java">Map</code> يملك <span class="word">Inner Interface</span> إسمه <code data-enlighter-language="java">Entry</code>, نستخدمه للتعامل مع العناصر التي يملكها كائن الـ <code data-enlighter-language="java">Map</code>.<br/>
+	بما أن الإنترفيس <code data-enlighter-language="java">Entry</code> معرف بداخل الإنترفيس <code data-enlighter-language="java">Map</code> يمكننا إستدعاءه هكذا <code data-enlighter-language="java">Map.Entry</code>.</p>
+<div class="example-box">
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.net.URL;                  // URL هنا قمنا باستدعاء الكلاس
+import java.net.URLConnection;        // URLConnection هنا قمنا باستدعاء الكلاس
+import java.util.Map;                 // Map هنا قمنا باستدعاء الكلاس
+import java.util.List;                // List هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // الآن سنحاول إجراء إتصال عبر الشبكة للوصول إلى ملف محدد و عرض كافة معلومات الإتصال المتوفرة
+        try
+        {
+            // يشير إلى رابط موقعنا في فيسبوك url إسمه URL هنا قمنا بتعريف كائن نوعه
+            URL url = new URL("https://www.facebook.com/harmashcom");
+ 
+            // connection إسمه URLConnection هنا قمنا بتعريف كائن نوعه
+            URLConnection connection = url.openConnection();
+ 
+            // map في الكائن getHeaderFields() هنا قمنا بتخزين أسماء و قيم الحقول التي سترجعها الدالة
+            Map&lt;String, List&lt;String&gt;&gt; map = connection.getHeaderFields();
+ 
+            // و بعدها سيتم عرضهم entry بجلب إسم حقل و قيمته و وضعهم في الكائن entrySet() هنا في كل دورة تقوم الدالة
+            for (Map.Entry&lt;String, List&lt;String&gt;&gt; entry : map.entrySet())
+            {
+                System.out.println(entry.getKey() +" : "+ entry.getValue());
+            }
+ 
+        }
+        catch( Exception e ) {
+            System.out.println(e.getMessage());
+        }
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+null : [HTTP/1.1 200 OK]
+Expires : [Sat, 01 Jan 2000 00:00:00 GMT]
+X-XSS-Protection : [0]
+Set-Cookie : [fr=0R31HwmcA2qNYUaC..BX7LPo.cm.AAA.0.0.BX7LPo.AWWl-1aI; expires=Wed, 27-Dec-2016 06:25:44 GMT; Max-Age=7776000; path=/; domain=.facebook.com; httponly]
+Connection : [keep-alive]
+public-key-pins-report-only : [max-age=500; pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliasfasTH32Us5sud4PB18="; pin-sha256="r/mIkG3eEpVdm+u/ko/cwxzOMo1bJ4TyHIlByibiA5E="; pin-sha256="q4PO2G4cbkZhZ82+JgmRUyGMoAeozA+BSXVXQWA8XWQ="; report-uri="http://reports.fb.com/hpkp/"]
+Cache-Control : [private, no-cache, no-store, must-revalidate]
+X-Content-Type-Options : [nosniff]
+Pragma : [no-cache]
+X-FB-Debug : [k1P7SDLc7cblje32GG3ydHZ8awX/he/64uiyasdf34f4BF4HYuiXpPSGYahNfpx+7F+vnKq3z4IbNvEEXYjgg==]
+X-Frame-Options : [DENY]
+Strict-Transport-Security : [max-age=15552000; preload]
+Vary : [Accept-Encoding]
+Date : [Thu, 29 Sep 2016 06:25:44 GMT]
+Transfer-Encoding : [chunked]
+P3P : [CP="Facebook does not have a P3P policy. Learn why here: http://fb.me/p3p"]
+Content-Type : [text/html]
+		</pre>
+</div>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>في المثال التالي قمنا بتعريف برنامجين, الأول هو برنامج صغير جداً مكتوب بلغة <span class="word">PHP</span> موجود على السيرفر أي في موقع ما, و الثاني عبارة عن برنامج مكتوب بلغة جافا. أنت الآن مسؤول عن كود الجافا فقط, لأنك تدرس لغة جافا و ليس لغة <span class="word">PHP</span> التي تستعمل في بناء المواقع.</p>
+<p>فكرة البرنامج هي الوصول إلى ملف موجود في سيرفر معين عبر شبكة النت و إدخال بيانات فيه إضافة إلى البيانات الموجودة فيه, بعدها قمنا بقراءة محتوى هذا الملف.</p>
+<ul class="explain">
+<li><p>من السطر <span class="number">24</span> إلى السطر <span class="number">41</span>, قمنا بإرسال البيانات التي أدخلها المستخدم إلى الملف الموجود في السيرفر.</p></li>
+<li><p>من السطر <span class="number">44</span> إلى السطر <span class="number">60</span>, قمنا باستقبال كامل البيانات التي أصبحت موجودة في الملف و من ثم عرضناها.</p></li>
+</ul>
+<div class="example-box">
+<p><span class="point">•</span>هذا ملف <span class="word">PHP</span> و هو عبارة عن صفحة ويب موجودة على السيرفر, نمرر لها إيميل و كلمة مرور عند استدعائها, فتعرضهم في الصفحة عندما تفتح.<br/>
+<span class="note">إنتبه:</span> لم نشرح هذا الكود لأنك الآن تدرس لغة جافا و ليس لغة <span class="word">PHP</span> و لست بحاجة إلى فهمه أيضاً.</p>
+<span class="code-title php-file-icon">test.php</span>
+<pre data-enlighter-language="php">
+&lt;?php
+if(isset($_GET['email']) &amp;&amp; isset($_GET['password']))
+{
+   $email = $_GET['email'];
+   $password = $_GET['password'];
+   echo "your email is '$email' and your password is '$password'";
+}
+?&gt;
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.io.BufferedReader;              // BufferedReader هنا قمنا باستدعاء الكلاس
+import java.io.InputStreamReader;           // InputStreamReader هنا قمنا باستدعاء الكلاس
+import java.net.HttpURLConnection;          // HttpURLConnection هنا قمنا باستدعاء الكلاس
+import java.net.URL;                        // URL هنا قمنا باستدعاء الكلاس
+import java.util.Scanner;                   // Scanner هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // سنستخدمه لإستقبال بيانات في البرنامج من لوحة مفاتيح المستخدم input إسمه Scanner هنا قمنا بإنشاء كائن من الكلاس
+        Scanner input = new Scanner(System.in);
+ 
+        // لتخزين البيانات التي سيطلب البرنامج من المستخدم إدخالها password و email هنا قمنا بتجهيز المتغيرات
+        String email;
+        String password;
+ 
+        // الآن سنحاول إجراء إتصال عبر الشبكة للوصول إلى ملف محدد و إدخال بيانات فيه ثم إسترجاع جميع البيانات التي فيه
+        try
+        {
+            // email هنا سيطلب من المستخدم إدخال بريده الإلكتروني و بعدها سيتم تخزينه في المتغير
+            System.out.print("Enter you email: ");
+            email = input.next();
+ 
+            // password هنا سيطلب من المستخدم إدخال كلمة المرور و بعدها سيتم تخزينها في المتغير
+            System.out.print("Enter you password: ");
+            password = input.next();
+ 
+            // و يمرر له المعلومات التي أدخلها المتسخدم test.php هنا قمنا بإنشاء رابط يوصلنا إلى الملف
+            String urlLink = "http://localhost/java/test.php?email=" +email+ "&amp;password=" +password;
+ 
+            // urlLink يشير إلى الرابط url إسمه URL هنا قمنا بتعريف كائن نوعه
+            URL url = new URL(urlLink);
+ 
+            // conn و وضعناه في الكائن HttpURLConnection إلى النوع openConnection() الذي سترجعه الدالة URLConnection هنا قمنا بتحويل كائن الـ
+            HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+ 
+            // هنا حددنا الطريقة التي سيتم فيها إرسال البيانات إلى السيرفر
+            conn.setRequestMethod("GET");
+ 
+            // و الذي يسمح لنا بقراءة محتوى الملف br من السيرفر في الكائن getInputStream() هنا قمنا بتخزين الملف الذي سترجعه الدالة
+            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+ 
+            // لجلب البيانات الموجودة بشكل مؤقت line لحفظ البيانات التي أرجعها السيرفر, و المتغير data هنا قمنا بتجهيز المتغير
+            String data = "";
+            String line;
+ 
+            // data غير فارغ سيتم قراءة محتوياته سطرا سطرا و تخزينهم في المتغير br هنا قلنا أنه طالما أن الملف الذي يشير له الكائن
+            while((line = br.readLine()) != null)
+            {
+                data += line;
+            }
+ 
+            br.close();
+ 
+            // data هنا قمنا بعرض محتوى الملف الذي أرجعه السيرفر و الذي قمنا بتخزينه في المتغير
+            System.out.println("\nServer Response");
+            System.out.println(data);
+ 
+        }
+        catch( Exception e ) {
+            System.out.println(e.getMessage());
+        }
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل إذا قمنا بإدخال نفس المعلومات التي أدخلناها عند تشغيل البرنامج.<br/>
+		قمنا بتعليم البيانات التي إنتظرنا البرنامج لإدخالها من لوحة المفاتيح باللون الأزرق.<br/>
+		و قمنا بتعليم البيانات التي حصلنا عليها من السيرفر باللون الأخضر.</p>
+<div class="code-box">
+			Enter you email: <span class="blue-bg">contact@harmash.com</span><br/>
+			Enter you password: <span class="blue-bg">1234</span><br/><br/>
+			Server Response<br/>
+<span class="green-bg">your email is 'contact@harmash.com' and your password is '1234'</span>
+</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

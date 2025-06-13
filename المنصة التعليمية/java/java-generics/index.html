@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>مفهوم الـ generics في جافا | Java generics</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>مفهوم الـ <span class="word">Generics</span> في جافا</h1>
+<article>
+<h2>مقدمة</h2>
+<p>في الدرسين السابقين تعرفنا على كلاسات الـ <span class="word">Data Structure</span> التي تسمح لنا بتخزين البيانات مهما كان نوعهم و بأشكال مختلفة أثناء تشغيل البرنامج.<br/>
+	عند استخدام هذه الكلاسات كنا نلاحظ أنه بإمكاننا تخزين أي نوع بيانات فيهم بدون أي مشاكل.</p>
+<p>أسلوب الـ <span class="word">Generics</span> يجعلك قادراً على بناء كود واحد يلائم أكثر من نوع بيانات, و عند الحاجة إلى استخدام هذا الكود يمكنك إستخدامه كما هو, و يمكنك أيضاً تحديد نوع البيانات التي تريده أن يعمل معها حسب حاجتك.</p>
+<p>في الدرس السابق شرحنا كيف يمكن تخزين أي نوع بيانات في الكلاسات <code data-enlighter-language="java">ArrayList</code> و <code data-enlighter-language="java">LinkedList</code>, و تعلمنا أيضاً كيف أننا نستطيع تحديد نوع البيانات التي نريد تخزينها فيهم في حال استخدمنا أسلوب الـ <span class="word">Generics</span> عند إنشاء كائنات منهم.</p><br/>
+<h3>معلومة تقنية</h3>
+<p>فعلياً, معظم كلاسات الـ <span class="word">Data Structure</span> تم بناءها على أساس هذا الأسلوب.<br/>
+	كل كلاس, إنترفيس أو دالة تجد الرمز <code data-enlighter-language="java">&lt; &gt;</code> موجود ضمن تعريفه, إعرف مباشرةً أنه مصمم للتعامل مع أكثر من نوع بيانات.</p>
+<br/>
+<h3>فائدة الـ <span class="word">Generics</span></h3>
+<p>أنت لست مجبر على استخدام أسلوب الـ <span class="word">Generics</span>, لكن تعلمه سيفيدك كثيراً في تطوير الكود الخاص فيك, و جعل حجمه أصغر و أسهل في حالة التعديل.<br/>
+	فمثلاً, إن كنت بحاجة إلى بناء مصفوفة ليس لها حجم محدد و تريد تخزين أعداد صحيحة <span class="inline"> ( أي من النوع <code data-enlighter-language="java">int</code> )</span> فقط فيها, يمكنك إنشاء كائن من الكلاس <code data-enlighter-language="java">ArrayList</code> و تحديد النوع <code data-enlighter-language="java">Integer</code> كنوع البيانات الوحيد الذي يمكن إدخاله في هذا الكائن كما رأينا في الدرس السابق و تكون بهذا قد وصلت لهدفك بكل سهولة بواسطة أسلوب الـ <span class="word">Generics</span>.</p>
+<p>ميزة أخرى مهمة جدًا في هذا الأسلوب, و هي أنه يساعد المبرمج في إكتشاف الأخطاء النوعية أثناء كتابة الكود.</p>
+<p>مثلاً, إذا قمت بإنشاء كائن نوعه <code data-enlighter-language="java">ArrayList</code> و حددت أنه يمكنه تخزين قيم من النوع <code data-enlighter-language="java">Integer</code> فقط, بعدها حاولت تخزين قيمة من نوع آخر مثل النوع <code data-enlighter-language="java">String</code> على سبيل المثال, عندها سيظهر لك تحذير مفاده أنه لا يمكن تحويل النوع <code data-enlighter-language="java">String</code> إلى النوع <code data-enlighter-language="java">Integer</code>.</p><br/>
+<h3>خلاصة</h3>
+<p>بشكل عام, نستخدم الـ <span class="word">Generics</span> لبناء كود يتوافق مع أي نوع بيانات.<br/>
+	عند الحاجة إلى هذا الكود نقوم بتحديد نوع البيانات التي سنتعامل معها. ستفهم كل شيء من الأمثلة.</p>
+<br/>
+<p>ستتعلم في هذا الدرس كيف تعرف أي شيء كـ <span class="word">Generic</span> و كيف تستفيد منه, و تذكر أنه يمكنك استخدام هذا الأسلوب مع أغلب كلاسات الـ <span class="word">Data Structure</span>.</p>
+</article>
+<article>
+<h2>الأحرف المستخدمة في الـ <span class="word">Generics</span></h2>
+<p>ذكرنا في الجدول التالي الأحرف المتعارف عليها بين المبرمجين عند التعامل مع الـ <span class="word">Generics</span>.</p>
+<table class="list">
+<tr>
+<th class="rtl" colspan="2">الأحرف المتعارف عليها في الـ Generics</th>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">T</code></td>
+<td>إختصار للكلمة <span class="word">Type</span>, يقصد منه أي نوع كان.<br/>
+			نستخدمه في العادة عند بناء كود يتعامل مع أي نوع بيانات.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">N</code></td>
+<td>إختصار للكلمة <span class="word">Number</span>, يقصد منه أي نوع من الأنواع التي تستخدم لتخزين الأرقام.<br/>
+			نستخدمه في العادة عند بناء كود يتعامل مع الأرقام من أي نوع كانت مثل <span class="inline">( <code data-enlighter-language="java">Integer</code> - <code data-enlighter-language="java">Float</code> - <code data-enlighter-language="java">Double</code> إلخ.. )</span>.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">E</code></td>
+<td>إختصار للكلمة <span class="word">Element</span>, يقصد منه عنصر ليس له نوع محدد.<br/>
+			نستخدمه في العادة عند بناء كود يتعامل مع عناصر المصفوفة من أي نوع كانت.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">k</code></td>
+<td>إختصار للكلمة <span class="word">Key</span>, يقصد منه مفتاح ليس له نوع محدد.<br/>
+			نستخدمه في العادة عند بناء كود يتعامل مع مفاتيح كائن يخزن البيانات بشكل <span class="word">key / value</span>.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">V</code></td>
+<td>إختصار للكلمة <span class="word">Value</span>, يقصد منه قيمة ليس لها نوع محدد.<br/>
+			نستخدمه في العادة عند بناء كود يتعامل مع قيم كائن يخزن البيانات بشكل <span class="word">key / value</span>.</td>
+</tr>
+</table>
+<br/>
+<p><span class="note">ملاحظة:</span> جميع الأحرف المذكورة في الجدول ليس لها أي تأثير على الكود و يمكنك وضع أي حرف أو كلمة مكانهم, لكننا ننصحك باعتمادهم.</p>
+</article>
+<article>
+<h2>المبادئ الأساسية التي عليك إتباعها عند التعامل مع الـ <span class="word">Generics</span></h2>
+<p>لتعريف متغير, مصفوفة أو دالة بدون تحديد نوعهم, أي ليعملوا مع مختلف أنواع البيانات, يجب تعريفهم كـ <span class="word">Generics</span>.<br/>
+	هنا وضعنا أمثلة صغيرة الهدف منها توضيح طريقة استخدام الأحرف التي ذكرناها في الجدول السابق من أجل تعريف كود يمكن استخدامه للتعامل مع أكثر من نوع بيانات.</p>
+<p>في نهاية الدرس وضعنا أمثلة مهمة توضح أهمية و طريقة استخدام الـ <span class="word">Generics</span>.</p>
+<br/>
+<h3>طريقة تعريف نوع بيانات مجهول</h3>
+<p>لتجهيز نوع بيانات غير محدد يمكن استخدامه في كلاس أو إنترفيس أو دالة, نضع أحد الأحرف التي ذكرناها في الجدول السابق بين <code data-enlighter-language="java">&lt; &gt;</code> عند تعريفهم.<p>
+<div class="example-box">
+<h4>أمثلة</h4>
+<p><span class="point">•</span>هنا قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">GenericClass</code> يملك نوع بيانات غير محدد رمزنا له بـ <span class="number">T</span>.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public class GenericClass &lt;T&gt; {
+
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>هنا قمنا بتعريف إنترفيس إسمه <code data-enlighter-language="java">GenericInterface</code> يملك نوع بيانات غير محدد رمزنا له بـ <span class="number">N</span>.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public interface GenericInterface &lt;N&gt; {
+
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>هنا قمنا بتعريف دالة إسمها <code data-enlighter-language="java">genericMethod</code> تملك نوع بيانات غير محدد رمزنا له بـ <span class="number">E</span>.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public &lt;E&gt; void genericMethod(E var) {
+    System.out.println(var);
+} 
+		</pre>
+</div>
+<br/><br/>
+<h3>طريقة تعريف أكثر من نوع بيانات مجهول</h3>
+<p>نفس الطريقة السابقة, لكن يجب وضع فاصلة بين كل حرفين تم استخدامها بداخل الـ <code data-enlighter-language="java">&lt; &gt;</code><p>
+<div class="example-box">
+<h4>أمثلة</h4>
+<p>هنا قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">GenericClass</code> يملك نوعي بيانات غير محددين يرمز لهما بـ <span class="number">E1</span> و <span class="number">E2</span>.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public class GenericClass &lt;E1, E2&gt; {
+
+}
+		</pre>
+<br/>
+<p>هنا قمنا بتعريف إنترفيس إسمه <code data-enlighter-language="java">GenericInterface</code> يملك نوعي بيانات غير محددين يرمز لهما بـ <span class="number">E1</span> و <span class="number">E2</span>.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public interface GenericInterface &lt;E1, E2&gt; {
+
+}
+		</pre>
+<br/>
+<p>هنا قمنا بتعريف دالة إسمها <code data-enlighter-language="java">genericMethod</code> تملك نوعي بيانات غير محددين يرمز لهما بـ <span class="number">T1</span> و <span class="number">T2</span>.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public &lt;T1, T2&gt; void genericMethod(T1 a, T2 b) {
+    System.out.println(a);
+    System.out.println(b);
+} 
+		</pre>
+</div>
+</p></p></p></p></article>
+<article>
+<h2>أمثلة شاملة</h2>
+<p>التعامل مع الـ <span class="word">Generics</span> يكون بأشكال مختلفة ستتعرف عليها من الأمثلة التي وضعناها لك, كما أننا وضعنا خلاصة في نهاية كل مثال.</p>
+<br/>
+<h3>مصطلحات تقينة</h3>
+<ul class="explain">
+<li><p><span class="word">Generic Method</span>: تعني تعريف دالة تتعامل مع أكثر من نوع بيانات.</p></li>
+<li><p><span class="word">Generic Class</span>: تعني تعريف كلاس يتعامل مع أكثر من نوع بيانات.</p></li>
+<li><p><span class="word">Bounded Type Parameters</span>: تعني تعريف كلاس, إنترفيس أو دالة يتعاملوا مع نوع محدد. بالإضافة إلى جميع الأنواع المشتقة منه, أي التي ترث منه.</p></li>
+</ul>
+<br/><br/>
+<h3>المثال الأول</h3>
+<p>المثال التالي هو تطبيق لفكرة الـ <span class="word">Generic Method</span>.<br/>
+	ستتعلم منه كيف تستغل مبدأ الـ <span class="word">Generics</span> لبناء دالة تتعامل مع مختلف أنواع المصفوفات.</p>
+<p><a class="open-page" href="example-1.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>المثال التالي هو تطبيق لفكرة الـ <span class="word">Generic Class</span>.<br/>
+	ستتعلم منه كيف تستغل مبدأ الـ <span class="word">Generics</span> لبناء كلاس يتعامل مع مختلف الأنواع.</p>
+<p><a class="open-page" href="example-2.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الثالث</h3>
+<p>المثال التالي هو تطبيق لفكرة الـ <span class="word">Bounded Type Parameters</span>.<br/>
+	ستتعلم في منه كيف تستغل مبدأ الـ <span class="word">Generics</span> لبناء دوال تتعامل مع مختلف أنواع الأرقام فقط.</p>
+<p><a class="open-page" href="example-3.html" target="_blank">شاهد المثال »</a></p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

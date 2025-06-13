@@ -1,0 +1,760 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>JavaFX - طريقة إنشاء برنامج لحساب الأعمار</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../javafx-icon.png"/></li>
+<li class="title">أساسيات المكتبة</li>
+<li><a href="../javafx-overview/index.html"><span class="en">JavaFX</span> - نظرة عامة</a></li>
+<li><a href="../javafx-application/index.html"><span class="en">JavaFX</span> - بنية التطبيقات</a></li>
+<li><a href="../javafx-architecture/index.html"><span class="en">JavaFX</span> - بنية المكتبة</a></li>
+<li class="title">عناصر واجهة المستخدم</li>
+<li><a href="../javafx-label/index.html"><span class="en">Label - JavaFX</span></a></li>
+<li><a href="../javafx-button/index.html"><span class="en">Button - JavaFX</span></a></li>
+<li><a href="../javafx-textfield/index.html"><span class="en">TextField - JavaFX</span></a></li>
+<li><a href="../javafx-passwordfield/index.html"><span class="en">PasswordField - JavaFX</span></a></li>
+<li><a href="../javafx-textarea/index.html"><span class="en">TextArea - JavaFX</span></a></li>
+<li><a href="../javafx-togglebutton/index.html"><span class="en">ToogleButton - JavaFX</span></a></li>
+<li><a href="../javafx-radiobutton/index.html"><span class="en">RadioButton - JavaFX</span></a></li>
+<li><a href="../javafx-checkbox/index.html"><span class="en">CheckBox - JavaFX</span></a></li>
+<li><a href="../javafx-choicebox/index.html"><span class="en">ChoiceBox - JavaFX</span></a></li>
+<li><a href="../javafx-combobox/index.html"><span class="en">ComboBox - JavaFX</span></a></li>
+<li><a href="../javafx-listview/index.html"><span class="en">ListView - JavaFX</span></a></li>
+<li><a href="../javafx-tableview/index.html"><span class="en">TableView - JavaFX</span></a></li>
+<li><a href="../javafx-treeview/index.html"><span class="en">TreeView - JavaFX</span></a></li>
+<li><a href="../javafx-slider/index.html"><span class="en">Slider - JavaFX</span></a></li>
+<li><a href="../javafx-tooltip/index.html"><span class="en">Tooltip - JavaFX</span></a></li>
+<li><a href="../javafx-progressbar/index.html"><span class="en">ProgressBar - JavaFX</span></a></li>
+<li><a href="../javafx-progressindicator/index.html"><span class="en">ProgressIndicator - JavaFX</span></a></li>
+<li><a href="../javafx-hyperlink-and-webview/index.html"><span class="en">Hyperlink + WebView - JavaFX</span></a></li>
+<li><a href="../javafx-separator/index.html"><span class="en">Separator - JavaFX</span></a></li>
+<li><a href="../javafx-colorpicker/index.html"><span class="en">ColorPicker - JavaFX</span></a></li>
+<li><a href="../javafx-datepicker/index.html"><span class="en">DatePicker - JavaFX</span></a></li>
+<li><a href="../javafx-filechooser/index.html"><span class="en">FileChooser - JavaFX</span></a></li>
+<li><a href="../javafx-htmleditor/index.html"><span class="en">HTMLEditor - JavaFX</span></a></li>
+<li><a href="../javafx-contextmenu/index.html"><span class="en">ContextMenu - JavaFX</span></a></li>
+<li><a href="../javafx-menubar/index.html"><span class="en">MenuBar - JavaFX</span></a></li>
+<li><a href="../javafx-alert/index.html"><span class="en">Alert - JavaFX</span></a></li>
+<li class="title">الحاويات</li>
+<li><a href="../javafx-group/index.html"><span class="en">Group - JavaFX</span></a></li>
+<li><a href="../javafx-pane/index.html"><span class="en">Pane - JavaFX</span></a></li>
+<li><a href="../javafx-hbox/index.html"><span class="en">HBox - JavaFX</span></a></li>
+<li><a href="../javafx-vbox/index.html"><span class="en">VBox - JavaFX</span></a></li>
+<li><a href="../javafx-borderpane/index.html"><span class="en">BorderPane - JavaFX</span></a></li>
+<li><a href="../javafx-stackpane/index.html"><span class="en">StackPane - JavaFX</span></a></li>
+<li><a href="../javafx-flowpane/index.html"><span class="en">FlowPane - JavaFX</span></a></li>
+<li><a href="../javafx-tilepane/index.html"><span class="en">TilePane - JavaFX</span></a></li>
+<li><a href="../javafx-scrollpane/index.html"><span class="en">ScrollPane - JavaFX</span></a></li>
+<li><a href="../javafx-gridpane/index.html"><span class="en">GridPane - JavaFX</span></a></li>
+<li><a href="../javafx-titledpane-and-accordion/index.html"><span class="en">TitledPane + Accordion - JavaFX</span></a></li>
+<li><a href="../javafx-anchorpane/index.html"><span class="en">AnchorPane - JavaFX</span></a></li>
+<li><a href="../javafx-pagination/index.html"><span class="en">Pagination - JavaFX</span></a></li>
+<li class="title">الرسم و التلوين و التحريك</li>
+<li><a href="../javafx-class-text/index.html"><span class="en">Text - JavaFX</span></a></li>
+<li><a href="../javafx-2d-shapes/index.html"><span class="en">2D Shapes - JavaFX</span></a></li>
+<li><a href="../javafx-animations/index.html"><span class="en">Animations - JavaFX</span></a></li>
+<li><a href="../javafx-charts/index.html"><span class="en">Charts - JavaFX</span></a></li>
+<li><a href="../javafx-scene-builder/index.html"><span class="en">Scene Builder - JavaFX</span></a></li>
+<li class="title">تعلم بناء تطبيقات و ألعاب</li>
+<li><a href="../javafx-projects/index.html"><span class="en">JavaFX</span> - جميع المشاريع</a></li>
+<li><a href="../javafx-who-will-win-the-million-source-code/index.html"><span class="en">JavaFX</span> - من سيربح المليون</a></li>
+<li><a href="../javafx-color-picker-source-code/index.html"><span class="en">JavaFX</span> - برنامج إختيار الألوان</a></li>
+<li><a href="index.html"><span class="en">JavaFX</span> - برنامج حساب الأعمار</a></li>
+<li><a href="../javafx-ip-finder-source-code/index.html"><span class="en">JavaFX</span> - محلل عناوين المواقع</a></li>
+<li><a href="../javafx-snake-2d-source-code/index.html"><span class="en">JavaFX</span> - لعبة الأفعى <span class="en">Snake 2D</span></a></li>
+<li><a href="../javafx-calculator-source-code/index.html"><span class="en">JavaFX</span> - آلة حاسبة بسيطة</a></li>
+<li><a href="../javafx-scientific-calculator-source-code/index.html"><span class="en">JavaFX</span> - آلة حاسبة علمية</a></li>
+<li><a href="../javafx-tic-tac-toe-source-code/index.html"><span class="en">JavaFX</span> - لعبة <span class="en">Tic Tac Toe</span></a></li>
+<li><a href="../javafx-company-products-manager-source-code/index.html"><span class="en">JavaFX</span> - برنامج إدارة المحتوى</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java JavaFX</span>طريقة إنشاء برنامج لحساب الأعمار</h1>
+<article>
+<p>في هذا الدرس ستتعلم طريقة إنشاء برنامجين لحساب الأعمار <span class="inline">( <span class="word">Age Calculator</span> )</span> و باستخدام <span class="inline"><span class="word">JavaFX</span>.</span></p>
+<br/>
+<h3>مميزات كلا البرنامجين</h3>
+<ul class="explain">
+<li><p>يمكن إستخدام أي برنامج منهما لحساب عمر الشخص الحي أو المدة التي عاشها الشخص المتوفي.</p></li>
+<li><p>لحساب عمر الشخص الحي, ضع فقط تاريخ ميلاده.</p></li>
+<li><p>لحساب المدة التي عاشها الشخص المتوفي, ضع تاريخ ميلاده و تاريخ وفاته.</p></li>
+</ul>
+<br/><br/>
+<h3>البرنامج الأول</h3>
+<p><a href="javafx-age-calculator-source-code-1.png" target="_blank"><img alt="تحميل كود برنامج حساب الأعمار في جافا" src="javafx-age-calculator-source-code-1.png"/></a></p>
+<p><a class="open-page" href="javafx-age-calculator-1.jar">⇓ تحميل البرنامج</a>
+<a class="open-page" href="javafx-age-calculator-1.zip">⇓ تحميل المشروع كاملاً</a>
+</p>
+<br/>
+<div class="example-box">
+<h4>كود البرنامج</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.time.LocalDate;
+import java.time.Period;
+import javafx.application.Application;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.geometry.Pos;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+    // هنا قمنا بتعريف الأشياء التي سيتم وضعها في النافذة
+    Label birthDateLabel, resultLabel;
+    CheckBox deathDateCheckBox;
+    Button calculateAgeButton;
+    ComboBox dayOfBirth, monthOfBirth, yearOfBirth, dayOfDeath, monthOfDeath, yearOfDeath;
+
+    // سنستخدم هذه المتغيرات لتخزين التواريخ التي إختارها المستخدم من النافذة بشكل مؤقت
+    int d1, d2, m1, m2, y1, y2;
+
+    // لتخزين تاريخ وفاته endDate لتخزين تاريخ ميلاد الشخص, و الكائن startDate سنستخدم الكائن
+    LocalDate startDate, endDate;
+
+    // سنستخدم هذه المتغيرات لعرض الفارق النهائي بين تاريخ الميلاد و التاريخ الحالي أو تاريخ الوفاة
+    long daysCounter, monthsCounter, yearsCounter;
+
+    
+    // مفعلاً أو غير مفعل (deathDatePicker) قمنا ببناء هذه الدالة لتحديد متى سيكون الكائن الذي يمثل تاريخ الوفاة
+    public void toggleDeathDatePicker() {
+        
+        // deathDatePicker يوجد عليه علامة صح, سيتم تفعيل الكائن deathDateCheckBox إذا كان الكائن
+        if (deathDateCheckBox.isSelected()) {
+            dayOfDeath.setDisable(false);
+            monthOfDeath.setDisable(false);
+            yearOfDeath.setDisable(false);
+        } // deathDatePicker لا يوجد عليه علامة صح, سيتم إلغاء تفعيل الكائن deathDateCheckBox إذا كان الكائن
+        else {
+            dayOfDeath.setDisable(true);
+            monthOfDeath.setDisable(true);
+            yearOfDeath.setDisable(true);
+        }
+        
+    }
+    
+    
+    // قمنا ببناء هذه الدالة لحساب و عرض العمر سواء كان المستخدم يريد حساب عمر شخص على قيد الحياة أو شخص ميت
+    public void displayAge() {
+        
+        // سنستخدم هذا المتغير لتخزين نص النتيجة التي ستظهر
+        String text = "";
+
+        // هنا قمنا بتخزين تاريخ الميلاد الذي إختاره المستخدم في المتغيرات التالية
+        y1 = Integer.parseInt(yearOfBirth.getSelectionModel().getSelectedItem().toString());
+        m1 = monthOfBirth.getSelectionModel().getSelectedIndex() + 1;
+        d1 = Integer.parseInt(dayOfBirth.getSelectionModel().getSelectedItem().toString());
+        
+        // إذا كان خيار تحديد تاريخ الوفاة مفعل, سيتم تخزين التاريخ المحدد في المتغيرات التالية
+        if (deathDateCheckBox.isSelected()) {
+            y2 = Integer.parseInt(yearOfDeath.getSelectionModel().getSelectedItem().toString());
+            m2 = monthOfDeath.getSelectionModel().getSelectedIndex() + 1;
+            d2 = Integer.parseInt(dayOfDeath.getSelectionModel().getSelectedItem().toString());
+        } // إذا كان خيار تحديد تاريخ الوفاة غير مفعل, سيتم تخزين التاريخ الحالي في المتغيرات التالية
+        else {
+            y2 = LocalDate.now().getYear();
+            m2 = LocalDate.now().getMonthValue();
+            d2 = LocalDate.now().getDayOfMonth();
+        }
+
+        // endDate و تاريخ الوفاة في الكائن startDate هنا قمنا بوضع تاريخ الميلاد الذي حدده المستخدم في الكائن
+        startDate = LocalDate.of(y1, m1, d1);
+        endDate = LocalDate.of(y2, m2, d2);
+
+        // هنا قمنا بتخزين الفارق بين التواريخ في المتغيرات التالية
+        yearsCounter = Period.between(startDate, endDate).getYears();
+        monthsCounter = Period.between(startDate, endDate).getMonths();
+        daysCounter = Period.between(startDate, endDate).getDays();
+
+        // هنا قلنا إذا كان التاريخين متواسيين سيتم إظهار التنبيه التالي
+        if (yearsCounter == 0 &amp;&amp; monthsCounter == 0 &amp;&amp; daysCounter == 0) {
+            resultLabel.setTextFill(Color.RED);
+            resultLabel.setText("Cannot compare same date!");
+        } // هنا قلنا أنه إذا كانت التواريخ المحددة هي منطقياً صحيحة سيتم إظهار العمر
+        else if (!Period.between(startDate, endDate).isNegative()) {
+
+            if (yearsCounter == 1) {
+                text += yearsCounter + " year ";
+            } else if (yearsCounter &gt; 1) {
+                text += yearsCounter + " years ";
+            }
+
+            if (monthsCounter == 1) {
+                if (yearsCounter &gt; 0 &amp;&amp; daysCounter &gt; 0) {
+                    text += ", " + monthsCounter + " month ";
+                } else if (yearsCounter &gt; 0 &amp;&amp; daysCounter == 0) {
+                    text += "and " + monthsCounter + " month ";
+                } else {
+                    text += monthsCounter + " month ";
+                }
+            }
+
+            if (monthsCounter &gt; 1) {
+                if (yearsCounter &gt; 0 &amp;&amp; daysCounter &gt; 0) {
+                    text += ", " + monthsCounter + " months ";
+                } else if (yearsCounter &gt; 0 &amp;&amp; daysCounter == 0) {
+                    text += "and " + monthsCounter + " months ";
+                } else {
+                    text += monthsCounter + " months ";
+                }
+            }
+
+            if (daysCounter == 1) {
+                if (yearsCounter == 0 &amp;&amp; monthsCounter == 0) {
+                    text += daysCounter + " day";
+                } else {
+                    text += "and " + daysCounter + " day";
+                }
+            }
+
+            if (daysCounter &gt; 1) {
+                if (yearsCounter == 0 &amp;&amp; monthsCounter == 0) {
+                    text += daysCounter + " days";
+                } else {
+                    text += "and " + daysCounter + " days";
+                }
+            }
+
+            resultLabel.setTextFill(Color.BLACK);
+            resultLabel.setText(text);
+        } // هنا قلنا أنه إذا كانت التواريخ المحددة هي منطقياً غير مقبولة سيتم إظهار التنبيه التالي
+        else {
+            resultLabel.setTextFill(Color.RED);
+            resultLabel.setText("Logic order of Dates is wrong!");
+        }
+
+    }
+    
+
+    @Override
+    public void start(Stage stage) {
+        
+        // هنا وضعنا أسماء الأشهر التي سنظهرها في قائمة الأشهر
+        String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+ 
+        // هنا وضعنا أرقام الأيام التي سنظهرها في قائمة الأيام
+        Integer[] days = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+            11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+            21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31};
+ 
+        // currentYear هنا قمنا بتخزين رقم السنة الحالية في المتغير
+        int currentYear = LocalDate.now().getYear();
+ 
+        // هنا قمنا بإنشاء مصفوفة, عدد عناصرها يساوي رقم السنة الحالية
+        Integer[] years = new Integer[currentYear];
+ 
+        // هنا قمنا بتخزين أرقام السنين من 1 إلى رقم السنة الحالية بشكل عكسي
+        for (int i = 0; i &lt; currentYear; i++)
+            years[currentYear-i-1] = i + 1;
+        
+        // هنا قمنا بإنشاء جميع الأشياء التي سنضيفها في النافذة
+        birthDateLabel = new Label("Birth Date");
+        deathDateCheckBox = new CheckBox("Death Date");
+        resultLabel = new Label();
+        calculateAgeButton = new Button("Calculate Age");
+        dayOfBirth = new ComboBox(FXCollections.observableArrayList(days));
+        monthOfBirth = new ComboBox(FXCollections.observableArrayList(months));
+        yearOfBirth = new ComboBox(FXCollections.observableArrayList(years));
+        dayOfDeath = new ComboBox(FXCollections.observableArrayList(days));
+        monthOfDeath = new ComboBox(FXCollections.observableArrayList(months));
+        yearOfDeath = new ComboBox(FXCollections.observableArrayList(years));
+        
+        // هنا قما بتعديل حجم جميع الأشياء التي سنضيفها في النافذة
+        birthDateLabel.setPrefSize(150, 30);
+        deathDateCheckBox.setPrefSize(150, 30);
+        dayOfBirth.setPrefSize(65, 30);
+        monthOfBirth.setPrefSize(65, 30);
+        yearOfBirth.setPrefSize(70, 30);
+        dayOfDeath.setPrefSize(65, 30);
+        monthOfDeath.setPrefSize(65, 30);
+        yearOfDeath.setPrefSize(70, 30);
+        calculateAgeButton.setPrefSize(215, 50);
+        resultLabel.setPrefSize(430, 30);
+        
+        birthDateLabel.setTranslateX(174);
+        birthDateLabel.setTranslateY(40);
+        dayOfBirth.setTranslateX(110);
+        dayOfBirth.setTranslateY(80);
+        monthOfBirth.setTranslateX(182.5);
+        monthOfBirth.setTranslateY(80);
+        yearOfBirth.setTranslateX(255);
+        yearOfBirth.setTranslateY(80);
+        deathDateCheckBox.setTranslateX(150);
+        deathDateCheckBox.setTranslateY(150);
+        dayOfDeath.setTranslateX(110);
+        dayOfDeath.setTranslateY(190);
+        monthOfDeath.setTranslateX(182.5);
+        monthOfDeath.setTranslateY(190);
+        yearOfDeath.setTranslateX(255);
+        yearOfDeath.setTranslateY(190);
+        calculateAgeButton.setTranslateX(110);
+        calculateAgeButton.setTranslateY(260);
+        resultLabel.setTranslateX(0);
+        resultLabel.setTranslateY(340);
+        
+        // يظهر جهة الوسط resultLabel هنا جعلنا نص الكائن
+        resultLabel.setAlignment(Pos.CENTER);
+        
+        dayOfBirth.getSelectionModel().selectFirst();
+        monthOfBirth.getSelectionModel().selectFirst();
+        yearOfBirth.getSelectionModel().select(0);
+        
+        dayOfDeath.getSelectionModel().selectFirst();
+        monthOfDeath.getSelectionModel().selectFirst();
+        yearOfDeath.getSelectionModel().select(0);
+
+        // هنا قما بتعديل حجم و سمك خط جميع الأشياء التي سنضيفها في النافذة
+        birthDateLabel.setStyle("-fx-font-size: 17px; -fx-font-weight: bold;");
+        deathDateCheckBox.setStyle("-fx-font-size: 17px; -fx-font-weight: bold;");
+        resultLabel.setStyle("-fx-font-size: 17px; -fx-font-weight: bold;");
+        calculateAgeButton.setStyle("-fx-font-size: 17px; -fx-font-weight: bold;");
+
+        // في النافذة لأننا ننوي ترتيب العناصر فيه بشكل يدويRoot Node و الذي ننوي جعله الـ Group هنا قمنا بإنشاء كائن من الكلاس
+        Group root = new Group();
+
+        // هنا قمنا بإضافة جميع الأشياء التي قمنا بإنشائها في النافذة
+        root.getChildren().add(birthDateLabel);
+        root.getChildren().add(deathDateCheckBox);
+        root.getChildren().add(resultLabel);
+        root.getChildren().add(calculateAgeButton);
+        root.getChildren().add(dayOfBirth);
+        root.getChildren().add(monthOfBirth);
+        root.getChildren().add(yearOfBirth);
+        root.getChildren().add(dayOfDeath);
+        root.getChildren().add(monthOfDeath);
+        root.getChildren().add(yearOfDeath);
+
+        // فيها و تحديد حجمها Node كأول root هنا قمنا بإنشاء محتوى النافذة مع تعيين الكائن
+        Scene scene = new Scene(root, 430, 420);
+        
+        // هنا وضعنا عنوان للنافذة
+        stage.setTitle("Age Calculator");
+        
+        // أي وضعنا محتوى النافذة الذي قمنا بإنشائه للنافذة .stage في كائن الـ scene هنا وضعنا كائن الـ
+        stage.setScene(scene);
+        
+        // هنا قمنا بإظهار النافذة
+        stage.show();
+        
+        stage.setResizable(false);
+
+        // calculateAgeButton هنا قمنا بتحديد ماذا سيحدث عند النقر على الكائن
+        // حتى تحسب و تعرض العمر displayAge() فعلياً سيتم إستدعاء الدالة 
+        calculateAgeButton.setOnAction((Action) -&gt; {
+            displayAge();
+        });
+
+        // deathDateCheckBox هنا قمنا بتحديد ماذا سيحدث عند النقر على الكائن
+        // deathDatePicker لتفعيل أو إلغاء تفعيل الكائن toggleDeathDatePicker() فعلياً سيتم إستدعاء الدالة 
+        deathDateCheckBox.selectedProperty().addListener(
+            (ObservableValue&lt;? extends Boolean&gt; ov, Boolean old_val, Boolean new_val) -&gt; {
+                toggleDeathDatePicker();
+            }
+        );
+
+        // غير مفعل بشكل إفتراضي عند تشغيل البرنامج toggleDeathDatePicker لجعل الكائن toggleDeathDatePicker() هنا قمنا باستدعاء الدالة
+        toggleDeathDatePicker();
+    }
+
+    // هنا قمنا بتشغيل التطبيق
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+}
+		</pre>
+</div>
+<br/><br/>
+<h3>البرنامج الثاني</h3>
+<p><a href="javafx-age-calculator-source-code-2.png" target="_blank"><img alt="تحميل كود برنامج حساب الأعمار في جافا" src="javafx-age-calculator-source-code-2.png"/></a></p>
+<p><a class="open-page" href="javafx-age-calculator-2.jar">⇓ تحميل البرنامج</a>
+<a class="open-page" href="javafx-age-calculator-2.zip">⇓ تحميل المشروع كاملاً</a>
+</p>
+<br/>
+<div class="example-box">
+<h4>كود البرنامج</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.time.LocalDate;
+import java.time.Period;
+import javafx.application.Application;
+import javafx.beans.value.ObservableValue;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+    // هنا قمنا بتعريف الأشياء التي سيتم وضعها في النافذة
+    Label birthDateLabel, resultLabel;
+    CheckBox deathDateCheckBox;
+    Button calculateAgeButton;
+    DatePicker birthDatePicker, deathDatePicker;
+
+    // سنستخدم هذه المتغيرات لتخزين التواريخ التي إختارها المستخدم من النافذة بشكل مؤقت
+    int d1, d2, m1, m2, y1, y2;
+
+    // لتخزين تاريخ وفاته endDate لتخزين تاريخ ميلاد الشخص, و الكائن startDate سنستخدم الكائن
+    LocalDate startDate, endDate;
+
+    // سنستخدم هذه المتغيرات لعرض الفارق النهائي بين تاريخ الميلاد و التاريخ الحالي أو تاريخ الوفاة
+    long daysCounter, monthsCounter, yearsCounter;
+
+	
+	// مفعلاً أو غير مفعل (deathDatePicker) قمنا ببناء هذه الدالة لتحديد متى سيكون الكائن الذي يمثل تاريخ الوفاة
+    public void toggleDeathDatePicker() {
+		
+		// deathDatePicker يوجد عليه علامة صح, سيتم تفعيل الكائن deathDateCheckBox إذا كان الكائن
+        if (deathDateCheckBox.isSelected()) {
+            deathDatePicker.setDisable(false);
+        } // deathDatePicker لا يوجد عليه علامة صح, سيتم إلغاء تفعيل الكائن deathDateCheckBox إذا كان الكائن
+        else {
+            deathDatePicker.setDisable(true);
+        }
+		
+    }
+	
+	
+	// قمنا ببناء هذه الدالة لحساب و عرض العمر سواء كان المستخدم يريد حساب عمر شخص على قيد الحياة أو شخص ميت
+	public void displayAge() {
+		
+		// سنستخدم هذا المتغير لتخزين نص النتيجة التي ستظهر
+        String text = "";
+
+        // هنا قمنا بتخزين تاريخ الميلاد الذي إختاره المستخدم في المتغيرات التالية
+        y1 = birthDatePicker.getValue().getYear();
+        m1 = birthDatePicker.getValue().getMonthValue();
+        d1 = birthDatePicker.getValue().getDayOfMonth();
+
+        // إذا كان خيار تحديد تاريخ الوفات مفعل, سيتم تخزين التاريخ المحدد في المتغيرات التالية
+        if (deathDateCheckBox.isSelected()) {
+            y2 = deathDatePicker.getValue().getYear();
+            m2 = deathDatePicker.getValue().getMonthValue();
+            d2 = deathDatePicker.getValue().getDayOfMonth();
+        } // إذا كان خيار تحديد تاريخ الوفات غير مفعل, سيتم تخزين التاريخ الحالي في المتغيرات التالية
+        else {
+            y2 = LocalDate.now().getYear();
+            m2 = LocalDate.now().getMonthValue();
+            d2 = LocalDate.now().getDayOfMonth();
+        }
+
+        // endDate و تاريخ الوفاة في الكائن startDate هنا قمنا بوضع تاريخ الميلاد الذي حدده المستخدم في الكائن
+        startDate = LocalDate.of(y1, m1, d1);
+        endDate = LocalDate.of(y2, m2, d2);
+
+        // هنا قمنا بتخزين الفارق بين التواريخ في المتغيرات التالية
+        yearsCounter = Period.between(startDate, endDate).getYears();
+        monthsCounter = Period.between(startDate, endDate).getMonths();
+        daysCounter = Period.between(startDate, endDate).getDays();
+
+        // هنا قلنا إذا كان التاريخين متواسيين سيتم إظهار التنبيه التالي
+        if (yearsCounter == 0 &amp;&amp; monthsCounter == 0 &amp;&amp; daysCounter == 0) {
+            resultLabel.setTextFill(Color.RED);
+            resultLabel.setText("Cannot compare same date!");
+        } // هنا قلنا أنه إذا كانت التواريخ المحددة هي منطقياً صحيحة سيتم إظهار العمر
+        else if (!Period.between(startDate, endDate).isNegative()) {
+
+            if (yearsCounter == 1) {
+                text += yearsCounter + " year ";
+            } else if (yearsCounter &gt; 1) {
+                text += yearsCounter + " years ";
+            }
+
+            if (monthsCounter == 1) {
+                if (yearsCounter &gt; 0 &amp;&amp; daysCounter &gt; 0) {
+                    text += ", " + monthsCounter + " month ";
+                } else if (yearsCounter &gt; 0 &amp;&amp; daysCounter == 0) {
+                    text += "and " + monthsCounter + " month ";
+                } else {
+                    text += monthsCounter + " month ";
+                }
+            }
+
+            if (monthsCounter &gt; 1) {
+                if (yearsCounter &gt; 0 &amp;&amp; daysCounter &gt; 0) {
+                    text += ", " + monthsCounter + " months ";
+                } else if (yearsCounter &gt; 0 &amp;&amp; daysCounter == 0) {
+                    text += "and " + monthsCounter + " months ";
+                } else {
+                    text += monthsCounter + " months ";
+                }
+            }
+
+            if (daysCounter == 1) {
+                if (yearsCounter == 0 &amp;&amp; monthsCounter == 0) {
+                    text += daysCounter + " day";
+                } else {
+                    text += "and " + daysCounter + " day";
+                }
+            }
+
+            if (daysCounter &gt; 1) {
+                if (yearsCounter == 0 &amp;&amp; monthsCounter == 0) {
+                    text += daysCounter + " days";
+                } else {
+                    text += "and " + daysCounter + " days";
+                }
+            }
+
+            resultLabel.setTextFill(Color.BLACK);
+            resultLabel.setText(text);
+        } // هنا قلنا أنه إذا كانت التواريخ المحددة هي منطقياً غير مقبولة سيتم إظهار التنبيه التالي
+        else {
+            resultLabel.setTextFill(Color.RED);
+            resultLabel.setText("Logic order of Dates is wrong!");
+        }
+
+	}
+	
+
+    @Override
+    public void start(Stage stage) {
+
+        // هنا قمنا بإنشاء جميع الأشياء التي سنضيفها في النافذة
+        birthDateLabel = new Label("Birth Date");
+        deathDateCheckBox = new CheckBox("Death Date");
+        resultLabel = new Label();
+        calculateAgeButton = new Button("Calculate Age");
+        birthDatePicker = new DatePicker(LocalDate.of(2000, 1, 1));
+        deathDatePicker = new DatePicker(LocalDate.now());
+
+		// هنا قما بتعديل حجم و سمك خط جميع الأشياء التي سنضيفها في النافذة
+        birthDateLabel.setStyle("-fx-font-size: 17px; -fx-font-weight: bold;");
+        deathDateCheckBox.setStyle("-fx-font-size: 17px; -fx-font-weight: bold;");
+        resultLabel.setStyle("-fx-font-size: 17px; -fx-font-weight: bold;");
+        calculateAgeButton.setStyle("-fx-font-size: 17px; -fx-font-weight: bold;");
+        birthDatePicker.setStyle("-fx-font-size: 14px;");
+        deathDatePicker.setStyle("-fx-font-size: 14px;");
+
+		// هنا قما بتعديل حجم جميع الأشياء التي سنضيفها في النافذة
+		// لم نحدد حجمه لأنه لا داعي لذلك و سنتركه يظهر في وسط النافذة مهما كان حجمه resultLabel ملاحظة: الكائن
+        birthDateLabel.setPrefSize(200, 30);
+        deathDateCheckBox.setPrefSize(200, 30);
+        birthDatePicker.setPrefSize(200, 30);
+        deathDatePicker.setPrefSize(200, 30);
+        calculateAgeButton.setPrefSize(200, 50);
+
+        // في النافذة لأننا ننوي ترتيب العناصر فيه بشكل عامودي Root Node و الذي ننوي جعله الـ VBox هنا قمنا بإنشاء كائن من الكلاس
+        VBox root = new VBox();
+
+		// حتى يظهر محتواه في وسط النافذة مع إضافة مسافة فارغة بمقدار 20 بيكسل حوله من كل الجهات root هنا قمنا بتعديل خصائص الكائن
+        root.setAlignment(Pos.CENTER);
+        root.setPadding(new Insets(20));
+
+        // هنا قمنا بإضافة جميع الأشياء التي قمنا بإنشائها في النافذة
+        root.getChildren().add(birthDateLabel);
+        root.getChildren().add(birthDatePicker);
+        root.getChildren().add(deathDateCheckBox);
+        root.getChildren().add(deathDatePicker);
+        root.getChildren().add(calculateAgeButton);
+        root.getChildren().add(resultLabel);
+
+		// هنا قمنا بإضافة مسافة فارغة حول كل شيء أضفناه في النافذة
+        VBox.setMargin(birthDatePicker, new Insets(10, 0, 35, 0));
+        VBox.setMargin(deathDateCheckBox, new Insets(10, 0, 0, 0));
+        VBox.setMargin(deathDatePicker, new Insets(10, 0, 35, 0));
+        VBox.setMargin(calculateAgeButton, new Insets(10, 0, 25, 0));
+        VBox.setMargin(resultLabel, new Insets(10, 0, 0, 0));
+
+        // فيها و تحديد حجمها Node كأول root هنا قمنا بإنشاء محتوى النافذة مع تعيين الكائن
+        Scene scene = new Scene(root, 430, 420);
+		
+        // هنا وضعنا عنوان للنافذة
+        stage.setTitle("Age Calculator");
+        
+		// أي وضعنا محتوى النافذة الذي قمنا بإنشائه للنافذة .stage في كائن الـ scene هنا وضعنا كائن الـ
+        stage.setScene(scene);
+        
+		// هنا قمنا بإظهار النافذة
+        stage.show();
+
+        // calculateAgeButton هنا قمنا بتحديد ماذا سيحدث عند النقر على الكائن
+		// حتى تحسب و تعرض العمر displayAge() فعلياً سيتم إستدعاء الدالة 
+        calculateAgeButton.setOnAction((Action) -&gt; {
+            displayAge();
+        });
+
+        // deathDateCheckBox هنا قمنا بتحديد ماذا سيحدث عند النقر على الكائن
+		// deathDatePicker لتفعيل أو إلغاء تفعيل الكائن toggleDeathDatePicker() فعلياً سيتم إستدعاء الدالة 
+        deathDateCheckBox.selectedProperty().addListener(
+			(ObservableValue&lt;? extends Boolean&gt; ov, Boolean old_val, Boolean new_val) -&gt; {
+				toggleDeathDatePicker();
+			}
+		);
+
+		// غير مفعل بشكل إفتراضي عند تشغيل البرنامج toggleDeathDatePicker لجعل الكائن toggleDeathDatePicker() هنا قمنا باستدعاء الدالة
+        toggleDeathDatePicker();
+    }
+
+    // هنا قمنا بتشغيل التطبيق
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+}
+		</pre>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

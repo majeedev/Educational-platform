@@ -1,0 +1,267 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>طريقة وضع تعليقات SQL | SQL Comments</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../database-icon.png"/></li>
+<li class="title">كيف أبدأ بالتعلم</li>
+<li><a href="../sql-overview/index.html"><span class="en">SQL</span> - نظرة عامة</a></li>
+<li><a href="../sql-environment-setup/index.html"><span class="en">SQL</span> - تجهيز بيئة العمل</a></li>
+<li><a href="../sql-basic-syntax/index.html"><span class="en">SQL</span> - أسلوب كتابة الأوامر</a></li>
+<li><a href="index.html"><span class="en">SQL</span> - التعليقات</a></li>
+<li><a href="../sql-write-first-query/index.html"><span class="en">SQL</span> - كتابة أول إستعلام</a></li>
+<li><a href="../sql-refresh-databases-panel/index.html"><span class="en">SQL</span> - تحديث قائمة قواعد البيانات</a></li>
+<li><a href="../sql-databases-structure-in-general/index.html"><span class="en">SQL</span> - مفاهيم و مصطلحات مهمة</a></li>
+<li class="title">أوامر و دوال SQL</li>
+<li><a href="../sql-create-database/index.html"><span class="en">SQL</span> - أمر إنشاء قاعدة بيانات</a></li>
+<li><a href="../sql-drop-database/index.html"><span class="en">SQL</span> - أمر حذف قاعدة بيانات</a></li>
+<li><a href="../sql-data-types/index.html"><span class="en">SQL</span> - أهم أنواع البيانات</a></li>
+<li><a href="../sql-create-table/index.html"><span class="en">SQL</span> - أمر إنشاء جدول</a></li>
+<li><a href="../sql-drop-table/index.html"><span class="en">SQL</span> - أمر حذف جدول</a></li>
+<li><a href="../sql-use/index.html"><span class="en">SQL</span> - أمر تحديد قاعدة البيانات</a></li>
+<li><a href="../sql-insert-into/index.html"><span class="en">SQL</span> - أمر إضافة سطر في الجدول</a></li>
+<li><a href="../sql-auto-increment/index.html"><span class="en">SQL</span> - الترقيم التلقائي للأسطر</a></li>
+<li><a href="../sql-select/index.html"><span class="en">SQL</span> - أمر جلب بيانات من الجدول</a></li>
+<li><a href="../sql-select-with-concat/index.html"><span class="en">SQL</span> - دمج الأعمدة عند جلبها</a></li>
+<li><a href="../sql-select-repeat-columns-name/index.html"><span class="en">SQL</span> - تكرار إسم الأعمدة في الإستعلام</a></li>
+<li><a href="../sql-select-with-where/index.html"><span class="en">SQL</span> - جلب البيانات ضمن شروط</a></li>
+<li><a href="../sql-select-with-order/index.html"><span class="en">SQL</span> - جلب البيانات مع ترتيبها</a></li>
+<li><a href="../sql-select-distinct/index.html"><span class="en">SQL</span> - جلب بيانات خالية من التكرار</a></li>
+<li><a href="../sql-union/index.html"><span class="en">SQL</span> - دمج الجداول في جدول واحد</a></li>
+<li><a href="../sql-delete/index.html"><span class="en">SQL</span> - أمر حذف بيانات من الجدول</a></li>
+<li><a href="../sql-update/index.html"><span class="en">SQL</span> - أمر تحديث بيانات الجدول</a></li>
+<li><a href="../sql-select-with-limit/index.html"><span class="en">SQL</span> - تحديد عدد الأسطر التي سترجع</a></li>
+<li><a href="../sql-null-values/index.html"><span class="en">SQL</span> - التعامل مع الحقول الفارغة</a></li>
+<li><a href="../sql-min/index.html"><span class="en">SQL</span> - جلب أصغر قيمة في العامود</a></li>
+<li><a href="../sql-max/index.html"><span class="en">SQL</span> - جلب أكبر قيمة في العامود</a></li>
+<li><a href="../sql-count/index.html"><span class="en">SQL</span> - حساب عدد أسطر الجدول</a></li>
+<li><a href="../sql-sum/index.html"><span class="en">SQL</span> - حساب ناتج جمع قيم العامود</a></li>
+<li><a href="../sql-avg/index.html"><span class="en">SQL</span> - حساب متوسط قيم العامود</a></li>
+<li><a href="../sql-select-with-group-by/index.html"><span class="en">SQL</span> - تجميع قيم الحقول المشتركة</a></li>
+<li><a href="../sql-select-with-having/index.html"><span class="en">SQL</span> - شروط على الحقول المجمعة</a></li>
+<li><a href="../sql-insert-into-select/index.html"><span class="en">SQL</span> - نسخ البيانات في جدول آخر</a></li>
+<li><a href="../sql-case/index.html"><span class="en">SQL</span> - وضع قيمة إفتراضية لكل حالة</a></li>
+<li><a href="../sql-unique/index.html"><span class="en">SQL</span> - تخزين قيم موحدة في العامود</a></li>
+<li class="title">العلاقات بين الجداول</li>
+<li><a href="../sql-how-to-relate-tables/index.html"><span class="en">SQL</span> - كيف يتم ربط الجداول</a></li>
+<li><a href="../sql-relationships-types/index.html"><span class="en">SQL</span> - أنواع العلاقات بين الجدوال</a></li>
+<li><a href="../sql-joins/index.html"><span class="en">SQL</span> - طرق ربط معلومات الجداول</a></li>
+<li><a href="../sql-alias-for-tables/index.html"><span class="en">SQL</span> - وضع أسماء مختصرة للجداول</a></li>
+<li><a href="../sql-self-join/index.html"><span class="en">SQL</span> - ربط المعلومات في نفس الجدول</a></li>
+<li class="title">معلومات متقدمة</li>
+<li><a href="../sql-alter/index.html"><span class="en">SQL</span> - تعديل بنية الجدول بعد إنشائه</a></li>
+<li><a href="../sql-default/index.html"><span class="en">SQL</span> - وضع قيم إفتراضية للحقول</a></li>
+<li><a href="../sql-primary-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح رئيسي</a></li>
+<li><a href="../sql-foreign-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح أجنبي</a></li>
+<li><a href="../sql-check/index.html"><span class="en">SQL</span> - وضع شروط لتخزين القيم</a></li>
+<li><a href="../sql-transactions/index.html"><span class="en">SQL</span> - تنفيذ كل الأوامر أو إلغاءها كلها</a></li>
+<li><a href="../sql-indexes/index.html"><span class="en">SQL</span> - الفهارس و أنواعها</a></li>
+<li><a href="../sql-like/index.html"><span class="en">SQL</span> - البحث في الأعمدة النصية</a></li>
+<li><a href="../sql-sub-queries/index.html"><span class="en">SQL</span> - كتابة إستعلامات متداخلة</a></li>
+<li><a href="../sql-connect-to-database/index.html"><span class="en">SQL</span> - الإتصال بقاعدة البيانات عن بعد</a></li>
+<li class="title">بناء قواعد بيانات لمشاريع</li>
+<li><a href="../sql-building-database-from-scratch/index.html"><span class="en">SQL</span> - تصميم قاعدة بيانات من الصفر</a></li>
+<li><a href="../sql-download-ready-made-database/index.html"><span class="en">SQL</span> - تحميل قواعد بيانات جاهزة</a></li>
+<!--
+<li><a href="../sql-backup-database"><span class="en">SQL</span> - إنشاء نسخة من قاعدة البيانات</a></li>
+<li><a href="../sql-stored-procedures"><span class="en">SQL</span> - تعريف دوال و استدعائها</a></li>
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">SQL</span>التعليقات</h1>
+<article>
+<h2>مفهوم التعليقات في <span class="word">SQL</span></h2>
+<p>نستخدم التعليقات <span class="inline">( <span class="word">Comments</span> )</span> لنضع ملاحظات أو شروحات حول الإستعلامات أو الدوال المعقدة الكبيرة التي قمنا بإنشائها حتى لا ننسى سبب كتابتنا للأوامر التي وضعناها بها بذاك الشكل التحديد, و بالتالي في حال أردنا مراجعتها أو التعديل عليها بعد مدة فذلك سيكون سهل جداً لأننا سنقرأ التعليقات حتى نفهم طريقة تركيب الأوامر بسرعة و من ثم نعدل ما نشاء.</p>
+<p>وضع تعليقات لا يؤثر إطلاقاً على الأوامر الموضوعة في الإستعلام و يمكن وضع عدد غير محدود من التعليقات.</p>
+<p>التعليقات بشكل عام يمكن وضعها في أغلب أنواع قواعد البيانات و لكن ليس في جميعها, فعلى سبيل المثال قواعد بيانات <span class="word">Access</span> لا تسمح بوضع تعليقات.</p>
+<p>ملاحظة أخرى و هي أن التعليقات لا توضع بنفس الطريقة في جميع أنواع قواعد البيانات فمثلاً هناك ثلاث خيارات لوضع تعليقات في قواعد بيانات <span class="inline"><span class="word">MySQL</span>,</span> أما في قواعد بيانات <span class="word">Access</span> فيوجد خيارين فقط.</p>
+<p><span class="note">تذكر:</span> أنت لست مجبراً على وضع تعليقات. و لكننا ننصحك بوضع تعليقات كلما دعت الحاجة.</p>
+</article>
+<article>
+<h2>طرق وضع تعليقات في قواعد بيانات <span class="word">MySQL</span></h2>
+<p>هناك ثلاث خيارات لوضع تعليقات في قواعد بيانات <span class="word">MySQL</span> و هي كالتالي:</p>
+<ul class="explain">
+<li><p>إستخدام الرمز <code data-enlighter-language="sql">-- بعده تضع التعيلق</code> لوضع تعليق على سطر واحد.</p></li>
+<li><p>إستخدام الرمز <code data-enlighter-language="sql"># بعده تضع التعيلق</code> لوضع تعليق على سطر واحد.</p></li>
+<li><p>تضع الرمز <code data-enlighter-language="sql">/* بعده تضع بينهم */</code> لوضع تعليق يتألف من عدة أسطر.</p></li>
+</ul>
+<p>الخيار الأول و الخيار الثالث متوفران في أغلب قواعد البيانات التي تسمح بوضع تعليقات.</p>
+<br/>
+<p>في المثال التالي إستخدمنا الرمز <code data-enlighter-language="sql">--</code> لوضع عدة تعليقات (شروحات) و كل تعليق منها يتألف من سطر واحد.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM products -- إجلب كل معلومات المنتج
+WHERE id = 3;          -- يساوي 3 id الذي يملك رقم
+
+-- بتفصيل ممل لاحقاً SQL ركز على طريقة وضع التعليق و ليس على طريقة عمل الكود لأننا سنشرح لك أوامر
+		</pre>
+</div>
+<br/>
+<p>في المثال التالي إستخدمنا الرمز <code data-enlighter-language="sql">/* .. */</code> لوضع تعيلق واحد يتألف من عدة أسطر.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<pre data-enlighter-language="sql">
+/*
+	marks و الجدول students هذا الإستعلام يقوم بجلب معلومات طالب موزعة في الأساس بداخل جدولين هما الجدول
+	و إسم و علامات كل طالب معدله أكثر من 80 id فكرة هذا الإستعلام أنه يجلب رقم
+  
+	بتفصيل ممل لاحقاً SQL ركز على طريقة وضع التعليق و ليس على طريقة عمل الكود لأننا سنشرح لك أوامر
+*/
+SELECT s.studentid, s.name, s.total_marks
+FROM student s, marks m
+WHERE s.studentid = m.studentid
+AND m.total_marks &gt; 80;
+		</pre>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

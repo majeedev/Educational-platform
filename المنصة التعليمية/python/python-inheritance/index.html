@@ -1,0 +1,810 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس شرحنا الوراثة في بايثون بتفصيل شامل, و وضعنا الكثير من الأمثلة التس ستجعلك تفهمها بشكل قوي" name="description"/>
+<meta content="inheritance in java,extends keyword in java,super keyword in java,is a relationship in java,instanceof operator in java,class object in java,inheritance type in java,الوراثة في بايثون,فكرة الوراثة في بايثون,مفهوم الوراثة في بايثون,أمثلة شاملة عن الوراثة في بايثون,فائدة الوراثة في بايثون,الكلمة super في بايثون,الكلمة instanceof في بايثون, العامل instanceof في بايثون, علاقة الكائن و الكلاس الذي يرث منه,علاقة Subclass و Superclass في بايثون,كل شيء عن الوراثة في بايثون,أمثلة بسيطة عن الوراثة في بايثون,شرح عملية الوراثة في بايثون بتفصيل شامل" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الوراثة في بايثون | Python inheritance</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>الوراثة في بايثون</h1>
+<article>
+<h2>مفهوم الوراثة في بايثون</h2>
+<p>في البداية, كلمة <b>وراثة</b> تعني تضمين محتوى كلاس في كلاس آخر.<br/>
+	في بايثون, الكلاس يمكنه أن يرث من كلاس آخر حتى يحصل على الدوال و المتغيرات الموجودة فيه.</p>
+<p>إذاً فكرة الوراثة بسيطة لكن فائدتها قوية جداً. فمثلاً إذا كنت تريد إنشاء كلاس جديد و لاحظت أنه يوجد كلاس جاهز يحتوي على كودات قد تفيدك يمكنك استغلالها بدل كتابتها من الصفر, أي يمكنك جعل الكلاس الذي قمت بتعريفه يرث هذا الكلاس, و بعدها يمكنك إستخدام جميع المتغيرات و الدوال التي ورثها الكلاس الجديد من الكلاس الجاهز.</p>
+<p>لجعل الكلاس يرث من كلاس آخر, نضع بعد إسم الكلاس قوسين و بداخلهما إسم الكلاس الذي نريده أن يرث منه.<br/>
+	في حال كان الكلاس يرث من أكثر من كلاس, يجب وضع فاصلة بين كل كلاسَين نضعهما بين القوسين.</p>
+<br/>
+<h3>مصطلحات تقنية</h3>
+<ul class="explain">
+<li><p>الوراثة تسمى <span class="word">Inheritance</span> في اللغة الإنجليزية.</p></li>
+<li><p>الكلاس الذي يرث من كلاس آخر يقال له الكلاس الإبن, و يسمى <span class="word">Subclass</span> و يقال له أيضاً <span class="inline">( <span class="word">Derived Class</span>, <span class="word">Extended Class</span> أو <span class="word">Child Class</span> )</span>.</p></li>
+<li><p>الكلاس الذي يورّث محتوياته لكلاس آخر يسمى الكلاس الأب, و يسمى <span class="word">Superclass</span> و يقال له أيضاً <span class="inline">( <span class="word">Base Class</span> أو <span class="word">Parent Class</span> )</span>.</p></li>
+</ul>
+<br/>
+<h3 class="note-title">إنتبه</h3>
+<div class="note-box">
+<p><span class="inline">الـ <span class="word">Subclass</span></span> يرث كل شيء موجود في <span class="inline">الـ <span class="word">Superclass</span></span> بشكل مباشر ما عدا الخصائص التي تم تعريفها كباراميترات بداخل الدالة <code data-enlighter-language="python">__init__()</code> و السبب في ذلك أن هذه الدالة تولد الخصائص للكائن و تربطها بالكلاس لحظة إنشاء الكائن.<br/>
+		أي إذا لم تنشئ كائن من الكلاس لن يتم إستدعاء هذه الدالة أصلاً و لهذا لا تعتبر كأنها خصائص موجودة بشكل مباشر في الكلاس نفسه.</p>
+<p>في حال أردت إستدعاء الدالة <code data-enlighter-language="python">__init__()</code> الموجودة في <span class="inline">الـ <span class="word">Superclass</span></span> نستخدم دالة جاهزة إسمها <span class="inline"><code data-enlighter-language="python">super()</code>.</span><br/>
+		لا تقلق إذا لم تفهم كل ما ذكرناه الآن لأنك ستفهم كل هذه الامور بتفصيل من الأمثلة. و الدالة <code data-enlighter-language="python">super()</code> سنشرحها بتفصيل في الدرس التالي.</p>
+</div>
+</article>
+<article>
+<h2>أشكال الوراثة في بايثون
+<p>في بايثون يوجد <span class="number">4</span> أشكال للوراثة كما في الجدول التالي.</p>
+<p><a href="inheritance-type.png" target="_blank"><img src="inheritance-type.png"/></a></p>
+<br/>
+<p>إذاَ أشكال الوراثة في بايثون هي كالتالي:</p>
+<ul class="explain">
+<li><p><b>وراثة فردية:</b> تعني كلاس يرث من كلاس واحد فقط.</p></li>
+<li><p><b>وراثة متتالية:</b> تعني كلاس يرث من كلاس واحد و هذا الكلاس كان في الأصل يرث من كلاس آخر.</p></li>
+<li><p><b>وراثة هرمية:</b> تعني أن الكلاس موروث من قبل أكثر من كلاس.</p></li>
+<li><p><b>وراثة متعددة:</b> تعني أن الكلاس يرث من أكثر من كلاس.</p></li>
+</ul>
+</h2></article>
+<article>
+<h2>أمثلة تطبيقية على الوراثة في بايثون
+<p>في جميع الأمثلة سنفترض أن كل كلاس معرف بداخل ملف خاص كما يفعل المطورون على أرض الواقع.</p>
+<br/>
+<h3>مثال عن الوراثة الفردية</h3>
+<p>في المثال التالي قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">A</code> يحتوي على متغير إسمه <code data-enlighter-language="java">x</code> و دالة إسمها <span class="inline"><code data-enlighter-language="java">print_msg()</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">B</code> يحتوي على متغير إسمه <code data-enlighter-language="java">y</code> و يرث من الكلاس <span class="inline"><code data-enlighter-language="java">A</code>.</span></p>
+<p>شكل الوراثة سيكون كالتالي.</p>
+<p><a href="single-inheritance.png" target="_blank"><img src="single-inheritance.png"/></a></p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">A.py</span>
+<pre data-enlighter-language="python">
+# print_msg و دالة إسمها x يحتوي على متغير إسمه A هنا قمنا بتعريف كلاس إسمه
+class A:
+	
+    x = 10
+
+    def print_msg(self):
+        print('Hello from class A')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">B.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه A.py الموجود في الملف A هنا قمنا بتضمين الكلاس
+from A import A
+
+
+# y و يحتوي على متغير إسمه A يرث من الكلاس B هنا قمنا بتعريف كلاس إسمه
+class B(A):
+
+    y = 20
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع إنشاء كائن منه B.py الموجود في الملف B هنا قمنا بتضمين الكلاس
+from B import B
+
+
+# B هنا قمنا بإنشاء كائن من الكلاس
+b = B()
+
+# B و الذي تم تعريفه في الكلاس b الموجود في الكائن y هنا قمنا بطباعة قيمة المتغير
+print('y:', b.y)
+
+# A من الكلاس B  و الذي ورثه الكلاس b الموجود في الكائن x هنا قمنا بطباعة قيمة المتغير
+print('x:', b.x)
+
+# A من الكلاس B و التي ورثها الكلاس b الموجودة في الكائن print_msg() هنا قمنا باستدعاء الدالة
+b.print_msg()
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			y: 20<br/>
+			x: 10<br/>
+			Hello from class A
+		</div>
+</div>
+<br/><br/>
+<h3>مثال عن الوراثة المتتالية</h3>
+<p>في المثال التالي قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">A</code> يحتوي على دالة إسمها <span class="inline"><code data-enlighter-language="java">print_a()</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">B</code> يحتوي على دالة إسمها <code data-enlighter-language="java">print_b()</code> و يرث من الكلاس <span class="inline"><code data-enlighter-language="java">A</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">C</code> يحتوي على دالة إسمها <code data-enlighter-language="java">print_c()</code> و يرث من الكلاس <span class="inline"><code data-enlighter-language="java">B</code>.</span></p>
+<p>شكل الوراثة سيكون كالتالي.</p>
+<p><a href="multi-level-inheritance.png" target="_blank"><img src="multi-level-inheritance.png"/></a></p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">A.py</span>
+<pre data-enlighter-language="python">
+# print_a يحتوي على دالة إسمها A هنا قمنا بتعريف كلاس إسمه
+class A:
+
+    def print_a(self):
+        print('Hello from class A')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">B.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه A.py الموجود في الملف A هنا قمنا بتضمين الكلاس
+from A import A
+
+
+# print_b و يحتوي على دالة إسمها A يرث من الكلاس B هنا قمنا بتعريف كلاس إسمه
+class B(A):
+    
+    def print_b(self):
+        print('Hello from class B')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">C.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه B.py الموجود في الملف B هنا قمنا بتضمين الكلاس
+from B import B
+
+
+# print_c و يحتوي على دالة إسمها B يرث من الكلاس C هنا قمنا بتعريف كلاس إسمه
+class C(B):
+    
+    def print_c(self):
+        print('Hello from class C')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع إنشاء كائن منه C.py الموجود في الملف C هنا قمنا بتضمين الكلاس
+from C import C
+
+
+# C هنا قمنا بإنشاء كائن من الكلاس
+c = C()
+
+# c هنا قمنا باستدعاء جميع الدوال الموجودة في الكائن
+c.print_a()
+c.print_b()
+c.print_c()
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			Hello from class A<br/>
+			Hello from class B<br/>
+			Hello from class C
+		</div>
+</div>
+<br/><br/>
+<h3>مثال عن الوراثة المتعددة</h3>
+<p>في المثال التالي قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">A</code> يحتوي على دالة إسمها <span class="inline"><code data-enlighter-language="java">print_a()</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">B</code> يحتوي على دالة إسمها <span class="inline"><code data-enlighter-language="java">print_b()</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">C</code> يحتوي على دالة إسمها <code data-enlighter-language="java">print_c()</code> و يرث من الكلاس <code data-enlighter-language="java">A</code> و الكلاس <span class="inline"><code data-enlighter-language="java">B</code>.</span></p>
+<p>شكل الوراثة سيكون كالتالي.</p>
+<p><a href="multiple-inheritance.png" target="_blank"><img src="multiple-inheritance.png"/></a></p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title python-file-icon">A.py</span>
+<pre data-enlighter-language="python">
+# print_a يحتوي على دالة إسمها A هنا قمنا بتعريف كلاس إسمه
+class A:
+
+    def print_a(self):
+        print('Hello from class A')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">B.py</span>
+<pre data-enlighter-language="python">
+# print_b يحتوي على دالة إسمها B هنا قمنا بتعريف كلاس إسمه
+class B:
+    
+    def print_b(self):
+        print('Hello from class B')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">C.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منهما B.py الموجود في الملف B و الكلاس A.py الموجود في الملف A هنا قمنا بتضمين الكلاس
+from A import A
+from B import B
+
+
+# print_c و يحتوي على دالة إسمها ,B و الكلاس A يرث من الكلاس C هنا قمنا بتعريف كلاس إسمه
+class C(A, B):
+    
+    def print_c(self):
+        print('Hello from class C')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع إنشاء كائن منه C.py الموجود في الملف C هنا قمنا بتضمين الكلاس
+from C import C
+
+
+# C هنا قمنا بإنشاء كائن من الكلاس
+c = C()
+
+# c هنا قمنا باستدعاء جميع الدوال الموجودة في الكائن
+c.print_a()
+c.print_b()
+c.print_c()
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			Hello from class A<br/>
+			Hello from class B<br/>
+			Hello from class C
+		</div>
+</div>
+<br/><br/>
+<h3>مثال عن الوراثة الهرمية</h3>
+<p>في المثال التالي قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">A</code> يحتوي على دالة إسمها <span class="inline"><code data-enlighter-language="java">print_a()</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">B</code> يحتوي على دالة إسمها <code data-enlighter-language="java">print_b()</code> و يرث من الكلاس <span class="inline"><code data-enlighter-language="java">A</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">C</code> يحتوي على دالة إسمها <code data-enlighter-language="java">print_c()</code> و يرث من الكلاس <code data-enlighter-language="java">A</code> أيضاً.</p>
+<p>شكل الوراثة سيكون كالتالي.</p>
+<p><a href="hierarchical-inheritance.png" target="_blank"><img src="hierarchical-inheritance.png"/></a></p>
+<div class="example-box">
+<h4>المثال الرابع</h4>
+<span class="code-title python-file-icon">A.py</span>
+<pre data-enlighter-language="python">
+# print_a يحتوي على دالة إسمها A هنا قمنا بتعريف كلاس إسمه
+class A:
+
+    def print_a(self):
+        print('Hello from class A')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">B.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه A.py الموجود في الملف A هنا قمنا بتضمين الكلاس
+from A import A
+
+
+# print_b و يحتوي على دالة إسمها A يرث من الكلاس B هنا قمنا بتعريف كلاس إسمه
+class B(A):
+    
+    def print_b(self):
+        print('Hello from class B')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">C.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه A.py الموجود في الملف A هنا قمنا بتضمين الكلاس
+from A import A
+
+
+# print_c و يحتوي على دالة إسمها A يرث من الكلاس C هنا قمنا بتعريف كلاس إسمه
+class C(A):
+    
+    def print_c(self):
+        print('Hello from class C')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع إنشاء كائنات منهما C.py الموجود في الملف C و الكلاس B.py الموجود في الملف B هنا قمنا بتضمين الكلاس
+from B import B
+from C import C
+
+
+# و استدعاء جميع الدوال الموجودة فيه C هنا قمنا بإنشاء كائن من الكلاس
+c = C()
+c.print_a()
+c.print_c()
+
+# و استدعاء جميع الدوال الموجودة فيه B هنا قمنا بإنشاء كائن من الكلاس
+b = B()
+b.print_a()
+b.print_b()
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			Hello from class A<br/>
+			Hello from class B<br/>
+			Hello from class A<br/>
+			Hello from class C
+		</div>
+</div>
+</h2></article>
+<article>
+<h2>معرفة طبيعة العلاقة بين الكلاسات و الكائنات في بايثون</h2>
+<p>الجدول التالي يحتوي على دوال جاهزة في بايثون يمكن إستخدامها لمعرفة طبيعة العلاقة بين كلاس و آخر أو بين كائن و آخر.<br/>
+<span class="note">ملاحظة:</span> في الأمثلة الموضوع إستخدمنا الكلمة المفتاحية <code data-enlighter-language="python">pass</code> من أجل تعريف كلاسات فارغة. لذلك ننصحك بالإضطلاع على الأمثلة.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">issubclass(subclass, superclass)</code></span>
+			تستخدم لمعرفة ما إذا كان الكلاس الذي نمرره مكان الباراميتر <code data-enlighter-language="python">subclass</code> يرث من الكلاس الذي نمرره مكان الباراميتر <code data-enlighter-language="python">superclass</code> أم لا.<br/>
+			ترجع <code data-enlighter-language="python">True</code> في حال كان كذلك, و غير ذلك ترجع <span class="inline"><code data-enlighter-language="python">False</code>.</span><br/>
+<a class="open-page" href="issubclass.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">isinstance(obj, classinfo)</code></span>
+			تستخدم لمعرفة ما إذا كان الكائن الذي نمرره مكان الباراميتر <code data-enlighter-language="python">obj</code> تم إنشاؤه من الكلاس الذي نمرره مكان الباراميتر <code data-enlighter-language="python">classinfo</code> أم لا.<br/>
+			ترجع <code data-enlighter-language="python">True</code> في حال كان كذلك, و غير ذلك ترجع <span class="inline"><code data-enlighter-language="python">False</code>.</span><br/>
+<a class="open-page" href="isinstance.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>تضارب الأسماء عند وراثة أكثر من كلاس في بايثون</h2>
+<p>عندما يقوم الكلاس بوارثة أكثر من كلاس فيوجد إحتمال كبير أن يرث خصائص و دوال عندها نفس الإسم و بالتالي سيحدث تضارب في الأسماء.<br/>
+	الآن عليك معرفة أن التضارب في الأسماء لا يسبب خطأ في الكود عند التشغيل لكنه قد يؤدي لحدوث خطأ منطقي في النتيجة المرجو الحصول عليها.</p>
+<br/>
+<h3>معلومة تقنية</h3>
+<p>في حال كان الكلاس يرث من كلاسيَن و كان يوجد في كلاهما متغير عنده نفس الإسم و دالة عندها نفس الإسم, سيقوم مفسّر لغة بايثون بتوريث الكلاس المتغير و الدالة الموجودين في أول كلاس يرث منه. لأن أول كلاس يتم الوراثة منه يتم إعطاؤه أولوية التنفيذ في حال حدث تضارب في الأسماء.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">A</code> يحتوي على دالة إسمها <span class="inline"><code data-enlighter-language="java">print_msg()</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">B</code> يحتوي على دالة إسمها <code data-enlighter-language="java">print_msg()</code> أيضاً.<br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">C</code> يرث من الكلاس <code data-enlighter-language="java">A</code> و الكلاس <code data-enlighter-language="java">B</code> و يحتوي على دالة إسمها <span class="inline"><code data-enlighter-language="java">call_print_msg()</code>.</span></p>
+<p>إذاً هنا عندنا وراثة متعددة و شكلها كالتالي.</p>
+<p><a href="multiple-inheritance.png" target="_blank"><img src="multiple-inheritance.png"/></a></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">A.py</span>
+<pre data-enlighter-language="python">
+# print_msg يحتوي على دالة إسمها A هنا قمنا بتعريف كلاس إسمه
+class A:
+
+    def print_msg(self):
+        print('Hello from class A')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">B.py</span>
+<pre data-enlighter-language="python">
+# print_msg يحتوي على دالة إسمها B هنا قمنا بتعريف كلاس إسمه
+class B:
+    
+    def print_msg(self):
+        print('Hello from class B')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">C.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منهما B.py الموجود في الملف B و الكلاس A.py الموجود في الملف A هنا قمنا بتضمين الكلاس
+from A import A
+from B import B
+
+
+# call_print_msg و يحتوي على دالة إسمها ,B و الكلاس A يرث من الكلاس C هنا قمنا بتعريف كلاس إسمه
+# A و بالتالي عند حدوث أي تضارب سيتم إستدعاء الشيء الموجود في الكلاس ,B و من ثم يرث من الكلاس A يرث من الكلاس C هنا جعلنا الكلاس
+class C(A, B):
+    
+	# A الموجودة في الكلاس print_msg() سيتم إستدعاء الدالة call_print_msg() عند إستدعاء الدالة
+    def call_print_msg(self):
+        self.print_msg()
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع إنشاء كائن منه C.py الموجود في الملف C هنا قمنا بتضمين الكلاس
+from C import C
+
+
+# C هنا قمنا بإنشاء كائن من الكلاس
+c = C()
+
+# B أو الموجودة في الكلاس A الموجودة في الكلاس print_msg() لنعرف إن كانت ستنفذ الدالة call_print_msg() هنا قمنا باستدعاء الدالة
+c.call_print_msg()
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			Hello from class A
+		</div>
+</div>
+</article>
+<article>
+<h2>حل مشكلة تضارب الأسماء في بايثون</h2>
+<p>في حال كنت تريد إنشاء كلاس و تريد ضمان عدم حدوث مشكلة في تضارب الأسماء عند وراثة هذا الكلاس, يمكنك إعتماد مبدأ إخفاء البيانات <span class="inline">( <span class="word">Data Hiding</span> )</span> عند تسمية المتغيرات و الدوال. إذاً الفكرة من إخفاء البيانات جعل المبرمج قادر على وضع نفس أسماء المتغيرات و الدوال في الكلاس الأب و الكلاس الإبن مع ضمان عدم حدوث أي تضارب.</p>
+<p>الآن, يمكنك ببساطة وضع الرمز <code data-enlighter-language="python">__</code> في بداية إسم المتغير أو الدالة لتصبح قادر على إستخدام نفس الإسم في الكلاس الذي يرثهم.<br/>
+	عندها سيتولى مفسّر لغة بايثون التفريق بين الأشياء الموجودة في الكلاس الأب و الأشياء الموجودة في الكلاس الإبن.</p>
+<p></p>
+<br/>
+<h3>معلومة تقنية</h3>
+<p>عند وراثة شيء خفي سواء كان دالة أو متغير فإنك تصل له كالتالي: تضع الرمز <code data-enlighter-language="python">_ClassName__ItsName</code><br/>
+	فمثلاً إذا قمت بإنشاء كلاس إسمه <code data-enlighter-language="python">A</code> و وضعت فيه متغير خفي إسمه <span class="inline"><code data-enlighter-language="python">__x</code>,</span> في حال قمت بوراثة هذا المتغير فإنك تستطيع الوصول له كالتالي <span class="inline"><code data-enlighter-language="python">_A__x</code>.</span><br/>
+	إذاّ مفسر بايثون يعيد تسمية المتغير الخفي نسبة لإسم الكلاس و هكذا يضمن أن لا يحدث تضارب في الأسماء.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف كلاس يرث من كلاس و كلاهما يحتويان على متغير خفي إسمه <code data-enlighter-language="python">__x</code> و دالة خفية إسمها <span class="inline"><code data-enlighter-language="python">__print_msg()</code>.</span><br/>
+	بعدها قمنا بإنشاء كائن من الكلاس الإبن و فيه عرضنا قيمة كل المتغيرات الخفية الموجودة فيه و قمنا باستدعاء الدوال الخفية أيضاَ.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">A.py</span>
+<pre data-enlighter-language="python">
+# __print_msg و دالة خفية إسمها __x يحتوي على متغير خفي إسمه A هنا قمنا بتعريف كلاس إسمه
+class A:
+
+	__x = 10
+    
+	def __print_msg(self):
+        print('Hello from class A')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">B.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه A.py الموجود في الملف A هنا قمنا بتضمين الكلاس
+from A import A
+
+# __print_msg و دالة خفية إسمها __x و يحتوي على متغير خفي إسمه ,A يرث من الكلاس B هنا قمنا بتعريف كلاس إسمه
+class B(A):
+    
+	__x = 20
+	
+    def __print_msg(self):
+        print('Hello from class B')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع إنشاء كائن منه B.py الموجود في الملف B هنا قمنا بتضمين الكلاس
+from B import B
+
+
+# C هنا قمنا بإنشاء كائن من الكلاس
+b = B()
+
+# B الموجود في الكلاس __x و قيمة المتغير A الموجود في الكلاس __x هنا قمنا بطباعة قيمة المتغير
+print('__x obtained from class A =', b._A__x)
+print('__x obtained from class B =', b._B__x)
+
+# B الموجودة في الكلاس __print_msg() و الدالة A الموجودة في الكلاس __print_msg() هنا قمنا باستدعاء الدالة
+b._A__print_msg()
+b._B__print_msg()
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			__x obtained from class A = 10<br/>
+			__x obtained from class B = 20<br/>
+			Hello from class A<br/>
+			Hello from class B
+		</div>
+</div>
+</article>
+<article>
+<h2>الكلاس <code data-enlighter-language="java">object</code> في بايثون</h2>
+<p>في بايثون, أي كلاس جاهز أو تنشئه بنفسك يرث بشكل تلقائي من كلاس إسمه <span class="inline"><code data-enlighter-language="java">object</code>.</span><br/>
+	إذاَ, الكلاس <code data-enlighter-language="java">object</code> يعتبر <span class="word">Superclass</span> لجميع الكلاسات في بايثون.<br/>
+	و بالتالي فإن أي كائن ننشئه سيحتوي على كل الخصائص و الدوال الموجودة فيه.</p>
+<br/>
+<p>الآن, إذا قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">Test</code> لا يرث من أي كلاس.<br/>
+	فكن على يقين أن مفسّر لغة بايثون سيجعل الكلاس <code data-enlighter-language="java">Test</code> يرث بشكل تلقائي من الكلاس <code data-enlighter-language="java">object</code> كالتالي.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+Test(object):
+	</pre>
+<br/>
+<p>و بالنسبة للدوال التي تظهر لك أثناء كتابة الكود بمجرد أن تضع نقطة بعد إسم الكائن و التي لم تقم بتعريفها بنفسك كما في الصورة التالية.<br/>
+	فهذه الدوال وجدت في الكائن لأنه تم إنشاء هذا الكائن في الأساس من كلاس يرث من الكلاس <span class="inline"><code data-enlighter-language="java">object</code>.</span></p>
+<p><a href="object-methods.png" target="_blank"><img src="object-methods.png"/></a></p>
+<br/><br/>
+<h3>معلومة تقنية</h3>
+<p>الكلاس <code data-enlighter-language="java">object</code> موضوع بداخل موديول إسمه <span class="inline"><code data-enlighter-language="java">builtins.py</code>.</span><br/>
+	هذا الموديول يقوم مفسّر بايثون بتضمينه بشكل تلقائي في كل كلاس, لهذا السبب لا تحتاج أن تفعل له <span class="inline"><code data-enlighter-language="java">import</code>.</span></p>
+<p>أيضاَ عليك معرفة أن الموديول <code data-enlighter-language="java">builtins.py</code> يحتوي على كل الدوال التي كنا نستخدمها سابقاً و التي كنا نقول أنها دوال جاهزة في بايثون.<br/>
+	و هو يحتوي أيضاً على كلاسات كثيرة غير الكلاس <code data-enlighter-language="java">object</code> لكننا لن نتطرق إليها في هذا الدرس.</p>
+<br/>
+<p>الجدول التالي يحتوي على خصائص الكلاس <span class="inline"><code data-enlighter-language="java">object</code>.</span></p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الخاصية مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">__class__</code></span>
+			ترجع إسم الكلاس الذي أنشئ منه الكائن الذي قام باستدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">__dict__</code></span>
+			ترجع كائن <code data-enlighter-language="python">dict</code> فيه كل خصائص الكلاس الذي أنشئ منه الكائن الذي قام باستدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">__doc__</code></span>
+			ترجع التفسير <span class="inline">( <span class="word">Documentation</span> )</span> الموضوع في الكلاس الذي أنشئ منه الكائن الذي قام باستدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">__module__</code></span>
+			ترجع إسم الموديول الذي يحتوي على الكلاس الذي أنشئ منه الكائن الذي قام باستدعائها.</td>
+</tr>
+</table>
+<br/>
+<p>الجدول التالي يحتوي على بعض دوال الكلاس <span class="inline"><code data-enlighter-language="java">object</code>.</span></p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">__init__()</code></span>
+			تستخدم هذه الدالة لتعريف خصائص للكائن و إعطائهم قيم أولية.<br/>
+			يتم إستدعاء هذه الدالة بشكل تلقائي عند إنشاء كائن من الكلاس الذي يحتويها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">__del__()</code></span>
+			تستخدم هذه الدالة لتنفيذ أوامر معينة عندما يتم مسح الكائن من الذاكرة.<br/>
+			يتم إستدعاء هذه الدالة بشكل تلقائي عند مسح كائن من الكلاس الذي يحتويها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">__sizeof__()</code></span>
+			ترجع عدد صحيح يمثل حجم الكائن <span class="inline">( أي المساحة التي يحتلها )</span> في الذاكرة <span class="inline">بالـ <span class="word">Byte</span>.</span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">__repr__()</code></span>
+			ترجع نص يمثل شكل الكائن كما الذي قام باستدعائها في الذاكرة مع احترام نوع و قيمة الكائن.<br/>
+			ملاحظة: استدعاء هذه الدالة مطابق لاستدعاء دالة إسمها <code data-enlighter-language="python">repr(object)</code> موضوعة مباشرةً في الموديول <span class="inline"><code data-enlighter-language="java">builtins.py</code>.</span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="python">__str__()</code></span>
+			ترجع نص يمثل شكل الكائن كما الذي قام باستدعائها في الذاكرة.<br/>
+			ملاحظة: استدعاء هذه الدالة مطابق لاستدعاء دالة إسمها <code data-enlighter-language="python">str(object)</code> موضوعة مباشرةً في الموديول <span class="inline"><code data-enlighter-language="java">builtins.py</code>.</span></td>
+</tr>
+</table>
+<br/><br/>
+<p>في المثال التالي قمنا بتعريف كلاس إسمه <code data-enlighter-language="python">Car</code> وضعنا فيه الدالة <code data-enlighter-language="python">__init__()</code> و الدالة <span class="inline"><code data-enlighter-language="python">__del__()</code>.</span><br/>
+	بعدها قمنا بإنشاء كائن منه و استدعاء الخصائص و الدوال التي ورثها الكلاس <code data-enlighter-language="python">Car</code> في الأساس من الكلاس <span class="inline"><code data-enlighter-language="python">object</code>.</span></p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Car.py</span>
+<pre data-enlighter-language="python">
+# Car هنا قمنا بتعريف كلاس إسمه
+class Car:
+	# ( Documentation ) هنا وضعنا شرح للكلاس
+    '''This class represent any car object'''
+
+	# و التي سيتم استدعاءها بشكل تلقائي عند إنشاء الكائن __init__() هنا قمنا بتعريف الدالة
+    def __init__(self, model, year, color, price):
+        self.model = model
+        self.year = year
+        self.color = color
+        self.price = price
+
+	# و التي سيتم استدعاءها بشكل تلقائي عند مسح الكائن من الذاكرة __del__() هنا قمنا بتعريف الدالة
+    def __del__(self):
+        print('Object is destroyed')
+		</pre>
+<br/>
+
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع إنشاء كائن منه Car.py الموجود في الملف Car هنا قمنا بتضمين الكلاس
+from Car import Car
+
+
+# Car هنا قمنا بإنشاء كائن من الكلاس
+obj = Car('BMW', '2015', 'Black', 22000)
+
+# object من الكلاس Car التي ورثها الكلاس obj هنا قمنا بعرض بعض قيم خصائص الكائن
+print('Object class name:           ', obj.__class__)
+print('Object module name:          ', obj.__module__)
+print('Object class documentation:  ', obj.__doc__)
+print('Object properties and values:', obj.__dict__)
+
+# object من الكلاس Car التي ورثها الكلاس obj هنا قمنا باستدعاء بعض دوال الكائن
+print('Object size in Byte:         ', obj.__sizeof__())
+print('Object representation:       ', obj.__repr__())
+print('Object string representation:', obj.__str__())
+
+# بشكل تلقائي __del__() و بالتالي سيتم إستدعاء الدالة obj هنا قمنا بمسح الكائن
+del obj
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+Object class name:            &lt;class 'Car.Car'&gt;<br/>
+Object module name:            Car<br/>
+Object class documentation:   This class represent any car object<br/>
+Object properties and values: {'model': 'BMW', 'year': '2015', 'color': 'Black', 'price': 22000}<br/>
+Object size in Byte:          16<br/>
+Object representation:        &lt;Car.Car object at 0x01080A30&gt;<br/>
+Object string representation: &lt;Car.Car object at 0x01080A30&gt;<br/>
+Object is destroyed
+		</div>
+</div>
+<br/><br/>
+<p>لعلك تتساءل الآن: ما الفرق بين الدالة <code data-enlighter-language="python">__repr__()</code> و <code data-enlighter-language="python">__str__()</code>  حيث أنك لم تلاحظ أي فرق بينهما في المثال السابق.<br/>
+	المثال التالي يوضح لك الفرق بينهما.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# 'Python Tutorial' هنا قمنا بإنشاء كائن نصي قيمته
+obj = 'Python Tutorial'
+
+# ستظهر قيمته كنص __repr__() لاحظ أن الدالة
+print('Object representation:       ', obj.__repr__())
+
+# ستظهر قيمته فقط __str__() بينما الدالة
+print('Object string representation:', obj.__str__())
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+Object representation:        'Python Tutorial'<br/>
+Object string representation: Python Tutorial
+		</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

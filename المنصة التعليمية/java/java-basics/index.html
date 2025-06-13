@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>أساسيات لغة جافا | Java basics</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>أساسيات لغة جافا</h1>
+<article>
+<h2>بناء برنامج بلغة جافا</h2>
+<p>يمكننا تعريف أي برنامج مكتوب بلغة جافا على أنه مجموعة من الكائنات مرتبطة مع بعضها البعض بشكل منطقي و متسلسل.</p>
+<p>في هذا الدرس سنعطيك فكرة عامة عن بعض المصطلحات الأساسية في لغة جافا مع الإشارة إلى أنك ستتعرف على كل مصطلح منهم بتفصيل في الدروس اللاحقة.<br/>
+	المصطلحات الأساسية في لغة جافا هي التالية.</p>
+<ul class="explain">
+<li><p>الكلاس ( <span class="word"><span class="word">Class</span></span> )</p></li>
+<li><p>الكائن ( <span class="word"><span class="word">Object</span></span> )</p></li>
+<li><p>الخصائص ( <span class="word"><span class="word">Instance variables</span></span> )</p></li>
+<li><p>الدوال ( <span class="word"><span class="word">Methods</span></span> )</p></li>
+</ul>
+</article>
+<article>
+<h2>مفهوم الكلاس</h2>
+<p>الكلاس عبارة عن حاوية كبيرة تستطيع أن تحتوي كل الكود من متغيرات و دوال و كائنات إلخ..</p>
+<a href="pic_1.png" target="_blank"><img src="pic_1.png"/></a><br/><br/><br/><br/>
+</article>
+<article>
+<h2>مفهوم الكائن</h2>
+<p>الكائن عبارة عن نسخة مطابقة لكلاس معين.</p>
+<p>بما أن الكائن عبارة عن نسخة من الكلاس, يمكننا القول أنه لا يمكن إنشاء كائن إذا لم يكن هناك كلاس.<br/>
+       إذاً في مفهوم برمجة الكائنات نقوم بإنشاء كلاس معين يسمونه <span class="word">blue print</span> أي (النسخة الخام أو النسخة الأصلية) , و بعدها ننشئ نسخة أو أكثر من هذا الكلاس و نفعل بها ما نريد بدون أن نغير محتويات الكلاس الأساسي و هكذا نكون حافظنا على كودات الكلاس الأساسي لأننا نعدل على النسخ و ليس عليه مباشرةً.</p>
+<p>الفكرة الأساسية في برمجة الكائنات أنك تقوم بتقسيم البرنامج الواحد إلى عدة كلاسات, و كل كلاس يتم برمجته لتنفيذ ناحية معينة في البرنامج.<br/>
+	بعد الإنتهاء من كل أقسام البرنامج الموجودة في عدة كلاسات, نقوم فقط بإنشاء نسخ منهم في المكان الذي نحتاجهم فيه. و بذلك نكون جمعنا كل الكلاسات التي كتبت بشكل منفصل و ربطناهم مع بعضهم و كأننا كتبناهم في كلاس واحد فقط.</p>
+<a href="pic_2.png" target="_blank"><img src="pic_2.png"/></a><br/>
+<p><span class="note">ملاحظة:</span> الكائن هو نسخة من الكلاس و ليس نسخة من الملف الذي يحتوي على الكلاس.<br/>
+	كما أن الكلاس الأساسي يتم إنشائه بدون إعطاء قيم لمتغيراته و سنرى في دروس لاحقة كيف أننا نغير قيم الكائنات و ليس قيم الكلاس الأصلي مباشرةً.</p>
+<p>لا تقلق ستفهم كل شيء في دروس لاحقة.</p>
+</article>
+<article>
+<h2>مفهوم الخصائص</h2>
+<p>كل كائن ننشئه من كلاس معين يملك نسخة خاصة به من المتغيرات الموجودة في هذا الكلاس. المتغيرات التي يتم إعطاء نسخة منها لكل كائن من الكلاس هي ما تسمى بالخصائص, مثال:</p>
+<p>إذا كان عندنا كلاس إسمه <span class="word">Harmash</span> يحتوي على متغيرين <span class="word">x</span> و <span class="word">y</span>, و أنشأنا منه كائنين, الكائن الأول إسمه <span class="word">A</span> و الثاني إسمه <span class="word">B</span>.<br/>
+	هنا سيكون كل كائن يحتوي نسخة خاصة من الأشياء الموجودة في الكلاس <span class="word">Harmash</span>.<br/>
+	سيملك الكائن <span class="word">A</span> نسخة خاصة به من المتغيرين <span class="word">x</span> و <span class="word">y</span> لا علاقة للكائن <span class="word">B</span> فيها.<br/>
+	و سيملك الكائن <span class="word">B</span> نسخة خاصة به من المتغيرين <span class="word">x</span> و <span class="word">y</span> لا علاقة للكائن <span class="word">A</span> فيها.</p>
+<a href="pic_3.png" target="_blank"><img src="pic_3.png"/></a><br/><br/><br/><br/>
+</article>
+<article>
+<h2>مفهوم الدوال</h2>
+<p>الدالة ( أو الميثود ) عبارة عن كود جاهز يتنفذ فقط عندما تقوم بإستدعائه.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public void welcome()
+{
+    System.out.print("welcome to www.harmash.com");
+}
+		</pre>
+</div>
+<br/>
+<p><span class="note">ملاحظة:</span> في البرامج الحقيقية لا يتم تعريف جميع الدوال في الكلاس الأساسي في المشروع و الذي يسمى <span class="word">Main Class</span>. بل يتم تعريفهم في كلاس ثاني أو أكثر من كلاس و عند الحاجة يتم إستدعاءهم. لا تقلق ستفهم كل شيء في دروس لاحقة.</p>
+</article>
+<article>
+<h2>أسلوب العمل كمبرمج في شركة أو مع مجموعة</h2>
+<p>في المشاريع الكبيرة يتم تقسيم البرنامج الواحد إلى عدة أقسام, كل مبرمج يكون مسؤول عن قسم معين في البرنامج.<br/>
+	الآن إليك ما يحدث, يقوم مدير المشروع بتقسيم العمل على المبرمجين, فيطلب من كل مبرمج أن ينشئ ملف جافا و ينشئ فيه كلاس و يضع فيه كوداته.<br/>
+	بعد إنهاء جميع أقسام البرنامج الموجودة في عدة كلاسات منفصلة - لأن كل مبرمج يعمل على ملف جافا خاص - يقوم مدير المشروع بتجميع أقسام البرنامج كلها.</p><br/>
+<p class="question">كيف يفعل ذلك ؟</p>
+<ol class="arabic">
+<li><p><span class="note">إنتبه:</span> لا يقوم المدير بتعديل الملفات التي أعطاه إياها المبرمجين.</p></li>
+<li><p>يقوم المدير بإنشاء مشروع جديد و إنشاء الكلاس الأساسي في المشروع, أي الـ <span class="word">Main Class</span>.</p></li>
+<li><p>ثم يقوم بانشاء كائنات من الكلاسات التي أنشأها المبرمجين بداخل هذا الكلاس, و هكذا يكون قد قام بجمعها كلها في مكان واحد, أي ربط جميع الكائنات مع بعضها.</p></li>
+</ol>
+<br/>
+<p>إذاً مهمة المدير هي فقط ربط الكائنات و دمجها مع بعضها بالشكل الصحيح للحصول على برنامج واحد.<br/>
+	و في حال أراد المدير إضافة شيء ما في قسم معين من البرنامج, فإنه يطلب من المبرمج الذي كتب ذلك القسم أن يضيف عليه كود جديد.<br/>
+	و يستطيع المدير الوصول إلى هذا الكود الجديد من خلال الكائنات.</p>
+<p>لا تقلق إذا لم تفهم كل شيء تم ذكره حتى الآن لأن الهدف الأساسي هو إعطاءك فكرة عامة. كما أنك ستتعلم طريقة بناء المشاريع من الصفر بعد أن تتعلم كل ما تحتاجه.</p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

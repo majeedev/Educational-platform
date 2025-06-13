@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>التجريد في بايثون | Python Abstract Base Classes</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>التجريد في بايثون</h1>
+<article>
+<h2>مفهوم التجريد في بايثون</h2>
+<p>التجريد <span class="inline">( <span class="word">Abstraction</span> )</span> أسلوب مهم جداً في البرمجة و يتم إعتماده بشكل عام لتسهيل كتابة الأوامر على المبرمج و تنظيم عمله, فهو يجعله قادراً على تنفيذ ما يريد دون الحاجة إلى معرفة كافة التفاصيل التي تم فيها ذلك, و بالتالي جعله يتعامل مع الأشياء بسطحية بدل أن يغوص في معرفة تفاصيل الكودات المعقدة.</p>
+<p>فمثلاً إذا كنت تنوي بناء تطبيق فيه واجهة مستخدم و هذا التطبيق يحتوي على زر معين, عند النقر على هذا الزر يتم إرسال رسالة إلكترونية إلى صاحب التطبيق. في هذه الحالة لن يكون عليك القلق بتاتاً حول الطريقة التي سيتم فيها ربط الكود الذي يسمح بإرسال الرسالة بالزر الموجود في واجهة المستخدم, لأن مطوري واجهة المستخدم يطلبوا منك تعريف دالة لها شكل معين و وضع الكود الخاص بإرسال الرسالة فيها, و من ثم تمرير هذه الدالة إلى الكائن الذي يمثل الزر  الذي يظهر في واجهة المستخدم. عندها سيتم تنفيذ الكود الموجود في الدالة في كل مرة يتم فيها النقر على الزر.</p>
+<p>إذاً التجريد هو أسلوب يقضي بتعريف دوال مجرّدة <span class="inline">( <span class="word">Abstract Methods</span> )</span> في الكلاس الأب و إجبار الكلاس الإبن على أن يفعل <span class="word">Override</span> لهذه الدوال بالشكل الذي يناسبه.<br/>
+	و بالتالي عندما تنشئ كلاس يرث من كلاس فيه دوال مجرّدة سيظهر أمامك تحذير ينبهك أنك يجب أن تفعل <span class="word">Override</span> لهذه الدوال حتى لا يظهر لك خطأ وقت التشغيل.</p>
+<br/>
+<h3>مصطلحات تقنية</h3>
+<ul class="explain">
+<li><p>الكلاس العادي يقال له <span class="inline"><span class="word">Concrete Class</span>.</span></p></li>
+<li><p>الكلاس المعرف ككلاس مجرّد يقال له <span class="inline"><span class="word">Abstract Class</span>.</span></p></li>
+<li><p>الدالة المعرفة كدالة مجرّدة يقال لها <span class="word">Abstract Method</span> أو <span class="inline"><span class="word">Function Method</span>.</span></p></li>
+</ul>
+</article>
+<article>
+<h2>تعريف <span class="word">Abstract Class</span> في بايثون</h2>
+<p>لتحويل الكلاس العادي إلى كلاس مجرّد, يجب جعل الكلاس يرث من كلاس إسمه <code data-enlighter-language="python">ABC</code> الموجود في الأساس في موديول جاهز إسمه <span class="inline"><code data-enlighter-language="python">abc</code>.</span><br/>
+<b>معلومة:</b> الكلاس <code data-enlighter-language="python">ABC</code> تم تسميته هكذاً إختصاراً لجملة <span class="inline">( <span class="word"><span class="red">A</span>bstract <span class="red">B</span>ase <span class="red">C</span>lasses</span> )</span> التي تعني الكلاس الأب لجميع الكلاسات المجرّدة.</p>
+<br/>
+<h3>نقاط مهمة حول الكلاس المجرّد</h3>
+<ul class="explain">
+<li><p>الكلاس المجرّد يمكنه أن يحتوي على دوال عادية, و يمكنه أن يحتوي على دوال نوعها <span class="inline"><span class="word">Abstract</span>.</span></p></li>
+<li><p>الكلاس المجرّد لا يمكن إنشاء كائنات منه في حال كان يحتوي على دوال نوعها <span class="inline"><span class="word">Abstract</span>.</span></p></li>
+<li><p>بما أنه لا يمكن إنشاء كائنات من الكلاس المجرّد في جميع الحالات, فهذا يعني أن الإستفادة الحقيقية من هذا الكلاس تكون بوراثته.</p></li>
+<li><p>الكلاس الذي يرث من كلاس مجرّد مجبر على أن يفعل <span class="word">Override</span> لجميع الدوال المعرفة فيه <span class="inline"><span class="word">Abstract</span>.</span></p></li>
+</ul>
+<br/><br/>
+<h3>تعريف كلاس مجرّد</h3>
+<p>في المثال التالي قمنا بتعريف كلاس مجرّد إسمه <code data-enlighter-language="python">ParentClass</code> يحتوي على دالة إسمها <span class="inline"><code data-enlighter-language="python">print_msg</code>.</span><br/>
+	بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="python">ChildClass</code> يرث من الكلاس <span class="inline"><code data-enlighter-language="python">ParentClass</code>.</span></p>
+<p><span class="note">ملاحظة:</span> الكلاس <code data-enlighter-language="python">ChildClass</code> غير مجبر على أن يفعل <span class="word">Override</span> للدالة <code data-enlighter-language="python">print_msg()</code> لأنها ليست معرفة كدالة مجرّدة.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">ParentClass.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه abc الموجود في الموديول ABC هنا قمنا بتضمين الكلاس
+from abc import ABC
+
+
+# حتى يصبح كلاس مجرّد ABC و جعلناه يرث من الكلاس ParentClass هنا قمنا بإنشاء كلاس إسمه
+class ParentClass(ABC):
+
+	# هنا قمنا بتعريف دالة عادية تطبع جملة عند إستدعاءها
+    def print_msg(self):
+        print('Normal method defined in an abstract class')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">ChildClass.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه ParentClass الموجود في الموديول ParentClass هنا قمنا بتضمين الكلاس
+from ParentClass import ParentClass
+
+
+# ParentClass يرث من الكلاس ChildClass هنا قمنا بإنشاء كلاس فارغ إسمه
+class ChildClass(ParentClass):
+	pass
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع إنشاء كائن منه ChildClass هنا قمنا بتضمين الكلاس
+from ChildClass import ChildClass
+
+
+# منه print_msg() بعدها قمنا باستدعاء الدالة .obj إسمه ChildClass هنا قمنا بإنشاء كائن من الكلاس
+obj = ChildClass()
+obj.print_msg()
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			Normal method defined in an abstract class
+		</div>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>في المثال السابق كنت تستطيع إنشاء كائن من الكلاس <code data-enlighter-language="python">ParentClass</code> لأنه لا يحتوي على دوال مجرّدة.<br/>
+		لكن كما سبق و قلنا أنه بشكل عام يتم إنشاء الكلاس المجرّد في الأساس حتى يتم وراثته و ليس من أجل إنشاء كائنات منه.</p>
+</div>
+</article>
+<article>
+<h2>تعريف <span class="word">Abstract Method</span> في بايثون</h2>
+<p>إذا كنت تريد بناء دالة فارغة و جعل الكلاس الذي يرثها مجبر و مسؤول عن كتابة محتواها, قم بوضع الكلمة <code data-enlighter-language="python">@abstractmethod</code> فوقها و فيها ضع الكلمة <code data-enlighter-language="python">pass</code> فقط.<br/>
+	و إذا كنت تريد بناء دالة و جعل الكلاس الذي يرثها مجبر على تعريفها من جديد مع إمكانية الإستفادة من الكود الموجودة فيها, قم بوضع الكلمة <code data-enlighter-language="python">@abstractmethod</code> فوقها فقط.</p>
+<br/>
+<h3>نقاط مهمة حول الدوال المجرّدة</h3>
+<ul class="explain">
+<li><p>إذا وضعت الكلمة <code data-enlighter-language="python">@abstractmethod</code> فوق الدالة, فهذا يعني أنها دالة مجرّدة و ليس دالة عادية.</p></li>
+<li><p>الكلاس الذي يرث من كلاس مجرّد, يجب أن يفعل <span class="word">Override</span> لكل الدوال المجرّدة التي ورثها منه.</p></li>
+</ul>
+<br/><br/>
+<h3>تعريف دوال مجرّدة</h3>
+<p>في المثال التالي قمنا بتعريف كلاس مجرّد إسمه <code data-enlighter-language="python">ParentClass</code> يحتوي على <span class="number">3</span> دوال كالتالي:</p>
+<ul class="explain">
+<li><p>دالة عادية إسمها <span class="inline"><code data-enlighter-language="python">m1</code>.</span></p></li>
+<li><p>دالة مجردة و فارغة إسمها <span class="inline"><code data-enlighter-language="python">m2</code>.</span></p></li>
+<li><p>دالة مجردة و فيها محتوى إسمها <span class="inline"><code data-enlighter-language="python">m3</code>.</span></p></li>
+</ul>
+<p>بعدها قمنا بإنشاء كلاس إسمه <code data-enlighter-language="python">ChildClass</code> يرث من الكلاس <span class="inline"><code data-enlighter-language="python">ParentClass</code>.</span></p>
+<p><span class="note">ملاحظة:</span> الكلاس <code data-enlighter-language="python">ChildClass</code> مجبر على أن يفعل <span class="word">Override</span> لكل دالة مجرّدة ورثها من الكلاس <span class="inline"><code data-enlighter-language="python">ParentClass</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">ParentClass.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع استخدامهما abc الموجودين في الموديول @abstractmethod و الكلمة ABC هنا قمنا بتضمين الكلاس
+from abc import ABC, abstractmethod
+
+
+# حتى يصبح كلاس مجرّد ABC و جعلناه يرث من الكلاس ParentClass هنا قمنا بإنشاء كلاس إسمه
+class ParentClass(ABC):
+
+	# m1 هنا قمنا بتعريف دالة عادية إسمها
+    def m1(self):
+		print('m1: Normal method defined by ParentClass')
+		
+	# m2 هنا قمنا بتعريف دالة مجردة و فارغة إسمها
+	@abstractmethod
+    def m2(self):
+		pass
+		
+	# m3 هنا قمنا بتعريف دالة مجردة و فيها أمر طباعة إسمها
+	@abstractmethod
+    def m3(self):
+		print('m3: Default content is written by ParentClass')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">ChildClass.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه ParentClass الموجود في الموديول ParentClass هنا قمنا بتضمين الكلاس
+from ParentClass import ParentClass
+
+
+# ParentClass يرث من الكلاس ChildClass هنا قمنا بإنشاء كلاس إسمه
+class ChildClass(ParentClass):
+	
+	# ParentClass لأن هذه الدالة كانت معرفة كدالة مجرّدة في الكلاس m2() للدالة Override هنا فعلنا
+    def m2(self):
+		print('m2: Its content is written by ChildClass')
+		
+	# ParentClass لأن هذه الدالة كانت معرفة كدالة مجرّدة في الكلاس m3() للدالة Override هنا فعلنا
+    def m3(self):
+		super().m3()      # و بعدها قمنا بإضافة أمر طباعة ParentClass الموجودة في الكلاس m3() لاحظ أننا قمنا باستدعاء الدالة
+		print('m3: ChildClass add his own code too')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع إنشاء كائن منه ChildClass هنا قمنا بتضمين الكلاس
+from ChildClass import ChildClass
+
+
+# obj إسمه ChildClass هنا قمنا بإنشاء كائن من الكلاس
+obj = ChildClass()
+
+# obj هنا قمنا باستدعاء الدوال الثلاثة الموجودة في الكائن
+obj.m1()
+obj.m2()
+obj.m3()
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			m1: Normal method defined by ParentClass<br/>
+			m2: Its content is written by ChildClass<br/>
+			m3: Default content is written by ParentClass<br/>
+			m3: ChildClass add his own code too
+		</div>
+</div>
+</article>
+<article>
+<h2>أمثلة تطبيقية على التجريد في بايثون</h2>
+<br/>
+<p>وضعنا هنا مثال بسيط حول <span class="word">Abstract Class</span> يرث من <span class="word">Abstract Class</span>.</p>
+<p><a class="open-page" href="abstract-class-inherit-from-another-abstract-class-example.html" target="_blank">شاهد المثال »</a></p>
+<br/>
+<p>وضعنا هنا مثال مهم يوضح لك متى يتم يفضل أن يتم إنشاء الكلاس <span class="inline">كـ <span class="word">Abstract Class</span>.</span></p>
+<p><a class="open-page" href="abstraction-important-example.html" target="_blank">شاهد المثال »</a></p>
+<br/>
+<p>سترى فائدة <span class="inline">الـ <span class="word">Abstraction</span></span> أيضاً في دروس متقدمة عندما تستخدم كلاسات جاهزة تتيح لك التعامل مع الشبكات <span class="inline">(<span class="word">Networks</span>)</span>, الواجهات <span class="inline">(<span class="word">GUI</span>)</span> و قواعد البيانات <span class="inline">(<span class="word">DataBases</span>)</span> بكل سهولة. كما أنك ستراها عندما تعمل على بناء مشاريع كبيرة, تجبرك على إستخدام هذا الأسلوب لتسهيل العمل في المشروع.</p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الـ modifiers في جافا | Java modifiers</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>الـ Modifiers في جافا</h1>
+<article>
+<h2>مفهوم الـ <span class="word">Modifiers</span></h2>
+<p>الـ <span class="word">Modifiers</span> هم كلمات يمكنك إضافتهم عند تعريف أشياء جديدة ( سواء كلاس, متغير, دالة إلخ.. ) لتحديد طريقة الوصول إليها.<br/>
+	ستحتاجهم في الغالب إن كنت تعمل في برنامج كبير ضمن فريق من المبرمجين.</p>
+<p>فإذا كنت تعمل على إنشاء برنامج معين ضمن فريق من المبرمجين, و تريد ضمان عدم إساءة إستخدام الأشياء التي قمت بتعريفها من قبل مبرمج آخر.<br/>
+	الـ <span class="word">Modifiers</span> سيساعدوك في ذلك, فباستخدامهم يمكنك تحديد الأشياء التي يمكن لباقي المبرمجين الوصول إليها و الأشياء التي تريد التأكد من عدم التعديل عليها إلخ..</p>
+<br/>
+<p>الـ <span class="word">Modifiers</span> ينقسمون إلى قسمين أساسيين:</p>
+<ul class="explain">
+<li><p><span class="word">Access Modifiers</span></p></li>
+<li><p><span class="word">Non Access Modifiers</span></p></li>
+</ul>
+<br/>
+<p>في المثال التالي قمنا باستخدام الكلمتين <code data-enlighter-language="java">public</code> و <code data-enlighter-language="java">private</code> اللتين تعتبران من الـ <span class="word">Access Modifiers</span>.<br/>
+	و قمنا باستخدام الكلمتين <code data-enlighter-language="java">final</code> و <code data-enlighter-language="java">static</code> اللتين تعتبران من الـ <span class="word">Non Access Modifiers</span>.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Student.java</span>
+<pre data-enlighter-language="java">
+public class Student {
+
+    private String  firstName;
+    private String  lastName;
+    private String  specialization;
+    private int     id;
+    private boolean isWork;
+    final   String  theAvgerageForSuccess = "50%";
+    static  String  CollegeName = "MIT";
+
+    public static void printFullName() {
+        System.out.println("Name: " +firstName+ " " +lastName);
+    }
+
+} 
+		</pre>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>في هذا الدرس سنعطيك معلومات عامة عن الـ <span class="word">Modifiers</span> و في الدروس القادمة سنستخدمهم دائماً لذلك يجب أن تفهمهم جيداً من الآن.<br/>
+		كما أننا سنتطرق قليلاً إلى الـ <span class="word">Encapsulation</span> و الـ <span class="word">Inheritance</span>, أي التغليف و الوراثة. لا تقلق إن لم تفهم أي شيء منهم الآن لأنك ستراهم في دروس لاحقة.</p>
+</div>
+</article>
+<article>
+<h2><span class="word">Access Modifiers</span></h2>
+<p>الجدول التالي يحتوي على الكلمات التي تنتمي للـ <span class="word">Access Modifiers</span>.</p>
+<table class="list full-width">
+<tr>
+<th>Modifier</th>
+<th>تعريفه</th>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">public</code></td>
+<td>الكلاس أو الدالة أو المتغير الذي يتم تعريفه كـ <code data-enlighter-language="java">public</code> يمكن الوصول إليه مباشرةً.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">protected</code></td>
+<td>الدالة أو المتغير الذي يتم تعريفه كـ <code data-enlighter-language="java">protected</code> يمكن الوصول إليه فقط من الكلاسات الموجودة في نفس الـ <span class="word">package</span> أو من الكلاسات التي ترث منه.<br/><br/>
+<span class="note">ملاحظة:</span><br/>
+			لا يمكنك تعريف كلاس كـ <code data-enlighter-language="java">protected</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>إذا لم تضع أي كلمة من الـ <span class="word">Access Modifiers</span> عند تعريف كلاس أو دالة أو متغير سيتم وضع <span class="word">Modifier</span> إفتراضي عنك يسمى <span class="word">package private</span>.	و هذا يعني أنه يمكن الوصول إليه فقط من الكلاسات الموجودة في نفس الـ <span class="word">package</span>.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">private</code></td>
+<td>الـ <code data-enlighter-language="java">private</code> هو أعلا مستوى من حيث الحماية. المتغيرات و الدوال التي يتم تعريفها كـ <code data-enlighter-language="java">private</code> يمكن الوصول لها فقط من داخل الكلاس الذي تم تعريفها فيه.<br/><br/>
+<span class="red">ملاحظات</span><br/>
+			لا يمكنك تعريف كلاس كـ <code data-enlighter-language="java">private</code>.<br/>
+			لا تقم بتعريف دالة كـ <code data-enlighter-language="java">private</code> إذا كان نوعها أيضاً <code data-enlighter-language="java">abstract</code> لأنك لن تستطيع أن تفعل لها <span class="word">override</span>.</td>
+</tr>
+</table>
+<br/>
+<p>الـ <span class="word">Access Modifiers</span> هم الأشياء الأساسية التي تسمح لك بتطبيق مبدأ الـ <span class="word">Encapsulation</span> الذي يمكنك من إخفاء البيانات الأساسية في الكود التي لا تريد لأحد من المبرمجين الآخرين أن يعرف بتفاصيلهم. ستتعلم مبدأ الـ <span class="word">Encapsulation</span> في الدرس التالي.</p><br/><br/>
+<h3>كتابة الكود بشكل مثالي</h3>
+<p>بشكل عام, الـ <span class="word">Modifier</span> الإفتراضي لا يستخدم في الغالب. و الـ <code data-enlighter-language="java">public</code> يستخدم مع الدوال التي تريد للجميع أن يصل إليها. الـ <code data-enlighter-language="java">private</code> هو للمتغيرات التي لا تريد للكائنات و الكلاسات التي ترث من الكلاس أن تصل إليها. الـ <code data-enlighter-language="java">protected</code> يستخدم من أجل الكلاسات المرتبطة بالكلاس الذي تعمل عليه ( فعلياً التي ترث منه ) فمن خلاله ستكون البيانات متاحة أمام الكلاسات المرتبطة بالكلاس و لكنها غير متاحة أمام أي كلاس آخر.</p><br/>
+<h3>الخطوات التي عليك اتباعها للتحكم بالكود و لحمايته من المبرمجين الآخرين</h3>
+<ul class="explain">
+<li><p>ضع <span class="word">Modifier</span> ملائم لكل عنصر تقوم بتعريفه, لحماية البيانات قدر المستطاع.</p></li>
+<li><p>المتغيرات التي تمثل الخصائص يجب أن لا تكون أبداً <code data-enlighter-language="java">public</code>. يجب وضعهم <code data-enlighter-language="java">private</code> أو <code data-enlighter-language="java">protected</code> لتمنع الكلاسات الأخرى من الوصول المباشر إليهم.</p></li>
+<li><p>يجب تجهيز دوال نوعها <code data-enlighter-language="java">public</code> للتعامل مع هذه الخصائص. الدوال التي نوعها <code data-enlighter-language="java">public</code> تسمح للمبرمجين ( أو الكلاسات الأخرى ) بالوصول إلى الخصائص. هذه الدوال تسمح لك بإخفاء المتغيرات بالإضافة إلى التحكم بالخصائص كما تريد.</p></li>
+</ul>
+<br/><br/>
+<h3>القواعد التالية تم فرضها بالنسبة للدوال التي يرثها كلاس من كلاس آخر</h3>
+<ul class="explain">
+<li><p>الدوال التي يتم تعريفها كـ <code data-enlighter-language="java">public</code> في الـ <span class="word">Superclass</span> تعتبر <code data-enlighter-language="java">public</code>  في جميع الـ <span class="word">Subclasses</span>.</p></li>
+<li><p>الدوال التي يتم تعريفها كـ <code data-enlighter-language="java">protected</code> في الـ <span class="word">Superclass</span> تعتبر <code data-enlighter-language="java">protected</code> أو <code data-enlighter-language="java">public</code> في جميع الـ <span class="word">Subclasses</span>.</p></li>
+<li><p>الدوال التي يتم تعريفها كـ <code data-enlighter-language="java">private</code>, لا يتم توريثها إلى أي كلاس كان, لذلك لا يوجد قواعد من أجلهم.</p></li>
+</ul>
+<br/><br/>
+<h3>مثال</h3>
+<p>في الصورة التالية قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">C1</code> يحتوي على المتغيرات <code data-enlighter-language="java">a</code>, <code data-enlighter-language="java">b</code>, <code data-enlighter-language="java">c</code>, <code data-enlighter-language="java">d</code> و وضعنا <span class="word">Access Modifier</span> لكل متغير.<br/>
+	ثم قمنا بإنشاء الكلاسات <code data-enlighter-language="java">C2</code> و <code data-enlighter-language="java">C3</code> في نفس الـ <span class="word">package</span> و التي إسمها <code data-enlighter-language="java">p1</code>.<br/>
+	ثم قمنا بإنشاء الكلاسات <code data-enlighter-language="java">C4</code> و <code data-enlighter-language="java">C5</code> في <span class="word">package</span> ثانية إسمها <code data-enlighter-language="java">p2</code>.<br/>
+	و في كل كلاس حاولنا الوصول لجميع العناصر الموجودة في الكلاس <code data-enlighter-language="java">C1</code>.</p>
+<br/>
+<p><a href="pic_1.png" target="_blank"><img src="pic_1.png"/></a></p>
+</article>
+<article>
+<h2><span class="word">Non Access Modifiers</span></h2>
+<p>جميع الكلمات التي تنتمي إلى الـ <span class="word">Non Access Modifiers</span> هي التالية:</p>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">static</code>.</p></li>
+<li><p><code data-enlighter-language="java">final</code>.</p></li>
+<li><p><code data-enlighter-language="java">abstract</code>.</p></li>
+<li><p><code data-enlighter-language="java">synchronized</code>.</p></li>
+<li><p><code data-enlighter-language="java">native</code>.</p></li>
+<li><p><code data-enlighter-language="java">transient</code>.</p></li>
+<li><p><code data-enlighter-language="java">volatile</code>.</p></li>
+<li><p><code data-enlighter-language="java">strictfp</code>.</p></li>
+</ul>
+<br/>
+<p>الجدول التالي يحتوي على الـ <span class="word">Non Access Modifiers</span> الأكثر إستخداماً, مع العلم أننا سنشرح باقي الكلمات في دروس متقدمة.</p>
+<table class="list full-width">
+<tr>
+<th>Modifier</th>
+<th>تعريفه</th>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">static</code></td>
+<td>يستخدم لتعريف كلاس أو متغير أو دالة مشتركة بين جميع الكائنات من كلاس معين.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">final</code></td>
+<td>يستخدم لمنع الوراثة من الكلاس, أو لمنع كتابة محتوى الدالة ( أو تعديلها ) في الكلاس الذي يرثها, أو لجعل قيمة المتغير غير قابلة للتغير بعد تحديدها.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="java">abstract</code></td>
+<td>يستخدم لإنشاء كلاس أو دالة مجردة ( أي دالة لا تحتوي على كود ), الهدف من هذا الـ <span class="word">Modifier</span> تجهيز كلاس معين و جعل الكلاسات التي ترث من هذا الكلاس هي من تقوم بتعريف الأشياء الموجودة بداخله.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>الكلمة <code data-enlighter-language="java">static</code></h2>
+<p class="question">ما الحاجة إلى تعريف شيء كـ <code data-enlighter-language="java">static</code>؟</p>
+<ul class="explain">
+<li><p>إن أردت تعريف شيء ثابت لجميع الكائنات, قم بتعريفه كـ <code data-enlighter-language="java">static</code>.</p></li>
+<li><p>إن أردت تعريف شيء بداخل كلاس معين, و تريد الوصول إليه مباشرةً من الكلاس بدل إنشاء كائن من الكلاس ثم استدعاء الشيء منه, قم بتعريفه كـ <code data-enlighter-language="java">static</code>.</p></li>
+</ul>
+<br/>
+<h3>المتغيرات التي يتم تعريفها كـ <code data-enlighter-language="java">static</code></h3>
+<p>المتغير الذي يتم تعريفه كـ <code data-enlighter-language="java">static</code> يعتبر مشترك بين جميع الكائنات من نفس الكلاس. بمعنى أن كل كائن يتم إنشاءه من نفس الكلاس سيملك نفس هذا المتغير.<br/>
+	فعلياً المتغير هنا سيتم تعريفه مرة واحدة في الذاكرة و جميع الكائنات من نفس الكلاس ستشير إليه بدل أن تملك نسخة خاصة منه. إذاً <code data-enlighter-language="java">static</code> تعني نسخة واحدة من المتغير لجميع الكائنات.</p>
+<p>المتغير الذي يتم تعريفه كـ <code data-enlighter-language="java">static</code> يسمى أيضاً <span class="word">Class Variable</span>. لا يمكن تعريف الـ <span class="word">Local Variables</span> كـ <code data-enlighter-language="java">static</code>.</p>
+<p>يمكن الوصول للمتغير الذي تم تعريفه كـ <code data-enlighter-language="java">static</code> بذكر إسم الكلاس الذي تم تعريفه فيه ثم وضع إسمه, أو من أي كائن من الكلاس.</p><br/>
+<h3>الدوال التي يتم تعريفها كـ <code data-enlighter-language="java">static</code></h3>
+<p>الدالة دائماً يتم تعريفها مرة واحدة في الذاكرة و جميع الكائنات من نفس الكلاس ستشير إليها. لكن الكلمة <code data-enlighter-language="java">static</code> تمكنك من الوصول إليها مباشرةً من الكلاس دون الحاجة لخلق كائن و استدعائها من خلاله.</p>
+<p>الدالة التي نوعها <code data-enlighter-language="java">static</code> يمكنها الوصول للمتغيرات المعرفة في الكلاس بشرط أن تكون هذه المتغيرات أيضاً <code data-enlighter-language="java">static</code>. لكن بشكل عام الدوال التي نوعها <code data-enlighter-language="java">static</code> لا تستخدم المتغيرات الموجودة في الكلاس, بل تستخدم المتغيرات التي يتم تعريفها كباراميترات لها أو المتغيرات التي يتم تعريفها بداخلها.</p>
+<p>يمكن الوصول للدالة التي تم تعريفها كـ <code data-enlighter-language="java">static</code> بذكر إسم الكلاس الذي تم تعريفها فيه ثم وضع إسمه, أو من أي كائن من الكلاس.</p><br/>
+<h3>أمثلة</h3>
+<ul class="explain">
+<li><p>المثال التالي يوضح تأثير الكلمة <code data-enlighter-language="java">static</code> على المتغيرات و الدوال <a class="open-page" href="non-access-modifier-static-example.html" target="_blank">شاهد المثال »</a></p></li>
+<li><p>المثال التالي يعطيك أفكار حول فائدة استعمال الكلمة <code data-enlighter-language="java">static</code> <a class="open-page" href="non-access-modifier-static-practical-example.html" target="_blank">شاهد المثال »</a></p></li>
+</ul>
+</article>
+<article>
+<h2>الكلمة <code data-enlighter-language="java">final</code></h2>
+<p class="question">ما الحاجة إلى تعريف شيء كـ <code data-enlighter-language="java">final</code>؟</p>
+<ul class="explain">
+<li><p>في حال أردت إنشاء متغير يمكن تحديد قيمته مرة واحدة فقط.</p></li>
+<li><p>في حال أردت إنشاء دالة لا يمكن تعريفها من جديد في الكلاس الذي يرثها ( أي لمنع الـ <span class="word">override</span> ).</p></li>
+<li><p>في حال أردت إنشاء كلاس لا يمكن الوراثة منه.</p></li>
+</ul>
+<br/><br/>
+<h3>المتغيرات التي يتم تعريفها كـ <code data-enlighter-language="java">final</code></h3>
+<p>المتغير الذي يتم تعريفه كـ <code data-enlighter-language="java">final</code> يعني أنه بمجرد إعطاءه قيمة, لا يمكن تغييرها من جديد.<br/>
+	عند إنشاء متغير نوعه <code data-enlighter-language="java">final</code> يجب تحديد قيمته مرة واحدة فقط إما عند تعريفه أو في الكونستركتور.</p><br/><br/>
+<h3>المتغيرات التي يتم تعريفها كـ <code data-enlighter-language="java">final static</code></h3>
+<p>يمكن تعريف المتغير كـ <code data-enlighter-language="java">final</code> و <code data-enlighter-language="java">static</code> مع بعض, و عندها يمكن الوصول للمتغير من الكلاس مباشرةً أو من أي كائن من الكلاس, مع عدم إمكانية تغيير قيمته بعد تحديدها.<br/>
+	الـ <code data-enlighter-language="java">Math.PI</code> و الـ <code data-enlighter-language="java">Math.E</code> هم من المتغيرات المعرفة كـ <code data-enlighter-language="java">final static</code> في جافا, يمكنك استخدامهم كما هم لكن لا يمكنك تغيير قيمهم.</p>
+<br/><br/>
+<h3>الدوال التي يتم تعريفها كـ <code data-enlighter-language="java">final</code></h3>
+<p>الدالة التي يتم تعريفها كـ <code data-enlighter-language="java">final</code> يعني أنه لا يمكن أن يتم تعريف محتواها في أي كلاس آخر. أي الكلاس الذي يرثها لا يسمح له بأن يفعل لها <span class="word">override</span>.</p>
+<br/><br/>
+<h3>الكلاسات التي يتم تعريفها كـ <code data-enlighter-language="java">final</code></h3>
+<p>الكلاس الذي يتم تعريفه كـ <code data-enlighter-language="java">final</code> يعني أنه لا يمكن الوراثة منه.<br/>
+	فمثلاً تم تعريف الكلاس <code data-enlighter-language="java">Math</code> في جافا كـ <code data-enlighter-language="java">final static</code> حتى يكون متاح للإستخدام من أي مكان, مع عدم القدرة على تعديل الأشياء التي تم تعريفها بداخله.</p>
+<br/>
+<h3>أمثلة</h3>
+<ul class="explain">
+<li><p>هنا وضعنا أمثلة شاملة حول أماكن وضع الكلمة <code data-enlighter-language="java">final</code> <a class="open-page" href="non-access-modifier-final-examples.html" target="_blank">شاهد الأمثلة »</a></p></li>
+<li><p>هنا وضعنا مثال مهم يعطيك أفكار حول فائدة استعمال الكلمة <code data-enlighter-language="java">final</code> <a class="open-page" href="non-access-modifier-final-practical-example.html" target="_blank">شاهد المثال »</a></p></li>
+</ul>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

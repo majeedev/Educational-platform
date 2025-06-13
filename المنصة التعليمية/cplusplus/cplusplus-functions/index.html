@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الدوال في سي بلاس بلاس | C++ Functions</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../cplusplus-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../cplusplus-overview/index.html"><span class="en">++C</span> - نظرة عامة</a></li>
+<li><a href="../cplusplus-environment-setup/index.html"><span class="en">++C</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../cplusplus-basic-syntax/index.html"><span class="en">++C</span> - أسلوب الكتابة</a></li>
+<li><a href="../cplusplus-cout/index.html"><span class="en">++C</span> - أمر الطباعة   &lt;&lt; cout</a></li>
+<li><a href="../cplusplus-data-types/index.html"><span class="en">++C</span> - أنواع البيانات</a></li>
+<li><a href="../cplusplus-variables/index.html"><span class="en">++C</span> - المتغيرات</a></li>
+<li><a href="../cplusplus-operators/index.html"><span class="en">++C</span> - العوامل</a></li>
+<li><a href="../cplusplus-conditions/index.html"><span class="en">++C</span> - الشروط</a></li>
+<li><a href="../cplusplus-loops/index.html"><span class="en">++C</span> - الحلقات</a></li>
+<li><a href="../cplusplus-numbers/index.html"><span class="en">++C</span> - الأعداد</a></li>
+<li><a href="../cplusplus-strings/index.html"><span class="en">++C</span> - النصوص</a></li>
+<li><a href="../cplusplus-arrays/index.html"><span class="en">++C</span> - المصفوفات</a></li>
+<li><a href="../cplusplus-user-input/index.html"><span class="en">++C</span> - إدخال البيانات</a></li>
+<li><a href="index.html"><span class="en">++C</span> - الدوال</a></li>
+<li><a href="../cplusplus-references/index.html"><span class="en">++C</span> - المراجع</a></li>
+<li><a href="../cplusplus-pointers/index.html"><span class="en">++C</span> - المؤشرات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../cplusplus-oop/index.html"><span class="en">++C</span> - مفهوم البرمجة كائنية التوجه</a></li>
+<li><a href="../cplusplus-struct/index.html"><span class="en">++C</span> - النوع <span class="en">struct</span></a></li>
+<li><a href="../cplusplus-class/index.html"><span class="en">++C</span> - النوع <span class="en">class</span></a></li>
+<li><a href="../cplusplus-encapsulation/index.html"><span class="en">++Encapsulation - C</span></a></li>
+<li><a href="../cplusplus-inheritance/index.html"><span class="en">++Inheritance - C</span></a></li>
+<li><a href="../cplusplus-overriding/index.html"><span class="en">++Overriding - C</span></a></li>
+<li><a href="../cplusplus-overloading/index.html"><span class="en">++Overloading - C</span></a></li>
+<li><a href="../cplusplus-polymorphism/index.html"><span class="en">++Polymorphism - C</span></a></li>
+<li><a href="../cplusplus-constants/index.html"><span class="en">++C</span> - الثوابت</a></li>
+<li><a href="../cplusplus-enum/index.html"><span class="en">++C</span> - النوع <span class="en">enum</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../cplusplus-exceptions/index.html"><span class="en">++C</span> - الإستثناءات</a></li>
+<!--
+
+<li><a href="../cplusplus-lambda-expressions"><span class="en">Lambda Expressions - ++C</span></a></li>
+<li><a href="../cplusplus-files-io"><span class="en">++C</span> - التعامل مع الملفات</a></li>
+<li><a href="../cplusplus-data-structure"><span class="en">Data Structure - ++C</span></a></li>
+<li><a href="../cplusplus-collection"><span class="en">Collection - ++C</span></a></li>
+<li><a href="../cplusplus-generics"><span class="en">Generics - ++C</span></a></li>
+<li><a href="../cplusplus-networking"><span class="en">++C</span> - الشبكات</a></li>
+<li><a href="../cplusplus-multithreading"><span class="en">++C</span> - تعدد المهام</a></li>
+<li><a href="../cplusplus-jdbc"><span class="en">++C</span> - قواعد البيانات</a></li>
+<li><a href="../cplusplus-serialization"><span class="en">++C</span> - المزامنة</a></li>
+
+
+<li><a href="../cplusplus-date-and-time"><span class="en">++C</span> - التاريخ و الوقت</a></li>
+<li><a href="../cplusplus-regular-expressions"><span class="en">++C</span> - التعابير النمطية</a></li>
+
+<li><a href="../cplusplus-next-step"><span class="en">++C</span> - ما هي خطوتي التالية ؟</a></li>
+-->
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">C++</span>الدوال</h1>
+<article>
+<h2>مفهوم الدوال في <span class="word">C++</span></h2>
+<p>الدالة <span class="inline">( <span class="word">Function</span> )</span> عبارة عن مجموعة أوامر مجمعة في مكان واحد و تتنفذ عندما نقوم باستدعائها.<br/>
+	في الدروس السابقة تعرفنا على الكثير من العديد من الدوال الجاهزة في <span class="word">C++</span> و التي تستخدم للتعامل مع النصوص و الأرقام.</p>
+<p>في هذا الدرس سنتعلم كيفية إنشاء دوال جديدة و كيفية استخدامها.</p>
+<br/>
+<p class="b">أمثلة حول الدوال الجاهزة</p>
+<p>أسماء بعض الدوال التي قمنا باستخدامها في الدروس السابقة.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+length();
+insert();
+replace();
+fmax();
+floor();
+	</pre>
+<br/>
+<h3>مصطلحات تقنية</h3>
+<p>الدوال الجاهزة في <span class="word">C++</span> يقال لها <span class="inline"><span class="word">Built-in Functions</span>.</span><br/>
+	الدوال التي يقوم المبرمج بتعريفها يقال لها <span class="inline"><span class="word">User-defined Functions</span>.</span></p>
+</article>
+<article>
+<h2>بناء الدوال في <span class="word">C++</span></h2>
+<p>عند تعريف أي دالة في <span class="word">C++</span> عليك إتباع الشكل التالي:</p>
+<div class="code-box">
+<div>
+<span class="blue">returnType</span> <b><i>functionName</i></b>(<span class="red">Parameter List</span>)<br/>
+			{<br/>
+		        <span class="green i">// Function Body</span><br/>
+			}
+	    </div>
+</div>
+<p><span class="point">•</span> <span class="code blue">returnType</span>: يحدد النوع الذي سترجعه الدالة عندما تنتهي أو إذا كانت لن ترجع أي قيمة.<br/>
+<span class="point">•</span> <span class="code black i">functionName</span>: يمثل الإسم الذي نعطيه للدالة, و الذي من خلاله يمكننا استدعاءها.<br/>
+<span class="point">•</span> <span class="code red">Parameter List</span>: المقصود بها الباراميترات ( وضع الباراميترات إختياري ).<br/>
+<span class="point">•</span> <span class="code green i">Function Body</span>: تعني جسم الدالة, و المقصود بها الأوامر التي نضعها في الدالة.</p>
+<br/>
+<p>نوع الإرجاع <span class="inline">( <span class="code blue">returnType</span> )</span> في الدالة يمكن أن يكون أي نوع من أنواع البيانات الموجودة في <span class="word">C++</span> <span class="inline">( <code data-enlighter-language="cpp">int</code> - <code data-enlighter-language="cpp">double</code> - <code data-enlighter-language="cpp">bool</code> - <code data-enlighter-language="cpp">string</code> إلخ.. ).</span><br/>
+	و يمكن وضع إسم لكلاس معين, و هنا يكون القصد أن الدالة ترجع كائن من هذا الكلاس <span class="inline">( لا تقلق ستتعلم هذا في دروس لاحقة ).</span></p>
+<p>في حال كانت الدالة لا ترجع أي قيمة, يجب وضع الكلمة <code data-enlighter-language="cpp">void</code> مكان الكلمة <span class="inline"><span class="code blue">returnType</span>.</span></p>
+</article>
+<article>
+<h2>أمثلة حول تعريف دوال جديدة في <span class="word">C++</span></h2>
+<p>في المثال التالي قمنا بتعريف دالة إسمها <span class="inline"><code class="word">myFunction</code>,</span> نوعها <span class="inline"><code data-enlighter-language="cpp">void</code>,</span> و تحتوي على أمر طباعة فقط.<br/>
+	بعدها قمنا باستدعائها في الدالة <code data-enlighter-language="cpp">main()</code> حتى يتم تنفيذ أمر الطباعة الموضوع فيها.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title cpp-file-icon">Main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// عند استدعاءها تقوم بطباعة جملة myFunction هنا قمنا بتعريف دالة إسمها
+void myFunction() {
+    cout &lt;&lt; "My first function is called";
+}
+
+int main()
+{
+	// حتى يتنفذ الأمر الموضوع فيها myFunction() هنا قمنا باستدعاء الدالة
+    myFunction();
+
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+My first function is called
+		</pre>
+</div>
+<br/>
+<p>هنا قمنا بتعريف دالة إسمها <span class="inline"><code>greeting</code>,</span> عند إستدعاءها نمرر لها إسم فتطبع رسالة ترحيب للإسم الذي تم تمريره لها.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title cpp-file-icon">Main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// عند استدعاءها تقوم بطباعة جملة greeting هنا قمنا بتعريف دالة إسمها
+void greeting(string name)
+{
+    cout &lt;&lt; "Hello " &lt;&lt; name &lt;&lt; ", welcome to our company.";
+}
+
+int main()
+{
+	// حتى يتنفذ الأمر الموضوع فيها greeting() هنا قمنا باستدعاء الدالة
+    greeting("Mhamad");
+
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Hello Mhamad, welcome to our company.
+		</pre>
+</div>
+<br/>
+<p>هنا قمنا بتعريف دالة إسمها <span class="inline"><code>getSum</code>,</span> عند إستدعاءها نمرر لها عددين فترجع لنا ناتج جمعهما.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title cpp-file-icon">Main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// عند إستدعاءها نمرر لها عددين فتقوم بإرجاع ناتج جمعهما get_sum هنا قمنا بتعريف دالة إسمها
+int getSum(int a, int b)
+{
+    return a + b;
+}
+
+int main()
+{
+	// x في المتغير get_sum() هنا قمنا بتخزين ناتج العددين 3 و 5 الذي سترجعه الدالة
+    int result = getSum(3, 7);
+	
+	// و التي ستساوي 10 result هنا قمنا بعرض قيمة المتغير
+	cout &lt;&lt; "Result = " &lt;&lt; result;
+	
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Result = 10
+		</pre>
+</div>
+</article>
+<article>
+<h2>إعطاء قيمة إفتراضية للباراميترات في <span class="word">C++</span></h2>
+<p><span class="word">C++</span> تتيح لك وضع قيم إفتراضية للباراميترات مما يجعلك عند إستدعاء الدالة مخيّر على تمرير قيم مكان الباراميترات بدل أن تكون مجبراً على ذلك.</p>
+<br/>
+<h3>مصطلحات تقنية</h3>
+<p>القيمة الإفتراضية التي نضعها للباراميتر يقال لها <span class="inline"><span class="word">Default Argument</span>.</span></p>
+<br/>
+<p>في المثال التالي قمنا بتعريف دالة إسمها <span class="inline"><code data-enlighter-language="cpp">printLanguage</code>.</span><br/>
+	هذه الدالة فيها باراميتر واحد إسمه <code data-enlighter-language="cpp">language</code> يملك النص <code data-enlighter-language="cpp">"English"</code> كقيمة إفتراضية.<br/>
+	كل ما تفعله هذه الدالة عند إستدعاءها هو طباعة قيمة الباراميتر <span class="inline"><code data-enlighter-language="cpp">language</code>.</span></p>
+<p><span class="note">ملاحظة:</span> بما أن الباراميتر <code data-enlighter-language="cpp">language</code> يملك قيمة بشكل إفتراضية, فهذا يعني أنك لم تعد مجبر على تمرير قيمة له عند إستدعاء الدالة لأنه أصلاً يملك قيمة.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">Test.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// و يمكنك عدم تمرير قيمة لأنه أصلاً يملك قيمة language عند إستدعاءها يمكنك تمرير قيمة لها مكان الباراميتر .printLanguage هنا قمنا بتعريف دالة إسمها 
+void printLanguage(string language="English")
+{
+    cout &lt;&lt; "Your language is " &lt;&lt; language &lt;&lt; endl;
+}
+
+int main()
+{
+	// "English" و بالتالي ستظل قيمته language بدون تمرير قيمة مكان الباراميتر printLanguage() هنا قمنا باستدعاء الدالة
+    printLanguage();
+	
+	// "Arabic" و بالتالي ستصبح قيمته language للباراميتر 'Arabic' مع تمرير القيمة printLanguage() هنا قمنا باستدعاء الدالة
+	printLanguage("Arabic");
+	
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Your language is English
+Your language is Arabic
+		</pre>
+</div>
+<br/>
+<h3 class="note-title">إنتبه</h3>
+<div class="note-box">
+<p>إذا كانت الدالة تملك أكثر من باراميتر و تريد وضع قيمة إفتراضية لأحد الباراميترات التي تمكلها فقط فيجب وضع الباراميترات التي تملك قيم إفتراضية في الآخر.<br/>
+		إن لم ترد ذلك ستكون مجبر على وضع قيم إفتراضية لجميع الباراميترات الموجودة بعد أول باراميتر وضعت له قيمة إفتراضية.</p>
+</div>
+<br/>
+<p>هنا وضعنا لك عدة أمثلة حول الأخطاء التي قد تقع فيها عند وضع قيم إفتراضية حتى تتعلم كيف تتجنبها.</p>
+<p><a class="open-page" href="possible-errors.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<article>
+<h2>أين يجب تعريف الدوال في <span class="word">C++</span></h2>
+<p>مترجم لغة <span class="word">C++</span> يقرأ الكود سطراً سطراً مع تنفيذ الأوامر الموضوعة في كل سطر بشكل مباشر عندما يتم تشغيل البرنامج.<br/>
+	لهذا السبب يجب دائماً أن تكون الدالة التي تريد استدعاءها معرّفة سابقاً حتى لا يظهر لك مشكلة عند تشغيل البرنامج.</p>
+<br/>
+<p>في المثال التالي, قمنا بوضع الدالة <code>myFunction()</code> بعد الدالة التي قمنا باستدعائها منها.<br/>
+	المشكلة التي ستحدث عند التشغيل هنا سببها أن المترجم سيكون لا يعرف ما هي <code>myFunction()</code> حيث أنه تم استدعاءها قبل أن يقوم المترجم قد سبق و قرأها.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title cpp-file-icon">Main.cpp</span>
+<pre data-enlighter-highlight="8" data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	// myFunction() هنا قمنا باستدعاء الدالة
+    myFunction();
+
+    return 0;
+}
+
+// التي تحتوي على أمر طباعة فقط myFunction هنا قمنا بتعريف الدالة
+void myFunction()
+{
+    cout &lt;&lt; "My first function is called";
+}
+		</pre>
+<p><span class="point">•</span>سيظهر الخطأ التالي عند التشغيل و الذي يعني أن المترجم لم يعرف ما هي <code>myFunction</code> التي تحاول استدعاءها في السطر الثامن.</p>
+<div class="code-box">
+<span class="red">main.cpp|8|error: 'myFunction' was not declared in this scope|</span>
+</div>
+</div>
+<br/><br/>
+<h3>حل مشكلة عدم التعرف على الدالة</h3>
+<p>لحل مشكلة عدم التعرف على الدالة التي حدثت في المثال السابق عندنا خيارين:</p>
+<ul class="explain">
+<li><p>إبقاء الدالة <code>myFunction()</code> مكانها و ذكر تعريفها <span class="inline">( <span class="word">Function Declartion</span> )</span> في أول الملف فقط, و هذه الطريقة تعتبر الأكثر تفضيلاّ.</p></li>
+<li><p>وضع الدالة <code>myFunction()</code> فوق الدالة <code>main()</code> حتى يقوم المترجم بقرائها و التعرف عليها و تصبح قادر على استدعاءها في الدالة <code>main()</code> الموجودة بعدها.</p></li>
+</ul>
+<br/><br/>
+<p>في المثال التالي, قمنا بإبقاء الدالة <code>myFunction()</code> مكانها و ذكر تعريفها <span class="inline">( <span class="word">Function Declartion</span> )</span> قبل أن يتم استدعاءها في الدالة <span class="inline"><code>main()</code>.</span><br/>
+	إذاً لن يحدث أي مشكلة عند استدعاء الدالة <code>myFunction()</code> من الدالة <code>main()</code> لأن المترجم سيكون لديه علم بأن الدالة <code>myFunction()</code> موجودة فعلاً.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title cpp-file-icon">Main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// حتى يقوم المترجم بالتعرف عليها و نصبح قادرين على استخدامها myFunction الدالة ( Declartion ) هنا قمنا بوضع تعريف
+void myFunction();
+
+int main()
+{
+	// myFunction() هنا قمنا باستدعاء الدالة
+    myFunction();
+
+    return 0;
+}
+
+// أو بمعنى آخر تعريف ما سيحدث عندما يتم استدعاءها ,myFunction الدالة ( body ) هنا قمنا بتعريف جسم
+void myFunction()
+{
+    cout &lt;&lt; "My first function is called";
+}
+		</pre>
+<p><span class="point">•</span>في الدالة <code>main()</code> سيتم استدعاء و تتنفذ الدالة <code>myFunction()</code> بدون أي مشاكل و سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+My first function is called
+		</pre>
+</div>
+<br/>
+<h3>نصيحة</h3>
+<p>الأفضل دائماً وضع تعريفات الدوال <span class="inline">( <span class="word">Functions Declartions</span> )</span> قبل الدالة <code>main()</code> و تعريف محتوى هذه الدوال بعدها كالتالي لأن قراءة الكود ستصبح أسهل بالنسبة لك.</p>
+<br/>
+<p>المثال التالي يريك فقط كيف تقوم بترتيب الكود إذا كنت تنوي تعريف العديد من الدوال في الملف.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// نقوم بذكر تعريف جميع الدوال التي سنقوم بإنشائها لاحقاً main() قبل الدالة
+void printMessage();
+void greeting(string name);
+
+// و فيها يمكننا استدعاء أي دالة قمنا بذكر تعريفها سابقاً بدون أي مشاكل main() هنا نقوم بتعريف الدالة
+int main()
+{
+	// greeting() و printMessage() هنا يمكننا استدعاء
+    return 0;
+}
+
+// لأنه قمنا بذكر أنها موجودة من قبل printMessage() هنا نقوم بتعريف الدالة
+void printMessage()
+{
+   // هنا نكتب ما سيحدث عند استدعاءها	
+}
+
+// لأنه قمنا بذكر أنها موجودة من قبل greeting() هنا نقوم بتعريف الدالة
+void greeting(string name)
+{
+   // هنا نكتب ما سيحدث عند استدعاءها	
+}
+		</pre>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

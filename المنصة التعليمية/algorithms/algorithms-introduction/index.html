@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="شرح تفصيلي لمبادئ التحليل في البرمجة مع أمثلة شاملة يمكن تجربتها على الكمبيوتر" name="description"/>
+<meta content="algorithm, learning algorithm for arabs, learning algorithm in arabic, مبادئ التحليل في البرمجة, كيف أفكر حتى أكتب كود صحيح, ما هي أقوى لغة برمجة, أفضل موقع لتعلم الخوارزميات, تعلم الخوارزميات من الصفر حتى الإحتراف, دورة تعليم الخوارزميات, أفضل موقع لتعلم الخوارزميات, أسئلة في مادة الخوارزميات مع تفسيرها" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>تعلم الخوارزميات</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../algo-icon.png"/></li>
+<li class="title">دروس تمهيدية</li>
+<li><a href="index.html">مفهوم الخوارزميات</a></li>
+<li><a href="../algorithms-environment-setup/index.html">تجهيز بيئة العمل</a></li>
+<li><a href="../algorithms-the-print-method/index.html">دالة الطباعة <span class="en">Print</span></a></li>
+<li><a href="../algorithms-concatenation/index.html">الدمج أثناء الطباعة</a></li>
+<li><a href="../algorithms-variables/index.html">المتغيرات</a></li>
+<li class="title">الحلقات و الشروط</li>
+<li><a href="../algorithms-loops/index.html">الحلقات و أنواعها</a></li>
+<li><a href="../algorithms-for-loop/index.html">الحلقة <span class="en">For</span></a></li>
+<li><a href="../algorithms-while-and-do-while-loops/index.html">الحلقتين <span class="en">While</span> و <span class="en">Do While</span></a></li>
+<li><a href="../algorithms-setting-conditions/index.html">جمل الشرط</a></li>
+<li><a href="../algorithms-operators/index.html">العوامل</a></li>
+<li><a href="../algorithms-nested-loops/index.html">الحلقات المتداخلة</a></li>
+<li class="title">إدخال بيانات من المستخدم</li>
+<li><a href="../algorithms-the-read-method/index.html">دالة الإدخال <span class="en">Read</span></a></li>
+<li><a href="../algorithms-calculate-the-factorial/index.html">حساب قيمة الـ <span class="en">Factorial</span> للعدد</a></li>
+<li><a href="../algorithms-calculate-the-power/index.html">حساب قيمة الـ <span class="en">Power</span> للعدد</a></li>
+<li class="title">المصفوفات</li>
+<li><a href="../algorithms-arrays-types/index.html">المصفوفات و أنواعها</a></li>
+<li><a href="../algorithms-one-dimensional-arrays/index.html">تعريف مصفوفة ذات بعد واحد</a></li>
+<li><a href="../algorithms-one-dimensional-arrays-length/index.html">حجم المصفوفة ذات البعد الواحد</a></li>
+<li><a href="../algorithms-working-with-one-dimensional-arrays/index.html">التعامل مع مصفوفة ذات بعد واحد</a></li>
+<li><a href="../algorithms-two-dimensional-arrays/index.html">تعريف مصفوفة ذات بعدين</a></li>
+<li><a href="../algorithms-two-dimensional-arrays-length/index.html">حجم المصفوفة ذات البعدين</a></li>
+<li><a href="../algorithms-working-with-two-dimensional-arrays/index.html">التعامل مع مصفوفة ذات بعدين</a></li>
+<li class="title">الدوال</li>
+<li><a href="../algorithms-methods/index.html">تعريف دوال جديدة</a></li>
+<li><a href="../algorithms-parameters/index.html">التعامل مع الباراميترات</a></li>
+<li><a href="../algorithms-recursion/index.html">تعريف دوال تستدعي نفسها</a></li>
+<li class="title">أكتب الكود كالمحترفين</li>
+<li><a href="../algorithms-write-less-code/index.html">تقليص حجم الكود</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Algorithms</span>مفهوم الخوارزميات</h1>
+<article>
+<h2>مفهوم الخوارزميات</h2>
+<p class="question">ما هي الخوارزميات و لم يجب أن تتعلمها قبل أن تتعلم أي لغة برمجة؟</p>
+<p>الخوارزميات تسمى <span class="word">Algorithms</span> باللغة الإنجليزية.<br/>
+    أول شيء يجب أن تعرفه هو أن الخوارزميات ليست لغة برمجة, إنما هي طرق التحليل و التفكير التي عليك اتباعها حتى تتمكن من كتابة الكود بشكل صحيح.</p>
+<br/>
+<p class="question">ما هي المشكلة التي يتعرض لها الجميع و تصبح سبب خوفهم من البرمجة؟</p>
+<p>أغلب ألأشخاص الذين يحاولون أن يتعلموا البرمجة تراهم يذهبون مباشرةً في الإتجاه الخاطئ, فهم يبدؤون مباشرةً بدراسة لغة برمجة معينة مثل <span class="inline">(<span class="word">Java, C, C++</span>)</span> دون أن يتعلموا مبادئ البرمجة الأساسية, و دون أن يقوموا بوضع الأفكار الأساسية للبرنامج ثم تحليلها و تأديتها واحدة تلو الأخرى.</p>
+<p>الخوارزميات هي الجزء الأصعب في البرمجة و عندما تتعلمها بشكل صحيح فهذا يعني أنك قادر أن تتعلم أي لغة برمجة تريدها لأنه في الواقع إذا لم تعرف كيف تتعامل مع الكود و تعالج جميع المشاكل التي تواجهك أثناء كتابة الكود فإنك ستستسلم و تتوقف في مكانك عند أول مشكلة تافهة تظهر لك في الكود و تكون بذلك قد أضعت وقتك لأنك لا تعرف كيف يجب أن تحل المشكلة التي تتعامل معها, إذاً عندما تنتهي من تحليل برنامجك يمكنك كتابته بأي لغة برمجة تريدها بكل سهولة.</p>
+<p>في الحقيقة إذا فهمت الخوارزميات حقاً ستجد نفسك قادر على فهم أي لغة برمجة تريد لأنك قادر على التحكم و التلاعب بالكود بالطريقة التي تريدها. كما سنعطيك معلومة صغيرة لعلها تكون دافعاً لك لتتعلم و هي أن الهاكر هو إنسان عادي جداً, ما يتميز به أنه يمتلك قدرة عالية من التحليل و التركيز, أي بكل بساطة يفهم الخوارزميات بشكل ممتاز, لذلك يعرف كيف يحتال على البرامج, المواقع, أنظمة الحماية إلخ..</p>
+<p>و لعل أروع ما في الخوارزميات هو أنك إذا فهمتها حقاً فلن يصعب عليك فهم أي شيء في عالم البرمجة لأنه في البداية هو الأصعب فقط إذا لم تجد من يعلمك إياها بالطريقة الصحيحة و السهلة.</p>
+<br/>
+<p class="question">كيف سأتعلم الخوارزميات؟</p>
+<p>في كل درس ستتعلم مفاهيم جديدة و ستجد تمارين شاملة في نهاية كل درس أيضاً.<br/>
+	ننصحك و بشدة قراءة الشروحات بهدوء و تركيز تام و مشاهدة جميع الأمثلة و الفيديوهات المرفقة في بعض الدروس.<br/>
+<span class="note">ملاحظة:</span> سنستخدم لغة جافا للتطبيق العملي و لتجربة الكود مع العلم أنه بإمكانك تطبيق ما ستتعلمه على أي لغة برمجة أخرى.</p>
+<br/>
+<p class="question">ماذا أفعل إن لم أستطع فهم إحدى الشروحات؟</p>
+<p>بكل بساطة تواصل معنا على أحد حساباتنا في <a href="https://twitter.com/harmashcom">تويتر</a>, أو <a href="https://www.facebook.com/harmashcom">فيسبوك</a> لشرح الفكرة التي عجزت عن فهمها بطريقة أخرى.</p>
+</article>
+<article>
+<h2>أريد تعلم الخوارزميات و لكنني لا أريد تعلم لغة جافا</h2>
+<p>هذا أكثر سؤال كان يصلنا لأن أي شخص يدخل للدورة يقرأ أننا سنطبق الشرح على الحاسوب بلغة جافا فيظن أننا سنعلمه لغة جافا بحد ذاتها, أو أننا سنعلمه خوارزميات خاصة فقط بلغة جافا. في كلا الحالتين هذا أمر خاطئ تماماً لأن ما تتعلمه في هذه الدورة يطبق معك على أي لغة برمجة تريد تعلمها في المستقبل.</p>
+<p>إذاَ في هذه الدورة أنت لن تتعلم لغة جافا, بل ستتعلم جزء بسيط جداً منها لا يتجاوز 1% مما شرحناه فيها في دورات جافا حيث أننا سنشرح لك فقط ما تحتاجه منها حتى تتمكن من تجربة الكود على الكمبيوتر.</p>
+<p>لتصدق ما قلناه لك الآن,  يمكنك إلقاء نظرة سريعة على دورة <a href="../../algorithms-and-data-structure/index.html" target="_blank">تمارين خوارزميات و هياكل البيانات</a> التي قمنا فيها بوضع تمارين خوارزميات و معها الحل بخمس لغات برمجية هي بايثون, جافا, <span class="inline"><span class="word">C</span>,</span> <span class="word">C++</span> و <span class="inline"><span class="word">#C</span>.</span> من فضلك إطلع عليها فقط, لا تبدأ بها الآن لأنك غير مستعد لمستوى التحديات البرمجية الموضوعة فيها.</p>
+<p><b>ملاحظة:</b> أسلوب الشرح الموضوع في الدورة معد بدقة عالية و كل شهر يدرس منها آلاف الطلاب و الهواة و الذين يشاركوننا تجاربهم في مواقع التواصل الإجتماعي.</p>
+</article>
+<article>
+<h2>نصائح و إرشادات للمبرمج الجديد الذي يطمح للإحتراف</h2>
+<br/>
+<h3>أولاً</h3>
+<p>يجب أن يكون لديك ميول نحو عالم المعلوماتية بشكل عام و تعرف كيف تستخدم الكمبيوتر و يستحسن أن تمتلك كمبيوتر خاص بك لتجربة ما تشاء دون أي قلق.</p>
+<br/>
+<h3>ثانياً</h3>
+<p>أي مشكلة تواجهك في الكمبيوتر حاول أن تحلها بنفسك أولاً, أي إبحث في <a href="https://www.google.com/" target="_blank">google</a> و حاول بنفسك قبل أن تلجأ إلى سؤال أي أحد لأن هذا ما يفعله المحترفون و ذلك ما جعلهم محترفين.</p>
+<br/>
+<h3>ثالثاً</h3>
+<p>محاولتك الدائمة في إصلاحك للكمبيوتر تكسبك خبرة و ثقة عظيمة في قدراتك لأنك ستجد لاحقاً أنك إذا نويت على فعل أي شيئ, لن يستطيع أحد أن يقف في طريقك.</p>
+<br/>
+<h3>رابعاً</h3>
+<p>المعرفة باللغة الإنجليزية أساسية في عالم البرمجة لأنك ستجد كل ما تريد تعلمه موجود في كتب باللغة الإنجليزية و هي مجانية و أكثر من رائعة و أي سؤال تطرحه باللغة الإنجليزية ستجد جوابه و تحل جميع مشاكلك.</p>
+<br/>
+<h3>خامساً</h3>
+<p>عندما تقرأ أي شيء بأي لغة كان مكتوب و لا تفهمه, يمكنك إستخدام المترجم المجاني <a href="https://www.translate.google.com/" target="_blank">google translate</a> الذي أنشأته شركة <span class="word">google</span>.</p>
+<br/>
+<h3>سادساً</h3>
+<p>إياك أن تعتقد أن المبرمج يجب أن يكون من خريجي الجامعات و المعاهد حتى أنني تعلمت البرمجة قبل أن أدخل إلى الجامعة, حتى الآن لم أكمل دراستي في الجامعة و لكن كل ما سأدرسه عندما أكمل سيكون تافهاً بالنسبة لي لأنني سبق و درسته و قضيت أشهراً في ذلك.</p>
+<br/>
+<h3>سابعاً</h3>
+<p>عند دراسة أي لغة برمجة من كتاب, إبحث دائماً عن آخر إصدار للغة البرمجة التي تريد دراستها و آخر إصدار موجود للكتاب و إبحث عن الكتب الكبيرة التي قد يصل حجمها إلى أكثر من ١٠٠٠ صفحة, لأن هذه الكتب تكون مشروحة بأسلوب مبسط و سهل الفهم و غنية بالأمثلة و مشروحة بشكل مفصل, و إليك أهم موقع لتحميل كتب البرمجة الجديدة المجانية باللغة الإنجليزية <a href="http://it-ebooks.info/" target="_blank">it-ebooks.info</a> و هذا موقع باللغة العربية <a href="http://www.kutub.info/library" target="_blank">kutub.info</a>.<br/>
+	ننصحك دائماً بالكتب الأجنبية لأنه لا يوجد أي مؤلف عربي قام بإنشاء كتاب شامل حقاً أو أعاد النظر في الكود الذي كتبه منذ عدة سنوات, أي لن تجد في كتابه كل تقنيات الكود الجديدة التي ستجدها في الإصدارات الجديدة في الكتب الأجنبية لأن الكتب الأجنبية يقوم بكتابتها العديد من المبرمجين, و ليس مبرمج أو اثنين كما في حالتنا و هذا الذي يجعل كتبنا ضعيفة أو قديمة بعض الشيء.</p>
+<br/>
+<h3>ثامناً</h3>
+<p>أكثر الوظائف المتوفرة عالمياً هي وظائف المبرمجين و أعلى رواتب هي رواتب المبرمجين التي تصل إلى أرقام خيالية في بعض الأحيان و هذا من أكثر الأسباب التي يمكن أن تكون دافعاً لك على التعلم لأنك قد تعيش حياةً رغيدة بفضل البرمجة.</p>
+<ul class="explain">
+<li><p>أغنى رجل في العالم هو <span class="word">Bill Gates</span> , و هو <span class="b">مبرمج</span> و مؤسس شركة <span class="word">microsoft</span>.</p></li>
+<li><p>أغنى شاب في العالم هو <span class="word">Mark Zuckerberg</span> , و هو <span class="b">مبرمج</span> و مؤسس موقع <span class="word">facebook</span>.</p></li>
+</ul>
+</article>
+<article>
+<h2>الطريقة المعتمدة في التعلم</h2>
+<p>الأسلوب الذي ستتعلم فيه الخوارزميات معنا هو نفس الأسلوب المعتمد من قبل المعاهد و الجامعات.</p><br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>الهدف إعطاءك فكرة عامة للأسلوب المتبع في الشرح, لا داعي لأن تفهم الكود المكتوب الآن لأنك ستفهمه في الدروس اللاحقة.</p>
+</div>
+<br/>
+<h3>مثال</h3>
+<p>نقول لك على سبيل المثال: أكتب برنامج يطبع جملة <code data-enlighter-language="java">"Hello World"</code> عندما تقوم بتشغيله.</p>
+<p>بعدها ستجد النتيجة التي نريد الحصول عليها عند تشغيل البرنامج.</p>
+<div class="example-box">
+<h4>نتيجة التشغيل</h4>
+<div class="image-box">
+<a href="pic_1.png" target="_blank"><img src="pic_1.png"/></a>
+</div>
+</div>
+<p>ثم ستجد الكود كخوارزمية و الذي يجب أن تكتبه على الورقة.</p>
+<div class="example-box">
+<h4>الخوارزمية</h4>
+<div class="image-box">
+<a href="introduction-to-algorithm.png" target="_blank"><img alt="مقدمة حول الخوارزميات" src="introduction-to-algorithm.png"/></a>
+</div>
+</div>
+<p>ثم كود الجافا و الذي تستطيع نسخه و تجربته مباشرةً على الكمبيوتر.</p>
+<div class="example-box">
+<h4>كود الجافا</h4>
+<pre data-enlighter-language="java">
+public class MyAlgorithm {
+ 
+    public static void main (String[] args) {
+          System.out.print("Hello world");
+    }
+ 
+}
+		</pre>
+</div>
+<p>ثم شرح كل جزء في كود الجافا بشكل مفصل, لكننا لن نقوم بشرح هذا الكود الآن لأننا سنشرحه في الدرس القادم.</p>
+</article>
+<article>
+<h2>الطريقة الصحيحة للتعلم و التي تنمي قدراتك التحليلية</h2>
+<p>عند تعلم الخوارزميات عليك توفير دفتر لكتابة الخوارزميات عليه لأنه كما سبق و قلنا أنك تحلل برنامجك فقط عند كتابة الخوارزمية.<br/>
+	بعد الإنتهاء من تحليل برنامجك على الورقة أكتبه على الكمبيوتر لتتأكد إذا كان تحليلك صحيحاً أي أن برنامجك يعمل بشكل سليم, أم أنه يجب تعديل الكود.</p>
+<p>التحليل على الورقة سيساعدك كثيراً في التعلم و هذا أصلاً ما يقوم به المحترفون نفسهم قبل المباشرة بكتابة الكود.<br/>
+	لذلك ننصحك دائماً بأن تعيد كل كود تعلمته عدة مرات و حاول دائماً ان تتلاعب بالكود و تجربه لأن ذلك سيجعلك تفهم جيداً فائدة كل سطر من الكود و ينمي لك قدراتك على التحليل بشكل كبير و سريع.</p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

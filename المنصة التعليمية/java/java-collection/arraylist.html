@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الكلاس ArrayList في جافا</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>الكلاس <code data-enlighter-language="java">ArrayList</code> في جافا</h1>
+<article>
+<h2>مقدمة</h2>
+<p>الكلاس <code data-enlighter-language="java">ArrayList</code> يستخدم لإنشاء مصفوفات متطورة مقارنةً مع المصفوفات العادية <span class="word">Arrays</span>, حيث يوفر لك مجموعة من الدوال التي تمكنك من البحث فيها, التشييك على عناصرها, إضافة عناصر جديدة, حذف عناصر منها, و معالجة أكثر من عنصر فيها في نفس الوقت إلخ..</p>
+<p>أهم ميزة في المصفوفات التي نوعها <code data-enlighter-language="java">ArrayList</code> هي أن عدد العناصر فيها غير ثابت, حيث أنه يزيد عند إضافة عنصر جديد فيها و ينقص عند حذف عنصر منها بشكل تلقائي, و هذه الميزة غير موجودة في المصفوفات العادية.</p>
+<p>كما أنك تستطيع الوصول للعناصر الموجودة فيها عن طريق أرقام الـ <span class="word">Index</span> التي تعطى بالترتيب لكل عنصر يضاف فيها.</p><br/>
+<h3>بناؤه</h3>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public class ArrayList&lt;E&gt;
+extends AbstractList&lt;E&gt;
+implements List&lt;E&gt;, RandomAccess, Cloneable, Serializable 
+	</pre>
+<p>إذاً الكلاس <code data-enlighter-language="java">ArrayList</code> يرث من الكلاس <code data-enlighter-language="java">AbstractList</code>, و يطبق الإنترفيسات <code data-enlighter-language="java">List</code> - <code data-enlighter-language="java">Serializable</code> - <code data-enlighter-language="java">Cloneable</code> - <code data-enlighter-language="java">RandomAccess</code>.</p>
+</article>
+<article>
+<h2>كونستركتورات الكلاس <code data-enlighter-language="java">ArrayList</code></h2>
+<p>الجدول التالي يحتوي على جميع الكونستركتورات الموجودين في الكلاس <code data-enlighter-language="java">ArrayList</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الكونستركتور مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public ArrayList()</code></span>
+			هذا الكونستركتور الإفتراضي في الكلاس <code data-enlighter-language="java">ArrayList</code>, يستخدم لإنشاء كائن نوعه <code data-enlighter-language="java">ArrayList</code> فارغ.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public ArrayList(int initialCapacity)</code></span>
+			يستخدم هذا الكونستركتور لتحديد حجم كائن الـ <code data-enlighter-language="java">ArrayList</code> الأولي.<br/>
+			الرقم الذي نضعه كـ <span class="word">Argument</span> في هذا الكونستركتور يحدد عدد عناصر كائن الـ <code data-enlighter-language="java">ArrayList</code> الذي يمكنه احتوائهم على الأقل.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public ArrayList(Collection c)</code></span>
+			يستخدم هذا الكونستركتور لإنشاء كائن نوعه <code data-enlighter-language="java">ArrayList</code> يحتوي على عناصر كائن الـ <code data-enlighter-language="java">Collection</code> الذي نمرره له كـ <span class="word">Argument</span>.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>دوال الكلاس <code data-enlighter-language="java">ArrayList</code></h2>
+<p>الجدول التالي يحتوي على جميع دوال الكلاس <span class="word">ArrayList</span>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void add(int index, Object obj</code>)</span>
+			تضيف عنصر جديد في مكان محدد في كائن الـ <code data-enlighter-language="java">ArrayList</code>.<br/>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">obj</code> هو الكائن الذي سيضاف.</p></li>
+<li><p><span class="word">index</span> هو رقم الـ <span class="word">index</span> الذي سيضاف فيه الكائن <code data-enlighter-language="java">obj</code>.</p></li>
+</ul>
+			ترمي الإستثناء <span class="code red">IndexOutOfBoundsException</span> في حال كان الـ <span class="word">index</span> المحدد فيها أصغر من <span class="number">0</span> أو أكبر من عدد العناصر الموجودة.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean add(Object o)</code></span>
+			تضيف عنصر جديد في آخر كائن الـ <code data-enlighter-language="java">ArrayList</code>.<br/>
+			ترجع <code data-enlighter-language="java">true</code> إذا تمت الإضافة بنجاح.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean addAll(Collection c)</code></span>
+			تضيف جميع عناصر الكائن <code data-enlighter-language="java">c</code> في آخر كائن الـ <code data-enlighter-language="java">ArrayList</code>.<br/>
+			ترجع <code data-enlighter-language="java">true</code> إذا تمت الإضافة بنجاح.<br/>
+			ترمي الإستثناء <span class="code red">NullPointerException</span> في حال كان الكائن <code data-enlighter-language="java">c</code> فارغاً.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean addAll(int index, Collection c)</code></span>
+			تضيف جميع عناصر الكائن <code data-enlighter-language="java">c</code> في مكان محدد في كائن الـ <code data-enlighter-language="java">ArrayList</code>.<br/>
+			ترجع <code data-enlighter-language="java">true</code> إذا تمت الإضافة بنجاح.<br/>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">c</code> هو مجموعة الكائنات التي ستضاف.</p></li>
+<li><p><span class="word">index</span> هو رقم الـ <span class="word">index</span> الذي سيضاف فيه الكائن <code data-enlighter-language="java">c</code>.</p></li>
+</ul>
+			ترمي الإستثناء <span class="code red">NullPointerException</span> في حال كان الكائن <code data-enlighter-language="java">c</code> فارغاً.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void clear()</code></span>
+			تمسح جميع العناصر الموجودة في كائن الـ <code data-enlighter-language="java">ArrayList</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Object clone()</code></span>
+			ترجع نسخة من كائن الـ <code data-enlighter-language="java">ArrayList</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean contains(Object o)</code></span>
+			ترجع <code data-enlighter-language="java">true</code> في حال كان كائن الـ <code data-enlighter-language="java">ArrayList</code> يملك الكائن الذي نضعه لها كـ <span class="word">Argument</span>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void ensureCapacity(int minCapacity)</code></span>
+			تحدد عدد العناصر الأقل الذي يجب أن يحجز لكائن الـ <code data-enlighter-language="java">ArrayList</code> في الذاكرة.<br/>
+			إذا كان العدد الموضوع فيها أكبر من عدد العناصر المحجوز لكائن الـ <code data-enlighter-language="java">ArrayList</code>, عندها يتم تكبير حجمه.<br/>
+			إذا كان العدد الموضوع فيها أصغر من عدد العناصر الموجودة في كائن الـ <code data-enlighter-language="java">ArrayList</code>, لن تفعل أي شيء.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Object get(int index)</code></span>
+			ترجع العنصر الموجود على الـ <span class="word">index</span> الذي نمرره لها كـ <span class="word">Argument</span>.<br/>
+			ترمي الإستثناء <span class="code red">IndexOutOfBoundsException</span> في حال كان الـ <span class="word">index</span> المحدد فيها أصغر من <span class="number">0</span> أو أكبر من عدد العناصر الموجودة.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int indexOf(Object o)</code></span>
+			تبحث في كائن الـ <code data-enlighter-language="java">ArrayList</code> عن أي قيمة نمررها لها كـ <span class="word">Argument</span>.<br/>
+			ترجع رقم أول <span class="word">Index</span> يحتوي على القيمة المطلوبة في حال وجود نفس القيمة في أكثر من عنصر.<br/>
+			ترجع <span class="number">1-</span> في حال عدم إيجاد القيمة المطلوبة.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int lastIndexOf(Object o)</code></span>
+			تبحث في كائن الـ <code data-enlighter-language="java">ArrayList</code> عن أي قيمة نمررها لها كـ <span class="word">Argument</span>.<br/>
+			ترجع رقم آخر <span class="word">Index</span> يحتوي على القيمة المطلوبة في حال وجود نفس القيمة في أكثر من عنصر.<br/>
+			ترجع <span class="number">1-</span> في حال عدم إيجاد القيمة المطلوبة.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Object remove(int index)</code></span>
+			تحذف عنصر محدد من كائن الـ <code data-enlighter-language="java">ArrayList</code>.<br/>
+			ترمي الإستثناء <span class="code red">IndexOutOfBoundsException</span> في حال كان الـ <span class="word">index</span> المحدد فيها أصغر من <span class="number">0</span> أو أكبر من عدد العناصر الموجودة.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">protected void removeRange(int fromIndex, int toIndex)</code></span>
+			تحذف جميع عناصر كائن الـ <code data-enlighter-language="java">ArrayList</code> الموجودة من <code data-enlighter-language="java">fromIndex</code> إلى <code data-enlighter-language="java">toIndex</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Object set(int index, Object element)</code></span>
+			تبدل عنصر محدد في كائن الـ <code data-enlighter-language="java">ArrayList</code> بعنصر جديد, و ترجعه أيضاً.<br/>
+			ترمي الإستثناء <span class="code red">IndexOutOfBoundsException</span> في حال كان الـ <span class="word">index</span> المحدد فيها أصغر من <span class="number">0</span> أو أكبر من عدد العناصر الموجودة.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int size()</code></span>
+			ترجع عدد العناصر الموجودة في كائن الـ <code data-enlighter-language="java">ArrayList</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Object[] toArray()</code></span>
+			ترجع مصفوفة نوعها <code data-enlighter-language="java">Object</code> تحتوي على جميع العناصر الموجودة في كائن الـ <code data-enlighter-language="java">ArrayList</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void trimToSize()</code></span>
+			تصغر حجم كائن الـ <code data-enlighter-language="java">ArrayList</code> في الذاكرة, حيث أنها تحذف جميع الأماكن المحجوزة له في الذاكرة و التي لم يضطر إلى استخدامها.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>أمثلة شاملة</h2>
+<p>في كل مثال موضوع استخدامنا كونستركتور مختلف و دوال جديدة.</p>
+<br/><br/>
+<h3>المثال الأول</h3>
+<p>في المثال التالي قمنا بتعريف كائن نوعه <code data-enlighter-language="java">ArrayList</code> أدخلنا فيه <span class="number">5</span> عناصر ثم حذفنا منه عنصرين.</p>
+<p>استخدامنا الدوال التالية: <code data-enlighter-language="java">add()</code> - <code data-enlighter-language="java">remove()</code> - <code data-enlighter-language="java">size()</code>.</p>
+<div class="example-box">
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.util.ArrayList;		// ArrayList هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // al إسمه ArrayList هنا قمنا بإنشاء كائن من الكلاس
+        ArrayList al = new ArrayList();
+ 
+        // و عرض عددهم al هنا قمنا بعرض عناصر الكائن
+        System.out.println("All elements:       " + al);
+        System.out.println("Number of elements: " + al.size() + "\n");
+ 
+        // al هنا قمنا بإضافة 5 عناصر في الكائن
+        al.add("A");
+        al.add("B");
+        al.add("C");
+        al.add("D");
+        al.add("E");
+ 
+        // و عرض عددهم al هنا قمنا بعرض عناصر الكائن
+        System.out.println("All elements:       " + al);
+        System.out.println("Number of elements: " + al.size() + "\n");
+ 
+        // رقم 1 index و العنصر الموجود على الـ 'B' هنا قمنا بحذف العنصر الذي يملك القيمة
+        al.remove("B");
+        al.remove(1);
+ 
+        // و عرض عددهم al هنا قمنا بعرض عناصر الكائن
+        System.out.println("All elements:       " + al);
+        System.out.println("Number of elements: " + al.size() + "\n");
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+All elements:       []
+Number of elements: 0
+
+All elements:       [A, B, C, D, E]
+Number of elements: 5
+
+All elements:       [A, D, E]
+Number of elements: 3 
+		</pre>
+</div>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>في المثال التالي قمنا بإضافة كائن نوعه <code data-enlighter-language="java">ArrayList</code>في كائن آخر نوعه <code data-enlighter-language="java">ArrayList</code>.<br/>
+	لاحظ هنا أنه عند إضافة كائن بواسطة الدالة <code data-enlighter-language="java">add(Collection c)</code> فإن جميع عناصره توضع في عنصر واحد.</p>
+<div class="example-box">
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.util.ArrayList;		// ArrayList هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // arr1 إسمه ArrayList هنا قمنا بإنشاء كائن من الكلاس
+        ArrayList arr1 = new ArrayList();
+ 
+        // arr1 هنا قمنا بإضافة 5 عناصر في الكائن
+        arr1.add("A");
+        arr1.add("B");
+        arr1.add("C");
+        arr1.add("D");
+        arr1.add("E");
+ 
+        // arr2 إسمه ArrayList هنا قمنا بإنشاء كائن آخر من الكلاس
+        ArrayList arr2 = new ArrayList();
+ 
+        // arr2 في أول عنصر في الكائن arr1 هنا قمنا بإضافة جميع عناصر الكائن
+        arr2.add(arr1);
+ 
+        // arr1 و الذي يمثل مصفوفة تحتوي على جميع عناصر الكائن arr2 هنا قمنا بطباعة العنصر الأول الموجود في الكائن
+        System.out.println("arr2 elements: " + arr2.get(0) + "\n");
+ 
+        // arr2 هنا قمنا بعرض عدد عناصر الكائن
+        System.out.println("Number of elements in arr2 : " + arr2.size());
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+arr2 elements: [A, B, C, D, E]
+
+Number of elements in arr2 : 1 
+		</pre>
+</div>
+<br/><br/>
+<h3>المثال الثالث</h3>
+<p>في المثال التالي قمنا بتمرير كائن نوعه <code data-enlighter-language="java">ArrayList</code>في كونستركتور كائن آخر نوعه <code data-enlighter-language="java">ArrayList</code>.<br/>
+	لاحظ هنا أن جميع عناصر الكائن الأول ستوضع بنفس الترتيب في الكائن الثاني, و سيوضع كل كائن في عنصر أيضاً.</p>
+<div class="example-box">
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.util.ArrayList;		// ArrayList هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // arr1 إسمه ArrayList هنا قمنا بإنشاء كائن من الكلاس
+        ArrayList arr1 = new ArrayList();
+ 
+        // arr1 هنا قمنا بإضافة 5 عناصر في الكائن
+        arr1.add("A");
+        arr1.add("B");
+        arr1.add("C");
+        arr1.add("D");
+        arr1.add("E");
+ 
+        // arr1 يحتوي على جميع عناصر الكائن arr2 إسمه ArrayList هنا قمنا بإنشاء كائن آخر من الكلاس
+        ArrayList arr2 = new ArrayList(arr1);
+ 
+        // arr2 هنا قمنا بإضافة عنصر جديد في الكائن
+        arr2.add("F");
+ 
+        // arr2 و arr1 هنا عرضنا جميع العناصر الموجودة في الكائنين
+        System.out.println("arr1 elements: " + arr1);
+        System.out.println("arr2 elements: " + arr2);
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+arr1 elements: [A, B, C, D, E]
+arr2 elements: [A, B, C, D, E, F]
+		</pre>
+</div>
+<br/><br/>
+<h3>المثال الرابع</h3>
+<p>في المثال التالي قمنا باستخدام الدوال التي تستخدم في البحث و التشييك.</p>
+<p>استخدامنا الدوال التالية: <code data-enlighter-language="java">add()</code> - <code data-enlighter-language="java">get()</code> - <code data-enlighter-language="java">size()</code> - <code data-enlighter-language="java">indexOf()</code> - <code data-enlighter-language="java">lastIndexOf()</code> - <code data-enlighter-language="java">contains()</code>.</p>
+<div class="example-box">
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.util.ArrayList;		// ArrayList هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // al إسمه ArrayList هنا قمنا بإنشاء كائن من الكلاس
+        ArrayList al = new ArrayList();
+ 
+        // al هنا قمنا بإضافة 9 عناصر في الكائن
+        al.add("A");
+        al.add("B");
+        al.add("C");
+        al.add("D");
+        al.add("E");
+        al.add("A");
+        al.add("B");
+        al.add("C");
+        al.add("Z");
+ 
+        // al هنا عرضنا العنصر الأول في الكائن
+        System.out.println("First element: " + al.get(0));
+ 
+        // al هنا عرضنا العنصر الأخير في الكائن
+        System.out.println("Last element:  " + al.get(al.size()-1) + "\n");
+ 
+        // al هنا عرضنا خامس عنصر موجود في الكائن
+        System.out.println("Element at al[4]: " + al.get(4) + "\n");
+ 
+        // al موجودين في الكائن 'C' أول و آخر كائن index هنا عرضنا
+        System.out.println("First index of the object 'C': " + al.indexOf("C"));
+        System.out.println("Last index of the object 'C':  " + al.lastIndexOf("C") + "\n");
+ 
+        // F و D عن الكائنين al هنا بحثنا في عناصر الكائن
+        System.out.println("Does it contain a 'D' object? " + al.contains("D"));
+        System.out.println("Does it contain a 'F' object? " + al.contains("F"));
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+First element: A
+Last element: Z
+
+Element at al[4]: E
+
+First index of the object 'C': 2
+Last index of the object 'C': 7
+
+Does it contain a 'D' object? true
+Does it contain a 'F' object? false
+		</pre>
+</div>
+<br/><br/>
+<h3>المثال الخامس</h3>
+<p>في المثال التالي قمنا بنسخ عناصر كائن الـ <code data-enlighter-language="java">ArrayList</code> بداخل مصفوفة جديدة نوعها <code data-enlighter-language="java">Object</code> بواسطة الدالة <code data-enlighter-language="java">toArray()</code>.</p>
+<div class="example-box">
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.util.ArrayList;		// ArrayList هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // al إسمه ArrayList هنا قمنا بإنشاء كائن من الكلاس
+        ArrayList al = new ArrayList();
+ 
+        // al هنا قمنا بإضافة 3 عناصر في الكائن
+        al.add("A");
+        al.add("B");
+        al.add("C");
+ 
+        // al عدد عناصرها يساوي عدد عناصر الكائن ,Object هنا قمنا بإنشاء مصفوفة نوعها
+        Object[] arr = new Object[al.size()];
+ 
+        // arr بنفس الترتيب في المصفوفة al هنا قمنا بنسخ عناصر الكائن
+        al.toArray(arr);
+ 
+        // arr هنا أنشأنا حلقة تعرض جميع العناصر الموجودة في الحلقة
+        for(int i=0; i&lt;arr.length; i++) {
+            System.out.println("arr[" +i+ "] = " +arr[i]);
+        }
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+arr[0] = A
+arr[1] = B
+arr[2] = C
+		</pre>
+</div>
+<br/><br/>
+<h3>المثال السادس</h3>
+<p>في المثال التالي قمنا بإنشاء نسخة ثانية من كائن الـ <code data-enlighter-language="java">ArrayList</code> في كائن جديد نوعه <code data-enlighter-language="java">Object</code> بواسطة الدالة <code data-enlighter-language="java">clone()</code>, بعدها قمنا بمسح كائن الـ <code data-enlighter-language="java">ArrayList</code> الأصلي.</p>
+<p><span class="note">إنتبه:</span> النسخة التي أنشأناها هنا تعتبر مجرد صورة للأشياء الموجودة في كائن الـ <code data-enlighter-language="java">ArrayList</code>.</p>
+<div class="example-box">
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.util.ArrayList;		// ArrayList هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // al إسمه ArrayList هنا قمنا بإنشاء كائن من الكلاس
+        ArrayList al = new ArrayList();
+ 
+        // al هنا قمنا بإضافة 3 عناصر في الكائن
+        al.add("A");
+        al.add("B");
+        al.add("C");
+ 
+        // o في الكائن al هنا قمنا بنسخ عناصر الكائن
+        Object o = al.clone();
+ 
+        // al هنا قمنا بمسح جميع عناصر الكائن
+        al.clear();
+ 
+        // o و al هنا قمنا بعرض عناصر كل من الكائنات
+        System.out.println("al = " +al);
+        System.out.println("o  = " +o);
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+al = []
+o  = [A, B, C]
+		</pre>
+</div>
+<br/><br/>
+<h3>المثال السابع</h3>
+<p>في المثال التالي قمنا بتحديد نوع الكائنات التي يمكن إدخالها في كائنات الـ <code data-enlighter-language="java">ArrayList</code> من خلال تطبيق مبدأ الـ <span class="word">Generics</span>.</p>
+<p><span class="note">ملاحظة:</span> سنشرح الـ <span class="word">Generics</span> في درس خاص و هذا مجرد مثال بسيط.</p>
+<div class="example-box">
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.util.ArrayList;		// ArrayList هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // يمكنه تخزين كائنات من أي نوع كان arr1 إسمه ArrayList هنا قمنا بإنشاء كائن من الكلاس
+        ArrayList arr1 = new ArrayList();
+ 
+        // فقط String يمكنه تخزين كائنات من النوع arr2 إسمه ArrayList هنا قمنا بإنشاء كائن من الكلاس
+        ArrayList&lt;String&gt; arr2 = new ArrayList&lt;&gt;();
+ 
+        // فقط Integer يمكنه تخزين كائنات من النوع arr3 إسمه ArrayList هنا قمنا بإنشاء كائن من الكلاس
+        ArrayList&lt;Integer&gt; arr3 = new ArrayList&lt;&gt;();
+ 
+ 
+        // arr1 هنا قمنا بإضافة 5 عناصر لها أنواع مختلفة في الكائن
+        arr1.add(null);
+        arr1.add(true);
+        arr1.add(1234);
+        arr1.add("java");
+        arr1.add('A');
+ 
+        // arr2 في الكائن String هنا قمنا بإضافة 3 عناصر نوعها
+        arr2.add("A");
+        arr2.add("B");
+        arr2.add("C");
+ 
+        // arr3 في الكائن int هنا قمنا بإضافة 3 عناصر نوعها
+        arr3.add(1);
+        arr3.add(2);
+        arr3.add(3);
+ 
+ 
+        // arr1 هنا قمنا بعرض عناصر الكائن
+        System.out.println("arr1: " +arr1);
+ 
+        // arr2 هنا قمنا بعرض عناصر الكائن
+        System.out.println("arr2: " +arr2);
+ 
+        // arr3 هنا قمنا بعرض عناصر الكائن
+        System.out.println("arr3: " +arr3);
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+arr1: [null, true, 1234, java, A]
+arr2: [A, B, C]
+arr3: [1, 2, 3]
+		</pre>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

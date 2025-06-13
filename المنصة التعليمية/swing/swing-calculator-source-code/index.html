@@ -1,0 +1,929 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>Swing - طريقة إنشاء آلة حاسبة</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-swing-icon.png"/></li>
+<li class="title">أساسيات المكتبة</li>
+<li><a href="../swing-overview/index.html"><span class="en">Swing</span> - نظرة عامة</a></li>
+<li><a href="../swing-jframe/index.html"><span class="en">Swing</span> - إنشاء نافذة <span class="en">( Frame )</span></a></li>
+<li class="title">عناصر واجهة المستخدم</li>
+<li><a href="../swing-component/index.html"><span class="en">Component - Swing</span></a></li>
+<li><a href="../swing-jlabel/index.html"><span class="en">JLabel - Swing</span></a></li>
+<li><a href="../swing-jbutton/index.html"><span class="en">JButton - Swing</span></a></li>
+<li><a href="../swing-jtextfield/index.html"><span class="en">JTextField - Swing</span></a></li>
+<li><a href="../swing-jpasswordfield/index.html"><span class="en">JPasswordField - Swing</span></a></li>
+<li><a href="../swing-jtextarea/index.html"><span class="en">JTextArea - Swing</span></a></li>
+<li><a href="../swing-jcheckbox/index.html"><span class="en">JCheckBox - Swing</span></a></li>
+<li><a href="../swing-jradiobutton/index.html"><span class="en">JRadioButton - Swing</span></a></li>
+<li><a href="../swing-jcombobox/index.html"><span class="en">JComboBox - Swing</span></a></li>
+<li><a href="../swing-jlist/index.html"><span class="en">JList - Swing</span></a></li>
+<li><a href="../swing-jspinner/index.html"><span class="en">JSpinner - Swing</span></a></li>
+<li><a href="../swing-jslider/index.html"><span class="en">JSlider - Swing</span></a>
+</li><li><a href="../swing-jtable/index.html"><span class="en">JTable - Swing</span></a></li>
+<li><a href="../swing-jtree/index.html"><span class="en">JTree - Swing</span></a></li>
+<li><a href="../swing-jprogressbar/index.html"><span class="en">JProgressBar - Swing</span></a></li>
+<li><a href="../swing-jpanel/index.html"><span class="en">JPanel - Swing</span></a></li>
+<li><a href="../swing-jtabbedpane/index.html"><span class="en">JTabbedPane - Swing</span></a></li>
+<li><a href="../swing-joptionpane/index.html"><span class="en">JOptionPane - Swing</span></a></li>
+<li><a href="../swing-jdialog/index.html"><span class="en">JDialog - Swing</span></a></li>
+<li><a href="../swing-jcolorchooser/index.html"><span class="en">JColorChooser - Swing</span></a></li>
+<li><a href="../swing-jfilechooser/index.html"><span class="en">JFileChooser - Swing</span></a></li>
+<li><a href="../swing-jsplitpane/index.html"><span class="en">JSplitPane - Swing</span></a></li>
+<li><a href="../swing-jpopumenu/index.html"><span class="en">JPopupMenu - Swing</span></a></li>
+<li><a href="../swing-jmenubar/index.html"><span class="en">JMenuBar - Swing</span></a></li>
+<li class="title">إدارة محتوى النافذة</li>
+<li><a href="../swing-borderlayout/index.html"><span class="en">BorderLayout - Swing</span></a></li>
+<li><a href="../swing-flowlayout/index.html"><span class="en">FlowLayout - Swing</span></a></li>
+<li><a href="../swing-gridlayout/index.html"><span class="en">GridLayout - Swing</span></a></li>
+<li><a href="../swing-gridbaglayout/index.html"><span class="en">GridBagLayout - Swing</span></a></li>
+<li><a href="../swing-cardlayout/index.html"><span class="en">CardLayout - Swing</span></a></li>
+<li><a href="../swing-grouplayout/index.html"><span class="en">GroupLayout - Swing</span></a></li>
+<li><a href="../swing-scroll-layout/index.html"><span class="en">Scroll Layout - Swing</span></a></li>
+<li class="title">الأحداث <span class="en">( Events )</span></li>
+<li><a href="../awt-actionlistener/index.html"><span class="en">ActionListener - Swing</span></a></li>
+<li><a href="../awt-itemlistener/index.html"><span class="en">ItemListener - Swing</span></a></li>
+<li><a href="../awt-keylistener/index.html"><span class="en">KeyListener - Swing</span></a></li>
+<li><a href="../awt-mouselistener/index.html"><span class="en">MouseListener - Swing</span></a></li>
+<li><a href="../awt-mousemotionlistener/index.html"><span class="en">MouseMotionListener - Swing</span></a></li>
+<li><a href="../awt-focuslistener/index.html"><span class="en">FocusListener - Swing</span></a></li>
+<li><a href="../awt-windowlistener/index.html"><span class="en">WindowListener - Swing</span></a></li>
+<li><a href="../awt-adjustmentlistener/index.html"><span class="en">AdjustmentListener - Swing</span></a></li>
+<li><a href="../make-swing-components-synchronized/index.html"><span class="en">Swing</span> - حل مشكلة المزامنة</a></li>
+<li class="title">تعلم بناء تطبيقات و ألعاب</li>
+<li><a href="../swing-projects/index.html"><span class="en">Swing</span> - جميع المشاريع</a></li>
+<li><a href="../swing-color-picker-source-code/index.html"><span class="en">Swing</span> - برنامج إختيار الألوان</a></li>
+<li><a href="../swing-tic-tac-toe-source-code/index.html"><span class="en">Swing</span> - لعبة <span class="en">Tic Tac Toe</span></a></li>
+<li><a href="index.html"><span class="en">Swing</span> - آلة حاسبة بسيطة</a></li>
+<li><a href="../swing-scientific-calculator-source-code/index.html"><span class="en">Swing</span> - ألة حاسبة علمية</a></li>
+<li><a href="../swing-age-calculator-source-code/index.html"><span class="en">Swing</span> - برنامج حساب الأعمار</a></li>
+<li><a href="../swing-snake-2d-source-code/index.html"><span class="en">Swing</span> - لعبة الأفعى <span class="en">Snake 2D</span></a></li>
+<li><a href="../swing-ip-finder-source-code/index.html"><span class="en">Swing</span> - محلل عناوين المواقع</a></li>
+<li><a href="../swing-company-products-manager-source-code/index.html"><span class="en">Swing</span> - برنامج إدارة المحتوى</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java Swing</span>طريقة إنشاء آلة حاسبة</h1>
+<article>
+<p>في هذا الدرس ستتعلم طريقة إنشاء آلة حاسبة بسيطة باستخدام إطار الـ <span class="word">Swing</span>.</p>
+<p><a href="java-swing-calculator-source-code.png" target="_blank"><img alt="java swing calculator source code تحميل كود آلة حاسبة في جافا" src="java-swing-calculator-source-code.png"/></a></p>
+<p><a class="open-page" href="java-swing-calculator.jar">⇓ تحميل البرنامج</a>
+<a class="open-page" href="java-swing-calculator.zip">⇓ تحميل المشروع كاملاً</a>
+</p>
+<br/>
+<div class="example-box">
+<h4>كود البرنامج</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.UIManager.LookAndFeelInfo;
+import java.text.DecimalFormat;
+ 
+ 
+// و بالتالي أصبح إنشاء كائن منه يمثل إنشاء نافذة JFrame يرث من الكلاس Main هنا جعلنا الكلاس
+public class Main extends JFrame {
+ 
+    // هنا قمنا بتعريف جميع محتويات النافذة
+    JButton b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, comma, plus, equal, minus, divide, multiple, clear, back;
+    JTextField textField;
+    JLabel oldValueLabel, operandLabel;
+ 
+    // لتخزين العدد الذي تم إدخاله قبل النقر على زر الجمع, الطرح, الضرب أو القسمة num سنستخدم المتغير
+    double num;
+ 
+    // لتخزين الناتج النهائي عند النقر على زر المساواة answer سنستخدم المتغير
+    double answer;
+ 
+    // ÷ × - + لتخزين ناتج جميع العمليات السابقة في كل مرة يتم فيها النقر على الأزرار oldAnswer سنستخدم المتغير
+    double oldAnswer;
+ 
+    // لتخزين رقم عادي يمثل نوع العملية التي سيتم إجراءها operation سنستخدم المتغير
+    int operation;
+ 
+    // لمعرفة إذا تم تغيير الرقم الظاهر في مربع النص أم لا isTextChanged سنستخدم المتغير
+    boolean isTextChanged = false;
+ 
+    // لمعرفة إذا تم النقر على أحد هذه الأزرار ÷ × - + أم لا noClickedOperator سنستخدم المتغير
+    boolean noClickedOperator = true;
+ 
+    // لمعرفة إذا تم النقر على الزر = أم لا isEqualClicked سنستخدم المتغير
+    boolean isEqualClicked = false;
+ 
+    // لإخفاء الأصفار التي لا حاجة إلى ظهورها format سنستخدم الكائن
+    DecimalFormat format = new DecimalFormat("0.###############");
+ 
+    // لتحديد نوع خط و حجم الأشياء التي سنضيفها في النافذة font سنستخدم الكائن
+    Font font = new Font("Arial", Font.BOLD, 17);
+ 
+ 
+    // ÷ × - + سنستخدم هذه الدالة لتخزين ناتج جميع العمليات السابقة في كل مرة يتم فيها النقر على الأزرار
+    private void calculateOldAnswer() {
+        switch(operation) {
+            case 1:
+                oldAnswer += num;
+                break;
+            case 2:
+                if(!oldValueLabel.getText().isEmpty())
+                    oldAnswer -= num;
+                else
+                    oldAnswer = num - oldAnswer;
+                break;
+            case 3:
+                oldAnswer *= num;
+                break;
+            case 4:
+                oldAnswer /= num;
+                break;
+        }
+    }
+ 
+ 
+    // هذه الدالة تقوم ببناء كل شيء في البرنامج و تحدد ماذا سيحدث عندما يتفاعل المستخدم مع محتوى النافذة
+    private void createAndShowGUI() {
+ 
+        // لجعل محتوى االنافذة يظهر بشكل أجمل Nimbus إلى الـ UIManager هنا قمنا بتغير الـ
+        try {
+            for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        }
+        catch (Exception e) { }
+ 
+ 
+        // هنا قمنا بإنشاء محتوى النافذة
+        b0 = new JButton("0");
+        b1 = new JButton("1");
+        b2 = new JButton("2");
+        b3 = new JButton("3");
+        b4 = new JButton("4");
+        b5 = new JButton("5");
+        b6 = new JButton("6");
+        b7 = new JButton("7");
+        b8 = new JButton("8");
+        b9 = new JButton("9");
+        comma = new JButton(".");
+        plus = new JButton("+");
+        minus = new JButton("-");
+        multiple = new JButton("×");
+        divide = new JButton("÷");
+        equal = new JButton("=");
+        clear = new JButton("C");
+        back = new JButton("←");
+        textField = new JTextField("0");
+        oldValueLabel = new JLabel("", JLabel.RIGHT);
+        operandLabel = new JLabel("", JLabel.RIGHT);
+ 
+        // هنا قمنا بتحديد حجم و موقع كل شيء أضفناه في النافذة
+        oldValueLabel.setBounds(11, 5, 214, 20);
+        operandLabel.setBounds(225, 5, 20, 20);
+        textField.setBounds(11, 25, 234, 47);
+        b7.setBounds(10, 80, 45, 42);
+        b8.setBounds(58, 80, 45, 42);
+        b9.setBounds(106, 80, 45, 42);
+        plus.setBounds(154, 80, 45, 42);
+        clear.setBounds(202, 80, 45, 42);
+        b4.setBounds(10, 125, 45, 42);
+        b5.setBounds(58, 125, 45, 42);
+        b6.setBounds(106, 125, 45, 42);
+        minus.setBounds(154, 125, 45, 42);
+        back.setBounds(202, 125, 45, 42);
+        b1.setBounds(10, 170, 45, 42);
+        b2.setBounds(58, 170, 45, 42);
+        b3.setBounds(106, 170, 45, 42);
+        multiple.setBounds(154, 170, 45, 42);
+        equal.setBounds(202, 170, 45, 87);
+        b0.setBounds(10, 215, 93, 42);
+        comma.setBounds(106, 215, 45, 42);
+        divide.setBounds(154, 215, 45, 42);
+ 
+        // هنا قمنا بتحديد حجم و نوع خط كل شيء أضفناه في النافذة
+        b0.setFont(font);
+        b1.setFont(font);
+        b2.setFont(font);
+        b3.setFont(font);
+        b4.setFont(font);
+        b5.setFont(font);
+        b6.setFont(font);
+        b7.setFont(font);
+        b8.setFont(font);
+        b9.setFont(font);
+        comma.setFont(font);
+        equal.setFont(font);
+        plus.setFont(font);
+        minus.setFont(font);
+        multiple.setFont(font);
+        divide.setFont(font);
+        clear.setFont(font);
+        back.setFont(font);
+        oldValueLabel.setFont(font);
+        operandLabel.setFont(font);
+ 
+        // textField هنا قمنا بتحديد بعض خصائص الـ
+        textField.setEditable(false);
+        textField.setHorizontalAlignment(JTextField.RIGHT);
+        textField.setFont(new Font("Monospaced", Font.BOLD, 19));
+ 
+        // هنا قمنا بتحديد لون خط كل شيء سنضيفه في النافذة
+        oldValueLabel.setForeground(Color.cyan);
+        operandLabel.setForeground(Color.yellow);
+        b0.setForeground(Color.white);
+        b1.setForeground(Color.white);
+        b2.setForeground(Color.white);
+        b3.setForeground(Color.white);
+        b4.setForeground(Color.white);
+        b5.setForeground(Color.white);
+        b6.setForeground(Color.white);
+        b7.setForeground(Color.white);
+        b8.setForeground(Color.white);
+        b9.setForeground(Color.white);
+        comma.setForeground(Color.white);
+        equal.setForeground(Color.white);
+        plus.setForeground(Color.white);
+        minus.setForeground(Color.white);
+        multiple.setForeground(Color.white);
+        divide.setForeground(Color.white);
+        clear.setForeground(Color.white);
+        back.setForeground(Color.white);
+ 
+        // هنا قمنا بتحديد لون خلفية كل شيء سنضيفه في النافذة
+        b0.setBackground(Color.darkGray);
+        b1.setBackground(Color.darkGray);
+        b2.setBackground(Color.darkGray);
+        b3.setBackground(Color.darkGray);
+        b4.setBackground(Color.darkGray);
+        b5.setBackground(Color.darkGray);
+        b6.setBackground(Color.darkGray);
+        b7.setBackground(Color.darkGray);
+        b8.setBackground(Color.darkGray);
+        b9.setBackground(Color.darkGray);
+        comma.setBackground(Color.darkGray);
+        plus.setBackground(Color.black);
+        minus.setBackground(Color.black);
+        multiple.setBackground(Color.black);
+        divide.setBackground(Color.black);
+        equal.setBackground(Color.black);
+        clear.setBackground(new Color(223, 1, 1));
+        back.setBackground(new Color(255, 128, 0));
+        getContentPane().setBackground(Color.black);
+       
+        // هنا قمنا بإضافة جميع الأشياء التي قمنا بتعريفها و تحديد خصائصها في النافذة
+        add(b0);
+        add(b1);
+        add(b2);
+        add(b3);
+        add(b4);
+        add(b5);
+        add(b6);
+        add(b7);
+        add(b8);
+        add(b9);
+        add(comma);
+        add(equal);
+        add(plus);
+        add(multiple);
+        add(minus);
+        add(divide);
+        add(clear);
+        add(back);
+        add(textField);
+        add(oldValueLabel);
+        add(operandLabel);
+ 
+        // يمثل ما يحدث عند النقر على أي زر موضوع في البرنامج ActionListener هنا قمنا بتعريف كائن من الإنترفيس
+        ActionListener actionListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+ 
+                // عند النقر على الزر 0 سيتم إضافة 0 في مربع النص مع التأكد من عدم وجود أي صفر لا فائدة له من الناحية اليسرى
+                if (e.getSource() == b0)
+                {
+                    if (isEqualClicked == true || textField.getText().equals("0"))
+                        textField.setText("0");
+ 
+                    else
+                        textField.setText(textField.getText()+"0");
+ 
+                    isEqualClicked = false;
+                    isTextChanged = true;
+                    noClickedOperator = true;
+                }
+ 
+ 
+                // عند النقر على الزر 1 سيتم إضافة 1 في مربع النص مع التأكد من عدم وجود أي صفر لا فائدة له من الناحية اليسرى
+                else if (e.getSource() == b1)
+                {
+                    if (isEqualClicked == true || textField.getText().equals("0"))
+                        textField.setText("1");
+ 
+                    else
+                        textField.setText(textField.getText()+"1");
+ 
+                    isEqualClicked = false;
+                    isTextChanged = true;
+                    noClickedOperator = true;
+                }
+ 
+ 
+                // عند النقر على الزر 2 سيتم إضافة 2 في مربع النص مع التأكد من عدم وجود أي صفر لا فائدة له من الناحية اليسرى
+                else if (e.getSource() == b2)
+                {
+                    if (isEqualClicked == true || textField.getText().equals("0"))
+                        textField.setText("2");
+ 
+                    else
+                        textField.setText(textField.getText()+"2");
+ 
+                    isEqualClicked = false;
+                    isTextChanged = true;
+                    noClickedOperator = true;
+                }
+ 
+ 
+                // عند النقر على الزر 3 سيتم إضافة 3 في مربع النص مع التأكد من عدم وجود أي صفر لا فائدة له من الناحية اليسرى
+                else if (e.getSource() == b3)
+                {
+                    if (isEqualClicked == true || textField.getText().equals("0"))
+                        textField.setText("3");
+ 
+                    else
+                        textField.setText(textField.getText()+"3");
+ 
+                    isEqualClicked = false;
+                    isTextChanged = true;
+                    noClickedOperator = true;
+                }
+ 
+ 
+                // عند النقر على الزر 4 سيتم إضافة 4 في مربع النص مع التأكد من عدم وجود أي صفر لا فائدة له من الناحية اليسرى
+                else if (e.getSource() == b4)
+                {
+                    if (isEqualClicked == true || textField.getText().equals("0"))
+                        textField.setText("4");
+ 
+                    else
+                        textField.setText(textField.getText()+"4");
+ 
+                    isEqualClicked = false;
+                    isTextChanged = true;
+                    noClickedOperator = true;
+                }
+ 
+ 
+                // عند النقر على الزر 5 سيتم إضافة 5 في مربع النص مع التأكد من عدم وجود أي صفر لا فائدة له من الناحية اليسرى
+                else if (e.getSource() == b5)
+                {
+                    if (isEqualClicked == true || textField.getText().equals("0"))
+                        textField.setText("5");
+ 
+                    else
+                        textField.setText(textField.getText()+"5");
+ 
+                    isEqualClicked = false;
+                    isTextChanged = true;
+                    noClickedOperator = true;
+                }
+ 
+ 
+                // عند النقر على الزر 6 سيتم إضافة 6 في مربع النص مع التأكد من عدم وجود أي صفر لا فائدة له من الناحية اليسرى
+                else if (e.getSource() == b6)
+                {
+                    if (isEqualClicked == true || textField.getText().equals("0"))
+                        textField.setText("6");
+ 
+                    else
+                        textField.setText(textField.getText()+"6");
+ 
+                    isEqualClicked = false;
+                    isTextChanged = true;
+                    noClickedOperator = true;
+                }
+ 
+ 
+                // عند النقر على الزر 7 سيتم إضافة 7 في مربع النص مع التأكد من عدم وجود أي صفر لا فائدة له من الناحية اليسرى
+                else if (e.getSource() == b7)
+                {
+                    if (isEqualClicked == true || textField.getText().equals("0"))
+                        textField.setText("7");
+ 
+                    else
+                        textField.setText(textField.getText()+"7");
+ 
+                    isEqualClicked = false;
+                    isTextChanged = true;
+                    noClickedOperator = true;
+                }
+ 
+ 
+                // عند النقر على الزر 8 سيتم إضافة 8 في مربع النص مع التأكد من عدم وجود أي صفر لا فائدة له من الناحية اليسرى
+                else if (e.getSource() == b8)
+                {
+                    if (isEqualClicked == true || textField.getText().equals("0"))
+                        textField.setText("8");
+ 
+                    else
+                        textField.setText(textField.getText()+"8");
+ 
+                    isEqualClicked = false;
+                    isTextChanged = true;
+                    noClickedOperator = true;
+                }
+ 
+ 
+                // عند النقر على الزر 9 سيتم إضافة 9 في مربع النص مع التأكد من عدم وجود أي صفر لا فائدة له من الناحية اليسرى
+                else if (e.getSource() == b9)
+                {
+                    if (isEqualClicked == true || textField.getText().equals("0"))
+                        textField.setText("9");
+ 
+                    else
+                        textField.setText(textField.getText()+"9");
+ 
+                    isEqualClicked = false;
+                    isTextChanged = true;
+                    noClickedOperator = true;
+                }
+ 
+ 
+                // سيتم إضافة نقطة (أي فاصلة) عند النقر على زر النقطة في حال لم يكن هناك نقطة أصلاً
+                else if (e.getSource() == comma)
+                {
+                    if (isEqualClicked == true || textField.getText().isEmpty())
+                        textField.setText("0.");
+ 
+                    else if (!textField.getText().contains("."))
+                        textField.setText(textField.getText()+".");
+ 
+                    isEqualClicked = false;
+                    isTextChanged = true;
+                }
+ 
+ 
+                // للإشارة إلى أنه يوجد عملية جمع operation و وضع القيمة 1 للمتغير num عند النقر على الزر + سيتم تخزين القيمة المدخلة في المتغير
+                else if (e.getSource() == plus &amp;&amp; noClickedOperator == true)
+                {
+                    // قبل أي شيء سيتم التأكد من أنه لا يوجد عملية قسمة سابقة لأي رقم على صفر, و إن وجدت سيتم عرض النص التالي في مربع النص
+                    if (textField.getText().equals("0") &amp;&amp; operandLabel.getText().equals("÷"))
+                        textField.setText("cannot divide by 0");
+ 
+                    // إذا كان هناك أي قيمة مدخلة في مربع النص أو كان هناك ناتج معروض لعملية سابقة فوق مربع النص سيتم تنفيذ التالي
+                    else if (isTextChanged == true || oldValueLabel.getText().isEmpty()) {
+                        try {
+ 
+                            // إذا لم يكن هناك قيمة مدخلة حالياً في مربع النص num سيتم وضع 0 في المتغير
+                            if (textField.getText().isEmpty())
+                                num = 0;
+ 
+                            // num إذا لم يكن مربع النص فارغاً سيتم وضع الرقم المدخل فيه في المتغير
+                            else
+                                num = Double.parseDouble(textField.getText());
+ 
+                            // حتى لا يؤثر على عملية الجمع oldAnswer إذا لم يكن هناك أي ناتج ظاهر لعملية سابقة فوق مربع النص, سيتم وضع 0 في المتغير
+                            if (oldValueLabel.getText().isEmpty()) {
+                                operation = 1;
+                                oldAnswer = 0;
+                            }
+                            // oldAnswer إذا كان يوجد ناتج ظاهر لعملية سابقة فوق مربع النص, سيتم تخزينه في المتغير
+                            else
+                                oldAnswer = Double.parseDouble(oldValueLabel.getText());
+ 
+                            // و مسح النص الذي كان موجوداً في مربع النص oldValueLabel بعدها سيتم وضع ناتج العملية السابقة كنص للكائن
+                            calculateOldAnswer();
+                            operandLabel.setText("+");
+                            oldValueLabel.setText(format.format(oldAnswer));
+                            textField.setText("");
+ 
+                            // calculateOldAnswer() للإشارة إلى أنه يجب جمع القيم المدخلة عند أول إستدعاء للدالة operation بعدها سيتم وضع 1 في المتغير
+                            operation = 1;
+                        }
+                        catch(Exception ex) {
+                            textField.setText("Error");
+                        }
+                    }
+                    // في الأخير سيتم الإشارة إلى أنه تم النقر على إحدى الأزرار ÷ × - + و أن القيمة المدخلة في مربع النص قد تغيرت
+                    isTextChanged = false;
+                    noClickedOperator = false;
+                }
+ 
+ 
+                // للإشارة إلى أنه يوجد عملية طرح operation و وضع القيمة 2 للمتغير num عند النقر على الزر - سيتم تخزين القيمة المدخلة في المتغير
+                else if (e.getSource() == minus &amp;&amp; noClickedOperator == true)
+                {
+                    // قبل أي شيء سيتم التأكد من أنه لا يوجد عملية قسمة سابقة لأي رقم على صفر, و إن وجدت سيتم عرض النص التالي في مربع النص
+                    if (textField.getText().equals("0") &amp;&amp; operandLabel.getText().equals("÷"))
+                        textField.setText("cannot divide by 0");
+ 
+                    // إذا كان هناك أي قيمة مدخلة في مربع النص أو كان هناك ناتج معروض لعملية سابقة فوق مربع النص سيتم تنفيذ التالي
+                    else if (isTextChanged == true || oldValueLabel.getText().isEmpty()) {
+                        try {
+ 
+                            // إذا لم يكن هناك قيمة مدخلة حالياً في مربع النص num سيتم وضع 0 في المتغير
+                            if (textField.getText().isEmpty())
+                                num = 0;
+ 
+                            // num إذا لم يكن مربع النص فارغاً سيتم وضع الرقم المدخل فيه في المتغير
+                            else
+                                num = Double.parseDouble(textField.getText());
+ 
+                            // حتى لا يؤثر على عملية الطرح oldAnswer إذا لم يكن هناك أي ناتج ظاهر لعملية سابقة فوق مربع النص, سيتم وضع 0 في المتغير
+                            if (oldValueLabel.getText().isEmpty()) {
+                                operation = 2;
+                                oldAnswer = 0;
+                            }
+                            // oldAnswer إذا كان يوجد ناتج ظاهر لعملية سابقة فوق مربع النص, سيتم تخزينه في المتغير
+                            else
+                                oldAnswer = Double.parseDouble(oldValueLabel.getText());
+ 
+                            // و مسح النص الذي كان موجوداً في مربع النص oldValueLabel بعدها سيتم وضع ناتج العملية السابقة كنص للكائن
+                            calculateOldAnswer();
+                            operandLabel.setText("-");
+                            oldValueLabel.setText(format.format(oldAnswer));
+                            textField.setText("");
+ 
+                            // calculateOldAnswer() للإشارة إلى أنه يجب طرح القيم المدخلة عند أول إستدعاء للدالة operation بعدها سيتم وضع 2 في المتغير
+                            operation = 2;
+                        }
+                        catch(Exception ex) {
+                            textField.setText("Error");
+                        }
+                    }
+                    // في الأخير سيتم الإشارة إلى أنه تم النقر على إحدى الأزرار ÷ × - + و أن القيمة المدخلة في مربع النص قد تغيرت
+                    isTextChanged = false;
+                    noClickedOperator = false;
+                }
+ 
+ 
+                // للإشارة إلى أنه يوجد عملية ضرب operation و وضع القيمة 3 للمتغير num عند النقر على الزر × سيتم تخزين القيمة المدخلة في المتغير
+                else if (e.getSource() == multiple &amp;&amp; noClickedOperator == true)
+                {
+                    // قبل أي شيء سيتم التأكد من أنه لا يوجد عملية قسمة سابقة لأي رقم على صفر, و إن وجدت سيتم عرض النص التالي في مربع النص
+                    if (textField.getText().equals("0") &amp;&amp; operandLabel.getText().equals("÷"))
+                        textField.setText("cannot divide by 0");
+ 
+                    // إذا كان هناك أي قيمة مدخلة في مربع النص أو كان هناك ناتج معروض لعملية سابقة فوق مربع النص سيتم تنفيذ التالي
+                    else if (isTextChanged == true || oldValueLabel.getText().isEmpty()) {
+                        try {
+ 
+                            // إذا لم يكن هناك قيمة مدخلة حالياً في مربع النص num سيتم وضع 1 في المتغير
+                            if (textField.getText().isEmpty())
+                                num = 1;
+ 
+                            // num إذا لم يكن مربع النص فارغاً سيتم وضع الرقم المدخل فيه في المتغير
+                            else
+                                num = Double.parseDouble(textField.getText());
+ 
+                            // حتى لا يؤثر على عملية الضرب oldAnswer إذا لم يكن هناك أي ناتج ظاهر لعملية سابقة فوق مربع النص, سيتم وضع 1 في المتغير
+                            if (oldValueLabel.getText().isEmpty()) {
+                                operation = 3;
+                                oldAnswer = 1;
+                            }
+                            // oldAnswer إذا كان يوجد ناتج ظاهر لعملية سابقة فوق مربع النص, سيتم تخزينه في المتغير
+                            else
+                                oldAnswer = Double.parseDouble(oldValueLabel.getText());
+ 
+                            // و مسح النص الذي كان موجوداً في مربع النص oldValueLabel بعدها سيتم وضع ناتج العملية السابقة كنص للكائن
+                            calculateOldAnswer();
+                            operandLabel.setText("×");
+                            oldValueLabel.setText(format.format(oldAnswer));
+                            textField.setText("");
+ 
+                            // calculateOldAnswer() للإشارة إلى أنه يجب ضرب القيم المدخلة عند أول إستدعاء للدالة operation بعدها سيتم وضع 3 في المتغير
+                            operation = 3;
+                        }
+                        catch(Exception ex) {
+                            textField.setText("Error");
+                        }
+                    }
+                    // في الأخير سيتم الإشارة إلى أنه تم النقر على إحدى الأزرار ÷ × - + و أن القيمة المدخلة في مربع النص قد تغيرت
+                    isTextChanged = false;
+                    noClickedOperator = false;
+                }
+ 
+ 
+                // للإشارة إلى أنه يوجد عملية قسمة operation و وضع القيمة 4 للمتغير num عند النقر على الزر ÷ سيتم تخزين القيمة المدخلة في المتغير
+                else if (e.getSource() == divide &amp;&amp; noClickedOperator == true)
+                {
+                    // قبل أي شيء سيتم التأكد من أنه لا يوجد عملية قسمة سابقة لأي رقم على صفر, و إن وجدت سيتم عرض النص التالي في مربع النص
+                    if (textField.getText().equals("0") &amp;&amp; operandLabel.getText().equals("÷"))
+                        textField.setText("cannot divide by 0");
+ 
+                    // إذا كان هناك أي قيمة مدخلة في مربع النص أو كان هناك ناتج معروض لعملية سابقة فوق مربع النص سيتم تنفيذ التالي
+                    else if (isTextChanged == true || oldValueLabel.getText().isEmpty()) {
+                        try {
+ 
+                            // إذا لم يكن هناك قيمة مدخلة حالياً في مربع النص num سيتم وضع 1 في المتغير
+                            if (textField.getText().isEmpty())
+                                num = 1;
+ 
+                            // num إذا لم يكن مربع النص فارغاً سيتم وضع الرقم المدخل فيه في المتغير
+                            else
+                                num = Double.parseDouble(textField.getText());
+ 
+                            if (oldValueLabel.getText().isEmpty())
+                                oldAnswer = num;
+ 
+                            else {
+                                oldAnswer = Double.parseDouble(oldValueLabel.getText());
+                                calculateOldAnswer();
+                            }
+ 
+                            // و مسح النص الذي كان موجوداً في مربع النص oldValueLabel بعدها سيتم وضع ناتج العملية السابقة كنص للكائن
+                            operandLabel.setText("÷");
+                            oldValueLabel.setText(format.format(oldAnswer));
+                            textField.setText("");
+ 
+                            // calculateOldAnswer() للإشارة إلى أنه يجب قسم القيم المدخلة عند أول إستدعاء للدالة operation بعدها سيتم وضع 4 في المتغير
+                            operation = 4;
+                        }
+                        catch(Exception ex) {
+                            textField.setText("Error");
+                        }
+                    }
+                    // في الأخير سيتم الإشارة إلى أنه تم النقر على إحدى الأزرار ÷ × - + و أن القيمة المدخلة في مربع النص قد تغيرت
+                    isTextChanged = false;
+                    noClickedOperator = false;
+                }
+ 
+ 
+                // = هنا قمنا بتحديد ما يحدث عند النقر على الزر
+                else if (e.getSource() == equal)
+                {
+                    // إذا كان يوجد قيمة في مربع النص و قيمة سابقة ظاهرة فوقه سيتم حساب ناتجهم و عرض الناتج في مربع النص
+                    if (!textField.getText().isEmpty() &amp;&amp; !oldValueLabel.getText().isEmpty() &amp;&amp; isEqualClicked == false) {
+ 
+                        double a = Double.parseDouble(oldValueLabel.getText());
+                        double b = Double.parseDouble(textField.getText());
+                        char operand = operandLabel.getText().charAt(0);
+ 
+                        switch (operand) {
+                            case '+':
+                                answer = a + b;
+                                textField.setText(format.format(answer));
+                                break;
+ 
+                            case '-':
+                                answer = a - b;
+                                textField.setText(format.format(answer));
+                                break;
+ 
+                            case '×':
+                                answer = a * b;
+                                textField.setText(format.format(answer));
+                                break;
+ 
+                            case '÷':
+                                if (b == 0)
+                                    textField.setText("cannot divide by 0");
+                                else {
+                                    answer = a / b;
+                                    textField.setText(format.format(answer));
+                                }
+                                break;
+                        }
+                    }
+ 
+                    // إذا لم تكن هناك قيمة في مربع النص و كانت هناك قيمة سابقة ظاهرة فوقه سيتم وضعها في مربع النص
+                    else if (textField.getText().isEmpty() &amp;&amp; !oldValueLabel.getText().isEmpty())
+                        textField.setText(oldValueLabel.getText());
+ 
+                    // في الأخير سيتم مسح قيمة العملية السابقة و العامل الموضوعين فوق مربع النص لإظهار النتيجة النهائية فقط
+                    oldValueLabel.setText("");
+                    operandLabel.setText("");
+ 
+                    // = بالإضافة إلى الإشارة إلى أنه لم يتم النقر على إحدى الأزرار ÷ × - + و أنه تم النقر على الزر
+                    isEqualClicked = true;
+                    noClickedOperator = true;
+                }
+ 
+ 
+                // عند النقر على الزر ← سيتم مسح رقم واحد من مربع النص أو مسح أي خطأ ظاهر
+                else if (e.getSource() == back)
+                {
+                    if (textField.getText().equals("Error") || textField.getText().equals("cannot divide by 0"))
+                        textField.setText("");
+                    else if (!textField.getText().isEmpty())
+                        textField.setText(textField.getText().substring(0, textField.getText().length() - 1));
+                }
+ 
+ 
+                // سيتم مسح كل شيء ظاهر و تصفير جميع القيم المخزنة للبدء من جديد C عند النقر على الزر
+                else if (e.getSource() == clear) {
+                    oldValueLabel.setText("");
+                    textField.setText("");
+                    operandLabel.setText("");
+                    oldAnswer = 0;
+                    num = 0;
+                    noClickedOperator = true;
+                }
+            }
+        };
+ 
+ 
+        // الموجودة فيه كلما تم النقر على زر actionPerformed() حتى يتم إستدعاء الدالة actionListener هنا قمنا بربط جميع الأزرار بالكائن
+        b0.addActionListener(actionListener);
+        b1.addActionListener(actionListener);
+        b2.addActionListener(actionListener);
+        b3.addActionListener(actionListener);
+        b4.addActionListener(actionListener);
+        b5.addActionListener(actionListener);
+        b6.addActionListener(actionListener);
+        b7.addActionListener(actionListener);
+        b8.addActionListener(actionListener);
+        b9.addActionListener(actionListener);
+        comma.addActionListener(actionListener);
+        plus.addActionListener(actionListener);
+        multiple.addActionListener(actionListener);
+        divide.addActionListener(actionListener);
+        minus.addActionListener(actionListener);
+        equal.addActionListener(actionListener);
+        clear.addActionListener(actionListener);
+        back.addActionListener(actionListener);
+ 
+        // هنا قمنا بتحديد بعض خصائص النافذة و جعلناها مرئية
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setTitle("Calculator");
+        setSize(263, 300);
+        setLocationRelativeTo(null);
+        setResizable(false);
+        setLayout(null);
+        setVisible(true);
+    }
+ 
+    // فقط createAndShowGUI() سيقوم الكونستركتور بإستدعاء الدالة Main عند إنشاء كائن من الكلاس
+    public Main() {
+        createAndShowGUI();
+    }
+ 
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                // التي ستنشئ النافذة createAndShowGUI() و بالتالي سيتم إستدعاء الدالة Main هنا قمنا بإنشاء كائن من الكلاس
+                new Main();
+            }
+        });
+    }
+ 
+}
+		</pre>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

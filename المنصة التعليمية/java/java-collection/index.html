@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الإطار Collection في جافا | Java Collections</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>الإطار Collection في جافا</h1>
+<article>
+<h2>مقدمة</h2>
+<p>في الإصدار <span class="number">1</span> في جافا, تم بناء بعض الكلاسات التي تهتم بطريقة تخزين البيانات في الذاكرة أثناء تشغيل البرنامج و منها ما ذكرنا في الدرس السابق.</p>
+<p>في الإصدار <span class="number">2</span> في جافا, تم  تطوير مبادئ الـ <span class="word">Data Structure</span> بشكل ملحوظ حيث تم إضافة مجموعة كبيرة من الكلاسات <span class="inline">(<span class="word">Classes</span>)</span> و الإنترفيسات <span class="inline">(<span class="word">Interfaces</span>)</span> بشكل منظم ضمن مجموعات <span class="inline">( <span class="word">Collections</span> )</span>. كل مجموعة منهم تمثل مبدأ معين في طريقة تخزين البيانات في الذاكرة وقت تشغيل البرنامج.</p>
+<p>ميزة أخرى يقدمها لك الإطار <code data-enlighter-language="java">Collection</code> ألا و هي المزامنة <span class="inline">( <span class="word">Synchronization</span> ).</span> ستعرف أهمية المزامنة لاحقاً في هذا الدرس.</p>
+<br/>
+<h3>بناء الـ <span class="word">Collections</span> في جافا</h3>
+<p>الإطار <code data-enlighter-language="java">Collection</code> بني بشكل هرمي كالتالي:</p>
+<ul class="explain">
+<li><p>كل فكرة أساسية فيه تمثل بإنترفيس<!-- أو بكلاس نوعه <code data-enlighter-language="java">abstract</code> -->.</p></li>
+<li><p>و كل طريقة يمكن استخدامها لتنفيذ هذه الفكرة تمثل بكلاس.</p></li>
+</ul>
+<br/>
+<p>الإنترفيس <code data-enlighter-language="java">Collection</code> هو أساس كل <span class="word">Collection</span> موجودة في هذا الإطار.<br/>
+	كل إنترفيس يرث مباشرةً من الإنترفيس <code data-enlighter-language="java">Collection</code> يمثل <span class="word">Collection</span> مختلفة.</p>
+<p>الصورة التالية توضح طريقة بناء الإطار <code data-enlighter-language="java">Collection</code>.</p>
+<p><a href="collection-framework.png" target="_blank"><img alt="كلاسات هياكل البيانات في جافا" src="collection-framework.png"/></a></p><br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>بعض الكلاسات التي تم تعريفها في الإصدار <span class="number">1</span>, هي نفسها التي ستراها في الإصدار <span class="number">2</span> و التي وضعت في <span class="word">Collection</span> معينة.<br/>
+		في الدرس السابق, صحيح أننا شرحنا كلاسات الـ <span class="word">Data Structure</span> التي وجدت في أول إصدار من لغة جافا, لكننا شرحناها كما هي الآن في آخر إصدار منها.</p>
+</div>
+</article>
+<article>
+<h2>الإنترفيسات الموجودة في الإطار <code data-enlighter-language="java">Collection</code></h2>
+<p>بما أنه لا يمكن إنشاء كائن من إنترفيس, قمنا باستخدام مبدأ الـ <span class="word">Upcasting</span> في جميع الأمثلة التي وضعناها في الجدول حتى نجعل الإنترفيس يشير إلى كلاس يرث منه حتى نتمكن من إعطائك مثال حول كل إنترفيس موضوع في الجدول.</p>
+<p>الجدول التالي يحتوي على جميع الإنترفيسات الموجودة في الـ <code data-enlighter-language="java">Collection</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الإنترفيس مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public interface Collection</code></span>
+			الإنترفيس<code data-enlighter-language="java">Collection</code> مصمم بشكل عام لاحتواء الأشياء المشتركة في جميع الـ <span class="word">Collection</span>.<br/>
+        	إذاً هو الأساس لأي إنترفيس يمثل <span class="word">Collection</span> حيث أن جميع الـ <span class="word">Collection</span> ترث منه.<br/>
+<a class="open-page" href="collection.php" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public interface List</code></span>
+			الإنترفيس <code data-enlighter-language="java">List</code> يرث من الإنترفيس <code data-enlighter-language="java">Collection</code>. تم بناءه لتخزين مجموعة من العناصر كما لو أنه مصفوفة ليس لها حجم محدد.<br/>
+<a class="open-page" href="list.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public interface Set</code></span>
+			الإنترفيس <code data-enlighter-language="java">Set</code> يرث من الإنترفيس <code data-enlighter-language="java">Collection</code>.<br/>
+			الفرق الأساسي بينه و بين الإنترفيس <code data-enlighter-language="java">List</code> هو أنه لا يمكنه تخزين نفس القيمة في أكثر من عنصر. إذاً هنا لا يمكن وجود نفس القيمة في أكثر من عنصر.<br/>
+	        هذا الإنترفيس مفيد في العلميات الحسابية, حيث أن وجود عناصر لا تحمل نفس القيمة, يتيح لك مقارنة قيمهم بشكل منطقي حتى و لو كانوا مختلفين في النوع.<br/>
+<a class="open-page" href="set.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public interface SortedSet</code></span>
+			الإنترفيس <code data-enlighter-language="java">SortedSet</code> يرث من الإنترفيس <code data-enlighter-language="java">Set</code>. تم بناءه لتخزين العناصر بترتيب تصاعدي <span class="inline">( <span class="word">Ascending</span> )</span>, أي من الأصغر إلى الأكبر.<br/>
+			كما أنه يحتوي على دوال جديدة غير موجودة في الإنترفيس <code data-enlighter-language="java">Set</code>.<br/>
+<a class="open-page" href="sortedset.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public interface Comparator</code></span>
+			الإنترفيس <code data-enlighter-language="java">Comparator</code> مصمم لمقارنة قيم الكائنات.<br/>
+	        يعتمد عليه كل إنترفيس يقوم بترتيب الكائنات التي يتم إدخلها فيه, سواء كان ترتيباً حسب القيمة أو ترتيباً أبجدياً.<br/>
+<a class="open-page" href="comparator.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public interface Iterator</code></span>
+			الإنترفيس <code data-enlighter-language="java">Iterator</code> يستخدم لتخزين عناصر متتالية موجودة  في أي كائن دفعة واحدة.<br/>
+			بعدها يمكن إرجاع هذه العناصر واحداً تلو الآخر.<br/>
+			ينصح باستخدام هذا الإنترفيس بدل استخدام الإنترفيس <code data-enlighter-language="java">Enumeration</code>.<br/>
+<a class="open-page" href="iterator.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public interface ListIterator</code></span>
+			الإنترفيس <code data-enlighter-language="java">ListIterator</code> يرث من الإنترفيس <code data-enlighter-language="java">Iterator</code>, و يملك دوال إضافية للتعامل مع العناصر المخزنة.<br/>
+<a class="open-page" href="listiterator.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>الكلاسات الموجودة في الإطار <code data-enlighter-language="java">Collection</code></h2>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الكلاس مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public class ArrayList</code></span>
+			الكلاس <code data-enlighter-language="java">ArrayList</code> يستخدم لإنشاء مصفوفات متطورة مقارنةً مع المصفوفات العادية <span class="word">Arrays</span>, حيث يوفر لك مجموعة من الدوال التي تمكنك من البحث فيها, التشييك على عناصرها, إضافة عناصر جديدة, حذف عناصر منها, و معالجة أكثر من عنصر فيها في نفس الوقت إلخ..<br/>
+	        أهم ميزة في المصفوفات التي نوعها <code data-enlighter-language="java">ArrayList</code> هي أن عدد العناصر فيها غير ثابت, حيث أنه يزيد عند إضافة عنصر جديد فيها و ينقص عند حذف عنصر منها بشكل تلقائي, و هذه الميزة غير موجودة في المصفوفات العادية.<br/>
+<a class="open-page" href="arraylist.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public class LinkedList</code></span>
+			يشبه الكلاس <code data-enlighter-language="java">ArrayList</code> من حيث الفكرة. و هو يحتوي على دوال إضافية غير موجودة فيه.<br/>
+<a class="open-page" href="linkedlist.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public class HashSet</code></span>
+			الكلاس <code data-enlighter-language="java">HashSet</code> يستخدم لتخزين عناصر متتالية, دون مراعاة أي دقة في ترتيب هذه العناصر, كما أنه يسمح بتخزين القيمة <code data-enlighter-language="java">null</code>.<br/>
+	        لكنه لا يسمح بتخزين أكثر من عنصر عندهم نفس القيمة, فتجد كل عنصر فيه يملك قيمة مختلفة.<br/>
+	        السبب الوحيد الذي قد يجعلك تستخدم هذا الكلاس هو سرعته العالية في التخزين مقارنة مع باقي الكلاسات الموجودة في المجموعة <code data-enlighter-language="java">Set</code>.<br/>
+<a class="open-page" href="hashset.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public class LinkedHashSet</code></span>
+			الكلاس <code data-enlighter-language="java">LinkedHashSet</code> يرث من الكلاس <code data-enlighter-language="java">HashSet</code> تم تصميمه فقط للحفاظ على ترتيب العناصر التي يتم إدخالها فيه.<br/>
+        	و هو يملك نفس الأشياء التي يملكها الكلاس <code data-enlighter-language="java">HashSet</code>.<br/>
+<a class="open-page" href="linkedhashset.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public class TreeSet</code></span>
+			الكلاس <code data-enlighter-language="java">TreeSet</code> يعتبر الكلاس الأكثر تطوراً بين كلاسات المجموعة <code data-enlighter-language="java">Set</code>, و هو يستخدم لتخزين عناصر متتالية, و ترتيبهم بالطريقة التي تريد, كما أنه يسمح بتخزين القيمة <code data-enlighter-language="java">null</code>,	لكنه لا يسمح بتخزين أكثر من عنصر عندهم نفس القيمة, فتجد كل عنصر فيه يملك قيمة مختلفة. و هو يحتوي على دوال أخرى تسهل طريقة الوصول للعناصر.<br/>
+<a class="open-page" href="treeset.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>الإنترفيسات الموجودة في الإطار <code data-enlighter-language="java">Map</code></h2>
+<p>الجدول التالي يحتوي إنترفيسات لا ترث من الإنترفيس <code data-enlighter-language="java">Collection</code>, لكنها مهمة جداً حيث أن بعضها يوفر لك طرق تخزين لا تتوافر في الإطار <code data-enlighter-language="java">Collection</code>, و بعضها يستخدم للتعامل مع الكلاسات الموجودة في الإطار <code data-enlighter-language="java">Collection</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="3">الإنترفيس مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public interface Map</code></span>
+			الإنترفيس <code data-enlighter-language="java">Map</code> يتيح لك تخزين العناصر بشكل <span class="inline"><span class="word">Key</span> / <span class="word">Value</span></span>.<br/>
+        	هنا كل عنصر يتم تخزينه يملك كائنين: الأول عبارة عن مفتاح <span class="inline">( <span class="word">key</span> )</span> و الثاني عبارة قيمة <span class="inline">( <span class="word">value</span> )</span>.<br/>
+<a class="open-page" href="map.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public interface SortedMap</code></span>
+			هذا الإنترفيس يرث من الإنترفيس <code data-enlighter-language="java">Map</code>,  تم بناءه لتخزين العناصر بشكل <span class="inline"><span class="word">Key</span> / <span class="word">Value</span></span>. هنا يتم ترتيب العناصر حسب الـ <span class="word">key</span> بشكل تصاعدي, من الأصغر إلى الأكبر.<br/>
+<a class="open-page" href="sortedmap.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>الكلاسات الموجودة في المجموعة <code data-enlighter-language="java">Map</code></h2>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الكلاس مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public class HashMap</code></span>
+			الكلاس <code data-enlighter-language="java">HashMap</code> يستخدم لتخزين العناصر بشكل <span class="word">Key / Value</span> حيث يتم إعطاء مفتاح لكل قيمة يتم تخزينها بداخل الـ <code data-enlighter-language="java">HashMap</code>.<br/>
+	        إذاً الـ <code data-enlighter-language="java">HashMap</code> كأنه جدول يتألف من عامودين, الأول يحتوي المفاتيح <span class="inline">( <span class="word">Keys</span> )</span> و الثاني يحتوي على القيم <span class="inline">( <span class="word">Values</span> )</span>.<br/>
+<a class="open-page" href="hashmap.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public class LinkedHashMap</code></span>
+			الكلاس <code data-enlighter-language="java">LinkedHashMap</code> يرث من الكلاس <code data-enlighter-language="java">HashMap</code> تم تصميمه فقط للحفاظ على ترتيب العناصر التي يتم إدخالها فيه.<br/>
+<a class="open-page" href="linkedhashmap.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public class TreeMap</code></span>
+			الكلاس <code data-enlighter-language="java">TreeMap</code> يعتبر الكلاس الأكثر تطوراً بين كلاسات المجموعة <code data-enlighter-language="java">Tree</code>, و هو يستخدم لترتيب العناصر في الذاكرة بشكل تصاعدي <span class="word">Ascending</span> نسبة للـ <span class="word">keys</span>. و هو يحتوي على دوال أخرى تسهل طريقة الوصول للعناصر.<br/>
+<a class="open-page" href="treemap.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>مجموعة الخوارزميات <span class="word">Algorithms Collection</span></h2>
+<p>الكلاس <code data-enlighter-language="java">Collection</code> يحتوي على دوال ثابتة نوعها <code data-enlighter-language="java">static</code>. هذه الدوال تساعد كثيراً في الوصول إلى العناصر و التلاعب بها سواء كنت تتعامل مع الكلاسات التي ترث من الإنترفيس <code data-enlighter-language="java">Collection</code> أو مع الكلاسات التي ترث من الإنترفيس <code data-enlighter-language="java">Map</code>.</p>
+<p>إذاً هذه الدوال تغنيك عن كتابة خوارزميات صعبة و معقدة, لذلك سميت مجموعة الخوارزميات <span class="inline">( <span class="word">Algorithms Collection</span> ).</span></p>
+<p>لمزيد من التفاصيل حول مجموعة الخوارزميات <a class="open-page" href="algorithms.html" target="_blank">تابع القراءة »</a></p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

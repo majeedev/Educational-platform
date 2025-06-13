@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس سنتعرف على الأمر CREATE TABLE و كيف يستخدم لإنشاء جداول في قاعدة البيانات" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>SQL Create Table | أمر إنشاء جدول في SQL</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../database-icon.png"/></li>
+<li class="title">كيف أبدأ بالتعلم</li>
+<li><a href="../sql-overview/index.html"><span class="en">SQL</span> - نظرة عامة</a></li>
+<li><a href="../sql-environment-setup/index.html"><span class="en">SQL</span> - تجهيز بيئة العمل</a></li>
+<li><a href="../sql-basic-syntax/index.html"><span class="en">SQL</span> - أسلوب كتابة الأوامر</a></li>
+<li><a href="../sql-comments/index.html"><span class="en">SQL</span> - التعليقات</a></li>
+<li><a href="../sql-write-first-query/index.html"><span class="en">SQL</span> - كتابة أول إستعلام</a></li>
+<li><a href="../sql-refresh-databases-panel/index.html"><span class="en">SQL</span> - تحديث قائمة قواعد البيانات</a></li>
+<li><a href="../sql-databases-structure-in-general/index.html"><span class="en">SQL</span> - مفاهيم و مصطلحات مهمة</a></li>
+<li class="title">أوامر و دوال SQL</li>
+<li><a href="../sql-create-database/index.html"><span class="en">SQL</span> - أمر إنشاء قاعدة بيانات</a></li>
+<li><a href="../sql-drop-database/index.html"><span class="en">SQL</span> - أمر حذف قاعدة بيانات</a></li>
+<li><a href="../sql-data-types/index.html"><span class="en">SQL</span> - أهم أنواع البيانات</a></li>
+<li><a href="index.html"><span class="en">SQL</span> - أمر إنشاء جدول</a></li>
+<li><a href="../sql-drop-table/index.html"><span class="en">SQL</span> - أمر حذف جدول</a></li>
+<li><a href="../sql-use/index.html"><span class="en">SQL</span> - أمر تحديد قاعدة البيانات</a></li>
+<li><a href="../sql-insert-into/index.html"><span class="en">SQL</span> - أمر إضافة سطر في الجدول</a></li>
+<li><a href="../sql-auto-increment/index.html"><span class="en">SQL</span> - الترقيم التلقائي للأسطر</a></li>
+<li><a href="../sql-select/index.html"><span class="en">SQL</span> - أمر جلب بيانات من الجدول</a></li>
+<li><a href="../sql-select-with-concat/index.html"><span class="en">SQL</span> - دمج الأعمدة عند جلبها</a></li>
+<li><a href="../sql-select-repeat-columns-name/index.html"><span class="en">SQL</span> - تكرار إسم الأعمدة في الإستعلام</a></li>
+<li><a href="../sql-select-with-where/index.html"><span class="en">SQL</span> - جلب البيانات ضمن شروط</a></li>
+<li><a href="../sql-select-with-order/index.html"><span class="en">SQL</span> - جلب البيانات مع ترتيبها</a></li>
+<li><a href="../sql-select-distinct/index.html"><span class="en">SQL</span> - جلب بيانات خالية من التكرار</a></li>
+<li><a href="../sql-union/index.html"><span class="en">SQL</span> - دمج الجداول في جدول واحد</a></li>
+<li><a href="../sql-delete/index.html"><span class="en">SQL</span> - أمر حذف بيانات من الجدول</a></li>
+<li><a href="../sql-update/index.html"><span class="en">SQL</span> - أمر تحديث بيانات الجدول</a></li>
+<li><a href="../sql-select-with-limit/index.html"><span class="en">SQL</span> - تحديد عدد الأسطر التي سترجع</a></li>
+<li><a href="../sql-null-values/index.html"><span class="en">SQL</span> - التعامل مع الحقول الفارغة</a></li>
+<li><a href="../sql-min/index.html"><span class="en">SQL</span> - جلب أصغر قيمة في العامود</a></li>
+<li><a href="../sql-max/index.html"><span class="en">SQL</span> - جلب أكبر قيمة في العامود</a></li>
+<li><a href="../sql-count/index.html"><span class="en">SQL</span> - حساب عدد أسطر الجدول</a></li>
+<li><a href="../sql-sum/index.html"><span class="en">SQL</span> - حساب ناتج جمع قيم العامود</a></li>
+<li><a href="../sql-avg/index.html"><span class="en">SQL</span> - حساب متوسط قيم العامود</a></li>
+<li><a href="../sql-select-with-group-by/index.html"><span class="en">SQL</span> - تجميع قيم الحقول المشتركة</a></li>
+<li><a href="../sql-select-with-having/index.html"><span class="en">SQL</span> - شروط على الحقول المجمعة</a></li>
+<li><a href="../sql-insert-into-select/index.html"><span class="en">SQL</span> - نسخ البيانات في جدول آخر</a></li>
+<li><a href="../sql-case/index.html"><span class="en">SQL</span> - وضع قيمة إفتراضية لكل حالة</a></li>
+<li><a href="../sql-unique/index.html"><span class="en">SQL</span> - تخزين قيم موحدة في العامود</a></li>
+<li class="title">العلاقات بين الجداول</li>
+<li><a href="../sql-how-to-relate-tables/index.html"><span class="en">SQL</span> - كيف يتم ربط الجداول</a></li>
+<li><a href="../sql-relationships-types/index.html"><span class="en">SQL</span> - أنواع العلاقات بين الجدوال</a></li>
+<li><a href="../sql-joins/index.html"><span class="en">SQL</span> - طرق ربط معلومات الجداول</a></li>
+<li><a href="../sql-alias-for-tables/index.html"><span class="en">SQL</span> - وضع أسماء مختصرة للجداول</a></li>
+<li><a href="../sql-self-join/index.html"><span class="en">SQL</span> - ربط المعلومات في نفس الجدول</a></li>
+<li class="title">معلومات متقدمة</li>
+<li><a href="../sql-alter/index.html"><span class="en">SQL</span> - تعديل بنية الجدول بعد إنشائه</a></li>
+<li><a href="../sql-default/index.html"><span class="en">SQL</span> - وضع قيم إفتراضية للحقول</a></li>
+<li><a href="../sql-primary-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح رئيسي</a></li>
+<li><a href="../sql-foreign-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح أجنبي</a></li>
+<li><a href="../sql-check/index.html"><span class="en">SQL</span> - وضع شروط لتخزين القيم</a></li>
+<li><a href="../sql-transactions/index.html"><span class="en">SQL</span> - تنفيذ كل الأوامر أو إلغاءها كلها</a></li>
+<li><a href="../sql-indexes/index.html"><span class="en">SQL</span> - الفهارس و أنواعها</a></li>
+<li><a href="../sql-like/index.html"><span class="en">SQL</span> - البحث في الأعمدة النصية</a></li>
+<li><a href="../sql-sub-queries/index.html"><span class="en">SQL</span> - كتابة إستعلامات متداخلة</a></li>
+<li><a href="../sql-connect-to-database/index.html"><span class="en">SQL</span> - الإتصال بقاعدة البيانات عن بعد</a></li>
+<li class="title">بناء قواعد بيانات لمشاريع</li>
+<li><a href="../sql-building-database-from-scratch/index.html"><span class="en">SQL</span> - تصميم قاعدة بيانات من الصفر</a></li>
+<li><a href="../sql-download-ready-made-database/index.html"><span class="en">SQL</span> - تحميل قواعد بيانات جاهزة</a></li>
+<!--
+<li><a href="../sql-backup-database"><span class="en">SQL</span> - إنشاء نسخة من قاعدة البيانات</a></li>
+<li><a href="../sql-stored-procedures"><span class="en">SQL</span> - تعريف دوال و استدعائها</a></li>
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">SQL</span>أمر إنشاء جدول</h1>
+<article>
+<h2>الأمر <code>CREATE TABLE</code></h2>
+<p>الأمر <code data-enlighter-language="sql">CREATE TABLE</code> يستخدم لإنشاء جدول في قاعدة البيانات.<br/>
+	و هنا نود التنبيه أنك لا تستطيع إنشاء أكثر من جدول في قاعدة البيانات بنفس الإسم.</p>
+<p>عند إنشاء جدول جديد يمكنك إنشاء جميع الأعمدة التي تريد وضعها فيه أيضاً.<br/>
+	إذا لم ترد إنشاء جميع الأعمدة لحظة إنشاء الجدول أو كنت لا تعرف بالضبط كم عامود تحتاج فيجب على الأقل أن تنشئ عامود واحد فيه.</p>
+<br/>
+<h3>الشكل العام لإستخدامه</h3>
+<p>في حال كنت ستنشئ عامود واحد فقط عند إنشاء الجدول فسيكون شكل الإستعلام كالتالي.</p>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+CREATE TABLE table_name (column_name datatype); 
+	</pre>
+<br/>
+<ul class="explain">
+<li><p>مكان الكلمة <code>table_name</code> نضع الإسم الذي سيتم إعطاؤه للجدول.</p></li>
+<li><p>مكان الكلمة <code>column_name</code> نضع إسم العامود الذي سيتم إنشاؤه في الجدول.</p></li>
+<li><p>مكان الكلمة <code>datatype</code> نضع نوع البيانات التي يمكن إدخالها في العامود.</p></li>
+</ul>
+<br/>
+<p>في حال كنت ستنشئ أكثر من عامود عند إنشاء الجدول فسيكون شكل الإستعلام كالتالي.</p>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+CREATE TABLE table_name (
+	column_name_1 datatype,
+	column_name_2 datatype,
+	column_name_3 datatype,
+	....
+); 
+	</pre>
+<br/>
+<p>هنا نقوم بكتابة الإستعلام على أكثر من سطر لأن التعامل معه هكذا أسهل.<br/>
+	بعد ذكر إسم و نوع كل عامود تريد وضعه ضع فاصلة إذا أردت إنشاء عامود آخر بعده.</p>
+</article>
+<article>
+<h2>قاعدة البيانات التي سنطبق عليها</h2>
+<p>في الدرس السابق قمنا بإنشاء قاعدة بيانات إسمها <span class="inline"><code>harmash</code>,</span> قم بتحديدها لأننا سنتعامل معها.</p>
+<p><a href="before-doing-any-thing.png" target="_blank"><img alt="" src="before-doing-any-thing.png"/></a></p>
+</article>
+<article>
+<h2>إنشاء جدول جديد في قاعدة البيانات</h2>
+<p>الإستعلام التالي ينشئ جدول جديد إسمه <code>books</code> يتألف من أربع أعمدة.<br/>
+<span class="note">ملاحظة:</span> يجب تحديد قاعدة البيانات التي تريد إنشاء جدول فيها - أي القاعدة <code>harmash</code> - قبل تنفيذ هذا الأمر لأنك في الأساس تنوي إنشاء الجدول فيها.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+CREATE TABLE books (
+	title VARCHAR(200),         -- و يمكنه أن يحتوي على 200 حرف VARCHAR و نوع title العامود الأول إسمه
+    number_of_pages INT,        -- أي يمكن وضع أرقام صحيحة فيه ,INT و نوع title العامود الثاني إسمه
+    author_name VARCHAR(50),    -- و يمكنه أن يحتوي على 50 حرف VARCHAR و نوع title العامود الثالث إسمه
+    publishing_date DATE        -- أي يمكن وضع تواريخ فيه فقط ,DATE و نوع title العامود الرابع إسمه
+);
+		</pre>
+</div>
+<br/>
+<p>بعد تنفيذ الإستعلام السابق في <span class="word">phpMyAdmin</span> سيتم إنشاء الجدول <code>books</code> في قاعدة البيانات التي قمت بتحديدها قبل تنفيذ الإستعلام.<br/>
+	إذا افترضنا أننا قمنا بإنشاء الجدول في قاعدة بيانات إسمها <code>harmash</code> سيظهر الجدول فيها كالتالي.</p>
+<p><a href="create-table.png" target="_blank"><img alt="" src="create-table.png"/></a></p>
+<br/>
+<p>في حال أردت رؤية أسماء أعمدة الجدول <code>books</code> من نافذة <span class="word">phpMyAdmin</span> يمكنك النقر على الرمز <code>+</code> الموضوع بجانب إسمها حتى يظهرهم لك.</p>
+<p><a href="view-table-columns-in-phpmyadmin.png" target="_blank"><img alt="" src="view-table-columns-in-phpmyadmin.png"/></a></p>
+<br/>
+<p>في حال أردت رؤية معلومة مفصلة عن أعمدة الجدول <code>books</code> من نافذة <span class="word">phpMyAdmin</span> يمكنك النقر على كلمة <code>Columns</code> الموضوع بجانب إسمها حتى يظهرهم لك.<br/>
+	هذه الصفحة تتيح لك رؤية كل تفاصيل أعمدة الجدول مع إمكانية إعادة تسميتها, تعديل أنواعها و حذفها إن أردت بدون كتابة أي أمر و لكن لا تهتم بهذه الأمور لأنك مهتم بتعلم كيف فعل كل شيء بواسطة أوامر <span class="word">SQL</span> و ليس بواسطة <span class="inline"><span class="word">phpMyAdmin</span>.</span></p>
+<p><a href="view-and-edit-columns-in-phpmyadmin.png" target="_blank"><img alt="" src="view-and-edit-columns-in-phpmyadmin.png"/></a></p>
+<br/>
+<p>في حال أردت الخروج من الجدول <code>books</code> و الرجوع للقسم الذي تكتب فيه أوامر <span class="word">SQL</span> يمكنك النقر على إسم قاعدة البيانات و من ثم التوجه لقسم <span class="word">SQL</span> كالتالي.<br/>
+	هذه الصفحة تتيح لك رؤية كل تفاصيل أعمدة الجدول مع إمكانية إعادة تسميتها, تعديل أنواعها و حذفها إن أردت بدون كتابة أي أمر و لكن لا تهتم بهذه الأمور لأنك مهتم بتعلم كيفية فعل كل شيء بواسطة أوامر <span class="word">SQL</span> و ليس بواسطة <span class="inline"><span class="word">phpMyAdmin</span>.</span></p>
+<p><a href="back-to-db-and-sql-section.png" target="_blank"><img alt="" src="back-to-db-and-sql-section.png"/></a></p>
+</article>
+<article>
+<h2>محاولة إنشاء جدول موجود أصلاً في قاعدة البيانات</h2>
+<p>في حال حاولت إنشاء جدول و كان هناك جدول آخر في نفس قاعدة البيانات عنده نفس الإسم الذي تريد استخدامه, سيظهر لك الخطأ التالي عند تنفيذ الإستعلام.</p>
+<div class="code-box">
+<div>
+<span class="red">Table 'table_name' already exists</span>
+</div>
+</div>
+<br/>
+<p>قم بمحاولة إعادة إنشاء الجدول السابق في قاعدة البيانات, أي قم بإعادة تنفيذ الإستعلام التالي.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+CREATE TABLE books (
+	title VARCHAR(200),
+    number_of_pages INT,
+    author_name VARCHAR(50),
+    publishing_date DATE
+);
+		</pre>
+</div>
+<br/>
+<p>بعد تنفيذ الإستعلام السابق في <span class="word">phpMyAdmin</span> سيظهر لك خطأ كالتالي.<br/>
+	هذا الخطأ يعني أنه لا يمكنك إنشاء جدول في قاعدة البيانات <code>harmash</code> إسمه <code>books</code> لأنه في الأصل يوجد فيها جدول إسمه <span class="inline"><code>books</code>.</span></p>
+<p><a href="error-table-already-exists.png" target="_blank"><img alt="" src="error-table-already-exists.png"/></a></p>
+</article>
+<article>
+<h2>طريقة التأكد من أن الجدول المراد إنشاؤه غير موجود في الأساس</h2>
+<p>في حال أردت تنفيذ الإستعلام الذي يقضي بإنشاء جدول في قاعدة البيانات فقط في حال كان لا يوجد فيها جدول آخر عنده نفس الإسم و بالتالي تجنب ظهور الخطأ <span class="code red">Table 'table_name' already exists</span> يمكنك إضافة جملة <code data-enlighter-language="sql">IF NOT EXISTS</code> قبل إسم الجدول الذي تريد إنشاؤه كالتالي.</p>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+CREATE TABLE IF NOT EXISTS table_name;
+	</pre>
+<br/>
+<p>الإستعلام التالي ينشئ جدول جديد إسمه <code>books</code> في حال لم يكن هناك جدول آخر في نفس قاعدة البيانات بهذا الإسم.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+CREATE TABLE IF NOT EXISTS books (
+	title VARCHAR(200),
+    number_of_pages INT,
+    author_name VARCHAR(50),
+    publishing_date DATE
+);
+		</pre>
+</div>
+<br/>
+<p>بعد تنفيذ الإستعلام السابق في <span class="word">phpMyAdmin</span> لن يتم إنشاء جدول جديد إسمه <code>books</code> في قاعدة البيانات <code>harmash</code> أو حذف الجدول الذي إسمه <code>books</code> منها و إنشاء واحد جديد.<br/>
+	ما سيحدث فقط هو أنه سيتم تجاهل تنفيذ أمر إنشاء الجدول و لن يظهر أي خطأ في نتيجة الإستعلام كما حدث سابقاً.</p>
+<p><a href="create-table-if-not-exists.png" target="_blank"><img alt="" src="create-table-if-not-exists.png"/></a></p>
+</article>
+<article>
+<h2>تطبيق كل الأوامر السابقة في تمرين واحد</h2>
+<p>حتى الآن أنت تعلمت كيف تنشئ قاعدة بيانات جديدة, كيف تحذف قاعدة بيانات موجودة و كيف تنشئ جدول جديد.</p>
+<br/>
+<h3>المطلوب</h3>
+<p>الآن, أكتب إستعلام يقوم بإنشاء قاعدة بيانات إسمها <code>training</code> ثم قم بتنفيذه حتى تتأكد أنه تم إنشاء قاعدة البيانات بنجاح.<br/>
+	بعدها أكتب إستعلام يقوم بإنشاء جدول إسمه <code>users</code> يتألف من 3 أعمدة كالتالي:</p>
+<ul class="explain">
+<li><p>العامود الأول <code>username VARCHAR(50)</code></p></li>
+<li><p>العامود االثاني <code>password VARCHAR(100)</code></p></li>
+<li><p>العامود الثالث <span class="inline"><code>income DECIMAL(5,2)</code></span></p></li>
+</ul>
+<p>بعدها أكتب إستعلام يقوم بحذف قاعدة البيانات <code>training</code> و تأكد أنه قد تم حذفها بنجاح و لم تعد تظهر مع قواعد البيانات الأخرى.</p>
+<p>من فضلك لا تنتقل لدرس جديد قبل إنهاء هذا التمرين بنجاح, و في حال لم تعرف كيف تحل التمرين, قم بمراجعة الدروس السابقة.</p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

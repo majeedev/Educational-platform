@@ -1,0 +1,611 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="فيهذا الدرس ستتعلم كيف تتعامل مع المصفوفات في جافا بشكل مفصل. ستتعلم كيف تعرف مصفوفة, كيف تعرض قيمها, كيف تتعامل المصفوفة مع الدالة, مع أمثلة مبسطة لك فكرة." name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>التعامل مع المصفوفات في جافا | Java Arrays</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>التعامل مع المصفوفات في جافا</h1>
+<article>
+<h2>مفهوم المصفوفات</h2>
+<p><b>مصفوفة:</b> تعني <span class="word">Array</span> في البرمجة. و المصفوفة عبارة عن كائن يحتوي مجموعة عناصر من نفس النوع تتخزن بجوار بعضها في الذاكرة.<br/> 
+	بمعنى آخر المصفوفة عبارة عن كائن يمكنه تخزين عدة قيم من نفس النوع.</p>
+<p>عناصر المصفوفة تتميز عن بعضها من خلال رقم محدد يعطى لكل عنصر يسمى <span class="word">index</span>. أول عنصر فيها يتم تخزينه في الـ <span class="word">index</span> رقم <span class="number">0</span>.</p>
+<p>عدد عناصر المصفوفة ثابت, أي بمجرد أن قمت بتحديده لا يمكنك تغييره من جديد, لكنك تستطيع تغيير قيم هذه العناصر متى شئت.</p>
+<br/>
+<h3>فوائد الـ <span class="word">Array</span></h3>
+<ul class="explain">
+<li><p>تقليل عدد المتغيرات المتشابهة, فمثلاً إذا كنا نريد تعريف <span class="number">10</span> متغيرات نوعهم <code data-enlighter-language="java">int</code>, نقوم بتعريف مصفوفة واحدة تتألف من <span class="number">10</span> عناصر.</p></li>
+<li><p>تطوير الكود, إذا قمت بتخزين المعلومات داخل مصفوفة, تستطيع تعديلهم, مقارنتهم أو جلبهم كلهم دفعة واحدة بكود صغير جداً باستخدام الحلقات.</p></li>
+<li><p>تستطيع الوصول لأي عنصر من خلال الـ <span class="word">index</span>.</p></li>
+</ul>
+<br/><br/>
+<h3>المشكلة الوحيدة في الـ <span class="word">Array</span></h3>
+<ul class="explain">
+<li><p>حجمها ثابت, أي عندما تقوم بتعريف مصفوفة و تحدد عدد عناصرها, لا يمكنك تغيير حجمها لاحقاً, أي لا يمكن حذف عنصر أو زيادة واحد جديد.<br/>
+		هذه المشكلة تم حلها لاحقاً من خلال إطار تخزين متطور يسمى <span class="word">Collection</span> ستتعرف عليه في دروس لاحقة.</p></li>
+</ul>
+<br/><br/>
+<h3>مصطلحات تقنية</h3>
+<p>الفرق بين <span class="word">Declare Array</span> و <span class="word">Create Array</span> هو:</p>
+<ul class="explain">
+<li><p><span class="word">Declare Array</span> تعني تعريف نوع في الذاكرة يفهمه المعالج على أنه مصفوفة.<p></p></p></li>
+<li><p><span class="word">Create Array</span> تعني تحديد عدد عناصر المصفوفة و إعطاء قيمة أولية لكل عنصر فيها.</p></li>
+</ul>
+<p><span class="note">ملاحظة:</span> لا تستطيع التعامل مع المصفوفة إذا لم تفعل لها <span class="word">Create</span>.</p>
+</article>
+<article>
+<h2>تعريف مصفوفة</h2>
+<p>تعريف مصفوفة جديدة يسمى <span class="word">Declare Array</span></p>
+<p>يمكنك تعريف مصفوفة جديدة بثلاث طرق:</p>
+<div class="code-box">
+<div>
+<span class="gray">// يمكنك تعريفها هكذا</span><br/>
+<span class="red">datatype</span>[] arrayRefVar;         <span class="gray">// هذا الأسلوب المفضل في جافا</span><br/><br/>
+<span class="gray">// أو هكذا</span><br/>
+<span class="red">datatype</span> []arrayRefVar;<br/><br/>
+<span class="gray">// أو هكذا</span><br/>
+<span class="red">datatype</span> arrayRefVar[];
+	    </div>
+</div>
+<br/>
+<ul class="explain">
+<li><p><span class="code red">datatype</span>: هو نوع المصفوفة التي سيتم تعريفها.</p></li>
+<li><p><span class="code black">[]</span>: هو من كم بعد تتألف المصفوفة.</p></li>
+</ul>
+<br/>
+<div class="example-box">
+<h4>أمثلة</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+// double هنا قمنا بتعريف مصفوفة ذات بعد واحد, نوعها
+double[] doubleArray;
+
+// int هنا قمنا بتعريف مصفوفة ذات بعدين, نوعها
+int[][] intArray;
+
+// String هنا قمنا بتعريف مصفوفة ذات بعد واحد, نوعها
+String[] stringArray; 
+		</pre>
+</div>
+</article>
+<article>
+<h2>إنشاء مصفوفة</h2>
+<p>إنشاء مصفوفة جديدة يعني <span class="word">Create Array</span> في اللغة الإنجليزية.</p>
+<p>إذا أردت أن تعرف أي مصفوفة فعندك طريقتين:</p>
+<ul class="explain">
+<li><p>تنشئ المصفوفة و تعطيها القيم لاحقاً.</p></li>
+<li><p>تنشئ المصفوفة و تعطيها القيم مباشرةً عند تعريفها.</p></li>
+</ul>
+<br/><br/>
+<h3>طريقة إنشاء مصفوفة و إعطائها القيم لاحقاً</h3>
+<div class="code-box">
+<div>
+		    arrayRefVar = <span class="blue">new</span> <span class="red">datatype</span>[<span class="red">size</span>];
+	    </div>
+</div>
+<ul class="explain">
+<li><p><span class="code black">:arrayRefVar</span>: هو إسم المصفوفة التي يجب أن تكون معرفة سابقاً.</p></li>
+<li><p><span class="code blue">new</span>: تقوم بتوليد قيم أولية لجميع عناصر المصفوفة, تعطيهم القيمة صفر كقيمة أولية.</p></li>
+<li><p><span class="code red">datatype</span>: هو نوع القيم الأولية التي سيتم توليدها.</p></li>
+<li><p><span class="code red">size</span>: هو عدد عناصر المصفوفة.</p></li>
+</ul>
+<br/><br/>
+<h3>طريقة إنشاء مصفوفة و إعطائها قيم أولية مباشرةً عند إنشائها</h3>
+<div class="code-box">
+<div>
+	        arrayRefVar = { <span class="red">value0</span>, <span class="red">value1</span>, ..., <span class="red">valuek</span> };
+	    </div>
+</div>
+<ul class="explain">
+<li><p><span class="code black">arrayRefVar</span>: هو إسم المصفوفة التي يجب أن تكون معرفة سابقاً.</p></li>
+<li><p><span class="code red">value0</span> و <span class="code red">value1</span> و <span class="code red">valuek</span>: عبارة عن القيم التي نعطيها للمصفوفة.</p></li>
+</ul>
+</article>
+<article>
+<h2>تعريف مصفوفة و إعطاءها قيم أولية بكود أقل</h2>
+<p>يمكنك أن تفعل <span class="word">Declaring</span> و <span class="word">Creating</span> و <span class="word">Assigning</span> لمصفوفة جديدة في جملة واحدة.<br/>
+	يمكنك تحديد عدد عناصرها فقط عند تعريفها, و عندها ستعطى القيمة صفر لجميع عناصرها كقيمة أولية.</p>
+<div class="code-box">
+<div>
+<span class="red">datatype</span>[] arrayRefVar = <span class="blue">new</span> <span class="red">datatype</span>[<span class="red">size</span>];
+	    </div>
+</div>
+<br/>
+<p>و يمكنك إعطائها قيم أولية مباشرةً عند تعريفها, و عندها تتخزن كل قيمة في عنصر, و هكذا يتحدد عدد عناصرها.</p>
+<div class="code-box">
+<div>
+<span class="red">datatype</span>[] arrayRefVar = { <span class="red">value0</span>, <span class="red">value1</span>, ..., <span class="red">valuek</span> };
+	    </div>
+</div>
+<br/>
+<p>يمكنك الوصول لعناصر المصفوفة من خلال الـ <span class="word">index</span>.<br/>
+	يتم تخزين عناصر المصفوفة إبتداءاً من الـ <span class="word">index</span> رقم <span class="number">0</span> إلى الـ <span class="word">index</span> رقم <code data-enlighter-language="java">length-1</code>.<br/>
+	بمعنى آخر العنصر الأول في المصفوفة يحمل الـ <span class="word">index</span> رقم <span class="number">0</span>, و العنصر الآخير فيها يحمل <span class="word">index</span> رقم <code data-enlighter-language="java">length-1</code>.</p>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>القيمة الإفتراضية صفر تعطى حسب نوع المصفوفة.<br/>
+		إذا كان نوع المصفوفة <code data-enlighter-language="java">int</code> أو <code data-enlighter-language="java">long</code>القيمة الإفتراضية التي ستعطى لجميع عناصر المصفوفة هي <span class="number">0</span>.<br/>
+		إذا كان نوع المصفوفة <code data-enlighter-language="java">double</code> أو <code data-enlighter-language="java">float</code>القيمة الإفتراضية التي ستعطى لجميع عناصر المصفوفة هي <span class="number">0.0</span>.<br/>
+		إذا كان نوع المصفوفة <code data-enlighter-language="java">String</code> القيمة الإفتراضية التي ستعطى لجميع عناصر المصفوفة هي <code data-enlighter-language="java">null</code>.</p>
+</div>
+</article>
+<article>
+<h2>شكل المصفوفة في الذاكرة</h2>
+<p>لنفترض الآن أننا قمنا بتعريف مصفوفة نوعها <code data-enlighter-language="java">int</code>, إسمها <code data-enlighter-language="java">a</code>, تتألف من <span class="number">5</span> عناصر.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+int[] a = { 10, 20, 30, 40, 50 }; 
+	</pre>
+<br/>
+<p>يمكنك تصور شكل المصفوفة <code data-enlighter-language="java">a</code> في الذاكرة كالتالي.</p>
+<p><a href="pic_1.png" target="_blank"><img src="pic_1.png"/></a></p>
+<p>بما أن المصفوفة تتألف من <span class="number">5</span> عناصر, تم إعطاء العناصر أرقام <span class="word">index</span> بالترتيب من <span class="number">0</span> إلى <span class="number">4</span>.</p>
+<p>إذاً هنا أصبح عدد عناصر المصفوفة يساوي <span class="number">5</span> و هو ثابت لا يمكن تغييره لاحقاً في الكود.<br/>
+	و يمكنك إستخدام أرقام الـ <span class="word">index</span> لتصل لجميع عناصر المصفوفة سواء لعرض القيم أو لتغييرها.</p><br/>
+<p>في المثال التالي, قمنا بتعريف مصفوفة, ثم غيرنا قيمة العنصر الأول, ثم عرضناها, من خلال الـ <span class="word">index</span> الخاص بالعنصر.<br/>
+    بعدها, إستخدامنا الخاصية <code data-enlighter-language="java">length</code> الموجودة في جافا لطباعة عدد عناصر المصفوفة.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        int[] a = { 10, 20, 30, 40, 50 };               // هنا قمنا بتعريف مصفوفة تتألف من 5 عناصر
+ 
+        a[0] = 99;                                      // هنا قمنا بتغيير قيمة العنصر الأول
+ 
+        System.out.println("a[0] = " + a[0]);           // هنا عرضنا قيمة العنصر الأول
+        System.out.println("a.length = " + a.length);   // هنا عرضنا عدد عناصر المصفوفة
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+a[0] = 99
+a.length = 5
+	    </pre>
+</div>
+</article>
+<article>
+<h2>مثال شامل حول التعامل مع المصفوفات</h2>
+<p>سنقوم الآن بكتابة برنامج شامل لكل المفاهيم التي ذكرناها في هذا الدرس.<br/>
+<p>الخطوات التي سنقوم بتنفيذها هي التالية:</p>
+<ol class="arabic">
+<li><p>تعريف مصفوفة فارغة نوعها <code data-enlighter-language="java">int</code>, إسمها <span class="word">numbers</span>, تتألف من <span class="number">5</span> عناصر.</p></li>
+<li><p>عرض قيمها الأولية باستخدام حلقة.</p></li>
+<li><p>إعطاء قيمة لكل عنصر فيها.</p></li>
+<li><p>عرض جميع قيمها من جديد باستخام حلقة</p></li>
+</ol>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // 1- هنا قمنا بتعريف المصفوفة
+        int[] numbers = new int[5];
+ 
+        // 2- هنا قمنا بعرض قيم جميع عناصرها
+        for(int i=0; i&lt;numbers.length; i++)
+        {
+            System.out.println("numbers[" + i + "]: " + numbers[i]);
+        }
+ 
+        // 3- هنا قمنا يتغيير قيم جميع عناصرها
+        numbers[0] = 1000;
+        numbers[1] = 2000;
+        numbers[2] = 3000;
+        numbers[3] = 4000;
+        numbers[4] = 5000;
+ 
+        System.out.println();
+ 
+        // 4- هنا قمنا بعرض قيم جميع عناصرها
+        for(int i=0; i&lt;numbers.length; i++)
+        {
+            System.out.println("numbers[" + i + "]: " + numbers[i]);
+        }
+ 
+    }
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+numbers[0]: 0
+numbers[1]: 0
+numbers[2]: 0
+numbers[3]: 0
+numbers[4]: 0
+
+numbers[0]: 1000
+numbers[1]: 2000
+numbers[2]: 3000
+numbers[3]: 4000
+numbers[4]: 5000
+		</pre>
+</div>
+</p></article>
+<article>
+<h2>الحلقة <span class="word">foreach</span></h2>
+<p>إبتداءاً من الإصدار 1.5 في جافا, قدم لنا حلقة <code data-enlighter-language="java">for</code> جديدة إسمها <span class="word">foreach loop</span>.<br/>
+	هذه الحلقة تسمح لك بالمرور على جميع عناصر المصفوفة دون الحاجة لتعريف عداد و تحديد أين يبدأ و أين ينتهي.</p><br/>
+<h4>طريقة تعريف الحلقة <span class="word">foreach</span></h4>
+<p>في البداية نحن لا نكتب <span class="word">foreach</span> بل نكتب <code data-enlighter-language="java">for</code>.<br/>
+	الإختلاف بين <span class="word">foreach</span> و <code data-enlighter-language="java">for</code> التقليدية يظهر فقط بين القوسين, لاحظ الـ <span class="word">syntax</span>.</p>
+<div class="code-box">
+<div>
+            for( <span class="red">element</span>: <span class="red">array</span> ) {<br/>
+			    <span class="red">// statements</span><br/>
+			}
+	    </div>
+</div><br/>
+<ul class="explain">
+<li><p><span class="code red">element</span>: هو متغير عادي نقوم بتعريفه بداخل الحلقة و نعطيه نفس نوع المصفوفة التي نضعها بعد النقطتين, لأنه في كل دورة سيقوم بتخزين قيمة عنصر من عناصرها, لذلك يجب وضع نوعه مثل نوعها.</p></li>
+<li><p><span class="code red">array</span>: هي المصفوفة التي نريد الوصول لجميع عناصرها.</p></li>
+<li><p><span class="code red">statements</span>: هي جميع الأوامر الموضوعة في الحلقة و هي تتنفذ في كل دورة.</p></li>
+</ul>
+<p>إذاً هنا تقوم الحلقة بالمرور على جميع عناصر المصفوفة بالترتيب من العنصر الأول إلى العنصر الأخير, و في كل دورة تقوم بتخزين قيمة العنصر في المتغير الذي قمنا بتعريفه.</p><br/>
+<p>سنقوم الآن بكتابة برنامج بسيط يعرض قيم جميع عناصر مصفوفة باستخدام الحلقة <span class="word">foreach</span>.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // هنا قمنا بتعريف المصفوفة
+        int[] numbers = { 1000, 2000, 3000, 4000, 5000 };
+ 
+        // element في المتغير numbers هنا في كل دورة سيتم تخزين قيمة عنصر من عناصر المصفوفة
+        for(int element: numbers)
+        {
+            System.out.println(element);   // element هنا سيتم عرض القيمة التي تخزنت في المتغير
+        }
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+1000
+2000
+3000
+4000
+5000
+		</pre>
+</div>
+</article>
+<article>
+<h2>تعامل الدوال مع المصفوفات</h2>
+<p>سنتكلم الآن عن نقتطين أساسيتين:</p>
+<ul class="explain">
+<li><p>تمرير المصفوفة كـ <span class="word">argument</span> للدالة.</p></li>
+<li><p>تعريف دالة ترجع مصفوفة.</p></li>
+</ul>
+<br/>
+<h3>تمرير المصفوفة كـ <span class="word">argument</span> للدالة</h3>
+<p>سنقوم بتعريف دالة تأخذ مصفوفة كباراميتر, مهمة هذه الدالة ستكون فقط طباعة جميع قيم عناصر المصفوفة.<br/>
+    ثم سنقوم بإستدعاء هذه الدالة مرتين, لأننا سنعلمك طريقتين لتمرير مصفوفة كـ <span class="word">argument</span>.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java">
+public class Main {
+
+    // 1- argument هنا قمنا بتعريف دالة تطبع محتوى أي مصفوفة نمررها لها كـ
+    public static void printArray(int[] array) {
+        for (int i=0; i&lt;array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+    }
+	
+    public static void main(String[] args) {
+ 
+        // 2- هنا قمنا بتعريف مصفوفة
+        int[] numbers = { 1000, 2000, 3000, 4000, 5000 };
+ 
+        // 3- هنا قمنا باستدعاء الدالة و مررنا لها المصفوفة
+        printArray(numbers);
+ 
+        System.out.println();
+ 
+        // 4- هنا قمنا باستدعاء الدالة و أنشأنا مصفوفة بداخلها. ستفهم هذا الأسلوب في دروس لاحقة
+        printArray(new int[] {11, 12, 13, 14, 15});
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+1000 2000 3000 4000 5000
+11 12 13 14 15
+		</pre>
+</div>
+<br/><br/>
+<h3>تعريف دالة ترجع مصفوفة</h3>
+<p>سنقوم بتعريف دالة تأخذ مصفوفة كباراميتر و ترجعها معكوسة, ثم سنقوم بإستدعاء هذه الدالة.<br/>
+	ستلاحظ أننا قمنا بتعريف عدادين في الحلقة <code data-enlighter-language="java">for</code>, لأننا أردننا أن نلفت إنتباهك أيضاً أنه بإمكانك تعريف أكثر من عداد بداخل الحلقة<code data-enlighter-language="java">for</code>.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+	// 1- بالمقلوب argument هنا قمنا بتعريف دالة ترجع محتوى المصفوفة نمررها لها كـ
+    public static int[] reverseArray(int[] array) {
+ 
+        int[] result = new int[array.length];
+ 
+        for (int i=0, j=result.length-1; i&lt;array.length; i++, j--) {
+            result[j] = array[i];
+        }
+ 
+        return result;
+    }
+	
+    public static void main(String[] args) {
+ 
+		// 2- هنا قمنا بتعريف مصفوفة
+        int[] numbers = { 1000, 2000, 3000, 4000, 5000 };
+		
+		// 3- بالمقلوب numbers هنا قمنا بتعريف مصفوفة فارغة, سنستخدمها لحفظ قيم المصفوفة
+        int[] reversedNumbers;
+ 
+		// 4- reversedNumbers هنا قمنا بتخزين المصفوفة المقلوبة التي سترجعها الدالة في المصفوفة
+        reversedNumbers = reverseArray(numbers);
+ 
+		// 5- للتأكد فقط reversedNumbers هنا بعرض قيم المصفوفة
+        for (int i=0; i&lt;reversedNumbers.length; i++) {
+            System.out.print(reversedNumbers[i] + " ");
+        }
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+5000 4000 3000 2000 1000
+		</pre>
+</div>
+</article>
+<article>
+<h2>دوال جاهزة للتعامل مع المصفوفات</h2>
+<p>الكلاس <code data-enlighter-language="java">Arrays</code> هو كلاس جاهز في جافا, يحتوي على دوال نوعها <code data-enlighter-language="java">static</code> تطبق على جميع أنواع البيانات البدائية و تستخدم للترتيب, البحث, المقارنة, و لإعطاء قيم لعناصر المصفوفة, ذكرنا لك بعضها في هذا الجدول.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static boolean equals(Object[] a1, Object[] a2)</code></span>
+			تقارن المصفوفتين اللتين نمررهما لها مكان الباراميترين <code data-enlighter-language="java">a1</code> و <code data-enlighter-language="java">a2</code>.<br/>
+			ترجع <code data-enlighter-language="java">true</code> إذا كانتا  متساويتين في الحجم و المحتوى. غير ذلك ترجع <code data-enlighter-language="java">false</code>.<br/>
+<a class="open-page" href="arrays-equals.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void sort(Object[] a)</code></span>
+			ترتب قيم المصفوفة التي نمررها لها مكان الباراميتر <code data-enlighter-language="java">a</code> بشكل تصاعدي (<span class="word">ascending</span>).<br/>
+<a class="open-page" href="arrays-sort.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void fill(Object[] a, Object val)</code></span>
+			تستخدم لوضع قيمة أولية في جميع عناصر المصفوفة.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">a</code> نمرر المصفوفة التي سيتم وضع قيم أولية لعناصرها. و مكان الباراميتر <code data-enlighter-language="java">val</code> نمرر القيمة التي سيتم وضعها لهم.<br/>
+<a class="open-page" href="arrays-fill.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+</table>
+<br/>
+<p>الكلاس <code data-enlighter-language="java">System</code> يحتوي أيضاً على دوال للتعامل مع المصفوفات, نذكر منها.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void arraycopy(Object src, int srcPos, Object dest, int destPos, int length)</code></span>
+			تستخدم لنسخ محتوى مصفوفة و وضعه في مصفوفة أخرى.<br/>
+<a class="open-page" href="arrays-arraycopy.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+</table>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

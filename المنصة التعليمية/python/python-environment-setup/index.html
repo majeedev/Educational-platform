@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس سنقوم بتحميل البرنامج الذي سنستخدمه في بناء تطبيقات لغة بايثون" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>تهئية بيئة تطوير برامج بلغة بايثون | Python Environment Setup</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>تهئية بيئة تطوير برامج بلغة بايثون</h1>
+<article>
+<h2>طريقة عمل البرنامج المكتوب بلغة بايثون</h2>
+<p>بشكل عام نقوم بإنشاء ملف إمتداده <code data-enlighter-language="python">.py</code> لنضع فيه الأوامر التي سنكتبها بلغة بايثون.<br/>
+	بعد الإنتهاء من كتابة الأوامر, نحتاج إستدعاء مشغّل لغة بايثون <span class="inline">( <span class="word">Python Interpreter</span> )</span> حتى يتم تنفيذ الأوامر الموضوعة في الملف سطراً تلو الآخر كما في الصورة التالية.<p>
+<p><a href="how-python-programs-work.png" target="_blank"><img alt="" src="how-python-programs-work.png"/></a></p>
+<p>الكود الذي تقوم أنت بكتابته يسمى <span class="word">Source Code</span>.</p>
+<p>لتشغيل هذا الكود يجب أن يتم إرساله إلى مفسّر لغة بايثون <span class="inline">( <span class="word">Python Interpreter</span> )</span>.<br/>
+	المفسّر بدوره يحتوي على مترجم كود البايثون <span class="inline">( <span class="word">Compiler</span> )</span> و مشغل كود البايثون <span class="inline">( <span class="word">Virtual Machine</span> )</span>.</p>
+<p>المترجم مهمته تحويل كود البايثون إلى كود يفهمه الكمبيوتر يسمى <span class="inline">( <span class="word">Byte Code</span> )</span> و هنا يتم إنشاء نسخة جديدة من الملف بلغة الكمبيوتر إمتدادها <code data-enlighter-language="python">.pyc</code>.</p>
+<p>بعدها يقوم المترجم بتحويل الـ <span class="inline">( <span class="word">Byte Code</span> )</span> إلى برنامج يعمل على أي نظام تشغيل كان سواء <span class="word">Windows</span>, <span class="word">Linux</span>, <span class="word">MacOS</span>.</p>
+<br/>
+<h3>مصطلحات تقنية</h3>
+<ul class="explain">
+<li><p><span class="word">Source Code</span>: تعني الكود أو الشفرة المصدرية, و يقال لها أيضاً سورس كود.</p></li>
+<li><p><span class="word">Byte Code</span>: الكود الذي تفهمه الآلة و هنا تجد أن الكود كله يتألف من رقمين و هما: <span class="number">0</span> و <span class="number">1</span>.</p></li>
+<li><p><span class="word">Compiler</span>: يسمى مترجم الكود. فعلياً هو برنامج يحول الكود المكتوب بلغة بايثون إلى <span class="word">Byte Code</span>.</p></li>
+<li><p><span class="word">Virtual Machine</span>: هو البرنامج الذي يشغل الـ <span class="word">Byte Code</span> كأي برنامج على نظام التشغيل.</p></li>
+<li><p><span class="word">OS</span>: إختصار لـ <span class="word">Operating System</span> و التي تعني أي نظام تشغيل مثل <span class="word">Windows</span>, <span class="word">Linux</span>, <span class="word">MacOS</span>.</p></li>
+</ul>
+</p></p></article>
+<article>
+<h2>تجهيز بيئة العمل للبرمجة بلغة بايثون</h2>
+<p>سوف نقوم بتحميل آخر إصدار متوفر من لغة بايثون و نسخة مجانية من برنامج <span class="word">PyCharm</span> لبناء و تشغيل كود البايثون على الكمبيوتر.<br/>
+	سبب إستخدامنا لبرنامج الـ <span class="word">PyCharm</span> هو أنه سهل الإستخدام و يساعد كثيراً في كتابة الكود مع العلم أنه يمكنك إستخدام أي محرر نصوص لكتابة الكود.</p>
+<br/>
+<p>هنا وضعنا خطوات تحميل و تنصيب لغة بايثون.</p>
+<p><a class="open-page" href="download-and-install-python.html" target="_blank">شاهد الخطوات »</a></p>
+<br/>
+<p>هنا وضعنا خطوات تحميل برنامج  <span class="word">PyCharm</span> و إنشاء مشروع جديد فيه و تشغيله.<br/>
+<span class="note">إنتبه:</span> عليك إتباع هذه الخطوات في كل مرة تريد فيها تجربة الكود على الكمبيوتر.</p>
+<p><a class="open-page" href="create-a-new-project-in-pycharm.html" target="_blank">شاهد الخطوات »</a></p>
+</article>
+<article>
+<h2>أول برنامج بلغة بايثون</h2>
+<p>في المثال التالي سنقوم بإنشاء برنامج مهمته فقط طباعة الجملة <code data-enlighter-language="python">Hello World!</code>.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+print("Hello World!")
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+Hello World!
+		</pre>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>من الآن و حتى إنتهاء سلسلة دروس البايثون ستكون دروسك عبارة عن شروحات صغيرة لكل مفهوم جديد تتعلمه, و بهذه الطريقة ستفهم كل مبادئ لغة بايثون.<br/>
+		بعد أن تتعلم جميع أساسيات و مبادئ اللغة, سنعلمك طريقة بناء تطبيقات فيها واجهة مستخدم مثل التطبيقات التي نستخدمها في حياتنا اليومية.</p>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

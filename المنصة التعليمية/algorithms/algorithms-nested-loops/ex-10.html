@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الحلقات المتداخلة في الخوارزميات - التمرين العاشر</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../algo-icon.png"/></li>
+<li class="title">دروس تمهيدية</li>
+<li><a href="../algorithms-introduction/index.html">مفهوم الخوارزميات</a></li>
+<li><a href="../algorithms-environment-setup/index.html">تجهيز بيئة العمل</a></li>
+<li><a href="../algorithms-the-print-method/index.html">دالة الطباعة <span class="en">Print</span></a></li>
+<li><a href="../algorithms-concatenation/index.html">الدمج أثناء الطباعة</a></li>
+<li><a href="../algorithms-variables/index.html">المتغيرات</a></li>
+<li class="title">الحلقات و الشروط</li>
+<li><a href="../algorithms-loops/index.html">الحلقات و أنواعها</a></li>
+<li><a href="../algorithms-for-loop/index.html">الحلقة <span class="en">For</span></a></li>
+<li><a href="../algorithms-while-and-do-while-loops/index.html">الحلقتين <span class="en">While</span> و <span class="en">Do While</span></a></li>
+<li><a href="../algorithms-setting-conditions/index.html">جمل الشرط</a></li>
+<li><a href="../algorithms-operators/index.html">العوامل</a></li>
+<li><a href="index.html">الحلقات المتداخلة</a></li>
+<li class="title">إدخال بيانات من المستخدم</li>
+<li><a href="../algorithms-the-read-method/index.html">دالة الإدخال <span class="en">Read</span></a></li>
+<li><a href="../algorithms-calculate-the-factorial/index.html">حساب قيمة الـ <span class="en">Factorial</span> للعدد</a></li>
+<li><a href="../algorithms-calculate-the-power/index.html">حساب قيمة الـ <span class="en">Power</span> للعدد</a></li>
+<li class="title">المصفوفات</li>
+<li><a href="../algorithms-arrays-types/index.html">المصفوفات و أنواعها</a></li>
+<li><a href="../algorithms-one-dimensional-arrays/index.html">تعريف مصفوفة ذات بعد واحد</a></li>
+<li><a href="../algorithms-one-dimensional-arrays-length/index.html">حجم المصفوفة ذات البعد الواحد</a></li>
+<li><a href="../algorithms-working-with-one-dimensional-arrays/index.html">التعامل مع مصفوفة ذات بعد واحد</a></li>
+<li><a href="../algorithms-two-dimensional-arrays/index.html">تعريف مصفوفة ذات بعدين</a></li>
+<li><a href="../algorithms-two-dimensional-arrays-length/index.html">حجم المصفوفة ذات البعدين</a></li>
+<li><a href="../algorithms-working-with-two-dimensional-arrays/index.html">التعامل مع مصفوفة ذات بعدين</a></li>
+<li class="title">الدوال</li>
+<li><a href="../algorithms-methods/index.html">تعريف دوال جديدة</a></li>
+<li><a href="../algorithms-parameters/index.html">التعامل مع الباراميترات</a></li>
+<li><a href="../algorithms-recursion/index.html">تعريف دوال تستدعي نفسها</a></li>
+<li class="title">أكتب الكود كالمحترفين</li>
+<li><a href="../algorithms-write-less-code/index.html">تقليص حجم الكود</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Algorithms</span>الحلقات المتداخلة في الخوارزميات - التمرين العاشر</h1>
+<article>
+<h3>المطلوب</h3>
+<p>إستخدم الحلقات لطباعة الشكل التالي</p>
+<p><a href="ex-10-pic-1.png" target="_blank"><img alt="" src="ex-10-pic-1.png"/></a></p>
+<br/>
+<div class="example-box">
+<h4>النتيجة المطلوبة</h4>
+<div class="image-box">
+<a href="ex-10-pic-2.png" target="_blank"><img alt="" src="ex-10-pic-2.png"/></a>
+</div>
+</div>
+<div class="example-box">
+<h4>طريقة التحليل</h4>
+<div class="image-box">
+<a href="ex-10-pic-3.png" target="_blank"><img alt="" src="ex-10-pic-3.png"/></a>
+</div>
+</div>
+<div class="example-box">
+<h4>الخوارزمية</h4>
+<div class="image-box">
+<a href="ex-10-pic-4.png" target="_blank"><img alt="" src="ex-10-pic-4.png"/></a>
+</div>
+</div>
+<div class="example-box">
+<h4>كود الجافا</h4>
+<pre data-enlighter-language="java">
+public class Symbols {
+ 
+    public static void main (String[] args) {
+ 
+        System.out.print("* \n");
+ 
+        for (int i=2; i &lt;=7; i++)
+        {
+            System.out.print("* ");
+ 
+            for (int k=1; k &lt;=i-2; k++)
+            {
+                System.out.print("- ");
+            }
+ 
+            System.out.print("* \n");
+        }
+ 
+        for (int j=1; j &lt;=8; j++)
+        {
+            System.out.print("* ");
+        }
+ 
+        System.out.print("\n");
+ 
+    }
+ 
+}
+		</pre>
+</div>
+<div class="example-box">
+<h4>شرح الكود</h4>
+<div class="explaining-box">
+<ul>
+<li><p>الشكل الذي ننوي رسمه, قمنا بتقسيمه إلى ثلاث أجزاء:</p></li>
+<ul type="square">
+<li><p>جزء لم نستخدم فيه أي حلقة لرسمه.</p></li>
+<li><p>جزء إستخدمنا حلقة واحدة لرسمه.</p></li>
+<li><p>جزء إستخدمنا حلقة واحدة لرسمه.</p></li>
+</ul>
+<li><p>ملاحظة: كان بإمككنا عدم تجزيء الشكل و التعامل معه كله دفعة واحدة لكننا كنا سنضطر لوضع شرط أو أكثر لنرسم السطر الأول و السطر الأخير.</p></li>
+<br/><br/>
+<pre data-enlighter-language="java" data-enlighter-lineoffset="5">
+		System.out.print("* \n");
+				</pre>
+<li><p>في السطر الأول من الشكل الذي ننوي رسمه لا داعي لوجود أي حلقة لذلك طبعنا الرمز <code data-enlighter-language="java">*</code> مباشرةً.</p></li>
+<br/><br/>
+<pre data-enlighter-language="java" data-enlighter-lineoffset="7">
+		for (int i=2; i &lt;=7; i++)
+		{
+			System.out.print("* ");
+		
+			for (int k=1; k &lt;=i-2; k++)
+			{
+				System.out.print("- ");
+			}
+		
+			System.out.print("* \n");
+		}
+				</pre>
+<li><p>من السطر الثاني و حتى السطر السابع من الشكل الذي ننوي رسمه. لاحظنا أنه يوجد معادلة ثابتة لرسمه و هي أن عدد الرموز <code data-enlighter-language="java">-</code> في كل سطر يساوي قيمة العداد <code data-enlighter-language="java">i</code> ناقص <span class="number">2</span>.</p></li>
+<li><p>لذلك وجدنا أنه للحصول على هذا الشكل يجب أن نفعل التالي:</p></li>
+<ul type="square">
+<li><p>نقوم بطباعة الرمز <code data-enlighter-language="java">*</code> في بداية كل سطر.</p></li>
+<li><p>نستخدم الحلقة <code data-enlighter-language="java">k</code> لتحديد كل رمز <code data-enlighter-language="java">-</code> سيتم طباعته.</p></li>
+<li><p>نقوم بطباعة الرمز <code data-enlighter-language="java">*</code> في نهاءة كل سطر.</p></li>
+</ul>
+<br/><br/>
+<pre data-enlighter-language="java" data-enlighter-lineoffset="19">
+		for (int j=1; j &lt;=8; j++)
+		{
+			System.out.print("* ");
+		}
+				</pre>
+<li><p>السطر الأخير في الشكل الذي ننوي رسمه, إستخدمنا فيه حلقة واحدة إسمها <code data-enlighter-language="java">j</code> لطباعة الرمز <code data-enlighter-language="java">*</code> ثمانية مرات.</p></li>
+</ul>
+</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>JavaFX - الكلاس HBox</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../javafx-icon.png"/></li>
+<li class="title">أساسيات المكتبة</li>
+<li><a href="../javafx-overview/index.html"><span class="en">JavaFX</span> - نظرة عامة</a></li>
+<li><a href="../javafx-application/index.html"><span class="en">JavaFX</span> - بنية التطبيقات</a></li>
+<li><a href="../javafx-architecture/index.html"><span class="en">JavaFX</span> - بنية المكتبة</a></li>
+<li class="title">عناصر واجهة المستخدم</li>
+<li><a href="../javafx-label/index.html"><span class="en">Label - JavaFX</span></a></li>
+<li><a href="../javafx-button/index.html"><span class="en">Button - JavaFX</span></a></li>
+<li><a href="../javafx-textfield/index.html"><span class="en">TextField - JavaFX</span></a></li>
+<li><a href="../javafx-passwordfield/index.html"><span class="en">PasswordField - JavaFX</span></a></li>
+<li><a href="../javafx-textarea/index.html"><span class="en">TextArea - JavaFX</span></a></li>
+<li><a href="../javafx-togglebutton/index.html"><span class="en">ToogleButton - JavaFX</span></a></li>
+<li><a href="../javafx-radiobutton/index.html"><span class="en">RadioButton - JavaFX</span></a></li>
+<li><a href="../javafx-checkbox/index.html"><span class="en">CheckBox - JavaFX</span></a></li>
+<li><a href="../javafx-choicebox/index.html"><span class="en">ChoiceBox - JavaFX</span></a></li>
+<li><a href="../javafx-combobox/index.html"><span class="en">ComboBox - JavaFX</span></a></li>
+<li><a href="../javafx-listview/index.html"><span class="en">ListView - JavaFX</span></a></li>
+<li><a href="../javafx-tableview/index.html"><span class="en">TableView - JavaFX</span></a></li>
+<li><a href="../javafx-treeview/index.html"><span class="en">TreeView - JavaFX</span></a></li>
+<li><a href="../javafx-slider/index.html"><span class="en">Slider - JavaFX</span></a></li>
+<li><a href="../javafx-tooltip/index.html"><span class="en">Tooltip - JavaFX</span></a></li>
+<li><a href="../javafx-progressbar/index.html"><span class="en">ProgressBar - JavaFX</span></a></li>
+<li><a href="../javafx-progressindicator/index.html"><span class="en">ProgressIndicator - JavaFX</span></a></li>
+<li><a href="../javafx-hyperlink-and-webview/index.html"><span class="en">Hyperlink + WebView - JavaFX</span></a></li>
+<li><a href="../javafx-separator/index.html"><span class="en">Separator - JavaFX</span></a></li>
+<li><a href="../javafx-colorpicker/index.html"><span class="en">ColorPicker - JavaFX</span></a></li>
+<li><a href="../javafx-datepicker/index.html"><span class="en">DatePicker - JavaFX</span></a></li>
+<li><a href="../javafx-filechooser/index.html"><span class="en">FileChooser - JavaFX</span></a></li>
+<li><a href="../javafx-htmleditor/index.html"><span class="en">HTMLEditor - JavaFX</span></a></li>
+<li><a href="../javafx-contextmenu/index.html"><span class="en">ContextMenu - JavaFX</span></a></li>
+<li><a href="../javafx-menubar/index.html"><span class="en">MenuBar - JavaFX</span></a></li>
+<li><a href="../javafx-alert/index.html"><span class="en">Alert - JavaFX</span></a></li>
+<li class="title">الحاويات</li>
+<li><a href="../javafx-group/index.html"><span class="en">Group - JavaFX</span></a></li>
+<li><a href="../javafx-pane/index.html"><span class="en">Pane - JavaFX</span></a></li>
+<li><a href="index.html"><span class="en">HBox - JavaFX</span></a></li>
+<li><a href="../javafx-vbox/index.html"><span class="en">VBox - JavaFX</span></a></li>
+<li><a href="../javafx-borderpane/index.html"><span class="en">BorderPane - JavaFX</span></a></li>
+<li><a href="../javafx-stackpane/index.html"><span class="en">StackPane - JavaFX</span></a></li>
+<li><a href="../javafx-flowpane/index.html"><span class="en">FlowPane - JavaFX</span></a></li>
+<li><a href="../javafx-tilepane/index.html"><span class="en">TilePane - JavaFX</span></a></li>
+<li><a href="../javafx-scrollpane/index.html"><span class="en">ScrollPane - JavaFX</span></a></li>
+<li><a href="../javafx-gridpane/index.html"><span class="en">GridPane - JavaFX</span></a></li>
+<li><a href="../javafx-titledpane-and-accordion/index.html"><span class="en">TitledPane + Accordion - JavaFX</span></a></li>
+<li><a href="../javafx-anchorpane/index.html"><span class="en">AnchorPane - JavaFX</span></a></li>
+<li><a href="../javafx-pagination/index.html"><span class="en">Pagination - JavaFX</span></a></li>
+<li class="title">الرسم و التلوين و التحريك</li>
+<li><a href="../javafx-class-text/index.html"><span class="en">Text - JavaFX</span></a></li>
+<li><a href="../javafx-2d-shapes/index.html"><span class="en">2D Shapes - JavaFX</span></a></li>
+<li><a href="../javafx-animations/index.html"><span class="en">Animations - JavaFX</span></a></li>
+<li><a href="../javafx-charts/index.html"><span class="en">Charts - JavaFX</span></a></li>
+<li><a href="../javafx-scene-builder/index.html"><span class="en">Scene Builder - JavaFX</span></a></li>
+<li class="title">تعلم بناء تطبيقات و ألعاب</li>
+<li><a href="../javafx-projects/index.html"><span class="en">JavaFX</span> - جميع المشاريع</a></li>
+<li><a href="../javafx-who-will-win-the-million-source-code/index.html"><span class="en">JavaFX</span> - من سيربح المليون</a></li>
+<li><a href="../javafx-color-picker-source-code/index.html"><span class="en">JavaFX</span> - برنامج إختيار الألوان</a></li>
+<li><a href="../javafx-age-calculator-source-code/index.html"><span class="en">JavaFX</span> - برنامج حساب الأعمار</a></li>
+<li><a href="../javafx-ip-finder-source-code/index.html"><span class="en">JavaFX</span> - محلل عناوين المواقع</a></li>
+<li><a href="../javafx-snake-2d-source-code/index.html"><span class="en">JavaFX</span> - لعبة الأفعى <span class="en">Snake 2D</span></a></li>
+<li><a href="../javafx-calculator-source-code/index.html"><span class="en">JavaFX</span> - آلة حاسبة بسيطة</a></li>
+<li><a href="../javafx-scientific-calculator-source-code/index.html"><span class="en">JavaFX</span> - آلة حاسبة علمية</a></li>
+<li><a href="../javafx-tic-tac-toe-source-code/index.html"><span class="en">JavaFX</span> - لعبة <span class="en">Tic Tac Toe</span></a></li>
+<li><a href="../javafx-company-products-manager-source-code/index.html"><span class="en">JavaFX</span> - برنامج إدارة المحتوى</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">JavaFX</span>الكلاس <code data-enlighter-language="java">HBox</code></h1>
+<article>
+<h2>مقدمة</h2>
+<p>الكلاس <code data-enlighter-language="java">HBox</code> يستخدم لإنشاء حاوية ترتب الأشياء التي نضيفها فيها بشكل أفقي.</p>
+<p>إفتراضياً, الأشياء التي نضيفها في كائن <span class="inline">الـ <code data-enlighter-language="java">HBox</code></span> تظهر في الأعلى من جهة اليسار.<br/>
+	و طبعاً تستطيع تحديد من أي جهة تريد أن تظهر الأشياء التي يتم إضافتها فيه.</p>
+<p>حجم كائن <span class="inline">الـ <code data-enlighter-language="java">HBox</code></span> يمكن تحديده, و يمكن تحديد ما إذا كانت الأشياء بداخله سيتغير حجمها مع تغيّر حجمه أم أن حجمها ثابت لا يتغير.</p>
+<p>حجم الفراغ بين الأشياء التي نضيفها فيه يمكن تحديده من جميع الإتجاهات.</p>
+<br/>
+<h3>بناء الكلاس <code data-enlighter-language="java">HBox</code></h3>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+@DefaultProperty(value="content")
+public class HBox
+extends Control
+	</pre>
+</article>
+<article>
+<h2>كونستركتورات الكلاس <code data-enlighter-language="java">HBox</code></h2>
+<p>الجدول التالي يحتوي على كونستركتورات الكلاس <span class="inline"><code data-enlighter-language="java">HBox</code>.</span></p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الكونستركتور مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">HBox()</code></span>
+			ينشئ كائن من الكلاس <code data-enlighter-language="java">HBox</code> يمثل حاوية فارغة ترتب الأشياء التي نضيفها فيها بشكل أفقي.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">HBox(double spacing)</code></span>
+			ينشئ كائن من الكلاس <code data-enlighter-language="java">HBox</code> يمثل حاوية فارغة ترتب الأشياء التي نضيفها فيها بشكل أفقي مع تحديد المسافة الفراغة بين الأشياء التي نضيفها فيها.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">spacing</code> نمرر رقم يمثل حجم المسافة الفراغة التي سيتم وضعها بين الأشياء التي نضيفها فيها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">HBox(Node... children)</code></span>
+			ينشئ كائن من الكلاس <code data-enlighter-language="java">HBox</code> يمثل حاوية ترتب الأشياء التي نضيفها فيها بشكل أفقي مع تحديد الأشياء التي نريد وضعها فيها.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">children</code> نمرر الأشياء التي نريد وضعها فيها مع وضع فاصلة بين كل شيئين.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">HBox(double spacing, Node... children)</code></span>
+			ينشئ كائن من الكلاس <code data-enlighter-language="java">HBox</code> يمثل حاوية ترتب الأشياء التي نضيفها فيها بشكل أفقي مع تحديد الأشياء التي نريد وضعها فيها و المسافة الفراغة بينهم.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">spacing</code> نمرر رقم يمثل حجم المسافة الفراغة التي سيتم وضعها بين الأشياء التي نضيفها فيها.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">children</code> نمرر الأشياء التي نريد وضعها فيها مع وضع فاصلة بين كل شيئين.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>دوال الكلاس <code data-enlighter-language="java">HBox</code></h2>
+<p>الجدول التالي يحتوي على دوال الكلاس <code data-enlighter-language="java">HBox</code> الأكثر إستخداماً.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void setSpacing(int value)</code></span>
+			تستخدم لتحديد حجم الفراغ بين كل شيئين يتم إضافتهما في كائن <span class="inline">الـ <code data-enlighter-language="java">HBox</code></span> الذي قام باستدعائها.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">value</code> نمرر رقم يمثل حجم الفراغ <span class="inline">بالـ <span class="word">Pixel</span>.</span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final void setAlignment(Pos value)</code></span>
+			تستخدم لتحديد مكان ظهور الأشياء التي سيتم وضعها في كائن <span class="inline">الـ <code data-enlighter-language="java">HBox</code></span> الذي قام باستدعائها.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">value</code> نمرر إحدى ثوابت الكلاس <span class="inline"><code data-enlighter-language="java">Pos</code>:</span><br/>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">TOP_LEFT</code>: يظهر المحتوى في الأعلى ناحية اليسار.</p></li>
+<li><p><code data-enlighter-language="java">TOP_CENTER</code>: يظهر المحتوى في الأعلى و في الوسط.</p></li>
+<li><p><code data-enlighter-language="java">TOP_RIGHT</code>: يظهر المحتوى في الأعلى ناحية اليمين.</p></li>
+<li><p><code data-enlighter-language="java">CENTER_LEFT</code>: يظهر المحتوى في الوسط ناحية اليسار.</p></li>
+<li><p><code data-enlighter-language="java">CENTER</code>: يظهر المحتوى في الوسط تماماً.</p></li>
+<li><p><code data-enlighter-language="java">CENTER_RIGHT</code>: يظهر في الوسط ناحية اليمين.</p></li>
+<li><p><code data-enlighter-language="java">BOTTOM_LEFT</code>: يظهر المحتوى في الأسفل ناحية اليسار.</p></li>
+<li><p><code data-enlighter-language="java">BOTTOM_CENTER</code>: يظهر المحتوى في الأسفل و في الوسط.</p></li>
+<li><p><code data-enlighter-language="java">BOTTOM_RIGHT</code>: يظهر المحتوى في الأسفل ناحية اليمين.</p></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final void setFillHeight(boolean value)</code></span>
+			تستخدم لتحديد ما إذا كانت الأشياء التي سنضيفها في كائن <span class="inline">الـ <code data-enlighter-language="java">HBox</code></span> الذي قام باستدعائها ستتأثر بطوله أم لا.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">value</code> نمرر القيمة <code data-enlighter-language="java">true</code> في حال أردنا جعل طول الأشياء يتغير بشكل تلقائي نسبة لطول <span class="inline">الـ <code data-enlighter-language="java">HBox</code></span>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void setMargin(Node child, Insets value)</code></span>
+			تستخدم لإضافة فراغ حول أي شيء موضوع بداخل <span class="inline"><code data-enlighter-language="java">HBox</code>.</span><br/>
+			مكان الباراميتر <code data-enlighter-language="java">child</code> نمرر الشيء الذي نريد إضافة فراغ حوله.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">value</code> نمرر كائن من الكلاس <code data-enlighter-language="java">Insets</code> نحدد فيه حجم الفراغ الذي سيتم إضافته للشيء من الجهات الأربعة <span class="inline">( فوقه, يمينه, تحته, يساره ).</span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void setHgrow(Node child, Priority value)</code></span>
+			تستخدم لتحديد ما إذا كان عرض الشيء الموضوع بداخل <code data-enlighter-language="java">HBox</code> سيتأثر بعرضه أم أن عرضه سيظل ثابت.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">child</code> نمرر الشيء الذي نريد تحديد ما إن كان عرضه سيتأثر بعرض <span class="inline">الـ <code data-enlighter-language="java">HBox</code></span> أم لا.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">value</code> نمرر إحدى ثوابت الكلاس <code data-enlighter-language="java">Priority</code> التي تحدد ذلك:<br/>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">ALWAYS</code>: لجعل عرض الشيء يظهر على أكبر مساحة متوفرة في كائن <span class="inline">الـ <code data-enlighter-language="java">HBox</code>.</span></p></li>
+<li><p><code data-enlighter-language="java">NEVER</code>: لجعل عرض الشيء ثابت لا يتأُثر أبدً بحجم كائن <span class="inline">الـ <code data-enlighter-language="java">HBox</code>.</span></p></li>
+<li><p><code data-enlighter-language="java">SOMETIMES</code>: لجعل عرض الشيء يظهر على أكبر مساحة متوفرة في كائن <span class="inline">الـ <code data-enlighter-language="java">HBox</code></span> في حال لم يكن هناك أي شيء آخر قد تم تعيينه ليظهر على أكبر مساحة متوفرة فيه.</p></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final void setStyle(String value)</code></span>
+			تستخدم لتعديل تصميم كائن <span class="inline">الـ <code data-enlighter-language="java">HBox</code></span> الذي قام بإستدعائها.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">value</code> يمكنك تمرير إسم و قيمة أي خاصية تريد تعديلها في كائن <span class="inline">الـ <code data-enlighter-language="java">HBox</code></span> بأسلوب لغة <span class="word">CSS</span> لإظهاره بالشكل الذي تريده.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public ObservableList&lt;Node&gt; getChildren()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">ObservableList</code> يمثل محتوى كائن <span class="inline">الـ <code data-enlighter-language="java">HBox</code></span> الذي قام بإستدعائها مما يجعلك قادراً على إضافة كائنات جديدة أو حذف كائنات موجودة فيه.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>أمثلة شاملة</h2>
+<br/>
+<h3>المثال الأول</h3>
+<p>المثال التالي يعلمك طريقة إنشاء كائن من الكلاس <code data-enlighter-language="java">HBox</code> و وضعه <span class="inline">كـ <span class="word">Root Node</span>.</span></p>
+<p><a href="example-1.png" target="_blank"><img alt="طريقة وضع محتوى الصفحة في HBox في JavaFX" src="example-1.png"/></a></p>
+<p><a class="open-page" href="example-1.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>المثال التالي يعلمك طريقة إضافة مسافة فارغة بين الأشياء التي نضيفها في <span class="inline"><code data-enlighter-language="java">HBox</code>.</span><br/>
+	بالإضافة إلى عرض محتوى <span class="inline">الـ <code data-enlighter-language="java">HBox</code></span> في الوسط.</p>
+<p><a href="example-2.png" target="_blank"><img alt="طريقة إضافة مسافة فارغة بين الأشياء التي نضيفها في HBox في JavaFX" src="example-2.png"/></a></p>
+<p><a class="open-page" href="example-2.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الثالث</h3>
+<p>المثال التالي يوضح كيف تتغير أحجام الأشياء التي نضعها في <code data-enlighter-language="java">HBox</code> كلما تغير حجمه و كيف أن المسافات الفراغة لا تتأثر.</p>
+<p><a href="example-3.png" target="_blank"><img alt="كيف تتغير أحجام الأشياء التي نضعها في HBox في JavaFX" src="example-3.png"/></a></p>
+<p><a class="open-page" href="example-3.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الرابع</h3>
+<p>المثال التالي يعلمك طريقة إضافة هامش من جميع الإتجاهات لأي شيء تم وضعه في <span class="inline"><code data-enlighter-language="java">HBox</code>.</span></p>
+<p><a href="example-4.png" target="_blank"><img alt="طريقة إضافة هامش من جميع الإتجاهات لأي شيء تم وضعه في HBox في JavaFX" src="example-4.png"/></a></p>
+<p><a class="open-page" href="example-4.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الخامس</h3>
+<p>المثال التالي يعلمك طريقة جعل محتوى <span class="inline">الـ <code data-enlighter-language="java">HBox</code></span> يظهر على كل المساحة المتوفرة.</p>
+<p><a href="example-5.png" target="_blank"><img alt="طريقة جعل محتوى ال HBox يظهر على كل المساحة المتوفرة فيه في JavaFX" src="example-5.png"/></a></p>
+<p><a class="open-page" href="example-5.html" target="_blank">شاهد المثال »</a></p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,892 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس ستتعلم كيف تعالج الأخطاء البرمجية و بالتالي ستتعلم كيف تجعل برنامجك خالياً من المشاكل و لا يعلق. وضعنا الكثير من الأمثلة التي ستجعلك تفهمه بكل سهولة" name="description"/>
+<meta content="java exception, exception in java, Exception class in java, الإستثناء في جافا, الكلاس Exception, try, catch, finally, try/catch, throw/throws, throw, throws/ الفرق بين throw و throws, مفهوم الإستثناءات في جافا, أسباب حدوث إستثناء, checked exception in java, unchecked exception in java, error in java, java error, Throwable in java, protected code, error handling code, كيف أضع أكثر من catch, exception methods in java, java exception methods, الدوال الموجودة في الكلاس Exception, exception thrower, exception catcher, exception propagtor, كيف أعرف إستثناء جديد في جافا, how to define new exception in java, تعريف exception جديد" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الإستثناءات في جافا | Java exceptions</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>الإستثناءات في جافا</h1>
+<article>
+<h2>مفهوم الإستثناءات في جافا</h2>
+<p><span class="b">استثناءات:</span> تعني <span class="word">Exceptions</span> في البرمجة, و الإستثناء عبارة عن خطأ يحدث أثناء تشغيل البرنامج يؤدي إلى إيقافه بشكل غير طبيعي.</p>
+<p>ظهور خطأ يؤدي إلى إيقاف البرنامج هو أمر سيئ جداً لأنه يؤدي إلى نفور عدد كبير من المستخدمين و عدم رغبتهم في العودة إلى استخدام هذا البرنامج مجدداً.</p>
+<p>في هذا الدرس ستتعلم كيف تتجنب حدوث أخطاء في البرامج التي تكتبها, و فعلياً ستتعلم كيف تلتقط هذه الأخطاء في حال حدثت لجعل البرنامج شغال دائماً في نظر المستخدم و لا يظهر له أي أخطاء.</p>
+<br/>
+<h3>بعض الأسباب التي تسبب حدوث إستثناء</h3>
+<ul class="explain">
+<li><p>في حال إدخال قيمة لا تتطابق مع نوع المتغير الذي ستخزن فيه.</p></li>
+<li><p>في حال إدخال رقم <span class="word">index</span> غير موجود في مصفوفة أو في متغير نوعه <span class="inline"><code data-enlighter-language="java">String</code>.</span></p></li>
+<li><p>في حال كان البرنامج يتصل بالشبكة و فجأةً إنقطع الإتصال.</p></li>
+<li><p>في حال كان البرنامج يحاول قراءة معلومات من ملف نصي, و كان هذا الملف غير موجود.</p></li>
+</ul>
+<br/><br/>
+<h3>فئات الإستثناءات</h3>
+<p>الإستثناءات قد تحدث بسبب المستخدم <span class="inline"><span class="inline">(<span class="word">User</span>)</span>,</span> أو المبرمج <span class="inline"><span class="inline">(<span class="word">Programmer</span>)</span>,</span> أو بسبب الأجهزة المستخدمة <span class="inline"><span class="inline">(<span class="word">Physical Resources</span>)</span>.</span></p>
+<p>بناءً على هذا, تم تقسيم الإستثناءات إلى ثلاث فئات أساسية:</p>
+<ul class="explain">
+<li><p><span class="word">Checked Exception</span>: تعني خطأ برمجي يحدث أثناء ترجمة البرنامج (أي قبل تشغيل الكود).</p></li>
+<li><p><span class="word">Unchecked Exception</span>: تعني خطأ منطقي يحدث أثناء تشغيل البرنامج.</p></li>
+<li><p><span class="word">Error</span>: تعني خطأ يحدث بسبب الجهاز الذي نحاول تشغيل البرنامج عليه.</p></li>
+</ul>
+<br/><br/>
+<h3>Checked Exception</h3>
+<p><span class="word">Checked Exception</span> تعني إستثناء يحدث أثناء ترجمة الكود, و هنا يكون الخطأ من المبرمج لأن الكود الذي كتبه يوجد فيه مشكلة ظاهرة من الأساس.</p>
+<p>الآن في حال قمنا بتعريف متغير نوعه <span class="inline"><code data-enlighter-language="java">int</code>,</span> ثم قمنا بإعطائه نص كقيمة, سنلاحظ أنه سيظهر لنا خطأ قبل تشغيل البرنامج, و في حال حاولنا تشغيله, سيظهر الخطأ عندما يحاول ترجمة الكود.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        int a;
+        a = "this is incompatible type, 'a' should be String";
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سيظهر الخطأ التالي إذا قمنا بتشغيل البرنامج.</p>
+<div class="code-box">
+<div>
+<span class="red">Exception in thread "main" java.lang.RuntimeException: Uncompilable source code - incompatible types: java.lang.String cannot be converted to int</span>
+</div>
+</div>
+<p><span class="point">•</span>هذا الخطأ يعني أن هناك مشكلة في النوع المستخدم لتخزين البيانات.<br/>
+		ثم أخبرنا بسبب المشكلة و هي أنه لا يمكن تحويل <span class="inline">الـ <code data-enlighter-language="java">String</code></span> <span class="inline">لـ <code data-enlighter-language="java">int</code>,</span> أي لا يمكن تخزين قيمة نوعها <code data-enlighter-language="java">String</code> في متغير نوعه <code data-enlighter-language="java">int</code>.</p>
+</div>
+<br/><br/>
+<h3>Unchecked Exception</h3>
+<p><span class="inline">(<span class="word">Unchecked Exception</span>)</span> تعني إستثناء يحدث أثناء تشغيل البرنامج و يسمى أيضاً <span class="inline">(<span class="word">Runtime Exception</span>)</span>, و هو يتضمن <span class="inline">الـ (<span class="word">Programming Bugs</span>)</span> و التي تعني أخطاء منطقية <span class="inline">(<span class="word">Logical Errors</span>)</span> أو أخطاء سببها عدم إستخدام الأشياء المعرفة في لغة البرمجة بالشكل الصحيح <span class="inline">(<span class="word">APIs errors</span>).</span></p>
+<p>الآن في حال قمنا بتعريف مصفوفة نوعها <code data-enlighter-language="java">int</code> تتألف من <span class="number">5</span> عناصر, ثم قمنا بطباعة قيمة عنصر غير موجود فيها <span class="inline">( مثل العنصر رقم <span class="number">10</span> )</span>. سنلاحظ أنه سيظهر الخطأ أثناء تشغيل البرنامح و ليس أثناء ترجمة الكود, و السبب أنه سيكتشف عدم وجود عنصر يحمل <span class="inline">الـ <span class="word">index</span></span> رقم <span class="number">10</span> بعد أن يتم إنشاء هذه المصفوفة في الذاكرة <span class="inline">( أي بعد ترجمة الكود و تنفيذه ).</span></p>
+<p>إذاً حدوث خطأ أثناء التشغيل يعني أن الخطأ لا يكتشف إلا أثناء محاولة تنفيذ الأوامر.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        int[] a = { 1, 2, 3, 4, 5 };
+        System.out.println( a[10] );
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سيظهر الخطأ التالي إذا قمنا بتشغيل البرنامج.</p>
+<div class="code-box">
+<div>
+<span class="red">Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10</span>
+</div>
+</div>
+<p><span class="point">•</span>هذا الخطأ يعني أن العنصر ليس موجود في المصفوفة.<br/>
+		ثم أخبرنا بسبب المشكلة و هي أنه لم يجد عنصر يحمل <span class="inline">الـ <span class="word">index</span></span> رقم <span class="inline"><span class="number">10</span>.</span></p>
+</div>
+<br/><br/>
+<h3>Error</h3>
+<p><span class="word">Error</span> تعني خطأ يحدث بسبب الجهاز الذي نحاول تشغيل البرنامج عليه, لا علاقة أبداً للبرنامج بهذا الخطأ.</p>
+<p>فمثلاً إذا إمتلأت ذاكرة الجهاز الذي يعمل عليه البرنامج سيحدث خطأ, و هو أن نظام التشغيل لا يقدر أن يشغل هذا البرنامج لأن ذاكرة الجهاز ممتلئة. و عندها سيظهر الرسالة التالية لتوضيح الخطأ <span class="code red">JVM is out of Memory</span></p>
+<p>لذلك تجد بعض البرامج تحفظ الأشياء التي يفعلها المستخدم كل مدة معينة, و هكذا لن يقلق المستخدم إذا توقف البرنامج الذي يعمل عليه فجأةً, لأن هذا البرنامج في نظره قوي فهو يحفظ له بياناته كل مدة و يتيح له استردادها إذا حدث خطأ ما متى شاء.</p>
+</article>
+<article>
+<h2>بناء الإستثناءات في جافا</h2>
+<p>تم تقسيم الإستثناءات في جافا إلى عدة أنواع و كل نوع تم تمثيله في كلاس منعزل.<br/>
+	جميع هذه الكلاسات ترث من كلاس أساسي إسمه <span class="inline"><code data-enlighter-language="java">Exception</code>.</span><br/>
+	الكلاس <code data-enlighter-language="java">Exception</code> بدوره يرث من كلاس إسمه <span class="inline"><code data-enlighter-language="java">Throwable</code>.</span></p>
+<p>إذاً, أي كلاس يرث من الكلاس <code data-enlighter-language="java">Exception</code> هو كلاس يمثل إستثناء معين.</p>
+<p>الأخطاء التي سببها الأجهزة و التي تسمى <span class="inline"><span class="word">Errors</span>,</span> تم إنشاء كلاس خاص لهم إسمه <code data-enlighter-language="java">Error</code> و هو يرث مباشرةً من الكلاس <span class="inline"><code data-enlighter-language="java">Throwable</code>.</span></p>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>لا تقلق بتاتاً إذا لم تفهم أي شيء الآن ستفهم الوراثة في دروس لاحقة, لكننا ذكرنا لك كلمة "وراثة" لأنها ستمر معك لاحقاً في هذا الدرس.</p>
+<br/>
+<p><span class="b">فكرة عامة عن الوراثة</span><br/>
+		إذا قلنا الكلاس <code data-enlighter-language="java">B</code> يرث من الكلاس <span class="inline"><code data-enlighter-language="java">A</code></span>. فهذا يعني أن الكلاس <code data-enlighter-language="java">B</code> أصبح يملك نسخة من الأشياء الموجودة في الكلاس <span class="inline"><code data-enlighter-language="java">A</code>.</span></p>
+</div>
+<br/>
+<p>تم بناء الإستثناءات بشكل منظم كما في الصورة التالية.</p>
+<p><a href="pic_1.png" target="_blank"><img src="pic_1.png"/></a></p>
+<br/>
+<p>لمشاهدة أغلب الإستثناءات الـ <span class="word">checked</span> و <span class="word">unchecked</span> التي يواجهها المبرمجين</p>
+<p><a class="open-page" href="built-in-exceptions.html" target="_blank">أدخل هنا »</a></p>
+</article>
+<article>
+<h2>إلتقاط الإستثناء في جافا</h2>
+<p>إلتقاط الإستثناء يسمى <span class="inline"><span class="word">Catching Exception</span>,</span> و هو عبارة عن طريقة تسمح لك بحماية البرنامج من أي كود تشك بأنه قد يسبب أي خطأ باستخدام الجملتين <code data-enlighter-language="java">try</code> و <span class="inline"><code data-enlighter-language="java">catch</code>.</span></p>
+<p>أي كود مشكوك فيه يجب وضعه بداخل حدود الجملة <span class="inline"><code data-enlighter-language="java">try</code>.</span><br/>
+	الجملة <code data-enlighter-language="java">catch</code> عبارة عن دالة يمكنك من خلالها معرفة كل شيء عن الخطأ الذي حدث.</p>
+<br/>
+<h3>طريقة تعريف الجمل <code data-enlighter-language="java">try</code> و <code data-enlighter-language="java">catch</code></h3>
+<br/>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+try {
+    // Protected Code
+    // هنا نكتب الأوامر التي قد تولد إستثناء
+}
+catch(ExceptionType e) {
+    // Error Handling Code
+    // برمي إستثناء try هنا نكتب أوامر تحدد للبرنامج ماذا يفعل إذا قامت الـ
+} 
+	</pre>
+<br/>
+<p>الكود الذي نضعه بداخل الجملة <code data-enlighter-language="java">try</code> يسمى <span class="word">Protected Code</span> و هذا يعني أن البرنامج محمي من أي خطأ قد يحدث بسبب هذا الكود.<br/>
+	الكود الذي نضعه بداخل الجملة <code data-enlighter-language="java">catch</code> يسمى <span class="word">Error Handling Code</span> و يقصد منها الكود الذي سيعالج الإستثناء الذي قد يتم إلتقاطه.</p>
+<p>عندما تضع الكود بداخل حدود الجملة <code data-enlighter-language="java">try</code> فأنت بذلك تقوم بتجربة هذا الكود, و ذلك يعني أن جميع الأوامر الموضوعة فيها ستنفذ بشكل عادي جداً, و في حال حدثت أي مشكلة في الكود, ستقوم الجملة <code data-enlighter-language="java">try</code> بتمرير الإستثناء الذي يمثل هذه المشكلة <span class="inline">كـ <span class="word">argument</span></span>إلى الدالة <code data-enlighter-language="java">catch</code> ليتم معالجته بدل أن تظهر أمام المستخدم.</p>
+<p>الإستثناء الذي تقوم الجملة <code data-enlighter-language="java">try</code> برميه عبارة عن كائن من إحدى الكلاسات التي ترث من الكلاس <span class="inline"><code data-enlighter-language="java">Exception</code>.</span></p><br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>عندما تستخدم الجملة <code data-enlighter-language="java">try</code> حتى لو لم تضع بداخلها أي كود, فأنت مجبر على وضع الجملة <code data-enlighter-language="java">catch</code> أو <code data-enlighter-language="java">finally</code> بعدها.<br/>
+		كما أنه بإمكانك وضع العدد الذي تريده من الجملة <code data-enlighter-language="java">catch</code> و سترى ذلك و ستتعرف على الجملة <code data-enlighter-language="java">finally</code>  لاحقاً في هذا الدرس.</p>
+</div>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        try {                              // try هنا قمنا بتجربة الكود الموجود بداخل الجملة
+            int[] a = new int [5];         // هنا قمنا بإنشاء مصفوفة تتألف من 5 عناصر
+            System.out.println( a[10] );   // catch هنا حاولنا عرض قيمة عنصر غير موجود في المصفوفة, لذلك سيحدث خطأ, مما سيؤدي رمي إستثناء إلى الدالة
+        }
+        catch( Exception e ) {                                // e هنا سيتم إلتقاط الإستثناء, ثم تخزينه في الكائن
+            System.out.println( "Exception thrown: " + e );   // لنعرف طبيعة الخطأ الذي حدث e هنا قمنا بعرض محتوى الكائن
+        }
+ 
+        // بعد الإنتهاء من تجربة الكود سيتم تنفيذ باقي الأوامر الموجودة في البرنامج
+        System.out.println( "The program still work properly" );
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+<div>
+				Exception thrown: java.lang.ArrayIndexOutOfBoundsException: 10<br/>
+				The program still work properly
+			</div>
+</div>
+</div><br/>
+<p>إذا وضعنا الكلاس <code data-enlighter-language="java">Exception</code> كباراميتر للدالة <span class="inline"><code data-enlighter-language="java">catch</code>,</span> فهذا يعني أن أي إستثناء سترميه الدالة <code data-enlighter-language="java">try</code> ستقوم الدالة <code data-enlighter-language="java">catch</code> بالتقاطه.</p>
+<p>في المثال السابق كان بإمكانك وضع الكلاس <code data-enlighter-language="java">ArrayIndexOutOfBoundsException</code> بدل الكلاس <span class="inline"><code data-enlighter-language="java">Exception</code>,</span> لأننا بعد تجربة الكود عرفنا أن نوع الخطأ الذي قد يرمى بسبب هذا الكود نوعه <span class="inline"><code data-enlighter-language="java">ArrayIndexOutOfBoundsException</code>.</span></p>
+<p>إذاً إذا كنت لا تعرف طبيعة الخطأ الذي قد يحدث ضع الكلاس <code data-enlighter-language="java">Exception</code> في الدالة <code data-enlighter-language="java">catch</code> لأن الكلاس <code data-enlighter-language="java">Exception</code> يعتبر الكلاس الأساسي و الإفتراضي لجميع الأخطاء التي قد تحدث.</p>
+</article>
+<article>
+<h2>وضع عدة جمل <code data-enlighter-language="java">catch</code> في جافا</h2>
+<p>أحياناً الكود الواحد قد يسبب عدة أخطاء, ففي هذه الحالة ستضطر إلى معالجة كل خطأ قد يحدث على حدى ليستمر البرنامج في العمل بشكل طبيعي.</p>
+<p>إذاً يمكنك وضع العدد الذي تريده من الجملة <code data-enlighter-language="java">catch</code> بعد الجملة <span class="inline"><code data-enlighter-language="java">try</code>.</span></p>
+<br/>
+<h3>طريقة وضع أكثر من <code data-enlighter-language="java">catch</code></h3>
+<br/>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+try {
+    // Protected Code
+    // هنا نكتب الأوامر التي قد تولد إستثناء
+}
+catch(ExceptionType1 e1) {
+    // Error Handling Code For ExceptionType1
+    // ExceptionType1 برمي إستثناء من النوع try هنا نكتب أوامر تحدد للبرنامج ماذا يفعل إذا قامت الـ
+}
+catch(ExceptionType2 e2) {
+    // Error Handling Code For ExceptionType2
+    // ExceptionType2 برمي إستثناء من النوع try هنا نكتب أوامر تحدد للبرنامج ماذا يفعل إذا قامت الـ
+}
+catch(ExceptionType3 e3) {
+    // Error Handling Code For ExceptionType3
+    // ExceptionType3 برمي إستثناء من النوع try هنا نكتب أوامر تحدد للبرنامج ماذا يفعل إذا قامت الـ
+}
+	</pre>
+<br/>
+<p>هنا قمنا بوضع ثلاث جمل <code data-enlighter-language="java">catch</code> و طبعاً كان بإمكاننا وضع العدد الذي نريده.</p>
+<br/>
+<h3>طريقة تعامل البرنامج مع الجمل <code data-enlighter-language="java">catch</code></h3>
+<p>إذا قامت الجملة <code data-enlighter-language="java">try</code> برمي إستثناء, سيتم  إرساله إلى جملة <span class="inline">الـ <code data-enlighter-language="java">catch</code></span> الأولى, بعدها سيتم مقارنة نوع الإستثناء المرمي مع نوع الإستثناء الموضوع كباراميتر في الدالة, إذا كان نوع الإستثناء المرمي هو نفسه نوع الإستثناء الموضوع كباراميتر, سيتم معالجة الخطأ الذي حدث بداخل هذه <span class="inline">الـ <code data-enlighter-language="java">catch</code>.</span><br/>
+<p>إذا كان نوع الإستثناء المرمي غير النوع الموضوع كباراميتر, سيتم الإنتقال إلى جملة <span class="inline">الـ <code data-enlighter-language="java">catch</code></span> التالية و تنفيذ نفس الخطوات السابقة.</p>
+<p>في حال تم إيجاد إستثناء يطابق الإستثناء المرمي, سيتم تنفيذ جميع الأوامر الموجودة في جملة <span class="inline">الـ <code data-enlighter-language="java">catch</code></span> و بعدها سيتخطى البرنامج جميع جمل <span class="inline">الـ <code data-enlighter-language="java">catch</code></span> الموجودة بعدها و يكمل باقي الأوامر الموجودة في البرنامج.</p>
+<p>و في حال لم يتم إيجاد أي إستثناء يطابق الإستثناء المرمي, سيتوقف البرنامج و يظهر الخطأ الذي حدث.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        String s = "1234567891011121314151617181920212223";
+        int a;
+ 
+        try {
+            System.out.println( "s.charAt(28): " + s.charAt(28) );   // s رقم 28 في النص index هنا حاولنا عرض الحرف الموجود على الـ
+            a = Integer.parseInt(s);                                 // int لقيمة s هنا حاولنا تحويل قيمة
+        }
+        catch( StringIndexOutOfBoundsException e1 ) {                // e1 بعدها تقوم بتخزينه في الكائن StringIndexOutOfBoundsException تلتقط الإستثناء الذي نوعه catch هذه الـ
+            System.out.println( "Index is not exist in the string!" );
+        }
+        catch( NumberFormatException e2 ) {                          // e2 بعدها تقوم بتخزينه في الكائن NumberFormatException تلتقط الإستثناء الذي نوعه catch هذه الـ
+            System.out.println( "Can't convert 's' to a number because is to long!" );
+        }
+        catch( Exception e3 ) {                                      // e3 تلتقط أي إستثناء آخر قد يحدث نسينا ذكره, بعدها تقوم بتخزينه في الكائن catch هذه الـ
+            System.out.println( "Exception thrown: " + e3 );
+        }
+ 
+        // بعد الإنتهاء من تجربة الكود سيتم تنفيذ باقي الأوامر الموجودة في البرنامج
+        System.out.println( "The program still work properly" );
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+<div>
+		    s.charAt(28): 9<br/>
+			Can't convert 's' to a number because is to long!<br/>
+			The program still work properly
+			</div>
+</div>
+</div>
+<br/>
+<p>يمكنك أيضأ وضع أكثر من إستثناء بداخل نفس الجملة <code data-enlighter-language="java">catch</code> باستخدام العامل <code data-enlighter-language="java">|</code> و الذي يعني <span class="inline">" أو "</span><br/>
+	عندها إذا رمت الجملة <code data-enlighter-language="java">try</code> أي إستثناء من الإستثناءات الموجودة في الجملة <code data-enlighter-language="java">catch</code> سيتم معالجة الإستثناء فيها.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        String s = "1234567891011121314151617181920212223";
+        int a;
+ 
+        try {
+            System.out.println( "s.charAt(28): " + s.charAt(28) );            // s رقم 28 في النص index هنا حاولنا عرض الحرف الموجود على الـ
+            a = Integer.parseInt(s);                                          // int لقيمة s هنا حاولنا تحويل قيمة
+        }
+        catch( StringIndexOutOfBoundsException|NumberFormatException e1 ) {   // e1 بعدها تقوم بتخزينه في الكائن ,NumberFormatException أو StringIndexOutOfBoundsException تلتقط الإستثناء إذا كان نوعه catch هذه الـ
+            System.out.println( "The string 's' throw: " +e1 );
+        }
+        catch( Exception e2 ) {                                               // e2 تلتقط أي إستثناء آخر قد يحدث نسينا ذكره, بعدها تقوم بتخزينه في الكائن catch هذه الـ
+            System.out.println( "Exception thrown: " + e2 );
+        }
+ 
+        // بعد الإنتهاء من تجربة الكود سيتم تنفيذ باقي الأوامر الموجودة في البرنامج
+        System.out.println( "The program still work properly" );
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+<div>
+		    s.charAt(28): 9<br/>
+			The string 's' throw: java.lang.NumberFormatException: For input string: "1234567891011121314151617181920212223"<br/>
+			The program still work properly<br/>
+</div>
+</div>
+</div>
+</p></article>
+<article>
+<h2>الجملة <code data-enlighter-language="java">finally</code> في جافا</h2>
+<p>الجملة <code data-enlighter-language="java">finally</code> تأتي بعد الجملتين <code data-enlighter-language="java">try</code> و <span class="inline"><code data-enlighter-language="java">catch</code>.</span><br/>
+	الكود الموضوع في الجملة <code data-enlighter-language="java">finally</code> يتنفذ دائماً, أي في حال حدث إستثناء أو لم يحدث فإنه سيتنفذ.</p>
+<p>الجملة <code data-enlighter-language="java">finally</code> تستخدم لتنظيف الكود, بمعنى أنها تستخدم للتخلص من أي كود لم يعد البرنامج يحتاج إليه.</p>
+<br/>
+<h3>مكان وضع الجملة <code data-enlighter-language="java">finally</code></h3>
+<br/>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+try {
+    // Protected Code
+}
+catch(ExceptionType1 e1) {
+    // Error Handling Code For ExceptionType1
+}
+catch(ExceptionType2 e2) {
+    // Error Handling Code For ExceptionType2
+}
+catch(ExceptionType3 e3) {
+    // Error Handling Code For ExceptionType3
+}
+finally {
+    // Optional Cleanup Code
+    // هنا نقوم بكتابة أوامر للتخلي عن أي شيء لم يعد البرنامج بحاجة له
+} 
+	</pre>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        String s = "1234567891011121314151617181920212223";
+        int a;
+ 
+        try {
+            System.out.println( "s.charAt(28): " + s.charAt(28) );   // s رقم 28 في النص index هنا حاولنا عرض الحرف الموجود على الـ
+            a = Integer.parseInt(s);                                 // int لقيمة s هنا حاولنا تحويل قيمة
+        }
+        catch( StringIndexOutOfBoundsException e1 ) {                // e1 بعدها تقوم بتخزينه في الكائن StringIndexOutOfBoundsException تلتقط الإستثناء الذي نوعه catch هذه الـ
+            System.out.println( "Index is not exist in the string!" );
+        }
+        catch( NumberFormatException e2 ) {                          // e2 بعدها تقوم بتخزينه في الكائن NumberFormatException تلتقط الإستثناء الذي نوعه catch هذه الـ
+            System.out.println( "Can't convert 's' to a number because is to long!" );
+        }
+        catch( Exception e3 ) {                                      // e3 تلتقط أي إستثناء آخر قد يحدث نسينا ذكره, بعدها تقوم بتخزينه في الكائن catch هذه الـ
+            System.out.println( "Exception thrown: " + e3 );
+        }
+        finally {                                                    // تتنفذ في حال حدث إستثناء أو لم يحدث finally الجملة
+            System.out.println( "finally codes always execute" );
+        }
+ 
+        // بعد الإنتهاء من تجربة الكود سيتم تنفيذ باقي الأوامر الموجودة في البرنامج
+        System.out.println( "The program still work properly" );
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+<div>
+				s.charAt(28): 9<br/>
+				Can't convert 's' to a number because is to long!<br/>
+				finally codes always execute<br/>
+				The program still work properly
+			</div>
+</div>
+</div>
+<br/>
+<p>ستعرف فائدة الجملة <code data-enlighter-language="java">finally</code> في دروس لاحقة عندما تتعامل مع الملفات, الشبكات, قواعد البيانات إلخ..<br/>
+<ul class="explain">
+<li><p>إذا كان البرنامج يقرأ محتوى ملف نصي, سيكون عليك التأكد من إغلاق الملف بعد الإنتهاء من قرائته.</p></li>
+<li><p>إذا كان البرنامج يقرأ بيانات من قاعدة بيانات , سيكون عليك التأكد من إغلاق قاعدة البيانات بعد الإنتهاء من التعامل معها.</p></li>
+<li><p>إذا كان البرنامج يتصل بالشبكة , سيكون عليك التأكد من إغلاق الإتصال بعد الإنتهاء من التعامل معها.</p></li><br/>
+</ul>
+<br/>
+<h3>ملاحظات مهمة</h3>
+<ul class="explain">
+<li><p>لا يمكنك إستخدام الجملة <code data-enlighter-language="java">try</code> إذا لم تضع بعدها الجملة <code data-enlighter-language="java">catch</code> أو الجملة <span class="inline"><code data-enlighter-language="java">finally</code>.</span></p></li>
+<li><p>لا يمكنك وضع الجملة <code data-enlighter-language="java">catch</code> إذا لم تستخدم قبلها الجملة <span class="inline"><code data-enlighter-language="java">try</code>.</span></p></li>
+<li><p>الجملة <code data-enlighter-language="java">finally</code> توضع إختيارياً.</p></li>
+<li><p>لا يمكنك وضع أي كود بين الجمل <code data-enlighter-language="java">try</code> و <code data-enlighter-language="java">catch</code> و <span class="inline"><code data-enlighter-language="java">finally</code>.</span></p></li>
+</ul>
+</p></article>
+<article>
+<h2>دوال الكلاس <code data-enlighter-language="java">Exception</code> في جافا</h2>
+<p>هنا وضعنا بعض الدوال الموجودة في الكلاس <code data-enlighter-language="java">Exception</code> و التي يمكن إستخدامها لمعرفة الأخطاء التي حدثت في البرنامج.</p>
+<table class="list rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getMessage</code></span>
+			ترجع رسالة بسيطة تظهر لنا الخطأ الذي حدث.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String toString()</code></span>
+			ترجع إسم كلاس الإستثناء الذي حدث مضافاً إليه نتيجة الخطأ التي ترجعها الدالة <span class="inline"><code data-enlighter-language="java">getMessage()</code>.</span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void printStackTrace()</code></span>
+			يستخدمها المبرمج لمعرفة الأخطاء التي قد تحدث أثناء تشغيل البرنامج, و هي مفيدة جداً لأنها تظهر الخطأ الذي حدث كما هو بكامل تفاصيله. إذاً هذه الدالة تستخدم <span class="inline">للـ <span class="word">Debugging</span>.</span></td>
+</tr>
+</table>
+<br/><br/>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<p><span class="point">•</span>في هذا المثال سنستخدم الدالة <code data-enlighter-language="java">getMessage()</code> لمعرفة سبب الخطأ الذي حدث فقط.</p>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        String s = "abcd 12345";
+        int a;
+ 
+        try {
+            a = Integer.parseInt(s);                 // int لقيمة s هنا حاولنا تحويل قيمة
+        }
+        catch( Exception e ) {                       // e تلتقط أي إستثناء قد يحدث, بعدها تقوم بتخزينه في الكائن catch هذه الـ
+            System.out.println( e.getMessage() );    // لمعرفة الخطأ الذي حدث getMessage() هنا قمنا باستخدام الدالة
+        }
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+<div>
+				For input string: "abcd 12345"
+			</div>
+</div>
+</div>
+<br/><br/>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<p><span class="point">•</span>في هذا المثال سنستخدم الدالة <code data-enlighter-language="java">toString()</code> لمعرفة سبب الخطأ الذي حدث و إسم الكلاس الذي يمثل الإستثناء الذي حدث.</p>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        String s = "abcd 12345";
+        int a;
+ 
+        try {
+            a = Integer.parseInt(s);                // int لقيمة s هنا حاولنا تحويل قيمة
+        }
+        catch( Exception e ) {                      // e تلتقط أي إستثناء قد يحدث, بعدها تقوم بتخزينه في الكائن catch هذه الـ
+            System.out.println( e.toString() );     // لمعرفة الخطأ الذي حدث toString() هنا قمنا باستخدام الدالة
+        }
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+<div>
+				java.lang.NumberFormatException: For input string: "abcd 12345"
+			</div>
+</div>
+</div>
+<br/><br/>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<p><span class="point">•</span>في هذا المثال سنستخدم الدالة <code data-enlighter-language="java">printStackTrace()</code> لمعرفة تفاصيل الخطأ الذي حدث بتفصيل.</p>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        String s = "abcd 12345";
+        int a;
+ 
+        try {
+            a = Integer.parseInt(s);    // int لقيمة s هنا حاولنا تحويل قيمة
+        }
+        catch( Exception e ) {          // e تلتقط أي إستثناء قد يحدث, بعدها تقوم بتخزينه في الكائن catch هذه الـ
+            e.printStackTrace();        // لمعرفة الخطأ الذي حدث printStackTrace() هنا قمنا باستخدام الدالة
+        }
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+<div>
+<span class="red">
+			java.lang.NumberFormatException: For input string: "abcd 12345"<br/>
+			at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)<br/>
+			at java.lang.Integer.parseInt(Integer.java:580)<br/>
+			at java.lang.Integer.parseInt(Integer.java:615)<br/>
+			at testexceptions.Main.main
+			</span>
+</div>
+</div>
+</div>
+</article>
+<article>
+<h2>الكلمتين <code data-enlighter-language="java">throws</code> و <code data-enlighter-language="java">throw</code> في جافا</h2>
+<p>إذا قمت بتعريف دالة و أردت لهذه الدالة أن ترمي إستثناء إذا حدث شيء معين فعليك وضع الكلمة <code data-enlighter-language="java">throws</code> بعد أقواس الباراميترات ثم تحديد نوع الإستثناء الذي قد ترميه الدالة, و إذا قمت مسبقاً بتعريف إستثناء يمكنك جعل الدالة تقوم برميه.</p>
+<p>الكلمة <code data-enlighter-language="java">throw</code> تستخدم لتحديد نوع الإستثناء الذي سيرسل إلى الجملة <span class="inline"><code data-enlighter-language="java">catch</code>.</span><br/>
+    الكلمة <code data-enlighter-language="java">throws</code> تستخدم لتحديد نوع الإستثناء الذي قد تقوم الدالة برميه في حال كنت تريد تجربة الكود و معالجته في مكان إستدعاء الدالة.</p><br/>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<p><span class="point">•</span>الأسلوب المتبع هنا يسمى <span class="inline"><span class="word">Exception Thrower/Exception Catcher</span>.</span></p>
+<p><span class="point">•</span>في هذا المثال قمنا ببناء دالة ترمي إستثناء و تعالجه بداخلها في حال قمنا بإعطائها عمر أكبر من <span class="inline"><span class="number">63</span>.</span></p>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+        // مما يعني أنها ستقوم برمي إستثناء argument هنا قمنا باستدعاء الدالة و أعطيناها القيمة 70 كـ
+        checkAge(70);
+    }
+ 
+ 
+    public static void checkAge (int age) {
+        // و النص الذي وضعناه بين القوسين عبارة عن شرح للمشكلة التي قد تحدث و هو الذي سيتم عرضه catch أكبر من 63 سيتم رمي إستثناء إلى الدالة age هنا الدالة تقوم بتجربة الكود و في حال كانت قيمة
+        try {
+            if(age &gt; 63) {
+                throw new Exception("you are too old!");
+            }
+        }
+        // ثم تقوم بعرض نوع الخطأ e تلتقط أي إستثناء قد يحدث, بعدها تقوم بتخزينه في الكائن catch هذه الـ
+        catch( Exception e ) {
+            System.out.println( e.getMessage() );
+        }
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+you are too old!
+		</pre>
+</div>
+<br/>
+<p>إذاً لا نحتاج إلى إستخدام الكلمة <code data-enlighter-language="java">throws</code> إلا إذا أردنا وضع الدالة بداخل الجملة <code data-enlighter-language="java">try</code> عند إستدعائها.</p>
+<br/><br/>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<p><span class="point">•</span>الأسلوب المتبع هنا يسمى <span class="inline"><span class="word">Exception Thrower/Exception Propagator</span>.</span></p>
+<p><span class="point">•</span>في هذا المثال قمنا ببناء دالة ترمي إستثناء يعالج في مكان الإستدعاء في حال قمنا بإعطائها عمر أكبر من <span class="inline"><span class="number">63</span>.</span></p>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+        // لأنها قد ترمي إستثناء try و وضعناها بداخل الجملة argument هنا قمنا باستدعاء الدالة و أعطيناها القيمة 70 كـ
+        try {
+            checkAge(70);
+        }
+        // ثم تقوم بعرض نوع الخطأ e تلتقط أي إستثناء قد يحدث, بعدها تقوم بتخزينه في الكائن catch هذه الـ
+        catch( Exception e ) {
+            System.out.println( e.getMessage() );
+        }
+    }
+ 
+ 
+    // و النص الذي وضعناه بين القوسين عبارة عن شرح للمشكلة التي قد تحدث و هو الذي سيتم عرضه catch أكبر من 63 سيتم رمي إستثناء إلى الدالة age هنا الدالة تقوم بتجربة الكود عند إستدعئها و في حال كانت قيمة
+    public static void checkAge (int age) throws Exception{
+        if(age &gt; 63) {
+            throw new Exception("you are too old!");
+        }
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+you are too old!
+		</pre>
+</div>
+<br/>
+<p>إذا أردت إنشاء دالة ترمي أكثر من إستثناء, عليك فقط وضع فاصلة بين كل نوعين, و في حال لم يتم التعرف على الإستثناء الذي قمت باستخدامه, يجب أن تفعل له <code data-enlighter-language="java">import</code> فقط.</p>
+<br/>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<p><span class="point">•</span>الأسلوب المتبع هنا يسمى <span class="inline"><span class="word">Exception Thrower/Exception Propagator</span>.</span></p>
+<p><span class="point">•</span>في هذا المثال قمنا ببناء دالة قد ترمي إستثناءين يتم معالجتهما في مكان الإستدعاء.</p>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // لأنها قد ترمي إستثناء try و وضعناها بداخل الجملة argument و أعطيناها القيمة 0 كـ checkAge() هنا قمنا باستدعاء الدالة
+        try {
+            checkAge(0);
+        }
+        // و بعدها تقوم بعرض الخطأ e1 ثم تقوم بتخزينه في الكائن ArithmeticException تلتقط أي إستثناء من النوع catch هذه الـ
+        catch( ArithmeticException e1 ) {
+            System.out.println( e1.getMessage() );
+        }
+        // ثم تقوم بعرض نوع الخطأ e2 تلتقط أي إستثناء آخر قد يحدث ثم تقوم بتخزينه في الكائن catch هذه الـ
+        catch( Exception e2 ) {
+            System.out.println( e3.getMessage() );
+        }
+ 
+    }
+ 
+ 
+    // Exception أو من النوع ArithmeticException هنا قلنا أن الدالة قد ترمي إستثناء من النوع
+    // ArithmeticException أصغر أو تساوي صفر سيتم رمي إستثناء من النوع argument هنا الدالة تقوم بتجربة الكود عند إستدعائها و في حال كانت القيمة التي نمررها لها كـ
+    // Exception و إذا حدث أي إستثناء آخر سيتم رمي إستثناء من النوع
+    public static void checkAge (int age) throws ArithmeticException, Exception{
+        if(age &lt;= 0) {
+            throw new ArithmeticException("This is ArithmeticException");
+        }
+        else{
+            System.out.println( 100/age );
+        }
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+This is ArithmeticException
+		</pre>
+</div>
+</article>
+<article>
+<h2>إنشاء <code class="word">Exception</code> جديد و إستخدامه في جافا</h2>
+<p>في البداية ننصح بالعودة لهذه الفقرة بعد دراسة الوارثة, لكي يتم فهم الكود بشكل كامل.</p>
+<br/>
+<h3>خطوات إنشاء إستثناء جديد</h3>
+<ol class="arabic">
+<li><p>يجب إنشاء كلاس جديد يرث من الكلاس <span class="inline"><code data-enlighter-language="java">Exception</code>.</span></p></li>
+<li><p>يجب إستدعاء الكونستركتور <span class="inline">الـ <span class="word">Superclass</span></span> <span class="inline">( أي الكونستركتور الخاص بالكلاس <code data-enlighter-language="java">Exception</code> )</span> في كونستركتور الكلاس الجديد الذي نقوم بإنشائه.</p></li>
+<li><p>يجب تمرير الرسالة التي سيرميها الإستثناء في الدالة <span class="inline"><code data-enlighter-language="java">super()</code>.</span></p></li>
+</ol>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<p><span class="point">•</span>هنا قمنا بتعريف كلاس جديد يمثل <code data-enlighter-language="java">Exception</code> و قمنا بتسميته <span class="inline"><code data-enlighter-language="java">MyException</code>.</span></p>
+<span class="code-title java-file-icon">MyException.java</span>
+<pre data-enlighter-language="java">
+public class MyException extends Exception {
+ 
+    public MyException(String msg){
+        super(msg);
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>هنا قمنا بإنشاء الكلاس <code data-enlighter-language="java">Main</code> لتجربة الكلاس <span class="inline"><code data-enlighter-language="java">MyException</code>.</span></p>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // لأنها قد ترمي إستثناء try و وضعناها بداخل الجملة argument و أعطيناها القيمة 0 كـ checkAge() هنا قمنا باستدعاء الدالة
+        try {
+            checkAge(20);
+            checkAge(18);
+            checkAge(10);
+        }
+        // ثم تقوم بعرض رسالة الخطأ e ثم تقوم بتخزينه في الكائن MyException تلتقط إستثناء نوعه catch هذه الـ
+        catch( MyException e ) {
+            System.out.println( e.getMessage() );
+        }
+ 
+    }
+ 
+ 
+    // أصغر من 13 argument إذا كان العمر الموضوع فيها كـ MyException هذه الدالة تقوم برمي إستثناء نوعه
+    public static void checkAge(int age) throws MyException {
+        if(age &lt; 13) {
+            throw new MyException("you can't watch horror movies");
+        }
+        else {
+            System.out.println( "you can watch the movie" );
+        }
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+you can watch the movie
+you can watch the movie
+you can't watch horror movies
+		</pre>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

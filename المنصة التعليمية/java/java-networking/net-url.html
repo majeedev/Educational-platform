@@ -1,0 +1,836 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الكلاس URL في جافا | Java inet.URL</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>الكلاس <code data-enlighter-language="java">URL</code> في جافا</h1>
+<article>
+<h2>مقدمة</h2>
+<p>الكلمة <span class="word">URL</span> إختصار لـ <span class="word">Uniform Resource Locator</span> و هي تعني كل المعلومات المذكورة في الرابط و التي تشير إلى مصدر محدد للبيانات.</p>
+<p>الكلاس <code data-enlighter-language="java">URL</code> مصمم بشكل عام لتجهيز روابط الملفات التي سنتعامل معها عن بعد عبر شبكة الإنترنت.</p>
+<br/>
+<h3>بناؤه</h3>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public final class URL
+extends Object
+implements Serializable 
+	</pre>
+<br/>
+<p>المعلومات الأساسية في أي رابط هي: <span class="code">protocol://host:port/path/filename</span></p>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">protocol</code>: نضع مكانها إسم البروتوكول المستخدم في عملية الإتصال مثل <code data-enlighter-language="java">http</code>.</p></li>
+<li><p><code data-enlighter-language="java">host</code>: نضع مكانها إسم الموقع مثل <code data-enlighter-language="java">harmash.com</code>.</p></li>
+<li><p><code data-enlighter-language="java">port</code>: نضع مكانها بورت البرنامج <span class="inline">( أو البروتوكول )</span> المستخدم من قبل العميل, فمثلاً الـ <code data-enlighter-language="java">http</code> يستخدم البورت <code data-enlighter-language="java">80</code>.</p></li>
+<li><p><code data-enlighter-language="java">path</code>: نضع مكانها إسم المجلد الذي نريد الدخول إليه على السيرفر مثل مجلد <code data-enlighter-language="java">home</code>.</p></li>
+<li><p><code data-enlighter-language="java">filename</code>: نضع مكانها إسم الملف الذي نريد تصفحه أو تحميله إلخ..  مثل الملف <code data-enlighter-language="java">index.php</code>.</p></li>
+</ul>
+<br/>
+<p>إذا قمنا بتركيب جميع المعلومات المتفرقة الذتي ذكرناها, سنحصل على رابط واحد و هو رابط الدرس الأول في دروس جافا.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<div class="code-box">
+<a class="blue" href="../../home/index.html" target="_blank">http://harmash.com:80/home/index.php</a>
+</div>
+</div>
+</article>
+<article>
+<h2>كونستركتورات الكلاس <code data-enlighter-language="java">URL</code></h2>
+<p>بشكل عام عندما تنشئ كائن نوعه <code data-enlighter-language="java">URL</code> فأنت تنشئ كائن يمثل رابط.</p>
+<p>الجدول التالي يحتوي على بعض الكونستركتورات الموجودين في الكلاس <code data-enlighter-language="java">URL</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الكونستركتور مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public URL(String url)</code><br/>
+<code data-enlighter-language="java">throws MalformedURLException</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">URL</code> من خلال النص الذي نمرره له.<br/>
+			النص الذي نقوم بإدخاله يمثل كافة المعلومات التي تشكل رابط.<br/>
+			في حال وجود أي خطأ في المعلومات المدخلة فيه يتم رمي الإستثناء <span class="code red">MalformedURLException</span>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public URL(String protocol, String host, int port, String file)</code><br/>
+<code data-enlighter-language="java">throws MalformedURLException</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">URL</code> مع تحديد البروتوكول <span class="red">+</span> إسم الموقع <span class="red">+</span> رقم البورت <span class="red">+</span> إسم الملف الذي سيتم الوصول إليه من خلاله.<br/>
+			في حال وجود أي خطأ في المعلومات المدخلة فيه يتم رمي الإستثناء <span class="code red">MalformedURLException</span>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public URL(String protocol, String host, String file)</code><br/>
+<code data-enlighter-language="java">throws MalformedURLException</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">URL</code> مع تحديد البروتوكول <span class="red">+</span> إسم الموقع <span class="red">+</span> إسم الملف الذي سيتم الوصول إليه من خلاله.<br/>
+			عندما لا تقوم بتحديد رقم البورت بنفسك, يقوم باستخدام رقم البورت الإفتراضي للبروتوكول المذكور.<br/>
+			في حال وجود أي خطأ في المعلومات المدخلة فيه يتم رمي الإستثناء <span class="code red">MalformedURLException</span>.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>دوال الكلاس <code data-enlighter-language="java">URL</code></h2>
+<p>الجدول التالي يحتوي على دوال الكلاس <code data-enlighter-language="java">URL</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getHost()</code></span>
+			ترجع نص يمثل البروتوكول <span class="red">+</span> إسم الموقع الموضوعين في كائن الـ <code data-enlighter-language="java">URL</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getAuthority()</code></span>
+			ترجع نص يمثل البروتوكول <span class="red">+</span> إسم الموقع <span class="red">+</span> رقم البورت (في حال كان مذكور في الرابط) الموضوعين في كائن الـ <code data-enlighter-language="java">URL</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getProtocol()</code></span>
+			ترجع إسم البروتوكول الذي يستخدمه كائن الـ <code data-enlighter-language="java">URL</code> للإتصال بالشبكة.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int getPort()</code></span>
+			ترجع رقم البورت الخاص بالبروتوكول الذي يستخدمه كائن الـ <code data-enlighter-language="java">URL</code> للإتصال بالشبكة.<br/>
+			ترجع <span class="number">1-</span> في حال عدم تحديد رقم البورت.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int getDefaultPort()</code></span>
+			ترجع رقم البورت الإفتراضي للبروتوكول الذي يستخدمه كائن الـ <code data-enlighter-language="java">URL</code> للإتصال بالشبكة.<br/>
+			ترجع <span class="number">1-</span> في حال عدم وجود رقم بورت إفتراصي.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getPath()</code></span>
+			ترجع نص يمثل مسار الملف المراد الوصول إليه عن طريق كائن الـ <code data-enlighter-language="java">URL</code>.<br/>
+			ترجع نص فارغ في حال كان مسار الملف غير محدد.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getFile()</code></span>
+			ترجع نص يمثل مسار الملف المراد الوصول إليه عن طريق كائن الـ <code data-enlighter-language="java">URL</code> <span class="red">+</span> الـ <span class="word">Query</span> (في حال كان يوجد <span class="word">Query</span> في الرابط).<br/>
+			في حال عدم وجود <span class="word">Query</span> في الرابط, تعطي نفس نتيجة الدالة <code data-enlighter-language="java">getPath()</code>.<br/>
+			ترجع نص فارغ في حال كان المسار غير محدد في الرابط.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getQuery()</code></span>
+			ترجع جزئية الـ <span class="word">Query</span> الموضوعة في كائن الـ <code data-enlighter-language="java">URL</code>.<br/>
+			ترجع <code data-enlighter-language="java">null</code> في حال عدم وجود <span class="word">Query</span> في كائن الـ <code data-enlighter-language="java">URL</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getRef()</code></span>
+			ترجع جزئية الـ <span class="word">Anchor</span> في كائن الـ <code data-enlighter-language="java">URL</code>.<br/>
+<span class="word">Anchor</span> تعني عنصر محدد موجود في صفحة الويب, و يقال له مرجع الصفحة.<br/>
+			لتحديد الـ <span class="word">Anchor</span> في كائن الـ <code data-enlighter-language="java">URL</code>, يجب وضعه بعد إسم الملف ( الذي شير إلى صفحة محددة في الويب ) و نضع الرمز <span class="word">#</span> قبله.<br/><br/>
+<b>مثال</b><br/>
+			هذا الرابط يفتح الصفحة الرابعة في المجلد الذي يحتوي على دروس جافا و يضعك مباشرةً في الفقرة الثانية.<br/>
+<a class="blue" href="../lesson_4.html#article_2" target="_blank">http://harmash.com/java/lesson_4.php<span class="red">#article_2</span></a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String getUserInfo()</code></span>
+			ترجع معلومات المستخدم الموضوعة في كائن الـ <code data-enlighter-language="java">URL</code> في حال كانت ظاهرة فيه.<br/>
+			ترجع <code data-enlighter-language="java">null</code> في حال كان لا يوجد أي معلومة خاصة بالمستخدم في كائن الـ <code data-enlighter-language="java">URL</code>.<br/><br/>
+<b>أمثلة</b><br/>
+<ul class="explain">
+<li><p><a class="blue" href="http://info@hamash.com/" target="_blank">http://<span class="red">info</span>@hamash.com</a><br/>
+				هذا رابط يحتوي على إيميل شخص من موقع harmash.com, إذاً الدالة هنا ترجع <code data-enlighter-language="java">info</code>.</p></li>
+<li><p><a class="blue" href="http://info:1234@hamash.com/" target="_blank">http://<span class="red">info:1234</span>@hamash.com</a><br/>
+				هذا رابط يحتوي على إيميل و كلمة مرور شخص من موقع harmash.com, إذاً الدالة هنا ترجع <code data-enlighter-language="java">info:123</code>.</p></li>
+</ul>
+<br/>
+<p><span class="note">ملاحظة:</span> هذه مجرد أمثلة, كملة المرور يجب عدم إظهارها أبداً في الرابط حتى لا يتم سرقة الحساب.</p>
+</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String toExternalForm()</code></span>
+			ترجع محتوى كائن <code data-enlighter-language="java">URL</code> كنص واحد نوعه <code data-enlighter-language="java">String</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String toString()</code></span>
+			ترجع محتوى كائن <code data-enlighter-language="java">URL</code> كنص واحد نوعه <code data-enlighter-language="java">String</code>.</td>
+</tr>
+
+<td><span class="code-title"><code data-enlighter-language="java">public boolean equals(Object obj)</code></span>
+			تقارن كائن الـ <code data-enlighter-language="java">URL</code> الذي قام باستدعائها مع الكائن الذي نمرره لها كـ <span class="word">Argument</span>.<br/>
+			إذاً تقارن الرابط الذي قام باستدعائها مع الرابط الذي نمرره لها كـ <span class="word">Argument</span>.<br/>
+			ترجع <code data-enlighter-language="java">true</code> في حال كانا متطابقين.</td>
+
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean sameFile(URL otherURL)</code></span>
+			تقارن كائن الـ <code data-enlighter-language="java">URL</code> الذي قام باستدعائها مع كائن الـ <code data-enlighter-language="java">URL</code> الذي نمرره لها كـ <span class="word">Argument</span>.<br/>
+			إذاً تقارن الرابط الذي قام باستدعائها مع الرابط الذي نمرره لها كـ <span class="word">Argument</span>.<br/>
+			ترجع <code data-enlighter-language="java">true</code> في حال كانا متطابقين.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public InputStream openStream()</code><br/>
+<code data-enlighter-language="java">throws IOException</code></span>
+			تنشئ إتصال مباشر بين البرنامج و الملف الموجود في الموقع الذي يشير له كائن الـ <code data-enlighter-language="java">URL</code>.<br/>
+			في حال نجح الإتصال, ترجع كائن نوعه <code data-enlighter-language="java">InputStream</code> يتيح لك قراءة محتوى هذا الملف فقط.<br/>
+			في حال فشل الإتصال يتم رمي إستثناء.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public URLConnection openConnection()</code><br/>
+<code data-enlighter-language="java">throws IOException</code></span>
+			تنشئ إتصال مباشر بين البرنامج و الملف الموجود في الموقع الذي يشير له كائن الـ <code data-enlighter-language="java">URL</code>.<br/>
+			في حال نجح الإتصال, ترجع كائن نوعه <code data-enlighter-language="java">URLConnection</code> يتيح لك قراءة محتوى هذا الملف أو الكتابة فيه.<br/>
+			في حال فشل الإتصال يتم رمي إستثناء.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public URLConnection openConnection(Proxy proxy)</code>.<br/>
+<code data-enlighter-language="java">throws IOException</code></span>
+			تنشئ إتصال بين البرنامج و الملف الموجود في الموقع الذي يشير له كائن الـ <code data-enlighter-language="java">URL</code> عن طريق <span class="word">Proxy Server</span>.<br/>
+			إذاً هنا يوجد طرف ثالث يلعب دور الوسيط بين البرنامج الذي يحاول الوصول للملف و الموقع الذي يملك الملف.<br/>
+<ul class="explain">
+<li><p>في حال نجح الإتصال, ترجع كائن نوعه <code data-enlighter-language="java">URLConnection</code> يتيح لك قراءة محتوى هذا الملف أو الكتابة فيه.</p></li>
+<li><p>في حال كان البروتوكول المستخدم لا يعمل مع <span class="word">Proxy Server</span>, يتم تجاهل <span class="word">Proxy Server</span> و يتم وصل طرفي الإتصال مباشرةً مع بعضهما.</p></li>
+<li><p>في حال وضعت الثابت <code data-enlighter-language="java">Proxy.NO_PROXY</code> كـ <span class="word">Argument</span>, أيضاً يتم تجاهل <span class="word">Proxy Server</span> و يتم وصل طرفي الإتصال مباشرةً مع بعضهما.</p></li>
+<li><p>في حال حدث خطأ بسبب الملف يتم رمي الإستثناء <span class="code red">IOException</span></p></li>
+<li><p>في حال كان المستخدم لا يملك صلاحية لإستخدام الـ <span class="word">Proxy Server</span>, يتم رمي الإستثناء <span class="code red">SecurityException</span></p></li>
+<li><p>في حال وضعنا <code data-enlighter-language="java">null</code> كـ <span class="word">Argument</span> أو لم نحدد الـ <span class="word">Proxy Server</span> بشكل صحيح, يتم رمي الإستثناء <span class="code red">IllegalArgumentException</span></p></li>
+</ul>
+</td>
+</tr>
+<!--
+		<tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">protected void set(String protocol, String host, int port, String file, String ref)</span>
+			تحدد قيم <span class="number">5</span> خصائص من خصائص كائن <code data-enlighter-language="java">URL</code> الذي قام باستدعائها, و هي:<br>
+			<ol class="arabic">
+			    <li><p><code data-enlighter-language="java">protocol</span>: البروتوكول الذي سيستخدم في عملية الإتصال.</p></li>
+			    <li><p><code data-enlighter-language="java">host</span>: إسم الموقع الذي يحتوي على الملف.</p></li>
+			    <li><p><code data-enlighter-language="java">port</span>: إسم البورت الذي يستخدمه البروتوكول.</p></li>
+			    <li><p><code data-enlighter-language="java">file</span>: إسم الملف الذي نريد الوصول إليه.</p></li>
+			    <li><p><code data-enlighter-language="java">ref</span>: إسم مقطع محدد في الملف.</p></li>
+			</ol>
+			</td>
+			<td class="center">19</td>
+		</tr>
+		<tr>
+		    <td><span class="code-title"><code data-enlighter-language="java">protected void set(String protocol, String host, int port, String authority, String userInfo, String path, String query, String ref)</span>
+			</td>
+			<td class="center">20</td>
+		</tr>
+		-->
+</table>
+</article>
+<article>
+<h2>أمثلة شاملة</h2>
+<br/>
+<h3>المثال الأول</h3>
+<p>في المثال التالي قمنا بتعريف كائن نوعه <code data-enlighter-language="java">URL</code> يشير إلى رابط درس معين من موقعنا, ثم حاولنا عرض كافة المعلومات التي يمكن استخراجها من الرابط.</p>
+<p><span class="note">ملاحظة:</span> تعمدنا عرض جميع المعلومات التي يمكن استخراجها من الرابط سواء كانت موجودة أو غير موجودة, لاحظ أن أي معلومة حاولنا عرضها و كانت غير موجودة في الرابط ستوضع القيمة <code data-enlighter-language="java">null</code> أو <span class="number">1-</span> مكانها كما ذكرنا في الجدول السابق.</p>
+<div class="example-box">
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.net.URL;		// URL هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // الآن سنحاول إجراء إتصال عبر الشبكة للوصول إلى ملف محدد
+        try
+        {
+            // يشير إلى رابط الدرس الرابع في جافا الفقرة الثانية url إسمه URL هنا قمنا بتعريف كائن نوعه
+            URL url = new URL("http://harmash.com:80/java/lesson_4.php#article_2");
+ 
+            // هنا قمنا بعرض المعلومات المتوفرة و الغير متوفرة في الرابط
+            System.out.println("URL          : " + url.toString());
+            System.out.println("Protocol     : " + url.getProtocol());
+            System.out.println("Authority    : " + url.getAuthority());
+            System.out.println("Host name    : " + url.getHost());
+            System.out.println("File name    : " + url.getFile());
+            System.out.println("Path         : " + url.getPath());
+            System.out.println("Port         : " + url.getPort());
+            System.out.println("Default Port : " + url.getDefaultPort());
+            System.out.println("Reference    : " + url.getRef());
+            System.out.println("Query        : " + url.getQuery());
+            System.out.println("User Info    : " + url.getUserInfo());
+        }
+        catch( Exception e ) {
+            e.printStackTrace();
+        }
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+URL          : http://harmash.com:80/java/lesson_4.php#article_2
+Protocol     : http
+Authority    : harmash.com:80
+Host name    : harmash.com
+File name    : /java/lesson_4.php
+Path         : /java/lesson_4.php
+Port         : 80
+Default port : 80
+Reference    : article_2
+Query        : null
+User Info    : null 
+		</pre>
+</div>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>في المثال التالي قمنا بتعريف كائن نوعه <code data-enlighter-language="java">URL</code> يشير إلى رابط درس معين من موقعنا.<br/>
+	بعدها قمنا باستدعاء الدالة <code data-enlighter-language="java">openStream()</code> و التي ترجع كائن نوعه <code data-enlighter-language="java">URLConnection</code> يتيح لنا قراءة محتوى الملف الذي يشير إليه الرابط.<br/>
+	كائن الـ <code data-enlighter-language="java">URLConnection</code> قمنا بتخزينه في كائن نوعه <code data-enlighter-language="java">InputStream</code> حتى نستطيع قراءة محتوى الملف في البرنامج.</p>
+<p>في الأخير قمنا بإنشاء حلقة <code data-enlighter-language="java">while</code> لقراءة محتوى الملف و تخزينه في متغير نوعه <code data-enlighter-language="java">String</code> إسمه <code data-enlighter-language="java">data</code>.</p>
+<p><span class="note">ملاحظة:</span> هنا ستتعلم طريقة قراءة محتوى أي ملف من موقع ما مهما كان نوعه سواء صورة, فيديو ملف نصي.</p>
+<div class="example-box">
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.net.URL;               // URL هنا قمنا باستدعاء الكلاس
+import java.io.InputStream;        // InputStream هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // قمنا بتجهيز هذا المتغير من أجل تخزين محتوى الملف فيه
+        String data = "";
+ 
+        // الآن سنحاول إجراء إتصال عبر الشبكة للوصول إلى ملف محدد و قراءة محتواه
+        try
+        {
+            // يشير إلى رابط الدرس الرابع في جافا url إسمه URL هنا قمنا بتعريف كائن نوعه
+            URL url = new URL("http://harmash.com/java/lesson_4.php");
+ 
+            // is في الكائن URL هنا قمنا بتخزين الملف الذي يشير له الكائن
+            InputStream is = url.openStream();
+ 
+            // data و تخزنهم في المتغير is هنا قمنا بإنشاء حلقة تمر على جميع الأحرف الموجودة في الكائن
+            int c;
+            while ((c = is.read()) != -1)
+            {
+                data += (char)c;
+            }
+ 
+            // هنا قمنا بإغلاق الإتصال مع الملف
+            is.close();
+ 
+            // هنا قمنا بعرض محتوى الملف
+            System.out.println(data);
+        }
+        catch( Exception e ) {
+            e.printStackTrace();
+        }
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>عند تشغيل البرنامج سيتم عرض محتوى الملف <code data-enlighter-language="java">lesson_4.php</code> و الذي هو عبارة عن كامل كود الصفحة التي يشير لها الرابط.</p>
+<p><span class="point">•</span>لاحظ أن الأحرف العربية لم تظهر بشكل صحيح, هذه المشكلة سببها عدم تحديد الترميز المستخدم في القراءة, و حللنا هذه المشكلة في المثال الثالث.</p>
+<div class="code-box" style="height:250px; overflow:auto;">
+			ï»¿&lt;!DOCTYPE html&gt;<br/>
+			&amp;lthtml lang="ar"&gt;<br/>
+			&amp;lthead&gt;<br/>
+			    &amp;ltmeta http-equiv="expires" content="-1"/&gt;<br/>
+			    &amp;ltmeta http-equiv="pragma" content="no-cache"/&gt;<br/>
+			    &amp;ltmeta container="text/html; charset=UTF-8"/&gt;<br/>
+			    &amp;ltlink rel="stylesheet" type="text/css" href="../style/css/style.css"/&gt;<br/>
+			    &amp;lttitle&gt;Java - Ø£Ø³ÙÙØ¨ Ø§ÙÙØªØ§Ø¨Ø©&lt;/title&gt;<br/>
+			&amp;ltscript src='/google_analytics_auto.js'&gt;&lt;/script&gt;&lt;/head&gt;<br/>
+			&amp;ltbody&gt;<br/>
+			&amp;ltdiv id="header"&gt;&lt;/div&gt;<br/>
+			&amp;ltdiv id="topnavContainer"&gt;&lt;/div&gt;<br/>
+			&amp;ltdiv id="container"&gt;<br/>
+				&amp;ltdiv id="rightSide"&gt;&lt;/div&gt;<br/>
+			    &amp;ltdiv id="content"&gt;<br/>
+					&amp;ltsection id="main"&gt;<br/>
+					    &amp;lth3 class="the_method"&gt;Java&lt;/h3&gt;<br/>
+					    &amp;lttable class="lesson_header"&gt;<br/>
+						    &amp;lttr&gt;<br/>
+								&amp;ltth&gt;Ø§ÙØ¯ÙØ±Ø³&lt;/th&gt;<br/>
+							    &amp;lttd&gt;Ù¤&lt;/td&gt;<br/>
+								&amp;ltth&gt;Ø£Ø³ÙÙØ¨ Ø§ÙÙØªØ§Ø¨Ø© ÙÙ Ø¬Ø§ÙØ§&lt;/th&gt;<br/>
+							&lt;/tr&gt;<br/>
+						&lt;/table&gt;<br/>
+						&amp;ltarticle id="article_0"&gt;<br/>
+						    &amp;ltdiv id="shortcuts"&gt;<br/>
+						        &amp;ltul&gt;<br/>
+							        &amp;ltli&gt;&amp;ltb&gt;âº&lt;/b&gt; &amp;lta href="#" onclick="return false;" onmousedown="autoScrollTo('article_1');"&gt;Ù<br/>Ø¨Ø§Ø¯Ø¦ ÙØªØ§Ø¨Ø© Ø§ÙÙÙØ¯ ÙÙ Ø¬Ø§ÙØ§&lt;/a&gt;&lt;/li&gt;<br/>
+							        &amp;ltli&gt;&amp;ltb&gt;âº&lt;/b&gt; &amp;lta href="#" onclick="return false;" onmousedown="autoScrollTo('article_2');"&gt;Ø§ÙØ£Ø­Ø±Ù Ø§ÙÙ<br/>Ø³ØªØ®Ø¯Ù<br/>Ø© ÙÙ Ø§ÙØ£Ø³Ù<br/>Ø§Ø¡&lt;/a&gt;&lt;/li&gt;<br/>
+							        &amp;ltli&gt;&amp;ltb&gt;âº&lt;/b&gt; &amp;lta href="#" onclick="return false;" onmousedown="autoScrollTo('article_3');"&gt;Ø§ÙÙÙÙ<br/>Ø§Øª Ø§ÙÙ<br/>Ø­Ø¬ÙØ²Ø© ÙÙ Ø¬Ø§ÙØ§&lt;/a&gt;&lt;/li&gt;<br/>
+							    &lt;/ul&gt;<br/>
+							&lt;/div&gt;<br/>
+						&lt;/article&gt;<br/>
+						&amp;ltarticle&gt;<br/>
+						    &amp;lth3&gt;Ù<br/>Ø¨Ø§Ø¯Ø¦ ÙØªØ§Ø¨Ø© Ø§ÙÙÙØ¯ ÙÙ Ø¬Ø§ÙØ§&lt;/h3&gt;&amp;ltbr&gt;<br/>
+							&amp;lth4&gt;Case Sensitivity&lt;/h4&gt;<br/>
+							&amp;ltp&gt;&amp;ltspan class="word"&gt;Case Sensitivity&lt;/span&gt; ØªØ¹ÙÙ Ø£ÙÙ ÙØºØ© Ø§ÙØ¨Ø±Ù<br/>Ø¬Ø© ØªÙ<br/>ÙÙÙØ² Ø¨ÙÙ Ø§ÙØ£Ø­Ø±Ù Ø§ÙÙØ¨ÙØ±Ø© Ù Ø§ÙØ£Ø­Ø±Ù Ø§ÙØµÙØºÙØ±Ø©.&lt;/p&gt;<br/>
+			                &amp;ltp&gt;Ø¬Ø§ÙØ§ ØªØ¹Ø§Ù<br/>Ù Ø§ÙØ£Ø³Ù<br/>Ø§Ø¡ Ø§ÙØªÙ ÙØ³ØªØ®Ø¯Ù<br/>ÙØ§ Ø¨ØªØ£ÙÙÙ Ø³ÙØ§Ø¡ ÙÙÙ<br/>ØªØºÙÙØ±Ø§Øª, Ø§ÙØ¯ÙÙØ§Ù, Ø§ÙÙÙØ§Ø³Ø§Øª, Ø§ÙÙØ§Ø¦ÙØ§Øª Ø¥ÙØ®.&amp;ltbr&gt;<br/>
+							Ù<br/>Ø«Ø§Ù: &amp;ltspan class="code"&gt;note&lt;/span&gt; Ù &amp;ltspan class="code"&gt;Note&lt;/span&gt; ÙÙØ³ÙØ§ Ø´ÙØ¡Ø§Ù ÙØ§Ø­Ø¯Ø§Ù.&lt;/p&gt;<br/>
+							&amp;ltp&gt;Ø¨ÙÙÙ<br/>Ø§ ÙÙ ÙØºØ§Øª Ø¨Ø±Ù<br/>Ø¬Ø© Ø£Ø®Ø±Ù Ù<br/>Ø«Ù &amp;ltspan class="word"&gt;PHP&lt;/span&gt; Ù &amp;ltspan class="word"&gt;HTML&lt;/span&gt; ÙØ§ ÙÙÙ<br/>ÙÙÙ<br/> Ø¥Ø°Ø§ ÙØ§ÙØª Ø§ÙØ£Ø­Ø±Ù ÙØ¨ÙØ±Ø© Ø£Ù ØµØºÙØ±Ø©.&amp;ltbr&gt;<br/>
+							Ù<br/>Ø«Ø§Ù: &amp;ltspan class="code"&gt;note&lt;/span&gt; Ù &amp;ltspan class="code"&gt;Note&lt;/span&gt; Ù &amp;ltspan class="code"&gt;NoTe&lt;/span&gt; Ù &amp;ltspan class="code"&gt;NOTE&lt;/span&gt; ÙÙ<br/> Ø´ÙØ¡Ø§Ù ÙØ§Ø­Ø¯Ø§Ù.&lt;/p&gt;&amp;ltbr&gt;&amp;ltbr&gt;<br/>
+							&amp;lth4&gt;Ø¥Ø³Ù<br/> Ø§ÙÙÙØ§Ø³&lt;/h4&gt;<br/>
+							&amp;ltp&gt;Ø¯Ø§Ø¦Ù<br/>Ø§Ù Ø¥Ø¨Ø¯Ø£ Ø¥Ø³Ù<br/> Ø§ÙÙÙØ§Ø³ Ø¨Ø­Ø±Ù ÙØ¨ÙØ±.&amp;ltbr&gt;<br/>
+							Ù<br/>Ø«Ø§Ù: &amp;ltspan class="ncode"&gt;&amp;ltspan class="blue"&gt;class&lt;/span&gt; &amp;ltspan class="red"&gt;F&lt;/span&gt;irst&lt;/span&gt;&lt;/p&gt;<br/>
+							&amp;ltp&gt;Ø¥Ø°Ø§ ÙØ§Ù Ø¥Ø³Ù<br/> Ø§ÙÙÙØ§Ø³ ÙØªØ£ÙÙ Ù<br/>Ù Ø£ÙØ«Ø± Ù<br/>Ù ÙÙÙ<br/>Ø©, Ø¥Ø¬Ø¹Ù Ø£ÙÙÙ Ø­Ø±Ù Ù<br/>Ù ÙÙÙ ÙÙÙ<br/>Ø© ÙØ¨ÙØ±Ø§Ù.&amp;ltbr&gt;<br/>
+							Ù<br/>Ø«Ø§Ù: &amp;ltspan class="ncode"&gt;&amp;ltspan class="blue"&gt;class&lt;/span&gt; &amp;ltspan class="red"&gt;F&lt;/span&gt;irst&amp;ltspan class="red"&gt;J&lt;/span&gt;ava&amp;ltspan class="red"&gt;C&lt;/span&gt;lass&lt;/span&gt;&lt;/p&gt;&amp;ltbr&gt;&amp;ltbr&gt;<br/>
+							&amp;lth4&gt;Ø¥Ø³Ù<br/> Ø§ÙØ¯ÙØ§ÙØ©&lt;/h4&gt;<br/>
+							&amp;ltp&gt;Ø¯Ø§Ø¦Ù<br/>Ø§Ù Ø¥Ø¨Ø¯Ø£ Ø¥Ø³Ù<br/> Ø§ÙØ¯ÙØ§ÙØ© Ø¨Ø­Ø±Ù ØµØºÙØ±.&amp;ltbr&gt;<br/>
+							Ù<br/>Ø«Ø§Ù: &amp;ltspan class="ncode"&gt;&amp;ltspan class="blue"&gt;public void &lt;/span&gt; &amp;ltspan class="red"&gt;d&lt;/span&gt;isplay()&lt;/span&gt;&lt;/p&gt;<br/>
+							&amp;ltp&gt;Ù Ø¥Ø°Ø§ ÙØ§Ù Ø¥Ø³Ù<br/> Ø§ÙØ¯ÙØ§ÙØ© ÙØªØ£ÙÙ Ù<br/>Ù Ø£ÙØ«Ø± Ù<br/>Ù ÙÙÙ<br/>Ø©, Ø¥Ø¬Ø¹Ù Ø£ÙÙÙ ÙÙÙ<br/>Ø© ØªØ¨Ø¯Ø£ Ø¨Ø­Ø±Ù ØµØºÙØ± Ù Ø¬Ù<br/>ÙØ¹ Ø§ÙÙÙÙ<br/>Ø§Øª Ø§ÙØªÙ ØªÙÙÙØ§ ØªØ¨Ø¯Ø£ Ø¨Ø­Ø±Ù ÙØ¨ÙØ±.&amp;ltbr&gt;<br/>
+							Ù<br/>Ø«Ø§Ù: &amp;ltspan class="ncode"&gt;&amp;ltspan class="blue"&gt;public void &lt;/span&gt; &amp;ltspan class="red"&gt;d&lt;/span&gt;isplay&amp;ltspan class="red"&gt;U&lt;/span&gt;ser&amp;ltspan class="red"&gt;I&lt;/span&gt;nfo()&lt;/span&gt;&lt;/p&gt;&amp;ltbr&gt;&amp;ltbr&gt;<br/>
+							&amp;lth4&gt;Ø¥Ø³Ù<br/> Ø§ÙÙ<br/>ÙÙÙ Ø§ÙÙØ°Ù ÙØ­ØªÙÙ Ø¹ÙÙ Ø§ÙÙÙØ§Ø³&lt;/h4&gt;<br/>
+							&amp;ltp&gt;Ø¥Ø³Ù<br/> ÙÙØ§Ø³ Ø§ÙØ¬Ø§ÙØ§ ÙØ¬Ø¨ Ø£Ù ÙÙÙÙ Ù<br/>Ø·Ø§Ø¨ÙØ§Ù ÙØ¥Ø³Ù<br/> Ø§ÙÙ<br/>ÙÙÙ Ø§ÙÙ<br/>ÙØ¬ÙØ¯ Ø¨Ø¯Ø§Ø®ÙÙ.&amp;ltbr&gt;<br/>
+							Ù<br/>Ø«Ø§Ù: Ø¥Ø°Ø§ ÙØ§Ù Ø¥Ø³Ù<br/> Ø§ÙÙÙØ§Ø³ &amp;ltspan class="ncode"&gt;&amp;ltspan class="blue"&gt;class &lt;/span&gt; Harmash&lt;/span&gt; ÙØ¬Ø¨ Ø£Ù ÙÙÙÙ Ù<br/>ÙØ¬ÙØ¯Ø§Ù ÙÙ Ù<br/>ÙÙÙ Ø¬Ø§ÙØ§ Ø¥Ø³Ù<br/>Ù &amp;ltspan class="ncode"&gt;Harmash.java&lt;/span&gt; ÙÙ<br/>Ø§ ÙÙ ÙØ°Ù Ø§ÙØµÙÙØ±Ø©:&lt;/p&gt;<br/>
+			                &amp;lta target="_blank" href="lesson_3/pic_1.PNG"&gt;&amp;ltimg src="lesson_3/pic_1.PNG" alt="Ø§ÙØµÙØ±Ø© ØºÙØ± Ù<br/>ÙØ¬ÙØ¯Ø©.. Ø±Ø¬Ø§Ø¡Ø§Ù Ø£Ø¨ÙØº Ø§ÙÙ<br/>ÙÙØ¹ ÙØ¥ØµÙØ§Ø­ ÙØ°Ø§ Ø§ÙØ®Ø·Ø£ Ù Ø´ÙØ±Ø§Ù"/&gt;&lt;/a&gt;&amp;ltbr&gt;<br/>
+							&amp;ltp&gt;&amp;ltspan class="red"&gt;Ø¥ÙØªØ¨Ù:&lt;/span&gt; Ø¥Ø°Ø§ ÙØ§Ù Ø¥Ø³Ù<br/> Ø§ÙÙÙØ§Ø³ Ù<br/>Ø®ØªÙÙ Ø¹Ù Ø¥Ø³Ù<br/> Ø§ÙÙ<br/>ÙÙÙ ÙØ¥Ù Ø§ÙÙ &amp;ltspan class="word"&gt;javac&lt;/span&gt; Ø£Ù Ø§ÙÙ<br/>ØªØ±Ø¬Ù<br/> Ø§ÙÙØ°Ù ÙØ­ÙÙÙ ÙÙØ¯ Ø§ÙØ¬Ø§ÙØ§ ÙÙØºØ© ÙÙÙÙ<br/>ÙØ§ Ø§ÙÙÙ<br/>Ø¨ÙÙØªØ±, ÙÙ ÙØ³ØªØ·ÙØ¹ Ø¥ÙØ¬Ø§Ø¯ Ø§ÙÙÙØ§Ø³ ÙØ£ÙÙÙ ÙØ¨Ø­Ø« Ø¹Ù Ø§ÙÙ<br/>ÙÙÙ Ø£ÙÙÙØ§Ù Ø«Ù<br/> ÙØªÙÙÙØ¹ Ø£Ù ÙÙÙÙ Ø§ÙÙÙØ§Ø³ ÙØ­Ù<br/>Ù ÙÙØ³ Ø§ÙØ¥Ø³Ù<br/>, ÙØ³ÙØ³Ø¨ÙØ¨ Ø°ÙÙ Ù<br/>Ø´Ø§ÙÙ ÙÙ Ø§ÙÙÙØ¯.&lt;/p&gt;&amp;ltbr&gt;&amp;ltbr&gt;<br/>
+							&amp;lth4&gt;ÙÙØ·Ø© Ø§ÙØ¨Ø¯Ø§ÙØ©&lt;/h4&gt;<br/>
+							&amp;ltp&gt;ÙÙØ·Ø© Ø§ÙØ¨Ø¯Ø§ÙØ© ØªØ³Ù<br/>ÙÙ &amp;ltspan class="word"&gt;Entry Point&lt;/span&gt;, Ù ÙÙ ØªØ¹ÙÙ Ø£ÙÙÙ Ù<br/>ÙØ§Ù Ø³ÙØªÙÙ<br/> ÙÙÙ ØªÙÙÙØ° Ø§ÙØ£ÙØ§Ù<br/>Ø± Ø§ÙÙ<br/>ÙØªÙØ¨Ø© Ø¹ÙØ¯ ØªØ´ØºÙÙ Ø§ÙØ¨Ø±ÙØ§Ù<br/>Ø¬.&amp;ltbr&gt;<br/>
+							ÙÙ Ø§ÙØ¨Ø±Ø§Ù<br/>Ø¬ Ø§ÙÙØ¹ÙÙÙØ©, Ø³ÙØ­ØªÙÙ Ø¨Ø±ÙØ§Ù<br/>Ø¬Ù Ø¹ÙÙ Ø£ÙØ«Ø± Ù<br/>Ù ÙÙØ§Ø³ Ø­ØªÙ<br/>Ø§Ù Ø¨Ø§ÙØ¥Ø¶Ø§ÙØ© Ø¥ÙÙ ÙØ«ÙØ± Ù<br/>Ù Ø§ÙÙ<br/>ÙÙØ§Øª Ù Ø§ÙØµÙØ± Ø¥ÙØ®.. Ù Ø³ØªØ±Ù Ø°Ø§ÙÙ ÙÙ Ø¯Ø±ÙØ³ Ù<br/>ØªÙÙØ¯Ù<br/>Ø©.&lt;/p&gt;&amp;ltbr&gt;<br/>
+							&amp;ltspan class="question"&gt;Ø¥Ø°Ø§Ù ÙÙÙ Ø³ÙÙÙÙ<br/> Ù<br/>ØªØ±Ø¬Ù<br/> ÙØºØ© Ø¬Ø§ÙØ§ (&amp;ltspan class="word"&gt;javac&lt;/span&gt;) Ø£Ù ÙÙØ§Ø³ ÙØ¬Ø¨ Ø£Ù ÙØªÙÙÙØ° ÙÙ Ø§ÙØ¨Ø¯Ø§ÙØ©Ø&lt;/span&gt;<br/>
+							&amp;ltp&gt;Ù<br/>Ù ÙÙØ§ Ø¬Ø§Ø¦Øª ÙÙØ±Ø© Ø£ÙÙ ÙÙ<br/>ÙÙ ÙÙÙ<br/>Ø´Ø±ÙØ¹ Ø§ÙØ°Ù ØªØ¨ÙÙÙ Ø£Ù ÙØ­ØªÙÙ Ø¹ÙÙ Ø§ÙØ¹Ø¯Ø¯ Ø§ÙØ°Ù ØªØ±ÙØ¯Ù Ù<br/>Ù Ø§ÙÙÙØ§Ø³Ø§Øª, Ù ÙÙÙÙÙ ÙØ¬Ø¨ Ø£Ù ÙØ­ØªÙÙ Ø¹ÙÙ ÙÙØ·Ø© Ø¥ÙØ·ÙØ§Ù ÙØ§Ø­Ø¯Ø© Ù ÙÙØ°Ø§ Ø³ÙØ¹Ø±Ù Ø§ÙÙ<br/>ØªØ±Ø¬Ù<br/> Ù<br/>Ù Ø£ÙÙ Ø³ÙØ¨Ø¯Ø£ Ø¨ØªÙÙÙØ° Ø§ÙØ£ÙØ§Ù<br/>Ø±.&amp;ltbr&gt;<br/>
+							ÙÙØ·Ø© Ø§ÙØ¨Ø¯Ø§ÙØ© ÙÙ Ø¬Ø§ÙØ§ ÙÙ Ø§ÙØ¯ÙØ§ÙØ© &amp;ltspan class="ncode"&gt;&amp;ltspan class="blue"&gt;public static void &lt;/span&gt;&amp;lti&gt;main&lt;/i&gt;(String[] args)&lt;/span&gt;. Ù ÙØ°ÙÙ Ø¹ÙØ¯ Ø¥ÙØ´Ø§Ø¡ Ø£Ù Ù<br/>Ø´Ø±ÙØ¹ Ø¬Ø¯ÙØ¯ ØªØ¬Ø¯ ÙØ°Ù Ø§ÙØ¯Ø§ÙÙØ© Ø¬Ø§ÙØ²Ø© ÙÙÙ.&lt;/p&gt;<br/>
+							&amp;ltp&gt;ÙÙ Ø¬Ø§ÙØ§ ÙØ¬Ø¨ Ø£Ù ÙØ­ØªÙÙ ÙÙÙ Ø¨Ø±ÙØ§Ù<br/>Ø¬ Ø¹ÙÙ Ø§ÙØ¯Ø§ÙÙØ© &amp;ltspan class="code"&gt;main()&lt;/span&gt; ÙØ£ÙÙÙØ§ ÙÙØ·Ø© Ø§ÙØ¨Ø¯Ø§ÙØ©.&lt;/p&gt;&amp;ltbr&gt;&amp;ltbr&gt;<br/>
+							&amp;lth4&gt;Ø§ÙØªØ¹ÙÙÙØ§Øª&lt;/h4&gt;<br/>
+							&amp;ltp&gt;ÙØ³ØªØ®Ø¯Ù<br/> Ø§ÙØªØ¹ÙÙÙØ§Øª ÙÙØ¶Ø¹ Ù<br/>ÙØ§Ø­Ø¸Ø§Øª Ø­ÙÙ Ø§ÙÙÙØ¯ Ø§ÙÙØ°Ù ÙØªØ¨ÙØ§Ù ÙÙØ·, ÙÙÙ ÙØ§ ÙÙØ³Ù ÙÙÙ Ø¨Ø±Ù<br/>Ø¬ÙØ§ Ø§ÙÙÙØ¯ ÙÙ Ø­Ø§Ù Ø£Ø±Ø¯ÙØ§ Ù<br/>Ø±Ø§Ø¬Ø¹ØªÙ Ø£Ù Ø§ÙØªØ¹Ø¯ÙÙ Ø¹ÙÙÙ Ø¨Ø¹Ø¯ ÙÙØª Ø·ÙÙÙ. ÙÙ<br/>Ø§ Ø£ÙÙ Ø§ÙØªØ¹ÙÙÙØ§Øª ÙØ§ ØªØ¤Ø«ÙØ± Ø¥Ø·ÙØ§ÙØ§Ù Ø¹ÙÙ Ø§ÙÙÙØ¯ Ø§ÙÙ<br/>ÙØªÙØ¨. ÙÙØ¬Ø¯ Ø£Ø³ÙÙØ¨ÙÙ ÙÙØ¶Ø¹ ØªØ¹ÙÙÙØ§Øª ÙÙ Ø¬Ø§ÙØ§:&lt;/p&gt;&amp;ltbr&gt;<br/>
+							&amp;ltp&gt;ØªØ¹ÙÙÙ Ø¹ÙÙ Ø³Ø·Ø± ÙØ§Ø­Ø¯.&lt;/p&gt;<br/>
+						    &amp;ltdiv class="example-box"&gt;<br/>
+						        &amp;lth3&gt;Ù<br/>Ø«Ø§Ù&lt;/h3&gt;<br/>
+			    		       &amp;ltcode&gt;<br/>
+						        	&amp;ltspan class="gray"&gt;// ÙØ°Ø§ ØªØ¹ÙÙÙ ÙØªØ£ÙÙ Ù<br/>Ù Ø³Ø·Ø± ÙØ§Ø­Ø¯&lt;/span&gt;<br/>
+						        &lt;/code&gt;<br/>
+						    &lt;/div&gt;&amp;ltbr&gt;<br/>
+							&amp;ltp&gt;ØªØ¹ÙÙÙ Ø¹ÙÙ Ø¹Ø¯ÙØ© Ø£Ø³Ø·Ø±.&lt;/p&gt;<br/>
+							&amp;ltdiv class="example-box"&gt;<br/>
+						        &amp;lth3&gt;Ù<br/>Ø«Ø§Ù&lt;/h3&gt;<br/>
+			    		       &amp;ltcode&gt;<br/>
+						        	&amp;ltspan class="gray"&gt;/* ÙØ°Ø§ ØªØ¹ÙÙÙ&amp;ltbr&gt;<br/>
+								         	 * ÙØªØ£ÙÙ Ù<br/>Ù&amp;ltbr&gt;<br/>
+								         	 * Ø¹Ø¯ÙØ© Ø£Ø³Ø·Ø±&amp;ltbr&gt;<br/>
+								         	 */&lt;/span&gt;<br/>
+						        &lt;/code&gt;<br/>
+						    &lt;/div&gt;&amp;ltbr&gt;<br/>
+							&amp;ltp&gt;&amp;ltspan class="red"&gt;ØªØ°ÙÙØ±&lt;/span&gt; Ø£ÙÙ ÙØ³Øª Ù<br/>Ø¬Ø¨Ø±Ø§Ù Ø¹ÙÙ ÙØ¶Ø¹ ØªØ¹ÙÙÙØ§Øª ÙÙ Ø¨Ø±Ø§Ù<br/>Ø¬Ù. Ù ÙÙÙÙØ§ ÙÙØµØ­Ù Ø¨ÙØ¶Ø¹ ØªØ¹ÙÙÙØ§Øª Ø¯Ø§Ø¦Ù<br/>Ø§Ù Ø­ØªÙ ØªØ³Ø§Ø¹Ø¯Ù ÙÙ ÙÙÙ<br/> Ø§ÙÙÙØ¯ Ø§ÙØ°Ù ÙØªØ¨ØªÙ.&lt;/p&gt;<br/>
+					    &lt;/article&gt;<br/>
+						&amp;lthr&gt;<br/>
+						&amp;ltarticle&gt;<br/>
+						    &amp;lth3&gt;Ø§ÙØ£Ø­Ø±Ù Ø§ÙÙ<br/>Ø³ØªØ®Ø¯Ù<br/>Ø© ÙÙ Ø§ÙØ£Ø³Ù<br/>Ø§Ø¡&lt;/h3&gt;<br/>
+							&amp;ltp&gt;Ø£Ù Ø¥Ø³Ù<br/> ÙØ¶Ø¹Ù ÙÙ<br/>ØªØºÙÙØ±, Ø¯Ø§ÙÙØ©, ÙÙØ§Ø³, ÙØ§Ø¦Ù.. ÙØ³Ù<br/>Ù &amp;ltspan class="word"&gt;identifier&lt;/span&gt; ÙÙ Ø§ÙØ¨Ø±Ù<br/>Ø¬Ø©.&amp;ltbr&gt;<br/>
+							ÙÙ Ø¬Ø§ÙØ§ ÙÙÙ Ø¹ÙØµØ± ÙØ±ÙØ¯ Ø®ÙÙÙ Ø¹ÙÙÙØ§ Ø¥Ø¹Ø·Ø§Ø¡Ù Ø¥Ø³Ù<br/> Ø®Ø§Øµ, Ø£Ù Ø¹ÙÙÙØ§ ØªØ­Ø¯ÙØ¯ Ø§ÙÙ &amp;ltspan class="word"&gt;identifier&lt;/span&gt; ÙÙ.&amp;ltbr&gt;<br/>
+							Ø¥Ø°Ø§Ù ÙØªÙ<br/>Ù Ø§ÙØªÙÙ<br/>ÙÙØ² Ø¨ÙÙ Ø§ÙØ¹ÙØ§ØµØ± ÙÙ Ø¬Ø§ÙØ§ Ù<br/>Ù Ø®ÙØ§Ù Ø£Ø³Ù<br/>Ø§Ø¦ÙÙ<br/>, Ø£Ù Ù<br/>Ù Ø®ÙØ§Ù Ø§ÙÙ &amp;ltspan class="word"&gt;identifiers&lt;/span&gt;.&lt;/p&gt;&amp;ltbr&gt;<br/>
+			                &amp;ltp&gt;&amp;ltb&gt;ÙÙØ§Ø¹Ø¯ Ø¥ÙØ²Ø§Ù<br/>ÙØ© Ø¹ÙØ¯ Ø¥Ø¹Ø·Ø§Ø¡ Ø§ÙØ£Ø³Ù<br/>Ø§Ø¡&lt;/b&gt;&lt;/p&gt;<br/>
+							&amp;ltol class="arabic"&gt;<br/>
+							    &amp;ltli&gt;&amp;ltp&gt;Ø¬Ù<br/>ÙØ¹ Ø§ÙÙ &amp;ltspan class="word"&gt;identifiers&lt;/span&gt; ÙØ¬Ø¨ Ø£Ù ÙØ¨Ø¯Ø£ÙØ§ Ø¨Ø­Ø±Ù ÙØ¨ÙØ± &amp;ltspan class="inline"&gt;( Ø¨ÙÙ &amp;ltspan class="code"&gt;A - Z&lt;/span&gt; )&lt;/span&gt; Ø£Ù ØµØºÙØ± &amp;ltspan class="inline"&gt;( Ø¨ÙÙ &amp;ltspan class="code"&gt;a - z&lt;/span&gt; )&lt;/span&gt; Ø£Ù Ø±Ù<br/>Ø² Ø§ÙØ¯ÙÙØ§Ø± &amp;ltspan class="inline"&gt;( &amp;ltspan class="code"&gt;$&lt;/span&gt; )&lt;/span&gt; Ø£Ù Ø§ÙØ´Ø­Ø·Ø© &amp;ltspan class="inline"&gt;( &amp;ltspan class="code"&gt;_&lt;/span&gt; )&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;<br/>
+							    &amp;ltli&gt;&amp;ltp&gt;ÙÙ<br/>ÙØ¹ Ø¨Ø¯Ø¡ Ø§ÙÙ &amp;ltspan class="word"&gt;identifiers&lt;/span&gt; Ø¨Ø±ÙÙ<br/>.&lt;/p&gt;&lt;/li&gt;<br/>
+							    &amp;ltli&gt;&amp;ltp&gt;ÙÙ<br/>ÙØ¹ Ø§Ø³ØªØ®Ø¯Ø§Ù<br/> Ø§ÙÙ &amp;ltspan class="word"&gt;literals&lt;/span&gt; Ø£Ù Ø§ÙÙÙÙ<br/> &amp;ltspan calss="inline"&gt;( &amp;ltspan class="ncode blue"&gt;true&lt;/span&gt;, &amp;ltspan class="ncode blue"&gt;false&lt;/span&gt; Ù &amp;ltspan class="ncode blue"&gt;null&lt;/span&gt; )&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;<br/>
+							    &amp;ltli&gt;&amp;ltp&gt;ÙÙ<br/>ÙØ¹ Ø¥Ø³ØªØ®Ø¯Ø§Ù<br/> Ø£Ù ÙÙÙ<br/>Ø© Ù<br/>Ù Ø§ÙÙÙÙ<br/>Ø§Øª Ø§ÙÙ<br/>Ø­Ø¬ÙØ²Ø© &amp;ltspan class="inline"&gt;( &amp;ltspan class="inline word"&gt;keywords&lt;/span&gt; )&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;<br/>
+							    &amp;ltli&gt;&amp;ltp&gt;ÙØ§ ØªÙØ³Ù Ø£ÙÙ Ø¬Ø§ÙØ§ ØªØ·Ø¨ÙÙ Ù<br/>Ø¨Ø¯Ø£ Ø§ÙÙ &amp;ltspan class="word"&gt;case sensitive&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;<br/>
+							&lt;/ol&gt;&amp;ltbr&gt;<br/>
+							&amp;ltp&gt;&amp;ltb&gt;Ø±ÙÙØ² Ø¹ÙÙ Ø£ÙÙÙ Ø­Ø±Ù ÙÙØ·&lt;/b&gt;&lt;/p&gt;<br/>
+							&amp;ltp&gt;Ø£Ù<br/>Ø«ÙØ© ÙÙØ£Ø³Ù<br/>Ø§Ø¡ Ø§ÙÙØªÙ &amp;ltspan class="red"&gt;ÙØ³Ù<br/>Ø­&lt;/span&gt; Ø¨Ø§Ø³ØªØ®Ø¯Ø§Ù<br/>ÙØ§: &amp;ltspan class="ncode"&gt;&amp;ltspan class="red"&gt;H&lt;/span&gt;armash&lt;/span&gt; , &amp;ltspan class="ncode"&gt;&amp;ltspan class="red"&gt;n&lt;/span&gt;ame&lt;/span&gt; , &amp;ltspan class="ncode"&gt;&amp;ltspan class="red"&gt;$&lt;/span&gt;money&lt;/span&gt; , &amp;ltspan class="ncode"&gt;&amp;ltspan class="red"&gt;_&lt;/span&gt;number&lt;/span&gt;&lt;/p&gt;<br/>
+							&amp;ltp&gt;Ø£Ù<br/>Ø«ÙØ© ÙÙØ£Ø³Ù<br/>Ø§Ø¡ Ø§ÙÙØªÙ &amp;ltspan class="red"&gt;ÙÙ<br/>ÙØ¹&lt;/span&gt; Ø§Ø³ØªØ®Ø¯Ø§Ù<br/>ÙØ§: &amp;ltspan class="ncode"&gt;&amp;ltspan class="red"&gt;1&lt;/span&gt;name&lt;/span&gt; , &amp;ltspan class="ncode"&gt;&amp;ltspan class="red"&gt;-&lt;/span&gt;cash&lt;/span&gt; , &amp;ltspan class="ncode"&gt;&amp;ltspan class="red"&gt;@&lt;/span&gt;user&lt;/span&gt;&lt;/p&gt;<br/>
+						&lt;/article&gt;<br/>
+						&amp;lthr&gt;<br/>
+						&amp;ltarticle&gt;<br/>
+						    &amp;lth3&gt;Ø§ÙÙÙÙ<br/>Ø§Øª Ø§ÙÙ<br/>Ø­Ø¬ÙØ²Ø© ÙÙ Ø¬Ø§ÙØ§&lt;/h3&gt;<br/>
+							&amp;ltp&gt;Ø¬Ù<br/>ÙØ¹ Ø§ÙÙÙÙ<br/>Ø§Øª Ø§ÙØªÙØ§ÙÙØ© Ù<br/>Ø­Ø¬ÙØ²Ø© ÙÙØºØ© Ø¬Ø§ÙØ§, Ø£Ù ÙØ§ ÙÙ<br/>ÙÙ Ø¥Ø³ØªØ®Ø¯Ø§Ù<br/>ÙØ§ ÙÙ &amp;ltspan class="word"&gt;identifiers&lt;/span&gt;.&lt;/p&gt;<br/>
+						    &amp;ltdiv class="ncode blue" style="width:100%; text-align:left; float:right; background-color:#FFF; padding:20px 0px; margin-bottom: 50px; font-family:monospace; line-height:25px;"&gt;<br/>
+							    &amp;ltdiv style="max-width:200px; margin-left:100px; float:left"&gt;abstract&amp;ltbr&gt;assert&amp;ltbr&gt;boolean&amp;ltbr&gt;break&amp;ltbr&gt;byte&amp;ltbr&gt;case&amp;ltbr&gt;catch&amp;ltbr&gt;char&amp;ltbr&gt;class&amp;ltbr&gt;const&lt;/div&gt;<br/>
+							    &amp;ltdiv style="max-width:200px; margin-left:100px; float:left"&gt;continue&amp;ltbr&gt;default&amp;ltbr&gt;do&amp;ltbr&gt;double&amp;ltbr&gt;else&amp;ltbr&gt;enum&amp;ltbr&gt;extends&amp;ltbr&gt;final&amp;ltbr&gt;finally&amp;ltbr&gt;float&amp;ltbr&gt;&lt;/div&gt;<br/>
+							    &amp;ltdiv style="max-width:200px; margin-left:100px; float:left"&gt;for&amp;ltbr&gt;goto&amp;ltbr&gt;if&amp;ltbr&gt;implements&amp;ltbr&gt;import&amp;ltbr&gt;instanceof&amp;ltbr&gt;int&amp;ltbr&gt;interface&amp;ltbr&gt;long&amp;ltbr&gt;native&lt;/div&gt;<br/>
+							    &amp;ltdiv style="max-width:200px; margin-left:100px; float:left"&gt;new&amp;ltbr&gt;package&amp;ltbr&gt;private&amp;ltbr&gt;protected&amp;ltbr&gt;public&amp;ltbr&gt;return&amp;ltbr&gt;short&amp;ltbr&gt;static&amp;ltbr&gt;strictfp&amp;ltbr&gt;super&lt;/div&gt;<br/>
+							    &amp;ltdiv style="max-width:200px; margin-left:100px; float:left"&gt;switch&amp;ltbr&gt;synchronized&amp;ltbr&gt;this&amp;ltbr&gt;throw&amp;ltbr&gt;throws&amp;ltbr&gt;transient&amp;ltbr&gt;try&amp;ltbr&gt;void&amp;ltbr&gt;volatile&amp;ltbr&gt;while&lt;/div&gt;<br/>
+							&lt;/div&gt;<br/>
+						&lt;/article&gt;<br/>
+			        &lt;/section&gt;<br/>
+			    &lt;/div&gt;<br/>
+			&lt;/div&gt;<br/>
+			&amp;ltdiv id="footer"&gt;&lt;/div&gt;<br/>
+			&lt;/body&gt;<br/>
+			&lt;/html&gt;<br/>
+			&amp;ltscript src="../style/js/header.js"&gt;&lt;/script&gt;<br/>
+			&amp;ltscript src="../style/js/topnav.js"&gt;&lt;/script&gt;<br/>
+			&amp;ltscript src="../style/js/container.js"&gt;&lt;/script&gt;<br/>
+			&amp;ltscript src="../style/js/footer.js"&gt;&lt;/script&gt;<br/>
+			&amp;ltscript src="../style/js/scrollToArticle.js"&gt;&lt;/script&gt;<br/>
+			&amp;ltscript src="../style/js/screenAdjustment.js"&gt;&lt;/script&gt;<br/>
+			&amp;ltscript src="JavaLessons.js"&gt;&lt;/script&gt;<br/>
+			&amp;ltscript&gt;setNextAndPrevious('lesson_3.php', 'lesson_5.php', 'Ø§ÙØ¯Ø±Ø³ Ø§ÙØ³Ø§Ø¨Ù', 'Ø§ÙØ¯Ø±Ø³ Ø§ÙØªØ§ÙÙ');&lt;/script&gt;
+		</div>
+</div>
+<br/><br/>
+<h3>المثال الثالث</h3>
+<p>هذا نفس المثال الثاني من حيث الفكرة. لكننا هنا إستخدمنا الـ <span class="word">Buffer</span> عند قراءة محتوى الملف لتسريع عملية القراءة و بالتالي لأداء أفضل.</p>
+<p><span class="note">ملاحظة:</span> هنا ستتعلم طريقة قراءة محتوى أي ملف نصي من موقع ما مع مراعاة أي نوع ترميز مستخدم في الملف.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.net.URL;                       // URL هنا قمنا باستدعاء الكلاس
+import java.io.BufferedReader;             // BufferedReader هنا قمنا باستدعاء الكلاس
+import java.io.InputStream;                // InputStream هنا قمنا باستدعاء الكلاس
+import java.io.InputStreamReader;          // InputStreamReader هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // قمنا بتجهيز هذا المتغير من أجل تخزين محتوى الملف فيه
+        String data = "";
+ 
+        // الآن سنحاول إجراء إتصال عبر الشبكة للوصول إلى ملف محدد و قراءة محتواه
+        try
+        {
+            // يشير إلى رابط الدرس الرابع في جافا url إسمه URL هنا قمنا بتعريف كائن نوعه
+            URL url = new URL("http://harmash.com/java/lesson_4.php");
+ 
+            // is في الكائن URL هنا قمنا بتخزين الملف الذي يشير له الكائن
+            InputStream is = url.openStream();
+ 
+            // Buffer لحل مشكلة الترميز و وضع محتوى الملف في الـ InputStreamReader إلى النوع is هنا قمنا بتحويل نوع الكائن
+            InputStreamReader isr = new InputStreamReader(is, "UTF-8");
+ 
+            // Buffer يتيح لنا قراءة محتوى الملف الموجود في الـ br الكائن
+            BufferedReader br = new BufferedReader(isr);
+ 
+            // data و تخزنهم في المتغير br هنا قمنا بإنشاء حلقة تمر على جميع الأحرف الموجودة في الكائن
+            int c;
+            while ((c = br.read()) != -1)
+            {
+                data += (char)c;
+            }
+ 
+            // هنا قمنا بإغلاق الإتصال مع الملف
+            is.close();
+            isr.close();
+            br.close();
+ 
+            // هنا قمنا بعرض محتوى الملف
+            System.out.println(data);
+        }
+        catch( Exception e ) {
+            e.printStackTrace();
+        }
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>عند تشغيل البرنامج سيتم عرض محتوى الملف <code data-enlighter-language="java">lesson_4.php</code> و الذي هو عبارة عن كامل كود الصفحة التي يشير لها الرابط.</p>
+<div class="code-box" style="height:250px; overflow:auto;">
+			&lt;!DOCTYPE html&gt;<br/>
+			&amp;lthtml lang="ar"&gt;<br/>
+			&amp;lthead&gt;<br/>
+			    &amp;ltmeta http-equiv="expires" content="-1"/&gt;<br/>
+			    &amp;ltmeta http-equiv="pragma" content="no-cache"/&gt;<br/>
+			    &amp;ltmeta container="text/html; charset=UTF-8"/&gt;<br/>
+			    &amp;ltlink rel="stylesheet" type="text/css" href="../style/css/style.css"/&gt;<br/>
+			    &amp;lttitle&gt;Java - أسلوب الكتابة&lt;/title&gt;<br/>
+			&amp;ltscript src='/google_analytics_auto.js'&gt;&lt;/script&gt;&lt;/head&gt;<br/>
+			&amp;ltbody&gt;<br/>
+			&amp;ltdiv id="header"&gt;&lt;/div&gt;<br/>
+			&amp;ltdiv id="topnavContainer"&gt;&lt;/div&gt;<br/>
+			&amp;ltdiv id="container"&gt;<br/>
+				&amp;ltdiv id="rightSide"&gt;&lt;/div&gt;<br/>
+			    &amp;ltdiv id="content"&gt;<br/>
+					&amp;ltsection id="main"&gt;<br/>
+					    &amp;lth3 class="the_method"&gt;Java&lt;/h3&gt;<br/>
+					    &amp;lttable class="lesson_header"&gt;<br/>
+						    &amp;lttr&gt;<br/>
+								&amp;ltth&gt;الدرس&lt;/th&gt;<br/>
+							    &amp;lttd&gt;٤&lt;/td&gt;<br/>
+								&amp;ltth&gt;أسلوب الكتابة في جافا&lt;/th&gt;<br/>
+							&lt;/tr&gt;<br/>
+						&lt;/table&gt;<br/>
+						&amp;ltarticle id="article_0"&gt;<br/>
+						    &amp;ltdiv id="shortcuts"&gt;<br/>
+						        &amp;ltul&gt;<br/>
+							        &amp;ltli&gt;&amp;ltb&gt;›&lt;/b&gt; &amp;lta href="#" onclick="return false;" onmousedown="autoScrollTo('article_1');"&gt;مبادئ كتابة الكود في جافا&lt;/a&gt;&lt;/li&gt;<br/>
+							        &amp;ltli&gt;&amp;ltb&gt;›&lt;/b&gt; &amp;lta href="#" onclick="return false;" onmousedown="autoScrollTo('article_2');"&gt;الأحرف المستخدمة في الأسماء&lt;/a&gt;&lt;/li&gt;<br/>
+							        &amp;ltli&gt;&amp;ltb&gt;›&lt;/b&gt; &amp;lta href="#" onclick="return false;" onmousedown="autoScrollTo('article_3');"&gt;الكلمات المحجوزة في جافا&lt;/a&gt;&lt;/li&gt;<br/>
+							    &lt;/ul&gt;<br/>
+							&lt;/div&gt;<br/>
+						&lt;/article&gt;<br/>
+						&amp;ltarticle&gt;<br/>
+						    &amp;lth3&gt;مبادئ كتابة الكود في جافا&lt;/h3&gt;&amp;ltbr&gt;<br/>
+							&amp;lth4&gt;Case Sensitivity&lt;/h4&gt;<br/>
+							&amp;ltp&gt;&amp;ltspan class="word"&gt;Case Sensitivity&lt;/span&gt; تعني أن لغة البرمجة تمييز بين الأحرف الكبيرة و الأحرف الصغيرة.&lt;/p&gt;<br/>
+			                &amp;ltp&gt;جافا تعامل الأسماء التي نستخدمها بتأني سواء للمتغيرات, الدوال, الكلاسات, الكائنات إلخ.&amp;ltbr&gt;<br/>
+							مثال: &amp;ltspan class="code"&gt;note&lt;/span&gt; و &amp;ltspan class="code"&gt;Note&lt;/span&gt; ليسوا شيئاً واحداً.&lt;/p&gt;<br/>
+							&amp;ltp&gt;بينما في لغات برمجة أخرى مثل &amp;ltspan class="word"&gt;PHP&lt;/span&gt; و &amp;ltspan class="word"&gt;HTML&lt;/span&gt; لا يهمهم إذا كانت الأحرف كبيرة أو صغيرة.&amp;ltbr&gt;<br/>
+							مثال: &amp;ltspan class="code"&gt;note&lt;/span&gt; و &amp;ltspan class="code"&gt;Note&lt;/span&gt; و &amp;ltspan class="code"&gt;NoTe&lt;/span&gt; و &amp;ltspan class="code"&gt;NOTE&lt;/span&gt; هم شيئاً واحداً.&lt;/p&gt;&amp;ltbr&gt;&amp;ltbr&gt;<br/>
+							&amp;lth4&gt;إسم الكلاس&lt;/h4&gt;<br/>
+							&amp;ltp&gt;دائماً إبدأ إسم الكلاس بحرف كبير.&amp;ltbr&gt;<br/>
+							مثال: &amp;ltspan class="ncode"&gt;&amp;ltspan class="blue"&gt;class&lt;/span&gt; &amp;ltspan class="red"&gt;F&lt;/span&gt;irst&lt;/span&gt;&lt;/p&gt;<br/>
+							&amp;ltp&gt;إذا كان إسم الكلاس يتألف من أكثر من كلمة, إجعل أول حرف من كل كلمة كبيراً.&amp;ltbr&gt;<br/>
+							مثال: &amp;ltspan class="ncode"&gt;&amp;ltspan class="blue"&gt;class&lt;/span&gt; &amp;ltspan class="red"&gt;F&lt;/span&gt;irst&amp;ltspan class="red"&gt;J&lt;/span&gt;ava&amp;ltspan class="red"&gt;C&lt;/span&gt;lass&lt;/span&gt;&lt;/p&gt;&amp;ltbr&gt;&amp;ltbr&gt;<br/>
+							&amp;lth4&gt;إسم الدالة&lt;/h4&gt;<br/>
+							&amp;ltp&gt;دائماً إبدأ إسم الدالة بحرف صغير.&amp;ltbr&gt;<br/>
+							مثال: &amp;ltspan class="ncode"&gt;&amp;ltspan class="blue"&gt;public void &lt;/span&gt; &amp;ltspan class="red"&gt;d&lt;/span&gt;isplay()&lt;/span&gt;&lt;/p&gt;<br/>
+							&amp;ltp&gt;و إذا كان إسم الدالة يتألف من أكثر من كلمة, إجعل أول كلمة تبدأ بحرف صغير و جميع الكلمات التي تليها تبدأ بحرف كبير.&amp;ltbr&gt;<br/>
+							مثال: &amp;ltspan class="ncode"&gt;&amp;ltspan class="blue"&gt;public void &lt;/span&gt; &amp;ltspan class="red"&gt;d&lt;/span&gt;isplay&amp;ltspan class="red"&gt;U&lt;/span&gt;ser&amp;ltspan class="red"&gt;I&lt;/span&gt;nfo()&lt;/span&gt;&lt;/p&gt;&amp;ltbr&gt;&amp;ltbr&gt;<br/>
+							&amp;lth4&gt;إسم الملف الذي يحتوي على الكلاس&lt;/h4&gt;<br/>
+							&amp;ltp&gt;إسم كلاس الجافا يجب أن يكون مطابقاً لإسم الملف الموجود بداخله.&amp;ltbr&gt;<br/>
+							مثال: إذا كان إسم الكلاس &amp;ltspan class="ncode"&gt;&amp;ltspan class="blue"&gt;class &lt;/span&gt; Harmash&lt;/span&gt; يجب أن يكون موجوداً في ملف جافا إسمه &amp;ltspan class="ncode"&gt;Harmash.java&lt;/span&gt; كما في هذه الصورة:&lt;/p&gt;<br/>
+			                &amp;lta target="_blank" href="lesson_3/pic_1.PNG"&gt;&amp;ltimg src="lesson_3/pic_1.PNG"&gt;&lt;/a&gt;&amp;ltbr&gt;<br/>
+							&amp;ltp&gt;&amp;ltspan class="red"&gt;إنتبه:&lt;/span&gt; إذا كان إسم الكلاس مختلف عن إسم الملف فإن الـ &amp;ltspan class="word"&gt;javac&lt;/span&gt; أي المترجم الذي يحول كود الجافا للغة يفهمها الكمبيوتر, لن يستطيع إيجاد الكلاس لأنه يبحث عن الملف أولاً ثم يتوقع أن يكون الكلاس يحمل نفس الإسم, وسيسبب ذلك مشاكل في الكود.&lt;/p&gt;&amp;ltbr&gt;&amp;ltbr&gt;<br/>
+							&amp;lth4&gt;نقطة البداية&lt;/h4&gt;<br/>
+							&amp;ltp&gt;نقطة البداية تسمى &amp;ltspan class="word"&gt;Entry Point&lt;/span&gt;, و هي تعني أول مكان سيتم فيه تنفيذ الأوامر المكتوبة عند تشغيل البرنامج.&amp;ltbr&gt;<br/>
+							في البرامج الفعلية, سيحتوي برنامجك على أكثر من كلاس حتماً بالإضافة إلى كثير من الملفات و الصور إلخ.. و سترى ذالك في دروس متقدمة.&lt;/p&gt;&amp;ltbr&gt;<br/>
+							&amp;ltspan class="question"&gt;إذاً كيف سيفهم مترجم لغة جافا (&amp;ltspan class="word"&gt;javac&lt;/span&gt;) أي كلاس يجب أن يتنفذ في البداية؟&lt;/span&gt;<br/>
+							&amp;ltp&gt;من هنا جائت فكرة أنه يمكن للمشروع الذي تبنيه أن يحتوي على العدد الذي تريده من الكلاسات, و لكنه يجب أن يحتوي على نقطة إنطلاق واحدة و هكذا سيعرف المترجم من أين سيبدأ بتنفيذ الأوامر.&amp;ltbr&gt;<br/>
+							نقطة البداية في جافا هي الدالة &amp;ltspan class="ncode"&gt;&amp;ltspan class="blue"&gt;public static void &lt;/span&gt;&amp;lti&gt;main&lt;/i&gt;(String[] args)&lt;/span&gt;. و لذلك عند إنشاء أي مشروع جديد تجد هذه الدالة جاهزة فيه.&lt;/p&gt;<br/>
+							&amp;ltp&gt;في جافا يجب أن يحتوي كل برنامج على الدالة &amp;ltspan class="code"&gt;main()&lt;/span&gt; لأنها نقطة البداية.&lt;/p&gt;&amp;ltbr&gt;&amp;ltbr&gt;<br/>
+							&amp;lth4&gt;التعليقات&lt;/h4&gt;<br/>
+							&amp;ltp&gt;نستخدم التعليقات لنضع ملاحظات حول الكود الذي كتبناه فقط, لكي لا ننسى كيف برمجنا الكود في حال أردنا مراجعته أو التعديل عليه بعد وقت طويل. كما أن التعليقات لا تؤثر إطلاقاً على الكود المكتوب. يوجد أسلوبين لوضع تعليقات في جافا:&lt;/p&gt;&amp;ltbr&gt;<br/>
+							&amp;ltp&gt;تعليق على سطر واحد.&lt;/p&gt;<br/>
+						    &amp;ltdiv class="example-box"&gt;<br/>
+						        &amp;lth3&gt;مثال&lt;/h3&gt;<br/>
+			    		       &amp;ltcode&gt;<br/>
+						        	&amp;ltspan class="gray"&gt;// هذا تعليق يتألف من سطر واحد&lt;/span&gt;<br/>
+						        &lt;/code&gt;<br/>
+						    &lt;/div&gt;&amp;ltbr&gt;<br/>
+							&amp;ltp&gt;تعليق على عدة أسطر.&lt;/p&gt;<br/>
+							&amp;ltdiv class="example-box"&gt;<br/>
+						        &amp;lth3&gt;مثال&lt;/h3&gt;<br/>
+			    		       &amp;ltcode&gt;<br/>
+						        	&amp;ltspan class="gray"&gt;/* هذا تعليق&amp;ltbr&gt;<br/>
+								         	 * يتألف من&amp;ltbr&gt;<br/>
+								         	 * عدة أسطر&amp;ltbr&gt;<br/>
+								         	 */&lt;/span&gt;<br/>
+						        &lt;/code&gt;<br/>
+						    &lt;/div&gt;&amp;ltbr&gt;<br/>
+							&amp;ltp&gt;&amp;ltspan class="red"&gt;تذكر&lt;/span&gt; أنك لست مجبراً على وضع تعليقات في برامجك. و لكننا ننصحك بوضع تعليقات دائماً حتى تساعدك في فهم الكود الذي كتبته.&lt;/p&gt;<br/>
+					    &lt;/article&gt;<br/>
+						&amp;lthr&gt;<br/>
+						&amp;ltarticle&gt;<br/>
+						    &amp;lth3&gt;الأحرف المستخدمة في الأسماء&lt;/h3&gt;<br/>
+							&amp;ltp&gt;أي إسم نضعه لمتغير, دالة, كلاس, كائن.. يسمى &amp;ltspan class="word"&gt;identifier&lt;/span&gt; في البرمجة.&amp;ltbr&gt;<br/>
+							في جافا كل عنصر نريد خلقه علينا إعطاءه إسم خاص, أي علينا تحديد الـ &amp;ltspan class="word"&gt;identifier&lt;/span&gt; له.&amp;ltbr&gt;<br/>
+							إذاً يتم التمييز بين العناصر في جافا من خلال أسمائهم, أي من خلال الـ &amp;ltspan class="word"&gt;identifiers&lt;/span&gt;.&lt;/p&gt;&amp;ltbr&gt;<br/>
+			                &amp;ltp&gt;&amp;ltb&gt;قواعد إلزامية عند إعطاء الأسماء&lt;/b&gt;&lt;/p&gt;<br/>
+							&amp;ltol class="arabic"&gt;<br/>
+							    &amp;ltli&gt;&amp;ltp&gt;جميع الـ &amp;ltspan class="word"&gt;identifiers&lt;/span&gt; يجب أن يبدأوا بحرف كبير &amp;ltspan class="inline"&gt;( بين &amp;ltspan class="code"&gt;A - Z&lt;/span&gt; )&lt;/span&gt; أو صغير &amp;ltspan class="inline"&gt;( بين &amp;ltspan class="code"&gt;a - z&lt;/span&gt; )&lt;/span&gt; أو رمز الدولار &amp;ltspan class="inline"&gt;( &amp;ltspan class="code"&gt;$&lt;/span&gt; )&lt;/span&gt; أو الشحطة &amp;ltspan class="inline"&gt;( &amp;ltspan class="code"&gt;_&lt;/span&gt; )&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;<br/>
+							    &amp;ltli&gt;&amp;ltp&gt;يمنع بدء الـ &amp;ltspan class="word"&gt;identifiers&lt;/span&gt; برقم.&lt;/p&gt;&lt;/li&gt;<br/>
+							    &amp;ltli&gt;&amp;ltp&gt;يمنع استخدام الـ &amp;ltspan class="word"&gt;literals&lt;/span&gt; أي القيم &amp;ltspan calss="inline"&gt;( &amp;ltspan class="ncode blue"&gt;true&lt;/span&gt;, &amp;ltspan class="ncode blue"&gt;false&lt;/span&gt; و &amp;ltspan class="ncode blue"&gt;null&lt;/span&gt; )&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;<br/>
+							    &amp;ltli&gt;&amp;ltp&gt;يمنع إستخدام أي كلمة من الكلمات المحجوزة &amp;ltspan class="inline"&gt;( &amp;ltspan class="inline word"&gt;keywords&lt;/span&gt; )&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;<br/>
+							    &amp;ltli&gt;&amp;ltp&gt;لا تنسى أن جافا تطبق مبدأ الـ &amp;ltspan class="word"&gt;case sensitive&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;<br/>
+							&lt;/ol&gt;&amp;ltbr&gt;<br/>
+							&amp;ltp&gt;&amp;ltb&gt;ركز على أول حرف فقط&lt;/b&gt;&lt;/p&gt;<br/>
+							&amp;ltp&gt;أمثلة للأسماء التي &amp;ltspan class="red"&gt;يسمح&lt;/span&gt; باستخدامها: &amp;ltspan class="ncode"&gt;&amp;ltspan class="red"&gt;H&lt;/span&gt;armash&lt;/span&gt; , &amp;ltspan class="ncode"&gt;&amp;ltspan class="red"&gt;n&lt;/span&gt;ame&lt;/span&gt; , &amp;ltspan class="ncode"&gt;&amp;ltspan class="red"&gt;$&lt;/span&gt;money&lt;/span&gt; , &amp;ltspan class="ncode"&gt;&amp;ltspan class="red"&gt;_&lt;/span&gt;number&lt;/span&gt;&lt;/p&gt;<br/>
+							&amp;ltp&gt;أمثلة للأسماء التي &amp;ltspan class="red"&gt;يمنع&lt;/span&gt; استخدامها: &amp;ltspan class="ncode"&gt;&amp;ltspan class="red"&gt;1&lt;/span&gt;name&lt;/span&gt; , &amp;ltspan class="ncode"&gt;&amp;ltspan class="red"&gt;-&lt;/span&gt;cash&lt;/span&gt; , &amp;ltspan class="ncode"&gt;&amp;ltspan class="red"&gt;@&lt;/span&gt;user&lt;/span&gt;&lt;/p&gt;<br/>
+						&lt;/article&gt;<br/>
+						&amp;lthr&gt;<br/>
+						&amp;ltarticle&gt;<br/>
+						    &amp;lth3&gt;الكلمات المحجوزة في جافا&lt;/h3&gt;<br/>
+							&amp;ltp&gt;جميع الكلمات التالية محجوزة للغة جافا, أي لا يمكن إستخدامها كـ &amp;ltspan class="word"&gt;identifiers&lt;/span&gt;.&lt;/p&gt;<br/>
+						    &amp;ltdiv class="ncode blue" style="width:100%; text-align:left; float:right; background-color:#FFF; padding:20px 0px; margin-bottom: 50px; font-family:monospace; line-height:25px;"&gt;<br/>
+							    &amp;ltdiv style="max-width:200px; margin-left:100px; float:left"&gt;abstract&amp;ltbr&gt;assert&amp;ltbr&gt;boolean&amp;ltbr&gt;break&amp;ltbr&gt;byte&amp;ltbr&gt;case&amp;ltbr&gt;catch&amp;ltbr&gt;char&amp;ltbr&gt;class&amp;ltbr&gt;const&lt;/div&gt;<br/>
+							    &amp;ltdiv style="max-width:200px; margin-left:100px; float:left"&gt;continue&amp;ltbr&gt;default&amp;ltbr&gt;do&amp;ltbr&gt;double&amp;ltbr&gt;else&amp;ltbr&gt;enum&amp;ltbr&gt;extends&amp;ltbr&gt;final&amp;ltbr&gt;finally&amp;ltbr&gt;float&amp;ltbr&gt;&lt;/div&gt;<br/>
+							    &amp;ltdiv style="max-width:200px; margin-left:100px; float:left"&gt;for&amp;ltbr&gt;goto&amp;ltbr&gt;if&amp;ltbr&gt;implements&amp;ltbr&gt;import&amp;ltbr&gt;instanceof&amp;ltbr&gt;int&amp;ltbr&gt;interface&amp;ltbr&gt;long&amp;ltbr&gt;native&lt;/div&gt;<br/>
+							    &amp;ltdiv style="max-width:200px; margin-left:100px; float:left"&gt;new&amp;ltbr&gt;package&amp;ltbr&gt;private&amp;ltbr&gt;protected&amp;ltbr&gt;public&amp;ltbr&gt;return&amp;ltbr&gt;short&amp;ltbr&gt;static&amp;ltbr&gt;strictfp&amp;ltbr&gt;super&lt;/div&gt;<br/>
+							    &amp;ltdiv style="max-width:200px; margin-left:100px; float:left"&gt;switch&amp;ltbr&gt;synchronized&amp;ltbr&gt;this&amp;ltbr&gt;throw&amp;ltbr&gt;throws&amp;ltbr&gt;transient&amp;ltbr&gt;try&amp;ltbr&gt;void&amp;ltbr&gt;volatile&amp;ltbr&gt;while&lt;/div&gt;<br/>
+							&lt;/div&gt;<br/>
+						&lt;/article&gt;<br/>
+			        &lt;/section&gt;<br/>
+			    &lt;/div&gt;<br/>
+			&lt;/div&gt;<br/>
+			&amp;ltdiv id="footer"&gt;&lt;/div&gt;<br/>
+			&lt;/body&gt;<br/>
+			&lt;/html&gt;<br/>
+			&amp;ltscript src="../style/js/header.js"&gt;&lt;/script&gt;<br/>
+			&amp;ltscript src="../style/js/topnav.js"&gt;&lt;/script&gt;<br/>
+			&amp;ltscript src="../style/js/container.js"&gt;&lt;/script&gt;<br/>
+			&amp;ltscript src="../style/js/footer.js"&gt;&lt;/script&gt;<br/>
+			&amp;ltscript src="../style/js/scrollToArticle.js"&gt;&lt;/script&gt;<br/>
+			&amp;ltscript src="../style/js/screenAdjustment.js"&gt;&lt;/script&gt;<br/>
+			&amp;ltscript src="JavaLessons.js"&gt;&lt;/script&gt;<br/>
+			&amp;ltscript&gt;setNextAndPrevious('lesson_3.php', 'lesson_5.php', 'الدرس السابق', 'الدرس التالي');&lt;/script&gt;<br/>
+</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

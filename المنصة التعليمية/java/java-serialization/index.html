@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>مفهوم الـ serialization في جافا | Java serialization</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>مفهوم الـ <span class="word">Serialization</span> في جافا</h1>
+<article>
+<h2>مقدمة</h2>
+<p>في معظم البرامج التي نستخدمها, نلاحظ أنه يوجد مكان خاص لضبط إعدادات البرنامج يسمح للمستخدم أن يخصص البرنامج بالشكل الذي يريده.<br/>
+	بعد أن يقوم المستخدم بضبط إعدادت برنامجه, نلاحظ أن هذه الإعدادات تظل محفوظة في البرنامج حتى إذا خرج من البرنامج و فتحه من جديد.</p>
+<p>فمثلاً في البرامج التي تستخدم للكتابة, تجد في صفحة الإعدادات أنه بإمكانك تغير أنواع الخطوط المستخدمة في البرنامج, و تغيير أحجامها و ألوانها. و وقد تجد في الإعدادات أيضاً أنه بإمكانك إستخدام التطبيق بأكثر من لغة إلخ..<br/>
+	بالنسبة للألعاب, غالباً ما تجد أنه في صفحة الإعدادات يمكنك تحديد ما إذا كنت تريد سماع نغمات حماسية أثناء اللعب أم لا, بالإضافة إلى إمكانية تحديد مستوى الصوت. أيضاً أحياناً تجد أنه يمكنك تحديد مستوى اللعب <span class="inline">( سهل - متوسط - صعب - صعب جداً ).</span></p>
+<p>للحفاظ على إعدادات البرنامج التي ضبطها المستخدم, نقوم بحفظ هذه الإعدادات بداخل ملف و هذا ما ستتعلمه  في هذا الدرس.</p>
+<p><span class="note">ملاحظة:</span> عليك فهم درس <b>التعامل مع الملفات</b> جيداً حتى تستطيع فهم هذا الدرس, لأننا سنقوم بتخزن المعلومات في ملف.</p>
+<br/>
+<h3>شكل الكائن في الذاكرة</h3>
+<p>أثناء تشغيل البرنامج, كل كائن يتم إنشاءه فيه, يتم تمثيله في الذاكرة كسلسلة كبيرة من الـ <span class="word">Bytes</span> يفهمها نظام التشغيل.<br/>
+	هذه السلسلة تحتوي على جميع معلومات الكائن, مثل:</p>
+<ul class="explain">
+<li><p>الكلاس المشتق منه.</p></li>
+<li><p>كل كلاس يرث منه.</p></li>
+<li><p>كل إنترفيس يطبقه.</p></li>
+<li><p>كل دالة يملكها.</p></li>
+<li><p>كل متغير يملكه, بالإضافة إلى نوعه و قيمته الحالية إلخ..</p></li>
+</ul>
+<p>عند تنفيذ جميع الأوامر الموجودة في البرنامج أو عند الخروج منه, يتم مسح جميع البيانات المتعلقة بهذا البرنامج من الذاكرة لأنه لم يعد لها حاجة. أي يتم مسح جميع الكائنات, المتغيرات و الدوال, و بالتالي يتوقف أي إتصال قائم بين البرنامج و الأشياء خارجية مثل ملف, شبكة أو قاعدة بيانات إلخ..</p><br/>
+<h3>مفهوم الـ <span class="word">Serialization</span> و الـ <span class="word">Deserialization</span></h3>
+<p><span class="word">Serialization</span> تعني حفظ حالة الكائن الحالية بداخل ملف.<br/>
+	عندما نقول: "حفظ حالة الكائن", فنحن بذلك نقصد إنشاء نسخة مطابقة من الكائن الموجود في الذاكرة و وضعها في ملف خارجي.</p>
+<p><span class="word">Deserialization</span> تعني استرجاع حالة الكائن الموجودة في ملف.<br/>
+	عندما نقول: "استرجاع حالة الكائن", فنحن بذلك نقصد خلق الكائن الموجود في ملف خارجي بداخل ذاكرة الجهاز.</p>
+<p><span class="note">ملاحظة:</span> بشكل عام عندما نحفظ حالة الكائن و نسترجعها, نقول أننا نفعل <span class="word">Serialization</span> و لكننا فعلياً نفعل <span class="word">Serialization</span> + <span class="word">Deserialization</span>.</p><br/>
+<h3>أهمية الـ <span class="word">Serialization</span></h3>
+<ul class="explain">
+<li><p>حفظ حالة الكائن الذي تم إنشاءه في الذاكرة في ملف خارجي.</p></li>
+<li><p>حالة الكائن المحفوظة في ملف يمكن إستخدامها متى شئنا لخلق الكائن من جديد في الذاكرة.</p></li>
+<li><p>مشاركة حالة الكائن عبر شبكة, حيث أنه يمكن استخدام الملف الذي حفظنا فيه حالة الكائن لخلق الكائن في جهاز آخر.<!-- <span class="inline">( الـ <span class="word">JVM</span> في الجهاز المستقبل يفعل <span class="word">Deserialization</span> للملف و يعيد إنشاء الكائن في ذاكرته )</span>. --></p></li>
+<li><p>تخزين الصور في قواعد البيانات ( الصورة تحفظ في قاعدة البيانات كـ <span class="word">BLOB</span> ).</p></li>
+</ul>
+<p>إذاً في حال أردت حفظ معلومات الكائن قبل الخروج من البرنامج يمكنك إنشاء ملف متزامن يحفظ لك حالة الكائن, و بعدها يمكنك استرجاعها عند تشغيل البرنامج من جديد.</p><br/>
+<h3>تطبيق الـ <span class="word">Serialization</span> و الـ <span class="word">Deserialization</span></h3>
+<p>لتحقيق الـ <span class="word">Serialization</span>, نستخدم الكلاس <code data-enlighter-language="java">ObjectOutputStream</code> لإنشاء نسخة من الكائن الموجود في الذاكرة و وضعها في ملف.<br/>
+	لتحقيق الـ <span class="word">Deserialization</span>, نستخدم الكلاس <code data-enlighter-language="java">ObjectInputStream</code> لخلق الكائن المحفوظ في الملف في الذاكرة من جديد.</p>
+<p>كل كلاس منهم يملك عدة كونستركتورات و دوال, سنشرح فقط الأشياء التي سنستخدمها في هذا الدرس.</p>
+</article>
+<article>
+<h2>خطوات الـ <span class="word">Serialization</span></h2>
+<p>لإنشاء كائن من كلاس معين و حفظ حالته عليك اتباع الخطوات التالية:</p>
+<ol class="arabic">
+<li><p>الكائن الذي تريد حفظ حالته, يجب أن يكون في الأساس مشتق من كلاس يفعل <code data-enlighter-language="java">implements</code> للإنترفيس <code data-enlighter-language="java">Serializable</code>.</p></li>
+<li><p>إنشاء ملف إمتداده <code data-enlighter-language="java">.ser</code> بواسطة الكلاس <code data-enlighter-language="java">FileOutputStream</code>.</p></li>
+<li><p>تجهيز كائن من الكلاس <code data-enlighter-language="java">ObjectOutputStream</code> الذي يستخدم لكتابة حالة الكائن في الملف.</p></li>
+<li><p>نسخ حالة الكائن الموجود في الذاكرة في هذا الملف بواسطة الدالة <code data-enlighter-language="java">writeObject()</code>.</p></li>
+<li><p>عند الإنتهاء من عملية النسخ, نقوم بقطع كل إتصال قمنا بإجرائه مع هذا الملف.</p></li>
+</ol>
+<br/>
+<h3>الكلمة  المحجوزة <code data-enlighter-language="java">transient</code></h3>
+<p>في حال أردت عدم نسخ جميع الأشياء المتعلقة بالكائن في الذاكرة, عليك وضع الكلمة <code data-enlighter-language="java">transient</code> في تعريف كل شيء لا تريده  أن ينسخ في الملف, و عندها سيتم تجاهله.</p>
+</article>
+<article>
+<h2>خطوات الـ <span class="word">Deserialization</span></h2>
+<p>لإسترجاع حالة الكائن التي تم حفظها في ملف معين, عليك اتباع الخطوات التالية:</p>
+<ol class="arabic">
+<li><p>إنشاء كائن فارغ من نفس نوع الكائن الذي نريد إستراجع حالته من الملف.</p></li>
+<li><p>تجهيز كائن من الكلاس <code data-enlighter-language="java">FileInputStream</code> الذي يستخدم لإدخال بيانات ملف محدد في الذاكرة.</p></li>
+<li><p>تجهيز كائن من الكلاس <code data-enlighter-language="java">ObjectInputStream</code> ليعيد خلق الكائن في الذاكرة.</p></li>
+<li><p>قراءة حالة الكائن بواسطة الدالة <code data-enlighter-language="java">readObject()</code> و تخزينها في الكائن الفارغ الذي قمنا بإنشائه في الخطوة الأولى, و هنا سيكون عليك أن تفعل <span class="word">Downcasting</span> لتحول نوع الكائن الذي ترجعه الدالة <code data-enlighter-language="java">readObject()</code> إلى نوع الكائن الحقيقي لأنها ترجع الكائن الموجود في الذاكرة كـ <code data-enlighter-language="java">Object</code> و ليس كنوعه الحقيقي.</p></li>
+<li><p>عند الإنتهاء من عملية النسخ, نقوم بقطع كل إتصال قمنا بإجرائه مع هذا الملف.</p></li>
+</ol>
+</article>
+<article>
+<h2>مثال شامل</h2>
+<p>في المثال التالي قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">Editor</code>, يطبق الإنترفيس <code data-enlighter-language="java">Serializable</code>, و يملك المتغيرات التالية:<br/>
+<code data-enlighter-language="java">language</code>, <code data-enlighter-language="java">encoding</code>, <code data-enlighter-language="java">fontSize</code>, <code data-enlighter-language="java">fontFamily</code>, <code data-enlighter-language="java">autoSave</code>, <code data-enlighter-language="java">autoComplete</code>, <code data-enlighter-language="java">direction</code>.</p>
+<p>المتغير <code data-enlighter-language="java">direction</code> قمنا بتعريفه كـ <code data-enlighter-language="java">transient</code> لأننا لا نريد أن يتم حفظ قيمته عندما نفعل <span class="word">Serialization</span>.</p>
+<p>بعدها قمنا بتعريف كلاس آخر إسمه <code data-enlighter-language="java">Main</code> قمنا فيه بتطبيق مبدأي الـ <span class="word">Serialization</span> و الـ <span class="word">Deserialization</span>.<br/>
+	من السطر <span class="number">22</span> إلى السطر <span class="number">52</span> قمنا بتطبيق مبدأ الـ <span class="word">Deserialization</span>.<br/>
+	من السطر <span class="number">59</span> إلى السطر <span class="number">90</span> قمنا بتطبيق مبدأ الـ <span class="word">Serialization</span>.</p>
+<p>الملف الذي قمنا بتخزين حالة الكائن فيه قمنا بتسميته <code data-enlighter-language="java">user-prefrences.ser</code>.<br/>
+	عند تشغيل البرنامج سيتم إنشاؤه في المجلد الذي يحتوي على المشروع.</p>
+<br/>
+<p><span class="note">إنتبه:</span> في حال ظهرت لك مشكلة في الكلاس <code data-enlighter-language="java">Editor</code> قم فقط بإضافة الكود التالي في السطر رقم <span class="number">6</span> و سنشرح لك معنى هذا السطر لاحقاً.<br/>
+<code data-enlighter-language="java">private static final long serialVersionUID = 1L;</code>.</p>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Editor.java</span>
+<pre data-enlighter-language="java">
+import java.io.Serializable;                      // Serializable هنا قمنا باستدعاء الإنترفيس
+ 
+public class Editor implements Serializable {     // Serializable يطبق الإنترفيس Editor هنا قمنا بتعريف كلاس إسمه
+ 
+    public String language;
+    public String encoding;
+    public String fontSize;
+    public String fontFamily;
+    public boolean autoSave;
+    public boolean autoComplete;
+    public transient String direction;            // transient كـ direction قمنا بتعريف المتغير
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.io.File;                     // File هنا قمنا باستدعاء الكلاس
+import java.io.FileInputStream;          // FileInputStream هنا قمنا باستدعاء الكلاس
+import java.io.FileOutputStream;         // FileOutputStream هنا قمنا باستدعاء الكلاس
+import java.io.ObjectInputStream;        // ObjectInputStream هنا قمنا باستدعاء الكلاس
+import java.io.ObjectOutputStream;       // ObjectOutputStream هنا قمنا باستدعاء الكلاس
+import java.io.IOException;              // IOException هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // e إسمه Editor في كل مرة نقوم فيها بتشغيل البرنامج سيتم إنشاء كائن من الكلاس
+        Editor e = new Editor();
+ 
+ 
+        // لمعرفة إذا كان يوجد ملف يحفظ حالة الكائن أم لا user-prefrences.ser بعدها سيتم البحث عن الملف
+        if ( new File("./user-prefrences.ser").exists() )
+        {
+            // منه e موجوداً سيحاول البرنامج إستعادة حالة الكائن user-prefrences.ser في حال كان الملف
+            try
+            {
+                // في الذاكرة user-prefrences.ser حتى نستطيع إدخال المعلومات الموجودة في الملف FileInputStream هنا قمنا بإنشاء كائن نوعه
+                FileInputStream fis = new FileInputStream("./user-prefrences.ser");
+ 
+                // في الذاكرة user-prefrences.ser المحفوظ في الملف Editor لنتمكن من إعادة خلق كائن الـ ObjectInputStream هنا قمنا بإنشاء كائن نوعه
+                ObjectInputStream ois = new ObjectInputStream(fis);
+ 
+                // e و قمنا بتخزين حالته في الكائن Editor هنا قمنا بقراءة حالة الكائن الذي تم خلقه في الذاكرة ككائن من الكلاس
+                e = (Editor) ois.readObject();
+ 
+                // user-prefrences.ser في الأخير قمنا بقطع كل إتصال قمنا بإجرائه مع الملف
+                fis.close();
+                ois.close();
+ 
+                // في حال عدم حدوث أي خطأ, سيتم طباعة الجملة التالية التي تعني أن العملية تمت بنجاح
+                System.out.println("Deserialized data has been created in the memory");
+                System.out.println("Language:      " + e.language);
+                System.out.println("Encoding:      " + e.encoding);
+                System.out.println("Font size:     " + e.fontSize);
+                System.out.println("Font family:   " + e.fontFamily);
+                System.out.println("Auto save:     " + e.autoSave);
+                System.out.println("Direction:     " + e.direction);
+                System.out.println("Auto Complete: " + e.autoComplete);
+                System.out.println();
+            }
+            catch(IOException | ClassNotFoundException ex)
+            {
+                // في حال حدوث أي خطأ عند محاولة إسترجاع حالة الكائن سيتم عرضعه
+                System.out.println(ex.getMessage());
+            }
+        }
+ 
+ 
+ 
+ 
+        // user-prefrences.ser و حفظها في ملف جديد إسمه e هنا حاولنا تغيير حالة الكائن
+        try
+        {
+            // ( أي قمنا بتغيير إعدادات البرنامج ) e هنا قمنا بتغيير قيم الكائن
+            e.language   = "arabic";
+            e.encoding   = "utf-8";
+            e.fontSize   = "12pt";
+            e.fontFamily = "tahoma";
+            e.autoSave   = true;
+            e.direction  = "right to left";
+ 
+            // .ser إمتداده ,user-prefrences.ser هنا قمنا بإنشاء ملف إسمه
+            FileOutputStream fos = new FileOutputStream("./user-prefrences.ser");
+ 
+            // user-prefrences.ser لنتمكن من استخراج حالة أي كائن موجود في الذاكرة و وضعها في الملف ObjectOutputStream هنا قمنا بإنشاء كائن نوعه
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+ 
+            // لحفظ الإعدادات التي قمنا بإدخالها user-prefrences.ser في الملف e هنا قمنا بنسخ حالة الكائن
+            oos.writeObject(e);
+ 
+            // user-prefrences.ser في الأخير قمنا بقطع كل إتصال قمنا بإجرائه مع الملف
+            oos.close();
+            fos.flush();
+            fos.close();
+ 
+            // في حال عدم حدوث أي خطأ, سيتم طباعة الجملة التالية التي تعني أن العملية تمت بنجاح
+            System.out.println("Serialized data has been saved in the project in a file called user-prefrences.ser");
+        }
+        catch(IOException ex)
+        {
+            // في حال حدوث أي خطأ عند نسخ البيانات من الذاكرة إلى الملف سيتم عرضه
+            System.out.println(ex.getMessage());
+        }
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>في المرة الأولى التي تقوم فيها بتشغيل البرنامج ستحصل على النتيجة التالية.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Serialized data has been saved in the project in a file called user-prefrences.ser 
+		</pre>
+<br/>
+<p><span class="point">•</span>في المرة الثانية التي تقوم فيها بتشغيل البرنامج ستحصل على النتيجة التالية.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Deserialized data has been created in the memory
+Language:      arabic
+Encoding:      utf-8
+Font size:     12pt
+Font family:   tahoma
+Auto save:     true
+Direction:     null
+Auto Complete: false
+
+Serialized data has been saved in the project in a file called user-prefrences.ser 
+		</pre>
+</div>
+<br/>
+<p>بما أنه قد تم إنشاء الملف <code data-enlighter-language="java">user-prefrences.ser</code> بنجاح, يمكنك البحث عنه و فتحه بواسطة أي محرر و عندها ستتمكن من رؤية شكل المعلومات التي كانت مسجلة في الذاكرة.</p>
+<p>لاحظ أنه لم يتم حفظ قيمة المتغير <code data-enlighter-language="java">direction</code> في الملف لأننا قمنا بتعريفها كـ <code data-enlighter-language="java">transient</code>, لذلك تم إعطائه القيمة <code data-enlighter-language="java">null</code> كقيمة إفتراضية.</p>
+</article>
+<article>
+<h2>المتغير <code data-enlighter-language="java">serialVersionUID</code></h2>
+<p>كل كلاس يطبق الإنترفيس <code data-enlighter-language="java">Serializable</code> يتم إعطاءه رقم إصدار خاص فيه.<br/>
+	هذا الرقم يتم تخزينه في المتغير <code data-enlighter-language="java">serialVersionUID</code>.</p>
+<p>إذاً كل كلاس يطبق الإنترفيس <code data-enlighter-language="java">Serializable</code>, يملك متغير إسمه <code data-enlighter-language="java">serialVersionUID</code> حتى لو لم يتم تعريفه.</p>
+<p>رقم الإصدار يضمن أن المرسل و المستقبل للملف على الشبكة يملكون نفس نسخة الكلاس للكائن المحفوظ في الملف.<br/>
+	في حال كان رقم الإصدار في كلاس المرسل مختلف عن رقم الإصدار في كلاس المستقبل يتم رمي إستثناء من النوع <code data-enlighter-language="java">InvalidClassException</code>.</p>
+<p>إذاً رقم الإصدار <code data-enlighter-language="java">serialVersionUID</code> مهم جداً عند بناء تطبيق يشارك البيانات بين سيرفر و عميل, أي يوجد تطبيق على السيرفر و تطبيق عند المستخدم العادي مرتبطان مع بعضهما البعض. سنرى ذلك في الدرس التالي.</p>
+<p>بشكل عام, تعريف المتغير <code data-enlighter-language="java">serialVersionUID</code> ليس أمراً إجبارياً في حال كنت تبني برنامج لا تشارك فيه البيانات مع برنامج آخر, لأن جافا أصلاً ستقوم بتعريفه عنك في حال لم تقم بتعريفه بنفسك, لكن في بعض بيئات العمل مثل بيئة <span class="word">Eclipse</span>, نلاحظ أن الـ <span class="word">Complier</span> يظهر تحذير في حال لم نقم بتعريف المتغير <code data-enlighter-language="java">serialVersionUID</code> من جديد في البرنامج, لذلك ننصحك بتعريفه في جميع الحالات لأنه لن يؤثر أصلاً على الكود.</p>
+<br/>
+<h3>طريقة تعريف المتغير <code data-enlighter-language="java">serialVersionUID</code></h3>
+<p>في البداية يمكنك وضع أي <span class="word">Access Modifier</span> و لن يشكل ذلك أي فرق هنا, لكنك مجبر على تعريفه كـ <code data-enlighter-language="java">static final long</code>.</p>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<p><span class="point">•</span>في الإصدار الأول من الكلاس <code data-enlighter-language="java">Editor</code> وضعنا قيمته <code data-enlighter-language="java">1L</code><p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+private static final long serialVersionUID = 1L; 
+		</pre>
+<br/>
+<p><span class="point">•</span>في الإصدار الثاني من الكلاس <code data-enlighter-language="java">Editor</code> وضعنا قيمته <code data-enlighter-language="java">2L</code><p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+private static final long serialVersionUID = 2L; 
+		</pre>
+</p></p></p></p></div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

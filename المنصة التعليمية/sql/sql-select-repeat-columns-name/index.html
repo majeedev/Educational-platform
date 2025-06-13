@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس سنتعرف على فكرة تكرار إسم الأعمدة الموضوعة في الإستعلام و متى نحتاجها" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>تكرار إسم الأعمدة الموضوعة في الإستعلام في SQL</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../database-icon.png"/></li>
+<li class="title">كيف أبدأ بالتعلم</li>
+<li><a href="../sql-overview/index.html"><span class="en">SQL</span> - نظرة عامة</a></li>
+<li><a href="../sql-environment-setup/index.html"><span class="en">SQL</span> - تجهيز بيئة العمل</a></li>
+<li><a href="../sql-basic-syntax/index.html"><span class="en">SQL</span> - أسلوب كتابة الأوامر</a></li>
+<li><a href="../sql-comments/index.html"><span class="en">SQL</span> - التعليقات</a></li>
+<li><a href="../sql-write-first-query/index.html"><span class="en">SQL</span> - كتابة أول إستعلام</a></li>
+<li><a href="../sql-refresh-databases-panel/index.html"><span class="en">SQL</span> - تحديث قائمة قواعد البيانات</a></li>
+<li><a href="../sql-databases-structure-in-general/index.html"><span class="en">SQL</span> - مفاهيم و مصطلحات مهمة</a></li>
+<li class="title">أوامر و دوال SQL</li>
+<li><a href="../sql-create-database/index.html"><span class="en">SQL</span> - أمر إنشاء قاعدة بيانات</a></li>
+<li><a href="../sql-drop-database/index.html"><span class="en">SQL</span> - أمر حذف قاعدة بيانات</a></li>
+<li><a href="../sql-data-types/index.html"><span class="en">SQL</span> - أهم أنواع البيانات</a></li>
+<li><a href="../sql-create-table/index.html"><span class="en">SQL</span> - أمر إنشاء جدول</a></li>
+<li><a href="../sql-drop-table/index.html"><span class="en">SQL</span> - أمر حذف جدول</a></li>
+<li><a href="../sql-use/index.html"><span class="en">SQL</span> - أمر تحديد قاعدة البيانات</a></li>
+<li><a href="../sql-insert-into/index.html"><span class="en">SQL</span> - أمر إضافة سطر في الجدول</a></li>
+<li><a href="../sql-auto-increment/index.html"><span class="en">SQL</span> - الترقيم التلقائي للأسطر</a></li>
+<li><a href="../sql-select/index.html"><span class="en">SQL</span> - أمر جلب بيانات من الجدول</a></li>
+<li><a href="../sql-select-with-concat/index.html"><span class="en">SQL</span> - دمج الأعمدة عند جلبها</a></li>
+<li><a href="index.html"><span class="en">SQL</span> - تكرار إسم الأعمدة في الإستعلام</a></li>
+<li><a href="../sql-select-with-where/index.html"><span class="en">SQL</span> - جلب البيانات ضمن شروط</a></li>
+<li><a href="../sql-select-with-order/index.html"><span class="en">SQL</span> - جلب البيانات مع ترتيبها</a></li>
+<li><a href="../sql-select-distinct/index.html"><span class="en">SQL</span> - جلب بيانات خالية من التكرار</a></li>
+<li><a href="../sql-union/index.html"><span class="en">SQL</span> - دمج الجداول في جدول واحد</a></li>
+<li><a href="../sql-delete/index.html"><span class="en">SQL</span> - أمر حذف بيانات من الجدول</a></li>
+<li><a href="../sql-update/index.html"><span class="en">SQL</span> - أمر تحديث بيانات الجدول</a></li>
+<li><a href="../sql-select-with-limit/index.html"><span class="en">SQL</span> - تحديد عدد الأسطر التي سترجع</a></li>
+<li><a href="../sql-null-values/index.html"><span class="en">SQL</span> - التعامل مع الحقول الفارغة</a></li>
+<li><a href="../sql-min/index.html"><span class="en">SQL</span> - جلب أصغر قيمة في العامود</a></li>
+<li><a href="../sql-max/index.html"><span class="en">SQL</span> - جلب أكبر قيمة في العامود</a></li>
+<li><a href="../sql-count/index.html"><span class="en">SQL</span> - حساب عدد أسطر الجدول</a></li>
+<li><a href="../sql-sum/index.html"><span class="en">SQL</span> - حساب ناتج جمع قيم العامود</a></li>
+<li><a href="../sql-avg/index.html"><span class="en">SQL</span> - حساب متوسط قيم العامود</a></li>
+<li><a href="../sql-select-with-group-by/index.html"><span class="en">SQL</span> - تجميع قيم الحقول المشتركة</a></li>
+<li><a href="../sql-select-with-having/index.html"><span class="en">SQL</span> - شروط على الحقول المجمعة</a></li>
+<li><a href="../sql-insert-into-select/index.html"><span class="en">SQL</span> - نسخ البيانات في جدول آخر</a></li>
+<li><a href="../sql-case/index.html"><span class="en">SQL</span> - وضع قيمة إفتراضية لكل حالة</a></li>
+<li><a href="../sql-unique/index.html"><span class="en">SQL</span> - تخزين قيم موحدة في العامود</a></li>
+<li class="title">العلاقات بين الجداول</li>
+<li><a href="../sql-how-to-relate-tables/index.html"><span class="en">SQL</span> - كيف يتم ربط الجداول</a></li>
+<li><a href="../sql-relationships-types/index.html"><span class="en">SQL</span> - أنواع العلاقات بين الجدوال</a></li>
+<li><a href="../sql-joins/index.html"><span class="en">SQL</span> - طرق ربط معلومات الجداول</a></li>
+<li><a href="../sql-alias-for-tables/index.html"><span class="en">SQL</span> - وضع أسماء مختصرة للجداول</a></li>
+<li><a href="../sql-self-join/index.html"><span class="en">SQL</span> - ربط المعلومات في نفس الجدول</a></li>
+<li class="title">معلومات متقدمة</li>
+<li><a href="../sql-alter/index.html"><span class="en">SQL</span> - تعديل بنية الجدول بعد إنشائه</a></li>
+<li><a href="../sql-default/index.html"><span class="en">SQL</span> - وضع قيم إفتراضية للحقول</a></li>
+<li><a href="../sql-primary-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح رئيسي</a></li>
+<li><a href="../sql-foreign-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح أجنبي</a></li>
+<li><a href="../sql-check/index.html"><span class="en">SQL</span> - وضع شروط لتخزين القيم</a></li>
+<li><a href="../sql-transactions/index.html"><span class="en">SQL</span> - تنفيذ كل الأوامر أو إلغاءها كلها</a></li>
+<li><a href="../sql-indexes/index.html"><span class="en">SQL</span> - الفهارس و أنواعها</a></li>
+<li><a href="../sql-like/index.html"><span class="en">SQL</span> - البحث في الأعمدة النصية</a></li>
+<li><a href="../sql-sub-queries/index.html"><span class="en">SQL</span> - كتابة إستعلامات متداخلة</a></li>
+<li><a href="../sql-connect-to-database/index.html"><span class="en">SQL</span> - الإتصال بقاعدة البيانات عن بعد</a></li>
+<li class="title">بناء قواعد بيانات لمشاريع</li>
+<li><a href="../sql-building-database-from-scratch/index.html"><span class="en">SQL</span> - تصميم قاعدة بيانات من الصفر</a></li>
+<li><a href="../sql-download-ready-made-database/index.html"><span class="en">SQL</span> - تحميل قواعد بيانات جاهزة</a></li>
+<!--
+<li><a href="../sql-backup-database"><span class="en">SQL</span> - إنشاء نسخة من قاعدة البيانات</a></li>
+<li><a href="../sql-stored-procedures"><span class="en">SQL</span> - تعريف دوال و استدعائها</a></li>
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">SQL</span>تكرار إسم الأعمدة الموضوعة في الإستعلام</h1>
+<article>
+<h2>مقدمة</h2>
+<p>في هذا الدرس لن تتعلم أوامر جديدة في <span class="word">SQL</span> بل ستتعلم أساليب جديدة للتعامل مع البيانات التي تسترجعها من قاعدة البيانات.</p>
+<p>عند جلب البيانات من الجداول, يمكنك ذكر إسم العامود في نفس الإستعلام أكثر من مرة فترجع قيمته أكثر من مرة في الجدول الذي سينتج عن الإستعلام.<br/>
+	و بما أنك تستطيع التعديل على البيانات التي ترجع كما رأيت في الدرس السابق, يمكنك الإستفادة كثيراً إذا عرفت كيف تستخدم الأسلوبين مع بعض للتعامل البيانات.</p>
+<p>سنضع لك عدة أمثلة توضح لك كيف تستطيع استرجاع البيانات و عرضها بالطريقة التي تشاء.</p>
+</article>
+<article>
+<h2>تجهيز قاعدة البيانات التي سنطبق عليها</h2>
+<p>قم بتنفيذ الإستعلام التالي حتى لإنشاء قاعدة بيانات جديدة إسمها <code>harmash</code> و إنشاء جدول فيها إسمه <code>products</code> يحتوي على بيانات 6 منتجات.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+-- سيتم حذفها harmash في حال كان يوجد بالأساس قاعدة بيانات إسمها
+DROP DATABASE IF EXISTS harmash;
+
+-- harmash هنا قمنا بإنشاء قاعدة بيانات جديدة إسمها
+CREATE DATABASE harmash;
+
+-- harmash هنا قمنا بتحديد أن أي إستعلام جديد سيتم تنفيذه على قاعدة البيانات
+USE harmash;
+
+-- يتألف من أربعة أعمدة products هنا قمنا بإنشاء جدول جديد إسمه
+-- لأننا قمنا بتحديدها قبل إستدعاء هذا الأمر harmash سيتم إنشاء هذا الجدول بداخل قاعدة البيانات
+CREATE TABLE products (
+	id    INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name  VARCHAR(50),
+	price DECIMAL(7,2)
+);
+
+-- هنا قمنا بإضافة 6 أسطر في الجدول, أي أضفنا معلومات 6 منتجات
+-- لاحظ أننا لم نحدد أسماء الأعمدة التي سنضع فيها البيانات لأننا قمنا بملئ جميع المعلومات
+-- في البداية هو حتى يكون عدد القيم الموضوعة يساوي عدد أعمدة الجدول null سبب وضع الكلمة
+-- ستقوم قاعدة البيانات بوضع رقم تعرفة مختلف لكل سطر null مكان الكلمة
+INSERT INTO products VALUES (null, 'Keyboard', 15.00);
+INSERT INTO products VALUES (null, 'Camera', 44.99);
+INSERT INTO products VALUES (null, 'HDD 1TB', 70.00);
+INSERT INTO products VALUES (null, 'SSD 1TB', 274.66);
+INSERT INTO products VALUES (null, 'Mouse', 8.50);
+INSERT INTO products VALUES (null, 'Table', 44.55);
+		</pre>
+</div>
+<br/>
+<p>بعد تنفيذ الإستعلام السابق في <span class="word">phpMyAdmin</span> سيتم إنشاء قاعدة البيانات <code>harmash</code> و إنشاء الجدول <code>products</code> بداخلها.<br/>
+	قم بالنقر على إسم قاعدة البيانات <code>harmash</code> من القائمة اليسرى حتى تبدأ بالتعامل معها و تطبيق ما ستتعلمه في هذا الدرس.</p>
+</article>
+<article>
+<h2>مثال حول وضع إسم العامود أكثر من مرة في الإستعلام</h2>
+<p>الإستعلام التالي يجلب إسم المنتج, سعره, ضريبة قيمتها 10 بالمئة من أصل سعر المنتج, سعر المنتج النهائي بعد الضريبة.</p>
+<p>لقراءة المعلومات التي سنعرضها بشكل مفهوم فعلنا التالي:</p>
+<ul class="explain">
+<li><p>العامود الذي يعرض أسماء المنتجات قمنا بتسميته <span class="inline"><code>Product</code></span></p></li>
+<li><p>العامود الذي يعرض أسعار المنتجات قمنا بتسميته <code>Price ($)</code> حتى تكون العملة التي نتعامل معها واضحة.</p></li>
+<li><p>العامود الذي يعرض نسية الضريبة على كل منتج قمنا بتسميته <span class="inline"><code>Tax ($)</code></span></p></li>
+<li><p>العامود الذي يعرض أسعار المنتجات بعد الضريبة قمنا بتسميته <span class="inline"><code>Final Price ($)</code></span></p></li>
+</ul>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT 
+	name AS 'Product',                            -- إسم المنتج عرضناه كما هو
+    price AS 'Price ($)',                         -- سعر المنتج عرضناه كما هو
+    price * 0.1 AS 'Tax ($)',                     -- نسبة الضريبة 10% تساوي سعر المنتج × 0.1
+    price + (price * 0.1) AS 'Final Price ($)'    -- سعر المنتج بعد الضريبة = سعر المنتج + نسبة الضريبة
+FROM
+	products
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 450px;">
+<table class="ltr left">
+<tr>
+<th class="ltr">Product</th> <th class="ltr">Product Price ($)</th> <th class="ltr">Tax ($)</th> <th class="ltr">Final Price ($)</th>
+</tr>
+<tr>
+<td>Keyboard</td> <td>15.00</td> <td>1.500</td> <td>16.500</td>
+</tr>
+<tr>
+<td>Camera</td> <td>44.99</td> <td>4.499</td> <td>49.489</td>
+</tr>
+<tr>
+<td>HDD 1TB</td> <td>70.00</td> <td>7.000</td> <td>77.000</td>
+</tr>
+<tr>
+<td>SSD 1TB</td> <td>274.66</td> <td>27.466</td> <td>302.126</td>
+</tr>
+<tr>
+<td>Mouse</td> <td>8.50</td> <td>0.850</td> <td>9.350
+			</td></tr>
+<tr>
+<td>Table</td> <td>44.55</td> <td>4.455</td> <td>49.005</td>
+</tr>
+</table>
+</div>
+<br/>
+<p>إذاً من خلال سعر المنتج فقط, قمنا بتوليد عامودين إضافيين عرضنا فيهما نسبة الضريبة و سعر المنتج بعد الضريبة.<br/>
+	طبعاً بإمكانك التعديل و الإضافة على الإستعلام كيفما شئت, فمثلاً يمكنك وضع حسم على سعر المنتج بنسبة محددة بدل أن تضع ضريبة عليه.</p>
+</article>
+<article>
+<h2>الدالة <code data-enlighter-language="sql">FORMAT()</code></h2>
+<p>عند التعديل على القيم التي سيرجعها الإستعلام قد يتغير نوعها كما لاحظت في الأمثلة السابقة.<br/>
+	فمثلاً, عند عرض أسعار المنتجات كما هي كنا نلاحظ أنه يوجد رقمين فقط بعد الفاصلة و لكن عند إجراء أي عملية حسابية على هذا السعر لاحظنا أن الأسعار أصبح يظهر فيها أربع أرقام بعد الفاصلة لأن قاعدة البيانات قامت بتحويل نوع السعر من <code data-enlighter-language="sql">DECIMAL</code> إلى <code data-enlighter-language="sql">FLOAT</code> عند إجراء العمليات الحسابية.</p>
+<p>إذا كنت تريد تحديد عدد الأرقام التي ستظهر بعد الفاصلة يمكنك استخدام الدالة <span class="inline"><code data-enlighter-language="sql">FORMAT()</code>.</span><br/>
+	عند استدعاء هذه الدالة يجب أن تمرر لها رقمين. الأول هو الرقم الذي تريد تحويله, القاني يمثل عدد الأرقام التي تريد عرضها بعد الفاصلة.</p>
+<br/>
+<h3>المثال الأول</h3>
+<p>إذا قمت بتنفيذ الإستعلام التالي سيعرض لك الرقم الموضوع كما هو بالضبط.</p>
+<div class="example-box" style="max-width: 500px">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT 10.55 AS 'Number without format'
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 200px;">
+<table class="ltr left">
+<tr>
+<th>Number without format</th>
+</tr>
+<tr>
+<td>10.55</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>إذا قمت بتنفيذ الإستعلام التالي سيعرض لك الرقم الموضوع بدون فاصلة و سيتم وضع أقرب رقم له.</p>
+<div class="example-box" style="max-width: 500px">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT FORMAT(10.55) AS 'Number without format'
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 180px;">
+<table class="ltr left">
+<tr>
+<th>Number without format</th>
+</tr>
+<tr>
+<td>11</td>
+</tr>
+</table>
+</div>
+</article>
+<article>
+<h2>مثال حول تعديل القيم التي سيرجعها الإستعلام بواسطة الدالة <code data-enlighter-language="sql">FORMAT()</code></h2>
+<p>الإستعلام التالي يجلب إسم المنتج, سعره بالدولار, باليورو, بالليرة اللبنانية و بالريال السعودي.</p>
+<p>لقراءة المعلومات التي سنعرضها بشكل مفهوم فعلنا التالي:</p>
+<ul class="explain">
+<li><p>العامود الذي يعرض أسماء المنتجات قمنا بتسميته <span class="inline"><code>Product</code></span></p></li>
+<li><p>العامود الذي يعرض أسعار المنتجات بالدولار قمنا بتسميته <code>Price ($)</code> و هو نفسه السعر الأصلي لأننا إفترضنا أن الأسعار تم إدخالها بالأساس بالدولار.</p></li>
+<li><p>العامود الذي يعرض أسعار المنتجات باليورو قمنا بتسميته <span class="inline"><code>Price (€)</code></span></p></li>
+<li><p>العامود الذي يعرض أسعار المنتجات بالليرة قمنا بتسميته <span class="inline"><code>Price (LL)</code></span></p></li>
+<li><p>العامود الذي يعرض أسعار المنتجات بالريال قمنا بتسميته <span class="inline"><code>Price (SAR)</code></span></p></li>
+</ul>
+<p><span class="note">ملاحظة:</span> السعر بالليرة و الريال لم نعرضها مع فواصل. السعر بالدولار عرضناه كما هو. السعر باليورو عرضناه برقمين بعد بالفاصلة.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT 
+	name AS 'Product',
+    price AS 'Price ($)',                      -- السعر بالدولار عرضناه كما هو لأن السعر الأساسي بالدولار
+    FORMAT(price * 0.9, 2) AS 'Price (€)',     -- 0.9 للتحويل من الدولار إلى اليورو ضربنا السعر بنسبة
+    FORMAT(price * 1500, 0) AS 'Price (LL)',   -- 1500 للتحويل من الدولار إلى الليرة ضربنا السعر بنسبة
+    FORMAT(price * 3.75, 0) AS 'Price (SAR)'   -- 3.75 للتحويل من الدولار إلى الريال ضربنا السعر بنسبة
+FROM
+	products
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 500px;">
+<table class="ltr left">
+<tr>
+<th class="ltr">Product</th> <th class="ltr">Price ($)</th> <th class="ltr">Price (€)</th> <th class="ltr">Price (LL)</th> <th class="ltr">Price (SAR)</th>
+</tr>
+<tr>
+<td>Keyboard</td> <td>15.00</td> <td>13.50</td> <td>22,500</td> <td>56</td>
+</tr>
+<tr>
+<td>Camera</td> <td>44.99</td> <td>40.49</td> <td>67,485</td> <td>169</td>
+</tr>
+<tr>
+<td>HDD 1TB</td> <td>70.00</td> <td>63.00</td> <td>105,000</td> <td>263</td>
+</tr>
+<tr>
+<td>SSD 1TB</td> <td>274.66</td> <td>247.19</td> <td>411,990</td> <td>1,030</td>
+</tr>
+<tr>
+<td>Mouse</td> <td>8.50</td> <td>7.65</td> <td>12,750</td> <td>32</td>
+</tr>
+<tr>
+<td>Table</td> <td>44.55</td> <td>40.10</td> <td>66,825</td> <td>167</td>
+</tr>
+</table>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

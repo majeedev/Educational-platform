@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس سنتعلم طريقة إستخدام العامل LIKE للبحث في الأعمدة النصية بواسطة التعابير النمطية" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>SQL Like | البحث في الأعمدة النصية في SQL</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../database-icon.png"/></li>
+<li class="title">كيف أبدأ بالتعلم</li>
+<li><a href="../sql-overview/index.html"><span class="en">SQL</span> - نظرة عامة</a></li>
+<li><a href="../sql-environment-setup/index.html"><span class="en">SQL</span> - تجهيز بيئة العمل</a></li>
+<li><a href="../sql-basic-syntax/index.html"><span class="en">SQL</span> - أسلوب كتابة الأوامر</a></li>
+<li><a href="../sql-comments/index.html"><span class="en">SQL</span> - التعليقات</a></li>
+<li><a href="../sql-write-first-query/index.html"><span class="en">SQL</span> - كتابة أول إستعلام</a></li>
+<li><a href="../sql-refresh-databases-panel/index.html"><span class="en">SQL</span> - تحديث قائمة قواعد البيانات</a></li>
+<li><a href="../sql-databases-structure-in-general/index.html"><span class="en">SQL</span> - مفاهيم و مصطلحات مهمة</a></li>
+<li class="title">أوامر و دوال SQL</li>
+<li><a href="../sql-create-database/index.html"><span class="en">SQL</span> - أمر إنشاء قاعدة بيانات</a></li>
+<li><a href="../sql-drop-database/index.html"><span class="en">SQL</span> - أمر حذف قاعدة بيانات</a></li>
+<li><a href="../sql-data-types/index.html"><span class="en">SQL</span> - أهم أنواع البيانات</a></li>
+<li><a href="../sql-create-table/index.html"><span class="en">SQL</span> - أمر إنشاء جدول</a></li>
+<li><a href="../sql-drop-table/index.html"><span class="en">SQL</span> - أمر حذف جدول</a></li>
+<li><a href="../sql-use/index.html"><span class="en">SQL</span> - أمر تحديد قاعدة البيانات</a></li>
+<li><a href="../sql-insert-into/index.html"><span class="en">SQL</span> - أمر إضافة سطر في الجدول</a></li>
+<li><a href="../sql-auto-increment/index.html"><span class="en">SQL</span> - الترقيم التلقائي للأسطر</a></li>
+<li><a href="../sql-select/index.html"><span class="en">SQL</span> - أمر جلب بيانات من الجدول</a></li>
+<li><a href="../sql-select-with-concat/index.html"><span class="en">SQL</span> - دمج الأعمدة عند جلبها</a></li>
+<li><a href="../sql-select-repeat-columns-name/index.html"><span class="en">SQL</span> - تكرار إسم الأعمدة في الإستعلام</a></li>
+<li><a href="../sql-select-with-where/index.html"><span class="en">SQL</span> - جلب البيانات ضمن شروط</a></li>
+<li><a href="../sql-select-with-order/index.html"><span class="en">SQL</span> - جلب البيانات مع ترتيبها</a></li>
+<li><a href="../sql-select-distinct/index.html"><span class="en">SQL</span> - جلب بيانات خالية من التكرار</a></li>
+<li><a href="../sql-union/index.html"><span class="en">SQL</span> - دمج الجداول في جدول واحد</a></li>
+<li><a href="../sql-delete/index.html"><span class="en">SQL</span> - أمر حذف بيانات من الجدول</a></li>
+<li><a href="../sql-update/index.html"><span class="en">SQL</span> - أمر تحديث بيانات الجدول</a></li>
+<li><a href="../sql-select-with-limit/index.html"><span class="en">SQL</span> - تحديد عدد الأسطر التي سترجع</a></li>
+<li><a href="../sql-null-values/index.html"><span class="en">SQL</span> - التعامل مع الحقول الفارغة</a></li>
+<li><a href="../sql-min/index.html"><span class="en">SQL</span> - جلب أصغر قيمة في العامود</a></li>
+<li><a href="../sql-max/index.html"><span class="en">SQL</span> - جلب أكبر قيمة في العامود</a></li>
+<li><a href="../sql-count/index.html"><span class="en">SQL</span> - حساب عدد أسطر الجدول</a></li>
+<li><a href="../sql-sum/index.html"><span class="en">SQL</span> - حساب ناتج جمع قيم العامود</a></li>
+<li><a href="../sql-avg/index.html"><span class="en">SQL</span> - حساب متوسط قيم العامود</a></li>
+<li><a href="../sql-select-with-group-by/index.html"><span class="en">SQL</span> - تجميع قيم الحقول المشتركة</a></li>
+<li><a href="../sql-select-with-having/index.html"><span class="en">SQL</span> - شروط على الحقول المجمعة</a></li>
+<li><a href="../sql-insert-into-select/index.html"><span class="en">SQL</span> - نسخ البيانات في جدول آخر</a></li>
+<li><a href="../sql-case/index.html"><span class="en">SQL</span> - وضع قيمة إفتراضية لكل حالة</a></li>
+<li><a href="../sql-unique/index.html"><span class="en">SQL</span> - تخزين قيم موحدة في العامود</a></li>
+<li class="title">العلاقات بين الجداول</li>
+<li><a href="../sql-how-to-relate-tables/index.html"><span class="en">SQL</span> - كيف يتم ربط الجداول</a></li>
+<li><a href="../sql-relationships-types/index.html"><span class="en">SQL</span> - أنواع العلاقات بين الجدوال</a></li>
+<li><a href="../sql-joins/index.html"><span class="en">SQL</span> - طرق ربط معلومات الجداول</a></li>
+<li><a href="../sql-alias-for-tables/index.html"><span class="en">SQL</span> - وضع أسماء مختصرة للجداول</a></li>
+<li><a href="../sql-self-join/index.html"><span class="en">SQL</span> - ربط المعلومات في نفس الجدول</a></li>
+<li class="title">معلومات متقدمة</li>
+<li><a href="../sql-alter/index.html"><span class="en">SQL</span> - تعديل بنية الجدول بعد إنشائه</a></li>
+<li><a href="../sql-default/index.html"><span class="en">SQL</span> - وضع قيم إفتراضية للحقول</a></li>
+<li><a href="../sql-primary-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح رئيسي</a></li>
+<li><a href="../sql-foreign-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح أجنبي</a></li>
+<li><a href="../sql-check/index.html"><span class="en">SQL</span> - وضع شروط لتخزين القيم</a></li>
+<li><a href="../sql-transactions/index.html"><span class="en">SQL</span> - تنفيذ كل الأوامر أو إلغاءها كلها</a></li>
+<li><a href="../sql-indexes/index.html"><span class="en">SQL</span> - الفهارس و أنواعها</a></li>
+<li><a href="index.html"><span class="en">SQL</span> - البحث في الأعمدة النصية</a></li>
+<li><a href="../sql-sub-queries/index.html"><span class="en">SQL</span> - كتابة إستعلامات متداخلة</a></li>
+<li><a href="../sql-connect-to-database/index.html"><span class="en">SQL</span> - الإتصال بقاعدة البيانات عن بعد</a></li>
+<li class="title">بناء قواعد بيانات لمشاريع</li>
+<li><a href="../sql-building-database-from-scratch/index.html"><span class="en">SQL</span> - تصميم قاعدة بيانات من الصفر</a></li>
+<li><a href="../sql-download-ready-made-database/index.html"><span class="en">SQL</span> - تحميل قواعد بيانات جاهزة</a></li>
+<!--
+<li><a href="../sql-backup-database"><span class="en">SQL</span> - إنشاء نسخة من قاعدة البيانات</a></li>
+<li><a href="../sql-stored-procedures"><span class="en">SQL</span> - تعريف دوال و استدعائها</a></li>
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">SQL</span>البحث في الأعمدة النصية</h1>
+<article>
+<h2>العامل <code data-enlighter-language="sql">LIKE</code></h2>
+<p>العامل <code data-enlighter-language="sql">LIKE</code> يستخدم عند الحاجة لتخصيص البحث في العامود الذي يحتوي على قيم نصية.<br/>
+	كمثال بسيط, في حال أراد المستخدم البحث عن كل كتاب عنوانه يتضمن كلمة <code>'Hero'</code> يمكنك استخدام العامل <code data-enlighter-language="sql">LIKE</code> مع الأمر <code data-enlighter-language="sql">SELECT</code> لتحدد ذلك.</p>
+<br/>
+<h3>الشكل العام لإستخدامه</h3>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+SELECT column1, column2, ...
+FROM table_name
+WHERE column_name LIKE pattern;
+	</pre>
+<br/>
+<br/>
+<ul class="explain">
+<li><p>مكان الكلمة <code>column_name</code> نضع إسم العامود الذي يحتوي على قيم نصية و التي نريد تخصيص البحص فيها.</p></li>
+<li><p>مكان الكلمة <code>pattern</code> نضع نص يقال له نمط <span class="inline">( <span class="word">Pattern</span> )</span> لأنه يحتوي على رموز تمثل الطريقة التي سيتم فيها البحث.</p></li>
+</ul>
+</article>
+<article>
+<h2>الأحرف و الرموز التي تستخدم لكتابة الأنماط</h2>
+<p>الأحرف و الرموز التي نضعها في أي نمط يقال لها <span class="inline"><span class="word">Wildcards</span>.</span><br/>
+	قد تختلف قليلاً الأحرف و الرموز التي نضعها في الأنماط من قاعدة بيانات لأخرى و لكن أغلبها متشابه.</p>
+<p>في الجدول التالي وضعنا الأحرف و الرموز التي تستخدم في كتابة الأنماط مع تحديد قواعد البيانات التي تستخدم فيها.</p>
+<table class="list full-width">
+<tr>
+<th>الرمز</th>
+<th>إستخدامه</th>
+</tr>
+<tr>
+<td class="center"><code>%</code></td>
+<td>يستخدم في حال عدم الإكتراث ما إذا كان يوجد شيء أم لا.<br/>
+			بالنسبة لقواعد البيانات التي يمكن استخدامه فيها فهي <span class="word">MySQL</span> / <span class="word">SQL Server</span> / <span class="inline"><span class="word">Oracle</span>.</span><br/><br/>
+<b>مثال:</b> <code>'Hello*'</code><br/>
+			هذا النمط يقصد منه أننا نريد أن يكون الحقل النصي يبدأ بكلمة <code>Hello</code> و لا يهم إن كان يوجد شيء بعدها أم لا.</td>
+</tr>
+<tr>
+<td class="center"><code>*</code></td>
+<td>يستخدم في حال عدم الإكتراث ما إذا كان يوجد شيء أم لا.<br/>
+			بالنسبة لقواعد البيانات التي يمكن استخدامه فيها فهي <span class="inline"><span class="word">Access</span>.</span><br/><br/>
+<b>مثال:</b> <code>'Hello*'</code><br/>
+			هذا النمط يقصد منه أننا نريد أن يكون الحقل النصي يبدأ بكلمة <code>Hello</code> و لا يهم إن كان يوجد شيء بعدها أم لا.</td>
+</tr>
+<tr>
+<td class="center"><code>_</code></td>
+<td>يستخدم للإشارة إلى وجوب وجود أي حرف في المكان الذي يتم وضعه.<br/>
+			بالنسبة لقواعد البيانات التي يمكن استخدامه فيها فهي <span class="word">MySQL</span> / <span class="word">SQL Server</span> / <span class="inline"><span class="word">Oracle</span>.</span><br/><br/>
+<b>مثال:</b> <code>'m_n'</code><br/>
+			هذا النمط يقصد منه أننا نريد أن يكون الحقل النصي يبدأ بحرف <code>m</code> و يوجد حرفين بعده فقط مثل <code>men</code> - <code>man</code> - <span class="inline"><code>msn</code>.</span></td>
+</tr>
+<tr>
+<td class="center"><code>?</code></td>
+<td>يستخدم للإشارة إلى وجوب وجود أي حرف في المكان الذي يتم وضعه.<br/>
+			بالنسبة لقواعد البيانات التي يمكن استخدامه فيها فهي <span class="inline"><span class="word">Access</span>.</span><br/><br/>
+<b>مثال:</b> <code>'m?n'</code><br/>
+			هذا النمط يقصد منه أننا نريد أن يكون الحقل النصي يبدأ بحرف <code>m</code> و يوجد حرفين بعده فقط مثل <code>men</code> - <code>man</code> - <span class="inline"><code>msn</code>.</span></td>
+</tr>
+<!--
+			The following are avaialbe if use Regex instead of the LIKE operator
+		<tr>
+		    <td class="center"><code>[]</code></td>
+		    <td>يستخدم للإشارة إلى أنه يجب وجود أحد الأحرف الموضوعة فيه.<br>
+			بالنسبة لقواعد البيانات التي يمكن استخدامه فيها فهي <span class="word">SQL Server</span> / <span class="word">Oracle</span> / <span class="inline"><span class="word">Access</span>.</span><br><br>
+			<b>مثال:</b> <code>'[abc]*'</code><br>
+			هذا النمط يقصد منه أننا نريد أن يكون الحقل النصي يبدأ بحرف <code>a</code> أو <code>b</code> أو <code>c</code> و لا يهم إن كان يوجد بعده أي حرف مثل <code>arm</code> - <code>black</code> - <span class="inline"><code>color</code>.</span></td>
+		</tr>
+		<tr>
+		    <td class="center"><code>^</code></td>
+			<td>يوضع بداخل الرمز <code>[ ]</code> للإشارة إلى أنه يجب وجود أي حرف غير الأحرف الموضوعة فيه.<br>
+			بالنسبة لقواعد البيانات التي يمكن استخدامه فيها فهي <span class="word">SQL Server</span> / <span class="word">Oracle</span> / <span class="inline"><span class="word">Access</span>.</span><br><br>
+			<b>مثال:</b> <code>'[^abc]*'</code><br>
+			هذا النمط يقصد منه أننا نريد أن يكون الحقل النصي لا يبدأ بحرف <code>a</code> أو <code>b</code> أو <code>c</code> و لا يهم إن كان يوجد بعده أي حرف مثل <code>hello</code> - <code>world</code> - <span class="inline"><code>game</code>.</span></td>
+		</tr>
+		<tr>
+		    <td class="center"><code>-</code></td>
+			<td>يوضع بداخل الرمز <code>[ ]</code> للإشارة إلى أنه يجب وجود حرف من الأحرف الموجودة بين حرفين, أو أي رقم من الأرقام الموجودة بين رقمين.<br>
+			بالنسبة لقواعد البيانات التي يمكن استخدامه فيها فهي <span class="word">SQL Server</span> / <span class="word">Oracle</span> / <span class="inline"><span class="word">Access</span>.</span><br><br>
+			<b>المثال الأول:</b> <code>'[0-9]*'</code><br>
+			هذا النمط يقصد منه أننا نريد أن يكون الحقل النصي يبدأ بأي رقم بين <code>0</code> و <code>9</code> و لا يهم إن كان يوجد بعده أي حرف مثل <code>1000</code> - <code>1st</code> - <span class="inline"><code>2pac</code>.</span><br>
+			<span class="note">ملاحظة:</span> <code>[0-9]</code> هي إختصار للنمط <span class="inline"><code>[0123456789]</code>.</span>
+			<br><br>
+			<b>المثال الثاني:</b> <code>'[a-zA-Z]*'</code><br>
+			هذا النمط يقصد منه أننا نريد أن يكون الحقل النصي يبدأ بأحد الأحرف الأبجدية الموجودة بين <code>a</code> و <span class="inline"><code>z</code>,</span> أو الموجودة بين <code>A</code> و <span class="inline"><code>Z</code>,</span> و لا يهم إن كان يوجد بعده مثل <code>harmash.com</code> - <span class="inline"><code>Mhamad</code>.</span><br>
+			أي كأنك تريد وجود أي حرف في بداية النص سواء كان الحرف كبير <span class="inline">( <span class="word">Capital Letter</span> )</span> أو صغير <span class="inline">( <span class="word">Small Letter</span> ).</span>
+			<br><br>
+			<b>المثال الثالث:</b> <code>'[a-zA-Z0-9]*'</code><br>
+			هذا النمط يقصد منه أننا نريد أن يكون الحقل النصي يبدأ بأي رقم بين <code>0</code> و <span class="inline"><code>9</code>,</span> أو بأحد الأحرف الأبجدية الموجودة بين <code>a</code> و <span class="inline"><code>z</code>,</span> أو الموجودة بين <code>A</code> و <span class="inline"><code>Z</code>,</span> و لا يهم إن كان يوجد بعده.</td>
+		</tr>
+		-->
+</table>
+</article>
+<article>
+<h2>تجهيز قاعدة البيانات التي سنطبق عليها</h2>
+<p>قم بتنفيذ الإستعلام التالي حتى تنشئ قاعدة بيانات جديدة إسمها <code>harmash</code> و تنشئ فيها جدول إسمه <code>users</code> يحتوي على بيانات 10 مستخدمين.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+-- سيتم حذفها harmash في حال كان يوجد بالأساس قاعدة بيانات إسمها
+DROP DATABASE IF EXISTS harmash;
+
+-- harmash هنا قمنا بإنشاء قاعدة بيانات جديدة إسمها
+CREATE DATABASE harmash;
+
+-- harmash هنا قمنا بتحديد أن أي إستعلام جديد سيتم تنفيذه على قاعدة البيانات
+USE harmash;
+
+-- يتألف من 4 أعمدة users هنا قمنا بإنشاء جدول جديد إسمه
+-- لأننا قمنا بتحديدها قبل إستدعاء هذا الأمر harmash سيتم إنشاء هذا الجدول بداخل قاعدة البيانات
+CREATE TABLE users (
+    id         INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50),
+    last_name  VARCHAR(50),
+    country    VARCHAR(50)
+);
+
+-- هنا قمنا بإضافة 10 أسطر في الجدول, أي أضفنا معلومات 10 مستخدمين
+-- لاحظ أننا لم نحدد أسماء الأعمدة التي سنضع فيها البيانات لأننا قمنا بملئ جميع المعلومات
+-- في البداية هو حتى يكون عدد القيم الموضوعة يساوي عدد أعمدة الجدول null سبب وضع الكلمة
+-- ستقوم قاعدة البيانات بوضع رقم تعرفة مختلف لكل سطر null مكان الكلمة
+INSERT INTO users VALUES (null, "Rami", "Masri", "Lebanon");
+INSERT INTO users VALUES (null, "Ahmad", "Naji", "Syria");
+INSERT INTO users VALUES (null, "Hanan", "Mostafa", "KSA");
+INSERT INTO users VALUES (null, "Saly", "Jawhar", "Lebanon");
+INSERT INTO users VALUES (null, "Mhamad", "Harmush", "Lebanon");
+INSERT INTO users VALUES (null, "Hamad", "Akel", "Syria");
+INSERT INTO users VALUES (null, "Abdullah", "Helmi", "Egypt");
+INSERT INTO users VALUES (null, "Rashed", "Masri", "Oman");
+INSERT INTO users VALUES (null, "Majed", "Alali", "Yaman");
+INSERT INTO users VALUES (null, "Rayan", "Kasabi", "KSA");
+		</pre>
+</div>
+<br/>
+<p>بعد تنفيذ الإستعلام السابق في <span class="word">phpMyAdmin</span> سيتم إنشاء قاعدة البيانات <code>harmash</code> و إنشاء الجدول <code>users</code> بداخلها.<br/>
+	قم بالنقر على إسم قاعدة البيانات <code>harmash</code> من القائمة اليسرى حتى تبدأ بالتعامل معها و تطبيق ما ستتعلمه في هذا الدرس.</p>
+<br/>
+<p>البيانات التي قمنا بإضافتها بشكل إفتراضي في الجدول <span class="inline"><code>users</code>.</span></p>
+<div class="responsive-table" style="max-width: 400px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th> <th>country</th>
+</tr>
+<tr>
+<td>1</td> <td>Rami</td> <td>Masri</td> <td>Lebanon</td>
+</tr>
+<tr>
+<td>2</td> <td>Ahmad</td> <td>Naji</td> <td>Syria</td>
+</tr>
+<tr>
+<td>3</td> <td>Hanan</td> <td>Mostafa</td> <td>KSA</td>
+</tr>
+<tr>
+<td>4</td> <td>Saly</td> <td>Jawhar</td> <td>Lebanon</td>
+</tr>
+<tr>
+<td>5</td> <td>Mhamad</td> <td>Harmush</td> <td>Lebanon</td>
+</tr>
+<tr>
+<td>6</td> <td>Hamad</td> <td>Akel</td> <td>Syria</td>
+</tr>
+<tr>
+<td>7</td> <td>Abdullah</td> <td>Helmi</td> <td>Egypt</td>
+</tr>
+<tr>
+<td>8</td> <td>Rashed</td> <td>Masri</td> <td>Oman</td>
+</tr>
+<tr>
+<td>9</td> <td>Majed</td> <td>Alali</td> <td>Yaman</td>
+</tr>
+<tr>
+<td>10</td> <td>Rayan</td> <td>Kasabi</td> <td>KSA</td>
+</tr>
+</table>
+</div>
+</article>
+<article>
+<h2>أمثلة شاملة على كتابة الأنماط</h2>
+<br/>
+<h3>المثال الأول</h3>
+<p>الإستعلام التالي يجلب جميع الأسطر التي فيها الحقل <code>first_name</code> يبدأ بحرف <span class="inline"><code>A</code>.</span></p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM users             -- users هنا قمنا بعرض بيانات جميع الأسطر الموجودة في الجدول
+WHERE first_name LIKE 'A%';     -- A يبدأ بالحرف first_name التي فيها الحقل
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 400px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th> <th>country</th>
+</tr>
+<tr>
+<td>2</td> <td>Ahmad</td> <td>Naji</td> <td>Syria</td>
+</tr>
+<tr>
+<td>7</td> <td>Abdullah</td> <td>Helmi</td> <td>Egypt</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>الإستعلام التالي يجلب جميع الأسطر التي فيها الحقل <code>first_name</code> ينتهي الحرفين <span class="inline"><code>ad</code>.</span></p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM users             -- users هنا قمنا بعرض بيانات جميع الأسطر الموجودة في الجدول
+WHERE first_name LIKE '%ad';    -- ad ينتهي بالحرفين first_name التي فيها الحقل
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 400px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th> <th>country</th>
+</tr>
+<tr>
+<td>2</td> <td>Ahmad</td> <td>Naji</td> <td>Syria</td>
+</tr>
+<tr>
+<td>5</td> <td>Mhamad</td> <td>Harmush</td> <td>Lebanon</td>
+</tr>
+<tr>
+<td>6</td> <td>Hamad</td> <td>Akel</td> <td>Syria</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الثالث</h3>
+<p>الإستعلام التالي يجلب جميع الأسطر التي فيها الحقل <code>first_name</code> يبدأ بحرف <code>M</code> و ينتهي بحرف <span class="inline"><code>D</code>.</span></p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM users              -- users هنا قمنا بعرض بيانات جميع الأسطر الموجودة في الجدول
+WHERE first_name LIKE 'M%D';     -- D و ينتهي بالحرف M يبدأ بالحرف first_name التي فيها الحقل
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 400px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th> <th>country</th>
+</tr>
+<tr>
+<td>5</td> <td>Mhamad</td> <td>Harmush</td> <td>Lebanon</td>
+</tr>
+<tr>
+<td>9</td> <td>Majed</td> <td>Alali</td> <td>Yaman</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الرابع</h3>
+<p>الإستعلام التالي يجلب جميع الأسطر التي فيها الحقل <code>first_name</code> يتضمن الحرفين <code>am</code> و لا يهم إن كانا موجودين في البداية أو في الوسط أو في النهاية.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM users               -- users هنا قمنا بعرض بيانات جميع الأسطر الموجودة في الجدول
+WHERE first_name LIKE '%am%';     -- و لا يهم إن كانا موجودين في البداية أو في الوسط أو في النهاية am يتضمن الحرفين first_name التي فيها الحقل
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 400px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th> <th>country</th>
+</tr>
+<tr>
+<td>1</td> <td>Rami</td> <td>Masri</td> <td>Lebanon</td>
+</tr>
+<tr>
+<td>5</td> <td>Mhamad</td> <td>Harmush</td> <td>Lebanon</td>
+</tr>
+<tr>
+<td>6</td> <td>Hamad</td> <td>Akel</td> <td>Syria</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الخامس</h3>
+<p>الإستعلام التالي يجلب جميع الأسطر التي فيها الحقل <code>first_name</code> يبدأ بحرف <code>A</code> أو <span class="inline"><code>R</code>.</span></p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM users                                      -- users هنا قمنا بعرض بيانات جميع الأسطر الموجودة في الجدول
+WHERE (first_name LIKE 'A%' OR first_name LIKE 'R%');    -- R أو الحرف A يبدأ بالحرف first_name التي فيها الحقل
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 400px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th> <th>country</th>
+</tr>
+<tr>
+<td>1</td> <td>Rami</td> <td>Masri</td> <td>Lebanon</td>
+</tr>
+<tr>
+<td>2</td> <td>Ahmad</td> <td>Naji</td> <td>Syria</td>
+</tr>
+<tr>
+<td>7</td> <td>Abdullah</td> <td>Helmi</td> <td>Egypt</td>
+</tr>
+<tr>
+<td>8</td> <td>Rashed</td> <td>Masri</td> <td>Oman</td>
+</tr>
+<tr>
+<td>10</td> <td>Rayan</td> <td>Kasabi</td> <td>KSA</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال السادس</h3>
+<p>الإستعلام التالي يجلب جميع الأسطر التي فيها الحقل <code>first_name</code> لا يبدأ بالحرف <span class="inline"><code>A</code>.</span></p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM users                -- users هنا قمنا بعرض بيانات جميع الأسطر الموجودة في الجدول
+WHERE first_name NOT LIKE 'A%';    -- A لا يبدأ بالحرف first_name التي فيها الحقل
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 400px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th> <th>country</th>
+</tr>
+<tr>
+<td>1</td> <td>Rami</td> <td>Masri</td> <td>Lebanon</td>
+</tr>
+<tr>
+<td>3</td> <td>Hanan</td> <td>Mostafa</td> <td>KSA</td>
+</tr>
+<tr>
+<td>4</td> <td>Saly</td> <td>Jawhar</td> <td>Lebanon</td>
+</tr>
+<tr>
+<td>5</td> <td>Mhamad</td> <td>Harmush</td> <td>Lebanon</td>
+</tr>
+<tr>
+<td>6</td> <td>Hamad</td> <td>Akel</td> <td>Syria</td>
+</tr>
+<tr>
+<td>8</td> <td>Rashed</td> <td>Masri</td> <td>Oman</td>
+</tr>
+<tr>
+<td>9</td> <td>Majed</td> <td>Alali</td> <td>Yaman</td>
+</tr>
+<tr>
+<td>10</td> <td>Rayan</td> <td>Kasabi</td> <td>KSA</td>
+</tr>
+</table>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

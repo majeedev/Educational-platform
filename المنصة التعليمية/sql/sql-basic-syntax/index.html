@@ -1,0 +1,321 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>أسلوب كتابة الكود في SQL | SQL Basic Syntax</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../database-icon.png"/></li>
+<li class="title">كيف أبدأ بالتعلم</li>
+<li><a href="../sql-overview/index.html"><span class="en">SQL</span> - نظرة عامة</a></li>
+<li><a href="../sql-environment-setup/index.html"><span class="en">SQL</span> - تجهيز بيئة العمل</a></li>
+<li><a href="index.html"><span class="en">SQL</span> - أسلوب كتابة الأوامر</a></li>
+<li><a href="../sql-comments/index.html"><span class="en">SQL</span> - التعليقات</a></li>
+<li><a href="../sql-write-first-query/index.html"><span class="en">SQL</span> - كتابة أول إستعلام</a></li>
+<li><a href="../sql-refresh-databases-panel/index.html"><span class="en">SQL</span> - تحديث قائمة قواعد البيانات</a></li>
+<li><a href="../sql-databases-structure-in-general/index.html"><span class="en">SQL</span> - مفاهيم و مصطلحات مهمة</a></li>
+<li class="title">أوامر و دوال SQL</li>
+<li><a href="../sql-create-database/index.html"><span class="en">SQL</span> - أمر إنشاء قاعدة بيانات</a></li>
+<li><a href="../sql-drop-database/index.html"><span class="en">SQL</span> - أمر حذف قاعدة بيانات</a></li>
+<li><a href="../sql-data-types/index.html"><span class="en">SQL</span> - أهم أنواع البيانات</a></li>
+<li><a href="../sql-create-table/index.html"><span class="en">SQL</span> - أمر إنشاء جدول</a></li>
+<li><a href="../sql-drop-table/index.html"><span class="en">SQL</span> - أمر حذف جدول</a></li>
+<li><a href="../sql-use/index.html"><span class="en">SQL</span> - أمر تحديد قاعدة البيانات</a></li>
+<li><a href="../sql-insert-into/index.html"><span class="en">SQL</span> - أمر إضافة سطر في الجدول</a></li>
+<li><a href="../sql-auto-increment/index.html"><span class="en">SQL</span> - الترقيم التلقائي للأسطر</a></li>
+<li><a href="../sql-select/index.html"><span class="en">SQL</span> - أمر جلب بيانات من الجدول</a></li>
+<li><a href="../sql-select-with-concat/index.html"><span class="en">SQL</span> - دمج الأعمدة عند جلبها</a></li>
+<li><a href="../sql-select-repeat-columns-name/index.html"><span class="en">SQL</span> - تكرار إسم الأعمدة في الإستعلام</a></li>
+<li><a href="../sql-select-with-where/index.html"><span class="en">SQL</span> - جلب البيانات ضمن شروط</a></li>
+<li><a href="../sql-select-with-order/index.html"><span class="en">SQL</span> - جلب البيانات مع ترتيبها</a></li>
+<li><a href="../sql-select-distinct/index.html"><span class="en">SQL</span> - جلب بيانات خالية من التكرار</a></li>
+<li><a href="../sql-union/index.html"><span class="en">SQL</span> - دمج الجداول في جدول واحد</a></li>
+<li><a href="../sql-delete/index.html"><span class="en">SQL</span> - أمر حذف بيانات من الجدول</a></li>
+<li><a href="../sql-update/index.html"><span class="en">SQL</span> - أمر تحديث بيانات الجدول</a></li>
+<li><a href="../sql-select-with-limit/index.html"><span class="en">SQL</span> - تحديد عدد الأسطر التي سترجع</a></li>
+<li><a href="../sql-null-values/index.html"><span class="en">SQL</span> - التعامل مع الحقول الفارغة</a></li>
+<li><a href="../sql-min/index.html"><span class="en">SQL</span> - جلب أصغر قيمة في العامود</a></li>
+<li><a href="../sql-max/index.html"><span class="en">SQL</span> - جلب أكبر قيمة في العامود</a></li>
+<li><a href="../sql-count/index.html"><span class="en">SQL</span> - حساب عدد أسطر الجدول</a></li>
+<li><a href="../sql-sum/index.html"><span class="en">SQL</span> - حساب ناتج جمع قيم العامود</a></li>
+<li><a href="../sql-avg/index.html"><span class="en">SQL</span> - حساب متوسط قيم العامود</a></li>
+<li><a href="../sql-select-with-group-by/index.html"><span class="en">SQL</span> - تجميع قيم الحقول المشتركة</a></li>
+<li><a href="../sql-select-with-having/index.html"><span class="en">SQL</span> - شروط على الحقول المجمعة</a></li>
+<li><a href="../sql-insert-into-select/index.html"><span class="en">SQL</span> - نسخ البيانات في جدول آخر</a></li>
+<li><a href="../sql-case/index.html"><span class="en">SQL</span> - وضع قيمة إفتراضية لكل حالة</a></li>
+<li><a href="../sql-unique/index.html"><span class="en">SQL</span> - تخزين قيم موحدة في العامود</a></li>
+<li class="title">العلاقات بين الجداول</li>
+<li><a href="../sql-how-to-relate-tables/index.html"><span class="en">SQL</span> - كيف يتم ربط الجداول</a></li>
+<li><a href="../sql-relationships-types/index.html"><span class="en">SQL</span> - أنواع العلاقات بين الجدوال</a></li>
+<li><a href="../sql-joins/index.html"><span class="en">SQL</span> - طرق ربط معلومات الجداول</a></li>
+<li><a href="../sql-alias-for-tables/index.html"><span class="en">SQL</span> - وضع أسماء مختصرة للجداول</a></li>
+<li><a href="../sql-self-join/index.html"><span class="en">SQL</span> - ربط المعلومات في نفس الجدول</a></li>
+<li class="title">معلومات متقدمة</li>
+<li><a href="../sql-alter/index.html"><span class="en">SQL</span> - تعديل بنية الجدول بعد إنشائه</a></li>
+<li><a href="../sql-default/index.html"><span class="en">SQL</span> - وضع قيم إفتراضية للحقول</a></li>
+<li><a href="../sql-primary-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح رئيسي</a></li>
+<li><a href="../sql-foreign-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح أجنبي</a></li>
+<li><a href="../sql-check/index.html"><span class="en">SQL</span> - وضع شروط لتخزين القيم</a></li>
+<li><a href="../sql-transactions/index.html"><span class="en">SQL</span> - تنفيذ كل الأوامر أو إلغاءها كلها</a></li>
+<li><a href="../sql-indexes/index.html"><span class="en">SQL</span> - الفهارس و أنواعها</a></li>
+<li><a href="../sql-like/index.html"><span class="en">SQL</span> - البحث في الأعمدة النصية</a></li>
+<li><a href="../sql-sub-queries/index.html"><span class="en">SQL</span> - كتابة إستعلامات متداخلة</a></li>
+<li><a href="../sql-connect-to-database/index.html"><span class="en">SQL</span> - الإتصال بقاعدة البيانات عن بعد</a></li>
+<li class="title">بناء قواعد بيانات لمشاريع</li>
+<li><a href="../sql-building-database-from-scratch/index.html"><span class="en">SQL</span> - تصميم قاعدة بيانات من الصفر</a></li>
+<li><a href="../sql-download-ready-made-database/index.html"><span class="en">SQL</span> - تحميل قواعد بيانات جاهزة</a></li>
+<!--
+<li><a href="../sql-backup-database"><span class="en">SQL</span> - إنشاء نسخة من قاعدة البيانات</a></li>
+<li><a href="../sql-stored-procedures"><span class="en">SQL</span> - تعريف دوال و استدعائها</a></li>
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">SQL</span>أسلوب كتابة الأوامر</h1>
+<article>
+<h2>مبادئ كتابة الكود في <span class="word">SQL</span></h2>
+<p>في البداية عليك معرفة أن كل ما ستتعلمه في هذا الدرس عبارة عن شرح نظري لأساليب كتابة الكود.<br/>
+	إذاَ في هذا الدرس ستتعلم كيف تكتب كود <span class="word">SQL</span> بشكل صحيح يفهمه الكمبيوتر و يفهمه أي شخص يحاول قراءة الكود الذي ستقوم أنت بكتابته مستقبلاً عند بناء قواعد بيانات.</p>
+<p>قبل البدء بذكر أساليب الكتابة نود الإشارة إلى أن ما سنذكره قد لا يكون إتباعه إجبارياً دائماً أو أنك لست مجبر على اتباعه في كل الحالات, و لكن إذا أردت العمل باحترافية و بدقة عالية فكن دائماً دقيق و منظم في الكتابة و اعتمد الأسلوب الذي ستتعلمه في هذا الدرس لأنه سيسهل عليك كتابة الأوامر بشكل كبير.</p>
+</article>
+<article>
+<h2>كيفية التفرقة بين أوامر <span class="word">SQL</span> و الكلمات العادية</h2>
+<p>أي كلمة تكتبها في الإستعلام ستكون إما كلمة من أوامر <span class="word">SQL</span> و إما كلمة ترمز لشيء أنت نفسك قمت بتعريفه في قاعدة البيانات.</p>
+<p>أوامر <span class="word">SQL</span> أكتبها دائماً بأحرف كبيرة لأن ذلك سيجعلك تفرّق بسهولة بين أوامر <span class="word">SQL</span> و الكلمات الأخرى المكتوبة في نص الإستعلام.</p>
+<p>الأشياء التي قمت أنت بتعريفها و إعطاءها أسماءها; مثل إسم قاعدة البيانات, إسم جدول في قاعدة البيانات, إسم حقل في الجدول, إسم دالة قمت بتعريفها إلخ..<br/>
+	عند كتابة إستعلامات للتعامل مع الأشياء التي قمت أنت بتعريفها, يجب أن تكتب أسماء الأشياء التي قمت بتعريفها تماماً كما قمت بتعريفها في الأساس.<br/>
+	فمثلاً إذا قمت بتعريف قاعدة بيانات إسمها <code>harmash</code> فيجب أن تتعامل معها بإسم <code>harmash</code> و ليس بإسم <code>Harmash</code> حتى لو كان هذا الأمر لا يسبب أي مشكلة.</p>
+<p>في الأمثلة التالية لا تركز بمعنى الكود لأننا سنشرحه لك بتفصيل في دروس لاحقة, ركز فقط بالشكل الذي كتبنا فيه الكود.</p>
+<br/><br/>
+<h3>المثال الأول</h3>
+<p>الكود التالي عبارة عن إستعلام <span class="inline">( <span class="word">Query</span> )</span> يحتوي على أمر واحد فقط.<br/>
+	الكلمات التي تظهر باللون الأزرق هي كلمات خاصة بلغة <span class="word">SQL</span> لهذا كتبناها بأحرف كبيرة.<br/>
+	الكلمة <code>users</code> تمثل إسم جدول إفترضنا أننا قمنا بتعريف إسمه بهذا بأحرف صغيرة لهذا قمنا بكتابته في الإستعلام بهذا الشكل أيضاً.</p>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+SELECT * FROM users;
+	</pre>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>في حال قمت بكتابة أوامر <span class="word">SQL</span> بأحرف صغيرة فإن ذلك لا يسبب أي مشكلة.<br/>
+<span class="note">ملاحظة:</span> كتابة الكود هكذا لا تسبب مشكلة و لكن ينصح بعدم إتباع هذه الأسلوب لأنه يفضل أن تكتب أوامر <span class="word">SQL</span> بأحرف كبيرة.</p>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+select * from users;
+	</pre>
+<br/><br/>
+<h3>المثال الثالث</h3>
+<p>في حال قمت بكتابة أوامر <span class="word">SQL</span> بأحرف صغيرة و كبيرة في نفس الوقت فإن ذلك لا يسبب أي مشكلة.<br/>
+<span class="note">ملاحظة:</span> كتابة الكود هكذا لا تسبب مشكلة و لكن ينصح بعدم إتباع هذه الأسلوب إطلاقاً لأنه الأسلوب الأسوء على الإطلاق و لا أحد يستخدمه.</p>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+Select * From users;
+	</pre>
+<br/><br/>
+<h3>المثال الرابع</h3>
+<p>في حال كانت الأشياء التي قمت بتعريفها مكتوبة بغير الطريقة التي كتبتها بها فإن ذلك على الأغلب سيؤدي لظهور أخطاء في الإستعلام.<br/>
+	هنا افترضنا أن أوامر <span class="word">SQL</span> مكتوبة بأفضل أسلوب و لكن المشكلة هي في الكلمات الأخرى الموضوعة في الإستعلام و نقصد كلمة <span class="inline"><code>Users</code>.</span><br/>
+	في حال كان الجدول الذي تحاول أن تتعامل معه إسمه <code>users</code> بالأساس و لكنك في الإستعلام كتبت <code>Users</code> فإنه يوجد إحتمال كبير أن يظهر لك خطأ في الإستعلام.</p>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+SELECT * FROM Users;
+	</pre>
+</article>
+<article>
+<h2>هل وضع فاصلة منقوطة <code>;</code> ضروري في نهاية أوامر <span class="word">SQL</span>؟</h2>
+<p>هناك حالات تضطر لوضعها فيها و هناك حالات يكون لك الحرية في وضعها أو عدم وضعها كالتالي:</p>
+<ul class="explain">
+<li><p>إذا كنت تكتب أمر <span class="word">SQL</span> واحد و تريد تنفيذه, في هذه الحالة لا داعي لها.</p></li>
+<li><p>في حال قمت بتجهيز أكثر من أمر <span class="word">SQL</span> و تريد تنفيذهم الواحد تلو الآخر, في هذه الحالة أنت مجبر على وضع فاصلة منقوطة في نهاية كل أمر لأنك بذلك تحدد لخادم قاعدة البيانات <span class="inline">( <span class="word">MySQL</span> )</span> أين يبدأ و ينتهي كل أمر.</p></li>
+<li><p>هناك أوامر لا تطلّب وضع فاصلة منقوطة في نهايتها مثل الأمر <code data-enlighter-language="sql">USE</code> حتى لو كنت تنوي تنفيذ عدة أوامر بعده.</p></li>
+</ul>
+<br/>
+<p>ننصحك دائماً بأن تضع فاصلة منقوطة في نهاية كل أمر تكتبه حتى تتجنب الوقوع في مشاكل تداخل الأوامر بسبب نسيان وضع الفاصلة المنقوطة.<br/>
+	في هذه الدورة سنضع فاصلة منقوطة في نهاية كل أمر.</p>
+<p>إنتبه من جديد, قلنا أننا سنضع فاصلة منقوطة في نهاية كل أمر و ليس في نهاية كل سطر, حيث أن الأمر في <span class="word">SQL</span> يمكن كتابته على سطر واحد أو على عدة أسطر.<br/>
+	إذاً سواء كتبت الأمر على سطر واحد أو على عدة أسطر فذلك لا يؤثر إطلاقاً كما وضحنا في الأمثلة التالية.</p>
+<br/><br/>
+<h3>المثال الأول</h3>
+<p>في المثال التالي وضعنا أمر واحد و كتبناه على سطر واحد.</p>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+SELECT id, phone, email FROM users;
+	</pre>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>في المثال التالي وضعنا نفس الأمر و لكننا كتبناه على سطرين.</p>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+SELECT id, phone, email
+FROM users;
+	</pre>
+<br/><br/>
+<h3>المثال الثالث</h3>
+<p>في المثال التالي وضعنا نفس الأمر و لكننا كتبناه على أربعة أسطر.</p>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+SELECT
+	id, phone, email
+FROM
+	users;
+	</pre>
+<br/>
+<p>في النهاية, أكتب دائماً الكود بالطريقة التي ترتاح أنت فيها و التي تجد أنها أنسب لما تفعله.<br/>
+	فمثلاً إذا كان الإستعلام صغير, فكتابته على سطر واحد لا مشكلة بها. أما إن كان الإستعلام معقد و كبير فستجد أن تقسيمه على عدة أسطر أفضل لك بكثير.</p>
+</article>
+<article>
+<h2>الكلمات المحجوزة في <span class="word">SQL</span></h2>
+<p>جميع الكلمات التالية تستخدم في كتابة أوامر <span class="word"><span class="word">SQL</span>,</span> و يفضّل عدم إستخدامها كأسماء للجداول, الحقول أو الدوال التي نعرّفها في قواعد البيانات.</p>
+<div class="blue" style="width:100%; text-align:left; background-color:#FFF; padding:20px 0px; font-family:monospace; line-height:25px;">
+<div style="width:80px; margin-left:60px; float:left">ADD<br/>ALTER<br/>ALL<br/>AND<br/>ANY<br/>ASC<br/>AUTO_INCREMENT<br/>BACKUP</div>
+<div style="width:80px; margin-left:60px; float:left">BETWEEN<br/>CASE<br/>CHECK<br/>COLUMN<br/>CONSTRAINT<br/>CREATE<br/>DATABASE<br/>DEFAULT</div>
+<div style="width:80px; margin-left:60px; float:left">DELETE<br/>DISTINCT<br/>DROP<br/>DEFAULT<br/>EXEC<br/>EXISTS<br/>FOREIGN<br/>FROM</div>
+<div style="width:80px; margin-left:60px; float:left">FULL<br/>HAVING<br/>INDEX<br/>INNER<br/>INSERT<br/>INTO<br/>IS<br/>JOIN</div>
+<div style="width:80px; margin-left:60px; float:left">KEY<br/>LEFT<br/>LIKE<br/>LIMIT<br/>NOT<br/>NULL<br/>OR<br/>ORDER</div>
+<div style="width:80px; margin-left:60px; float:left">OUTER<br/>REPLACE<br/>RIGHT<br/>ROWNUM<br/>SELTECT<br/>SET<br/>TABLE<br/>TRUNCATE</div>
+<div style="width:80px; margin-left:60px; float:left">TOP<br/>UNIQUE<br/>UNION<br/>VALUES<br/>VIEW<br/>PRIMARY<br/>PROCEDURE<br/>WHERE</div>
+<div style="clear:both;"></div>
+</div>
+<br/>
+<p>بشكل عام هذه الكلمات هي نفسها في كل قواعد البيانات و تستخدم بنفس الطريقة و نود الإشارة إلى أن لكل قاعدة بيانات قد يكون هناك بعض الكلمات الإضافية الخاصة بها و لكن هذه الكلمات تعتبر الأساس و الأكثر استخداماً.</p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

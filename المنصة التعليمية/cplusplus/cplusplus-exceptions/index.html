@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس ستتعلم كيف تعالج الأخطاء البرمجية و بالتالي ستتعلم كيف تجعل برنامجك محمي من المشاكل التي قد تحدث أثناء تشغليه و تؤدي لتعليقه" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>معالجة الأخطاء في سي بلاس بلاس | C++ Exceptions</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../cplusplus-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../cplusplus-overview/index.html"><span class="en">++C</span> - نظرة عامة</a></li>
+<li><a href="../cplusplus-environment-setup/index.html"><span class="en">++C</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../cplusplus-basic-syntax/index.html"><span class="en">++C</span> - أسلوب الكتابة</a></li>
+<li><a href="../cplusplus-cout/index.html"><span class="en">++C</span> - أمر الطباعة   &lt;&lt; cout</a></li>
+<li><a href="../cplusplus-data-types/index.html"><span class="en">++C</span> - أنواع البيانات</a></li>
+<li><a href="../cplusplus-variables/index.html"><span class="en">++C</span> - المتغيرات</a></li>
+<li><a href="../cplusplus-operators/index.html"><span class="en">++C</span> - العوامل</a></li>
+<li><a href="../cplusplus-conditions/index.html"><span class="en">++C</span> - الشروط</a></li>
+<li><a href="../cplusplus-loops/index.html"><span class="en">++C</span> - الحلقات</a></li>
+<li><a href="../cplusplus-numbers/index.html"><span class="en">++C</span> - الأعداد</a></li>
+<li><a href="../cplusplus-strings/index.html"><span class="en">++C</span> - النصوص</a></li>
+<li><a href="../cplusplus-arrays/index.html"><span class="en">++C</span> - المصفوفات</a></li>
+<li><a href="../cplusplus-user-input/index.html"><span class="en">++C</span> - إدخال البيانات</a></li>
+<li><a href="../cplusplus-functions/index.html"><span class="en">++C</span> - الدوال</a></li>
+<li><a href="../cplusplus-references/index.html"><span class="en">++C</span> - المراجع</a></li>
+<li><a href="../cplusplus-pointers/index.html"><span class="en">++C</span> - المؤشرات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../cplusplus-oop/index.html"><span class="en">++C</span> - مفهوم البرمجة كائنية التوجه</a></li>
+<li><a href="../cplusplus-struct/index.html"><span class="en">++C</span> - النوع <span class="en">struct</span></a></li>
+<li><a href="../cplusplus-class/index.html"><span class="en">++C</span> - النوع <span class="en">class</span></a></li>
+<li><a href="../cplusplus-encapsulation/index.html"><span class="en">++Encapsulation - C</span></a></li>
+<li><a href="../cplusplus-inheritance/index.html"><span class="en">++Inheritance - C</span></a></li>
+<li><a href="../cplusplus-overriding/index.html"><span class="en">++Overriding - C</span></a></li>
+<li><a href="../cplusplus-overloading/index.html"><span class="en">++Overloading - C</span></a></li>
+<li><a href="../cplusplus-polymorphism/index.html"><span class="en">++Polymorphism - C</span></a></li>
+<li><a href="../cplusplus-constants/index.html"><span class="en">++C</span> - الثوابت</a></li>
+<li><a href="../cplusplus-enum/index.html"><span class="en">++C</span> - النوع <span class="en">enum</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="index.html"><span class="en">++C</span> - الإستثناءات</a></li>
+<!--
+
+<li><a href="../cplusplus-lambda-expressions"><span class="en">Lambda Expressions - ++C</span></a></li>
+<li><a href="../cplusplus-files-io"><span class="en">++C</span> - التعامل مع الملفات</a></li>
+<li><a href="../cplusplus-data-structure"><span class="en">Data Structure - ++C</span></a></li>
+<li><a href="../cplusplus-collection"><span class="en">Collection - ++C</span></a></li>
+<li><a href="../cplusplus-generics"><span class="en">Generics - ++C</span></a></li>
+<li><a href="../cplusplus-networking"><span class="en">++C</span> - الشبكات</a></li>
+<li><a href="../cplusplus-multithreading"><span class="en">++C</span> - تعدد المهام</a></li>
+<li><a href="../cplusplus-jdbc"><span class="en">++C</span> - قواعد البيانات</a></li>
+<li><a href="../cplusplus-serialization"><span class="en">++C</span> - المزامنة</a></li>
+
+
+<li><a href="../cplusplus-date-and-time"><span class="en">++C</span> - التاريخ و الوقت</a></li>
+<li><a href="../cplusplus-regular-expressions"><span class="en">++C</span> - التعابير النمطية</a></li>
+
+<li><a href="../cplusplus-next-step"><span class="en">++C</span> - ما هي خطوتي التالية ؟</a></li>
+-->
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">C++</span>معالجة الأخطاء</h1>
+<article>
+<h2>مفهوم معالجة الأخطاء في <span class="word">C++</span></h2>
+<p>معالجة الأخطاء <span class="inline">( <span class="word">Exceptions Handling</span> )</span> يقصد منها كتابة الكود الذي قد يسبب أي مشكلة في البرنامج بطريقة تضمن أنه إذا حدث الخطأ المتوقع أو أي خطأ آخر فإن البرنامج لن يعلّق أو يتم إغلاقه بشكل فجائي.</p>
+<p>ظهور خطأ في البرنامج بشكل مفاجئ هو أمر سيئ جداً لأنه يؤدي إلى نفور عدد كبير من المستخدمين و عدم رغبتهم في العودة إلى استخدام هذا البرنامج مجدداً.</p>
+<br/>
+<h3>أنواع الأخطاء</h3>
+<ul class="explain">
+<li><p>أخطاء لغوية <span class="inline">( <span class="word">Syntax Errors</span> )</span> و يقصد بها أن تخالف مبادئ اللغة مثل أن تعرّف شيء بطريقة خاطئة أو تنسى وضع فاصلة منقوطة.</p></li>
+<li><p>أخطاء تحدث أثناء تشغيل البرنامج يقال لها إستثناءات <span class="inline">( <span class="word">Exceptions</span> )</span> مما يؤدي إلى تعليقه و إيقافه بشكل غير طبيعي.</p></li>
+<li><p>أخطاء منطقية <span class="inline">( <span class="word">Logical Errors</span> )</span> و يقصد منها أن الكود يعمل بدون أي مشاكل و لكن نتيجة تشغيل هذا الكود غير صحيحة.</p></li>
+</ul>
+<p>إذاً, أي خطأ برمجي يحدث معك أثناء تشغيل البرنامج يقال له إستثناء <span class="inline">( <span class="word">Exception</span> )</span> حتى إن كان إسم الخطأ يحتوي على كلمة <span class="inline"><code data-enlighter-language="cpp">Error</code>.</span><br/>
+	بمعنى آخر, أي <span class="word">Error</span> يظهر لك أثناء تشغيل البرنامج يعتبر <span class="inline"><span class="word">Exception</span>.</span></p>
+<p>في هذا الدرس ستتعلم كيف تتجنب حدوث أخطاء في البرامج التي تكتبها, و فعلياً ستتعلم كيف تجهز البرنامج للتعامل مع الأخطاء التي قد تحدث أثناء تشغيله لجعل البرنامج شغال دائماً في نظر المستخدم و لا يظهر له أي أخطاء.</p>
+<br/><br/>
+<h3>بعض الأسباب التي تسبب حدوث إستثناء</h3>
+<ul class="explain">
+<li><p>في حال كان البرنامج يتصل بالشبكة و فجأةً إنقطع الإتصال.</p></li>
+<li><p>في حال كان البرنامج يحاول قراءة معلومات من ملف نصي, و كان هذا الملف غير موجود.</p></li>
+<li><p>في حال كان البرنامج يحاول إنشاء أو حذف ملف و لكنه لا يملك صلاحية لفعل ذلك.</p></li>
+</ul>
+<br/><br/>
+<h3>معلومة تقنية</h3>
+<p>في حال كان الكود الذي كتبته يحتوي على أخطاء لغوية <span class="inline">( <span class="word">Syntax Errors</span> )</span> لا بد من أن تصلحها كلها حتى يستطيع المترجم تحويل الكود الذي كتبته لكود يفهمه الحاسوب و من ثم ينفذه لك. أي لا يمكنك حماية البرنامج من موجودة في الكود نفسه بل يمكنك حمايته من المشاكل التي قد تحدث وقت عمل هذه الكود.</p>
+<br/>
+<p>في هذا الدرس ستتعلم كيف أن المكتبات الجاهزة التي قد تستخدمها مستقبلاً في مشاريعك يتم جعلها تظهر أخطاء إذا لم تستخدمها كما يجب.<br/>
+	معرفة هذا الأمر مهمة جداً لك أيضاً, لأنك ستتمكن من مشاركة الكود الذي تقوم بإعداده مع مبرمجين آخرين و إظهار أخطاء فيه إن لم يقوموا باستخدامه بشكل صحيح.</p>
+</article>
+<article>
+<h2>أمثلة على أنواع الأخطاء في <span class="word">C++</span></h2>
+<p>في المثال التالي لم نضع فاصلة منقوطة في آخر الأمر <code data-enlighter-language="cpp">cout</code> مما سيؤدي لحدوث مشكلة عندما يحاول المترجم تشغيل البرنامج.<br/>
+	إذاً الكود التالي يحتوي على خطأ لغوي <span class="inline">( <span class="word">Syntax Error</span> ).</span><p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    int x = 10;
+
+    cout &lt;&lt; x
+
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سيظهر الخطأ التالي عند التشغيل و الذي يعني أن المترجم يتوقع أن تضع له فاصلة منقوطة في آخر السطر التاسع.</p>
+<div class="code-box">
+<span class="red">main.cpp|9|error: expected ';' before 'return'|</span>
+</div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بإنشاء برنامج يطبع للطالب ما إذا كان ناجحاً أو راسباً بناءاً على معدله النهائي.<br/>
+	من المفترض أنه يتم إعتبار الطالب راسب في حال كان معدله بين <span class="number">0</span> و <span class="inline"><span class="number">9.9</span>,</span> و يتم إعتباره ناجح في حال كان معدله <span class="number">10</span> و <span class="inline"><span class="number">20</span>.</span><br/>
+	هنا تعمدنا وضع خطأ منطقي <span class="inline">( <span class="word">Logical Error</span> )</span> حيث أننا عند طباعة نتيجة الطالب لم نتأكد ما إذا كان المعدل بين <span class="number">0</span> كحد أدنى و <span class="number">20</span> كحد أقصى.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    float average = 25;
+
+    if (average &lt; 10)
+    {
+        cout &lt;&lt; "The student failed the exam";
+    }
+    else if (average &gt;= 10)
+    {
+        cout &lt;&lt; "The student passed the exam";
+    }
+
+    return 0;
+}
+
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل و نلاحظ أنه لا يوجد مشكلة برمجية سببت إيقاف الكود لكننا نعلم أن هناك مشكلة منطقية في الكود لأن المعدل الذي تم على أساسه طباعة جملة النجاح هو معدل مستحيل أن يكون حقيقي.</p>
+<div class="code-box">
+			The student passed the exam
+		</div>
+</div>
+</p></p></article>
+<article>
+<h2>الكلمة <code data-enlighter-language="cpp">throw</code> في <span class="word">C++</span></h2>
+<p>تستخدم هذه الكلمة لرمي إستثناء, أي لإظهار أنه يوجد مشكلة ما في البرنامج.</p>
+<br/>
+<p>في المثال التالي قمنا بإنشاء دالة إسمها <code>divide()</code> عند استدعاءها نمرر لها رقمين فتقوم بإرجاع ناتج قسمة العدد الأول على العدد الثاني.<br/>
+	هنا في حال كان الرقم الثاني الذي تم تمريره للدالة (المقسوم عليه) يساوي صفر سيتم رمي إستثناء عبارة عن نص عادي مفاده بأنه في الرياضيات لا يمكن القسمة على صفر.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// عند استدعاءها نمرر لها عددين فتقوم بإرجاع ناتج قسمة العدد الأول على العدد الثاني divide() هنا قمنا بتعريف دالة إسمها
+double divide(double a, double b)
+{
+	// يساوي 0, سيتم رمي إستثناء b في حال كان العدد الثاني الذي سيتم تمريره للباراميتر
+    if (b == 0)
+    {
+        throw "Math Error, you can't divide by 0";
+    }
+
+	// إذا لم يتم رمي إستثناء سيتم إرجاع ناتج القسمة
+    return a / b;
+}
+
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+	// و تمرير عددين لها و من ثم طباعة ناتج القسمة الذي سترجعه divide() هنا قمنا باستدعاء الدالة
+    cout &lt;&lt; divide(5, 2) &lt;&lt; endl;
+	
+	// و تمرير 0 مكان الباراميتر الثاني مما سيؤدي لرمي إستثناء و توقف البرنامج بشكل كلي divide() هنا قمنا باستدعاء الدالة
+    cout &lt;&lt; divide(5, 0) &lt;&lt; endl;
+	
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<p><span class="point">•</span>لاحظ أنه عرض لك ناتج قسمة أول عددين و الذي هو <code>2.5</code> بنجاح.</p>
+<p><span class="point">•</span>و عندما حاول أن يعرض ناتج ثاني عددين أخبرك أن البرنامج توقف عن العمل بسبب أنه تم رمي إستثناء.</p>
+<pre data-enlighter-linenumbers="false">
+2.5
+terminate called after throwing an instance of 'char const*'
+		</pre>
+<p><span class="point">•</span>بالإضافة لذلك فقد ظهرت نافذة منبثقة تخبرك بأن البرنامج توقف بشكل مفاجئ بسبب حدوث مشكلة فيه.</p>
+<div class="image-box">
+<a href="code-throws-and-exception.png" target="_blank"><img src="code-throws-and-exception.png"/></a>
+</div>
+</div>
+<br/>
+<p>سبب توقف البرنامج عندما قامت الدالة برمي إستثناء هو أننا لم نقم باستدعاء الدالة <code>devide()</code> بشكل محمي رغم أننا نعرف أنها قد تسبب تعليق البرنامج, و نقصد بذلك أننا أي لم نقم باستخدام الجملتين <code data-enlighter-language="cpp">try</code> و <code data-enlighter-language="cpp">catch</code> كما يفترض أن نفعل.</p>
+<p>إذا كنت تتساءل عن سبب عدم ظهور الجملة <code>"Math Error, you can't divide by 0"</code> عندما قامت الدالة برمي الإستثناء, فسبب ذلك أننا لم نقم بمعالجة الإستثناء الذي تم رميه كما يفترض و بالطبع ستتعلم كيف تفعل ذلك بعد قليل.</p>
+</article>
+<article>
+<h2>الجملتين <code data-enlighter-language="cpp">try</code> و <code data-enlighter-language="cpp">catch</code> في <span class="word">C++</span></h2>
+<p>إلتقاط الإستثناء <span class="inline">( <span class="word">Exception Catching</span> )</span> عبارة عن طريقة تسمح لك بحماية البرنامج من أي كود تشك بأنه قد يسبب أي خطأ و لتحقيق هذا الأمر نستخدم الجملتين <code data-enlighter-language="cpp">try</code> و <span class="inline"><code data-enlighter-language="cpp">catch</code>.</span></p>
+<p>بشكل عام, أي كود مشكوك فيه يجب وضعه بداخل حدود الجملة <span class="inline"><code data-enlighter-language="cpp">try</code>.</span><br/>
+	أي مشكلة تحدث في الجملة <code data-enlighter-language="cpp">catch</code> يتم معالجتها في حدود الجملة <code data-enlighter-language="cpp">try</code> الخاصة بها كالتالي.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+try
+{
+    // Protected Code
+    // هنا نكتب الأوامر التي قد تسبب إستثناء
+}
+catch(ExceptionType e)
+{
+    // Error Handling Code
+    // برمي إستثناء try هنا نكتب أوامر تحدد للبرنامج ماذا يفعل إذا قامت الـ
+} 
+	</pre>
+<br/>
+<p>الكود الذي نضعه بداخل الجملة <code data-enlighter-language="cpp">try</code> يسمى <span class="word">Protected Code</span> و هذا يعني أن البرنامج محمي من أي خطأ قد يحدث بسبب هذا الكود.<br/>
+	الكود الذي نضعه بداخل الجملة <code data-enlighter-language="cpp">catch</code> يسمى <span class="word">Error Handling Code</span> و يقصد منها الكود الذي سيعالج الإستثناء الذي قد يتم إلتقاطه.</p>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>عندما تستخدم الجملة <code data-enlighter-language="cpp">try</code> حتى لو لم تضع بداخلها أي كود, فأنت مجبر على وضع الجملة <code data-enlighter-language="cpp">catch</code> بعدها.<br/>
+		كما أنه بإمكانك وضع أكثر من جملة <code data-enlighter-language="cpp">catch</code> في حال كان الكود قد يسبب أكثر من خطأ.</p>
+</div>
+<br/>
+<p>في المثال التالي قمنا بإنشاء دالة إسمها <code>devide()</code> عند استدعاءها نمرر لها رقمين فتقوم بإرجاع ناتج قسمة العدد الأول على العدد الثاني.<br/>
+	هنا في حال كان الرقم الثاني الذي تم تمريره للدالة (المقسوم عليه) يساوي صفر سيتم رمي إستثناء عبارة عن نص عادي مفاده بأنه في الرياضيات لا يمكن القسمة على صفر.</p>
+<p>بما أن الدالة <code>devide()</code> قد تسبب حدوث خطأ عندما يتم استدعاءها قمنا بوضعها بداخل <span class="inline"><code data-enlighter-language="cpp">try</code>/<code data-enlighter-language="cpp">catch</code></span></p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// عند استدعاءها نمرر لها عددين فتقوم بإرجاع ناتج قسمة العدد الأول على العدد الثاني divide() هنا قمنا بتعريف دالة إسمها
+double divide(double a, double b)
+{
+	// يساوي 0, سيتم رمي إستثناء b في حال كان العدد الثاني الذي سيتم تمريره للباراميتر
+    if (b == 0)
+    {
+        throw "Math Error, you can't divide by 0";
+    }
+
+	// إذا لم يتم رمي إستثناء سيتم إرجاع ناتج القسمة
+    return a / b;
+}
+
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+	// و تمرير 0 مكان الباراميتر الثاني مما سيؤدي لرمي إستثناء divide() هنا قمنا باستدعاء الدالة
+	try
+	{
+		cout &lt;&lt; divide(5, 0) &lt;&lt; endl;
+	}
+	// e الإستثناء الذي سيتم رميه سيكون عبارة عن نص (سلسلة من الأحرف) و هذه الأحرف سيتم تمريرها كقيمة للمتغير
+	catch (char const* e)
+	{
+		// e هنا قمنا بطباعة نص الإستثناء الذي تم رميه و تخزينه في المتغير
+		cout &lt;&lt; e &lt;&lt; endl;
+	}
+	
+	// هنا سيتم تنفيذ الأمر التالي بشكل عادي جداً لأن الإستثناء الذي حدث في السابق تم معالجته
+	cout &lt;&lt; "The program is still working properly :)";
+	
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-linenumbers="false">
+Math Error, you can't divide by 0
+The program is still working properly :)
+		</pre>
+</div>
+<br/>
+<h3>معلومة مهمة</h3>
+<p>سبب جعل نوع الباراميتر <code>e</code> يكون <code data-enlighter-language="cpp">char const*</code> بالتحديد هو أننا لاحظنا في المثال السابق أن النص الذي يتم رميه كإستثناء, يكون نوعه كذلك.</p>
+<p><a href="how-to-know-exception-type.png" target="_blank"><img src="how-to-know-exception-type.png"/></a></p>
+</article>
+<article>
+<h2>مفاهيم مهمة حول معالجة الأخطاء في <span class="word">C++</span></h2>
+<br/>
+<h3>المفهوم الأول</h3>
+<p>هنا وضعنا مثال حول كيفية تعريف دالة تفعل <code data-enlighter-language="cpp">throw</code> لأكثر من رقم نوعهم <code data-enlighter-language="cpp">int</code> بالإضافة إلى كيفية إستدعاءها.</p>
+<p><a class="open-page" href="throw-int-values.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المفهوم الثاني</h3>
+<p>هنا وضعنا مثال حول كيفية استخدام الرمز <code data-enlighter-language="cpp">...</code> لحماية الكود من أي إستثناء قد يحدث حتى لو لم نكن نعرف نوع الإستثناء الذي قد يتم رميه.</p>
+<p><a class="open-page" href="catch-ellipsis.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المفهوم الثالث</h3>
+<p>هنا وضعنا مثال حول كيفية وضع أكثر من <code data-enlighter-language="cpp">catch</code> في حال كان الكود قد يسبب إستثناءات من أكثر من نوع.</p>
+<p><a class="open-page" href="multi-catch.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المفهوم الرابع</h3>
+<p>هنا وضعنا مثال حول كيفية تعريف نوع إستثناء جديد و استخدامه.</p>
+<p><a class="open-page" href="user-defined-exceptions.html" target="_blank">شاهد المثال »</a></p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

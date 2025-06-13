@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="شرح تفصيلي لجميع الدوال التي تتعامل مع الأعداد في جافا مع أمثلة مبسطة لكل فكرة" name="description"/>
+<meta content="java numbers, numbers in java, الأعداد في جافا, الأعداد, wrapper class, wrapper classes, ماذا يعني wrapper class, الكلاس Math" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>التعامل مع الأعداد في جافا | Java numbers</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>التعامل مع الأعداد في جافا</h1>
+<article>
+<h2>مفهوم الأعداد في جافا</h2>
+<p><b>أعداد:</b> تعني <span class="word">numbers</span> في اللغة الإنجليزية, و نحن عادةً ما نستخدم أنواع البيانات البدائية <span class="inline">( <span class="word">Primitive Data Types</span> )</span> لتخزين الأعداد.<br/>
+	أي لتعريف متغير بهدف تخزين عدد, نقوم بتعريفه <span class="inline">كـ <code data-enlighter-language="java">int</code></span> أو <code data-enlighter-language="java">float</code> أو <code data-enlighter-language="java">double</code> إلخ..</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+int    a = 10;
+short  b = 50;
+float  c = 10.5f;
+double d = 37.002;
+		</pre>
+</div>
+<br/>
+<p>أحياناً يضطر المبرمج أن يستخدم الكائن للنوع و ليس الشكل البدائي للنوع.<br/>
+	من أجل ذلك, جافا تقدم لنا <span class="inline"><span class="word">wrapper classes</span>.</span></p>
+<br/>
+<p class="question">ما معنى <span class="inline"><span class="word">wrapper classes</span> ؟</span></p>
+<p>كل نوع بيانات بدائي في جافا له كلاس يمثله, و يكون من نفس إسمه, أمثلة:</p>
+<ul class="explain">
+<li><p>النوع <code data-enlighter-language="java">int</code> يمكن تمثيله بالكلاس <span class="inline"><code data-enlighter-language="java">Integer</code>.</span></p></li>
+<li><p>النوع <code data-enlighter-language="java">float</code> يمكن تمثيله بالكلاس <span class="inline"><code data-enlighter-language="java">Float</code>.</span></p></li>
+<li><p>النوع <code data-enlighter-language="java">byte</code> يمكن تمثيله بالكلاس <span class="inline"><code data-enlighter-language="java">Byte</code>.</span></p></li>
+<li><p>النوع <code data-enlighter-language="java">double</code> يمكن تمثيله بالكلاس <span class="inline"><code data-enlighter-language="java">Double</code>.</span></p></li>
+<li><p>النوع <code data-enlighter-language="java">short</code> يمكن تمثيله بالكلاس <span class="inline"><code data-enlighter-language="java">Short</code>.</span></p></li>
+<li><p>النوع <code data-enlighter-language="java">long</code> يمكن تمثيله بالكلاس <span class="inline"><code data-enlighter-language="java">Long</code>.</span></p></li>
+</ul>
+<br/>
+<p>إذاً <span class="inline">الـ <span class="word">wrapper classes</span></span> هم كل الكلاسات التي تمثل أنواع البيانات البدائية.<br/>
+	هذه الصورة تظهر لك جميع الكلاسات التي تمثل الأعداد.</p>
+<p><a href="pic_1.png" target="_blank"><img src="pic_1.png"/></a></p>
+<br/><br/>
+<p class="question">ما هي فائدة <span class="inline">الـ <span class="word">wrapper classes</span> ؟</span></p>
+<p>فكرة <span class="inline">الـ <span class="word">wrapper classes</span></span> جعلنا قادرين على معاملة هذه الأنواع ككائنات و بناء دوال خاصة لهم و لكن المبرمج العادي قد لا يتعامل بتاتاً مع <span class="inline">الـ <span class="word">wrapper classes</span></span> لأنه نادراً ما يحتاج لهم.</p>
+<br/>
+<h3>مصطلحات تقنية</h3>
+<ul class="explain">
+<li><p>عملية تحويل النوع البدائي لكائن من نفس النوع تسمى <span class="inline"><span class="word">boxing</span>.</span></p></li>
+<li><p>عملية إرجاع قيمة الكائن إلى النوع البدائي لهذا الكائن تسمى <span class="inline"><span class="word">unboxing</span>.</span></p></li>
+</ul>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Integer a = 10;     // int و ليس Integer هنا ستكون a لأن نوع القيمة التي خزنها المتغير boxing هذه العملية تسمى
+
+int b = a + 15;     // 15 قبل إضافتها على int لأنه سيتم تحويل قيمته للنوع a بالنسبة للمتغير unboxing هذه العملية تسمى
+		</pre>
+</div>
+<br/>
+<h3>شرح الكود</h3>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">Integer a = 10</code>:<br/>
+		    <code data-enlighter-language="java">a</code> يمثل كائن نوعه <code data-enlighter-language="java">Integer</code> قيمته <span class="number">10.</span></p></li>
+<br/>
+<li><p><code data-enlighter-language="java">int b = a + 15</code>:<br/>
+		    هنا سيتم تحويل قيمة الكائن <code data-enlighter-language="java">a</code> إلى النوع <code data-enlighter-language="java">int</code> ثم إضافة <span class="number">15</span> عليها و تخزين الناتج في المتغير <span class="inline"><code data-enlighter-language="java">b</code>.</span></p></li>
+</ul>
+</article>
+<article>
+<h2>دوال الكلاس <code data-enlighter-language="java">Math</code> في جافا</h2>
+<br/>
+<h3 class="note-title">إنتبه</h3>
+<div class="note-box">
+<p>ستلاحظ أن جميع الدوال المذكورة في الجدول تتعامل مع أعداد نوعها <code data-enlighter-language="java">double</code> و ترجع قيم نوعها <code data-enlighter-language="java">double</code> أيضاً.<br/>
+		السبب في ذلك أن النوع <code data-enlighter-language="java">double</code> يجعلك قادر على تمرير أي عدد سواء كان نوعه <span class="inline"><code data-enlighter-language="java">int</code>,</span> <code data-enlighter-language="java">long</code> أو <code data-enlighter-language="java">float</code> بدون الحاجة إلى تحويله.</p>
+</div>
+<br/>
+<p>الكلاس <code data-enlighter-language="java">Math</code> هو كلاس جاهز في جافا, يحتوي على دوال تتعلق بالرياضيات, ذكرنا بعضها في هذا الجدول.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double abs(double d)</code></span>
+			ترجع القيمة المطلقة للعدد الذي نمرره لها مكان البارامتير <code data-enlighter-language="java">d</code>.<br/>
+<a class="open-page" href="math-abs.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double ceil(double d)</code></span>
+			ترجع العدد الصحيح الأكبر أو الذي يساوي العدد الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="java">d</code>.</span><br/>
+<a class="open-page" href="math-ceil.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double floor(double d)</code></span>
+			ترجع العدد الصحيح الأصغر أو الذي يساوي العدد الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="java">d</code>.</span><br/>
+<a class="open-page" href="math-floor.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double rint(double d)</code></span>
+			ترجع أقرب عدد صحيح للعدد الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="java">d</code>.</span><br/>
+<a class="open-page" href="math-rint.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static long round(double d)</code></span>
+			ترجع أقرب عدد صحيح للعدد الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="java">d</code>.</span><br/>
+<a class="open-page" href="math-round.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double max(double a, double b)</code></span>
+			ترجع العدد الأكبر بين العددين اللذين نمررهما لها مكان الباراميترين <code data-enlighter-language="java">a</code> و <span class="inline"><code data-enlighter-language="java">b</code>.</span><br/>
+<a class="open-page" href="math-max.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double min(double a, double b)</code></span>
+			ترجع العدد الأصغر بين العددين اللذين نمررهما لها مكان الباراميترين <code data-enlighter-language="java">a</code> و <span class="inline"><code data-enlighter-language="java">b</code>.</span><br/>
+<a class="open-page" href="math-min.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double exp(double d)</code></span>
+			ترجع قيمة <span class="inline">الـ <span class="word">exponential</span></span> للعدد الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="java">d</code>.</span><br/>
+<a class="open-page" href="math-exp.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double log(double d)</code></span>
+			ترجع قيمة <span class="inline">الـ <span class="word">logarithm</span></span> للعدد الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="java">d</code>.</span><br/>
+<a class="open-page" href="math-log.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double pow(double a, double b)</code></span>
+			تضاعف قيمة الباراميتر <code data-enlighter-language="java">a</code> بقيمة الباراميتر <code data-enlighter-language="java">b</code> ثم ترجع الناتج.<br/>
+<a class="open-page" href="math-pow.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double sqrt(double d)</code></span>
+			ترجع قيمة الجزر التربيعي <span class="inline">(<span class="word">square root</span>)</span> للعدد الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="java">d</code>.</span><br/>
+<a class="open-page" href="math-sqrt.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double sin(double d)</code></span>
+			ترجع قيمة <span class="inline">الـ <span class="word">sine</span></span> للعدد الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="java">d</code>.</span><br/>
+<a class="open-page" href="math-sin.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double cos(double d)</code></span>
+			ترجع قيمة <span class="inline">الـ <span class="word">cosine</span></span> للعدد الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="java">d</code>.</span><br/>
+<a class="open-page" href="math-cos.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double tan(double d)</code></span>
+			ترجع قيمة <span class="inline">الـ <span class="word">tangent</span></span> للعدد الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="java">d</code>.</span><br/>
+<a class="open-page" href="math-tan.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double asin(double d)</code></span>
+			ترجع قيمة <span class="inline">الـ <span class="word">arc sine</span></span> للعدد الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="java">d</code>.</span><br/>
+<a class="open-page" href="math-asin.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double acos(double d)</code></span>
+			ترجع قيمة <span class="inline">الـ <span class="word">arc cosine</span></span> للعدد الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="java">d</code>.</span><br/>
+<a class="open-page" href="math-acos.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double atan(double d)</code></span>
+			ترجع قيمة <span class="inline">الـ <span class="word">arc tangent</span></span> للعدد الذي نمرره لها مكان الباراميتر <span class="inline"><code data-enlighter-language="java">d</code>.</span><br/>
+<a class="open-page" href="math-atan.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double toDegrees(double d)</code></span>
+			تحول قيمة العدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="java">d</code> <span class="inline">لـ <span class="word">Degrees</span></span> ثم ترجع الناتج.<br/>
+<a class="open-page" href="math-todegrees.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double toRadians(double d)</code></span>
+			تحول قيمة العدد الذي نمرره لها مكان الباراميتر <code data-enlighter-language="java">d</code> <span class="inline">لـ <span class="word">Radians</span></span> ثم ترجع الناتج.<br/>
+<a class="open-page" href="math-toradians.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static double random()</code></span>
+			ترجع عدد عشوائي بين <span class="number">0</span> و <span class="inline"><span class="number">1</span>.</span><br/>
+<a class="open-page" href="math-random.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+</table>
+</article>
+<article>
+<h2>ثوابت الكلاس <code data-enlighter-language="java">Math</code> في جافا</h2>
+<p>الكلاس <code data-enlighter-language="java">Math</code> يحتوي أيضاً على الثوابت التالية التي تتعلق بالرياضيات.</p>
+<table class="list">
+<tr>
+<th>إسم الثابت</th>
+<th>تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">E</code></span>
+<td>يحتوي على قيمة <span class="inline">الـ <span class="word">Exponential</span>.</span></td>
+</td></tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">PI</code></span>
+<td>يحتوي على قيمة <span class="inline">الـ <span class="word">PI</span>.</span></td>
+</td></tr>
+</table>
+<p><a class="open-page" href="math-constants.html" target="_blank">شاهد المثال »</a></p>
+</article>
+<article>
+<h2>دوال الأعداد في جافا التي تستخدم مع كائنات <span class="inline">الـ <span class="word">wrapper classes</span></span></h2>
+<p>ذكرنا بعض الدوال التي تستخدم مع <span class="inline">الـ <span class="word">wrapper classes</span></span> في هذا الجدول.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">إسم الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public ... xxxValue()</code></span>
+			عبارة عن مجموعة دوال تستخدم لتحويل قيمة الكائن <span class="inline">( الذي يمثل عدد )</span> لقيمة بدائية تحددها الدالة التي تم إستدعاءها من الكائن و ترجعها.<br/>
+<a class="open-page" href="numbers-xxxvalue.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int compareTo(T o)</code></span>
+			تقارن قيمة الكائن الذي قام باستدعائها و الذي يمثل عدد ما مع قيمة الكائن التي نمررها لها مكان الباراميتر <span class="inline"><code data-enlighter-language="java">o</code>.</span><br/>
+			ترجع <span class="number">0</span> إن كانت قيمتهما متساوية, و ترجع <span class="number">1</span> إن كانت قيمة الكائن الذي إستدعاها أكبر, و ترجع <span class="number">1-</span> إن كانت قيمة الكائن الذي إستدعاها أصغر.<br/>
+<a class="open-page" href="numbers-compareto.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean equals(Object o)</code></span>
+			تقارن قيمة الكائن الذي قام باستدعائها و الذي يمثل عدد ما مع قيمة الكائن التي نمررها لها مكان الباراميتر <span class="inline"><code data-enlighter-language="java">o</code>.</span><br/>
+			ترجع <code data-enlighter-language="java">true</code> إن كانت قيمتهما متساوية, و ترجع <code data-enlighter-language="java">false</code> إن لم تكن كذلك.<br/>
+<a class="open-page" href="numbers-equals.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static Integer valueOf(String s)</code></span>
+			تحول قيمة الكائن <code data-enlighter-language="java">s</code> التي نمررها لها و التي تمثل عدد في الأساس لقيمة نوعها <span class="inline"><code data-enlighter-language="java">Integer</code>.</span><br/>
+<a class="open-page" href="numbers-integer-valueof.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String toString()</code></span>
+			ترجع قيمة الكائن الذي قام باستدعائها و الذي يمثل عدد ما <span class="inline">كـ <code data-enlighter-language="java">String</code>.</span><br/>
+<span class="note">ملاحظة:</span> تحويل القيمة العددية لقيمة نصية مفيد جداً في بعض الحالات و يجعل المبرمج يستفيد من دوال هي في الأصل ليست للتعامل مع الأعداد.<br/>
+<a class="open-page" href="numbers-tostring.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public ... parseXxx(String s)</code></span>
+			عبارة عن مجموعة دوال تستخدم للحصول على القيمة البدائية لعدد مخزن <span class="inline">كـ <code data-enlighter-language="java">String</code>.</span><br/>
+<a class="open-page" href="numbers-parsexxx.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+</table>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

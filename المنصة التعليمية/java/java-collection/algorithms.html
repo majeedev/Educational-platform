@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>مجموعة الخوارزميات في جافا | Java Algorithms Collections</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>مجموعة الخوارزميات  في جافا <span class="inline">( <span class="word">Java Algorithms Collections</span> )</span></h1>
+<article>
+<h2>مقدمة</h2>
+<p>الكلاس <code data-enlighter-language="java">Collections</code> يحتوي على دوال ثابتة نوعها <code data-enlighter-language="java">static</code>. هذه الدوال تساعد كثيراً في الوصول إلى العناصر و التلاعب بها سواء كنت تتعامل مع الكلاسات التي ترث من الإنترفيس <code data-enlighter-language="java">Collections</code> أو مع الكلاسات التي ترث من الإنترفيس <code data-enlighter-language="java">Map</code>.</p>
+<p>إذاً هذه الدوال تغنيك عن كتابة خوارزميات صعبة و معقدة, لذلك سميت مجموعة الخوارزميات <span class="inline">( <span class="word">Algorithms Collection</span> ).</span></p>
+<p>ميزة أخرى يقدمها لك الكلاس <code data-enlighter-language="java">Collections</code> هي المزامنة <span class="inline">( <span class="word">Synchronization</span>),</span> ستعرف أهمية المزامنة لاحقاً في هذا الدرس.</p>
+<br/>
+<h3>أخطاء محتملة</h3>
+<ul class="explain">
+<li><p>بعض الدوال التي يملكها ترمي الإستثناء <span class="code red">UnsupportedOperationException</span> إذا تم استخدامهم بطريقة خاطئة.</p></li>
+<li><p>يرمى الإستثناء <span class="code red">ClassCastException</span> في حال كان لا يمكن تحويل نوع الكائن إلى نوع آخر.</p></li>
+</ul>
+<br/>
+<h3>طريقة التعامل مع مجموعة الخوارزميات</h3>
+<p>للتعامل مع الدوال الموجودة في مجموعة الخوارزميات عليك إتباع الخطوات التالية:</p>
+<ol class="arabic">
+<li><p>إستدعاء الكلاس <code data-enlighter-language="java">Collections</code>, أي يجب أن تفعل له <code data-enlighter-language="java">import</code>.</p></li>
+<li><p>إستدعاء أي دالة تريد منه بشكل مباشر, أي ضع الكلمة <code data-enlighter-language="java">Collections</code> تليها نقطة, تليها إسم الدالة التي تريد.</p></li>
+</ol>
+</article>
+<article>
+<h2>دوال الكلاس <code data-enlighter-language="java">Collections</code></h2>
+<p>الجدول التالي يحتوي على دوال الكلاس <code data-enlighter-language="java">Collections</code> الثابتة و التي تمثل مجموعة الخوارزميات.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static int binarySearch(List list, Object value)</code></span>
+			ترجع رقم <span class="word">index</span> يمثل أول عنصر يملك القيمة <code data-enlighter-language="java">value</code> في الكائن <code data-enlighter-language="java">list</code>.<br/>
+			ترجع <span class="number">1-</span> في حال عدم إيجاد القيمة المطلوبة.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static int binarySearch(List list, Object value, Comparator c)</code></span>
+			ترجع رقم <span class="word">index</span> يمثل أول عنصر يملك القيمة <code data-enlighter-language="java">value</code> في الكائن <code data-enlighter-language="java">list</code>.<br/>
+			الكائن <code data-enlighter-language="java">c</code> يحدد الطريقة التي ستعتمدها الدالة في البحث.<br/>
+			ترجع <span class="number">1-</span> في حال عدم إيجاد القيمة المطلوبة.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void copy(List list1, List list2)</code></span>
+			تنسخ عناصر الكائن <code data-enlighter-language="java">list2</code> في آخر الكائن <code data-enlighter-language="java">list1</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static Enumeration enumeration(Collection c)</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">Enumeration</code> يحتوي على جميع عناصر الكائن <span class="inline"><code data-enlighter-language="java">c</code>.</span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void fill(List list, Object obj)</code></span>
+			تضع الكائن <code data-enlighter-language="java">obj</code> كقيمة لجميع عناصر الكائن <code data-enlighter-language="java">list</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static int indexOfSubList(List list, List subList)</code></span>
+			تبحث في الكائن <code data-enlighter-language="java">list</code> عن أول مكان يحتوي على جميع عناصر الكائن <code data-enlighter-language="java">subList</code> و بنفس الترتيب فيه.<br/>
+			في حال وجدت جميع عناصر الكائن <code data-enlighter-language="java">subList</code> بنفس الترتيب في الكائن <code data-enlighter-language="java">list</code>, ترجع  رقم يمثل <span class="word">index</span> أول عنصر بدء عنده إيجاد عناصر الكائن <code data-enlighter-language="java">subList</code> في الكائن <code data-enlighter-language="java">list</code>.<br/>
+			ترجع <span class="number">1-</span> في حال عدم إيجاد القيمة المطلوبة.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static int lastIndexOfSubList(List list, List subList)</code></span>
+			تبحث في الكائن <code data-enlighter-language="java">list</code> عن آخر مكان يحتوي على جميع عناصر الكائن <code data-enlighter-language="java">subList</code> و بنفس الترتيب فيه.<br/>
+			في حال وجدت جميع عناصر الكائن <code data-enlighter-language="java">subList</code> بنفس الترتيب في الكائن <code data-enlighter-language="java">list</code>, ترجع  رقم يمثل <span class="word">index</span> آخر عنصر بدء عنده إيجاد عناصر الكائن <code data-enlighter-language="java">subList</code> في الكائن <code data-enlighter-language="java">list</code>.<br/>
+			ترجع <span class="number">1-</span> في حال عدم إيجاد القيمة المطلوبة.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static ArrayList list(Enumeration enum)</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">ArrayList</code> يحتوي على جميع عناصر الكائن <span class="inline"><code data-enlighter-language="java">enum</code>.</span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static Object max(Collection c)</code></span>
+			ترجع أكبر عنصر موجود في الكائن <span class="inline"><code data-enlighter-language="java">c</code>.</span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static Object max(Collection c, Comparator comp)</code></span>
+			ترجع أكبر عنصر موجود في الكائن <span class="inline"><code data-enlighter-language="java">c</code>.</span><br/>
+			الكائن <code data-enlighter-language="java">comp</code> يحدد الطريقة التي تعتمدها الدالة في مقارنة العناصر.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static Object min(Collection c)</code></span>
+			ترجع أصغر عنصر موجود في الكائن <span class="inline"><code data-enlighter-language="java">c</code>.</span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static Object min(Collection c, Comparator comp)</code></span>
+			ترجع أصغر عنصر موجود في الكائن <span class="inline"><code data-enlighter-language="java">c</code>.</span><br/>
+			الكائن <code data-enlighter-language="java">comp</code> يحدد الطريقة التي تعتمدها الدالة في مقارنة العناصر.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static List nCopies(int num, Object obj)</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">List</code> يحتوي على نسخ من الكائن <span class="inline"><code data-enlighter-language="java">obj</code>.</span><br/>
+			المتغير <code data-enlighter-language="java">num</code> يمثل عدد النسخ التي سيتم إنشاءها من الكائن <span class="inline"><code data-enlighter-language="java">obj</code></span>. قيمة المتغير <code data-enlighter-language="java">num</code> يجب أن تكون أكبر أو تساوي صفر.<br/>
+			إذاً هنا عدد عناصر الكائن <code data-enlighter-language="java">list</code> الذي ترجعه الدالة يمثل عدد عناصر الكائن <code data-enlighter-language="java">obj</code> الموجودة فيه.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static boolean replaceAll(List list, Object oldValue, Object newValue)</code></span>
+			تبدل قيمة كل عنصر موجود في الكائن <code data-enlighter-language="java">list</code> في حال كانت تساوي قيمة الكائن <code data-enlighter-language="java">oldValue</code> بقيمة الكائن <code data-enlighter-language="java">newValue</code>.<br/>
+			ترجع <code data-enlighter-language="java">true</code> في حال تم تبديل قيمة عنصر واحد على الأقل, غير ذلك ترجع <span class="inline"><code data-enlighter-language="java">false</code>.</span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void reverse(List list)</code></span>
+			تعكس ترتيب عناصر الكائن <code data-enlighter-language="java">list</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static Comparator reverseOrder()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">Comparator</code> يمثل الكائن المستخدم في عكس ترتيب عناصر الكائنات.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void rotate(List list, int n)</code></span>
+			تغير طريقة ترتيب عناصر الكائن <code data-enlighter-language="java">list</code>.<br/>
+			الباراميتر <code data-enlighter-language="java">N</code> يحدد كيف سيتم تبديل أماكن عناصر الكائن <code data-enlighter-language="java">list</code>.<br/>
+			ضع قيمة أصغر من صفر دائماً مكان الباراميتر <code data-enlighter-language="java">N</code>.<br/>
+			فمثلاً إذا وضعنا القيمة <span class="number">2-</span> مكان الباراميتر <code data-enlighter-language="java">N</code>, سيتم وضع آخر عنصرين موجودين في الكائن <code data-enlighter-language="java">list</code> في أوله.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void shuffle(List list)</code></span>
+			تقوم بتبديل أمكان عناصر الكائن <code data-enlighter-language="java">list</code> بشكل عشوائي مرة واحدة.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void shuffle(List list, Random rnd)</code></span>
+			تقوم بتبديل أمكان عناصر الكائن <code data-enlighter-language="java">list</code> بشكل عشوائي عدة مرات.<br/>
+			الكائن <code data-enlighter-language="java">rnd</code> يحدد كم مرة سيتم تبديل أماكنهم.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static Set singleton(Object obj)</code></span>
+			ترجع نسخة من الكائن <code data-enlighter-language="java">obj</code> نوعها <code data-enlighter-language="java">Set</code> لا يمكن إجراء أي تعديل مباشر عليها لأنها تعتبر <span class="word">immutable.</span><br/><br/>
+<span class="note">إنتبه:</span> هنا أي تعديل تفعله على الكائن الأصلي الذي قمت بتمريره مكان الباراميتر <code data-enlighter-language="java">obj</code> يطبق على النسخة التي أرجعتها الدالة أيضاً.<br/>
+			أي تعديل تحاول فعله على النسخة التي أرجعتها الدالة من هذا الكائن لا تؤثر عليها أو على الكائن الأصلي بتاتاً.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static List singletonList(Object obj)</code></span>
+			ترجع نسخة من الكائن <code data-enlighter-language="java">obj</code> نوعها <code data-enlighter-language="java">List</code> لا يمكن إجراء أي تعديل مباشر عليها لأنها تعتبر <span class="word">immutable.</span><br/><br/>
+<span class="note">إنتبه:</span> هنا أي تعديل تفعله على الكائن الأصلي الذي قمت بتمريره مكان الباراميتر <code data-enlighter-language="java">obj</code> يطبق على النسخة التي أرجعتها الدالة أيضاً.<br/>
+			أي تعديل تحاول فعله على النسخة التي أرجعتها الدالة من هذا الكائن لا تؤثر عليها أو على الكائن الأصلي بتاتاً.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static Map singletonMap(Object keys, Object values)</code></span>
+			ترجع نسخة من الكائنات <code data-enlighter-language="java">keys</code> و <code data-enlighter-language="java">values</code> في كائن واحد نوعه <code data-enlighter-language="java">Map</code> لا يمكن إجراء أي تعديل مباشر عليه لأنه يعتبر <span class="word">immutable.</span><br/>
+			الكائن <code data-enlighter-language="java">keys</code> يمثل جميع المفاتيح التي ستحتويها النسخة <code data-enlighter-language="java">Map</code> التي سترجعها الدالة.<br/>
+			الكائن <code data-enlighter-language="java">values</code> يمثل جميع القيم التي ستحتويها النسخة <code data-enlighter-language="java">Map</code> التي سترجعها الدالة.<br/><br/>
+<span class="note">إنتبه:</span> هنا أي تعديل تفعله على الكائنات الأصلية الذي قمت بتمريرها مكان الباراميترات <code data-enlighter-language="java">keys</code> و <code data-enlighter-language="java">values</code> يطبق على النسخة التي أرجعتها الدالة أيضاً.<br/>
+			أي تعديل تحاول فعله على النسخة التي أرجعتها الدالة من هذه الكائنات لا تؤثر عليها أو على الكائنات الأصلية بتاتاً.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void sort(List list, Comparator comp)</code></span>
+			ترتب العناصر الموجودة في الكائن <code data-enlighter-language="java">list</code> حسب طريقة المقارنة التي يعتمدها الكائن <code data-enlighter-language="java">comp</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void sort(List list)</code></span>
+			ترتب العناصر الموجودة في الكائن <code data-enlighter-language="java">list</code> حسب طريقة المقارنة التي يعتمدها كائن الـ <code data-enlighter-language="java">Comparator</code> الذي يستخدمه الكائن <code data-enlighter-language="java">list</code> إفتراضياً.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void swap(List list, int index1, int index2)</code></span>
+			تبدل قيم العناصر الموجودة على الـ <code data-enlighter-language="java">index1</code> و الـ <code data-enlighter-language="java">index2</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static Collection synchronizedCollection(Collection c)</code></span>
+			ترجع الكائن <code data-enlighter-language="java">c</code> ككائن متزامن نوعه <code data-enlighter-language="java">Collections</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static List synchronizedList(List list)</code></span>
+			ترجع الكائن <code data-enlighter-language="java">list</code> ككائن متزامن نوعه <code data-enlighter-language="java">List</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static Map synchronizedMap(Map m)</code></span>
+			ترجع الكائن <code data-enlighter-language="java">m</code> ككائن متزامن نوعه <code data-enlighter-language="java">Map</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static Set synchronizedSet(Set s)</code></span>
+			ترجع الكائن <code data-enlighter-language="java">S</code> ككائن متزامن نوعه <code data-enlighter-language="java">Set</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static SortedMap synchronizedSortedMap(SortedMap sm)</code></span>
+			ترجع الكائن <code data-enlighter-language="java">sm</code> ككائن متزامن نوعه <code data-enlighter-language="java">SortedMap</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static SortedSet synchronizedSortedSet(SortedSet ss)</code></span>
+			ترجع الكائن <code data-enlighter-language="java">ss</code> ككائن متزامن نوعه <code data-enlighter-language="java">SortedSet</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static Collection unmodifiableCollection(Collection c)</code></span>
+			ترجع الكائن <code data-enlighter-language="java">c</code> ككائن نوعه <code data-enlighter-language="java">Collections</code> غير قابل للتعديل.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static List unmodifiableList(List list)</code></span>
+			ترجع الكائن <code data-enlighter-language="java">list</code> ككائن نوعه <code data-enlighter-language="java">List</code> غير قابل للتعديل.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static Map unmodifiableMap(Map m)</code></span>
+			ترجع الكائن <code data-enlighter-language="java">m</code> ككائن نوعه <code data-enlighter-language="java">Map</code> غير قابل للتعديل.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static Set unmodifiableSet(Set s)</code></span>
+			ترجع الكائن <code data-enlighter-language="java">S</code> ككائن نوعه <code data-enlighter-language="java">Set</code> غير قابل للتعديل.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static SortedMap unmodifiableSortedMap(SortedMap sm)</code></span>
+			ترجع الكائن <code data-enlighter-language="java">sm</code> ككائن نوعه <code data-enlighter-language="java">SortedMap</code> غير قابل للتعديل.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static SortedSet unmodifiableSortedSet(SortedSet ss)</code></span>
+			ترجع الكائن <code data-enlighter-language="java">ss</code> ككائن نوعه <code data-enlighter-language="java">SortedSet</code> غير قابل للتعديل.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>المزامنة <span class="inline">( <span class="word">Synchronization</span> )</span></h2>
+<p>في جميع الأمثلة التي وضعناها سابقاً لم نتطرق لفكرة المزامنة لأننا كنا نريدك أن تركز على فكرة و أهمية كل كلاس موجود ضمن كلاسات الـ <span class="word">Data Structure</span> فقط.<br/>
+	في الحقيقة لم نضطر إلى مزامنة الكود أصلاً لأننا كنا نضع أمثلة صغيرة لا تحتوي على أوامر متزامنة, و بالتالي لا حاجة أصلاً للمزامنة.</p>
+<p>تحتاج إلى مزامنة الكائن المستخدم في تخزين البيانات في حال كان البرنامج يحتوي على عدة أوامر تعمل بشكل متزامن, أي في حال وجود <span class="word">Thread</span> آخر شغال في نفس الوقت الذي نحاول فيه المرور على عناصر الكائن.</p>
+<p>إذاً من المهم جداً التأكد أن الكائن الذي تريد المرور على عناصره هو كائن متزامن <span class="inline">( <span class="word">Synchronized</span> )</span> في حال وجود أكثر من <span class="word">Thread</span> شغال في البرنامج.</p>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>الكلاس <code data-enlighter-language="java">Vector</code> و الكلاس <code data-enlighter-language="java">HashTable</code> لا حاجة إلى مزامنتهم لأنهم أصلاً متزامنين.</p>
+</div>
+<br/>
+<h3>طريقة المزامنة</h3>
+<p>المزامنة أمر سهل جداً و هي مقسمة إلى خطوتين أساسياتين:</p>
+<ol class="arabic">
+<li><p>جعل الكائن متزامن مباشرةً عند إنشاءه باستخدام دالة من دوال التزامن الموجودة في الكلاس <code data-enlighter-language="java">Collections</code> تكون ملائمة لنوعه.</p></li>
+<li><p>وضع الكود الذي يمكننا من المرور على عناصر هذا الكائن في بلوك متزامن باستخدام الكلمة المحجوزة <code data-enlighter-language="java">synchronized</code>.</p></li>
+</ol>
+<br/>
+<h3>مثال</h3>
+<p>في المثال التالي قمنا بإنشاء كائن متزامن نوعه <code data-enlighter-language="java">ArrayList</code>, إسمه <code data-enlighter-language="java">al</code> يحتوي على <span class="number">5</span> عناصر.<br/>
+	بعدها قمنا بتخزين هذه العناصر في كائن نوعه <code data-enlighter-language="java">Iterator</code>, إسمه <span class="inline"><code data-enlighter-language="java">i</code>,</span> ثم قمنا بعرض عناصر الكائن <code data-enlighter-language="java">i</code> بشكل متزامن بواسطة الحلقة <span class="inline"><code data-enlighter-language="java">while</code>.</span></p>
+<div class="example-box">
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.util.ArrayList;          // ArrayList هنا قمنا باستدعاء الكلاس
+import java.util.Collections;        // Collections هنا قمنا باستدعاء الكلاس
+import java.util.Iterator;           // Iterator هنا قمنا باستدعاء الإنترفيس
+import java.util.List;               // List هنا قمنا باستدعاء الإنترفيس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // al إسمه ArrayList هنا قمنا بإنشاء كائن متزامن من الكلاس
+        List al = Collections.synchronizedList( new ArrayList() );
+ 
+        // al هنا قمنا بإضافة 5 عناصر في الكائن
+        al.add("A");
+        al.add("B");
+        al.add("C");
+        al.add("D");
+        al.add("E");
+ 
+        // متزامنة al هنا قمنا بإنشاء بلوك يجعل العمليات التي تجري على الكائن
+        synchronized( al ) {
+            // al وضعنا فيه جميع عناصر الكائن i إسمه Iterator هنا قمنا بإنشاء كائن نوعه
+            Iterator i = al.iterator();
+ 
+            // و تعرض كل عنصر تمر عليه i هنا أنشأنا حلقة تمر على جميع عناصر الكائن
+            while(i.hasNext()) {
+                System.out.println(i.next());
+            }
+        }
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+A
+B
+C
+D
+E
+		</pre>
+</div>
+</article>
+<article>
+<h2>مثال شامل</h2>
+<p>في المثال التالي قمنا بإنشاء كائن من الكلاس <code data-enlighter-language="java">ArrayList</code> إسمه <code data-enlighter-language="java">al</code>, ثم أدخلنا فيه خمسة عناصر.<br/>
+	بعدها وضعنا جميع عناصر الكائن <code data-enlighter-language="java">al</code> في كائن نوعه <code data-enlighter-language="java">Iterator</code> إسمه <code data-enlighter-language="java">i</code>.<br/>
+	في الأخير قمنا بإنشاء حلقة تعرض لنا جميع عناصر الكائن <code data-enlighter-language="java">i</code>.</p>
+<br/>
+<div class="example-box">
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.util.ArrayList;          // ArrayList هنا قمنا باستدعاء الكلاس
+import java.util.Collections;        // Collections هنا قمنا باستدعاء الكلاس
+import java.util.Comparator;         // Comparator هنا قمنا باستدعاء الإنترفيس
+import java.util.Random;             // Random هنا قمنا باستدعاء الكلاس
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // al إسمه ArrayList هنا قمنا بإنشاء كائن من الكلاس
+        ArrayList al = new ArrayList();
+ 
+        // al هنا قمنا بإضافة 5 عناصر في الكائن
+        al.add(4);
+        al.add(9);
+        al.add(-5);
+        al.add(-2);
+        al.add(7);
+ 
+        // التي قمنا بإدخالها al هنا عرضنا عناصر الكائن
+        System.out.println("List values:             " +al );
+ 
+ 
+        // بشكل تصاعدي ثم عرضناهم al هنا قمنا بترتيب عناصر الكائن
+        Collections.sort(al);
+        System.out.println("List sorted:             " +al );
+ 
+ 
+        // بالمقلوب, و بالتالي ظهر و كأننا عرضناهم بشكل تنازلي al هنا قمنا بترتيب عناصر الكائن
+        Comparator r = Collections.reverseOrder();
+        Collections.sort(al, r);
+        System.out.println("List sorted in reverse:  " +al );
+ 
+ 
+        // مرة واحدة بشكل عشوائي ثم عرضناهم al هنا قمنا بتبديل أماكن عناصر الكائن
+        Collections.shuffle(al);
+        System.out.println("List shuffled once:      " +al );
+ 
+ 
+        // خمس مرات بشكل عشوائي ثم عرضناهم al هنا قمنا بتبديل أماكن عناصر الكائن
+        Collections.shuffle(al, new Random(5));
+        System.out.println("List shuffled 5 times:   " +al );
+ 
+ 
+        // al هنا قمنا بعرض أصغر و أكبر قيمة في الكائن
+        System.out.println("List minimum value:      " +Collections.min(al) );
+        System.out.println("List maximum value:      " +Collections.max(al) );
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على نتيجة تشبه النتيجة التالية عند التشغيل لأن الدالة <code data-enlighter-language="java">shuffle()</code> تبدل أماكن العناصر بشكل عشوائي.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+List values:             [4, 9, -5, -2, 7]
+List sorted:             [-5, -2, 4, 7, 9]
+List sorted in reverse:  [9, 7, 4, -2, -5]
+List shuffled once:      [7, -2, 9, 4, -5]
+List shuffled 5 times:   [4, -2, -5, 7, 9]
+List minimum value:      -5
+List maximum value:      9
+		</pre>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

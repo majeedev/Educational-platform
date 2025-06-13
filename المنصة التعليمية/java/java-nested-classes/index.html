@@ -1,0 +1,529 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الكلاسات المتداخلة في جافا | Java nested classes</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>الكلاسات المتداخلة في جافا</h1>
+<article>
+<h2>مفهوم <span class="inline">الـ <span class="word">Nested Classes</span></span> في جافا</h2>
+<p>جافا تسمح لك بتعريف العدد الذي تريده من المتغيرات و الدوال بداخل الكلاس كما أنها تسمح لك بتعريف كلاس بداخل نفس الكلاس.<br/>
+	إذاً <span class="word">Nested Classes</span> تعني كلاسات متداخلة, أي تعريف كلاس بداخل كلاس آخر.</p>
+<br/>
+<p>هنا قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">A</code> يحتوي على كلاس إسمه <span class="inline"><code data-enlighter-language="java">B</code>.</span></p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title java-file-icon">A.java</span>
+<pre data-enlighter-language="java">
+class A {
+
+    class B {
+
+    }
+
+} 
+		</pre>
+</div>
+<br/><br/>
+<p>الكلاس مهما كان نوعه يمكنه أن يحتوي على متغيرات و دوال و كلاسات متداخلة.<br/>
+	هنا قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">A</code> يحتوي على متغير إسمه <span class="inline"><code data-enlighter-language="java">x</code>,</span> دالة إسمها <span class="inline"><code data-enlighter-language="java">print()</code>,</span> و كلاس إسمه <span class="inline"><code data-enlighter-language="java">B</code>.</span></p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title java-file-icon">A.java</span>
+<pre data-enlighter-language="java">
+class A {
+
+    int x;
+
+    public void print() {
+        System.out.println("class A");
+    }
+
+    class B {
+
+    }
+
+} 
+		</pre>
+</div>
+<br/><br/>
+<p>يمكنك وضع العدد الذي تريده من الكلاسات المتداخلة بداخل بعض.<br/>
+	هنا قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">A</code> يحتوي على إثنين كلاس و هما <code data-enlighter-language="java">B</code> و <span class="inline"><code data-enlighter-language="java">C</code>.</span><br/>
+<code data-enlighter-language="java">C</code> يحتوي أيضاً على كلاس إسمه <span class="inline"><code data-enlighter-language="java">D</code>.</span></p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title java-file-icon">A.java</span>
+<pre data-enlighter-language="java">
+class A {
+
+    class B {
+
+    }
+
+    class C {
+        class D {
+        }
+    }
+
+} 
+		</pre>
+</div>
+</article>
+<article>
+<h2>فوائد <span class="inline">الـ <span class="word">Nested Classes</span></span> في جافا</h2>
+<ul class="explain">
+<li><p>طريقة يمكن اتباعها لتصنيف الكلاسات ضمن مجموعات بشكل منطقي.<br/>
+		فمثلاً في حال كان الكلاس مصمم خصيصاً لكلاس آخر, فإنه من المنطق تعريف هذين الكلاسات مع بعضهما في نفس المجموعة.</p></li>
+<li><p>من أجل تغليف البيانات <span class="word">Encapsulation</span> بشكل أقوى. حيث أنه يمكنك تعريف الكلاس الداخلي <span class="inline">كـ <code data-enlighter-language="java">private</code></span> و جعله فقط متاحاً أمام الكلاس الذي تم تعريفه بداخله.</p></li>
+<li><p>لتسهيل معرفة الفائدة من الكلاس. <span class="inline">فالـ <span class="word">Outer Class</span></span> في العادة يتم إعطائه إسم يشير إلى الفائدة من أي كلاس موجود بداخله.</p></li>
+</ul>
+</article>
+<article>
+<h2>أنواع <span class="inline">الـ <span class="word">Nested Classes</span></span> في جافا</h2>
+<p><span class="inline">الـ <span class="word">Nested Classes</span></span> ينقسمون إلى نوعين أساسيين و هما:</p>
+<ul class="explain">
+<li><p><span class="word">Static Nested Classes</span>: و هي الكلاسات المتداخلة المعرفة <span class="inline">كـ <code data-enlighter-language="java">static</code>.</span></p></li>
+<li><p><span class="word">Non Static Nested Classes</span>: و هي الكلاسات المتداخلة الغير المعرفة <span class="inline">كـ <code data-enlighter-language="java">static</code>.</span></p></li>
+</ul>
+<br/><br/>
+<p><a href="nested-classes-type-in-java.png" target="_blank"><img alt="الكلاسات المتداخلة في جافا" src="nested-classes-type-in-java.png"/></a></p>
+<br/><br/>
+<h3>مصطلحات تقنية</h3>
+<ul class="explain">
+<li><p>الكلاس الذي يحتوي على كلاس أو أكثر يسمى <span class="inline"><span class="word">Outer Class</span>.</span></p></li>
+<li><p>الكلاس الموجود بداخل كلاس آخر يسمى <span class="word">Nested Class</span> إذا كان نوعه <span class="inline"><code data-enlighter-language="java">static</code>.</span></p></li>
+<li><p>الكلاس الموجود بداخل كلاس آخر و الغير معرف كـ <code data-enlighter-language="java">static</code> يسمى <span class="inline"><span class="word">Inner Class</span>.</span><br/>
+		    و لا يهم إن كان معرفاً <span class="inline">كـ <code data-enlighter-language="java">public</code>,</span> <span class="inline"><code data-enlighter-language="java">private</code>,</span> <code data-enlighter-language="java">protected</code> أو <span class="inline"><span class="word">package private</span>.</span></p></li>
+</ul>
+<br/><br/>
+<h3>أمثلة</h3>
+<p>هنا قمنا بتطبيق مبدأ <span class="inline">الـ <span class="word">Static Nested Classes</span>.</span></p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<pre data-enlighter-language="java">
+public class A {             // B بالنسبة للكلاسات Outer Class يعتبر A الكلاس
+
+    static class B {         // static لأنه معرف كـ A بالنسبة للكلاس Nested Class يعتبر B الكلاس
+
+    }
+
+} 
+		</pre>
+</div>
+<br/>
+<p>هنا قمنا بتطبيق مبدأ <span class="inline">الـ <span class="word">Non Static Nested Classes</span>.</span></p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<pre data-enlighter-language="java">
+public class A {             // F و D ,C ,B بالنسبة للكلاسات Outer Class يعتبر A الكلاس
+
+    public class B {         // static لأنه غير معرف كـ A فقط بالنسبة للكلاس Inner Class يعتبر B الكلاس
+
+    }
+
+    private class C {        // static لأنه غير معرف كـ A فقط بالنسبة للكلاس Inner Class يعتبر C الكلاس
+
+    }
+
+    protected class D {      // static لأنه غير معرف كـ A فقط بالنسبة للكلاس Inner Class يعتبر D الكلاس
+
+    }
+
+    class E {                // static لأنه غير معرف كـ A فقط بالنسبة للكلاس Inner Class يعتبر E الكلاس
+
+    }
+
+}
+		</pre>
+</div>
+</article>
+<article>
+<h2>التعامل مع <span class="inline">الـ <span class="word">Static Nested Classes</span></span> في جافا</h2>
+<p><span class="word">Static Nested Class</span> أو <span class="word">Nested Class</span> عبارة عن كلاس يمكن الوصول له مباشرةً من <span class="inline">الـ <span class="word">Outer Class</span></span> دون حاجة إلى إنشاء كائن منه.<br/>
+	و يمكنه إحتواء متغيرات, دوال, و كلاسات أخرى و التي بدورها يمكن أن تكون معرفة <span class="inline">كـ <code data-enlighter-language="java">static</code></span> أيضاً.<br/>
+	الأشياء المعرفة فيه <span class="inline">كـ <code data-enlighter-language="java">static</code>,</span> يمكن الوصول لها مباشرةً منه.<br/>
+	بينما الأشياء الغير المعرفة فيه <span class="inline">كـ <code data-enlighter-language="java">static</code>,</span> يمكن الوصول لها فقط من خلال إنشاء كائن منه.</p>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">A.java</span>
+<pre data-enlighter-language="java">
+public class A {                    // A إسمه Outer Class هنا قمنا بتعريف
+ 
+    static class B {                // B إسمه Nested Class هنا قمنا بتعريف
+ 
+        public int x;               // static لأنه غير معرف كـ B هذا المتغير يمكن الوصول له فقط من خلال كائن من الكلاس
+        public static int y;        // static لأنه معرف كـ A.B.y هذا المتغير يمكن الوصول له مباشرةً هكذا
+     
+        public void printX() {                // static لأنها غير معرفة كـ B هذه الدالة يمكن الوصول لها فقط من خلال كائن من الكلاس
+            System.out.println("x contain: " + x);
+        }
+     
+        public static void printY() {         // static لأنها معرفة كـ A.B.printY() هذه الدالة يمكن الوصول لها مباشرةً هكذا
+            System.out.println("y contain: " + y);
+        }
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        A.B obj = new A.B();     // obj إسمه A الموجود بداخل الكلاس B هنا قمنا بإنشاء كائن من الكلاس
+ 
+        obj.x = 10;              // obj الموجود في الكائن x هنا قمنا بإعطاء قيمة للمتغير
+        obj.printX();            // obj من خلال الكائن printX() هنا قمنا باستدعاء الدالة
+ 
+        obj.y = 20;              // لا تستخدم هذا الأسلوب  &lt;---  obj من خلال الكائن y هنا قمنا بإعطاء قيمة للمتغير
+        obj.printY();            // لا تستخدم هذا الأسلوب  &lt;---  obj من خلال الكائن printY() هنا قمنا باستدعاء الدالة
+ 
+        A.B.y = 30;              // B بشكل مباشر من الكلاس y هنا قمنا بإعطاء قيمة للمتغير
+        A.B.printY();            // B بشكل مباشر من الكلاس printY() هنا قمنا باستدعاء الدالة
+ 
+    }
+
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+x contain: 10
+y contain: 20
+y contain: 30 
+		</pre>
+</div>
+<br/><br/>
+<p>إذا أردت الوصول لمحتويات كلاس نوعه <code data-enlighter-language="java">static</code> يفضل الوصول لهم من الكلاس مباشرةً و ليس من خلال كائن من الكلاس الذي يحتويهم.<br/>
+	إذا عدنا للكود السابق, في الكلاس <span class="inline"><code data-enlighter-language="java">Main</code>,</span> في السطرين <span class="number">12</span> و <span class="number">13</span> تحديدياً, ننصحك بالتالي:</p>
+<ol class="arabic">
+<li><p>إعتماد <code data-enlighter-language="java">A.B.y</code> بدل <span class="inline"><code data-enlighter-language="java">obj.y</code>.</span></p></li>
+<li><p>إعتماد <code data-enlighter-language="java">A.B.printY()</code> بدل <span class="inline"><code data-enlighter-language="java">obj.printY()</code>.</span></p></li>
+</ol>
+<p>يفضل إتباع هذه النصائح دائماً لجعل برامجك أفضل من ناحية الأداء و السرعة.</p>
+<br/>
+<p>كان بإمكانك أيضاً إنشاء الكائن <code data-enlighter-language="java">obj</code> بطريقة أخرى.</p>
+<p><a class="open-page" href="create-object-from-nested-class-example.html" target="_blank">شاهد المثال »</a></p>
+</article>
+<article>
+<h2>التعامل مع <span class="inline">الـ <span class="word">Non Static Nested Classes</span></span> في جافا</h2>
+<p><span class="word">Non Static Nested Class</span> أو <span class="word">Inner Class</span> عبارة عن كلاس يمكن الوصول له و لمحتوياته فقط من خلال كائن.<br/>
+	و يمكنه إحتواء متغيرات, دوال, و كلاسات أخرى أيضاً.<br/>
+	لا يمكن تعريف أي شيء فيه <span class="inline">كـ <code data-enlighter-language="java">static</code></span> لأنه لا يمكن الوصول له إلا من خلال كائن.</p>
+<br/>
+<h3>أنواع <span class="inline">الـ <span class="word">Inner Classes</span></span></h3>
+<p><span class="inline">الـ <span class="word">Inner Classes</span></span> ينقسمون إلى ثلاث أنواع أساسية على حسب طريقة تعريفك لهم:</p>
+<ul class="explain">
+<li><p><span class="word">Inner Classes</span></p></li>
+<li><p><span class="word">Method Local Inner Classes</span></p></li>
+<li><p><span class="word">Anonymous Inner Classes</span></p></li>
+</ul>
+</article>
+<article>
+<h2>التعامل مع <span class="inline">الـ <span class="word">Inner Classes</span></span> في جافا</h2>
+<p><span class="inline">الـ <span class="word">Inner Class</span></span> عبارة عن كلاس معرف بداخل كلاس.<br/>
+<span class="inline">الـ <span class="word">Inner Class</span></span> يمكن أن يكون معرف <span class="inline">كـ <code data-enlighter-language="java">public</code></span> أو <code data-enlighter-language="java">private</code> أو <code data-enlighter-language="java">protected</code> أو <span class="inline"><span class="word">package private</span>.</span><br/>
+	الـ <span class="word">Modifier</span> الذي تستخدمه عند تعريف الكلاس يحدد الطرق التي يمكنك من خلالها الوصول لهذا الكلاس.</p>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<p><span class="point">•</span>لنفترض أنه عندنا <span class="word">OuterClass</span> إسمه <code data-enlighter-language="java">a</code> بداخله <span class="word">InnerClass</span> إسمه <span class="inline"><code data-enlighter-language="java">B</code>.</span></p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+class A {         // OuterClass
+
+    class B {     // InnerClass
+
+    }
+
+} 
+		</pre>
+<br/>
+<p><span class="point">•</span>هكذا ننشئ كائن من الكلاس <span class="inline"><code data-enlighter-language="java">B</code>.</span></p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+A a   = new A();       // OuterClass أولاً: ننشئ كائن من الـ
+A.B b = a.new B();     // InnerClass ثانياً: ننشئ كائن من الـ
+		</pre>
+<br/>
+<p><span class="point">•</span>و يمكنك إنشاء كائن من الكلاس <code data-enlighter-language="java">B</code> بأمر واحد.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+A.B b = new A().new B();
+		</pre>
+</div>
+<br/>
+<h3>أمثلة شاملة</h3>
+<p>هنا قمنا بتعريف <span class="inline">الـ <span class="word">Inner Class</span></span> <span class="inline">كـ <code data-enlighter-language="java">public</code>.</span></p>
+<p><a class="open-page" href="create-object-from-public-inner-class-example.html" target="_blank">شاهد المثال »</a></p>
+<br/>
+<p>هنا قمنا بتعريف <span class="inline">الـ <span class="word">Inner Class</span></span> <span class="inline">كـ <code data-enlighter-language="java">private</code>.</span></p>
+<p><a class="open-page" href="create-object-from-private-inner-class-example.html" target="_blank">شاهد المثال »</a></p>
+</article>
+<article>
+<h2>التعامل مع <span class="inline">الـ <span class="word">Method Local Inner Classes</span></span> في جافا</h2>
+<p>في جافا, يمكنك تعريف كلاس جديد بداخل دالة, و عندها يعتبر هذا الكلاس <span class="word">local Class</span> فيها. بمعنى أنه يمكن الوصول له فقط من خلالها, حيث أنه يمكن إنشاء كائن من هذا الكلاس بداخلها فقط.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف <span class="word">Outer Class</span> إسمه <span class="inline"><code data-enlighter-language="java">a</code>,</span> يحتوي على دالة إسمها <span class="inline"><code data-enlighter-language="java">displayInnerClass()</code>.</span><br/>
+	الدالة <code data-enlighter-language="java">displayInnerClass()</code> تحتوي على كلاس إسمه <span class="inline"><code data-enlighter-language="java">B</code>,</span> و الذي بدوره يحتوي على دالة إسمها <span class="inline"><code data-enlighter-language="java">print()</code>.</span><br/>
+	بعد تعريف الكلاس <code data-enlighter-language="java">B</code> قمنا بإنشاء كائن منه لإستدعاء الدالة <code data-enlighter-language="java">print()</code> في داخل الدالة <span class="inline"><code data-enlighter-language="java">displayInnerClass()</code>.</span></p>
+<p>إذاً الفكرة هنا هي تعريف كلاس و إنشاء كائن منه بداخل دالة.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">A.java</span>
+<pre data-enlighter-language="java">
+public class A {                            // A إسمه Outer Class هنا قمنا بتعريف
+ 
+    // هنا قمنا بتعريف دالة تنشئ كلاس يحتوي على دالة أيضاً. ثم تنشئ كائن من الكلاس و تستدعي الدالة الموجودة فيه
+    public void displayInnerClass() {
+ 
+        class B {                           // B هنا قمنا بتعريف كلاس إسمه
+            void print() {                  // print() يحتوي على الدالة B
+                System.out.println("B is a Local Inner Class");
+            }
+        }
+ 
+        B b = new B();                      // B هنا قمنا بإنشاء كائن من الكلاس
+        b.print();                          // B الموجودة في الكلاس print() هنا قمنا باستدعاء الدالة
+    }
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // منه displayInnerClass() ثم قمنا باستدعاء الدالة A هنا قمنا بإنشاء كائن من الكلاس
+        A a = new A();
+        a.displayInnerClass();
+ 
+    }
+
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+B is a Local Inner Class
+		</pre>
+</div>
+</article>
+<article>
+<h2>التعامل مع <span class="inline">الـ <span class="word">Anonymous Inner Classes</span></span> في جافا</h2>
+<p>في حال كنت تريد إستخدام إنترفيس بدون أن تنشئ كلاس و تجعله ينفّذه, أو كنت تريد إستخدام كلاس نوعه <code data-enlighter-language="java">abstract</code> بدون أن تنشئ كلاس يرث منه يمكنك الإستفادة من أسلوب <span class="inline">الـ <span class="word">Anonymous Inner Class</span>.</span></p>
+<p>إذاً فكرة <span class="inline">الـ <span class="word">Anonymous Inner Class</span></span> هي إنشاء كائن يحتوي على الأشياء الموجودة في كلاس ما بدون أن يفعل له <span class="inline"><code data-enlighter-language="java">extends</code>,</span> أو إنشاء كائن يحتوي على الأشياء الموجودة في إنترفيس ما بدون أن يفعل له <span class="inline"><code data-enlighter-language="java">implements</code>.</span></p>
+<p>لا تنسى أنه عند إعتماد هذا الأسلوب فإنك لا زلت مجبراً على أن تفعل <span class="word">Override</span> لكل دالة نوعها <span class="inline"><code data-enlighter-language="java">abstract</code>.</span></p>
+<br/>
+<h3>طريقة تعريف <span class="word">Anonymous Class</span></h3>
+<p>في البداية عليك أن تفعل <code data-enlighter-language="java">import</code> للكلاس أو الإنترفيس الذي تنوي إنشاء كائن منه في حال كنت تستخدم كلاس جاهز من الكلاسات الموجودة في جافا.<br/>
+	لتعريف <span class="inline"><span class="word">Anonymous Class</span>,</span> عليك إنشاء كائن من كلاس معين, ثم فتح أقواس البداية و النهاية بعد الكونستركتور, و تعريف <span class="inline">الـ <span class="word">Anonymous Class</span></span> بداخله.</p><br/>
+<h3>أمثلة شاملة</h3>
+<p>هنا وضعنا أمثلة مهمة تعلمك طريقة التعامل و الإستفادة من <span class="inline">الـ <span class="word">Anonymous Class</span>.</span></p>
+<p><a class="open-page" href="anonymous-class-basics.html" target="_blank">شاهد الأمثلة »</a></p>
+<br/>
+<p>هنا وضعنا مثال طبقنا فيه مفهوم <span class="inline">الـ <span class="word">Anonymous Class</span></span> و مثال طبقنا فيه مفهوم <span class="inline">الـ <span class="word">Anonymous Object</span>.</span></p>
+<p><a class="open-page" href="anonymous-class-example.html" target="_blank">شاهد المثال »</a></p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

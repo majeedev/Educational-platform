@@ -1,0 +1,41 @@
+<article> <p>المثال التالي يعلمك طريقة وضع أيقونات لعناصر القائمة. أي ستتعلم كيف تضع أيقونة <span class="inline">للـ <code data-enlighter-language="java">MenuItem</code>.</span></p> <p><span class="note">ملاحظة:</span> عليك إنشاء مجلد و وضع الصور فيه كما في الصورة التالية.</p> <p><a href="example-3-project-structure.png" target="_blank"><img src="example-3-project-structure.png"/></a></p> <p>الصورة توضح أننا أضفنا مجلد إسمه <code data-enlighter-language="java">images</code> و وضعنا فيه أربع صور.</p> <p><a class="open-page" href="example-3-images.zip">⇓ تحميل مجلد الصور</a></p> <br/> <div class="example-box"> <h4>مثال</h4> <span class="code-title java-file-icon">Main.java</span> <pre data-enlighter-language="java">import javafx.application.Application;import javafx.scene.Group;import javafx.scene.Scene;import javafx.scene.control.Menu;import javafx.scene.control.MenuBar;import javafx.scene.control.MenuItem;import javafx.scene.control.SeparatorMenuItem;import javafx.scene.image.Image;import javafx.scene.image.ImageView;import javafx.stage.Stage;public class Main extends Application {    // يمثل شريط القوائم الذي سنضعه في أعلا النافذة MenuBar هنا قمنا بإنشاء كائن من الكلاس    MenuBar menuBar = new MenuBar();    // هنا قمنا بإنشاء القائمة الرئيسية التي سنضعها في شريط القوائم    Menu menu = new Menu("Menu");          // تمثل العناصر التي سنضعها في القوائم مع وضع صورة مختلفة لكل عنصر MenuItem هنا قمنا بإنشاء 4 كائنات من الكلاس    MenuItem itemNewFile = new MenuItem("New", new ImageView(new Image("/images/new-icon.png")));    MenuItem itemOpen = new MenuItem("Open", new ImageView(new Image("/images/open-icon.png")));    MenuItem itemSave = new MenuItem("Save", new ImageView(new Image("/images/save-icon.png")));    MenuItem itemExit = new MenuItem("Exit", new ImageView(new Image("/images/exit-icon.png")));        @Override    public void start(Stage stage) {        // هنا قمنا بوضع القائمة في شريط القوائم        menuBar.getMenus().addAll(menu);        // menu في القائمة itemExit و itemSave ,ItemOpen ,itemNewFile هنا قمنا بوضع العناصر        menu.getItems().add(itemNewFile);        menu.getItems().add(itemOpen);        menu.getItems().add(itemSave);        menu.getItems().add(new SeparatorMenuItem());   // هنا أضفنا خط فاصل        menu.getItems().add(itemExit);                // هنا قمنا بجعل عرض شريط القوائم يساوي عرض النافذة حتى يظهر مطابق لها        menuBar.setPrefWidth(400);        // في النافذة Root Node لأننا ننوي جعله الـ Group هنا قمنا بإنشاء كائن من الكلاس        Group root = new Group();        // root في الكائن menuBar هنا قمنا بإضافة الكائن        root.getChildren().add(menuBar);        // فيها و تحديد حجمها Node كأول root هنا قمنا بإنشاء محتوى النافذة مع تعيين الكائن        Scene scene = new Scene(root, 400, 250);        // هنا وضعنا عنوان للنافذة        stage.setTitle("JavaFX MenuBar");        // أي وضعنا محتوى النافذة الذي قمنا بإنشائه للنافذة .stage في كائن الـ scene هنا وضعنا كائن الـ        stage.setScene(scene);        // هنا قمنا بإظهار النافذة        stage.show();    }    // هنا قمنا بتشغيل التطبيق    public static void main(String[] args) {        launch(args);    }}		</pre> <p><span class="point">•</span>ستظهر لك النافذة التالية عند التشغيل.</p> <div class="image-box"> <a href="example-3.png" target="_blank"><img alt="طريقة وضع أيقونة لل MenuItem في جافا" src="example-3.png"/></a> </div> </div></article> <div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+<!-- end main -->
+<!-- end container_row -->
+<!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+

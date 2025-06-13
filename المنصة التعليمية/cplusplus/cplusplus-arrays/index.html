@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس ستتعلم كيف تتعامل مع المصفوفات في سي بلاس بلاس بشكل مفصل. ستتعلم كيف تعرف مصفوفة, كيف تعرض قيمها, كيف تتعامل المصفوفة مع الدالة, مع أمثلة مبسطة لك فكرة." name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>التعامل مع المصفوفات في سي بلاس بلاس | C++ Arrays</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../cplusplus-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../cplusplus-overview/index.html"><span class="en">++C</span> - نظرة عامة</a></li>
+<li><a href="../cplusplus-environment-setup/index.html"><span class="en">++C</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../cplusplus-basic-syntax/index.html"><span class="en">++C</span> - أسلوب الكتابة</a></li>
+<li><a href="../cplusplus-cout/index.html"><span class="en">++C</span> - أمر الطباعة   &lt;&lt; cout</a></li>
+<li><a href="../cplusplus-data-types/index.html"><span class="en">++C</span> - أنواع البيانات</a></li>
+<li><a href="../cplusplus-variables/index.html"><span class="en">++C</span> - المتغيرات</a></li>
+<li><a href="../cplusplus-operators/index.html"><span class="en">++C</span> - العوامل</a></li>
+<li><a href="../cplusplus-conditions/index.html"><span class="en">++C</span> - الشروط</a></li>
+<li><a href="../cplusplus-loops/index.html"><span class="en">++C</span> - الحلقات</a></li>
+<li><a href="../cplusplus-numbers/index.html"><span class="en">++C</span> - الأعداد</a></li>
+<li><a href="../cplusplus-strings/index.html"><span class="en">++C</span> - النصوص</a></li>
+<li><a href="index.html"><span class="en">++C</span> - المصفوفات</a></li>
+<li><a href="../cplusplus-user-input/index.html"><span class="en">++C</span> - إدخال البيانات</a></li>
+<li><a href="../cplusplus-functions/index.html"><span class="en">++C</span> - الدوال</a></li>
+<li><a href="../cplusplus-references/index.html"><span class="en">++C</span> - المراجع</a></li>
+<li><a href="../cplusplus-pointers/index.html"><span class="en">++C</span> - المؤشرات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../cplusplus-oop/index.html"><span class="en">++C</span> - مفهوم البرمجة كائنية التوجه</a></li>
+<li><a href="../cplusplus-struct/index.html"><span class="en">++C</span> - النوع <span class="en">struct</span></a></li>
+<li><a href="../cplusplus-class/index.html"><span class="en">++C</span> - النوع <span class="en">class</span></a></li>
+<li><a href="../cplusplus-encapsulation/index.html"><span class="en">++Encapsulation - C</span></a></li>
+<li><a href="../cplusplus-inheritance/index.html"><span class="en">++Inheritance - C</span></a></li>
+<li><a href="../cplusplus-overriding/index.html"><span class="en">++Overriding - C</span></a></li>
+<li><a href="../cplusplus-overloading/index.html"><span class="en">++Overloading - C</span></a></li>
+<li><a href="../cplusplus-polymorphism/index.html"><span class="en">++Polymorphism - C</span></a></li>
+<li><a href="../cplusplus-constants/index.html"><span class="en">++C</span> - الثوابت</a></li>
+<li><a href="../cplusplus-enum/index.html"><span class="en">++C</span> - النوع <span class="en">enum</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../cplusplus-exceptions/index.html"><span class="en">++C</span> - الإستثناءات</a></li>
+<!--
+
+<li><a href="../cplusplus-lambda-expressions"><span class="en">Lambda Expressions - ++C</span></a></li>
+<li><a href="../cplusplus-files-io"><span class="en">++C</span> - التعامل مع الملفات</a></li>
+<li><a href="../cplusplus-data-structure"><span class="en">Data Structure - ++C</span></a></li>
+<li><a href="../cplusplus-collection"><span class="en">Collection - ++C</span></a></li>
+<li><a href="../cplusplus-generics"><span class="en">Generics - ++C</span></a></li>
+<li><a href="../cplusplus-networking"><span class="en">++C</span> - الشبكات</a></li>
+<li><a href="../cplusplus-multithreading"><span class="en">++C</span> - تعدد المهام</a></li>
+<li><a href="../cplusplus-jdbc"><span class="en">++C</span> - قواعد البيانات</a></li>
+<li><a href="../cplusplus-serialization"><span class="en">++C</span> - المزامنة</a></li>
+
+
+<li><a href="../cplusplus-date-and-time"><span class="en">++C</span> - التاريخ و الوقت</a></li>
+<li><a href="../cplusplus-regular-expressions"><span class="en">++C</span> - التعابير النمطية</a></li>
+
+<li><a href="../cplusplus-next-step"><span class="en">++C</span> - ما هي خطوتي التالية ؟</a></li>
+-->
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">C++</span>التعامل مع المصفوفات</h1>
+<article>
+<h2>مفهوم المصفوفات في <span class="word">C++</span></h2>
+<p>المصفوفة <span class="inline">( <span class="word">Array</span> )</span> عبارة عن متغير واحد يتألف من عدة عناصر <span class="inline">( <span class="word">Elements</span> )</span> من نفس النوع.<br/>
+	و كل عنصر في المصفوفة يمكن تخزين قيمة واحدة فيه.</p>
+<p>عناصر المصفوفة تتميز عن بعضها من خلال رقم محدد يعطى لكل عنصر يسمى <span class="inline"><span class="word">index</span>.</span><br/>
+	أول عنصر في المصفوفة دائماً يكون رقمه <span class="inline"><code>0</code>.</span></p>
+<p>الآن, عليك معرفة أن عدد عناصر المصفوفة ثابت, أي بمجرد أن قمت بتحديده لا يمكنك تغييره من جديد, مع الإشارة إلى أنك تستطيع تغيير قيم هذه العناصر متى شئت.</p>
+<br/>
+<h3>فوائد المصفوفات</h3>
+<ul class="explain">
+<li><p>تقليل عدد المتغيرات المتشابهة, فمثلاً إذا كنا نريد تعريف <span class="number">10</span> متغيرات نوعهم <span class="inline"><code data-enlighter-language="cpp">int</code>,</span> نقوم بتعريف مصفوفة واحدة تتألف من <span class="number">10</span> عناصر.</p></li>
+<li><p>التعامل مع الكود يصبح أسهل, لأنك إذا قمت بتخزين المعلومات داخل مصفوفة, تستطيع تعديلهم, مقارنتهم أو جلبهم كلهم دفعة واحدة بكود صغير جداً باستخدام حلقة.</p></li>
+<li><p>تستطيع الوصول لأي عنصر من خلال رقم <span class="inline">الـ <span class="word">index</span></span> الخاص به.</p></li>
+</ul>
+</article>
+<article>
+<h2>تعريف مصفوفة في <span class="word">C++</span></h2>
+<p>هناك ثلاث طرق يمكنك اتباعها لتعريف مصفوفة <span class="inline">(<span class="word">Declare Array</span>)</span> جديدة سنتعرف عليها تباعاً.</p>
+<div class="code-box">
+<div>
+<span class="gray">// الأسلوب التالي يستخدم لتعريف مصفوفة مع تحديد عدد عناصرها</span><br/>
+<span class="red">datatype</span>[<span class="green">size</span>] arrayName;<br/><br/>
+<span class="gray">// الأسلوب التالي يستخدم لتعريف مصفوفة مع تحديد قيمها الأولية</span><br/>
+<span class="red">datatype</span>[] arrayName = {value1, value2, ..};<br/><br/>
+<span class="gray">// الأسلوب التالي يستخدم لتعريف مصفوفة مع تحديد عدد عناصرها و قيمة بعض عناصرها</span><br/>
+<span class="red">datatype</span>[<span class="green">size</span>] arrayName = {value1, value2, ..};<br/><br/>
+</div>
+</div>
+<br/>
+<ul class="explain">
+<li><p><span class="code red">datatype</span>: هو نوع القيم التي يمكن تخزينها في عناصر المصفوفة.</p></li>
+<li><p><span class="code green">size</span>: هو عدد عناصر المصفوفة.</p></li>
+<li><p><span class="code black">arrayName</span>: هو إسم المصفوفة.</p></li>
+<li><p><span class="code black">[]</span>: هذا الرمز يمثل من كم بعد تتألف المصفوفة.</p></li>
+</ul>
+<br/><br/>
+<p>أمثلة حول طريقة تعريف مصفوفة أحادية <span class="inline">( <span class="word">One Dimensional Array</span> ).</span></p>
+<div class="example-box">
+<h4>أمثلة</h4>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+// و تتألف من 5 عناصر int نوعها ,arr هنا قمنا بتعريف مصفوفة ذات بعد واحد إسمها
+int arr[5];
+
+// و وضعنا فيها 6 عناصر, و هذا يعني أن عدد عناصرها أصبح 6 لأننا لم نحدد عدد عناصرها int نوعها ,arr هنا قمنا بتعريف مصفوفة ذات بعد واحد إسمها
+int arr[] = {1, 2, 3, 4, 5, 6};
+
+// و تتألف من 5 عناصر, و قمنا بوضع قيم أولية في أول 3 عناصر فيها int نوعها ,arr هنا قمنا بتعريف مصفوفة ذات بعد واحد إسمها
+int arr[5] = {1, 2, 3};
+		</pre>
+</div>
+<br/><br/>
+<p>أمثلة حول طريقة تعريف مصفوفة ثنائية <span class="inline">( <span class="word">Two Dimensional Array</span> ).</span></p>
+<div class="example-box">
+<h4>أمثلة</h4>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+// و تتألف من 3 × 4 عناصر int نوعها ,arr هنا قمنا بتعريف مصفوفة ذات بعدين إسمها
+int arr[4][3];
+
+// وضعنا فيها مصفوفتين تتألف كل واحدة منهما من 3 عناصر, هذا يعني أن المصفوفة تتألف من 2 × 3 عناصر int نوعها ,arr هنا قمنا بتعريف مصفوفة ذات بعدين إسمها
+int arr[][] = {
+		{1, 2, 3},
+		{4, 5, 6}
+	};
+
+// و تتألف من 3 × 4 عناصر, وقمنا بوضع 6 قيم أولية فيها int نوعها ,arr هنا قمنا بتعريف مصفوفة ذات بعدين إسمها
+int arr[4][3] = {
+		{1, 2, 3},
+		{4, 5, 6}
+	};
+		</pre>
+</div>
+</article>
+<article>
+<h2>الوصول لعناصر المصفوفة في <span class="word">C++</span></h2>
+<p>لنفترض الآن أننا قمنا بتعريف مصفوفة نوعها <span class="inline"><code data-enlighter-language="cpp">int</code>,</span> إسمها <span class="inline"><code data-enlighter-language="cpp">a</code>,</span> و تتألف من <span class="number">5</span> عناصر.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+int a[] = { 10, 20, 30, 40, 50 }; 
+	</pre>
+<br/>
+<p>يمكنك تصور شكل المصفوفة <code data-enlighter-language="cpp">a</code> في الذاكرة كالتالي.</p>
+<p><a href="array-in-memory.png" target="_blank"><img src="array-in-memory.png"/></a></p>
+<p>بما أن المصفوفة تتألف من <span class="number">5</span> عناصر, تم إعطاء العناصر أرقام <span class="word">indexes</span> بالترتيب من <span class="number">0</span> إلى <span class="inline"><span class="number">4</span>.</span></p>
+<p>إذاً هنا أصبح عدد عناصر المصفوفة يساوي <span class="number">5</span> و هو ثابت لا يمكن تغييره لاحقاً في الكود.<br/>
+	و للوصول لقيمة أي عنصر نستخدم <span class="word">index</span> العنصر الذي تم إعطاؤه له.</p>
+<br/>
+<p>في المثال التالي, قمنا بتعريف مصفوفة, ثم غيرنا قيمة العنصر الأول فيها, و من ثم عرضنا قيمة جميع العناصر.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	// هنا قمنا بتعريف مصفوفة تتألف من 5 عناصر
+    int arr[] = {10, 20, 30, 40, 50};
+	
+	// هنا قمنا بتغيير قيمة العنصر الأول و العنصر الأخير في المصفوفة
+	arr[0] = 1;
+	arr[4] = 5;
+	
+	// هنا قمنا بعرض قيم جميع عناصر المصفوفة
+    cout &lt;&lt; "arr[0] = " &lt;&lt; arr[0] &lt;&lt; endl;
+    cout &lt;&lt; "arr[1] = " &lt;&lt; arr[1] &lt;&lt; endl;
+    cout &lt;&lt; "arr[2] = " &lt;&lt; arr[2] &lt;&lt; endl;
+    cout &lt;&lt; "arr[3] = " &lt;&lt; arr[3] &lt;&lt; endl;
+    cout &lt;&lt; "arr[4] = " &lt;&lt; arr[4] &lt;&lt; endl;
+
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+arr[0] = 1
+arr[1] = 20
+arr[2] = 30
+arr[3] = 40
+arr[4] = 5
+	    </pre>
+</div>
+</article>
+<article>
+<h2>طريقة وضع قيم أولية لعناصر المصفوفة في <span class="word">C++</span></h2>
+<p>إذا قمت بإنشاء مصفوفة جديدة مع تحديد عدد عناصرها فقط و بدون إعطائها قيم أولية, من المحتمل أن تجد قيم غريبة في بعض عناصرها.<br/>
+	سبب ذلك أن هذه القيم كانت موجودة مسبقاً في الذاكرة لا أكثر.</p>
+<p>لذا في حال أردت إنشاء مصفوفة جديدة مع حذف أي قيم إفتراضية قد تكون موجودة فيها, يجب أن تقوم بتمرير القيمة الإفتراضية التي تريد وضعها لعناصر المصفوفة لحظة إنشائها.</p>
+<br/>
+<p>في المثال التالي, قمنا بتعريف مصفوفة تتألف من 5 عناصر و لم نعطها قيم أولية, ثم قمنا بعرض القيم الإفتراضية الموجودة فيها.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	// هنا قمنا بتعريف مصفوفة تتألف من 5 عناصر
+    int arr[5];
+	
+	// هنا قمنا بعرض القيم الإفتراضية الموجودة في عناصر المصفوفة
+    cout &lt;&lt; "arr[0] = " &lt;&lt; arr[0] &lt;&lt; endl;
+    cout &lt;&lt; "arr[1] = " &lt;&lt; arr[1] &lt;&lt; endl;
+    cout &lt;&lt; "arr[2] = " &lt;&lt; arr[2] &lt;&lt; endl;
+    cout &lt;&lt; "arr[3] = " &lt;&lt; arr[3] &lt;&lt; endl;
+    cout &lt;&lt; "arr[4] = " &lt;&lt; arr[4] &lt;&lt; endl;
+
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>عند تشغيل البرنامج حصلنا على نتيجة غريبة حيث وجدنا قيم إفتراضية في بعض العناصر.<br/>
+<span class="point">•</span>ملاحظة: من الطبيعي أن لا تظهر لك نفس النتيجة التي ظهرت لنا لأن هذه القيم هي قيم عشوائية.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+arr[0] = 8
+arr[1] = 0
+arr[2] = 42
+arr[3] = 0
+arr[4] = 15275776	
+	    </pre>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بوضع القيمة <code>0</code> كقيمة أولية لجميع عناصر المصفوفة, ثم قمنا بعرض قيمها.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	// هنا قمنا بتعريف مصفوفة تتألف من 5 عناصر مع تحديد أن القيمة الإفتراضية في جميع عناصرها هي 0
+    int arr[5] = {0};
+	
+	// هنا قمنا بعرض القيم الإفتراضية الموجودة في عناصر المصفوفة
+    cout &lt;&lt; "arr[0] = " &lt;&lt; arr[0] &lt;&lt; endl;
+    cout &lt;&lt; "arr[1] = " &lt;&lt; arr[1] &lt;&lt; endl;
+    cout &lt;&lt; "arr[2] = " &lt;&lt; arr[2] &lt;&lt; endl;
+    cout &lt;&lt; "arr[3] = " &lt;&lt; arr[3] &lt;&lt; endl;
+    cout &lt;&lt; "arr[4] = " &lt;&lt; arr[4] &lt;&lt; endl;
+
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل البرنامج.<br/>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+arr[0] = 0
+arr[1] = 0
+arr[2] = 0
+arr[3] = 0
+arr[4] = 0	
+	    </pre>
+</p></div>
+</article>
+<article>
+<h2>طريقة معرفة عدد عناصر المصفوفة في <span class="word">C++</span></h2>
+<p>إذا أردت معرفة عدد عناصر أي مصفوفة, يمكنك الحصول عليه من خلال قسمة حجم المصفوفة, على نوع العناصر المخزنة فيها.</p>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	// هنا قمنا بتعريف مصفوفة تتألف من 5 عناصر مع تحديد أن القيمة الإفتراضية في جميع عناصرها هي 0
+    int arr[] = {1, 2, 3, 4, 5};
+	
+	// n على حجم نوع أول عنصر فيها, و من ثم قمنا بتخزين الناتج في المتغير arr هنا قمنا بقسمة عدد عناصر المصفوفة
+	int n = sizeof(arr) / sizeof(arr[0]);
+	
+	// n الذي قمنا بتخزينه في المتغير arr هنا قمنا بطباعة عدد عناصر المصفوفة
+    cout &lt;&lt; "Number of elements in the array is: " &lt;&lt; n;
+
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل البرنامج.<br/>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Number of elements in the array is: 5
+	    </pre>
+</p></div>
+<br/>
+<p>و هذه بعض الطرق الأخرى التي قد تجد أنها تستخدم لمعرفة أحجام المصفوفات.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+// يمكنك الحصول على عدد عناصر المصفوفة مهما كان نوعها من خلال الأسلوب التالي
+sizeof(arrayName) / sizeof(arrayElement[0])
+
+// يمكنك أن تستخدم الأسلوب التالي int إذا كان نوع المصفوفة هو
+sizeof(arrayName) / sizeof(int)
+
+// يمكنك أن تستخدم الأسلوب التالي string إذا كان نوع المصفوفة هو
+sizeof(arrayName) / sizeof(string)
+	</pre>
+<br/><br/><br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>الأسلوب الذي استخدمناه لمعرفة عدد عناصر المصفوفة يمكن تطبيقه على أي نوع بيانات آخر و لكن لا يمكن استخدامه مع المؤشرات <span class="inline">( <span class="word">Pointers</span> )</span> و التي سنتعرف عليها في دروس لاحقة.</p>
+</div>
+</article>
+<article>
+<h2>التعامل مع المصفوفة بواسطة حلقة في <span class="word">C++</span></h2>
+<p>عند التعامل مع المصفوفات فإنك على الأغلب ستستخدم حلقة للمرور على قيمها سواء للبحث عن قيمة فيها, تحديث قيمها, أو لمجرد طباعة القيم الموجودة فيها.</p>
+<br/>
+<p>في المثال التالي إفترضنا أن عدد عناصر المصفوفة التي سنعرض قيمها معروف.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	// هنا قمنا بإنشاء مصفوفة تحتوي على 3 قيم نصية
+    string fruits[3] = {"Apple", "Banana", "Orange"};
+
+	// على سطر جديد fruits هنا قمنا بإنشاء حلقة, في كل دورة تقوم بعرض قيمة من القيم الموجودة في المصفوفة
+    for (int i=0; i&lt;3; i++)
+    {
+        cout &lt;&lt; fruits[i] &lt;&lt; endl;
+    }
+
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Apple
+Banana
+Orange
+		</pre>
+</div>
+<br/>
+<p>في المثال التالي إفترضنا أن عدد عناصر المصفوفة التي سنعرض قيمها غير معروف.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	// هنا قمنا بإنشاء مصفوفة تحتوي على 3 قيم نصية
+    string fruits[] = {"Apple", "Banana", "Orange"};
+	
+	// n و من ثم تخزينه في المتغير fruits هنا قمنا بحساب عدد عناصر المصفوفة
+	int n = sizeof(fruits) / sizeof(fruits[0]);
+
+	// على سطر جديد fruits هنا قمنا بإنشاء حلقة, في كل دورة تقوم بعرض قيمة من القيم الموجودة في المصفوفة
+    for (int i=0; i&lt;n; i++)
+    {
+        cout &lt;&lt; fruits[i] &lt;&lt; endl;
+    }
+
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Apple
+Banana
+Orange
+		</pre>
+</div>
+</article>
+<article>
+<h2>الحلقة <span class="word">foreach</span> في <span class="word">C++</span></h2>
+<p>إبتداءاً من إصدار المترجم <span class="word">C++ 11</span> تم إضافة حلقة <code data-enlighter-language="cpp">for</code> جديدة إسمها <span class="inline"><span class="word">Foreach Loop</span>.</span><br/>
+	هذه الحلقة تسمح لك بالمرور على جميع عناصر المصفوفة دون الحاجة لتعريف عداد و تحديد أين يبدأ و أين ينتهي.</p>
+<br/>
+<h3>طريقة تعريف الحلقة <span class="word">Foreach</span></h3>
+<div class="code-box">
+<div>
+<span class="blue">for</span> (element: array)<br/>
+			{<br/>
+			    <span class="red">// statements</span><br/>
+			}
+	    </div>
+</div><br/>
+<ul class="explain">
+<li><p><span class="code black">element</span>: هو متغير عادي نقوم بتعريفه بداخل الحلقة و نعطيه نفس نوع المصفوفة التي نضعها بعد النقطتين, لأنه في كل دورة سيقوم بتخزين قيمة عنصر من عناصرها, لذلك يجب جعل نوعه مثل نوعها.</p></li>
+<li><p><span class="code black">array</span>: هي المصفوفة التي نريد الوصول لجميع عناصرها.</p></li>
+<li><p><span class="code red">statements</span>: هي جميع الأوامر الموضوعة في الحلقة و هي تتنفذ في كل دورة.</p></li>
+</ul>
+<p>إذاً هنا تقوم الحلقة بالمرور على جميع عناصر المصفوفة بالترتيب من العنصر الأول إلى العنصر الأخير, و في كل دورة تقوم بتخزين قيمة العنصر في المتغير الذي قمنا بتعريفه.</p>
+<br/>
+<p>سنقوم الآن بكتابة برنامج بسيط يعرض قيم جميع عناصر مصفوفة باستخدام الحلقة <span class="inline"><span class="word">Foreach</span>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	// هنا قمنا بإنشاء مصفوفة تحتوي على 3 قيم نصية
+    string fruits[] = {"Apple", "Banana", "Orange"};
+	
+	// element في المتغير fruits هنا في كل دورة سيتم تخزين قيمة عنصر من عناصر المصفوفة
+    for (string element: fruits)
+    {
+		// element هنا سيتم عرض القيمة التي تخزنت في المتغير
+        cout &lt;&lt; element &lt;&lt; endl;
+    }
+
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+Apple
+Banana
+Orange
+		</pre>
+</div>
+<br/>
+<p>في دروس لاحقة ستتعلم كيف تمرر مصفوفة لدالة و كيف تعرّف مصفوفة ترجع دالة.<br/>
+	بالإضافة إلى ذلك, ستتعرف على أنواع أخرى من المصفوفات ليس لها أحجام محددة و يمكن التعامل معها بحرية أكثر.</p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

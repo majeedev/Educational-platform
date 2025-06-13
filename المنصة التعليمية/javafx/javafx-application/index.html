@@ -1,0 +1,524 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>بينة تطبيقات JavaFX</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../javafx-icon.png"/></li>
+<li class="title">أساسيات المكتبة</li>
+<li><a href="../javafx-overview/index.html"><span class="en">JavaFX</span> - نظرة عامة</a></li>
+<li><a href="index.html"><span class="en">JavaFX</span> - بنية التطبيقات</a></li>
+<li><a href="../javafx-architecture/index.html"><span class="en">JavaFX</span> - بنية المكتبة</a></li>
+<li class="title">عناصر واجهة المستخدم</li>
+<li><a href="../javafx-label/index.html"><span class="en">Label - JavaFX</span></a></li>
+<li><a href="../javafx-button/index.html"><span class="en">Button - JavaFX</span></a></li>
+<li><a href="../javafx-textfield/index.html"><span class="en">TextField - JavaFX</span></a></li>
+<li><a href="../javafx-passwordfield/index.html"><span class="en">PasswordField - JavaFX</span></a></li>
+<li><a href="../javafx-textarea/index.html"><span class="en">TextArea - JavaFX</span></a></li>
+<li><a href="../javafx-togglebutton/index.html"><span class="en">ToogleButton - JavaFX</span></a></li>
+<li><a href="../javafx-radiobutton/index.html"><span class="en">RadioButton - JavaFX</span></a></li>
+<li><a href="../javafx-checkbox/index.html"><span class="en">CheckBox - JavaFX</span></a></li>
+<li><a href="../javafx-choicebox/index.html"><span class="en">ChoiceBox - JavaFX</span></a></li>
+<li><a href="../javafx-combobox/index.html"><span class="en">ComboBox - JavaFX</span></a></li>
+<li><a href="../javafx-listview/index.html"><span class="en">ListView - JavaFX</span></a></li>
+<li><a href="../javafx-tableview/index.html"><span class="en">TableView - JavaFX</span></a></li>
+<li><a href="../javafx-treeview/index.html"><span class="en">TreeView - JavaFX</span></a></li>
+<li><a href="../javafx-slider/index.html"><span class="en">Slider - JavaFX</span></a></li>
+<li><a href="../javafx-tooltip/index.html"><span class="en">Tooltip - JavaFX</span></a></li>
+<li><a href="../javafx-progressbar/index.html"><span class="en">ProgressBar - JavaFX</span></a></li>
+<li><a href="../javafx-progressindicator/index.html"><span class="en">ProgressIndicator - JavaFX</span></a></li>
+<li><a href="../javafx-hyperlink-and-webview/index.html"><span class="en">Hyperlink + WebView - JavaFX</span></a></li>
+<li><a href="../javafx-separator/index.html"><span class="en">Separator - JavaFX</span></a></li>
+<li><a href="../javafx-colorpicker/index.html"><span class="en">ColorPicker - JavaFX</span></a></li>
+<li><a href="../javafx-datepicker/index.html"><span class="en">DatePicker - JavaFX</span></a></li>
+<li><a href="../javafx-filechooser/index.html"><span class="en">FileChooser - JavaFX</span></a></li>
+<li><a href="../javafx-htmleditor/index.html"><span class="en">HTMLEditor - JavaFX</span></a></li>
+<li><a href="../javafx-contextmenu/index.html"><span class="en">ContextMenu - JavaFX</span></a></li>
+<li><a href="../javafx-menubar/index.html"><span class="en">MenuBar - JavaFX</span></a></li>
+<li><a href="../javafx-alert/index.html"><span class="en">Alert - JavaFX</span></a></li>
+<li class="title">الحاويات</li>
+<li><a href="../javafx-group/index.html"><span class="en">Group - JavaFX</span></a></li>
+<li><a href="../javafx-pane/index.html"><span class="en">Pane - JavaFX</span></a></li>
+<li><a href="../javafx-hbox/index.html"><span class="en">HBox - JavaFX</span></a></li>
+<li><a href="../javafx-vbox/index.html"><span class="en">VBox - JavaFX</span></a></li>
+<li><a href="../javafx-borderpane/index.html"><span class="en">BorderPane - JavaFX</span></a></li>
+<li><a href="../javafx-stackpane/index.html"><span class="en">StackPane - JavaFX</span></a></li>
+<li><a href="../javafx-flowpane/index.html"><span class="en">FlowPane - JavaFX</span></a></li>
+<li><a href="../javafx-tilepane/index.html"><span class="en">TilePane - JavaFX</span></a></li>
+<li><a href="../javafx-scrollpane/index.html"><span class="en">ScrollPane - JavaFX</span></a></li>
+<li><a href="../javafx-gridpane/index.html"><span class="en">GridPane - JavaFX</span></a></li>
+<li><a href="../javafx-titledpane-and-accordion/index.html"><span class="en">TitledPane + Accordion - JavaFX</span></a></li>
+<li><a href="../javafx-anchorpane/index.html"><span class="en">AnchorPane - JavaFX</span></a></li>
+<li><a href="../javafx-pagination/index.html"><span class="en">Pagination - JavaFX</span></a></li>
+<li class="title">الرسم و التلوين و التحريك</li>
+<li><a href="../javafx-class-text/index.html"><span class="en">Text - JavaFX</span></a></li>
+<li><a href="../javafx-2d-shapes/index.html"><span class="en">2D Shapes - JavaFX</span></a></li>
+<li><a href="../javafx-animations/index.html"><span class="en">Animations - JavaFX</span></a></li>
+<li><a href="../javafx-charts/index.html"><span class="en">Charts - JavaFX</span></a></li>
+<li><a href="../javafx-scene-builder/index.html"><span class="en">Scene Builder - JavaFX</span></a></li>
+<li class="title">تعلم بناء تطبيقات و ألعاب</li>
+<li><a href="../javafx-projects/index.html"><span class="en">JavaFX</span> - جميع المشاريع</a></li>
+<li><a href="../javafx-who-will-win-the-million-source-code/index.html"><span class="en">JavaFX</span> - من سيربح المليون</a></li>
+<li><a href="../javafx-color-picker-source-code/index.html"><span class="en">JavaFX</span> - برنامج إختيار الألوان</a></li>
+<li><a href="../javafx-age-calculator-source-code/index.html"><span class="en">JavaFX</span> - برنامج حساب الأعمار</a></li>
+<li><a href="../javafx-ip-finder-source-code/index.html"><span class="en">JavaFX</span> - محلل عناوين المواقع</a></li>
+<li><a href="../javafx-snake-2d-source-code/index.html"><span class="en">JavaFX</span> - لعبة الأفعى <span class="en">Snake 2D</span></a></li>
+<li><a href="../javafx-calculator-source-code/index.html"><span class="en">JavaFX</span> - آلة حاسبة بسيطة</a></li>
+<li><a href="../javafx-scientific-calculator-source-code/index.html"><span class="en">JavaFX</span> - آلة حاسبة علمية</a></li>
+<li><a href="../javafx-tic-tac-toe-source-code/index.html"><span class="en">JavaFX</span> - لعبة <span class="en">Tic Tac Toe</span></a></li>
+<li><a href="../javafx-company-products-manager-source-code/index.html"><span class="en">JavaFX</span> - برنامج إدارة المحتوى</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">JavaFX</span> بنية التطبيقات</h1>
+<article>
+<h2>بناء تطبيقات <span class="word">JavaFX</span></h2>
+<p>بشكل عام, هناك ثلاث عناصر أساسية يجب دمجها مع بعضها حتى نحصل على واجهة مستخدم.<br/>
+	العناصر هي: <span class="word">Stage</span>, <span class="word">Scene</span> و <span class="word">Nodes</span> كما يظهر في الصورة التالية.</p>
+<p><img src="javafx-application-structure.png"/></p>
+</article>
+<article>
+<h2>ما هو الـ <span class="word">Stage</span> ؟</h2>
+<p>الـ <span class="word">Stage</span> هو النافذة بحد ذاتها. و هو يقسم النافذة إلى قسمين أساسين هما شريط القوائم و المنطقة التي يمكن فيها إضافة أشياء في النافذة.</p>
+<p>إذاً كل المحتوى الذي سنضيفه في النافذة سيتم ربطه و وضعه على الـ <span class="word">Stage</span>.</p>
+<br/>
+<p>يمكن عرض الـ <span class="word">Stage</span> بأربع أشكال مختلفة:</p>
+<ol class="arabic">
+<li><p><span class="word">Decorated</span>: هنا تكون خلفية النافذة بيضاء و تصميمها أجمل.</p></li>
+<li><p><span class="word">Undecorated</span>: هنا تكون خلفية النافذة بيضاء.</p></li>
+<li><p><span class="word">Transparent</span>: هنا تكون خلفية النافذة شفافة.</p></li>
+<li><p><span class="word">Utility</span>: هنا تكون خلفية النافذة بيضاء و يوجد فقط زر للخروج في شريط القوائم.</p></li>
+</ol>
+<p><span class="note">ملاحظة:</span> قد لا تعمل بعض هذه التصاميم على جميع الأجهزة و خاصةً الهواتف.</p>
+<br/>
+<h3>التعامل مع الـ <span class="word">Stage</span></h3>
+<ul class="explain">
+<li><p>برمجياً تم تمثيل الـ <span class="word">Stage</span> بكلاس خاص إسمه <code data-enlighter-language="java">Stage</code> و هو موجود في المسار <code data-enlighter-language="java">javafx.stage.Stage</code>.</p></li>
+<li><p>الـ <span class="word">Stage</span> لا يظهر ما لم تقم بإظهاره بنفسك بواسطة الدالة <code data-enlighter-language="java">show()</code>.</p></li>
+<li><p>في حال أردت تغيير شكل الـ <span class="word">Stage</span>, عليك فعل هذا قبل إظهاره, أي قبل إستدعاء الدالة <code data-enlighter-language="java">show()</code>.</p></li>
+</ul>
+</article>
+<article>
+<h2>ما هو الـ <span class="word">Scene</span> ؟</h2>
+<p>الـ <span class="word">Scene</span> هو المنطقة المخصصة في النافذة لوضع المحتوى.<br/>
+	المحتوى بداخل الـ <span class="word">Scene</span> يوضع بشكل هرمي <span class="inline">(<span class="word">Hierarchical</span>)</span> و سترى ذلك لاحقاً.</p>
+<br/>
+<h3>التعامل مع الـ <span class="word">Scene</span></h3>
+<ul class="explain">
+<li><p>برمجياً تم تمثيل الـ <span class="word">Scene</span> بكلاس خاص إسمه <code data-enlighter-language="java">Scene</code> و هو موجود في المسار <code data-enlighter-language="java">javafx.scene.Scene</code>.</p></li>
+<li><p>يمكنك تحديد طول و عرض الـ <span class="word">Scene</span> و أول شيء سيضاف فيها <span class="inline">( أي الـ <span class="word">Root Node</span> )</span> في كونستركتور كائن الـ <code data-enlighter-language="java">Scene</code>.</p></li>
+<li><p>كل كائن <code data-enlighter-language="java">Stage</code> ننشئه ننشئ له على الأقل كائن من الكلاس <code data-enlighter-language="java">Scene</code> لأننا بحاجة له حتى نضع فيه الأشياء التي نريد إضافتها في النافذة.</p></li>
+<li><p>لا يمكن ربط كائن الـ <code data-enlighter-language="java">Scene</code> بأكثر من كائن <code data-enlighter-language="java">Stage</code> في نفس الوقت.</p></li>
+<li><p>يمكن إنشاء أكثر من كائن <code data-enlighter-language="java">Scene</code> و ربط كائن واحد منهم في كل مرة بكائن الـ <code data-enlighter-language="java">Stage</code> الفكرة هنا أنه يمكنك إنشاء عدة صفحات ( أو حاويات ) و عرض الصفحة التي تريدها في النافذة على حسب تفاعل المستخدم.</p></li>
+</ul>
+</article>
+<article>
+<h2>ما هو الـ <span class="word">Node</span> ؟</h2>
+<p>أي شيء يتم إضافته في الـ <span class="word">Scene</span> يقال له <span class="word">Node</span>.</p>
+<p>إذاً الـ <span class="word">Node</span> يمكن أن يكون أحد الأشياء التالية:</p>
+<ul class="explain">
+<li><p>أحد الأشكال الهندسية سواء <span class="word">2D</span> أو <span class="word">3D</span> مثل <code data-enlighter-language="java">Rectangle</code> - <code data-enlighter-language="java">Circle</code> - <code data-enlighter-language="java">Box</code> - <code data-enlighter-language="java">Sphere</code>.</p></li>
+<li><p>أحد عناصر واجهة التحكم مثل <code data-enlighter-language="java">Button</code> - <code data-enlighter-language="java">CheckBox</code> - <code data-enlighter-language="java">RadioButton</code>.</p></li>
+<li><p>يمكن أن يكون أحد أنواع الحاويات التي يمكنها أن تسع عدة <span class="word">Nodes</span> مثل <code data-enlighter-language="java">FlowPane</code> - <code data-enlighter-language="java">GridPane</code> - <code data-enlighter-language="java">StakPane</code>.</p></li>
+<li><p>يمكن أن يكون أحد عناصر الـ <span class="word">Media</span> مثل <code data-enlighter-language="java">Audio</code> - <code data-enlighter-language="java">Image</code> - <code data-enlighter-language="java">Video</code>.</p></li>
+</ul>
+<br/>
+<h3>مصطلحات تقنية</h3>
+<ul class="explain">
+<li><p><span class="word">Root Node</span>: هو أول <span class="word">Node</span> يتم إضافته في الـ <span class="word">Scene</span>.</p></li>
+<li><p><span class="word">Branch Node</span> أو <span class="word">Parent Node</span>: هو أي <span class="word">Node</span> يحتوي على <span class="word">Node</span> أو أكثر بداخله.</p></li>
+<li><p><span class="word">Leaf Node</span>: هو الـ <span class="word">Node</span> التي لا يوجد أي <span class="word">Node</span> تحتها.</p></li>
+</ul>
+<br/>
+<h3>التعامل مع الـ <span class="word">Node</span></h3>
+<p>برمجياً, أي <span class="word">Node</span> متوفر في <span class="word">JavaFX</span> هو في الأصل مشتق من الكلاس <code data-enlighter-language="java">Node</code> الموجود في المسار <code data-enlighter-language="java">javafx.scene.Node</code>.<br/>
+	ستتعرف على جميع أنواع الـ <span class="word">Nodes</span> المتوفرة في <span class="word">JavaFX</span> لاحقاً في هذه الدورة.</p>
+</article>
+<article>
+<h2>ما هو الـ <span class="word">Scene Graph</span> ؟</h2>
+<p>الـ <span class="word">Scene Graph</span> عبارة عن رسم توضيحي لكل الـ <span class="word">Nodes</span> التي تم إضافتها في النافذة, و كما تلاحظ في الصورة التي في الأعلا يكون دائماً شكلها هرمي.<br/>
+	إذاً الـ <span class="word">Scene Graph</span> هو مجرد رسم توضيحي للأشياء التي تم إضافتها في الـ <span class="word">Scene</span> حتى يسهل فهمها و التعديل عليها في المستقبل.</p>
+</article>
+<article>
+<h2>دورة حياة تطبيقات <span class="word">JavaFX</span></h2>
+<p>الكلاس <code data-enlighter-language="java">Application</code> الموجود في المسار <code data-enlighter-language="java">javafx.application.Application</code> يحتوي على الدوال <code data-enlighter-language="java">launch()</code> - <code data-enlighter-language="java">init()</code> - <code data-enlighter-language="java">start()</code> - <code data-enlighter-language="java">stop()</code>.<br/>
+	هذه الدوال تمثل دورة حياة أي تطبيق تم بناؤه في <span class="word">JavaFX</span> و هي تستدعى بشكل تلقائي كما في الصورة التالية.</p>
+<p><img src="life-cycle-of-javafx-applications.png"/></p>
+<br/>
+<h3>طريقة بناء تطبيقات <span class="word">JavaFX</span></h3>
+<p>عند إنشاء تطبيق بواسطة <span class="word">JavaFX</span>, يجب جعل الكلاس الأساسي في هذا التطبيق يرث من الكلاس <code data-enlighter-language="java">Application</code>.<br/>
+	الكلاس الذي يرث من الكلاس <code data-enlighter-language="java">Application</code> يعتبر الـ <span class="word">Main Class</span> في هذا التطبيق.<br/>
+	بداخل الأساسي في التطبيق يجب أن تفعل <span class="word">Override</span> للدالة <code data-enlighter-language="java">start()</code> التي ورثها من الكلاس <code data-enlighter-language="java">Application</code> و تضع فيها كود إنشاء النافذة الرئيسية في التطبيق.</p>
+<p>عندما تفعل هاتين الخطوتين سيقوم مشغّل تطبيقات جافا <span class="inline">( أي الـ <span class="word">JVM</span> )</span> بتنفيذ دوال الكلاس <code data-enlighter-language="java">Application</code> بشكل تلقائي و بنفس الترتيب الذي وضعناه في الصورة أعلاه.<br/>
+<span class="note">ملاحظة:</span> عند الوراثة من الكلاس <code data-enlighter-language="java">Application</code> تصبح غير مجبر على وضع الدالة <code data-enlighter-language="java">main()</code> في البرنامج. سترى ذلك لاحقاً.</p>
+<br/>
+<p>الجدول التالي يحتوي على دوال الكلاس <code data-enlighter-language="java">Application</code> التي تستدعي بشكل تلقائي في كل تطبيق مبني بواسطة <span class="word">JavaFX</span>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public static void launch(String... args)</code></span>
+			تعتبر نقطة البداية في التطبيق حيث أنها أول دالة تتنفذ عند تشغيل التطبيق.<br/>
+			عندما تتنفذ تقوم فقط باستدعاء الدالة <code data-enlighter-language="java">init()</code>.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">args</code> يمكنك عدم وضع أي شيء, أو تمرير مصفوفة من النصوص, أو وضع العدد الذي تريده من النصوص مع وضع فاصلة بين كل نصين.<br/><br/>
+<span class="note">ملاحظة:</span> إذا لم تقم بتعريف الدالة <code data-enlighter-language="java">main()</code> في البرنامج سيتم إستدعاء الدالة <code data-enlighter-language="java">launch()</code> بشكل تلقائي عند تشغيل التطبيق.<br/>
+			أما إذا قمت بتعريف الدالة <code data-enlighter-language="java">main()</code>  فسيكون عليك إستدعاء <code data-enlighter-language="java">launch()</code> بداخلها حتى تتنفذ.<br/><br/>
+			ترمي الإستثناء <span class="code red">IllegalStateException</span> في حال تم إستدعاءها أكثر من مرة في التطبيق.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void init() throws Exception</code></span>
+			تعتبر نقطة تمهيد التطبيق حيث أنه يمكنك أن تفعل لها <span class="word">Override</span> في حال أردت أن يتم تنفيذ أي كود في لحظة إنشاء التطبيق.<br/>
+<span class="note">إنتبه:</span> لا يمكنك كتابة كود إنشاء الواجهة الرئيسية للبرنامج فيها.<br/><br/>
+			ترمي الإستثناء <span class="code red">Exception</span> في حال حدث أي خطأ عندما يتم إستدعاءها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public abstract void start(Stage primaryStage) throws Exception</code></span>
+			تعتبر نقطة تشغيل التطبيق و هي الدالة الوحيدة في الكلاس <code data-enlighter-language="java">Application</code> التي يجب أن تفعل لها <span class="word">Override</span> لأنها معرفة كـ <code data-enlighter-language="java">abstract</code>.<br/>
+			إذاً هذه الدالة تعتبر المكان الذي يجب أن تكتب فيه كود إنشاء الواجهة الرئيسية للبرنامج. و هي تستدعي بعد أن تتنفذ الدالة <code data-enlighter-language="java">init()</code>.<br/>
+			الباراميتر <code data-enlighter-language="java">primaryStage</code> يمثل الواجهة الرئيسية للتطبيق و التي يمكنك إظهارها بواسطة الدالة <code data-enlighter-language="java">show()</code>.<br/><br/>
+			ترمي الإستثناء <span class="code red">Exception</span> في حال حدث أي خطأ عندما يتم إستدعاءها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void stop()</code></span>
+			تعتبر نقطة النهاية في التطبيق حيث أنه يمكنك أن تفعل لها <span class="word">Override</span> في حال أردت أن يتم تنفيذ أي كود عند الخروج من التطبيق, مثل إغلاق أي شيء كان مفتوحاً من داخل التطبيق, أو حفظ أي عملية قام بها المستخدم قبل الخروج من التطبيق إلخ..<br/>
+			ترمي الإستثناء <span class="code red">Exception</span> في حال حدث أي خطأ عندما يتم إستدعاءها.</td>
+</tr>
+</table>
+<br/>
+<p>إذاً في كل تطبيق <span class="word">JavaFX</span> تقوم ببنائه يجب أن تفعل <span class="word">Override</span> للدالة <code data-enlighter-language="java">start()</code> و عندك الحرية في أن تفعل <span class="word">Override</span> للدوال <code data-enlighter-language="java">stop()</code> و <code data-enlighter-language="java">init()</code>.</p>
+<br/><br/>
+<p>المثال التالي يظهر لك كيف أننا إذا قمنا بإستدعاء الدالة <code data-enlighter-language="java">launch()</code> من الدالة <code data-enlighter-language="java">main()</code> سيؤدي ذلك إلى إستدعاء الدالة <code data-enlighter-language="java">init()</code> ثم الدالة <code data-enlighter-language="java">start()</code> عند تشغيل التطبيق و الدالة <code data-enlighter-language="java">stop()</code> عند الخروج منه.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import javafx.application.Application;
+import javafx.stage.Stage;
+ 
+public class Main extends Application {
+ 
+    // هذه أول دالة سيتم إستدعاءها عند تشغيل البرنامج
+    // init() و التي ستقوم بدورها باستدعاء الدالة launch() بداخل هذه الدالة قمنا باستدعاء الدالة
+    public static void main(String[] args) {
+        System.out.println("main() method is called");
+        launch();
+    }
+ 
+    @Override
+    public void init() {
+        System.out.println("init() method is called");
+    }
+ 
+    // init() سيتم استدعاء هذه الدالة بشكل تلقائي في حال تم استدعاء الدالة
+    @Override
+    public void start(Stage primaryStage) {
+        System.out.println("start() method is called");
+        primaryStage.show();
+    }
+ 
+    // سيتم استدعاء هذه الدالة عند الخروج من التطبيق
+    @Override
+    public void stop() {
+        System.out.println("stop() method is called");
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>ستظهر لك النافذة التالية عند التشغيل.</p>
+<div class="image-box">
+<a href="example-of-life-cycle-in-javafx-applications.png" target="_blank"><img alt="example of the life cycle in javafx applications" src="example-of-life-cycle-in-javafx-applications.png"/></a>
+</div>
+<p><span class="point">•</span>سنحصل على النتيجة التالية في الـ <span class="word">Console</span> عند التشغيل مع الإشارة إلى أن السطر الأخير الذي قمنا بتعليمه باللون الأصفر سيظهر عند الخروج من التطبيق.</p>
+<div class="code-box">
+			main() method is called<br/>
+			init() method is called<br/>
+			start() method is called<br/>
+<span class="yellow-bg">stop() method is called</span>
+</div>
+</div>
+<br/>
+<h3 class="note-title">إنتبه</h3>
+<div class="note-box">
+<p>إذا جعلت الكلاس يرث من الكلاس <code data-enlighter-language="java">Application</code> و قمت بتعريف الدالة <code data-enlighter-language="java">main()</code> فيه.<br/>
+		في هذه الحالة تكون مجبر على إستدعاء الدالة <code data-enlighter-language="java">launch()</code> حتى يتم إستدعاء الدوال <code data-enlighter-language="java">init()</code> و <code data-enlighter-language="java">start()</code> و <code data-enlighter-language="java">stop()</code>.</p>
+</div>
+</article>
+<article>
+<h2>لا حاجة للدالة <code data-enlighter-language="java">main()</code> في تطبيقات <span class="word">JavaFX</span></h2>
+<p>يمكنك عدم وضع الدالة <code data-enlighter-language="java">main()</code> في التطبيق الذي تبنيه بواسطة <span class="word">JavaFX</span> لأنك عندما تجعل الكلاس الأساسي في التطبيق يرث من الكلاس <code data-enlighter-language="java">Application</code> سيفهم مشغّل تطبيقات جافا <span class="inline">( أي الـ <span class="word">JVM</span> )</span> أن أول دالة سيتم إستدعاءها عند تشغيل البرنامج هي الدالة <code data-enlighter-language="java">init()</code> ما لم تقم بتعريف الدالة <code data-enlighter-language="java">main()</code>.</p>
+<br/>
+<p>المثال التالي يظهر لك أنه عند عدم وضع الدالة <code data-enlighter-language="java">main()</code> سيتم إعتبار الدالة <code data-enlighter-language="java">init()</code> هي نقطة البداية في التطبيق.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import javafx.application.Application;
+import javafx.stage.Stage;
+ 
+public class Main extends Application {
+ 
+    //هذه أول دالة سيتم إستدعاءها عند تشغيل البرنامج
+    @Override
+    public void init() {
+        System.out.println("init() method is called");
+    }
+ 
+    // init() سيتم استدعاء هذه الدالة بشكل تلقائي في حال بعد أن يتم إستدعاء الدالة
+    @Override
+    public void start(Stage primaryStage) {
+        System.out.println("start() method is called");
+        primaryStage.show();
+    }
+ 
+    // سيتم استدعاء هذه الدالة عند الخروج من التطبيق
+    @Override
+    public void stop() {
+        System.out.println("stop() method is called");
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>ستظهر لك النافذة التالية عند التشغيل.</p>
+<div class="image-box">
+<a href="example-of-life-cycle-in-javafx-applications.png" target="_blank"><img alt="example of the life cycle in javafx applications" src="example-of-life-cycle-in-javafx-applications.png"/></a>
+</div>
+<p><span class="point">•</span>سنحصل على النتيجة التالية في الـ <span class="word">Console</span> عند التشغيل مع الإشارة إلى أن السطر الأخير الذي قمنا بتعليمه باللون الأصفر سيظهر عند الخروج من التطبيق.</p>
+<div class="code-box">
+			init() method is called<br/>
+			start() method is called<br/>
+<span class="yellow-bg">stop() method is called</span>
+</div>
+</div>
+<br/>
+<h3 class="note-title">إنتبه</h3>
+<div class="note-box">
+<p>في حال كنت تنوي إستخدام أحد العناصر الموجودة في <span class="word">Java Swing</span> فإنك مجبر على وضع الدالة <code data-enlighter-language="java">main()</code> في البرنامج.</p>
+<p>في حال كنت تستخدم بيئة تطوير <span class="inline">( <span class="word">IDE</span> )</span> لا تحتوي على جميع الأدوات المتوفرة في <span class="word">JavaFX</span> و تحديداً الأداة <span class="inline">( <span class="word">JavaFX Launcher</span> )</span> التي تتولى تشغيل برامج <span class="word">JavaFX</span> من داخل بيئة التطوير فإنك مجبر على وضع الدالة <code data-enlighter-language="java">main()</code> في البرنامج حتى لا يظهر لك خطأ مفاده أنه لا يمكن تشغيل البرنامج لأنه لم يتم العثور على الدالة <code data-enlighter-language="java">main()</code>.</p>
+<p>لهذا ستجد أننا وضعنا الدالة <code data-enlighter-language="java">main()</code> في جميع الأمثلة حتى تعمل جميع الأمثلة عندكم مهما كانت بيئة التطوير التي تعتمدون عليها و بدون الحاجة لإجراء أي تعديل على الكود.</p>
+</div>
+</article>
+<article>
+<h2>مراحل بناء واجهة مستخدم بسيطة في <span class="word">JavaFX</span></h2>
+<p>في المثال التالي قمنا ببناء واجهة مستخدم بسيطة جداً باستخدام <span class="word">JavaFX</span> حتى تعرف كيف يجب أن تفكر عند بناء أي تطبيق.</p>
+<p><span class="note">إنتبه:</span> الهدف من هذا المثال هو تعليمك كيف تبدأ ببناء التطبيق خطوة خطوة و ليس إنشاء التطبيق بأفضل صورة ممكنة لأنك غير مستعد لهذا بعد.</p>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import javafx.application.Application;
+import javafx.collections.ObservableList;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+ 
+public class Main extends Application {
+ 
+    @Override
+    public void start(Stage stage) {
+        // يمثل النص الذي نريد إضافته في النافذة Text هنا قمنا بإنشاء كائن من الكلاس
+        Text text = new Text("Welcome to harmash.com");
+ 
+        // هنا قمنا بتحديد حجم خط النص
+        text.setFont(new Font(42));
+ 
+        // هنا قمنا بتحديد مكان ظهور النص في النافذة
+        text.setX(60);
+        text.setY(160);
+ 
+        // في النافذة Root Node لأننا ننوي جعله الـ Group هنا قمنا بإنشاء كائن من الكلاس
+        Group root = new Group();
+ 
+        // root في الكائن text هنا قمنا بإضافة الكائن
+        root.getChildren().add(text);
+ 
+        // فيها و تحديد حجمها Node كأول root هنا قمنا بإنشاء محتوى النافذة مع تعيين الكائن
+        Scene scene = new Scene(root, 600, 300);
+ 
+        // هنا وضعنا عنوان للنافذة
+        stage.setTitle("Sample Application");
+ 
+        // أي وضعنا محتوى النافذة الذي قمنا بإنشائه للنافذة .stage في كائن الـ scene هنا وضعنا كائن الـ
+        stage.setScene(scene);
+ 
+        // هنا قمنا بإظهار النافذة
+        stage.show();
+    }
+ 
+    // هنا قمنا بتشغيل التطبيق
+    public static void main(String[] args) {
+        launch(args);
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>ستظهر لك النافذة التالية عند التشغيل.</p>
+<div class="image-box">
+<a href="sample-javafx-application.png" target="_blank"><img src="sample-javafx-application.png"/></a>
+</div>
+</div>
+<br/><br/>
+<h3>كيف يتم إضافة و حذف عناصر من الحاويات</h3>
+<p>في <span class="word">JavaFX</span> يوجد أنواع عديدة من الحاويات التي يمكنك إستخدامها لترتيب الأشياء التي تضعها في النافذة بالشكل الذي تريده.<br/>
+	جميع الحاويات تم بناؤها بطريقة زكية جداً لجعل المبرمج قادر على إضافة و حذف عناصر منها بكل سهولة أثناء عمل التطبيق.</p>
+<p>ما فعلوه في الواقع, هو ربط كل حاوية بشكل إفتراضي بكائن نوعه <span class="inline"><code data-enlighter-language="java">ObservableList</code>.</span><br/>
+	بعدها قالوا لنا التالي:</p>
+<ul class="explain">
+<li><p>إذا أردت أن تضيف شيء في الحاوية, إستدعي فقط الدالة <code data-enlighter-language="java">getChildren()</code> التي ترجع لك كائن <span class="inline">الـ <code data-enlighter-language="java">ObservableList</code></span> الخاص بهذه الحاوية.<br/>
+		بعدها يمكنك إستدعاء الدالة <code data-enlighter-language="java">add()</code> من هذا الكائن إذا أردت إضافة شيء واحد.<br/>
+		و يمكنك إستدعاء الدالة <code data-enlighter-language="java">addAll()</code> إذا أردت إضافة عدة أشياء دفعة واحدة.</p></li>
+<li><p>إذا أردت أن تحذف شيء من الحاوية, إستدعي فقط الدالة <code data-enlighter-language="java">getChildren()</code> التي ترجع لك كائن <span class="inline">الـ <code data-enlighter-language="java">ObservableList</code></span> الخاص بهذه الحاوية.<br/>
+		بعدها يمكنك إستدعاء الدالة <code data-enlighter-language="java">remove()</code> من هذا الكائن إذا أردت حذف شيء واحد.<br/>
+		و يمكنك إستدعاء الدالة <code data-enlighter-language="java">removeAll()</code> إذا أردت حذف جميع الأشياء الموجودة فيها دفعة واحدة.</p></li>
+</ul>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,1125 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>JavaFX - طريقة إنشاء لعبة Tic Tac Toe</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../javafx-icon.png"/></li>
+<li class="title">أساسيات المكتبة</li>
+<li><a href="../javafx-overview/index.html"><span class="en">JavaFX</span> - نظرة عامة</a></li>
+<li><a href="../javafx-application/index.html"><span class="en">JavaFX</span> - بنية التطبيقات</a></li>
+<li><a href="../javafx-architecture/index.html"><span class="en">JavaFX</span> - بنية المكتبة</a></li>
+<li class="title">عناصر واجهة المستخدم</li>
+<li><a href="../javafx-label/index.html"><span class="en">Label - JavaFX</span></a></li>
+<li><a href="../javafx-button/index.html"><span class="en">Button - JavaFX</span></a></li>
+<li><a href="../javafx-textfield/index.html"><span class="en">TextField - JavaFX</span></a></li>
+<li><a href="../javafx-passwordfield/index.html"><span class="en">PasswordField - JavaFX</span></a></li>
+<li><a href="../javafx-textarea/index.html"><span class="en">TextArea - JavaFX</span></a></li>
+<li><a href="../javafx-togglebutton/index.html"><span class="en">ToogleButton - JavaFX</span></a></li>
+<li><a href="../javafx-radiobutton/index.html"><span class="en">RadioButton - JavaFX</span></a></li>
+<li><a href="../javafx-checkbox/index.html"><span class="en">CheckBox - JavaFX</span></a></li>
+<li><a href="../javafx-choicebox/index.html"><span class="en">ChoiceBox - JavaFX</span></a></li>
+<li><a href="../javafx-combobox/index.html"><span class="en">ComboBox - JavaFX</span></a></li>
+<li><a href="../javafx-listview/index.html"><span class="en">ListView - JavaFX</span></a></li>
+<li><a href="../javafx-tableview/index.html"><span class="en">TableView - JavaFX</span></a></li>
+<li><a href="../javafx-treeview/index.html"><span class="en">TreeView - JavaFX</span></a></li>
+<li><a href="../javafx-slider/index.html"><span class="en">Slider - JavaFX</span></a></li>
+<li><a href="../javafx-tooltip/index.html"><span class="en">Tooltip - JavaFX</span></a></li>
+<li><a href="../javafx-progressbar/index.html"><span class="en">ProgressBar - JavaFX</span></a></li>
+<li><a href="../javafx-progressindicator/index.html"><span class="en">ProgressIndicator - JavaFX</span></a></li>
+<li><a href="../javafx-hyperlink-and-webview/index.html"><span class="en">Hyperlink + WebView - JavaFX</span></a></li>
+<li><a href="../javafx-separator/index.html"><span class="en">Separator - JavaFX</span></a></li>
+<li><a href="../javafx-colorpicker/index.html"><span class="en">ColorPicker - JavaFX</span></a></li>
+<li><a href="../javafx-datepicker/index.html"><span class="en">DatePicker - JavaFX</span></a></li>
+<li><a href="../javafx-filechooser/index.html"><span class="en">FileChooser - JavaFX</span></a></li>
+<li><a href="../javafx-htmleditor/index.html"><span class="en">HTMLEditor - JavaFX</span></a></li>
+<li><a href="../javafx-contextmenu/index.html"><span class="en">ContextMenu - JavaFX</span></a></li>
+<li><a href="../javafx-menubar/index.html"><span class="en">MenuBar - JavaFX</span></a></li>
+<li><a href="../javafx-alert/index.html"><span class="en">Alert - JavaFX</span></a></li>
+<li class="title">الحاويات</li>
+<li><a href="../javafx-group/index.html"><span class="en">Group - JavaFX</span></a></li>
+<li><a href="../javafx-pane/index.html"><span class="en">Pane - JavaFX</span></a></li>
+<li><a href="../javafx-hbox/index.html"><span class="en">HBox - JavaFX</span></a></li>
+<li><a href="../javafx-vbox/index.html"><span class="en">VBox - JavaFX</span></a></li>
+<li><a href="../javafx-borderpane/index.html"><span class="en">BorderPane - JavaFX</span></a></li>
+<li><a href="../javafx-stackpane/index.html"><span class="en">StackPane - JavaFX</span></a></li>
+<li><a href="../javafx-flowpane/index.html"><span class="en">FlowPane - JavaFX</span></a></li>
+<li><a href="../javafx-tilepane/index.html"><span class="en">TilePane - JavaFX</span></a></li>
+<li><a href="../javafx-scrollpane/index.html"><span class="en">ScrollPane - JavaFX</span></a></li>
+<li><a href="../javafx-gridpane/index.html"><span class="en">GridPane - JavaFX</span></a></li>
+<li><a href="../javafx-titledpane-and-accordion/index.html"><span class="en">TitledPane + Accordion - JavaFX</span></a></li>
+<li><a href="../javafx-anchorpane/index.html"><span class="en">AnchorPane - JavaFX</span></a></li>
+<li><a href="../javafx-pagination/index.html"><span class="en">Pagination - JavaFX</span></a></li>
+<li class="title">الرسم و التلوين و التحريك</li>
+<li><a href="../javafx-class-text/index.html"><span class="en">Text - JavaFX</span></a></li>
+<li><a href="../javafx-2d-shapes/index.html"><span class="en">2D Shapes - JavaFX</span></a></li>
+<li><a href="../javafx-animations/index.html"><span class="en">Animations - JavaFX</span></a></li>
+<li><a href="../javafx-charts/index.html"><span class="en">Charts - JavaFX</span></a></li>
+<li><a href="../javafx-scene-builder/index.html"><span class="en">Scene Builder - JavaFX</span></a></li>
+<li class="title">تعلم بناء تطبيقات و ألعاب</li>
+<li><a href="../javafx-projects/index.html"><span class="en">JavaFX</span> - جميع المشاريع</a></li>
+<li><a href="../javafx-who-will-win-the-million-source-code/index.html"><span class="en">JavaFX</span> - من سيربح المليون</a></li>
+<li><a href="../javafx-color-picker-source-code/index.html"><span class="en">JavaFX</span> - برنامج إختيار الألوان</a></li>
+<li><a href="../javafx-age-calculator-source-code/index.html"><span class="en">JavaFX</span> - برنامج حساب الأعمار</a></li>
+<li><a href="../javafx-ip-finder-source-code/index.html"><span class="en">JavaFX</span> - محلل عناوين المواقع</a></li>
+<li><a href="../javafx-snake-2d-source-code/index.html"><span class="en">JavaFX</span> - لعبة الأفعى <span class="en">Snake 2D</span></a></li>
+<li><a href="../javafx-calculator-source-code/index.html"><span class="en">JavaFX</span> - آلة حاسبة بسيطة</a></li>
+<li><a href="../javafx-scientific-calculator-source-code/index.html"><span class="en">JavaFX</span> - آلة حاسبة علمية</a></li>
+<li><a href="index.html"><span class="en">JavaFX</span> - لعبة <span class="en">Tic Tac Toe</span></a></li>
+<li><a href="../javafx-company-products-manager-source-code/index.html"><span class="en">JavaFX</span> - برنامج إدارة المحتوى</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">JavaFX</span>طريقة إنشاء لعبة <span class="word">Tic Tac Toe</span></h1>
+<article>
+<p>في هذا الدرس ستتعلم طريقة إنشاء لعبة <span class="inline">( <span class="word">Tic Tac Toe</span> )</span> إحترافية باستخدام إطار الـ <span class="inline"><span class="word">JavaFX</span>.</span></p>
+<p><a href="javafx-tic-tac-toe-source-code.png" target="_blank"><img alt="javafx tic tac toe source code تحميل كود لعبة tic tac toe في جافا" src="javafx-tic-tac-toe-source-code.png"/></a></p>
+<br/><br/>
+<h3>مميزات اللعبة</h3>
+<ul class="explain">
+<li><p>يمكن لعب هذه اللعبة مع صديق أو ضد الكمبيوتر نفسه.</p></li>
+<li><p>يمكن تعديل تصميمها بكل سهولة من داخل اللعبة.</p></li>
+</ul>
+<br/><br/>
+<h3>بناء اللعبة</h3>
+<ul class="explain">
+<li><p>ملفات الجافا وضعناها مباشرةً في المشروع.</p></li>
+<li><p>الصور وضعناها بداخل مجلد إسمه <code data-enlighter-language="java">images</code>.</p></li>
+</ul>
+<p><a href="javafx-tic-tac-toe-structure.png" target="_blank"><img src="javafx-tic-tac-toe-structure.png"/></a></p>
+<br/>
+<h3>خيارات التحميل</h3>
+<p>
+<a class="open-page" href="javafx-tic-tac-toe.jar">⇓ تحميل اللعبة</a>
+<a class="open-page" href="javafx-tic-tac-toe-project.zip">⇓ تحميل المشروع كاملاً</a>
+<a class="open-page" href="javafx-tic-tac-toe-images.zip">⇓ تحميل مجلد الصور فقط</a>
+</p>
+<br/><br/>
+<div class="example-box">
+<h4>كود اللعبة</h4>
+<span class="code-title java-file-icon">StartPane.java</span>
+<pre data-enlighter-language="java">
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
+
+// يمثل الحاوية التي سنظهرها عند تشغيل البرنامج StartPane الكلاس 
+public class StartPane extends Pane {
+
+	// هنا قمنا بإنشاء جميع الأشياء التي سنضعها في الحاوية
+    Button singlePlayer = new Button("Single Player");
+    Button multiPlayer = new Button("Multi Player");
+    Button settings = new Button("Settings");
+    Button about = new Button("About");
+    Button exit = new Button("Exit");
+
+	// about لأننا سنستخدمه لعرض نافذة منبثقة عندما يقوم المستخدم بالنقر على الزر Alert هنا قمنا بإنشاء كائن من الكلاس
+    Alert alert = new Alert(AlertType.INFORMATION);
+
+	// هذا كونستركور الكلاس
+    public StartPane() {
+
+		// StartPane هنا قمنا بتحديد حجم كل شيء سنضيفه في الحاوية التي يمثلها الكائن الذي ننشئه من الكلاس
+        singlePlayer.setPrefSize(240, 40);
+        multiPlayer.setPrefSize(240, 40);
+        settings.setPrefSize(240, 40);
+        about.setPrefSize(240, 40);
+        exit.setPrefSize(240, 40);
+
+		// StartPane هنا قمنا بتحديد موقع كل شيء سنضيفه في الحاوية التي يمثلها الكائن الذي ننشئه من الكلاس
+        singlePlayer.setTranslateX(80);
+        singlePlayer.setTranslateY(110);
+        multiPlayer.setTranslateX(80);
+        multiPlayer.setTranslateY(170);
+        settings.setTranslateX(80);
+        settings.setTranslateY(230);
+        about.setTranslateX(80);
+        about.setTranslateY(290);
+        exit.setTranslateX(80);
+        exit.setTranslateY(350);
+
+		// StartPane هنا قمنا بإضافة كل شيء قمنا بإنشائه في الحاوية التي يمثلها الكائن الذي ننشئه من الكلاس
+        getChildren().add(singlePlayer);
+        getChildren().add(multiPlayer);
+        getChildren().add(settings);
+        getChildren().add(about);
+        getChildren().add(exit);
+
+		// singlePlayer هنا قمنا بتحديد ما سيحدث عند النقر على الزر الذي يمثله الكائن
+		// مكان الحاوية الحالية singlePlayerPane لعرض الحاوية التي يمثلها الكائن viewPane() سيتم إستدعاء الدالة الثابتة
+        singlePlayer.setOnAction((Action) -&gt; {
+            AppManager.viewPane(AppManager.singlePlayerPane);
+        });
+
+		// multiPlayer هنا قمنا بتحديد ما سيحدث عند النقر على الزر الذي يمثله الكائن
+		// مكان الحاوية الحالية multiPlayerPane لعرض الحاوية التي يمثلها الكائن viewPane() سيتم إستدعاء الدالة الثابتة
+        multiPlayer.setOnAction((Action) -&gt; {
+            AppManager.viewPane(AppManager.multiPlayerPane);
+        });
+
+		// settings هنا قمنا بتحديد ما سيحدث عند النقر على الزر الذي يمثله الكائن
+		// مكان الحاوية الحالية settings لعرض الحاوية التي يمثلها الكائن viewPane() سيتم إستدعاء الدالة الثابتة
+        settings.setOnAction((Action) -&gt; {
+            AppManager.viewPane(AppManager.settingsPane);
+        });
+
+		// about هنا قمنا بتحديد ما سيحدث عند النقر على الزر الذي يمثله الكائن
+        // alert سيتم تجهيز نص يمثل معلومات عامة عن اللعبة و الذي سنعرضه بداخل النافذة المنبثقة التي يمثلها الكائن
+        about.setOnAction((Action) -&gt; {
+            String str
+                    = "Prepared by Mhamad Harmush\n\n"
+                    + "If you have any comments, ideas.. just let me know\n\n"
+                    + "Email:   mhamad.harmush@gmail.com\n"
+                    + "Twitter &amp; Facebook:   @MhamadHarmush\n\n"
+                    + "Note\n"
+                    + "I used JDK 1.8 to compile the source code.\n\n"
+                    + "© Copyright 2019 harmash.com - All Rights Reserved";
+
+            alert.setTitle("About Tic Tac Toe");
+            alert.setHeaderText("About Tic Tac Toe");
+            alert.setContentText(str);
+            alert.showAndWait();
+        });
+
+		// exit هنا قمنا بتحديد ما سيحدث عند النقر على الزر الذي يمثله الكائن
+        exit.setOnAction((Action) -&gt; {
+            System.exit(0);
+        });
+    }
+
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">SettingsPane.java</span>
+<pre data-enlighter-language="java">
+import javafx.beans.value.ObservableValue;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+
+// ( Settings ) يمثل الحاوية التي سنظهرها عند النقر على زر ضبط اللعبة SettingsPane الكلاس 
+public class SettingsPane extends Pane {
+
+	// هنا قمنا بإنشاء جميع الأشياء التي سنضعها في الحاوية
+    Label labelForBoards = new Label("Game Board");
+    Label labelForFontSizes = new Label("Font Size");
+    ComboBox boardsComboBox = new ComboBox();
+    ComboBox fontSizesComboBox = new ComboBox();
+    Button reset = new Button("Reset Default Settings");
+    Button back = new Button("Back");
+
+	// هذا كونستركور الكلاس
+    public SettingsPane() {
+
+		// fontSizesComboBox و boardsComboBox هنا قمنا بوضع الخيارات التي يمكن للمستخدم اختيارها في الكائنين
+        boardsComboBox.getItems().addAll("Board 1", "Board 2", "Board 3", "Board 4");
+        fontSizesComboBox.getItems().addAll("Small", "Medium", "Large");
+
+		// SettingsPane هنا قمنا بتحديد حجم كل شيء سنضيفه في الحاوية التي يمثلها الكائن الذي ننشئه من الكلاس
+        labelForBoards.setPrefSize(100, 30);
+        boardsComboBox.setPrefSize(120, 30);
+        labelForFontSizes.setPrefSize(100, 30);
+        fontSizesComboBox.setPrefSize(120, 30);
+        reset.setPrefSize(240, 40);
+        back.setPrefSize(240, 40);
+
+		// SettingsPane هنا قمنا بتحديد موقع كل شيء سنضيفه في الحاوية التي يمثلها الكائن الذي ننشئه من الكلاس
+        labelForBoards.setTranslateX(80);
+        labelForBoards.setTranslateY(130);
+        boardsComboBox.setTranslateX(200);
+        boardsComboBox.setTranslateY(130);
+        labelForFontSizes.setTranslateX(80);
+        labelForFontSizes.setTranslateY(190);
+        fontSizesComboBox.setTranslateX(200);
+        fontSizesComboBox.setTranslateY(190);
+        reset.setTranslateX(80);
+        reset.setTranslateY(250);
+        back.setTranslateX(80);
+        back.setTranslateY(310);
+ 
+		// SettingsPane هنا قمنا بإضافة كل شيء قمنا بإنشائه في الحاوية التي يمثلها الكائن الذي ننشئه من الكلاس       
+        getChildren().add(labelForBoards);
+        getChildren().add(boardsComboBox);
+        getChildren().add(labelForFontSizes);
+        getChildren().add(fontSizesComboBox);
+        getChildren().add(reset);
+        getChildren().add(back);
+        
+		// boardsComboBox هنا قمنا بتحديد ما سيحدث عندما يقوم المستخدم بتغيير القيمة الظاهرة في الكائن
+        // AppManager الموضوع في الكلاس preferredBoard بناءاً على القيمة التي يختارها سيتم تمرير إسم الصورة للمتغير الثابت
+        boardsComboBox.getSelectionModel().selectedIndexProperty().addListener(
+            (ObservableValue&lt;? extends Number&gt; ov, Number oldVal, Number newVal) -&gt; {
+                switch((int)newVal) {
+                    case 0:
+                        AppManager.preferredBoard = "board_1.png";
+                        break;
+                        
+                    case 1:
+                        AppManager.preferredBoard = "board_2.png";
+                        break;
+                        
+                    case 2:
+                        AppManager.preferredBoard = "board_3.png";
+                        break;
+                        
+                    case 3:
+                        AppManager.preferredBoard = "board_4.png";
+                        break;
+                }
+        });
+ 
+		// fontSizesComboBox هنا قمنا بتحديد ما سيحدث عندما يقوم المستخدم بتغيير القيمة الظاهرة في الكائن
+        // AppManager الموضوع في الكلاس preferredFont بناءاً على القيمة التي يختارها سيتم تمرير حجم الخط للكائن الثابت
+		// لتغيير حجم خط كل الأزرار, النصوص و مربعات النصوص الموضوعة في اللعبة setFont() كما أنه سيتم استدعاء الدالة
+		fontSizesComboBox.getSelectionModel().selectedIndexProperty().addListener(
+            (ObservableValue&lt;? extends Number&gt; ov, Number oldVal, Number newVal) -&gt; {
+                
+            String selectedFont = fontSizesComboBox.getSelectionModel().getSelectedItem().toString();
+            int fontSize = 0;
+
+            switch(selectedFont) {
+                case "Small":
+                    fontSize = 15;
+                    break;
+                
+                case "Medium":
+                    fontSize = 16;
+                    break;
+                    
+                case "Large":
+                    fontSize = 17;
+                    break;
+            }
+            
+            AppManager.preferredFont = Font.font("Arial", FontWeight.BOLD, fontSize);
+            AppManager.setFont();
+
+        });
+        
+		// reset هنا قمنا بتحديد ما سيحدث عند النقر على الزر الذي يمثله الكائن
+		// لإرجاع القيم الإفتراضية التي كانت موضوعة في الحاوية AppManager الموجودة في الكلاس setDefaultSettings() سيتم استدعاء الدالة
+        reset.setOnAction((Action) -&gt; {
+			AppManager.setDefaultSettings();
+            boardsComboBox.getSelectionModel().selectFirst();
+            fontSizesComboBox.getSelectionModel().select(1);
+        });
+        
+		// back هنا قمنا بتحديد ما سيحدث عند النقر على الزر الذي يمثله الكائن
+		// مكان الحاوية الحالية startPane لعرض الحاوية التي يمثلها الكائن viewPane() سيتم إستدعاء الدالة الثابتة
+        back.setOnAction((Action) -&gt; {
+            AppManager.viewPane(AppManager.startPane);
+        });
+        
+    }
+
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">SinglePlayerPane.java</span>
+<pre data-enlighter-language="java">
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.layout.Pane;
+
+// ( Single Player ) يمثل الحاوية التي سنظهرها عند النقر على زر اللعب ضد الكمبيوتر SinglePlayerPane الكلاس 
+public class SinglePlayerPane extends Pane {
+    
+	// هنا قمنا بإنشاء جميع الأشياء التي سنضعها في الحاوية
+    Label playerNameLabel = new Label("Player Name");
+    TextField playerName = new TextField("player");
+    Button start = new Button("Start");
+    Button back = new Button("Back");
+    
+	// هذا كونستركور الكلاس
+	public SinglePlayerPane() {
+
+		// SinglePlayerPane هنا قمنا بتحديد حجم كل شيء سنضيفه في الحاوية التي يمثلها الكائن الذي ننشئه من الكلاس
+        playerNameLabel.setPrefSize(100, 30);
+        playerName.setPrefSize(130, 30);
+        start.setPrefSize(240, 40);
+        back.setPrefSize(240, 40);
+
+		// SinglePlayerPane هنا قمنا بتحديد موقع كل شيء سنضيفه في الحاوية التي يمثلها الكائن الذي ننشئه من الكلاس
+        playerNameLabel.setTranslateX(80);
+        playerNameLabel.setTranslateY(170);
+        playerName.setTranslateX(190);
+        playerName.setTranslateY(170);
+        start.setTranslateX(80);
+        start.setTranslateY(220);
+        back.setTranslateX(80);
+        back.setTranslateY(280);
+
+		// SinglePlayerPane هنا قمنا بإضافة كل شيء قمنا بإنشائه في الحاوية التي يمثلها الكائن الذي ننشئه من الكلاس   
+        getChildren().add(playerNameLabel);
+        getChildren().add(playerName);
+        getChildren().add(start);
+        getChildren().add(back);
+        
+		// start هنا قمنا بتحديد ما سيحدث عند النقر على الزر الذي يمثله الكائن
+		// مع وضع القيمة 0 كنتيجة أولية له و للكمبيوتر gamePane سيتم تمرير الإسم الذي يدخله المستخدم, كإسم اللاعب الذي سيظهر في الحاوية
+		// gamePane بعدها سيتم وضع صورة الخلفية التي اختارها المستخدم أو الصورة المختارة إفتراضياً كخلفية للعبة في الحاوية
+		// مكان الحاوية الحالية gamePane لعرض الحاوية التي يمثلها الكائن viewPane() في الأخير سيتم إستدعاء الدالة الثابتة
+        start.setOnAction((Action) -&gt; {
+            AppManager.gamePane.firstPlayerName.setText(playerName.getText());
+            AppManager.gamePane.secondPlayerName.setText("Computer");
+            AppManager.gamePane.firstPlayerScore.setText("0");
+            AppManager.gamePane.secondPlayerScore.setText("0");
+
+			// للإشارة إلى أنه سيتم اللعب ضد الكمبيوتر AppManager الموضوع في الكلاس challengeComputer للمتغير الثابت true مررنا القيمة
+            AppManager.challengeComputer = true;
+            
+            AppManager.gamePane.boardBackground
+                    .setImage(new Image(getClass().getResourceAsStream("/images/"+AppManager.preferredBoard)));
+            
+            AppManager.viewPane(AppManager.gamePane);
+        });
+
+		// back هنا قمنا بتحديد ما سيحدث عند النقر على الزر الذي يمثله الكائن
+		// مكان الحاوية الحالية startPane لعرض الحاوية التي يمثلها الكائن viewPane() سيتم إستدعاء الدالة الثابتة        
+        back.setOnAction((Action) -&gt; {
+            AppManager.viewPane(AppManager.startPane);
+        });
+    }
+    
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">MultiPlayerPane.java</span>
+<pre data-enlighter-language="java">
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.layout.Pane;
+
+// ( Multi Player ) يمثل الحاوية التي سنظهرها عند النقر على زر اللعبة بين شخصين موجودين على نفس الجهاز MultiPlayerPane الكلاس 
+public class MultiPlayerPane extends Pane {
+
+	// هنا قمنا بإنشاء جميع الأشياء التي سنضعها في الحاوية
+    Label playerXLabel = new Label("Player X");
+    Label playerOLabel = new Label("Player O");
+    TextField firstPlayerName = new TextField("player 1");
+    TextField secondPlayerName = new TextField("player 2");
+    Button start = new Button("Start");
+    Button back = new Button("Back");
+
+	// هذا كونستركور الكلاس
+    public MultiPlayerPane() {
+
+		// MultiPlayerPane هنا قمنا بتحديد حجم كل شيء سنضيفه في الحاوية التي يمثلها الكائن الذي ننشئه من الكلاس
+        playerXLabel.setPrefSize(70, 30);
+        firstPlayerName.setPrefSize(160, 30);
+        playerOLabel.setPrefSize(70, 30);
+        secondPlayerName.setPrefSize(160, 30);
+        start.setPrefSize(240, 40);
+        back.setPrefSize(240, 40);
+
+		// MultiPlayerPane هنا قمنا بتحديد موقع كل شيء سنضيفه في الحاوية التي يمثلها الكائن الذي ننشئه من الكلاس
+        playerXLabel.setTranslateX(80);
+        playerXLabel.setTranslateY(130);
+        firstPlayerName.setTranslateX(160);
+        firstPlayerName.setTranslateY(130);
+        playerOLabel.setTranslateX(80);
+        playerOLabel.setTranslateY(190);
+        secondPlayerName.setTranslateX(160);
+        secondPlayerName.setTranslateY(190);
+        start.setTranslateX(80);
+        start.setTranslateY(250);
+        back.setTranslateX(80);
+        back.setTranslateY(310);
+        
+		// MultiPlayerPane هنا قمنا بإضافة كل شيء قمنا بإنشائه في الحاوية التي يمثلها الكائن الذي ننشئه من الكلاس   
+        getChildren().add(playerXLabel);
+        getChildren().add(playerOLabel);
+        getChildren().add(firstPlayerName);
+        getChildren().add(secondPlayerName);
+        getChildren().add(start);
+        getChildren().add(back);
+
+		// start هنا قمنا بتحديد ما سيحدث عند النقر على الزر الذي يمثله الكائن
+		// مع وضع القيمة 0 كنتيجة أولية لكلا اللاعبين gamePane سيتم تمرير أسماء اللاعبين اللذين سيدخلوهما للحاوية
+		// gamePane بعدها سيتم وضع صورة الخلفية التي اختاروها أو الصورة المختارة إفتراضياً كخلفية للعبة في الحاوية
+		// مكان الحاوية الحالية gamePane لعرض الحاوية التي يمثلها الكائن viewPane() في الأخير سيتم إستدعاء الدالة الثابتة
+        start.setOnAction((Action) -&gt; {
+            AppManager.gamePane.firstPlayerName.setText(firstPlayerName.getText());
+            AppManager.gamePane.secondPlayerName.setText(secondPlayerName.getText());
+            AppManager.gamePane.firstPlayerScore.setText("0");
+            AppManager.gamePane.secondPlayerScore.setText("0");
+
+			// للإشارة إلى أنه لن يتم اللعب ضد الكمبيوتر AppManager الموضوع في الكلاس challengeComputer للمتغير الثابت false مررنا القيمة
+            AppManager.challengeComputer = false;
+            
+            AppManager.gamePane.boardBackground
+                    .setImage(new Image(getClass().getResourceAsStream("/images/"+AppManager.preferredBoard)));
+            
+            AppManager.viewPane(AppManager.gamePane);
+        });
+        
+		// back هنا قمنا بتحديد ما سيحدث عند النقر على الزر الذي يمثله الكائن
+		// مكان الحاوية الحالية startPane لعرض الحاوية التي يمثلها الكائن viewPane() سيتم إستدعاء الدالة الثابتة        
+        back.setOnAction((Action) -&gt; {
+            AppManager.viewPane(AppManager.startPane);
+        });
+    }
+    
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">AppManager.java</span>
+<pre data-enlighter-language="java">
+import javafx.scene.layout.Pane;
+import javafx.scene.text.Font;
+
+// static قمنا بإنشائه لتمرير القيم المشتركة بين حاويات اللعبة بسهولة لهذا قمنا بتعريف كل شيء فيه كـ AppManager الكلاس
+public class AppManager {
+    
+	// هنا قمنا بإنشاء كائن من كل كلاس يمثل حاوية قمنا بتجهيزه سابقاً
+    static StartPane startPane = new StartPane();
+    static SinglePlayerPane singlePlayerPane = new SinglePlayerPane();
+    static MultiPlayerPane multiPlayerPane = new MultiPlayerPane();
+    static SettingsPane settingsPane = new SettingsPane();
+    static GamePane gamePane = new GamePane();
+    
+	// SettingsPane سنخزن فيه إسم صورة خلفية اللعبة التي يستطيع المستخدم تغييرها من الحاوية preferredBoard المتغير
+    static String preferredBoard;
+
+	// SettingsPane سنخزن فيه حجم خط كل زر, نص و مربع نص أضفناه في اللعبة و الذي يستطيع المستخدم تغييره من الحاوية preferredFont الكائن
+    static Font preferredFont;
+    
+	// للإشارة إلى أنه سيتم اللعب ضد الكمبيوتر SinglePlayerPane الموضوع في الحاوية start عند النقر على الزر true سنخزن فيه القيمة challengeComputer المتغير
+    static boolean challengeComputer;
+    
+	// pane الدالة التالية نستخدمها لإخفاء أي نافذة معروضة حالياً في النافذة و عرض الحاوية التي نمررها لها فقط مكان الباراميتر
+    public static void viewPane(Pane pane)
+    {
+        startPane.setVisible(false);
+        singlePlayerPane.setVisible(false);
+        multiPlayerPane.setVisible(false);
+        settingsPane.setVisible(false);
+        gamePane.setVisible(false);
+        
+        pane.setVisible(true);
+    }
+    
+	// settingsPane الدالة التالية نستخدمها لوضع الخيارات الإفتراضية التي يمكن تغييرها في الحاوية
+    public static void setDefaultSettings()
+    {
+		// fontSizesComboBox و ثاني خيار في الكائن boardsComboBox هنا قلنا أنه سيتم إختيار أول خيار في الكائن
+        settingsPane.boardsComboBox.getSelectionModel().selectFirst();
+        settingsPane.fontSizesComboBox.getSelectionModel().select(1);
+		
+		// preferredFont لتغيير حجم خط كل زر, نص و مربع نص موضوع في اللعبة نسبةً لقيمة الكائن setFont() هنا قمنا باستدعاء الدالة
+        setFont();
+    }
+
+	// preferredFont الدالة التالية نستخدمها لتحديد حجم خط كل زر, نص و مربع نص موضوع في اللعبة نسبةً لقيمة الكائن
+    public static void setFont()
+    {
+        startPane.singlePlayer.setFont(preferredFont);
+        startPane.multiPlayer.setFont(preferredFont);
+        startPane.settings.setFont(preferredFont);
+        startPane.about.setFont(preferredFont);
+        startPane.exit.setFont(preferredFont);
+        
+        singlePlayerPane.playerNameLabel.setFont(preferredFont);
+        singlePlayerPane.playerName.setFont(preferredFont);
+        singlePlayerPane.start.setFont(preferredFont);
+        singlePlayerPane.back.setFont(preferredFont);
+        
+        multiPlayerPane.playerXLabel.setFont(preferredFont);
+        multiPlayerPane.playerOLabel.setFont(preferredFont);
+        multiPlayerPane.firstPlayerName.setFont(preferredFont);
+        multiPlayerPane.secondPlayerName.setFont(preferredFont);
+        multiPlayerPane.start.setFont(preferredFont);
+        multiPlayerPane.back.setFont(preferredFont);
+        
+        gamePane.firstPlayerName.setFont(preferredFont);
+        gamePane.secondPlayerName.setFont(preferredFont);
+        gamePane.firstPlayerScore.setFont(preferredFont);
+        gamePane.secondPlayerScore.setFont(preferredFont);
+        gamePane.currentPlayerSymbol.setFont(preferredFont);
+        gamePane.restart.setFont(preferredFont);
+        gamePane.back.setFont(preferredFont);
+        
+        
+        settingsPane.labelForBoards.setFont(preferredFont);
+        settingsPane.labelForFontSizes.setFont(preferredFont);
+        settingsPane.reset.setFont(preferredFont);
+        settingsPane.back.setFont(preferredFont);
+		
+		// لتحديد لهما setStyle() لا يملكان دالة خاصة لتحديد حجم الخط, لذلك قمنا باستخدام الدالة fontSizesComboBox و boardsComboBox الكائنين
+        settingsPane.boardsComboBox.setStyle(
+            "-fx-font-family:" + preferredFont.getName() + ";"
+           +"-fx-font-size: " + preferredFont.getSize() +"px;"
+           +"-fx-font-weight: bold;"
+        );
+        settingsPane.fontSizesComboBox.setStyle(
+            "-fx-font-family:" + preferredFont.getName() + ";"
+           +"-fx-font-size: " + preferredFont.getSize() +"px;"
+           +"-fx-font-weight: bold;"
+        );
+    }
+    
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">GamePane.java</span>
+<pre data-enlighter-language="java">
+import java.util.Random;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+
+// ( Multi Player ) و ( Single Player ) يمثل حاوية اللعب التي سنظهرها عند النقر على زر بدء اللعبة الموجود في كل من الحاويتين GamePane الكلاس 
+public class GamePane extends Pane {
+
+    // هنا قمنا بإنشاء جميع الأشياء التي سنضعها في الحاوية
+    Label firstPlayerName = new Label();
+    Label secondPlayerName = new Label();
+    Label firstPlayerScore = new Label("0");
+    Label secondPlayerScore = new Label("0");
+    Label currentPlayerSymbol = new Label();
+    GridPane boardPane = new GridPane();
+    Button[] boardButtons = new Button[3*3];
+    Button back = new Button("Back");
+    Button newGame = new Button("New Game");
+    ImageView boardBackground = new ImageView();
+
+    // سنستخدم هذا المتغير أيضاً لتحديد ما إذا كان سيتم إيقاف اللعبة بسبب فوز أحد اللاعبين
+    boolean isGameEnds;
+    
+    // سنستخدم هذا المتغير لتحديد دور من في اللعب
+    boolean isFirstPlayerTurn = true;
+    
+    // سنستخدم هذا المتغير لحساب عدد النقرات و بالتالي لتحديد ما إذا كان سيتم إيقاف اللعبة أم لا
+    int XOCounter = 0;
+    
+    // randomNumber لتوليد أرقام عشوائية عند اللعب ضد الكمبيوتر. و سنخزن الرقم في المتغير random سنستخدم الكائن
+    Random random = new Random();
+    int randomNumber;
+    
+    // O و X يمثلان الألوان الإفتراضية التي سنضعها للرموز Color هنا قمنا بإنشاء كائنين من الكلاس
+    Color xForeground = Color.BLUE;
+    Color oForeground = Color.RED;
+
+    
+    // boardPane لأننا سنستخدمه لتحديد ما سيحدث عند النقر على أي زر موضوع في الحاوية EventHandler هنا قمنا بإنشاء كائن من الإنترفيس
+    // e و تمرير الكائن الذي يمثل الزر الذي تم النقر عليه مكان الباراميتر actionPerformed() بشكل عام, سيتم استدعاء الدالة
+    EventHandler&lt;ActionEvent&gt; eventHandler = (ActionEvent e) -&gt; {
+        actionPerformed(e);
+    };
+
+    
+    // سنستخدم هذه الدالة لتلوين خلفية المربعات التي بسببها فاز اللاعب باللون الأصفر
+    private void colorBackgroundWinnerButtons(Button b1, Button b2, Button b3)
+    {
+        b1.setStyle("-fx-background-color: yellow;");
+        b2.setStyle("-fx-background-color: yellow;");
+        b3.setStyle("-fx-background-color: yellow;");
+    }
+    
+    
+    // O و X سنستخدم هذه الدالة لإنشاء الأزرار التي يمكن النقر عليها لإظهار الرموز
+    // أيضاَ boardPane و سنضيفها في الحاوية boardButtons كما أننا سنخزن هذه الأزرار في المصفوفة
+    private void createGameBoard() {
+        
+        int row = 0;
+        int column = 0;
+        
+        for (int i = 0; i &lt; boardButtons.length; i++) {
+
+            boardButtons[i] = new Button();
+
+            boardButtons[i].setPrefSize(90, 90);
+            boardButtons[i].setFocusTraversable(false);
+
+            GridPane.setMargin(boardButtons[i], new Insets(5));
+            boardButtons[i].setFont(Font.font("Arial", FontWeight.BOLD, 40));
+
+            boardPane.add(boardButtons[i], column, row);
+
+            boardButtons[i].addEventHandler(ActionEvent.ACTION, e -&gt; {
+                actionPerformed(e);
+            });
+                
+            column++;
+            if(column == 3)
+            {
+                row++;
+                column = 0;
+            }
+        }
+        
+    }
+
+    // سنستخدم هذه الدالة في كل مرة يلعب فيها اللاعبون للتأكد ما إذا كان هناك فائز أم لا
+    // لتلوين خلفية خلفية المربعات التي كانت سبب فوز الاعب colorBackgroundWinnerButtons و في حال كان يوجد فائز سيتم مناداة الدالة
+    // لإيقاف اللعبة. و سيتم إضافة واحد في نتيجة اللاعب الفائز true إلى isGameEnds كما أننا سنقوم بتغيير قيمة المتغير
+    private void checkIfGameEnds() {
+            
+        String t00 = boardButtons[0].getText();
+        String t01 = boardButtons[1].getText();
+        String t02 = boardButtons[2].getText();
+        String t10 = boardButtons[3].getText();
+        String t11 = boardButtons[4].getText();
+        String t12 = boardButtons[5].getText();
+        String t20=  boardButtons[6].getText();
+        String t21 = boardButtons[7].getText();
+        String t22 = boardButtons[8].getText();
+  
+        if (t00.equals(t01) &amp;&amp; t00.equals(t02) &amp;&amp; !t00.equals("")) {
+            isGameEnds = true;
+            colorBackgroundWinnerButtons(boardButtons[0], boardButtons[1], boardButtons[2]);
+        }
+ 
+        if (t10.equals(t11) &amp;&amp; t10.equals(t12) &amp;&amp; !t10.equals("")) {
+            isGameEnds = true;
+            colorBackgroundWinnerButtons(boardButtons[3], boardButtons[4], boardButtons[5]);
+        }
+ 
+        if (t20.equals(t21) &amp;&amp; t20.equals(t22) &amp;&amp; !t20.equals("")) {
+            isGameEnds = true;
+            colorBackgroundWinnerButtons(boardButtons[6], boardButtons[7], boardButtons[8]);
+        }
+ 
+        if (t00.equals(t10) &amp;&amp; t00.equals(t20) &amp;&amp; !t00.equals("")) {
+            isGameEnds = true;
+            colorBackgroundWinnerButtons(boardButtons[0], boardButtons[3], boardButtons[6]);
+        }
+ 
+        if (t01.equals(t11) &amp;&amp; t01.equals(t21) &amp;&amp; !t01.equals("")) {
+            isGameEnds = true;
+            colorBackgroundWinnerButtons(boardButtons[1], boardButtons[4], boardButtons[7]);
+        }
+ 
+        if (t02.equals(t12) &amp;&amp; t02.equals(t22) &amp;&amp; !t02.equals("")) {
+            isGameEnds = true;
+            colorBackgroundWinnerButtons(boardButtons[2], boardButtons[5], boardButtons[8]);
+        }
+ 
+        if (t00.equals(t11) &amp;&amp; t00.equals(t22) &amp;&amp; !t00.equals("")) {
+            isGameEnds = true;
+            colorBackgroundWinnerButtons(boardButtons[0], boardButtons[4], boardButtons[8]);
+        }
+ 
+        if (t02.equals(t11) &amp;&amp; t02.equals(t20) &amp;&amp; !t02.equals("")) {
+            isGameEnds = true;
+            colorBackgroundWinnerButtons(boardButtons[2], boardButtons[4], boardButtons[6]);
+        }
+        
+        if( XOCounter &gt;= 9)
+        {
+            isGameEnds = true;
+            isFirstPlayerTurn = true;
+            XOCounter = 0;
+        }
+        
+        if(isGameEnds == true)
+        {
+            if(isFirstPlayerTurn)
+                firstPlayerScore.setText(Integer.valueOf(firstPlayerScore.getText()) + 1 + "");
+    
+            else
+                secondPlayerScore.setText(Integer.valueOf(secondPlayerScore.getText()) + 1 + "");
+
+            XOCounter = 0;
+            newGame.requestFocus();
+        }
+        
+    }
+    
+    // موضوع  في الحاوية و لإزالة أي O و X نستخدم هذه الدالة في كل مرة عند بدء اللعب من جديد لإزالة أي رمز
+    // و لتحديد دور اللاعب الذي سيبدأ colorBackgroundWinnerButtons() ألوان موضوعة بسبب الدالة 
+    private void startNewGame() {
+
+        isGameEnds = false;
+        setCurrentPlayerSymbol();
+
+        for (Button boardButton : boardButtons) {
+            boardButton.setText("");
+            boardButton.setStyle("-fx-background-color: none; -fx-cursor: hand;");
+        }
+
+    }
+
+
+    // مما يجعلنا نعرف دور من الآن في اللعب currentPlayerSymbol كنص للكائن O أو X نستخدم هذه الدالة في كل مرة لإظهار الرمز
+    private void setCurrentPlayerSymbol() {
+        
+        if (isFirstPlayerTurn == true) {
+            currentPlayerSymbol.setText("X");
+            currentPlayerSymbol.setTextFill(xForeground);
+        } else {
+            currentPlayerSymbol.setText("O");
+            currentPlayerSymbol.setTextFill(oForeground);
+        }
+        
+    }
+
+    
+    // boardPane في هذه الدالة قمنا بتحديد ما سيحدث عندما يقوم اللاعبون بالنقر على أي زر موضوع في الحاوية
+    private void actionPerformed(ActionEvent e)
+    {
+        // clickedButton سيتم تخزين الزر الذي تم النقر عليه بشكل مؤقت في الكائن
+        Button clickedButton = (Button) e.getSource();
+        
+        // سيحدث التالي O أو X إذا لم تكن اللعبة قد انتهت و كان المستخدم قد قام بالنقر على زر لا يوجد عليه رمز
+        if( isGameEnds == false &amp;&amp; clickedButton.getText().equals("") )
+        {
+            // إذا كان يوجد لاعبين يلعبان ضد بعضهما سيتم وضع رمز اللاعب الحالي على الزر الذي تم النقر عليه
+            if(AppManager.challengeComputer == false)
+            {
+                if(isFirstPlayerTurn) {
+                    clickedButton.setTextFill(xForeground);
+                    clickedButton.setText("X");
+                }
+                else {
+                    clickedButton.setTextFill(oForeground);
+                    clickedButton.setText("O");
+                }
+                
+                // بعدها سيتم التأكد ما إن فاز أم لا و سيتم تبديل الأدوار إن لم يكن قد فاز
+                checkIfGameEnds();
+                setCurrentPlayerSymbol();
+                isFirstPlayerTurn = !isFirstPlayerTurn;
+                setCurrentPlayerSymbol();
+            }
+    
+            // إذا كان اللاعب يلعب ضد الكمبيوتر
+            if (AppManager.challengeComputer == true)
+            {
+                // على الزر الذي نقر عليه و من ثم التأكد ما إن فاز أم لا X سيتم وضع الرمز
+                XOCounter++;
+                isFirstPlayerTurn = true;
+                clickedButton.setTextFill(xForeground);
+                clickedButton.setText("X");
+                checkIfGameEnds();
+                
+                // إذا لم يكن المستخدم قد فاز, أي إذا لم يتم إيقاف اللعبة, سيحد التالي
+                if(isGameEnds == false)
+                {
+                    // O هنا قمنا بجعل جميع الأزرار غير قابلة للنقر, لأننا نريد جعل الكمبيوتر الآن يقوم بالنقر و وضع الرمز
+                    for (Button boardButton : boardButtons) {
+                        boardButton.removeEventHandler(ActionEvent.ACTION, eventHandler);
+                    }
+                    
+                    // في مكان عشوائي و من ثم تأكدنا ما إن كان قد فاز أم لا O هنا جعلنا الكمبيوتر يضع الرمز
+                    XOCounter++;
+                    isFirstPlayerTurn = false;
+                    for (;;) {
+                        randomNumber = random.nextInt(9);
+                        if (boardButtons[randomNumber].getText().equals(""))
+                        {
+                            boardButtons[randomNumber].setTextFill(oForeground);
+                            boardButtons[randomNumber].setText("O");
+                            break;
+                        }
+                    }
+                    checkIfGameEnds();
+                    
+                    // X هنا قمنا بجعل جميع الأزرار قابلة للنقر من جديد, لأننا نريد جعل المستخدم قادر على النقر و وضع الرمز
+                    for (Button boardButton : boardButtons) {
+                        boardButton.addEventHandler(ActionEvent.ACTION, eventHandler);
+                    }
+                }
+            }
+    
+        } 
+    }
+    
+    // هذا كونستركور الكلاس
+    public GamePane() {
+        
+        // GamePane هنا قمنا بتحديد حجم كل شيء سنضيفه في الحاوية التي يمثلها الكائن الذي ننشئه من الكلاس
+        firstPlayerName.setPrefSize(150, 30);
+        secondPlayerName.setPrefSize(150, 30);
+        firstPlayerScore.setPrefSize(150, 30);
+        secondPlayerScore.setPrefSize(150, 30);
+        currentPlayerSymbol.setPrefSize(150, 30);
+        boardPane.setPrefSize(300, 300);
+        newGame.setPrefSize(140, 30);
+
+        // GamePane هنا قمنا بتحديد موقع كل شيء سنضيفه في الحاوية التي يمثلها الكائن الذي ننشئه من الكلاس
+        firstPlayerName.setTranslateY(10);
+        secondPlayerName.setTranslateX(250);
+        secondPlayerName.setTranslateY(10);
+        firstPlayerScore.setTranslateY(40);
+        secondPlayerScore.setTranslateX(250);
+        secondPlayerScore.setTranslateY(40);
+        currentPlayerSymbol.setTranslateX(120);
+        currentPlayerSymbol.setTranslateY(25);
+        boardBackground.setFitWidth(300);
+        boardBackground.setFitHeight(300);
+        boardBackground.setTranslateX(45);
+        boardBackground.setTranslateY(105);
+        boardPane.setTranslateX(45);
+        boardPane.setTranslateY(105);
+        back.setPrefSize(140, 30);
+        back.setTranslateX(20);
+        back.setTranslateY(455);
+        newGame.setTranslateX(230);
+        newGame.setTranslateY(455);
+        
+        // هنا قمنا بجعل نصوص أسماء اللاعبين, و نتيجتهم تظهر في وسط المكان المخصص لظهورهم
+        firstPlayerName.setAlignment(Pos.CENTER);
+        secondPlayerName.setAlignment(Pos.CENTER);
+        firstPlayerScore.setAlignment(Pos.CENTER);
+        secondPlayerScore.setAlignment(Pos.CENTER);
+        currentPlayerSymbol.setAlignment(Pos.CENTER);
+
+        // boardPane و التي سيتم عرضها في الحاوية boardButtons حتى تنشئ الأزرار التي سيتم وضعها في المصفوفة createGameBoard() هنا قمنا باستدعاء الدالة
+        createGameBoard();
+        
+        // GamePane هنا قمنا بإضافة كل شيء قمنا بإنشائه في الحاوية التي يمثلها الكائن الذي ننشئه من الكلاس   
+        getChildren().add(firstPlayerName);
+        getChildren().add(secondPlayerName);
+        getChildren().add(firstPlayerScore);
+        getChildren().add(secondPlayerScore);
+        getChildren().add(currentPlayerSymbol);
+        getChildren().add(boardPane);
+        getChildren().add(boardBackground);
+        getChildren().add(back);
+        getChildren().add(newGame);
+
+        // لبدء لعبة جديدة startNewGame() هنا قمنا باستدعاء الدالة
+        startNewGame();
+        
+        // back هنا قمنا بتحديد ما سيحدث عند النقر على الزر الذي يمثله الكائن
+        // لعرض الحاوية التي كانت معروضة قبل عرض الحاوية الحالية viewPane() سيتم إستدعاء الدالة الثابتة   
+        back.setOnAction((Action) -&gt; {
+
+            startNewGame();
+            
+            if (AppManager.challengeComputer)
+                AppManager.viewPane(AppManager.singlePlayerPane);
+            
+            else
+                AppManager.viewPane(AppManager.multiPlayerPane);
+            
+        });
+
+        // newGame هنا قمنا بتحديد ما سيحدث عند النقر على الزر الذي يمثله الكائن
+        // لبدء اللعبة من جديد startNewGame() سيتم استدعاء الدالة
+        newGame.setOnAction((Action) -&gt; {
+            startNewGame();
+        });
+
+    }
+
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+    
+    @Override
+    public void start(Stage stage) {
+        
+		// لتحديد خصائص الخط الإفتراضي الذي سيتم وضعه لكل setDefaultSettings() هنا قمنا باستدعاء الدالة الثابتة
+		// زر, نص و مربع نص تم وضعه في اللعبة. بالإضافة إلى الصورة التي سيتم وضعها كخلفية في حاوية اللعب
+        AppManager.setDefaultSettings();
+        
+		// لكل الحاويات التي سنضعها في اللعبة Root Node و الذي سنضعه كـ Pane هنا قمنا بإنشاء كائن من الكلاس
+        Pane root = new Pane();
+        
+		// حتى نكون قادرين على عرضها في النافذة root في الكائن AppManager هنا قمنا بإضافة جميع الحاويات التي أنشأناها في الكلاس
+        root.getChildren().add(AppManager.startPane);
+        root.getChildren().add(AppManager.singlePlayerPane);
+        root.getChildren().add(AppManager.multiPlayerPane);
+        root.getChildren().add(AppManager.settingsPane);
+        root.getChildren().add(AppManager.gamePane);
+        
+		// لها لأننا نريد عرض هذه الحاوية في النافذة عند تشغيل اللعبة startPane و تمرير الحاوية AppManager من الكلاس viewPane() هنا قمنا باستدعاء الدالة الثابتة
+        AppManager.viewPane(AppManager.startPane);
+
+        // فيها و تحديد حجمها Node كأول root هنا قمنا بإنشاء محتوى النافذة مع تعيين الكائن
+        Scene scene = new Scene(root, 380, 500);
+        
+		// هنا قمنا بإنشاء و إظهار نافذة اللعبة مع جعل حجمها غير قابل للتكبير أو التصغي
+        stage.setTitle("Tic Tac Toe");
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>هذه الصور جميعها من اللعبة.</p>
+<div class="image-box">
+<a href="javafx-tic-tac-toe-all-panels.png" target="_blank"><img alt="javafx tic tac toe source code تحميل كود لعبة tic tac toe في جافا" src="javafx-tic-tac-toe-all-panels.png"/></a>
+</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

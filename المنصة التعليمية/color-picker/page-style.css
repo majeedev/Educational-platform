@@ -1,0 +1,125 @@
+﻿@charset "UTF-8";
+
+.inline-box {
+	text-align: center;
+	display: block;
+}
+
+.centered-box {
+    text-align: center;
+    display: inline-block;
+    max-width: 910px;
+    width: 100%;
+}
+#color_container {display:inline-bolck;}
+
+#color_list_box#, #result_box, #selected_color_box {
+	float: right;
+	text-align: center;
+}
+
+#color_list {
+    display: inline-block;
+    direction: ltr;
+    height: 225px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    box-shadow: 0px 0px 10px #aaa;
+}
+
+#result {
+    display: inline-block;
+    text-align: center;
+    direction: ltr;
+    font-weight: bold;
+	margin: 30px 10px 0px 10px;
+}
+
+#result tr td{
+    font-size: 15px;
+    padding: 8px 3px;
+	font-family: Helvetica, Arial, Sans-Serif;
+}
+
+#status{
+    direction: rtl;
+	text-align: right;
+}
+
+
+#result tr td input{
+    display:block;
+	height: 35px;
+    padding: 5px;
+	direction: ltr;
+}
+
+#selected_color {
+    display: inline-block;
+    width: 100%;
+    max-width: 225px;
+    height: 225px;
+    text-align: center;
+    font-size: 28px;
+    color: #000;
+    background-color: #086A87;
+    border-radius: 5px;
+	padding-top: 26px;
+	margin: 0px 10px 0px 10px;
+}
+
+#selected_color span {
+    display: block;
+    padding-top: 23px;
+    text-align: center;
+    width: 225px;
+	font-family: droid_arabic_naskh_regular;
+}
+
+#colorchart {
+    display:block;
+    list-style-type:none;
+	width:375px;
+	height:225px;
+	overflow-x:auto;
+	overflow-y:hidden;
+	white-space:nowrap;
+	padding: 0px;
+	box-sizing: initial;
+}
+
+#colorchart li {
+	display:inline-block;
+	float:left;
+}
+
+#colorchart a {
+    display:block;
+    width:15px;
+    height:15px;
+	cursor:pointer;
+}
+
+#colorchart a:hover{
+    border-top:1px solid black;
+    border-left:1px solid black;
+    border-right:1px solid white;
+    border-bottom:1px solid white;
+}
+
+.helper {
+	clear:both;	
+	display: block;
+}
+
+#ads {
+	padding-top: 15px;
+	margin-top: 40px;
+	display: block;
+    background: #d4d4d4;
+	text-align: center;
+}

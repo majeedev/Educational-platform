@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس سنتعلم طريقة إضافة Index للعامود مما يجعل البحث فيه عن القيم أسرع" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>SQL Indexes | الفهارس و أنواعها في SQL</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../database-icon.png"/></li>
+<li class="title">كيف أبدأ بالتعلم</li>
+<li><a href="../sql-overview/index.html"><span class="en">SQL</span> - نظرة عامة</a></li>
+<li><a href="../sql-environment-setup/index.html"><span class="en">SQL</span> - تجهيز بيئة العمل</a></li>
+<li><a href="../sql-basic-syntax/index.html"><span class="en">SQL</span> - أسلوب كتابة الأوامر</a></li>
+<li><a href="../sql-comments/index.html"><span class="en">SQL</span> - التعليقات</a></li>
+<li><a href="../sql-write-first-query/index.html"><span class="en">SQL</span> - كتابة أول إستعلام</a></li>
+<li><a href="../sql-refresh-databases-panel/index.html"><span class="en">SQL</span> - تحديث قائمة قواعد البيانات</a></li>
+<li><a href="../sql-databases-structure-in-general/index.html"><span class="en">SQL</span> - مفاهيم و مصطلحات مهمة</a></li>
+<li class="title">أوامر و دوال SQL</li>
+<li><a href="../sql-create-database/index.html"><span class="en">SQL</span> - أمر إنشاء قاعدة بيانات</a></li>
+<li><a href="../sql-drop-database/index.html"><span class="en">SQL</span> - أمر حذف قاعدة بيانات</a></li>
+<li><a href="../sql-data-types/index.html"><span class="en">SQL</span> - أهم أنواع البيانات</a></li>
+<li><a href="../sql-create-table/index.html"><span class="en">SQL</span> - أمر إنشاء جدول</a></li>
+<li><a href="../sql-drop-table/index.html"><span class="en">SQL</span> - أمر حذف جدول</a></li>
+<li><a href="../sql-use/index.html"><span class="en">SQL</span> - أمر تحديد قاعدة البيانات</a></li>
+<li><a href="../sql-insert-into/index.html"><span class="en">SQL</span> - أمر إضافة سطر في الجدول</a></li>
+<li><a href="../sql-auto-increment/index.html"><span class="en">SQL</span> - الترقيم التلقائي للأسطر</a></li>
+<li><a href="../sql-select/index.html"><span class="en">SQL</span> - أمر جلب بيانات من الجدول</a></li>
+<li><a href="../sql-select-with-concat/index.html"><span class="en">SQL</span> - دمج الأعمدة عند جلبها</a></li>
+<li><a href="../sql-select-repeat-columns-name/index.html"><span class="en">SQL</span> - تكرار إسم الأعمدة في الإستعلام</a></li>
+<li><a href="../sql-select-with-where/index.html"><span class="en">SQL</span> - جلب البيانات ضمن شروط</a></li>
+<li><a href="../sql-select-with-order/index.html"><span class="en">SQL</span> - جلب البيانات مع ترتيبها</a></li>
+<li><a href="../sql-select-distinct/index.html"><span class="en">SQL</span> - جلب بيانات خالية من التكرار</a></li>
+<li><a href="../sql-union/index.html"><span class="en">SQL</span> - دمج الجداول في جدول واحد</a></li>
+<li><a href="../sql-delete/index.html"><span class="en">SQL</span> - أمر حذف بيانات من الجدول</a></li>
+<li><a href="../sql-update/index.html"><span class="en">SQL</span> - أمر تحديث بيانات الجدول</a></li>
+<li><a href="../sql-select-with-limit/index.html"><span class="en">SQL</span> - تحديد عدد الأسطر التي سترجع</a></li>
+<li><a href="../sql-null-values/index.html"><span class="en">SQL</span> - التعامل مع الحقول الفارغة</a></li>
+<li><a href="../sql-min/index.html"><span class="en">SQL</span> - جلب أصغر قيمة في العامود</a></li>
+<li><a href="../sql-max/index.html"><span class="en">SQL</span> - جلب أكبر قيمة في العامود</a></li>
+<li><a href="../sql-count/index.html"><span class="en">SQL</span> - حساب عدد أسطر الجدول</a></li>
+<li><a href="../sql-sum/index.html"><span class="en">SQL</span> - حساب ناتج جمع قيم العامود</a></li>
+<li><a href="../sql-avg/index.html"><span class="en">SQL</span> - حساب متوسط قيم العامود</a></li>
+<li><a href="../sql-select-with-group-by/index.html"><span class="en">SQL</span> - تجميع قيم الحقول المشتركة</a></li>
+<li><a href="../sql-select-with-having/index.html"><span class="en">SQL</span> - شروط على الحقول المجمعة</a></li>
+<li><a href="../sql-insert-into-select/index.html"><span class="en">SQL</span> - نسخ البيانات في جدول آخر</a></li>
+<li><a href="../sql-case/index.html"><span class="en">SQL</span> - وضع قيمة إفتراضية لكل حالة</a></li>
+<li><a href="../sql-unique/index.html"><span class="en">SQL</span> - تخزين قيم موحدة في العامود</a></li>
+<li class="title">العلاقات بين الجداول</li>
+<li><a href="../sql-how-to-relate-tables/index.html"><span class="en">SQL</span> - كيف يتم ربط الجداول</a></li>
+<li><a href="../sql-relationships-types/index.html"><span class="en">SQL</span> - أنواع العلاقات بين الجدوال</a></li>
+<li><a href="../sql-joins/index.html"><span class="en">SQL</span> - طرق ربط معلومات الجداول</a></li>
+<li><a href="../sql-alias-for-tables/index.html"><span class="en">SQL</span> - وضع أسماء مختصرة للجداول</a></li>
+<li><a href="../sql-self-join/index.html"><span class="en">SQL</span> - ربط المعلومات في نفس الجدول</a></li>
+<li class="title">معلومات متقدمة</li>
+<li><a href="../sql-alter/index.html"><span class="en">SQL</span> - تعديل بنية الجدول بعد إنشائه</a></li>
+<li><a href="../sql-default/index.html"><span class="en">SQL</span> - وضع قيم إفتراضية للحقول</a></li>
+<li><a href="../sql-primary-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح رئيسي</a></li>
+<li><a href="../sql-foreign-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح أجنبي</a></li>
+<li><a href="../sql-check/index.html"><span class="en">SQL</span> - وضع شروط لتخزين القيم</a></li>
+<li><a href="../sql-transactions/index.html"><span class="en">SQL</span> - تنفيذ كل الأوامر أو إلغاءها كلها</a></li>
+<li><a href="index.html"><span class="en">SQL</span> - الفهارس و أنواعها</a></li>
+<li><a href="../sql-like/index.html"><span class="en">SQL</span> - البحث في الأعمدة النصية</a></li>
+<li><a href="../sql-sub-queries/index.html"><span class="en">SQL</span> - كتابة إستعلامات متداخلة</a></li>
+<li><a href="../sql-connect-to-database/index.html"><span class="en">SQL</span> - الإتصال بقاعدة البيانات عن بعد</a></li>
+<li class="title">بناء قواعد بيانات لمشاريع</li>
+<li><a href="../sql-building-database-from-scratch/index.html"><span class="en">SQL</span> - تصميم قاعدة بيانات من الصفر</a></li>
+<li><a href="../sql-download-ready-made-database/index.html"><span class="en">SQL</span> - تحميل قواعد بيانات جاهزة</a></li>
+<!--
+<li><a href="../sql-backup-database"><span class="en">SQL</span> - إنشاء نسخة من قاعدة البيانات</a></li>
+<li><a href="../sql-stored-procedures"><span class="en">SQL</span> - تعريف دوال و استدعائها</a></li>
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">SQL</span>الفهارس و أنواعها</h1>
+<article>
+<h2>مفهوم الفهارس و أنواعها</h2>
+<p>أي كتاب ورقي تقرؤه تجد في بدايته أو في نهايته فهرس يساعدك على البحث فيه بشكل سريع. فمثلاً في أغلب كتب العلوم تجد في أول الكتاب فهرس يخبرك في أي صفحة يبدأ كل درس, و في القرآن الكريم أيضاً تجد في نهايته فهرس يمكنك من خلاله معرفة في أي صفحة تبدأ كل سورة بسهولة.</p>
+<p>فكرة الفهارس في قواعد البيانات هي نفسها فكرة الفهارس في الكتب الورقية و لكنها تختلف في التطبيق, فمثلاً في قواعد البيانات أنت تقوم بإعداد الفهارس لجعل قاعدة البيانات قادرة على البحث و إيجاد المعلومات بشكل أسرع و ليس لكي تقرأ محتوى الفهرس بنفسك.</p>
+<p>لتسريع عملية البحث عن المعلومات عليك أولاً تحديد الأعمدة التي تنوي البحث من خلالها, فمثلاً إذا كنت تتعامل مع جدول يحفظ معلومات المستخدمين, و تريد إتاحة إمكانية البحث عن المستخدمين من خلال أسماء المستخدمين, فهنا سيكون عليك إضافة فهرس خاص لأسماء المستخدمين.</p>
+<p>في قواعد البيانات يوجد نوعين أساسيين من الفهارس هما <span class="word">Clustered Indexes</span> و <span class="word">Non Clustered Indexes</span> و الإثنين فكرتهما تسهيل إيجاد المعلومات.</p>
+<br/>
+<h3>مفهوم الـ <span class="word">Clustered Indexes</span></h3>
+<p>الفهرس الذي من النوع <span class="word">Clustered</span> يقوم بحفظ المعلومات من الأساس بشكل مرتب, فمثلاً عندما تقوم بتعيين أي عامود كمفتاح رئيسي <span class="inline">( <code data-enlighter-language="sql">Primary Key</code> )</span> في الجدول, تقوم قاعدة البيانات بشكل تلقائي بإضافة فهرس له نوعه <span class="word">Clustered</span> لهذا السبب كنا نجد <code>id</code> المستخدمين يتم إرجاعها بنفس الترتيب الذي تم فيه إضافتهم كالتالي.</p>
+<div class="responsive-table" style="max-width: 340px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>username</th> <th>first_name</th> <th>last_name</th>
+</tr>
+<tr>
+<td>1</td> <td>ahmad</td> <td>Ahmad</td> <td>Eid</td>
+</tr>
+<tr>
+<td>2</td> <td>ramez</td> <td>Ramez</td> <td>Morad</td>
+</tr>
+<tr>
+<td>3</td> <td>hassan</td> <td>Hassan</td> <td>Mortada</td>
+</tr>
+<tr>
+<td>4</td> <td>saad</td> <td>Saad</td> <td>Alkassem</td>
+</tr>
+<tr>
+<td>5</td> <td>zaher</td> <td>Zaher</td> <td>Fahmi</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>مفهوم الـ <span class="word">Non Clustered Indexes</span></h3>
+<p>الفهرس الذي من النوع <span class="word">Non Clustered</span> فكرته وضع فهرس خارجي لأي عامود في الجدول يتم فيه الإشارة إلى بيانات الجدول الأساسي بشكل مرتب.<br/>
+	للدقة أكثر, الفهرس الخارجي يقوم بالإشارة إلى عنوان السطر في القرص الصلب <span class="inline">( <span class="word">Physical Address in Hard Drive</span> )</span> الذي يحتوي على البيانات في الجدول.</p>
+<p>كمثال بسيط, إذا أردنا وضع فهرس <span class="word">Non Clustered</span> خاص للعامود <code>username</code> فهذا الفهرس سيحفظ قيم هذا العامود بشكل أبجدي مرتب و سيضع عنوان كل سطر في القرص الصلب تم منه إحضار القيم.<br/>
+	الطريقة التي يتم ترتيب القيم فيها لا يمكنك رؤيتها بعينك في قواعد البيانات و لكن يمكنك تخيلها كالتالي.</p>
+<div class="responsive-table" style="max-width: 260px;">
+<table class="ltr left">
+<tr>
+<th>username</th> <th>address</th>
+</tr>
+<tr>
+<td>ahmad</td> <td>AB123FD123142</td>
+</tr>
+<tr>
+<td>hassan</td> <td>AB87393F83AD4</td>
+</tr>
+<tr>
+<td>ramez</td> <td>F83AB8D47393A</td>
+</tr>
+<tr>
+<td>saad</td> <td>80DDC62384AFB</td>
+</tr>
+<tr>
+<td>zaher</td> <td>BC01234ABDFE7</td>
+</tr>
+</table>
+</div>
+<br/>
+<p>الآن في حال أردت البحث عن المستخدم من خلال <span class="inline">الـ <code>username</code></span> الخاص به فإن هذه العملية ستكون سريعة جداً حتى لو كانت قاعدة البيانات تضم مليون مستخدم, لأن قاعدة البيانات ستتمكن من إيجاد إسم المستخدم بكل سهولة في الفهرس و من بعدها ستوجهك للسطر أو الأسطر التي تملك القيمة التي بحثت عنها في الجدول الحقيقي.</p>
+<br/>
+<p class="question">متى يجب إضافة فهرس؟</p>
+<p>الفهرس تضيفه فقط في حال كنت تنوي البحث في الجدول من خلال قيم أعمدة محددة, عندها يمكنك أن تضيف فهرس لكل عامود تنوي البحث من خلاله.<br/>
+	فمثلاً تريد البحث من خلال إسم المستخدم يمكنك وضع فهرس على إسمه, تريد البحث من خلال بريد المستخدم الإلكتروني يمكنك وضع فهرس على بريده الإلكتروني, تريد البحث عن المستخدمين نسبةً لروابتهم, تريد البحث عن المستخدمين نسبةً لبلدانهم يمكنك وضع فهرس على بلدان المستخدمين و هكذا..</p>
+<p>فائدة الفهارس لن تظهر لك إن كنت تتعامل مع قاعدة بيانات صغيرة لأنك لن تشعر بفرق السرعة, و لكنها ستظهر لك حين تتعامل مع قاعدة بيانات فيها آلاف و ملايين الأسطر عندها ستلاحظ فرق كبير في الأداء و سرعة ممتازة في جلب البيانات.</p>
+<br/>
+<p class="question">هل إضافة فهرس لها تأثير سلبي على الأداء؟</p>
+<p>إضافة الفهرس تجعل إسترجاع المعلومات أسرع و لكنها تسبب بطئ عند إضافة أي معلومات جديدة في الجدول و سبب ذلك أنه كلما تم إجراء تعديل على قيمة موجودة في الجدول سيتم إعادة تحديث قيم كل فهرس مرتبط بالجدول.</p>
+</article>
+<article>
+<h2>طريقة إضافة فهرس</h2>
+<p>لإضافة فهرس جديد سواء لعامود واحد أو لأكثر من عامود في ذات الوقت, نستخدم الأمر <code data-enlighter-language="sql">CREATE INDEX</code> لفعل ذلك.</p>
+<br/>
+<h3>الشكل العام لإضافة فهرس</h3>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+CREATE INDEX index_name
+ON table_name (colums); 
+	</pre>
+<br/>
+<ul class="explain">
+<li><p>مكان الكلمة <code>index_name</code> نضع الإسم الذي نريد وضعه للفهرس.</p></li>
+<li><p>مكان الكلمة <code>table_name</code> نضع إسم الجدول الذي سنضع الفهرس لأعمدته.</p></li>
+<li><p>مكان الكلمة <code>columns</code> نضع إسم العامود الذي سيتم إنشاء الفهرس من أجله, و في حال أردت وضع أكثر من عامود يجب أن تضع فاصلة بين كل عامودين.</p></li>
+</ul>
+<br/>
+<h3>المثال الأول</h3>
+<p>الإستعلام التالي ينشئ فهرس إسمه <code>idx_username</code> خاص للعامود <code>username</code> الموجود في الجدول <span class="inline"><code>users</code>.</span></p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+CREATE INDEX idx_username
+ON users (username); 
+		</pre>
+</div>
+<br/>
+<h3>المثال الثاني</h3>
+<p>الإستعلام التالي ينشئ فهرس إسمه <code>idx_full_name</code> خاص للعامودين <code>first_name</code> و <code>last_name</code> الموجودين في الجدول <span class="inline"><code>users</code>.</span></p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+CREATE INDEX idx_full_name
+ON users (first_name, last_name); 
+		</pre>
+</div>
+</article>
+<article>
+<h2>طريقة إضافة فهرس يحتوي على قيم موحدة</h2>
+<p>لجعل العامود يقبل قيم موحدة يوجد ثلاث طرق يمكنك إتباع أحدها:</p>
+<ul class="explain">
+<li><p>جعل نوع العامود من الأساس <span class="inline"><code data-enlighter-language="sql">UNIQUE</code>.</span></p></li>
+<li><p>إضافة <code data-enlighter-language="sql">CONSTRAINT</code> للعامود نوعه <span class="inline"><code data-enlighter-language="sql">UNIQUE</code>.</span></p></li>
+<li><p>إضافة <code data-enlighter-language="sql">INDEX</code> للعامود نوعه <code data-enlighter-language="sql">UNIQUE</code> و هذا ما سنتعلمه الآن.</p></li>
+</ul>
+<br/>
+<p>لإضافة فهرس جديد سواء لعامود واحد أو لأكثر من عامود في ذات الوقت و جعلهم يقبلوا قيم موحدة فقط, نستخدم الأمر <code data-enlighter-language="sql">CREATE UNIQUE INDEX</code> لفعل ذلك.</p>
+<br/>
+<h3>الشكل العام لإضافة فهرس يحتوي على قيم موحدة فقط</h3>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+CREATE UNIQUE INDEX index_name
+ON table_name (colums); 
+	</pre>
+<br/>
+<ul class="explain">
+<li><p>مكان الكلمة <code>index_name</code> نضع الإسم الذي نريد وضعه للفهرس.</p></li>
+<li><p>مكان الكلمة <code>table_name</code> نضع إسم الجدول الذي سنضع الفهرس لأعمدته.</p></li>
+<li><p>مكان الكلمة <code>columns</code> نضع إسم العامود الذي سيتم إنشاء الفهرس من أجله, و في حال أردت وضع أكثر من عامود يجب أن تضع فاصلة بين كل عامودين.</p></li>
+</ul>
+<br/>
+<h3>المثال الأول</h3>
+<p>الإستعلام التالي ينشئ فهرس قيمه موحدة, إسمه <code>idx_username</code> و هو خاص للعامود <code>username</code> الموجود في الجدول <span class="inline"><code>users</code>.</span></p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+CREATE UNIQUE INDEX idx_username
+ON users (username); 
+		</pre>
+</div>
+<br/>
+<h3>المثال الثاني</h3>
+<p>الإستعلام التالي ينشئ فهرس قيمه موحدة, إسمه <code>idx_full_name</code> و هو خاص للعامودين <code>first_name</code> و <code>last_name</code> الموجودين في الجدول <span class="inline"><code>users</code>.</span></p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+CREATE UNIQUE INDEX idx_full_name
+ON users (first_name, last_name); 
+		</pre>
+</div>
+</article>
+<article>
+<h2>طريقة حذف الفهرس</h2>
+<p>طريقة حذف الفهرس تختلف من قاعدة بيانات لأخرى و لكن الفكرة هي نفسها تماماً.</p>
+<br/>
+<h3>في قواعد بيانات <span class="word">MySQL</span></h3>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+ALTER TABLE table_name
+DROP INDEX index_name;
+	</pre>
+<br/>
+<p>الإستعلام التالي يقوم بإلغاء قيد إسمه <span class="inline"><code>idx_username</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="sql">
+ALTER TABLE users
+DROP INDEX idx_username; 
+		</pre>
+</div>
+<br/>
+<h3>في قواعد بيانات <span class="word">SQL Server</span></h3>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+DROP INDEX table_name.index_name; 
+	</pre>
+<br/>
+<p>الإستعلام التالي يقوم بإلغاء قيد إسمه <span class="inline"><code>idx_username</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="sql">
+DROP INDEX users.idx_username; 
+		</pre>
+</div>
+<br/>
+<h3>في قواعد بيانات <span class="word">Oracle</span> / <span class="word">SQLite</span></h3>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+DROP INDEX index_name;
+	</pre>
+<br/>
+<p>الإستعلام التالي يقوم بإلغاء قيد إسمه <span class="inline"><code>idx_username</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="sql">
+DROP INDEX idx_username;
+		</pre>
+</div>
+<br/>
+<h3>في قواعد بيانات <span class="word">Access</span></h3>
+<pre data-enlighter-language="sql" data-enlighter-linenumbers="false">
+DROP INDEX index_name ON table_name;
+	</pre>
+<br/>
+<p>الإستعلام التالي يقوم بإلغاء قيد إسمه <span class="inline"><code>idx_username</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="sql">
+DROP INDEX idx_username ON users;
+		</pre>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

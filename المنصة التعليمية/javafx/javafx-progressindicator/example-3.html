@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>JavaFX - طريقة تحديد قيمة ال ProgressIndicator</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../javafx-icon.png"/></li>
+<li class="title">أساسيات المكتبة</li>
+<li><a href="../javafx-overview/index.html"><span class="en">JavaFX</span> - نظرة عامة</a></li>
+<li><a href="../javafx-application/index.html"><span class="en">JavaFX</span> - بنية التطبيقات</a></li>
+<li><a href="../javafx-architecture/index.html"><span class="en">JavaFX</span> - بنية المكتبة</a></li>
+<li class="title">عناصر واجهة المستخدم</li>
+<li><a href="../javafx-label/index.html"><span class="en">Label - JavaFX</span></a></li>
+<li><a href="../javafx-button/index.html"><span class="en">Button - JavaFX</span></a></li>
+<li><a href="../javafx-textfield/index.html"><span class="en">TextField - JavaFX</span></a></li>
+<li><a href="../javafx-passwordfield/index.html"><span class="en">PasswordField - JavaFX</span></a></li>
+<li><a href="../javafx-textarea/index.html"><span class="en">TextArea - JavaFX</span></a></li>
+<li><a href="../javafx-togglebutton/index.html"><span class="en">ToogleButton - JavaFX</span></a></li>
+<li><a href="../javafx-radiobutton/index.html"><span class="en">RadioButton - JavaFX</span></a></li>
+<li><a href="../javafx-checkbox/index.html"><span class="en">CheckBox - JavaFX</span></a></li>
+<li><a href="../javafx-choicebox/index.html"><span class="en">ChoiceBox - JavaFX</span></a></li>
+<li><a href="../javafx-combobox/index.html"><span class="en">ComboBox - JavaFX</span></a></li>
+<li><a href="../javafx-listview/index.html"><span class="en">ListView - JavaFX</span></a></li>
+<li><a href="../javafx-tableview/index.html"><span class="en">TableView - JavaFX</span></a></li>
+<li><a href="../javafx-treeview/index.html"><span class="en">TreeView - JavaFX</span></a></li>
+<li><a href="../javafx-slider/index.html"><span class="en">Slider - JavaFX</span></a></li>
+<li><a href="../javafx-tooltip/index.html"><span class="en">Tooltip - JavaFX</span></a></li>
+<li><a href="../javafx-progressbar/index.html"><span class="en">ProgressBar - JavaFX</span></a></li>
+<li><a href="index.html"><span class="en">ProgressIndicator - JavaFX</span></a></li>
+<li><a href="../javafx-hyperlink-and-webview/index.html"><span class="en">Hyperlink + WebView - JavaFX</span></a></li>
+<li><a href="../javafx-separator/index.html"><span class="en">Separator - JavaFX</span></a></li>
+<li><a href="../javafx-colorpicker/index.html"><span class="en">ColorPicker - JavaFX</span></a></li>
+<li><a href="../javafx-datepicker/index.html"><span class="en">DatePicker - JavaFX</span></a></li>
+<li><a href="../javafx-filechooser/index.html"><span class="en">FileChooser - JavaFX</span></a></li>
+<li><a href="../javafx-htmleditor/index.html"><span class="en">HTMLEditor - JavaFX</span></a></li>
+<li><a href="../javafx-contextmenu/index.html"><span class="en">ContextMenu - JavaFX</span></a></li>
+<li><a href="../javafx-menubar/index.html"><span class="en">MenuBar - JavaFX</span></a></li>
+<li><a href="../javafx-alert/index.html"><span class="en">Alert - JavaFX</span></a></li>
+<li class="title">الحاويات</li>
+<li><a href="../javafx-group/index.html"><span class="en">Group - JavaFX</span></a></li>
+<li><a href="../javafx-pane/index.html"><span class="en">Pane - JavaFX</span></a></li>
+<li><a href="../javafx-hbox/index.html"><span class="en">HBox - JavaFX</span></a></li>
+<li><a href="../javafx-vbox/index.html"><span class="en">VBox - JavaFX</span></a></li>
+<li><a href="../javafx-borderpane/index.html"><span class="en">BorderPane - JavaFX</span></a></li>
+<li><a href="../javafx-stackpane/index.html"><span class="en">StackPane - JavaFX</span></a></li>
+<li><a href="../javafx-flowpane/index.html"><span class="en">FlowPane - JavaFX</span></a></li>
+<li><a href="../javafx-tilepane/index.html"><span class="en">TilePane - JavaFX</span></a></li>
+<li><a href="../javafx-scrollpane/index.html"><span class="en">ScrollPane - JavaFX</span></a></li>
+<li><a href="../javafx-gridpane/index.html"><span class="en">GridPane - JavaFX</span></a></li>
+<li><a href="../javafx-titledpane-and-accordion/index.html"><span class="en">TitledPane + Accordion - JavaFX</span></a></li>
+<li><a href="../javafx-anchorpane/index.html"><span class="en">AnchorPane - JavaFX</span></a></li>
+<li><a href="../javafx-pagination/index.html"><span class="en">Pagination - JavaFX</span></a></li>
+<li class="title">الرسم و التلوين و التحريك</li>
+<li><a href="../javafx-class-text/index.html"><span class="en">Text - JavaFX</span></a></li>
+<li><a href="../javafx-2d-shapes/index.html"><span class="en">2D Shapes - JavaFX</span></a></li>
+<li><a href="../javafx-animations/index.html"><span class="en">Animations - JavaFX</span></a></li>
+<li><a href="../javafx-charts/index.html"><span class="en">Charts - JavaFX</span></a></li>
+<li><a href="../javafx-scene-builder/index.html"><span class="en">Scene Builder - JavaFX</span></a></li>
+<li class="title">تعلم بناء تطبيقات و ألعاب</li>
+<li><a href="../javafx-projects/index.html"><span class="en">JavaFX</span> - جميع المشاريع</a></li>
+<li><a href="../javafx-who-will-win-the-million-source-code/index.html"><span class="en">JavaFX</span> - من سيربح المليون</a></li>
+<li><a href="../javafx-color-picker-source-code/index.html"><span class="en">JavaFX</span> - برنامج إختيار الألوان</a></li>
+<li><a href="../javafx-age-calculator-source-code/index.html"><span class="en">JavaFX</span> - برنامج حساب الأعمار</a></li>
+<li><a href="../javafx-ip-finder-source-code/index.html"><span class="en">JavaFX</span> - محلل عناوين المواقع</a></li>
+<li><a href="../javafx-snake-2d-source-code/index.html"><span class="en">JavaFX</span> - لعبة الأفعى <span class="en">Snake 2D</span></a></li>
+<li><a href="../javafx-calculator-source-code/index.html"><span class="en">JavaFX</span> - آلة حاسبة بسيطة</a></li>
+<li><a href="../javafx-scientific-calculator-source-code/index.html"><span class="en">JavaFX</span> - آلة حاسبة علمية</a></li>
+<li><a href="../javafx-tic-tac-toe-source-code/index.html"><span class="en">JavaFX</span> - لعبة <span class="en">Tic Tac Toe</span></a></li>
+<li><a href="../javafx-company-products-manager-source-code/index.html"><span class="en">JavaFX</span> - برنامج إدارة المحتوى</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">JavaFX</span>طريقة تحديد قيمة <span class="inline">الـ<code data-enlighter-language="java">ProgressIndicator</code></span></h1>
+<article>
+<p>المثال التالي يعلمك طريقة تحديد قيمة <span class="inline">الـ <code data-enlighter-language="java">ProgressIndicator</code>.</span></p>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.control.ProgressIndicator;
+import javafx.stage.Stage;
+ 
+public class Main extends Application {
+ 
+    @Override
+    public void start(Stage stage) {
+
+        // مع تحديد القيمة الأولية لكل واحد منهم ProgressIndicator هنا قمنا بإنشاء 5 كائنات من الكلاس
+        ProgressIndicator progressIndicator_1 = new ProgressIndicator(0.0);
+        ProgressIndicator progressIndicator_2 = new ProgressIndicator(0.25);
+        ProgressIndicator progressIndicator_3 = new ProgressIndicator(0.5);
+        ProgressIndicator progressIndicator_4 = new ProgressIndicator(0.75);
+        ProgressIndicator progressIndicator_5 = new ProgressIndicator(1.0);
+        
+        // هنا قمنا بتحديد حجم الأشياء التي سنضيفها في النافذة
+        progressIndicator_1.setPrefSize(50, 50);
+        progressIndicator_2.setPrefSize(50, 50);
+        progressIndicator_3.setPrefSize(50, 50);
+        progressIndicator_4.setPrefSize(50, 50);
+        progressIndicator_5.setPrefSize(50, 50);
+        
+        // هنا قمنا بتحديد مكان ظهور الأشياء التي سنضيفها في النافذة
+        progressIndicator_1.setTranslateX(50);
+        progressIndicator_1.setTranslateY(100);
+        progressIndicator_2.setTranslateX(110);
+        progressIndicator_2.setTranslateY(100);
+        progressIndicator_3.setTranslateX(170);
+        progressIndicator_3.setTranslateY(100);
+        progressIndicator_4.setTranslateX(230);
+        progressIndicator_4.setTranslateY(100);
+        progressIndicator_5.setTranslateX(290);
+        progressIndicator_5.setTranslateY(100);
+ 
+        // في النافذة Root Node لأننا ننوي جعله الـ Group هنا قمنا بإنشاء كائن من الكلاس
+        Group root = new Group();
+ 
+        // root هنا قمنا بإضافة جميع الأشياء في الكائن
+        root.getChildren().add(progressIndicator_1);
+        root.getChildren().add(progressIndicator_2);
+        root.getChildren().add(progressIndicator_3);
+        root.getChildren().add(progressIndicator_4);
+        root.getChildren().add(progressIndicator_5);
+ 
+        // فيها و تحديد حجمها Node كأول root هنا قمنا بإنشاء محتوى النافذة مع تعيين الكائن
+        Scene scene = new Scene(root, 400, 250);
+ 
+        // هنا وضعنا عنوان للنافذة
+        stage.setTitle("JavaFX ProgressIndicator");
+ 
+        // أي وضعنا محتوى النافذة الذي قمنا بإنشائه للنافذة .stage في كائن الـ scene هنا وضعنا كائن الـ
+        stage.setScene(scene);
+ 
+        // هنا قمنا بإظهار النافذة
+        stage.show();
+
+    }
+ 
+    // هنا قمنا بتشغيل التطبيق
+    public static void main(String[] args) {
+        launch(args);
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>ستظهر لك النافذة التالية عند التشغيل.</p>
+<div class="image-box">
+<a href="example-3.png" target="_blank"><img alt="طريقة تحديد قيمة ال ProgressIndicator في javafx" src="example-3.png"/></a>
+</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.html");
+}
+
+@font-face {
+  font-family: "droid_arabic_naskh";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/droidnaskh-regular-webfontd41d.html?#iefix") format("embedded-opentype"), url("../fonts/droidnaskh-regular-webfont.html") format("woff2"), url("../fonts/droidnaskh-regular-webfont-2.html") format("woff"), url("../fonts/droidnaskh-regular-webfont-3.html") format("truetype"), url("../fonts/droidnaskh-regular-webfont-4.html#droid_arabic_naskhregular") format("svg");
+}
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+html, body{
+    height:100%;
+	overflow:hidden;
+	background:#666;
+}
+
+#container{
+    display: block;
+	height:100%;
+	width:100%;
+}
+
+#sourceCodeContainer, #targetCodeContainer{
+    display:inline-block;
+	float:left;
+}
+
+#sourceCodeContainer{
+    margin-right:5px;
+}
+
+#sourceCode{
+    display: block;
+    height: 100%;
+	width: 98%;
+	padding: 0px 1%;
+    border: none;
+    font-size: 14px;
+    font-family: monospace,Consolas;
+    line-height: 18px;
+    background: #F1F1F1;
+    resize: none;
+	border-radius: 0px;
+}
+
+#sourceCode::-moz-selection { background: cyan; }
+#sourceCode::selection { background: cyan; }
+
+
+#controlViewPanel {
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    text-align: center;
+    width: 20px;
+    height: 100%;
+    background: #bfbfbf;
+}
+
+#controlViewPanel span{
+	display: block;
+    font-family: arial;
+	font-weight: bold;
+	margin-top: 15px;
+    font-size: 1.2em;
+}
+
+#controlViewPanel span:hover{
+    color: #86ff86;
+    background: gray;
+}
+
+
+#targetCode{
+	height:100%;
+	width:100%;
+	border: none;
+	background:#FFF;
+}
+
+#main{
+    display:inline-block;
+	visibility:hidden;
+}
+
+
+#containerMenu{
+	display:block;
+	width:100%;
+    list-style-type: none;
+    overflow: hidden;
+	padding:8px 0px 0px 0px;
+}
+
+#containerMenu li:not(#dimensions) {
+    float: left;
+	cursor:pointer;
+    display: none;
+    text-align: center;
+    border-radius: 2px;
+    background: #343436;
+    padding: 5px;
+	font-family: "droid_arabic_naskh";
+}
+
+#containerMenu li img {
+    vertical-align: middle;
+	height:15px;
+	width:15px;
+}
+
+#containerMenu li:not(#dimensions):hover {
+    color: orange;
+    margin-top: 3px;
+	border-bottom: 1px solid #222;
+}
+
+.MenuItem{
+    color: #FFF;
+	border-bottom: 4px solid #222;
+    margin: 0px 3px 8px 3px;
+}
+
+.selectedMenuItem{
+	color:orange;
+    margin-top: 3px;
+	border-bottom: 1px solid #222;
+}
+
+.controlViewPanelClickedItem{
+    color: #86eaff;
+    background: gray;
+}
+
+#dimensions{
+    cursor:default;
+    display: none;
+	float:right;
+    text-align: center;
+    border-radius: 2px;
+    font-weight: bold;
+	font-family: arial;
+	color: #FFF;
+    padding: 7px 0px;
+	margin-right: 10px;
+}
+/*=======================================================================*/
+
+
+
+#librariesPanel {
+    display:none;
+	width:100%;
+	background:#444;
+	overflow-y:auto;
+}
+
+#librariesPanel h3{
+    display:block;
+	text-align:center;
+	color:#FFF;
+	padding:18px 0px;
+	font-family: "droid_arabic_naskh";
+	font-size: 22px;
+}
+
+#librariesPanel ul {
+    display:block;
+	width: 94%;
+	max-height:100%;
+	padding-bottom:100px;
+	margin: 0px auto;
+}
+
+#librariesPanel ul li {
+	width:96%;
+	padding:10px 2%;
+    display: block;
+	margin-bottom: 20px;
+    color: white;
+    text-decoration: none;
+    background: #222;
+    border-radius: 5px;
+    font-weight: bold;
+	font-family: verdana;
+	text-align:left;
+	clear:both;
+}
+
+
+/*=======================================================================*/
+
+
+
+#examplesPanel {
+    display:none;
+	width:100%;
+	background:#444;
+	overflow-y:auto;
+}
+
+#examplesPanel h3{
+    display:block;
+	text-align:center;
+	color:#FFF;
+	font-family:arial;
+	padding:18px 0px;
+	direction:rtl;
+}
+
+#examplesPanel ul {
+    display:block;
+	width: 100%;
+	max-width: 1200px;
+	max-height:100%;
+	padding-bottom:100px;
+	margin: 0px auto;
+}
+
+#examplesPanel ul li {
+	width:44%;
+	float:right;
+	padding:10px 2%;
+    display: inline-block;
+	margin: 0px 1% 20px 1%;
+    color: white;
+    text-decoration: none;
+    background: #222;
+    border-radius: 5px;
+    font-weight: bold;
+	font-family: verdana;
+	text-align:right;
+}
+
+
+/*=======================================================================*/
+
+
+
+.codes{
+    display:block;
+	width:99%;
+	margin-top:10px;
+	padding:10px 0.5%;
+    direction:ltr;
+    text-align:left;
+    color:#126B9C;
+    background-color:#F1F1F1;
+    border-radius:2px;
+    font-size:12px;
+	overflow-x:auto;
+	overflow-y:hidden;
+	white-space:nowrap;
+}
+
+
+.changeTextDirection {
+    direction:rtl;
+	text-align:right;
+}
+
+
+/*=======================================================================*/
+
+
+#advertisementContainer {display:none; float:right; width:120px; background:#FFF;}
+

@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>تمارين خوارزميات و هياكل البيانات - التحدي الثاني - حل التمرين الرابع بلغة C</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../algorithms-and-data-structure.png"/></li>
+<li class="title">تعرف على الدورة</li>
+<li><a href="../overview/index.html">نظرة عامة</a></li>
+<li><a href="../how-to-start/index.html">الطريقة الصحيحة للتعلم</a></li>
+<li class="title">رسم أشكال هندسية</li>
+<li><a href="../drawing-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../drawing-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../drawing-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../drawing-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../drawing-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../drawing-test-6/index.html">التحدي السادس</a></li>
+<li><a href="../drawing-test-7/index.html">التحدي السابع</a></li>
+<li><a href="../drawing-test-8/index.html">التحدي الثامن</a></li>
+<li><a href="../drawing-test-9/index.html">التحدي التاسع</a></li>
+<li><a href="../drawing-test-10/index.html">التحدي العاشر</a></li>
+<li class="title">التعامل مع الأرقام و النصوص</li>
+<li><a href="../numbers-and-strings-test-1/index.html">التحدي الأول</a></li>
+<li><a href="index.html">التحدي الثاني</a></li>
+<li><a href="../numbers-and-strings-test-3/index.html">التحدي الثالث</a></li>
+<li class="title">إجراء عمليات حسابية</li>
+<li><a href="../math-operations-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../math-operations-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../math-operations-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../math-operations-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../math-operations-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../math-operations-test-6/index.html">التحدي السادس</a></li>
+<li><a href="../math-operations-test-7/index.html">التحدي السابع</a></li>
+<li><a href="../math-operations-test-8/index.html">التحدي الثامن</a></li>
+<li><a href="../math-operations-test-9/index.html">التحدي التاسع</a></li>
+<li class="title">التعامل مع المصفوفات</li>
+<li><a href="../arrays-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../arrays-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../arrays-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../arrays-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../arrays-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../arrays-test-6/index.html">التحدي السادس</a></li>
+<li class="title">تراكيب البيانات</li>
+<li><a href="../data-structure-about-section/index.html">حول هذا القسم</a></li>
+<li><a href="../data-structure-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../data-structure-test-2/index.html">التحدي الثاني</a></li>
+<li class="title">حساب وقت الخوارزميات</li>
+<li><a href="../algorithms-complexity/index.html">مفهوم التعقيد ( Complexity )</a></li>
+<li><a href="../big-o-notation/index.html">حساب الـ Big-O Notation</a></li>
+<li><a href="../choosing-best-algorithms/index.html">إختيار الخوارزمية الأفضل</a></li>
+<li><a href="../calculate-execution-time/index.html">عرض مدة تنفيذ الكود</a></li>
+<li><a href="../useful-resources/index.html">مصادر مفيدة</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Algorithms &amp; Data Structure</span>التحدي الثاني - حل التمرين الرابع بلغة <span class="word">C</span></h1>
+<article>
+<h3>المطلوب</h3>
+<p>قم بإنشاء برنامج يطلب من المستخدم إدخال ثلاث نصوص و يخزنهم في ثلاث متغيرات نصية هي <span class="inline"><code>S1</code>,</span> <code>S2</code> و <code>S3</code> و بعدها ينفذ التالي:</p>
+<ol class="arabic">
+<li><p>يخبره ما إن كان دمج <code>S1</code> مع <code>S2</code> يساوي <code>S3</code> أم لا.</p></li>
+<li><p>يخبره ما إن كان <code>S1</code> يمثل جزء من <code>S2</code> أو يساويه <span class="inline">( أي <code>S1 == s2</code> ).</span></p></li>
+<li><p>إذا كان طول <code>S1</code> أكبر من طول <code>S2</code> قم بإضافة نص <code>S2</code> على <code>S1</code> و خزن الناتج في متغير نصي جديد إسمه <span class="inline"><code>S4</code>.</span></p></li>
+<li><p>إذا كان طول <code>S2</code> أكبر من طول <code>S1</code> قم بإضافة نص <code>S1</code> على <code>S2</code> و خزن الناتج في متغير نصي جديد إسمه <span class="inline"><code>S4</code>.</span></p></li>
+<li><p>يخبره ما إن كان <code>S2</code> يمثل جزء من ثاني نصف في <span class="inline"><code>S1</code>.</span></p></li>
+<li><p>يعرض له الأحرف الموجودة في أول نصف في <span class="inline"><code>S1</code>.</span></p></li>
+</ol>
+<br/>
+<div class="example-box">
+<h4>الحل بلغة <span class="word">C</span></h4>
+<pre data-enlighter-language="c">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#define MAX_SIZE 1000
+
+void main() {
+    
+    char S1[MAX_SIZE];
+    char S2[MAX_SIZE];
+    char S3[MAX_SIZE];
+    char * S4 = (char*)malloc(sizeof(MAX_SIZE) + 1);
+    char * concatenated = (char*)malloc(sizeof(MAX_SIZE) + 1);
+    char * temp = (char*)malloc(sizeof(MAX_SIZE) + 1);
+    
+    int counter = 0;
+    int concateIndex = 0;
+    
+    printf("Enter S1: ");
+     gets(S1);
+    
+    printf("Enter S2: ");
+    gets(S2);
+    
+    printf("Enter S3: ");
+    gets(S3);
+    
+    printf("---------------------------------------\n");
+    
+    // Part 1
+    for (int i = 0; i &lt; strlen(S1); i++)
+    {
+    	concatenated[concateIndex] = S1[i];
+    	concateIndex++;
+	}
+    for (int i = 0; i &lt; strlen(S2); i++)
+    {
+    	concatenated[concateIndex] = S2[i];
+    	concateIndex++;
+	}
+    concatenated[concateIndex] = '\0';
+    
+    printf("The concatenation of S1 and S2 is equal S3? ");
+    printf("%s\n", (strcmp(S3, concatenated) == 0)? "True": "False");
+    
+    // Part 2
+    printf("S1 is part of S2 or S1=S2? ");
+    printf("%s\n", (strstr(S2, S1) != NULL)? "True": "False");
+    
+    // Part 3
+    if (strlen(S1) &gt; strlen(S2))
+    {
+        int index = 0;
+        for (int i = 0; i &lt; strlen(S2); i++)
+        {
+            S4[index] = S2[i];
+            index++;
+        }
+        
+        for (int i = 0; i &lt; strlen(S1); i++)
+        {
+            S4[index] = S1[i];
+            index++;
+        }
+        
+        S4[index] = '\0';
+    } 
+        
+    // Part 4
+    if (strlen(S2) &gt; strlen(S1))
+    {
+        int index = 0;
+        for (int i = 0; i &lt; strlen(S1); i++)
+        {
+            S4[index] = S1[i];
+            index++;
+        }
+        
+        for (int i = 0; i &lt; strlen(S2); i++)
+        {
+            S4[index] = S2[i];
+            index++;
+        }
+        
+        S4[index] = '\0';
+    } 
+    
+    // Part 5
+    printf("S2 is part of the second half of S1? ");
+    for (int i = strlen(S1) / 2; i &lt;= strlen(S1); i++)
+    {
+        temp[counter] = S1[i];
+        counter++;
+    }
+    temp[counter] = '\0';
+    printf("%s\n", (strstr(temp, S2) != NULL)? "True": "False");
+    
+    // Part 6
+    printf("The first half characters of S1 are: ");
+    for (int i = 0; i &lt; strlen(S1) / 2; i++)
+    {
+        printf("%c", S1[i]);
+    }
+}
+		</pre>
+<br/>
+<p>سنحصل على النتيجة التالية في حال تم إدخال نفس القيم التي تم تعليمها باللون الأصفر عند التشغيل.</p>
+<div class="code-box">
+Enter S1: <span class="yellow-bg">Mhamad</span><br/>
+Enter S2: <span class="yellow-bg">Harmush</span><br/>
+Enter S3: <span class="yellow-bg">MhamadHarmush</span><br/>
+---------------------------------------<br/>
+The concatenation of S1 and S2 is equal S3? true<br/>
+S1 is part of S2 or S1=S2? false<br/>
+S2 is part of the second half of S1? false<br/>
+The first half characters of S1 are: Mha<br/>
+</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

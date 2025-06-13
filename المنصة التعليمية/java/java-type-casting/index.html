@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس شرحنا مفهوم الـ Type Casting في جافا بتفصيل شامل, و شرحنا مفاهيم الـ Upcasting و الـ Downcastin و وضعنا أمثلة شاملة حول طرق التحويل بالإضافة إلى الأخطاء التي قد تتعرض لها عند التحويل." name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>تحويل الأنواع في جافا | Java type casting</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>تحويل الأنواع في جافا</h1>
+<article>
+<h2>مفهوم الـ <span class="word">Type Casting</span></h2>
+<p><span class="word">Type Casting</span> تعني تحويل نوع الكائن أو المتغير إلى نوع شبيه له. هذا التحويل يمكن تحقيقه فقط بين <span class="word">Superclass</span> و <span class="word">Subclass</span>.</p>
+<p>بالنسبة لتحويل أنواع الكائنات. يوجد أسلوبين للتحويل و هما: <span class="word">Upcasting</span> و <span class="word">Downcasting</span>.</p>
+<ul class="explain">
+<li><p><span class="word">Upcasting</span> تعني تحويل نوع كائن من الـ <span class="word">Subclass</span> إلى نوع كائن من الـ <span class="word">Superclass</span>.</p></li>
+<li><p><span class="word">Downcasting</span> تعني تحويل نوع كائن من الـ <span class="word">Superclass</span> إلى نوع كائن الـ <span class="word">Subclass</span>.</p></li>
+</ul>
+<p>التحويل في كلا الحالتين لا يقصد منه تحويل نوع الكائن الأصلي, بل تخصيص الطريقة التي سيتعامل فيها المترجم مع الكائن.</p><br/>
+<p>إذا قمت بإنشاء كلاس إسمه <code data-enlighter-language="java">A</code>, ثم قمت بإنشاء كلاس آخر إسمه <code data-enlighter-language="java">B</code> يرث منه. و بعدها فعلت <span class="word">DownCast</span> لكائن من <code data-enlighter-language="java">A</code> على أنه <code data-enlighter-language="java">B</code>, هنا الكائن سيبقى كائن من <code data-enlighter-language="java">A</code> و لكن المترجم سيتعامل معه ككائن من <code data-enlighter-language="java">B</code>, و سيخفي خصائص الكلاس <code data-enlighter-language="java">A</code> فيه. سترى ذلك لاحقاً من خلال الأمثلة.</p>
+<br/><br/>
+<h3>طريقة تحويل أنواع الكائنات</h3>
+<p>في الصورة التالية سترى كيف نفعل عمليات الـ <span class="word">Upcasting</span> و الـ <span class="word">Downcasting</span>.</p>
+<p><a href="downcasting-and-upcasting.png" target="_blank"><img alt="downcasting and upcasting in java" src="downcasting-and-upcasting.png"/></a></p>
+<br/><br/>
+<h3>مصطلحات تقنية</h3>
+<p>تذكر دائماً أن الـ <span class="word">Upcasting</span> هي التحويل من الأسفل إلى الأعلى, و الـ <span class="word">Downcasting</span> هي التحويل من الأعلى إلى الأسفل كما في الصورة التالية:</p>
+<p><a href="downcasting-and-upcasting-2.png" target="_blank"><img alt="downcasting and upcasting in java" src="downcasting-and-upcasting-2.png"/></a></p>
+</article>
+<article>
+<h2><span class="word">Automatic Upcasting and Manual Upcasting</span></h2>
+<p>بالنسبة للـ <span class="word">Upcasting</span>, يمكنك عدم تحديد نوع الـ <span class="word">Superclass</span> المستخدم في التحويل لأن المترجم يفعل ذلك بشكل تلقائي.</p>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<p><span class="point">•</span>الطريقتين المذكورتين هنا مسموحتان في جافا و يعطيانك نفس النتيجة.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+// Manual Upcasting    &lt;-- الطريقة الأولى
+A a = (A) new B();
+
+// Automatic Upcasting &lt;-- الطريقة الثانية
+A a = new B();
+		</pre>
+</div>
+<br/>
+<ul class="explain">
+<li><p>الطريقة الأولى تسمى <span class="word">Manual Upcasting</span> لأننا قمنا بذكر النوع الذي سيتم تحويل الكائن إليه.</p></li>
+<li><p>الطريقة الثانية تسمى <span class="word">Automatic Upcasting</span> لأننا لم نقم بذكر النوع الذي سيتم تحويل الكائن إليه, و بالتالي سيقوم المترجم بذلك بشكل تلقائي.</p></li>
+</ul>
+<p>في الأمثلة التالية سنستخدم أسلوب الـ <span class="word">Automatic Upcasting</span> و ليس الـ <span class="word">Manual Upcasting</span>.</p>
+</article>
+<article>
+<h2>نقطة مهمة حول الـ <span class="word">Downcasting</span></h2>
+<p>بالنسبة للـ <span class="word">Downcasting</span>, يجب تحديد نوع الـ <span class="word">Subclass</span> المستخدم في التحويل لأن المترجم لا يفعل ذلك بشكل تلقائي, و السبب في ذلك أن التحويل من الأعلى إلى الأسفل بشكل عام يعني أن الكائن الذي تم إنشائه من الـ <span class="word">Superclass</span> سيخسر بعض بياناته عند تحويله إلى كائن من الـ <span class="word">Subclass</span>.</p>
+<p>إذاً لا يمكن أن تفعل <span class="word">DownCast</span> لكائن إلا إذا كنت قد سبق و فعلت له <span class="word">UpCast</span>.</p><br/>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+A a = new B();
+B b = a;           // Incompatible Type: A cannot be converted to B  &lt;-- [ سيظهر لك تحذير ]
+		</pre>
+<p><span class="point">•</span>إذاً هنا كان يجب تحويل نوع الكائن <code data-enlighter-language="java">a</code> حتى تحل المشكلة.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+A a = new B();
+B b = (B) a;       // هنا حللنا المشكلة و أصبح الكود سليم لا يحتوي على أي خطأ
+		</pre>
+</div>
+<br/><br/>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+B b = new A();           // Incompatible Type: A cannot be converted to B &lt;-- [ سيظهر لك تحذير ]
+		</pre>
+<p><span class="point">•</span>إذاً هنا كان يجب تحويل نوع الكائن <code data-enlighter-language="java">a</code> حتى تحل المشكلة.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+B b = (B) new A();       // هنا حللنا المشكلة و أصبح الكود سليم لا يحتوي على أي خطأ
+		</pre>
+</div>
+</article>
+<article>
+<h2>أمثلة شاملة</h2>
+<p>سنقوم بتعريف كلاس إسمه <code data-enlighter-language="java">Person</code> عبارة عن شخص, بعدها سنقوم بتعريف كلاس إسمه <code data-enlighter-language="java">Male</code> و كلاس إسمه <code data-enlighter-language="java">Female</code>, و الإثنان يرثان من الكلاس <code data-enlighter-language="java">Person</code>. أي يجب ربط الكلاسات كما في الصورة التالية:</p>
+<p><a href="type-casting-example.png" target="_blank"><img alt="downcasting and upcasting in java" src="type-casting-example.png"/></a></p>
+<br/>
+<p>الآن سنقوم ببناء جميع هذه الكلاسات, ثم سنقوم ببناء الكلاس <code data-enlighter-language="java">Main</code> لتجربة مفهوم الـ <span class="word">Type Casting</span>.<br/>
+<span class="note">إنتبه:</span> سنستخدم الدالة <code data-enlighter-language="java">getClass()</code> لمعرفة الكلاس الأصلي للكائنات.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title java-file-icon">Person.java</span>
+<pre data-enlighter-language="java">
+public class Person {
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Male.java</span>
+<pre data-enlighter-language="java">
+public class Male extends Person {
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Female.java</span>
+<pre data-enlighter-language="java">
+public class Female extends Person {
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Female hala = new Female();           // hala إسمه Female هنا قمنا بتعريف كائن عادي من
+        Male mhamad = new Male();             // mhamad إسمه Male هنا قمنا بتعريف كائن عادي من
+ 
+                                              // Upcasting هنا سنجري عملية تحويل من النوع
+        Person ziad = new Male();             // Male ثم حددنا أنه من النوع Person هنا قمنا بتعريف كائن من
+ 
+                                              // Downcasting هنا سنجري عملية تحويل من النوع
+        Female rola = new Female();           // rola إسمه Female هنا قمنا بتعريف كائن عادي من
+        Person p    = rola;                   // Upcasting هذه العملية تسمى .rola ثم حددنا أنه يشير إلى الكائن Person هنا قمنا بتعريف كائن من
+        Female rana = (Female) p;             // Downcasting هذه العملية تسمى .rola و الذي يشير في الأصل للكائن p للكائن DownCast هنا فعلنا
+ 
+                                                         // هنا سنقوم بطباعة إسم الكلاس المشتق منه كل كائن قمنا بإنشائه
+        System.out.println("1) "+ hala.getClass());      // Female كائن من الكلاس hala هنا ستخبرنا أن
+        System.out.println("2) "+ mhamad.getClass());    // male كائن من الكلاس mhamad هنا ستخبرنا أن
+        System.out.println("3) "+ ziad.getClass());      // male كائن من الكلاس ziad هنا ستخبرنا أن
+        System.out.println("4) "+ rola.getClass());      // female كائن من الكلاس rola هنا ستخبرنا أن
+        System.out.println("5) "+ p.getClass());         // Female و الذي نوعه rola لأنه أصلاً يشير إلى الكائن Female كائن من الكلاس p هنا ستخبرنا أن
+        System.out.println("6) "+ rana.getClass());      // Female كائن من الكلاس rana هنا ستخبرنا أن
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+1) class typecasting.Female
+2) class typecasting.Male
+3) class typecasting.Male
+4) class typecasting.Female
+5) class typecasting.Female
+6) class typecasting.Female 
+		</pre>
+</div>
+<br/><br/>
+<p>حسناً, لقد فهمت الآن طريقة التحويل لكنك حتماً مرتبك بشأن نتيجة التشغيل, و لعلك تتساءل إذا كانت الكائنات <code data-enlighter-language="java">rola</code>, و <code data-enlighter-language="java">p</code> و <code data-enlighter-language="java">rana</code> كلها تشير إلى نفس الكائن؟!".</p>
+<p>سنعلمك حيلة تجعلك تتأكد إذا كان يوجد أكثر من إسم يشير إلى نفس الكائن.<br/>
+	كل ما عليك أن تفعله هو طباعة عناوين الخانات التي تم تخزين الكائنات فيها في الذاكرة.</p>
+<p>سنعيد نفس المثال السابق مع عرض عناوين الخانات التي تم تخزين الكائنات فيها في الذاكرة, و نلفت الإنتباه أن هذه النتيجة تتغير من حيث أسماء العناوين التي ستظهر كلما قمت بتشغيل البرنامج (ذاكرة الحاسوب تعمل هكذا), لكن الفكرة هنا أن المتغيرات التي تشير إلى نفس الكائن ستشير إليه نفسه في الذاكرة (أي ستشير إلى نفس العنوان في الذاكرة) و هذا ما يؤكد لنا أنهم يشيرون إليه.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Female hala = new Female();
+        Male mhamad = new Male();
+ 
+        Person ziad = new Male();
+ 
+        Female rola = new Female();
+        Person p    = rola;
+        Female rana = (Female) p;
+ 
+                                                         // هنا سنقوم بطباعة عنوان كل كائن تم إنشائه في الذاكرة
+        System.out.println("1) "+ hala.toString());      // في الذاكرة hala هذا العنوان الذي يخزن الكائن
+        System.out.println("2) "+ mhamad.toString());    // في الذاكرة mhamad هذا العنوان الذي يخزن الكائن
+        System.out.println("3) "+ ziad.toString());      // في الذاكرة ziad هذا العنوان الذي يخزن الكائن
+        System.out.println("4) "+ rola.toString());      // في الذاكرة rola هذا العنوان الذي يخزن الكائن
+        System.out.println("5) "+ p.toString());         // في الذاكرة p هذا العنوان الذي يخزن الكائن
+        System.out.println("6) "+ rana.toString());      // في الذاكرة rana هذا العنوان الذي يخزن الكائن
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على نتيجة تشبه النتيجة التالية عند التشغيل لأن الأماكن المحجوزة في الذاكرة لتخزين بيانات البرامج تتبدل كما قلنا سابقاً.</p>
+<p><span class="point">•</span>قمنا بتعليم العناوين المشتركة باللون الأصفر.</p>
+<pre data-enlighter-highlight="4-6" data-enlighter-language="java" data-enlighter-linenumbers="false">
+1) typecasting.Female@60ec2ea8
+2) typecasting.Male@31eb494e
+3) typecasting.Male@4e19b97c
+4) typecasting.Female@7ae0a3f2
+5) typecasting.Female@7ae0a3f2
+6) typecasting.Female@7ae0a3f2
+		</pre>
+<p><span class="point">•</span>إذاً الكائنات الثلاثة <code data-enlighter-language="java">rola</code>, <code data-enlighter-language="java">p</code> و <code data-enlighter-language="java">rana</code> يشيرون فعلاً إلى نفس الكائن. و الكائن هنا هو كائن من الكلاس <code data-enlighter-language="java">Female</code>.</p>
+</div>
+<br/><br/>
+<p>الفكرة الأخيرة التي عليك التأكد منها هي أنه عندما نقول أن الكائن نوعه كذا و لكنه بالتحديد من النوع كذا, فإن النوع الذي حددته له هو النوع الذي سيمثل الكائن.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Person ziad = new Male();
+		</pre>
+</div>
+<p>هنا سيعتبر المترجم أن الكائن <code data-enlighter-language="java">ziad</code> هو كائن من <code data-enlighter-language="java">Male</code> و ليس من <code data-enlighter-language="java">Person</code>.<br/>
+	و بالتالي سيحتوي الكائن <code data-enlighter-language="java">ziad</code> على نسخة من الأشياء الموجودة في <code data-enlighter-language="java">Male</code> و ليس الأشياء الموجودة في <code data-enlighter-language="java">Person</code>.</p>
+<br/><br/>
+<p>سنعيد نفس المثال السابق لكننا سنضيف دالة إسمها <code data-enlighter-language="java">print()</code> في الكلاس <code data-enlighter-language="java">Person</code> و سنفعل لها <span class="word">Override</span> في الكلاسَين <code data-enlighter-language="java">Male</code> و <code data-enlighter-language="java">Female</code>.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title java-file-icon">Person.java</span>
+<pre data-enlighter-language="java">
+public class Person {
+ 
+    public void print() {
+        System.out.println("I am a Person");
+    }
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Male.java</span>
+<pre data-enlighter-language="java">
+public class Male extends Person {
+ 
+    @Override
+    public void print() {
+        System.out.println("I am a Person and i'm a Male too.");
+    }
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Female.java</span>
+<pre data-enlighter-language="java">
+public class Female extends Person {
+ 
+    @Override
+    public void print() {
+        System.out.println("I am a Person and i'm a Female too.");
+    }
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Female hala = new Female();       // Female سيملك نسخة من أشياء الكلاس hala الكائن
+        Male mhamad = new Male();         // Male سيملك نسخة من أشياء الكلاس hala الكائن
+ 
+        Person ziad = new Male();         // Male سيملك نسخة من أشياء الكلاس ziad الكائن
+ 
+        Female rola = new Female();       // Female سيملك نسخة من أشياء الكلاس rola الكائن
+        Person p    = rola;               // Female و بالتالي نسخة من أشياء الكلاس rola سيملك نسخة من أشياء الكائن p الكائن
+        Female rana = (Female) p;         // Female و الذي يعتبر في الأصل نسخة من p سيملك نسخة من أشياء الكائن rana الكائن
+ 
+        hala.print();           // Female الموجودة في الكلاس print() هنا سيتم إستدعاء الدالة
+        mhamad.print();         // Male الموجودة في الكلاس print() هنا سيتم إستدعاء الدالة
+        ziad.print();           // Male الموجودة في الكلاس print() هنا سيتم إستدعاء الدالة
+        rola.print();           // Female الموجودة في الكلاس print() هنا سيتم إستدعاء الدالة
+        p.print();              // Female الموجودة في الكلاس print() هنا سيتم إستدعاء الدالة
+        rana.print();           // Female الموجودة في الكلاس print() هنا سيتم إستدعاء الدالة
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+I am a Person and i'm a Female too.
+I am a Person and i'm a Male too.
+I am a Person and i'm a Male too.
+I am a Person and i'm a Female too.
+I am a Person and i'm a Female too.
+I am a Person and i'm a Female too. 
+		</pre>
+</div>
+</article>
+<article>
+<h2>تحويل أنواع البيانات البدائية</h2>
+<p>بالنسبة لأنواع البيانات البدائية <span class="inline">(<code data-enlighter-language="java">int</code>, <code data-enlighter-language="java">long</code>, <code data-enlighter-language="java">float</code>, <code data-enlighter-language="java">double</code>, <code data-enlighter-language="java">char</code>)</span> يمكنك أن تفعل لهم <span class="word">Cast</span> عند الحاجة بكل سهولة.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        double a = 10.55;
+ 
+        // b و تخزينها في المتغير int إلى النوع double من النوع a هنا قمنا بتحويل نوع قيمة المتغير
+        int b = (int)a;
+ 
+        // أصلاً يقبل أعداد صحيحة double لأن النوع c مباشرةً في المتغير b هنا قمنا بتخزين قيمة المتغير
+        double c = b;
+ 
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+        System.out.println("c = " + c);
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+a = 10.55
+b = 10
+c = 10.0 
+		</pre>
+</div>
+<br/>
+<p>إنتبه جيداً أثناء التحويل لأنك كما شاهدت في المثال السابق أنك قد تخسر بعض البيانات عند التحويل.</p>
+</article>
+<article>
+<h2>أخطاء محتملة قد تحدث عند التحويل</h2>
+<p>إذا لم تقم بتحويل الكائنات بطريقة صحيحة, سيؤدي ذلك إلى ظهور أخطاء في الكود, قمنا بتقسيمها إلى ثلاثة إحتمالات:</p>
+<ul class="explain">
+<li><p>خطأ من النوع <span class="code red">RuntimeException</span> و هذا الخطأ يظهر لك قبل تشغيل البرنامج.</p></li>
+<li><p>خطأ من النوع <span class="code red">ClassCastException</span> و هذا الخطأ يظهر لك أثناء تشغيل البرنامج.</p></li>
+</ul>
+<br/>
+<p>وضعنا هنا أمثلة حول أنواع الأخطاء التي قد تحدث عند تحويل أنواع الكائنات.</p>
+<p><a class="open-page" href="type-casting-errors-examples.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

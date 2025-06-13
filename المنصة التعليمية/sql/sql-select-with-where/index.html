@@ -1,0 +1,624 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس سنتعرف على الكلمة WHERE و كيف تستخدم لوضع شروط للبيانات التي سيت جلبها من قاعدة البيانات" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>SQL WHERE CLAUSE | جلب بيانات محددة من قاعدة البيانات في SQL</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../database-icon.png"/></li>
+<li class="title">كيف أبدأ بالتعلم</li>
+<li><a href="../sql-overview/index.html"><span class="en">SQL</span> - نظرة عامة</a></li>
+<li><a href="../sql-environment-setup/index.html"><span class="en">SQL</span> - تجهيز بيئة العمل</a></li>
+<li><a href="../sql-basic-syntax/index.html"><span class="en">SQL</span> - أسلوب كتابة الأوامر</a></li>
+<li><a href="../sql-comments/index.html"><span class="en">SQL</span> - التعليقات</a></li>
+<li><a href="../sql-write-first-query/index.html"><span class="en">SQL</span> - كتابة أول إستعلام</a></li>
+<li><a href="../sql-refresh-databases-panel/index.html"><span class="en">SQL</span> - تحديث قائمة قواعد البيانات</a></li>
+<li><a href="../sql-databases-structure-in-general/index.html"><span class="en">SQL</span> - مفاهيم و مصطلحات مهمة</a></li>
+<li class="title">أوامر و دوال SQL</li>
+<li><a href="../sql-create-database/index.html"><span class="en">SQL</span> - أمر إنشاء قاعدة بيانات</a></li>
+<li><a href="../sql-drop-database/index.html"><span class="en">SQL</span> - أمر حذف قاعدة بيانات</a></li>
+<li><a href="../sql-data-types/index.html"><span class="en">SQL</span> - أهم أنواع البيانات</a></li>
+<li><a href="../sql-create-table/index.html"><span class="en">SQL</span> - أمر إنشاء جدول</a></li>
+<li><a href="../sql-drop-table/index.html"><span class="en">SQL</span> - أمر حذف جدول</a></li>
+<li><a href="../sql-use/index.html"><span class="en">SQL</span> - أمر تحديد قاعدة البيانات</a></li>
+<li><a href="../sql-insert-into/index.html"><span class="en">SQL</span> - أمر إضافة سطر في الجدول</a></li>
+<li><a href="../sql-auto-increment/index.html"><span class="en">SQL</span> - الترقيم التلقائي للأسطر</a></li>
+<li><a href="../sql-select/index.html"><span class="en">SQL</span> - أمر جلب بيانات من الجدول</a></li>
+<li><a href="../sql-select-with-concat/index.html"><span class="en">SQL</span> - دمج الأعمدة عند جلبها</a></li>
+<li><a href="../sql-select-repeat-columns-name/index.html"><span class="en">SQL</span> - تكرار إسم الأعمدة في الإستعلام</a></li>
+<li><a href="index.html"><span class="en">SQL</span> - جلب البيانات ضمن شروط</a></li>
+<li><a href="../sql-select-with-order/index.html"><span class="en">SQL</span> - جلب البيانات مع ترتيبها</a></li>
+<li><a href="../sql-select-distinct/index.html"><span class="en">SQL</span> - جلب بيانات خالية من التكرار</a></li>
+<li><a href="../sql-union/index.html"><span class="en">SQL</span> - دمج الجداول في جدول واحد</a></li>
+<li><a href="../sql-delete/index.html"><span class="en">SQL</span> - أمر حذف بيانات من الجدول</a></li>
+<li><a href="../sql-update/index.html"><span class="en">SQL</span> - أمر تحديث بيانات الجدول</a></li>
+<li><a href="../sql-select-with-limit/index.html"><span class="en">SQL</span> - تحديد عدد الأسطر التي سترجع</a></li>
+<li><a href="../sql-null-values/index.html"><span class="en">SQL</span> - التعامل مع الحقول الفارغة</a></li>
+<li><a href="../sql-min/index.html"><span class="en">SQL</span> - جلب أصغر قيمة في العامود</a></li>
+<li><a href="../sql-max/index.html"><span class="en">SQL</span> - جلب أكبر قيمة في العامود</a></li>
+<li><a href="../sql-count/index.html"><span class="en">SQL</span> - حساب عدد أسطر الجدول</a></li>
+<li><a href="../sql-sum/index.html"><span class="en">SQL</span> - حساب ناتج جمع قيم العامود</a></li>
+<li><a href="../sql-avg/index.html"><span class="en">SQL</span> - حساب متوسط قيم العامود</a></li>
+<li><a href="../sql-select-with-group-by/index.html"><span class="en">SQL</span> - تجميع قيم الحقول المشتركة</a></li>
+<li><a href="../sql-select-with-having/index.html"><span class="en">SQL</span> - شروط على الحقول المجمعة</a></li>
+<li><a href="../sql-insert-into-select/index.html"><span class="en">SQL</span> - نسخ البيانات في جدول آخر</a></li>
+<li><a href="../sql-case/index.html"><span class="en">SQL</span> - وضع قيمة إفتراضية لكل حالة</a></li>
+<li><a href="../sql-unique/index.html"><span class="en">SQL</span> - تخزين قيم موحدة في العامود</a></li>
+<li class="title">العلاقات بين الجداول</li>
+<li><a href="../sql-how-to-relate-tables/index.html"><span class="en">SQL</span> - كيف يتم ربط الجداول</a></li>
+<li><a href="../sql-relationships-types/index.html"><span class="en">SQL</span> - أنواع العلاقات بين الجدوال</a></li>
+<li><a href="../sql-joins/index.html"><span class="en">SQL</span> - طرق ربط معلومات الجداول</a></li>
+<li><a href="../sql-alias-for-tables/index.html"><span class="en">SQL</span> - وضع أسماء مختصرة للجداول</a></li>
+<li><a href="../sql-self-join/index.html"><span class="en">SQL</span> - ربط المعلومات في نفس الجدول</a></li>
+<li class="title">معلومات متقدمة</li>
+<li><a href="../sql-alter/index.html"><span class="en">SQL</span> - تعديل بنية الجدول بعد إنشائه</a></li>
+<li><a href="../sql-default/index.html"><span class="en">SQL</span> - وضع قيم إفتراضية للحقول</a></li>
+<li><a href="../sql-primary-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح رئيسي</a></li>
+<li><a href="../sql-foreign-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح أجنبي</a></li>
+<li><a href="../sql-check/index.html"><span class="en">SQL</span> - وضع شروط لتخزين القيم</a></li>
+<li><a href="../sql-transactions/index.html"><span class="en">SQL</span> - تنفيذ كل الأوامر أو إلغاءها كلها</a></li>
+<li><a href="../sql-indexes/index.html"><span class="en">SQL</span> - الفهارس و أنواعها</a></li>
+<li><a href="../sql-like/index.html"><span class="en">SQL</span> - البحث في الأعمدة النصية</a></li>
+<li><a href="../sql-sub-queries/index.html"><span class="en">SQL</span> - كتابة إستعلامات متداخلة</a></li>
+<li><a href="../sql-connect-to-database/index.html"><span class="en">SQL</span> - الإتصال بقاعدة البيانات عن بعد</a></li>
+<li class="title">بناء قواعد بيانات لمشاريع</li>
+<li><a href="../sql-building-database-from-scratch/index.html"><span class="en">SQL</span> - تصميم قاعدة بيانات من الصفر</a></li>
+<li><a href="../sql-download-ready-made-database/index.html"><span class="en">SQL</span> - تحميل قواعد بيانات جاهزة</a></li>
+<!--
+<li><a href="../sql-backup-database"><span class="en">SQL</span> - إنشاء نسخة من قاعدة البيانات</a></li>
+<li><a href="../sql-stored-procedures"><span class="en">SQL</span> - تعريف دوال و استدعائها</a></li>
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">SQL</span>جلب بيانات محددة من قاعدة البيانات</h1>
+<article>
+<h2>أهمية وضع الشروط في الإستعلامات</h2>
+<p>على الأغلب ستقوم بوضع شروط في أغلب الإستعلامات التي ستكتبها مستقبلاً و ذلك لأسباب عديدة أهمها تحديد البيانات التي تريد جلبها, حذفها أو التعديل عليها.</p>
+<p>وضع الشروط سهل جداً و هو أمر مهم جداً و أساسي عند التعامل مع البيانات بشكل محدد و إليك بعض الحالات التي لا بد أن تتعامل فيها مع الشروط:<br/>
+	إذا كنت تريد حذف مستخدم محدد من قاعدة البيانات عليك وضع شرط في الإستعلام مفاده انك تريد حذف هذا الشخص بالضبط و ليس جميع المستخدمين.<br/>
+	إذا كنت تريد إحصاء عدد الأشخاص الذين ولدوا في سنة محددة عليك وضع شرط تحدد فيه رقم السنة.<br/>
+	إذا كنت تريد معرفة عدد المستخدمين الذكور و عدد المستخدمين الإناث فعليك وضع شرط تحدد فيه جنس الأشخاص الذين ستقوم بحسابهم في كل مرة و هكذا.</p>
+<p>بشكل عام, في <span class="word">SQL</span> نستخدم الأمر <code data-enlighter-language="sql">WHERE</code> لوضع الشروط و مع هذه الكلمة يجب أن تستخدم إحدى الرموز التالية.</p>
+<table class="list">
+<tr>
+<th>الرمز</th>
+<th>إستخدامه</th>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="sql">=</code></td>
+<td>يستخدم هذا الرمز مع الأرقام و النصوص و التواريخ لتنفيذ الأمر في حال كانت القيم التي يتم مقارنتها متساوية.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="sql">!=</code></td>
+<td>يستخدم هذا الرمز مع الأرقام و النصوص و التواريخ لتنفيذ الأمر في حال كانت القيم التي يتم مقارنتها غير متساوية.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="sql">&lt;&gt;</code></td>
+<td>يستخدم هذا الرمز مع الأرقام و النصوص و التواريخ لتنفيذ الأمر في حال كانت القيم التي يتم مقارنتها غير متساوية.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="sql">&gt;</code></td>
+<td>يستخدم هذا الرمز مع الأرقام و التواريخ لتنفيذ الأمر في حال كانت القيم التي يتم مقارنتها أكبر من قيمة محددة.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="sql">&gt;=</code></td>
+<td>يستخدم هذا الرمز مع الأرقام و التواريخ لتنفيذ الأمر في حال كانت القيم التي يتم مقارنتها أكبر أو تساوي قيمة محددة.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="sql">&lt;</code></td>
+<td>يستخدم هذا الرمز مع الأرقام و التواريخ لتنفيذ الأمر في حال كانت القيم التي يتم مقارنتها أصغر من قيمة محددة.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="sql">&lt;=</code></td>
+<td>يستخدم هذا الرمز مع الأرقام و التواريخ لتنفيذ الأمر في حال كانت القيم التي يتم مقارنتها أصغر أو تساوي قيمة محددة.</td>
+</tr>
+</table>
+<br/>
+<p>في حال أردت وضع أكثر من شرط أو أكثر من خيار حتى تحدد ما إن كان سيتم تنفيذ الأوامر, يمكنك إستخدام الكلمات التالية.</p>
+<table class="list">
+<tr>
+<th>الكلمة</th>
+<th>إستخدامها</th>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="sql">AND</code></td>
+<td>نستخدم هذه الكلمة لتنفيذ الأمر في حال تحقق الشرط الموضوع قبلها و الشرط الموضوع بعدها.<br/>
+			هنا يجب أن يتحقق كلا الشرطين حتي يتم تنفيذ الأمر.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="sql">OR</code></td>
+<td>نستخدم هذه الكلمة لتنفيذ الأمر في حال تحقق الشرط الموضوع قبلها أو الشرط الموضوع بعدها.<br/>
+			هنا يكفي أن يتحقق إحدى الشرطين حتي يتم تنفيذ الأمر.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="sql">IN (value1, value2, ...)</code></td>
+<td>نستخدم هذه الكلمة لتنفيذ الأمر في حال كانت القيمة الموجود قبلها تساوي إحدى القيم الموضوع فيها.</td>
+</tr>
+<tr>
+<td class="center"><code data-enlighter-language="sql">BETWEEN value1 AND value2</code></td>
+<td>نستخدم هذه الجملة لتنفيذ الأمر في حال كانت القيمة موجود بين قيمتين.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>تجهيز قاعدة البيانات التي سنطبق عليها</h2>
+<p>قم بتنفيذ الإستعلام التالي حتى تنشئ قاعدة بيانات جديدة إسمها <code>harmash</code> و تنشئ فيها جدول إسمه <code>employees</code> يحتوي على بيانات 10 موظفين.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+-- سيتم حذفها harmash في حال كان يوجد بالأساس قاعدة بيانات إسمها
+DROP DATABASE IF EXISTS harmash;
+
+-- harmash هنا قمنا بإنشاء قاعدة بيانات جديدة إسمها
+CREATE DATABASE harmash;
+
+-- harmash هنا قمنا بتحديد أن أي إستعلام جديد سيتم تنفيذه على قاعدة البيانات
+USE harmash;
+
+-- يتألف من أربعة أعمدة employees هنا قمنا بإنشاء جدول جديد إسمه
+-- لأننا قمنا بتحديدها قبل إستدعاء هذا الأمر harmash سيتم إنشاء هذا الجدول بداخل قاعدة البيانات
+CREATE TABLE employees (
+	id         INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50),
+    last_name  VARCHAR(20),
+	salary     DECIMAL(7,2)
+);
+
+-- هنا قمنا بإضافة 10 أسطر في الجدول, أي أضفنا معلومات 10 موظفين
+-- لاحظ أننا لم نحدد أسماء الأعمدة التي سنضع فيها البيانات لأننا قمنا بملئ جميع المعلومات
+-- في البداية هو حتى يكون عدد القيم الموضوعة يساوي عدد أعمدة الجدول null سبب وضع الكلمة
+-- ستقوم قاعدة البيانات بوضع رقم تعرفة مختلف لكل سطر null مكان الكلمة
+INSERT INTO employees VALUES (null, "Ahmad", "Alhazem", 800);
+INSERT INTO employees VALUES (null, "Rami", "Algharib", 750);
+INSERT INTO employees VALUES (null, "Said", "Alnaja", 900);
+INSERT INTO employees VALUES (null, "Noura", "Jamali", 845);
+INSERT INTO employees VALUES (null, "Amani", "Sarrouf", 1000);
+INSERT INTO employees VALUES (null, "Mhamad", "Harmush", 700);
+INSERT INTO employees VALUES (null, "Ahmad", "Asaadi", 850);
+INSERT INTO employees VALUES (null, "Mostafa", "Shawki", 920);
+INSERT INTO employees VALUES (null, "Jana", "Alkassem", 780);
+INSERT INTO employees VALUES (null, "Houssam", "Zahrani", 880);
+		</pre>
+</div>
+<br/>
+<p>بعد تنفيذ الإستعلام السابق في <span class="word">phpMyAdmin</span> سيتم إنشاء قاعدة البيانات <code>harmash</code> و إنشاء الجدول <code>employees</code> بداخلها.<br/>
+	قم بالنقر على إسم قاعدة البيانات <code>harmash</code> من القائمة اليسرى حتى تبدأ بالتعامل معها و تطبيق ما ستتعلمه في هذا الدرس.</p>
+</article>
+<article>
+<h2>أمثلة حول جلب بيانات ضمن شروط محددة</h2>
+<br/>
+<h3>المثال الأول</h3>
+<p>عندما تريد الوصول لسطر محدد في أي جدول عليك التعامل مع الحقل الموجود فيه و الذي لا يمكن أن يحتوي على قيم مكررة.<br/>
+	فمثلاً لا يمكنك الإعتماد على أسماء الأشخاص لأنك قد تجد أكثر من شخص عندهم نفس الإسم.</p>
+<p>الآن, بما أن الشيء الوحيد الذي لا يمكن أن يتكرر في الجدول الذي نتعامل معه هو رقم التعرفة <code>id</code> يمكننا الإعتماد عليه للتمييز بين موظف و آخر.</p>
+<p>الإستعلام التالي يجلب كل معلومات الموظف الذي يملك رقم <code>id</code> يساوي <span class="inline"><code>6</code>.</span></p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM employees    -- employees أحضر جميع المعلومات المتوفرة في الجدول
+WHERE id = 6;              -- يساوي 6 id بشرط أن يكون كل سطر ستحضره يملك رقم
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام لأنه يوجد سطر واحد فقط في الجدول يملك رقم <code>id</code> يساوي <span class="inline"><code>6</code>.</span></p>
+<div class="responsive-table" style="max-width: 300px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th> <th>salary</th>
+</tr>
+<tr>
+<td>6</td> <td>Mhamad</td> <td>Harmush</td> <td>700.00</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>الإستعلام التالي يجلب معلومات كل موظف يتلقى راتب  أكبر أو يساوي <code>800</code> دولار.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM employees    -- employees أحضر جميع المعلومات المتوفرة في الجدول
+WHERE salary &gt;= 800;       -- أكبر أو يساوي 800 salary بشرط أن يكون كل سطر ستحضره يملك
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام, لاحظ أنه يوجد 7 موظفين راتبهم أعلى أو يساوي <code>800</code> دولار.</p>
+<div class="responsive-table" style="max-width: 300px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th> <th>salary</th>
+</tr>
+<tr>
+<td>1</td> <td>Ahmad</td> <td>Alhazem</td> <td>800.00</td>
+</tr>
+<tr>
+<td>3</td> <td>Said</td> <td>Alnaja</td> <td>900.00</td>
+</tr>
+<tr>
+<td>4</td> <td>Noura</td> <td>Jamali</td> <td>845.00</td>
+</tr>
+<tr>
+<td>5</td> <td>Amani</td> <td>Sarrouf</td> <td>1000.00</td>
+</tr>
+<tr>
+<td>7</td> <td>Ahmad</td> <td>Asaadi</td> <td>850.00</td>
+</tr>
+<tr>
+<td>8</td> <td>Mostafa</td> <td>Shawki</td> <td>920.00</td>
+</tr>
+<tr>
+<td>10</td> <td>Houssam</td> <td>Zahrani</td> <td>880.00</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الثالث</h3>
+<p>الإستعلام التالي يجلب معلومات كل موظف يتلقى راتب  أقل من <code>800</code> دولار.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM employees    -- employees أحضر جميع المعلومات المتوفرة في الجدول
+WHERE salary &lt; 800;        -- أكبرأقل من 800 salary بشرط أن يكون كل سطر ستحضره يملك
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام, لاحظ أنه يوجد 3 موظفين راتبهم أقل من <code>800</code> دولار.</p>
+<div class="responsive-table" style="max-width: 300px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th> <th>salary</th>
+</tr>
+<tr>
+<td>2</td> <td>Rami</td> <td>Algharib</td> <td>750.00</td>
+</tr>
+<tr>
+<td>6</td> <td>Mhamad</td> <td>Harmush</td> <td>700.00</td>
+</tr>
+<tr>
+<td>9</td> <td>Jana</td> <td>Alkassem</td> <td>780.00</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الرابع</h3>
+<p>الإستعلام التالي يجلب معلومات كل موظف يتلقى راتب  لا يساوي <code>800</code> دولار.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM employees    -- employees أحضر جميع المعلومات المتوفرة في الجدول
+WHERE salary != 800;       -- لا يساوي 800 salary بشرط أن يكون كل سطر ستحضره يملك
+		</pre>
+<p>يمكن كتابة الإستعلام بهذه الطريقة أيضاً.</p>
+<pre data-enlighter-language="sql">
+SELECT * FROM employees    -- employees أحضر جميع المعلومات المتوفرة في الجدول
+WHERE salary &lt;&gt; 800;       -- لا يساوي 800 salary بشرط أن يكون كل سطر ستحضره يملك
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام, لاحظ أنه يوجد 9 موظفين راتبهم لا يساوي <code>800</code> دولار.</p>
+<div class="responsive-table" style="max-width: 300px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th> <th>salary</th>
+</tr>
+<tr>
+<td>2</td> <td>Rami</td> <td>Algharib</td> <td>750.00</td>
+</tr>
+<tr>
+<td>3</td> <td>Said</td> <td>Alnaja</td> <td>900.00</td>
+</tr>
+<tr>
+<td>4</td> <td>Noura</td> <td>Jamali</td> <td>845.00</td>
+</tr>
+<tr>
+<td>5</td> <td>Amani</td> <td>Sarrouf</td> <td>1000.00</td>
+</tr>
+<tr>
+<td>6</td> <td>Mhamad</td> <td>Harmush</td> <td>700.00</td>
+</tr>
+<tr>
+<td>7</td> <td>Ahmad</td> <td>Asaadi</td> <td>850.00</td>
+</tr>
+<tr>
+<td>8</td> <td>Mostafa</td> <td>Shawki</td> <td>920.00</td>
+</tr>
+<tr>
+<td>9</td> <td>Jana</td> <td>Alkassem</td> <td>780.00</td>
+</tr>
+<tr>
+<td>10</td> <td>Houssam</td> <td>Zahrani</td> <td>880.00</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الخامس</h3>
+<p>الإستعلام التالي يجلب معلومات كل موظف يتلقى راتب  أعلى من <code>2000</code> دولار.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM employees    -- employees أحضر جميع المعلومات المتوفرة في الجدول
+WHERE salary &gt; 2000;       -- أعلى من 2000 salary بشرط أن يكون كل سطر ستحضره يملك
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام, لاحظ أنه لا يوجد أي موظف راتبه أعلى من <code>2000</code> دولار.</p>
+<div class="responsive-table" style="max-width: 300px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th> <th>salary</th>
+</tr>
+<tr>
+<td></td> <td></td> <td></td> <td></td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال السادس</h3>
+<p>الإستعلام التالي يجلب معلومات كل موظف يتلقى راتب أعلى من <code>800</code> دولار و إسمه <span class="inline"><code>'Mhamad'</code>.</span></p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM employees                          -- employees أحضر جميع المعلومات المتوفرة في الجدول
+WHERE salary &gt; 800 AND first_name = 'Mhamad';    -- 'Mhamad' يساوي first_name أعلى من 800 و يملك salary بشرط أن يكون كل سطر ستحضره يملك
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام, لاحظ أنه لا يوجد أي موظف راتبه أعلى من <code>800</code> دولار و إسمه <code>'Mhamad'</code> بنفس الوقت.<br/>
+<span class="note">ملاحظة:</span> صحيح أنه يوجد موظف إسمه <code>'Mhamad'</code> و لكن بما أن رابته أقل من <code>800</code> دولار لن يتم وضعه في الجدول.</p>
+<div class="responsive-table" style="max-width: 300px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th> <th>salary</th>
+</tr>
+<tr>
+<td></td> <td></td> <td></td> <td></td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال السابع</h3>
+<p>الإستعلام التالي يجلب معلومات كل موظف يتلقى راتب أعلى من <code>800</code> دولار أو إسمه <span class="inline"><code>'Mhamad'</code>.</span></p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM employees                         -- employees أحضر جميع المعلومات المتوفرة في الجدول
+WHERE salary &gt; 800 OR first_name = 'Mhamad';    -- 'Mhamad' يساوي first_name أعلى من 800 أو يملك salary بشرط أن يكون كل سطر ستحضره يملك
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام, لاحظ أنه يوجد 6 موظفين رابتهم أعلى من <code>800</code> دولار و يوجد موظف راتبه أقل من <code>800</code> دولار و لكن إسمه <code>'Mhamad'</code> لهذا تم وضعه معهم في الجدول.</p>
+<div class="responsive-table" style="max-width: 300px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th> <th>salary</th>
+</tr>
+<tr>
+<td>3</td> <td>Said</td> <td>Alnaja</td> <td>900.00</td>
+</tr>
+<tr>
+<td>4</td> <td>Noura</td> <td>Jamali</td> <td>845.00</td>
+</tr>
+<tr>
+<td>5</td> <td>Amani</td> <td>Sarrouf</td> <td>1000.00</td>
+</tr>
+<tr style="background: yellow">
+<td>6</td> <td>Mhamad</td> <td>Harmush</td> <td>700.00</td>
+</tr>
+<tr>
+<td>7</td> <td>Ahmad</td> <td>Asaadi</td> <td>850.00</td>
+</tr>
+<tr>
+<td>8</td> <td>Mostafa</td> <td>Shawki</td> <td>920.00</td>
+</tr>
+<tr>
+<td>10</td> <td>Houssam</td> <td>Zahrani</td> <td>880.00</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الثامن</h3>
+<p>الإستعلام التالي يجلب معلومات كل موظف يتلقى راتب يساوي <code>800</code> أو <code>850</code> أو <code>900</code> دولار.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM employees             -- employees أحضر جميع المعلومات المتوفرة في الجدول
+WHERE salary IN (800, 850, 900);    -- يساوي 800 أو 850 أو 900 salary بشرط أن يكون كل سطر ستحضره يملك
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام, لاحظ أنه يوجد 3 موظفين راتبهم أقل من <code>800</code> دولار.</p>
+<div class="responsive-table" style="max-width: 300px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th> <th>salary</th>
+</tr>
+<tr>
+<td>1</td> <td>Ahmad</td> <td>Alhazem</td> <td>800.00</td>
+</tr>
+<tr>
+<td>3</td> <td>Said</td> <td>Alnaja</td> <td>900.00</td>
+</tr>
+<tr>
+<td>7</td> <td>Ahmad</td> <td>Asaadi</td> <td>850.00</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال التاسع</h3>
+<p>الإستعلام التالي يجلب معلومات كل موظف يتلقى راتب بين <code>800</code> و <code>900</code> دولار.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT * FROM employees              -- employees أحضر جميع المعلومات المتوفرة في الجدول
+WHERE salary BETWEEN 800 AND 900;    -- على الأقل 800 و على الأكثر 900 salary بشرط أن يكون كل سطر ستحضره يملك
+		</pre>
+<p>يمكن كتابة الإستعلام بهذه الطريقة أيضاً.</p>
+<pre data-enlighter-language="sql">
+SELECT * FROM employees                   -- employees أحضر جميع المعلومات المتوفرة في الجدول
+WHERE salary &gt;= 800 AND salary &lt;= 900;    -- على الأقل 800 و على الأكثر 900 salary بشرط أن يكون كل سطر ستحضره يملك
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام, لاحظ أنه يوجد 3 موظفين راتبهم أقل من <code>800</code> دولار.</p>
+<div class="responsive-table" style="max-width: 300px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>first_name</th> <th>last_name</th> <th>salary</th>
+</tr>
+<tr>
+<td>1</td> <td>Ahmad</td> <td>Alhazem</td> <td>800.00</td>
+</tr>
+<tr>
+<td>3</td> <td>Said</td> <td>Alnaja</td> <td>900.00</td>
+</tr>
+<tr>
+<td>4</td> <td>Noura</td> <td>Jamali</td> <td>845.00</td>
+</tr>
+<tr>
+<td>7</td> <td>Ahmad</td> <td>Asaadi</td> <td>850.00</td>
+</tr>
+<tr>
+<td>10</td> <td>Houssam</td> <td>Zahrani</td> <td>880.00</td>
+</tr>
+</table>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

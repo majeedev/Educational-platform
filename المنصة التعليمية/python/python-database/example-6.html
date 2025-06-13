@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>طريقة جلب كل البيانات المخزنة في جدول في بايثون</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>طريقة جلب كل البيانات المخزنة في جدول في بايثون</h1>
+<article>
+<p>المثال التالي يعلمك طريقة جلب كل البيانات المخزنة في جدول و عرضها كما هي.<br/>
+<span class="note">ملاحظة:</span> سنقوم بجلب معلومات كل الموظفين الذين قمنا بتخزينهم في الأمثلة السابقة في الجدول <span class="inline"><code data-enlighter-language="python">employee</code>.</span></p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# connector هنا قمنا بتضمين كل محتوى الموديول
+import mysql.connector
+
+# MySQL حتى ترجع كائن يسمح لنا بالإتصال بقواعد بيانات connect هنا قمنا باستدعاء الدالة
+db = mysql.connector.connect(
+  user='root',
+  passwd='',
+  host='localhost',
+  database='company'
+)
+
+# cursor لإنشاء كائن cursor() هنا قمنا باستدعاء الدالة
+cursor = db.cursor()
+
+# 'employee' و تمرير نص الإستعلام الذي يقضي بجلب كل معلومات الموظفين المخزنة في الجدول execute() هنا قمنا باستدعاء الدالة
+cursor.execute('SELECT * FROM employee')
+
+# حتى ترجع كل المعلومات التي أرجعها الإستعلام fetchall() هنا قمنا باستدعاء الدالة
+# result بعدها قمنا بتخزين كل المعلومات التي تم إرجاعها في الكائن
+# يمثل سطر في الجدول tuple كل عنصر فيه عبارة عن list عبارة عن result الكائن
+result = cursor.fetchall()
+
+# أي ترجع سطر جديد من الجدول في كل دورة .result موجود في الكائن tuple في كل دورة ترجع for هنا قمنا بإنشاء حلقة
+# phone و name ,id :يتألف من ثلاث عناصر tuple السطر الذي سيتم إرجاعه, طبعناه كما هو.. لاحظ أنه عبارة عن
+for row in result:
+    print(row)
+
+# هنا قمنا بإغلاق الإتصال مع قاعدة البيانات
+cursor.close()
+db.close()
+		</pre>
+<p><span class="point">•</span> ستحصل على النتيجة التالية عند تشغيل الملف <code data-enlighter-language="python">Test</code> إذا قمت بتخزين نفس البيانات التي قمنا بإدخالها في الأمثلة السابقة.</p>
+<div class="code-box">
+			(1, 'Ahmad', '96101200155')<br/>
+			(2, 'Rami', '96170188201')<br/>
+			(3, 'Sara', '96103200155')<br/>
+			(4, 'Rola', '96176554235')<br/>
+			(5, 'John', '96178665711')<br/>
+			(6, 'Nada', '96171004321')
+		</div>
+</div>
+<br/><br/>
+<p>المثال التالي يعلمك طريقة تحديد الأعمدة التي تريد عرضها بناء على رقم <span class="inline">الـ <span class="word">Index</span></span> الخاص بكل عامود.<br/>
+	فعلياً, بما أن كل سطر سنجلبه من الجدول سيكون عبارة عن <code data-enlighter-language="python">tuple</code> تتألف من ثلاث عناصر, سنقوم بعرض هذه العناصر بالشكل الذي نريده.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# connector هنا قمنا بتضمين كل محتوى الموديول
+import mysql.connector
+
+# MySQL حتى ترجع كائن يسمح لنا بالإتصال بقواعد بيانات connect هنا قمنا باستدعاء الدالة
+db = mysql.connector.connect(
+  user='root',
+  passwd='',
+  host='localhost',
+  database='company'
+)
+
+# cursor لإنشاء كائن cursor() هنا قمنا باستدعاء الدالة
+cursor = db.cursor()
+
+# 'employee' و تمرير نص الإستعلام الذي يقضي بجلب كل معلومات الموظفين المخزنة في الجدول execute() هنا قمنا باستدعاء الدالة
+cursor.execute('SELECT * FROM employee')
+
+# حتى ترجع كل المعلومات التي أرجعها الإستعلام fetchall() هنا قمنا باستدعاء الدالة
+# result بعدها قمنا بتخزين كل المعلومات التي تم إرجاعها في الكائن
+# يمثل سطر في الجدول tuple كل عنصر فيه عبارة عن list عبارة عن result الكائن
+result = cursor.fetchall()
+
+# و من ثم تعرض القيم الثلاثة الموجودة فيها بشكل مرتب result موجود في الكائن tuple في كل دورة ترجع for هنا قمنا بإنشاء حلقة
+for row in result:
+    print('Id:',    row[0])
+    print('Name:',  row[1])
+    print('Phone:', row[2])
+    print('------------------')
+
+# هنا قمنا بإغلاق الإتصال مع قاعدة البيانات
+cursor.close()
+db.close()
+		</pre>
+<p><span class="point">•</span> ستحصل على النتيجة التالية عند تشغيل الملف <code data-enlighter-language="python">Test</code> إذا قمت بتخزين نفس البيانات التي قمنا بإدخالها في الأمثلة السابقة.</p>
+<div class="code-box">
+			Id: 1<br/>
+			Name: Ahmad<br/>
+			Phone: 96101200155<br/>
+			------------------<br/>
+			Id: 2<br/>
+			Name: Rami<br/>
+			Phone: 96170188201<br/>
+			------------------<br/>
+			Id: 3<br/>
+			Name: Sara<br/>
+			Phone: 96103200155<br/>
+			------------------<br/>
+			Id: 4<br/>
+			Name: Rola<br/>
+			Phone: 96176554235<br/>
+			------------------<br/>
+			Id: 5<br/>
+			Name: John<br/>
+			Phone: 96178665711<br/>
+			------------------<br/>
+			Id: 6<br/>
+			Name: Nada<br/>
+			Phone: 96171004321<br/>
+			------------------
+		</div>
+</div>
+<br/><br/>
+<p>المثال التالي يعلمك طريقة تحديد الأعمدة التي تريد عرضها بناءاً على أسماء الأعمدة الموجودة فعلياً في الجدول.<br/>
+	هنا سنحدد للدالة <code data-enlighter-language="python">cursor()</code> أن كل سطر سيتم إرجاعه سيكون عبارة عن <span class="inline"><code data-enlighter-language="python">dict</code>,</span> عندها بشكل تلقائي سيتم وضع إسم كل عامود في الجدول كمفتاح, و القيم المخزنة في الجدول كقيم للمفاتيح.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# connector هنا قمنا بتضمين كل محتوى الموديول
+import mysql.connector
+
+# MySQL حتى ترجع كائن يسمح لنا بالإتصال بقواعد بيانات connect هنا قمنا باستدعاء الدالة
+db = mysql.connector.connect(
+  user='root',
+  passwd='',
+  host='localhost',
+  database='company'
+)
+
+# dict مع الإشارة إلى أننا نريد إرجاع أي سطر يتم جلبه ككائن cursor لإنشاء كائن cursor() هنا قمنا باستدعاء الدالة
+cursor = db.cursor(dictionary=True)
+
+# 'employee' و تمرير نص الإستعلام الذي يقضي بجلب كل معلومات الموظفين المخزنة في الجدول execute() هنا قمنا باستدعاء الدالة
+cursor.execute('SELECT * FROM employee')
+
+# حتى ترجع كل المعلومات التي أرجعها الإستعلام fetchall() هنا قمنا باستدعاء الدالة
+# result بعدها قمنا بتخزين كل المعلومات التي تم إرجاعها في الكائن
+# يمثل سطر في الجدول dict كل عنصر فيه عبارة عن list عبارة عن result الكائن
+result = cursor.fetchall()
+
+# result موجود في الكائن dict في كل دورة ترجع for هنا قمنا بإنشاء حلقة
+# row سيتم جلبهم من الكائن phone و قيمة المفتاح name و قيمة المفتاح id قيمة المفتاح
+for row in result:
+    print('ID:', row.get('id'))
+    print('Name:', row.get('name'))
+    print('Phone:', row.get('phone'))
+    print('------------------')
+
+# هنا قمنا بإغلاق الإتصال مع قاعدة البيانات
+cursor.close()
+db.close()
+		</pre>
+<p><span class="point">•</span> ستحصل على النتيجة التالية عند تشغيل الملف <code data-enlighter-language="python">Test</code> إذا قمت بتخزين نفس البيانات التي قمنا بإدخالها في الأمثلة السابقة.</p>
+<div class="code-box">
+			Id: 1<br/>
+			Name: Ahmad<br/>
+			Phone: 96101200155<br/>
+			------------------<br/>
+			Id: 2<br/>
+			Name: Rami<br/>
+			Phone: 96170188201<br/>
+			------------------<br/>
+			Id: 3<br/>
+			Name: Sara<br/>
+			Phone: 96103200155<br/>
+			------------------<br/>
+			Id: 4<br/>
+			Name: Rola<br/>
+			Phone: 96176554235<br/>
+			------------------<br/>
+			Id: 5<br/>
+			Name: John<br/>
+			Phone: 96178665711<br/>
+			------------------<br/>
+			Id: 6<br/>
+			Name: Nada<br/>
+			Phone: 96171004321<br/>
+			------------------
+		</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

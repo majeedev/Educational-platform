@@ -1,0 +1,567 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>العوامل الموجودة في بايثون - Python operators</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>العوامل في بايثون</h1>
+<article>
+<h2>مفهوم العوامل في بايثون</h2>
+<p><b>عامل:</b> تعني <span class="word">operator</span> في اللغة الإنجليزية, و العامل عبارة عن رمز له معنى محدد في بايثون.<br/>
+	يمكننا تصنيف العوامل في بايثون إلى <span class="number">7</span> مجموعات أساسية و هي:</p>
+<ul class="explain">
+<li><p><span class="word">Arithmetic Operators</span></p></li>
+<li><p><span class="word">Comparison Operators</span></p></li>
+<li><p><span class="word">Logical Operators</span></p></li>
+<li><p><span class="word">Bitwise Operators</span></p></li>
+<li><p><span class="word">Assignment Operators</span></p></li>
+<li><p><span class="word">Membership Operators</span></p></li>
+<li><p><span class="word">Identity Operators</span></p></li>
+</ul>
+</article>
+<article>
+<h2>العوامل التي تستخدم في العمليات الحسابية <span class="inline">(<span class="word">Arithmetic Operators</span>)</span></h2>
+<table class="list full-width">
+<tr>
+<th>إسم العامل</th>
+<th>رمزه</th>
+<th>مثال</th>
+<th>شرح الكود</th>
+</tr>
+<tr>
+<td class="center"><span class="word">Assignment</span></td>
+<td class="center"><code data-enlighter-language="python">=</code></td>
+<td class="center"><code data-enlighter-language="python">a = b</code></td>
+<td>أعطي <code data-enlighter-language="python">a</code> قيمة <code data-enlighter-language="python">b</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Addition</span></td>
+<td class="center"><code data-enlighter-language="python">+</code></td>
+<td class="center"><code data-enlighter-language="python">a + b</code></td>
+<td>أضف قيمة <code data-enlighter-language="python">b</code> على قيمة <code data-enlighter-language="python">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Subtraction</span></td>
+<td class="center"><code data-enlighter-language="python">-</code></td>
+<td class="center"><code data-enlighter-language="python">a - b</code></td>
+<td>إطرح قيمة <code data-enlighter-language="python">b</code> من قيمة <code data-enlighter-language="python">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Unary plus</span></td>
+<td class="center"><code data-enlighter-language="python">+</code></td>
+<td class="center"><code data-enlighter-language="python">+a</code></td>
+<td>أضرب قيمة <code data-enlighter-language="python">a</code> بالعامل <code data-enlighter-language="python">+</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Unary minus</span></td>
+<td class="center"><code data-enlighter-language="python">-</code></td>
+<td class="center"><code data-enlighter-language="python">-a</code></td>
+<td>أضرب قيمة <code data-enlighter-language="python">a</code> بالعامل <code data-enlighter-language="python">-</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Multiplication</span></td>
+<td class="center"><code data-enlighter-language="python">*</code></td>
+<td class="center"><code data-enlighter-language="python">a * b</code></td>
+<td>أضرب قيمة <code data-enlighter-language="python">a</code> بقيمة <code data-enlighter-language="python">b</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Exponent</span></td>
+<td class="center"><code data-enlighter-language="python">**</code></td>
+<td class="center"><code data-enlighter-language="python">a ** b</code></td>
+<td>ضاعف قيمة <code data-enlighter-language="python">a</code> بقيمة <code data-enlighter-language="python">b</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Division</span></td>
+<td class="center"><code data-enlighter-language="python">/</code></td>
+<td class="center"><code data-enlighter-language="python">a / b</code></td>
+<td>أقسم قيمة <code data-enlighter-language="python">a</code> على قيمة <code data-enlighter-language="python">b</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Floor Divide</span></td>
+<td class="center"><code data-enlighter-language="python">//</code></td>
+<td class="center"><code data-enlighter-language="python">a // b</code></td>
+<td>أقسم قيمة <code data-enlighter-language="python">a</code> على قيمة <code data-enlighter-language="python">b</code> و أرجع أقرب عدد صحيح للناتج.</td>
+</tr>
+<tr>
+<td class="center"><span class="word">Modulo</span></td>
+<td class="center"><code data-enlighter-language="python">%</code></td>
+<td class="center"><code data-enlighter-language="python">a % b</code></td>
+<td>للحصول على آخر رقم يبقى عندما نقسم قيمة <code data-enlighter-language="python">a</code> على قيمة <code data-enlighter-language="python">b</code></td>
+</tr>
+</table>
+<br/>
+<p>هنا وضعنا مثال لكل عامل موجود في الجدول <a class="open-page" href="arithmetic-operators-examples.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<article>
+<h2>العوامل التي تستخدم في المقارنات <span class="inline">(<span class="word">Comparison Operators</span>)</span></h2>
+<table class="list full-width">
+<tr>
+<th>إسم العامل</th>
+<th>رمزه</th>
+<th>مثال</th>
+<th>شرح الكود</th>
+</tr>
+<tr>
+<td class="center"><span class="word">Equal to</span></td>
+<td class="center"><code data-enlighter-language="python">==</code></td>
+<td class="center"><code data-enlighter-language="python">(a == b)</code></td>
+<td>هل قيمة <code data-enlighter-language="python">a</code> تساوي قيمة <code data-enlighter-language="python">b</code> ؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="python">True</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Not equal to</span></td>
+<td class="center"><code data-enlighter-language="python">!=</code></td>
+<td class="center"><code data-enlighter-language="python">(a != b)</code></td>
+<td>هل قيمة <code data-enlighter-language="python">a</code> لا تساوي قيمة <code data-enlighter-language="python">b</code> ؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="python">True</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Greater than</span></td>
+<td class="center"><code data-enlighter-language="python">&gt;</code></td>
+<td class="center"><code data-enlighter-language="python">(a &gt; b)</code></td>
+<td>هل قيمة <code data-enlighter-language="python">a</code> أكبر من قيمة <code data-enlighter-language="python">b</code> ؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="python">True</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Less than</span></td>
+<td class="center"><code data-enlighter-language="python">&lt;</code></td>
+<td class="center"><code data-enlighter-language="python">(a &lt; b)</code></td>
+<td>هل قيمة <code data-enlighter-language="python">a</code> أصغر من قيمة <code data-enlighter-language="python">b</code> ؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="python">True</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Greater than<br/><span class="red">or</span> Equal to</span></td>
+<td class="center"><code data-enlighter-language="python">&gt;=</code></td>
+<td class="center"><code data-enlighter-language="python">(a &gt;= b)</code></td>
+<td>هل قيمة <code data-enlighter-language="python">a</code> أكبر أو تساوي قيمة <code data-enlighter-language="python">b</code> ؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="python">True</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Less than<br/><span class="red">or</span> Equal to</span></td>
+<td class="center"><code data-enlighter-language="python">&lt;=</code></td>
+<td class="center"><code data-enlighter-language="python">(a &lt;= b)</code></td>
+<td>هل قيمة <code data-enlighter-language="python">a</code> أصغر أو تساوي قيمة <code data-enlighter-language="python">b</code> ؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="python">True</code></td>
+</tr>
+</table>
+<br/>
+<p>هنا وضعنا مثال لكل عامل موجود في الجدول <a class="open-page" href="comparison-operators-examples.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<article>
+<h2>العوامل التي تستخدم في وضع شروط منطقية <span class="inline">(<span class="word">Logical Operators</span>)</span></h2>
+<table class="list full-width">
+<tr>
+<th>إسم العامل</th>
+<th>رمزه</th>
+<th>مثال</th>
+<th>شرح الكود</th>
+</tr>
+<tr>
+<td class="center"><span class="word">Logical AND</span></td>
+<td class="center"><code data-enlighter-language="python">and</code></td>
+<td class="center"><code data-enlighter-language="python">a and b</code></td>
+<td>هل قيمة <code data-enlighter-language="python">a</code> و <code data-enlighter-language="python">b</code> تساويان <code data-enlighter-language="python">True</code> ؟<br/>
+			هنا يجب أن يتم تحقيق الشرطين ليرجع <code data-enlighter-language="python">True</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Logical OR</span></td>
+<td class="center"><code data-enlighter-language="python">or</code></td>
+<td class="center"><code data-enlighter-language="python">a or b</code></td>
+<td>هل قيمة <code data-enlighter-language="python">a</code> أو <code data-enlighter-language="python">b</code> أو كلاهما تساويان <code data-enlighter-language="python">True</code> ؟<br/>
+			هنا يكفي أن يتم تحقيق شرط واحد من الشرطين ليرجع <code data-enlighter-language="python">True</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Logical NOT</span></td>
+<td class="center"><code data-enlighter-language="python">not</code></td>
+<td class="center"><code data-enlighter-language="python">not a</code></td>
+<td>هل قيمة <code data-enlighter-language="python">a</code> لا تساوي <code data-enlighter-language="python">True</code> ؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="python">True</code></td>
+</tr>
+</table>
+<br/>
+<p>هنا وضعنا مثال لكل عامل موجود في الجدول <a class="open-page" href="logical-operators-examples.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<article>
+<h2>العوامل التي تستخدم للتعامل مع الـ <span class="tech-word">bits</span> <span class="inline">(<span class="word">Bitwise Operators</span>)</span></h2>
+<table class="list full-width">
+<tr>
+<th>إسم العامل</th>
+<th>رمزه</th>
+<th>مثال</th>
+<th>شرح الكود</th>
+</tr>
+<tr>
+<td class="center"><span class="word">Bitwise AND</span></td>
+<td class="center"><code data-enlighter-language="python">&amp;</code></td>
+<td class="center"><code data-enlighter-language="python">a &amp; b</code></td>
+<td>العامل <code data-enlighter-language="python">&amp;</code> يحسب ناتج جمع الـ <span class="word">bits</span> المشتركة بين <code data-enlighter-language="python">a</code> و <code data-enlighter-language="python">b</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Bitwise OR</span></td>
+<td class="center"><code data-enlighter-language="python">|</code></td>
+<td class="center"><code data-enlighter-language="python">a | b</code></td>
+<td>العامل <code data-enlighter-language="python">|</code> يحسب ناتج جمع الـ <span class="word">bits</span> المشتركة و الغير مشتركة بين <code data-enlighter-language="python">a</code> و <code data-enlighter-language="python">b</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Bitwise XOR</span></td>
+<td class="center"><code data-enlighter-language="python">^</code></td>
+<td class="center"><code data-enlighter-language="python">a ^ b</code></td>
+<td>العامل <code data-enlighter-language="python">^</code> يحسب ناتج جمع الـ <span class="word">bits</span> الغير مشتركة بين <code data-enlighter-language="python">a</code> و <code data-enlighter-language="python">b</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Bitwise compliment OR</span></td>
+<td class="center"><code data-enlighter-language="python">~</code></td>
+<td class="center"><code data-enlighter-language="python">~a</code></td>
+<td>العامل <code data-enlighter-language="python">~</code> يقلب الـ <span class="word">bits</span> التي تساوي <span class="number">0</span> إلى <span class="number">1</span> و يقلب الـ <span class="word">bits</span> التي تساوي <span class="number">1</span> إلى <span class="number">0</span>,<br/> ثم يضيف عليهم <span class="number">1</span> و يحسب ناتج جمعهم, بعدها يضرب الجواب بالعامل <span class="inline">( <code data-enlighter-language="python">-</code> )</span> ثم يعطينا جواب سلبي.</td>
+</tr>
+<tr>
+<td class="center"><span class="word">Left shift</span></td>
+<td class="center"><code data-enlighter-language="python">&lt;&lt;</code></td>
+<td class="center"><code data-enlighter-language="python">a &lt;&lt; 2</code></td>
+<td>العامل <code data-enlighter-language="python">&lt;&lt;</code> يزيح الـ <span class="word">bits</span> من آخر اليسار إلى أول اليمين.<br/>
+			العدد <span class="number">2</span> يعني أننا سنزيح آخر إثنين <span class="word">bits</span> و نضعهم في الأول.</td>
+</tr>
+<tr>
+<td class="center"><span class="word">Right shift</span></td>
+<td class="center"><code data-enlighter-language="python">&gt;&gt;</code></td>
+<td class="center"><code data-enlighter-language="python">a &gt;&gt; 2</code></td>
+<td>العامل <code data-enlighter-language="python">&gt;&gt;</code> يزيح الـ <span class="word">bits</span> من أول اليمين إلى آخر اليسار.<br/>
+			العدد <span class="number">2</span> يعني أننا سنزيح أول إثنين <span class="word">bits</span> و نضعهم في الأخير.</td>
+</tr>
+</table>
+<br/>
+<p>هنا وضعنا مثال لكل عامل موجود في الجدول <a class="open-page" href="bitwize-operators-examples.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<article>
+<h2>العوامل التي تستخدم لإعطاء قيم للمتغيرات <span class="inline">(<span class="word">Assignment Operators</span>)</span></h2>
+<table class="list full-width">
+<tr>
+<th>إسم العامل</th>
+<th>رمزه</th>
+<th>مثال</th>
+<th>شرح الكود</th>
+</tr>
+<tr>
+<td class="center"><span class="word">Basic Assignment</span></td>
+<td class="center"><code data-enlighter-language="python">=</code></td>
+<td class="center"><code data-enlighter-language="python">a = b</code></td>
+<td>ضع قيمة <code data-enlighter-language="python">b</code> في <code data-enlighter-language="python">a</code>.</td>
+</tr>
+<tr>
+<td class="center"><span class="word">Add AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="python">+=</code></td>
+<td class="center"><code data-enlighter-language="python">a += b</code></td>
+<td>أضف قيمة <code data-enlighter-language="python">a</code> على قيمة <code data-enlighter-language="python">b</code> و خزن الناتج في <code data-enlighter-language="python">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Susbtract AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="python">-=</code></td>
+<td class="center"><code data-enlighter-language="python">a -= b</code></td>
+<td>أنقص قيمة <code data-enlighter-language="python">a</code> من قيمة <code data-enlighter-language="python">b</code> و خزن الناتج في <code data-enlighter-language="python">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Multiply AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="python">*=</code></td>
+<td class="center"><code data-enlighter-language="python">a *= b</code></td>
+<td>أضرب قيمة <code data-enlighter-language="python">a</code> بقيمة <code data-enlighter-language="python">b</code> و خزن الناتج في <code data-enlighter-language="python">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Exponent AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="python">**=</code></td>
+<td class="center"><code data-enlighter-language="python">a **= b</code></td>
+<td>ضاعف قيمة <code data-enlighter-language="python">a</code> بقيمة <code data-enlighter-language="python">b</code> و خزن الناتج في <code data-enlighter-language="python">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Divide AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="python">/=</code></td>
+<td class="center"><code data-enlighter-language="python">a /= b</code></td>
+<td>أقسم قيمة <code data-enlighter-language="python">a</code> على قيمة <code data-enlighter-language="python">b</code> و خزن الناتج في <code data-enlighter-language="python">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Floor Divide AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="python">//=</code></td>
+<td class="center"><code data-enlighter-language="python">a //= b</code></td>
+<td>أقسم قيمة <code data-enlighter-language="python">a</code> على قيمة <code data-enlighter-language="python">b</code> و أرجع أقرب عدد صحيح للناتج</td>
+</tr>
+<tr>
+<td class="center"><span class="word">Modulo AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="python">%=</code></td>
+<td class="center"><code data-enlighter-language="python">a %= b</code></td>
+<td>أقسم قيمة <code data-enlighter-language="python">a</code> على قيمة <code data-enlighter-language="python">b</code> و خزن آخر رقم يبقى من عملية القسمة في <code data-enlighter-language="python">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Left shift AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="python">&lt;&lt;=</code></td>
+<td class="center"><code data-enlighter-language="python">a &lt;&lt;= 2</code></td>
+<td>أزح آخر إثنين <span class="word">bits</span> و ضعهم في الأول ثم خزن الناتج في <code data-enlighter-language="python">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Right shift AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="python">&gt;&gt;=</code></td>
+<td class="center"><code data-enlighter-language="python">a &gt;&gt;= 2</code></td>
+<td>أزح أول اثنين <span class="word">bits</span> و ضعهم في الآخر ثم خزن الناتج في <code data-enlighter-language="python">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Bitwise AND Assignment</span></td>
+<td class="center"><code data-enlighter-language="python">&amp;=</code></td>
+<td class="center"><code data-enlighter-language="python">a &amp;= b</code></td>
+<td>أحسب ناتج جمع الـ <span class="word">bits</span> المشتركة بين <code data-enlighter-language="python">a</code> و <code data-enlighter-language="python">b</code> و خزن الناتج في <code data-enlighter-language="python">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Bitwise exclusive OR and Assignment</span></td>
+<td class="center"><code data-enlighter-language="python">^=</code></td>
+<td class="center"><code data-enlighter-language="python">a ^= b</code></td>
+<td>أحسب ناتج جمع الـ <span class="word">bits</span> الغير مشتركة بين <code data-enlighter-language="python">a</code> و <code data-enlighter-language="python">b</code> و خزن الناتج في <code data-enlighter-language="python">a</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Bitwise inexclusive OR and Assignment</span></td>
+<td class="center"><code data-enlighter-language="python">|=</code></td>
+<td class="center"><code data-enlighter-language="python">a |= b</code></td>
+<td>أحسب ناتج جمع الـ <span class="word">bits</span> المشتركة و الغير مشتركة بين <code data-enlighter-language="python">a</code> و <code data-enlighter-language="python">b</code> و خزن الناتج في <code data-enlighter-language="python">a</code></td>
+</tr>
+</table>
+<br/>
+<p>هنا وضعنا مثال لكل عامل موجود في الجدول <a class="open-page" href="assignment-operators-examples.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<article>
+<h2>العوامل التي تستخدم للبحث في المصفوفات <span class="inline">(<span class="word">Membership Operators</span>)</span></h2>
+<table class="list full-width">
+<tr>
+<th>إسم العامل</th>
+<th>رمزه</th>
+<th>مثال</th>
+<th>شرح الكود</th>
+</tr>
+<tr>
+<td class="center"><span class="word">In</span></td>
+<td class="center"><code data-enlighter-language="python">in</code></td>
+<td class="center"><code data-enlighter-language="python">a in arr</code></td>
+<td>هل قيمة المتغير <code data-enlighter-language="python">a</code> موجودة في المصفوفة <code data-enlighter-language="python">arr</code>؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="python">True</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Not In</span></td>
+<td class="center"><code data-enlighter-language="python">not in</code></td>
+<td class="center"><code data-enlighter-language="python">a not in arr</code></td>
+<td>هل قيمة المتغير <code data-enlighter-language="python">a</code> غير موجودة في المصفوفة <code data-enlighter-language="python">arr</code>؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="python">True</code></td>
+</tr>
+</table>
+<br/>
+<p>هنا وضعنا مثال لكل عامل موجود في الجدول <a class="open-page" href="membership-operators-examples.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<article>
+<h2>العوامل التي تستخدم لمعرفة ما إذا كان الكائنين يشيران لكائن واحد في الذاكرة أم لا <span class="inline">(<span class="word">Identity Operators</span>)</span></h2>
+<table class="list full-width">
+<tr>
+<th>إسم العامل</th>
+<th>رمزه</th>
+<th>مثال</th>
+<th>شرح الكود</th>
+</tr>
+<tr>
+<td class="center"><span class="word">Is</span></td>
+<td class="center"><code data-enlighter-language="python">is</code></td>
+<td class="center"><code data-enlighter-language="python">a is b</code></td>
+<td>هل الكائن <code data-enlighter-language="python">a</code> و الكائن <code data-enlighter-language="python">b</code> يشيران إلى كائن واحد في الذاكرة؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="python">True</code></td>
+</tr>
+<tr>
+<td class="center"><span class="word">Is Not</span></td>
+<td class="center"><code data-enlighter-language="python">is not</code></td>
+<td class="center"><code data-enlighter-language="python">a is not b</code></td>
+<td>هل الكائن <code data-enlighter-language="python">a</code> و الكائن <code data-enlighter-language="python">b</code> لا يشيران إلى كائن واحد في الذاكرة؟<br/>
+			إذا كان الجواب نعم فإنها ترجع <code data-enlighter-language="python">True</code></td>
+</tr>
+</table>
+<br/>
+<p>هنا وضعنا مثال لكل عامل موجود في الجدول <a class="open-page" href="identity-operators-examples.html" target="_blank">شاهد الأمثلة »</a></p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

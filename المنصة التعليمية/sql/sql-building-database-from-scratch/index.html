@@ -1,0 +1,1052 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس ستتعلم طريقة تصميم قاعدة بيانات لأي مشروع كان خطوة خطوة" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>طريقة تصميم قاعدة بيانات من الصفر</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../database-icon.png"/></li>
+<li class="title">كيف أبدأ بالتعلم</li>
+<li><a href="../sql-overview/index.html"><span class="en">SQL</span> - نظرة عامة</a></li>
+<li><a href="../sql-environment-setup/index.html"><span class="en">SQL</span> - تجهيز بيئة العمل</a></li>
+<li><a href="../sql-basic-syntax/index.html"><span class="en">SQL</span> - أسلوب كتابة الأوامر</a></li>
+<li><a href="../sql-comments/index.html"><span class="en">SQL</span> - التعليقات</a></li>
+<li><a href="../sql-write-first-query/index.html"><span class="en">SQL</span> - كتابة أول إستعلام</a></li>
+<li><a href="../sql-refresh-databases-panel/index.html"><span class="en">SQL</span> - تحديث قائمة قواعد البيانات</a></li>
+<li><a href="../sql-databases-structure-in-general/index.html"><span class="en">SQL</span> - مفاهيم و مصطلحات مهمة</a></li>
+<li class="title">أوامر و دوال SQL</li>
+<li><a href="../sql-create-database/index.html"><span class="en">SQL</span> - أمر إنشاء قاعدة بيانات</a></li>
+<li><a href="../sql-drop-database/index.html"><span class="en">SQL</span> - أمر حذف قاعدة بيانات</a></li>
+<li><a href="../sql-data-types/index.html"><span class="en">SQL</span> - أهم أنواع البيانات</a></li>
+<li><a href="../sql-create-table/index.html"><span class="en">SQL</span> - أمر إنشاء جدول</a></li>
+<li><a href="../sql-drop-table/index.html"><span class="en">SQL</span> - أمر حذف جدول</a></li>
+<li><a href="../sql-use/index.html"><span class="en">SQL</span> - أمر تحديد قاعدة البيانات</a></li>
+<li><a href="../sql-insert-into/index.html"><span class="en">SQL</span> - أمر إضافة سطر في الجدول</a></li>
+<li><a href="../sql-auto-increment/index.html"><span class="en">SQL</span> - الترقيم التلقائي للأسطر</a></li>
+<li><a href="../sql-select/index.html"><span class="en">SQL</span> - أمر جلب بيانات من الجدول</a></li>
+<li><a href="../sql-select-with-concat/index.html"><span class="en">SQL</span> - دمج الأعمدة عند جلبها</a></li>
+<li><a href="../sql-select-repeat-columns-name/index.html"><span class="en">SQL</span> - تكرار إسم الأعمدة في الإستعلام</a></li>
+<li><a href="../sql-select-with-where/index.html"><span class="en">SQL</span> - جلب البيانات ضمن شروط</a></li>
+<li><a href="../sql-select-with-order/index.html"><span class="en">SQL</span> - جلب البيانات مع ترتيبها</a></li>
+<li><a href="../sql-select-distinct/index.html"><span class="en">SQL</span> - جلب بيانات خالية من التكرار</a></li>
+<li><a href="../sql-union/index.html"><span class="en">SQL</span> - دمج الجداول في جدول واحد</a></li>
+<li><a href="../sql-delete/index.html"><span class="en">SQL</span> - أمر حذف بيانات من الجدول</a></li>
+<li><a href="../sql-update/index.html"><span class="en">SQL</span> - أمر تحديث بيانات الجدول</a></li>
+<li><a href="../sql-select-with-limit/index.html"><span class="en">SQL</span> - تحديد عدد الأسطر التي سترجع</a></li>
+<li><a href="../sql-null-values/index.html"><span class="en">SQL</span> - التعامل مع الحقول الفارغة</a></li>
+<li><a href="../sql-min/index.html"><span class="en">SQL</span> - جلب أصغر قيمة في العامود</a></li>
+<li><a href="../sql-max/index.html"><span class="en">SQL</span> - جلب أكبر قيمة في العامود</a></li>
+<li><a href="../sql-count/index.html"><span class="en">SQL</span> - حساب عدد أسطر الجدول</a></li>
+<li><a href="../sql-sum/index.html"><span class="en">SQL</span> - حساب ناتج جمع قيم العامود</a></li>
+<li><a href="../sql-avg/index.html"><span class="en">SQL</span> - حساب متوسط قيم العامود</a></li>
+<li><a href="../sql-select-with-group-by/index.html"><span class="en">SQL</span> - تجميع قيم الحقول المشتركة</a></li>
+<li><a href="../sql-select-with-having/index.html"><span class="en">SQL</span> - شروط على الحقول المجمعة</a></li>
+<li><a href="../sql-insert-into-select/index.html"><span class="en">SQL</span> - نسخ البيانات في جدول آخر</a></li>
+<li><a href="../sql-case/index.html"><span class="en">SQL</span> - وضع قيمة إفتراضية لكل حالة</a></li>
+<li><a href="../sql-unique/index.html"><span class="en">SQL</span> - تخزين قيم موحدة في العامود</a></li>
+<li class="title">العلاقات بين الجداول</li>
+<li><a href="../sql-how-to-relate-tables/index.html"><span class="en">SQL</span> - كيف يتم ربط الجداول</a></li>
+<li><a href="../sql-relationships-types/index.html"><span class="en">SQL</span> - أنواع العلاقات بين الجدوال</a></li>
+<li><a href="../sql-joins/index.html"><span class="en">SQL</span> - طرق ربط معلومات الجداول</a></li>
+<li><a href="../sql-alias-for-tables/index.html"><span class="en">SQL</span> - وضع أسماء مختصرة للجداول</a></li>
+<li><a href="../sql-self-join/index.html"><span class="en">SQL</span> - ربط المعلومات في نفس الجدول</a></li>
+<li class="title">معلومات متقدمة</li>
+<li><a href="../sql-alter/index.html"><span class="en">SQL</span> - تعديل بنية الجدول بعد إنشائه</a></li>
+<li><a href="../sql-default/index.html"><span class="en">SQL</span> - وضع قيم إفتراضية للحقول</a></li>
+<li><a href="../sql-primary-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح رئيسي</a></li>
+<li><a href="../sql-foreign-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح أجنبي</a></li>
+<li><a href="../sql-check/index.html"><span class="en">SQL</span> - وضع شروط لتخزين القيم</a></li>
+<li><a href="../sql-transactions/index.html"><span class="en">SQL</span> - تنفيذ كل الأوامر أو إلغاءها كلها</a></li>
+<li><a href="../sql-indexes/index.html"><span class="en">SQL</span> - الفهارس و أنواعها</a></li>
+<li><a href="../sql-like/index.html"><span class="en">SQL</span> - البحث في الأعمدة النصية</a></li>
+<li><a href="../sql-sub-queries/index.html"><span class="en">SQL</span> - كتابة إستعلامات متداخلة</a></li>
+<li><a href="../sql-connect-to-database/index.html"><span class="en">SQL</span> - الإتصال بقاعدة البيانات عن بعد</a></li>
+<li class="title">بناء قواعد بيانات لمشاريع</li>
+<li><a href="index.html"><span class="en">SQL</span> - تصميم قاعدة بيانات من الصفر</a></li>
+<li><a href="../sql-download-ready-made-database/index.html"><span class="en">SQL</span> - تحميل قواعد بيانات جاهزة</a></li>
+<!--
+<li><a href="../sql-backup-database"><span class="en">SQL</span> - إنشاء نسخة من قاعدة البيانات</a></li>
+<li><a href="../sql-stored-procedures"><span class="en">SQL</span> - تعريف دوال و استدعائها</a></li>
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">SQL</span>طريقة تصميم قاعدة بيانات من الصفر</h1>
+<article>
+<h2>معرفة المعلومات الأساسية التي يجب تخزينها في المشروع</h2>
+<p>عندما يطلب منك العميل تصميم قاعدة بيانات لأي مشروع و لنفرض أنه يريد قاعدة بيانات لمدونة, عليك معرفة ما الذي يريد من هذه المدونة بالضبط حتى تعرف كيف تبني قاعدة البيانات الخاصة بها و في حال وجدت أنه لا يعرف كل المعلومات التي يجب تخزينها - و هذا شيء طبيعي جداً - يمكنك أن تقترح عليه أفكار مرت معك سابقاً لتساعده في تحديد ما يريده بالضبط.</p>
+<p>فمثلاً قد تجد العميل يقول لك: "أريد فقط مدونة لأنشر بها مقالات كل فترة".<br/>
+	هذه المعلومة لا تكفي حتى تبني قاعدة البيانات بالشكل الذي يتخيله العميل, لذلك هنا من الطبيعي أن تبدأ بسؤاله بشكل أدق عن الذي يريد أن تحتويه المدونة من مميزات حتى تعرف كيف ستبني قاعدة بيانات المدونة و إليك بعض الأسئلة التي قد تطرحها عليه لتعرف كيف ستبنيها:</p>
+<ul class="explain">
+<li><p>هل ستكون الشخص الوحيد الذي يمكنه كتابة المقالات؟</p></li>
+<li><p>هل تريد أن تكون مسؤول عن تعيين المدونيين و الموافقة على المقالات التي سينشروها؟</p></li>
+<li><p>هل تريد جعل زوار الموقع قادرين على وضع تعليقات على المقالات؟</p></li>
+<li><p>هل تريد إجبار الزوار على تسجيل الدخول حتى يتمكنوا من وضع التعليقات؟</p></li>
+<li><p>هل تريد تريد جعل الشخص المسجل في الموقع يصله رسالة على بريده الإلكتروني عندما تنشر مقالات جديدة؟</p></li>
+<li><p>هل سيكون المستخدم قادر على وضع صورة شخصية؟</p></li>
+<li><p>هل سيكون المستخدم قادر على وضع نبذة تعريفية عن نفسه؟</p></li>
+<li><p>ما هي الطرق التي تريد إعمتادها لجعل المستخدم يسترجع حسابه في حال نسي كلمة مروره؟</p></li>
+<li><p>هل سيكون المستخدم قادر على تسجيل الدخول بواسطة حسابه في فيسبوك أو تويتر؟</p></li>
+</ul>
+<p>يمكنك أن تطرح عليه عدد غير محدد من الأسئلة و من بعدها يمكنك البدء بوضع خطة لبناء قاعدة البيانات الخاصة بهذه المدونة.</p>
+</article>
+<article>
+<h2>مرحلة تحديد كيفية تخزين المعلومات في قاعدة البيانات</h2>
+<p>بعدما أبلغك العميل بكل تفاصيل مشروعه, يصبح عملك الآن هو معرفة كيف ستبني قاعدة البيانات الخاصة بهذا المشروع حتى تخزن المعلومات التي سيدخلها أي شخص يستخدم المدونة بشكل صحيح و مرتب.</p>
+<p>لنفترض أن العميل أراد حفظ المعلومات التالية في المدونة:</p>
+<ul class="explain">
+<li><p>معلومات كل مستخدم (إسمه, إسم المستخدم الخاص به, كلمة المرور, بريده الإلكتروني, تاريخ ميلاده, رقم هاتفه, جنسه, صورته, إسم بلده, دوره في المدونة, تعليقاته).</p></li>
+<li><p>معلومات كل مقال (عنوانه, محتواه, تصنيفه, إسم الكاتب, تاريخ نشره, هل يسمح بوضع تعليقات عليه أم لا).</p></li>
+</ul>
+<br/>
+<p>أهم شيء عليك الإنتباه له هو أنه المعلومات التي قمنا بتدوينها على سطرين لا تعني أبداً أنه يجب توزيع هذه المعلومات على جدولين فقط.<br/>
+	الآن يجب معرفة ما هي البيانات التي يمكن أن نجزءها لعدة أعمدة و أنواعها و ما هي البيانات التي قد تتكرر في كل سطر حتى نتجنب وضع قيم مكررة أو حقول فارغة.</p>
+<br/>
+<h3>1- إسم الشخص</h3>
+<p>إسم الشخص يتألف في العادة من إسم الشخص و إسم عائلته.<br/>
+	لذا إسم الشخص سيتم وضعه في عامودين كالتالي:</p>
+<ul class="explain">
+<li><p>العامود الأول إسمه <code>first_name</code> و نوعه <span class="inline"><code data-enlighter-language="sql">VARCHAR</code>.</span></p></li>
+<li><p>العامود الأول إسمه <code>last_name</code> و نوعه <span class="inline"><code data-enlighter-language="sql">VARCHAR</code>.</span></p></li>
+</ul>
+<p><span class="note">ملاحظة:</span> لو أراد العميل تخزين إسم الأب أيضاً, يمكن إضافة عامود ثالث إسمه <code>father_name</code> و نوعه <code data-enlighter-language="sql">VARCHAR</code> أيضاً.</p>
+<br/>
+<h3>2- إسم المستخدم</h3>
+<p>إسم المستخدم <code>username</code> الخاص بكل شخص يجب أن يكون نوعه <code data-enlighter-language="sql">VARCHAR</code> و <code data-enlighter-language="sql">UNIQUE</code> لأنه لا يجب وجود أكثر من شخص عندهم نفس إسم المستخدم.</p>
+<br/>
+<h3>3- كلمة المرور</h3>
+<p>كلمة المرور أو كلمة السر <code>password</code> الخاصة بكل شخص يمكن حفظها بعدة أشكال مع الإشارة إلى أننا دائماً نحفظها بشكل مشفر حتى لا يتمكن أي أحد من معرفتها.<br/>
+	على حسب نوع التشفير الذي تختاره في مشروعك تقوم بتحديد خصائص العامود الذي ستحفظ فيه كلمات المرور المشفرة.<br/>
+	إذا افترضنا أننا سنعتمد على تشفير إسمه <span class="word">MD5</span> فهنا سيكون عدد أحرف كل كلمة مرور مشفرة هو 32 حرف بالضبط مهما كان حجم كلمة المرور الأصلية.<br/>
+	لذلك سنقوم بجعل نوع العامود <code data-enlighter-language="sql">CHAR</code> و تحديد أنه يتألف من <code>32</code> حرف بالضبط لأن حقوله دائماً ستحتوي على هذا العدد من الأحرف.</p>
+<br/>
+<h3>4- تاريخ ميلاد الشخص</h3>
+<p>تاريخ ميلاد الشخص <code>birthdate</code> يجب أن يكون نوعه <span class="inline"><code data-enlighter-language="sql">DATE</code>.</span></p>
+<br/>
+<h3>5- رقم هاتف الشخص</h3>
+<p>رقم هاتف الشخص <code>phone</code> يمكن جعل نوعه <code data-enlighter-language="sql">INT</code> و لكن هل نحن بحاجة لأن يكون كذلك؟<br/>
+	الجواب هو كلا, لأننا لن نجري عليه أي عملية خاصة بالأرقام و نريد أن يتم حفظه كما تم إدخاله بالضبط و هذا الأمر مستحيل إن كان نوع العامود <span class="inline"><code data-enlighter-language="sql">INT</code>.</span><br/>
+	فمثلاً, إن كان رقم هاتف المستخدم قد يتضمن رموز مثل <code>+961711731343</code> و هذا الأمر ممنوع في حال كان نوع العامود <span class="inline"><code data-enlighter-language="sql">INT</code>.</span><br/>
+	أيضاً قد يتضمن اصفاراً من الناحية اليسرى مثل <code>00961711731343</code> و هذا الأمر ممنوع كذلك في حال كان نوع العامود <span class="inline"><code data-enlighter-language="sql">INT</code>.</span></p>
+<p>لهذا السبب العامود <code>phone</code> يجب أن يكون نوعه <code data-enlighter-language="sql">VARCHAR</code> لأنه سيضمن حفظ الرقم كما تم إدخاله.</p>
+<br/>
+<h3>6- جنس الشخص</h3>
+<p>جنس الشخص يمكنك أن تفعله بطريقتين على حسب حاجتك:</p>
+<p>يمكنك تسمية العامود الخاص بجنس الشخص <code>is_male</code> و تجعل نوعه <code data-enlighter-language="sql">BOOLEAN</code> و عندها إذا كان المستخدم ذكر تخزن القيمة <code data-enlighter-language="sql">True</code> و إذا كان المستخدم أنثى تخزن القيمة <span class="inline"><code data-enlighter-language="sql">False</code>.</span></p>
+<p>الطريقة الثانية هي بأن تنشئ جدول خاص إسمه <code>genders</code> لتخزن فيه أنواع الجنس و عندها لاختيار نوع الجنس تختار رقم <code>id</code> الجنس فقط.<br/>
+<span class="note">ملاحظة:</span> سنعتمد هذه الطريقة لجعلك تعتاد على التعامل مع عدد أكبر من الجداول و لأنها تتيح لنا إضافة المزيد من الخصائص, فمثلاً يمكننا جعل الجدول <code>genders</code> يحتوي على إسم الجنس باللغة العربية و باللغة الإنجليزية.</p>
+<br/>
+<h3>7- صورة الشخص</h3>
+<p>صور جميع المستخدمين يفضل دائماً إنشاء جدول خاص لها و يمكنك تسميته <span class="inline"><code>photos</code>.</span><br/>
+	في هذا الجدول يمكنك تحديد الكثير من المعلومات, مثل المكان الذي سيتم فيه حفظ الصورة (أي رابط الوصول لها), إسم الصورة, حجمها, نوعها إلخ..</p>
+<p>في الجدول <code>photos</code> يجب أن تضع عامود خاص لتضع <code>id</code> الشخص الذي هو صاحب هذه الصورة حتى تربطها به.</p>
+<br/>
+<h3>8- بلد الشخص</h3>
+<p>بلد الشخص قد يتكرر بشكل كبير, لذا لتجنب تكرار إسم البلد سنقوم بإنشاء جدول إسمه <code>countries</code> و فيه نضع أسماء البلدان, و عندها لتحديد بلد أي مستخدم نضع رقم <code>id</code> البلد.</p>
+<br/>
+<h3>9- دور الشخص</h3>
+<p>دور الشخص في المدونة سيتكرر حتماً و بشكل كبير, لذا جميع الأدوار التي ممكن إعطاءها للمستخدمين سنضع أسماءها في جدول خاص إسمه <code>roles</code> و عندها لتحديد دور أي مستخدم نضع رقم <code>id</code> الدور الذي سنعطيه له.</p>
+<br/>
+<h3>10- تعليقات الشخص</h3>
+<p>تعليقات الأشخاص تتطلب معاملة خاصة لإدارة, لأنه يمكن للمستخدم أن يضع أكثر من تعليق على نفس المقال و يمكن له أن يضع تعليق يكون بمثابة رد على تعليق مستخدم آخر. لذا الحل الأفضل و الأمثل لحفظ التعليقات هو إنشاء جدول خاص إسمه <code>comments</code> و هذا الجدول نجعله قادر على ربط التعليقات نفسها ببعضها بأسلوب <span class="word">Self Join</span> حتى نتمكن من جعل التعليقات تابعة لبعضها و إظهارها كردود.</p>
+<br/>
+<h3>12- عنوان المقال</h3>
+<p>عنوان المقال <code>title</code> يجب أن يكون نوعه <span class="inline"><code data-enlighter-language="sql">VARCHAR</code>.</span></p>
+<br/>
+<h3>13- محتوى المقال</h3>
+<p>محتوى المقال <code>content</code> يجب أن يكون نوعه <code data-enlighter-language="sql">VARCHAR</code> كبير جداً أو أي نوع نصي يمكن أن يتقبل أكبر عدد ممكن من الأحرف.</p>
+<br/>
+<h3>13- تصنيف المقال</h3>
+<p>تصنيف المقال قد يتكرر بشكل كبير, لذا لتجنب تكرار إسم التصنيف سنقوم بإنشاء جدول إسمه <code>categories</code> و فيه نضع أسماء التصنيفات, و عندها لتحديد تصنيف أي مقال نضع رقم <code>id</code> الصنف الذي يعتبر المقال تابع له.</p>
+<br/>
+<h3>14- تاريخ نشر المقال</h3>
+<p>تاريخ النشر <code>publishing_date</code> يجب أن يكون نوعه <span class="inline"><code data-enlighter-language="sql">DATE</code>.</span></p>
+<br/>
+<h3>15- إمكانية التعليق أم لا</h3>
+<p>يمكنك تسمية العامود الخاص بالسماح بوضع تعليقات أم لا <code>are_comments_enabled</code> و تجعل نوعه <code data-enlighter-language="sql">BOOLEAN</code> و عندها إذا كان يسمح بوضع تعليقات تخزن القيمة <code data-enlighter-language="sql">True</code> و إذا كان لا يسمح تخزن القيمة <span class="inline"><code data-enlighter-language="sql">False</code>.</span></p>
+</article>
+<article>
+<h2>مرحلة تصميم و إنشاء قاعدة البيانات</h2>
+<p>الشكل العام للجداول التي سننشئها و التي سنربطها ببعضها سيكون كالتالي.</p>
+<p><a href="db-design.png" target="_blank"><img src="db-design.png"/></a></p>
+<br/>
+<p>الآن سنقوم بكتابة الأوامر التي ستنشئ لنا الجداول بالإضافة إلى تعيين المفاتيح الرئيسية و الأجنبية.<br/>
+<span class="note">ملاحظة:</span> المفاتيح الأجنبية <span class="inline">( <span class="word">Foreign Keys</span> ),</span> الفهارس <span class="inline">( <span class="word">Indexes</span> )</span> و القيود <span class="inline">( <span class="word">Constraints</span> )</span> قمنا بتعريفها بعد إنشاء جميع الجداول.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+-- سيتم حذفها blog في حال كان يوجد بالأساس قاعدة بيانات إسمها
+DROP DATABASE IF EXISTS blog;
+
+-- blog هنا قمنا بإنشاء قاعدة بيانات جديدة إسمها
+CREATE DATABASE blog;
+
+-- و بالتالي أي شيء ننشئه سيتم إنشاؤه فيها blog هنا قمنا بتحديد أن أي إستعلام جديد سيتم تنفيذه على قاعدة البيانات
+USE blog;
+
+-- يتألف من عامودين genders هنا قمنا بإنشاء جدول جديد إسمه
+CREATE TABLE genders (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(20)
+);
+
+-- يتألف من عامودين roles هنا قمنا بإنشاء جدول جديد إسمه
+CREATE TABLE roles (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(20)
+);
+
+-- يتألف من عامودين categories هنا قمنا بإنشاء جدول جديد إسمه
+CREATE TABLE categories (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255)
+);
+
+-- يتألف من 6 أعمدة photos هنا قمنا بإنشاء جدول جديد إسمه
+CREATE TABLE photos (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    url VARCHAR(2000),
+	physical_path VARCHAR(255),
+	size_KB INT,
+	user_id INT
+);
+
+-- يتألف من 9 أعمدة users هنا قمنا بإنشاء جدول جديد إسمه
+CREATE TABLE users (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50),
+	password CHAR(32),
+	email VARCHAR(255),
+	first_name VARCHAR(100),
+	last_name VARCHAR(100),
+    birthdate DATE,
+	phone VARCHAR(20),
+	gender_id INT,
+	role_id INT
+);
+
+-- يتألف من 8 أعمدة posts هنا قمنا بإنشاء جدول جديد إسمه
+CREATE TABLE posts (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    url VARCHAR(2000),
+	title VARCHAR(255),
+	content VARCHAR(21844), -- MySQL الرقم 21844 هو أقصى حد ممكن في قواعد بيانات
+	publishing_date DATE,
+    are_comments_enabled BOOLEAN,
+	user_id INT,
+	category_id INT
+);
+
+-- يتألف من 6 أعمدة comments هنا قمنا بإنشاء جدول جديد إسمه
+CREATE TABLE comments (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	content VARCHAR(2000),
+	publishing_date DATE,
+    parent_comment_id INT,
+	user_id INT,
+	post_id INT
+);
+
+-- genders و users هو بمثابة مفتاح أجنبي بين الجدولين gender_id للإشارة إلى أن العامود fk_users_genders هنا قمنا بوضع قيد إسمه
+ALTER TABLE users
+ADD CONSTRAINT fk_users_genders
+FOREIGN KEY (gender_id) REFERENCES genders(id);
+
+-- roles و users هو بمثابة مفتاح أجنبي بين الجدولين role_id للإشارة إلى أن العامود fk_users_roles هنا قمنا بوضع قيد إسمه
+ALTER TABLE users
+ADD CONSTRAINT fk_users_roles
+FOREIGN KEY (role_id) REFERENCES roles(id);
+
+-- users و photos هو بمثابة مفتاح أجنبي بين الجدولين user_id للإشارة إلى أن العامود fk_photos_users هنا قمنا بوضع قيد إسمه
+ALTER TABLE photos
+ADD CONSTRAINT fk_photos_users
+FOREIGN KEY (user_id) REFERENCES users(id);
+
+-- users و posts هو بمثابة مفتاح أجنبي بين الجدولين user_id للإشارة إلى أن العامود fk_posts_users هنا قمنا بوضع قيد إسمه
+ALTER TABLE posts
+ADD CONSTRAINT fk_posts_users
+FOREIGN KEY (user_id) REFERENCES users(id);
+
+-- categories و posts هو بمثابة مفتاح أجنبي بين الجدولين category_id للإشارة إلى أن العامود fk_posts_categories هنا قمنا بوضع قيد إسمه
+ALTER TABLE posts
+ADD CONSTRAINT fk_posts_categories
+FOREIGN KEY (category_id) REFERENCES categories(id);
+
+-- users و comments هو بمثابة مفتاح أجنبي بين الجدولين user_id للإشارة إلى أن العامود fk_comments_users هنا قمنا بوضع قيد إسمه
+ALTER TABLE comments
+ADD CONSTRAINT fk_comments_users
+FOREIGN KEY (user_id) REFERENCES users(id);
+
+-- posts و comments هو بمثابة مفتاح أجنبي بين الجدولين post_id للإشارة إلى أن العامود fk_comments_posts هنا قمنا بوضع قيد إسمه
+ALTER TABLE comments
+ADD CONSTRAINT fk_comments_posts
+FOREIGN KEY (post_id) REFERENCES posts(id);
+
+-- comments الموجود معه في الجدول id هو بمثابة مفتاح أجنبي بالنسبة للعامود parent_comment_id للإشارة إلى أن العامود fk_comments_comments هنا قمنا بوضع قيد إسمه
+ALTER TABLE comments
+ADD CONSTRAINT fk_comments_comments
+FOREIGN KEY (parent_comment_id) REFERENCES comments(id);
+
+-- يجب أن تكون موحدة users الموجود في الجدول username للإشارة إلى أن قيم العامود uidx_users_username هنا قمنا بوضع قيد إسمه
+CREATE UNIQUE INDEX uidx_users_username
+ON users (username);
+
+-- يجب أن تكون موحدة users الموجود في الجدول email للإشارة إلى أن قيم العامود uidx_users_email هنا قمنا بوضع قيد إسمه
+CREATE UNIQUE INDEX uidx_users_email
+ON users (email); 
+
+-- يجب أن تكون موحدة photos الموجود في الجدول url للإشارة إلى أن قيم العامود uidx_photos_url هنا قمنا بوضع قيد إسمه
+CREATE UNIQUE INDEX uidx_photos_url
+ON photos (url); 
+
+-- يجب أن تكون موحدة photos الموجود في الجدول physical_path للإشارة إلى أن قيم العامود uidx_photos_physical_path هنا قمنا بوضع قيد إسمه
+CREATE UNIQUE INDEX uidx_photos_physical_path
+ON photos (physical_path); 
+
+-- يجب أن تكون موحدة posts الموجود في الجدول url للإشارة إلى أن قيم العامود uidx_posts_url هنا قمنا بوضع قيد إسمه
+CREATE UNIQUE INDEX uidx_posts_url
+ON posts (url); 
+		</pre>
+</div>
+<br/>
+<p>بعد تنفيذ الإستعلام السابق في <span class="word">phpMyAdmin</span> سيتم إنشاء قاعدة البيانات <code>blog</code> و إنشاء الجداول بداخلها.<br/>
+	قم بالنقر على إسم قاعدة البيانات <code>blog</code> من القائمة اليسرى حتى تبدأ بالتعامل معها و تطبيق ما ستتعلمه في هذا الدرس.</p>
+</article>
+<article>
+<h2>مرحلة إدخال البيانات في قاعدة البيانات</h2>
+<p>عند إدخال البيانات يجب أن تتعامل معها بمنطقية و أن تبدأ بإدخال البيانات الأساسية التي يجب وجودها حتى تتمكن من إدخال البيانات الأخرى التي تعتمد عليها, و إليك ما نقصده:</p>
+<p>بالنسبة لإدخال معلومات مستخدم جديد, فإن أي مستخدم سيتم إضافته يجب أن يختار رقم الجنس <code>gender_id</code> من الجدول <code>genders</code> و رقم الدور <code>role_id</code> من الجدول <code>roles</code> لذلك يجب إدخال معلومات هذين الجدولين قبل محاولة إدخال معلومات أي مستخدم.</p>
+<p>بالنسبة للمقالات, فإن أي مقال نضيفه يجب أن يكون مرتبط برقم <code>id</code> مستخدم محدد من الجدول <code>users</code> (كاتب المقال) و رقم <code>id</code> تصنيفه من الجدول <code>categories</code> (التصنيف الذي ينتمي إليه المقال). لذلك وجود المستخدم و تصنيفات المقال أساسي حتى تتمكن من إضافة مقال جديد مرتبط بهم.</p>
+<p>بالنسبة للتعليقات, فإن أي تعليق نضيفه يجب أن يكون مرتبط برقم <code>id</code> مستخدم محدد من الجدول <code>users</code> (صاحب التعليق) و رقم <code>id</code> مقال محدد من الجدول <code>posts</code> (المقال الذي يوضع التعليق عليه). لذلك وجود المستخدم و المقال أساسي حتى تتمكن من إضافة تعليق جديد مرتبط بهم.</p>
+<p>بالنسبة للصور, بما أن أي صورة تضيفها يجب أن تكون مربطة برقم <code>id</code> مستخدم محدد من الجدول <code>users</code> (صاحب الصورة) فهذا يعني أنه يجب إضافة مستخدم قبل إضافة صورة له و هكذا.</p>
+<br/>
+<h3>خلاصة</h3>
+<ul class="explain">
+<li><p>يجب إدخال معلومات الجداول <code>genders</code> و <code>roles</code> و <code>categories</code> في البداية لأن الجداول الأخرى تعتمد عليهم.</p></li>
+<li><p>بعدها يجب إدخال معلومات الجدول <code>users</code> لأنه يصبح بإمكانك إضافة مستخدمين.</p></li>
+<li><p>بعدها يمكنك إذا شئت إدخال معلومات الجدول <code>photos</code> لأنه يصبح بإمكانك إضافة صور للمستخدمين.</p></li>
+<li><p>بعدها يمكنك إذا شئت إدخال مقالات في الجدول <code>posts</code> لأنه يصبح بإمكانك إضافة مقال.</p></li>
+<li><p>بعدها يمكنك إذا شئت إدخال تعليقات في الجدول <code>comments</code> لأنه يصبح بإمكانك إضافة تعليقات.</p></li>
+</ul>
+<br/>
+<p>الآن سنقوم بكتابة الأوامر التي ستنشئ لنا الجداول بالإضافة إلى تعيين المفاتيح الرئيسية و الأجنبية و ملئ الجداول ببعض القيم.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+-- و بالتالي أي شيء ننشئه سيتم إنشاؤه فيها blog هنا قمنا بتحديد أن أي إستعلام جديد سيتم تنفيذه على قاعدة البيانات
+USE blog;
+
+-- genders هنا قمنا بإضافة سطرين في الجدول
+INSERT INTO genders VALUES (null, 'Male');
+INSERT INTO genders VALUES (null, 'Female');
+
+-- roles هنا قمنا بإضافة 4 أسطر في الجدول
+INSERT INTO roles VALUES (null, 'Administrator');
+INSERT INTO roles VALUES (null, 'Editor');
+INSERT INTO roles VALUES (null, 'Writer');
+INSERT INTO roles VALUES (null, 'Subscriber');
+
+-- categories هنا قمنا بإضافة 5 أسطر في الجدول
+INSERT INTO categories VALUES (null, 'Programming');
+INSERT INTO categories VALUES (null, 'Operating Systems');
+INSERT INTO categories VALUES (null, 'Networking');
+INSERT INTO categories VALUES (null, 'Electronics');
+INSERT INTO categories VALUES (null, 'Artificial Intelligence');
+
+-- users هنا قمنا بإضافة 10 أسطر في الجدول
+-- 'pass1234' ملاحظة: كلمة مرور جميع المستخدمين وضعناها 
+INSERT INTO users VALUES (null, 'mhamad', 'pass1234', 'mhamad@example.com', 'Mhamad', 'Harmush', '1994-05-12', '+96101708089', 1, 1);
+INSERT INTO users VALUES (null, 'ahmad', 'pass1234', 'ahmad@exmaple.com', 'Ahmad', 'Masri', '1998-08-18', '+962358645235', 1, 2);
+INSERT INTO users VALUES (null, 'hala', 'pass1234', 'hala@exmaple.com', 'Hala', 'Hassan', '1998-01-16', '+96370348927', 2, 4);
+INSERT INTO users VALUES (null, 'rola', 'pass1234', 'rola@exmaple.com', 'Rola', 'Senjekdar', '2000-01-01', '+96325684752', 2, 4);
+INSERT INTO users VALUES (null, 'ziad', 'pass1234', 'ziad@exmaple.com', 'Ziad', 'Asmar', '1992-05-2', '+966087046489', 1, 3);
+INSERT INTO users VALUES (null, 'mostafa', 'pass1234', 'mostafa@exmaple.com', 'Mostafa', 'Kamel', '1988-02-12', '+97305654975', 1, 2);
+INSERT INTO users VALUES (null, 'saly', 'pass1234', 'saly@exmaple.com', 'Saly', 'Saadi', '2001-11-17', '+94856215578', 2, 3);
+INSERT INTO users VALUES (null, 'shahad', 'pass1234', 'shahad@exmaple.com', 'Shahad', 'Alanzy', '1995-08-08', '+985865862569', 2, 4);
+INSERT INTO users VALUES (null, 'hazem', 'pass1234', 'hazem@exmaple.com', 'Hazem', 'Hassoun', '1997-06-17', '+964258258855', 1, 4);
+INSERT INTO users VALUES (null, 'rana', 'pass1234', 'rana@exmaple.com', 'Rana', 'Karim', '1989-11-01', '+98215482365', 2, 4);
+
+-- photos هنا قمنا بإضافة 6 أسطر في الجدول
+INSERT INTO photos VALUES (null, 'https://harmash.com/uploaded/photos/6546842.PNG', 'uploaded/photos/6546842.PNG', 1027, 1);
+INSERT INTO photos VALUES (null, 'https://harmash.com/uploaded/photos/5324654.PNG', 'uploaded/photos/5324654.PNG', 2088, 2);
+INSERT INTO photos VALUES (null, 'https://harmash.com/uploaded/photos/5249824.PNG', 'uploaded/photos/5249824.PNG', 1512, 4);
+INSERT INTO photos VALUES (null, 'https://harmash.com/uploaded/photos/4578515.PNG', 'uploaded/photos/4578515.PNG', 1065, 5);
+INSERT INTO photos VALUES (null, 'https://harmash.com/uploaded/photos/8789354.PNG', 'uploaded/photos/8789354.PNG', 2005, 8);
+INSERT INTO photos VALUES (null, 'https://harmash.com/uploaded/photos/5878942.PNG', 'uploaded/photos/5878942.PNG', 1687, 9);
+
+-- posts هنا قمنا بإضافة سطرين في الجدول
+INSERT INTO posts VALUES (null, 'https://harmash.com/java/java-overview', 'Java Overview', 'Java is a popular programming language, created in 1995. It is owned by Oracle, and more than 3 billion devices run Java.', '2020-03-01', true, 5, 1);
+INSERT INTO posts VALUES (null, 'https://harmash.com/linux/linux-file-system', 'Linux File System', 'The Filesystem Hierarchy Standard (FHS) defines the structure of file systems on Linux and other UNIX-like Operating Systemss. However, Linux file systems also contain some directories that aren’t yet defined by the standard.', '2020-03-03', true, 1, 2);
+
+-- comments هنا قمنا بإضافة 4 أسطر في الجدول
+INSERT INTO comments VALUES (null, 'Great introduction!', '2020-03-01', null, 3, 1);
+INSERT INTO comments VALUES (null, 'Wow, this is very helpful.', '2020-03-02', null, 4, 1);
+INSERT INTO comments VALUES (null, 'How to List Users in Linux?', '2020-03-03', null, 9, 2);
+INSERT INTO comments VALUES (null, 'Execute the following code: cat /etc/passwd', '2020-03-04', 3, 1, 2);
+		</pre>
+</div>
+<br/>
+<p>بعد تنفيذ الإستعلام السابق سيتم تعبئة القيم في الجداول السبعة كالتالي.</p>
+<br/>
+<h3>الجدول <code>genders</code></h3>
+<div class="responsive-table" style="max-width: 200px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>title</th>
+</tr>
+<tr>
+<td>1</td> <td>Male</td>
+</tr>
+<tr>
+<td>2</td> <td>Female</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>الجدول <code>roles</code></h3>
+<div class="responsive-table" style="max-width: 200px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>title</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Administrator</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Editor</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Writer</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Subscriber</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>الجدول <code>categories</code></h3>
+<div class="responsive-table" style="max-width: 200px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>title</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Programming</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Operating Systems</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Networking</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Electronics</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Artificial Intelligence</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>الجدول <code>users</code></h3>
+<div class="responsive-table" style="max-width: 950px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>username</th> <th>password</th> <th>email</th> <th>first_name</th> <th>last_name</th> <th>birthdate</th> <th>phone</th> <th>gender_id</th> <th>role_id</th>
+</tr>
+<tr>
+<td>1</td> <td>mhamad</td> <td>pass1234</td> <td>mhamad@example.com</td> <td>Mhamad</td> <td>Harmush</td> <td>1994-05-12</td> <td class="ltr">+96101708089</td> <td>1</td> <td>1</td>
+</tr>
+<tr>
+<td>2</td> <td>ahmad</td> <td>pass1234</td> <td>ahmad@exmaple.com</td> <td>Ahmad</td> <td>Masri</td> <td>1998-08-18</td> <td class="ltr">+962358645235</td> <td>1</td> <td>2</td>
+</tr>
+<tr>
+<td>3</td> <td>hala</td> <td>pass1234</td> <td>hala@exmaple.com</td> <td>Hala</td> <td>Hassan</td> <td>1998-01-16</td> <td class="ltr">+96370348927</td> <td>2</td> <td>4</td>
+</tr>
+<tr>
+<td>4</td> <td>rola</td> <td>pass1234</td> <td>rola@exmaple.com</td> <td>Rola</td> <td>Senjekdar</td> <td>2000-01-01</td> <td class="ltr">+96325684752</td> <td>2</td> <td>4</td>
+</tr>
+<tr>
+<td>5</td> <td>ziad</td> <td>pass1234</td> <td>ziad@exmaple.com</td> <td>Ziad</td> <td>Asmar</td> <td>1992-05-2</td> <td class="ltr">+966087046489</td> <td>1</td> <td>3</td>
+</tr>
+<tr>
+<td>6</td> <td>mostafa</td> <td>pass1234</td> <td>mostafa@exmaple.com</td> <td>Mostafa</td> <td>Kamel</td> <td>1988-02-12</td> <td class="ltr">+97305654975</td> <td>1</td> <td>2</td>
+</tr>
+<tr>
+<td>7</td> <td>saly</td> <td>pass1234</td> <td>saly@exmaple.com</td> <td>Saly</td> <td>Saadi</td> <td>2001-11-17</td> <td class="ltr">+94856215578</td> <td>2</td> <td>3</td>
+</tr>
+<tr>
+<td>8</td> <td>shahad</td> <td>pass1234</td> <td>shahad@exmaple.com</td> <td>Shahad</td> <td>Alanzy</td> <td>1995-08-08</td> <td class="ltr">+985865862569</td> <td>2</td> <td>4</td>
+</tr>
+<tr>
+<td>9</td> <td>hazem</td> <td>pass1234</td> <td>hazem@exmaple.com</td> <td>Hazem</td> <td>Hassoun</td> <td>1997-06-17</td> <td class="ltr">+964258258855</td> <td>1</td> <td>4</td>
+</tr>
+<tr>
+<td>10</td> <td>rana</td> <td>pass1234</td> <td>rana@exmaple.com</td> <td>Rana</td> <td>Karim</td> <td>1989-11-01</td> <td class="ltr">+98215482365</td> <td>2</td> <td>4</td>
+</tr>
+</table>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>كلمة السر <code>pass1234</code> لو كنا سنشفرها بخوارزمية <span class="word">MD5</span> لكنت رأيتها في قاعدة البيانات محفوظة هكذا <span class="inline"><code>b4af804009cb036a4ccdc33431ef9ac9</code>.</span><br/>
+	في هذا الدرس لم نركز إطلاقاً على التشفير لأن هذا موضوع آخر ليس له علاقة بمبادئ قواعد البيانات بل هو أمر مرتبط بشكل أساسي بالبرمجة و الشبكات.</p>
+</div>
+<br/><br/>
+<h3>الجدول <code>photos</code></h3>
+<div class="responsive-table" style="max-width: 840px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>url</th> <th>physical_path</th> <th>size_KB</th> <th>user_id</th>
+</tr>
+<tr>
+<td>1</td> <td>https://harmash.com/uploaded/photos/6546842.PNG</td> <td>uploaded/photos/6546842.PNG</td> <td>1027</td> <td>1</td>
+</tr>
+<tr>
+<td>2</td> <td>https://harmash.com/uploaded/photos/5324654.PNG</td> <td>uploaded/photos/5324654.PNG</td> <td>2088</td> <td>2</td>
+</tr>
+<tr>
+<td>3</td> <td>https://harmash.com/uploaded/photos/5249824.PNG</td> <td>uploaded/photos/5249824.PNG</td> <td>1512</td> <td>4</td>
+</tr>
+<tr>
+<td>4</td> <td>https://harmash.com/uploaded/photos/4578515.PNG</td> <td>uploaded/photos/4578515.PNG</td> <td>1065</td> <td>5</td>
+</tr>
+<tr>
+<td>5</td> <td>https://harmash.com/uploaded/photos/8789354.PNG</td> <td>uploaded/photos/8789354.PNG</td> <td>2005</td> <td>8</td>
+</tr>
+<tr>
+<td>6</td> <td>https://harmash.com/uploaded/photos/5878942.PNG</td> <td>uploaded/photos/5878942.PNG</td> <td>1687</td> <td>9</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>الجدول <code>posts</code></h3>
+<div class="responsive-table" style="max-width: 1200px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>url</th><th>title</th> <th>content</th> <th>publishing_date</th> <th>are_comments_enabled</th> <th>user_id</th> <th>category_id</th>
+</tr>
+<tr>
+<td>1</td> <td>https://harmash.com/java/java-overview</td> <td>Java Overview</td> <td>Java is a popular programming language, created in...</td> <td>2020-03-01</td> <td>true</td> <td>5</td> <td>1</td>
+</tr>
+<tr>
+<td>2</td> <td>https://harmash.com/linux/linux-file-system</td> <td>Linux File System</td> <td>The Filesystem Hierarchy Standard (FHS) defines th...</td> <td>2020-03-03</td> <td>true</td> <td>1</td> <td>2</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>الجدول <code>comments</code></h3>
+<div class="responsive-table" style="max-width: 800px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>content</th> <th>publishing_date</th> <th>parent_comment_id</th> <th>user_id</th> <th>post_id</th>
+</tr>
+<tr>
+<td>1</td> <td class="ltr">Great introduction!</td> <td>2020-03-01</td> <td class="i gray">NULL</td> <td>3</td> <td>1</td>
+</tr>
+<tr>
+<td>2</td> <td class="ltr">Wow, this is very helpful.</td> <td>2020-03-02</td> <td class="i gray">NULL</td> <td>4</td> <td>1</td>
+</tr>
+<tr>
+<td>3</td> <td class="ltr">How to List Users in Linux?</td> <td>2020-03-03</td> <td class="i gray">NULL</td> <td>9</td> <td>2</td>
+</tr>
+<tr>
+<td>4</td> <td class="ltr">Execute the following code: cat /etc/passwd</td> <td>2020-03-04</td> <td>3</td> <td>1</td> <td>2</td>
+</tr>
+</table>
+</div>
+</article>
+<article>
+<h2>أمثلة شاملة حول استرجاع البيانات</h2>
+<br/>
+<h3>المثال الأول</h3>
+<p>الإستعلام التالي يقوم بعرض <code>email</code> الشخص الذي يعتبر مدير المدونة <span class="inline">( <span class="word">Administrator</span> ).</span></p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<p>إذا كنت تعرف أن المدير هو الشخص الذي يملك <code>role_id</code> يساوي <code>1</code> يمكنك مباشرةً كتابة التالي.</p>
+<pre data-enlighter-language="sql">
+SELECT email
+FROM users
+WHERE role_id = 1;
+		</pre>
+<br/>
+<p>إذا أردت الإعتماد على كلمة <span class="word">Administrator</span> لمعرفة الشخص الذي يعتبر المدير, يجب أن تكتب التالي.</p>
+<pre data-enlighter-language="sql">
+SELECT email
+FROM users
+JOIN roles
+ON users.role_id = roles.id
+WHERE roles.title = 'Administrator'
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 200px;">
+<table class="ltr left">
+<tr>
+<th>email</th>
+</tr>
+<tr>
+<td>mhamad@example.com</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>الإستعلام التالي يقوم بعرض إسم مستخدم <span class="inline">( <code>username</code> )</span> كل شخص عنده مقال واحد على الأقل مع عرض عنوان <span class="inline">( <code>title</code> )</span> كل مقال.</p>
+<p>لتقليل حجم الكود, قمنا بوضع الحرف <code>u</code> كإسم مختصر للجدول <span class="inline"><code>users</code>,</span> و الحرف <code>p</code> كإسم مختصر للجدول <span class="inline"><code>posts</code>.</span><br/>
+	جعلنا نوع الربط <code data-enlighter-language="sql">JOIN</code> للإشارة إلى أننا نريد عرض الأشخاص الذين عندهم مقالات فقط.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT u.username, p.title AS post_title
+FROM users u
+JOIN posts p
+ON p.user_id = u.id
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 230px;">
+<table class="ltr left">
+<tr>
+<th>username</th> <th>post_title</th>
+</tr>
+<tr>
+<td>ziad</td> <td>Java Overview</td>
+</tr>
+<tr>
+<td>mhamad</td> <td>Linux File System</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الثالث</h3>
+<p>الإستعلام التالي يقوم بإحصاء و عرض عدد الأشخاص <span class="inline">( <code>users</code> )</span> على حسب أدوارهم <span class="inline">( <code>roles</code> ),</span> أي المعلومات التالية:</p>
+<ul class="explain">
+<li><p>كم شخص عبارة عن <span class="inline"><span class="word">Administrator</span>.</span></p></li>
+<li><p>كم شخص عبارة عن <span class="inline"><span class="word">Editor</span>.</span></p></li>
+<li><p>كم شخص عبارة عن <span class="inline"><span class="word">Writer</span>.</span></p></li>
+<li><p>كم شخص عبارة عن <span class="inline"><span class="word">Subscriber</span>.</span></p></li>
+</ul>
+<p>لتقليل حجم الكود, قمنا بوضع الحرف <code>r</code> كإسم مختصر للجدول <span class="inline"><code>roles</code>,</span> و الحرف <code>u</code> كإسم مختصر للجدول <span class="inline"><code>users</code>.</span><br/>
+	لحساب عدد المستخدمين, إستخدمنا الدالة <span class="inline"><code data-enlighter-language="sql">COUNT()</code>.</span><br/>
+	وضعنا إسم الجدول <code>roles</code> من الناحية اليسرى و جعلنا نوع الربط <code data-enlighter-language="sql">LEFT JOIN</code> للإشارة إلى أننا نريد عرض كل الأدوار حتى و لو لم يكن هناك أي شخص له دور محدد منها.<br/>
+	بما أن الإحصاء سيرتكز على إحصاء عدد الأدوار نسبةً لدور كل مستخدم, قمنا بتجميع الأدوار نسبة لعناوين <span class="inline">( <code>title</code> )</span> الأدوار.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT r.title AS roles, COUNT(u.role_id) AS users
+FROM roles r LEFT JOIN users u
+ON u.role_id = r.id
+GROUP BY r.title;
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 200px;">
+<table class="ltr left">
+<tr>
+<th>roles</th> <th>users</th>
+</tr>
+<tr>
+<td>Administrator</td> <td>1</td>
+</tr>
+<tr>
+<td>Editor</td> <td>2</td>
+</tr>
+<tr>
+<td>Subscriber</td> <td>5</td>
+</tr>
+<tr>
+<td>Writer</td> <td>2</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الرابع</h3>
+<p>الإستعلام التالي يقوم بعرض إسم كل شخص (إسمه و إسم عائلته) في عامود واحد بالإضافة إلى جنسه و دوره في المدونة مع ترتيب النتيجة النهائية نسبةً لأدوار الأشخاص.</p>
+<p>المعلومات التي نريدها موجودة في ثلاث جداول هي <code>users</code> و <code>genders</code> و <code>roles</code>, لذا سنقوم بوضع أسماء مختصرة لتصغير حجم كود الإستعلام.</p>
+<ul class="explain">
+<li><p>الجدول <code>users</code> وضعنا الحرف <code>u</code> كإسم مختصر له.</p></li>
+<li><p>الجدول <code>genders</code> وضعنا الحرف <code>g</code> كإسم مختصر له.</p></li>
+<li><p>الجدول <code>roles</code> وضعنا الحرف <code>r</code> كإسم مختصر له.</p></li>
+</ul>
+<p>لدمج إسم الشخص مع إسم عائلته في عامود واحد سنستخدم الدالة <span class="inline"><code data-enlighter-language="sql">CONCAT()</code>.</span><br/>
+	للحصول على مسمى جنس المستخدم في المدونة يجب أن نربط الحقل <code>gender_id</code> الموجود في الجدول <code>u</code> مع الحقل <code>id</code> الموجود في الجدول <span class="inline"><code>g</code>.</span><br/>
+	للحصول على مسمى دور المستخدم في المدونة يجب أن نربط الحقل <code>role_id</code> الموجود في الجدول <code>u</code> مع الحقل <code>id</code> الموجود في الجدول <span class="inline"><code>r</code>.</span></p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT
+	CONCAT(u.first_name, ' ', u.last_name) AS name,
+    g.title AS gender,
+    r.title AS role
+FROM
+	users u
+JOIN
+	genders g ON u.gender_id = g.id
+JOIN
+	roles r ON u.role_id = r.id
+ORDER BY
+	role;
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 360px;">
+<table class="ltr left">
+<tr>
+<th>name</th> <th>gender</th> <th>role</th>
+</tr>
+<tr>
+<td>Mhamad Harmush</td> <td>Male</td> <td>Administrator</td>
+</tr>
+<tr>
+<td>Mostafa Kamel</td> <td>Male</td> <td>Editor</td>
+</tr>
+<tr>
+<td>Ahmad Masri</td> <td>Male</td> <td>Editor</td>
+</tr>
+<tr>
+<td>Hazem Hassoun</td> <td>Male</td> <td>Subscriber</td>
+</tr>
+<tr>
+<td>Rana Karim</td> <td>Female</td> <td>Subscriber</td>
+</tr>
+<tr>
+<td>Shahad Alanzy</td> <td>Female</td> <td>Subscriber</td>
+</tr>
+<tr>
+<td>Rola Senjekdar</td> <td>Female</td> <td>Subscriber</td>
+</tr>
+<tr>
+<td>Hala Hassan</td> <td>Female</td> <td>Subscriber</td>
+</tr>
+<tr>
+<td>Saly Saadi</td> <td>Female</td> <td>Writer</td>
+</tr>
+<tr>
+<td>Ziad Asmar</td> <td>Male</td> <td>Writer</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الخامس</h3>
+<p>الإستعلام التالي يقوم بوضع إسم كل مستخدم <span class="inline">( <code>username</code> )</span> في الجدول <code>users</code> بالإضافة إلى رابط صورته <span class="inline">( <code>url</code> )</span> الموضوع في الجدول  <span class="inline"><code>photos</code>.</span><br/>
+	في حال كان الشخص لا يملك صورة في الجدول <code>photos</code> سيتم عرض جملة <code>No Photo</code> في النتيجة النهائية.</p>
+<p>لتقليل حجم الكود, قمنا بوضع الحرف <code>u</code> كإسم مختصر للجدول <span class="inline"><code>users</code>,</span> و الحرف <code>p</code> كإسم مختصر للجدول <span class="inline"><code>photos</code>.</span><br/>
+	لتبديل أي قيمة <code>Null</code> في العامود <code>photo</code> بالجملة <code>No Photo</code> إستخدمنا الدالة <span class="inline"><code data-enlighter-language="sql">IFNULL()</code>.</span><br/>
+	وضعنا إسم الجدول <code>users</code> من الناحية اليسرى و جعلنا نوع الربط <code data-enlighter-language="sql">LEFT JOIN</code> للإشارة إلى أننا نريد عرض كل أسماء المستخدمين حتى و لو لم يكن هناك أي صورة لهم في الجدول <span class="inline"><code>photos</code>.</span></p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT u.username, IFNULL(p.url, 'No Photo') AS photo
+FROM users u
+LEFT JOIN photos p
+ON p.user_id = u.id;
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 500px;">
+<table class="ltr left">
+<tr>
+<th>username</th> <th>photo</th>
+</tr>
+<tr>
+<td>mhamad</td> <td>https://harmash.com/uploaded/photos/6546842.PNG</td>
+</tr>
+<tr>
+<td>ahmad</td> <td>https://harmash.com/uploaded/photos/5324654.PNG</td>
+</tr>
+<tr>
+<td>hala</td> <td>No Photo</td>
+</tr>
+<tr>
+<td>rola</td> <td>https://harmash.com/uploaded/photos/5249824.PNG</td>
+</tr>
+<tr>
+<td>ziad</td> <td>https://harmash.com/uploaded/photos/4578515.PNG</td>
+</tr>
+<tr>
+<td>mostafa</td> <td>No Photo</td>
+</tr>
+<tr>
+<td>saly</td> <td>No Photo</td>
+</tr>
+<tr>
+<td>shahad</td> <td>https://harmash.com/uploaded/photos/8789354.PNG</td>
+</tr>
+<tr>
+<td>hazem</td> <td>https://harmash.com/uploaded/photos/5878942.PNG</td>
+</tr>
+<tr>
+<td>rana</td> <td>No Photo</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال السادس</h3>
+<p>الإستعلام التالي يقوم بعرض إسم مستخدم كل شخص كتب تعليق, بالإضافة إلى التعليق الذي وضعه, و عنوان المقال الذي علق عليه.</p>
+<p>المعلومات التي نريدها موجودة في ثلاث جداول هي <code>comments</code> و <code>users</code> و <code>posts</code>, لذا سنقوم بوضع أسماء مختصرة لتصغير حجم كود الإستعلام.</p>
+<ul class="explain">
+<li><p>الجدول <code>comments</code> وضعنا الحرف <code>c</code> كإسم مختصر له.</p></li>
+<li><p>الجدول <code>users</code> وضعنا الحرف <code>u</code> كإسم مختصر له.</p></li>
+<li><p>الجدول <code>posts</code> وضعنا الحرف <code>p</code> كإسم مختصر له.</p></li>
+</ul>
+<p>للحصول على إسم المستخدم الذي وضع التعليق يجب أن نربط الحقل <code>user_id</code> الموجود في الجدول <code>c</code> مع الحقل <code>id</code> الموجود في الجدول <span class="inline"><code>u</code>.</span><br/>
+	للحصول على عنوان المقال الذي تم وضع التعليق عليه يجب أن نربط الحقل <code>post_id</code> الموجود في الجدول <code>c</code> مع الحقل <code>id</code> الموجود في الجدول <span class="inline"><code>p</code>.</span></p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT u.username, c.content AS comment, p.title AS on_post
+FROM comments c
+JOIN users u ON c.user_id = u.id
+JOIN posts p ON c.post_id = p.id;
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 550px;">
+<table class="ltr left">
+<tr>
+<th>username</th> <th>comment</th> <th>on_post</th>
+</tr>
+<tr>
+<td>hala</td> <td class="ltr">Great introduction!</td> <td>Java Overview</td>
+</tr>
+<tr>
+<td>rola</td> <td class="ltr">Wow, this is very helpful.</td> <td>Java Overview</td>
+</tr>
+<tr>
+<td>hazem</td> <td class="ltr">How to List Users in Linux?</td> <td>Linux File System</td>
+</tr>
+<tr>
+<td>mhamad</td> <td>Execute the following code: cat /etc/passwd</td> <td>Linux File System</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال السابع</h3>
+<p>الإستعلام التالي يقوم بإحصاء و عرض عدد المقالات <span class="inline">( <code>posts</code> )</span> الموجودة في كل فئة <span class="inline">( <code>categories</code> ),</span> أي المعلومات التالية:</p>
+<ul class="explain">
+<li><p>عدد المقالات التابعة لفئة <span class="inline"><span class="word">Programming</span>.</span></p></li>
+<li><p>عدد المقالات التابعة لفئة <span class="inline"><span class="word">Operating Systems</span>.</span></p></li>
+<li><p>عدد المقالات التابعة لفئة <span class="inline"><span class="word">Networking</span>.</span></p></li>
+<li><p>عدد المقالات التابعة لفئة <span class="inline"><span class="word">Electronics</span>.</span></p></li>
+<li><p>عدد المقالات التابعة لفئة <span class="inline"><span class="word">Artificial Intelligence</span>.</span></p></li>
+</ul>
+<p>لتقليل حجم الكود, قمنا بوضع الحرف <code>p</code> كإسم مختصر للجدول <span class="inline"><code>posts</code>,</span> و الحرف <code>c</code> كإسم مختصر للجدول <span class="inline"><code>categories</code>.</span><br/>
+	لحساب عدد المقالات, إستخدمنا الدالة <span class="inline"><code data-enlighter-language="sql">COUNT()</code>.</span><br/>
+	وضعنا إسم الجدول <code>categories</code> من الناحية اليسرى و جعلنا نوع الربط <code data-enlighter-language="sql">LEFT JOIN</code> للإشارة إلى أننا نريد عرض كل الفئات حتى و لو لم يكن هناك أي مقال تابع لها.<br/>
+	بما أن الإحصاء سيرتكز على إحصاء عدد المقالات نسبةً للفئة كل مقال, قمنا بتجميع المقالات نسبة لعناوين <span class="inline">( <code>title</code> )</span> الفئات.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT c.title AS categories, COUNT(p.category_id) AS posts
+FROM categories c LEFT JOIN posts p
+ON p.category_id = c.id
+GROUP BY c.title;
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 250px;">
+<table class="ltr left">
+<tr>
+<th>categories</th> <th>posts</th>
+</tr>
+<tr>
+<td>Artificial Intelligence</td> <td>0</td>
+</tr>
+<tr>
+<td>Electronics</td> <td>0</td>
+</tr>
+<tr>
+<td>Networking</td> <td>0</td>
+</tr>
+<tr>
+<td>Operating Systems</td> <td>1</td>
+</tr>
+<tr>
+<td>Programming</td> <td>1</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الثامن</h3>
+<p>الإستعلام التالي يقوم بعرض الردود الموضوعة على التعليقات.<br/>
+	أي هنا نقوم بعرض محتوى <span class="inline">( <code>content</code> )</span> كل تعليق موضوع بمثابة رد على تعليق آخر بالإضافة إلى التعليق الذي وضع عليه الرد فقط و ليس جميع التعليقات.</p>
+<p>بما أن التعليقات و الردود عبارة عن تعليقات عادية موضوعة في الجدول <code>comments</code> مع فارق واحد هو أن التعليق يعتبر بمثابة رد في حال كان عنده <code>parent_comment_id</code> يشير لتعليق آخر موجود في الجدول نفسه يجب أن نحول الجدول إلى جدولين و نربطهم بأسلوب <span class="word">Self Join</span> لنتمكن من عرض التعليق و الرد الموضوع عليه.</p>
+<p>أول نسخة من الجدول <code>comments</code> قمنا بتسميتها <code>c1</code> و هي التي سنحضر منها التعليق, و النسخة الثانية منه قمنا بتسميتها <code>c2</code> و هي التي سنحضر منها الرد على التعليق.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT c1.content AS comment, c2.content AS reply
+FROM comments c1
+JOIN comments c2
+ON c2.parent_comment_id = c1.id;
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 550px;">
+<table class="ltr left">
+<tr>
+<th>comment</th> <th>reply</th>
+</tr>
+<tr>
+<td class="ltr">How to List Users in Linux?</td> <td>Execute the following code: cat /etc/passwd</td>
+</tr>
+</table>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>Swing - الكلاس JList</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-swing-icon.png"/></li>
+<li class="title">أساسيات المكتبة</li>
+<li><a href="../swing-overview/index.html"><span class="en">Swing</span> - نظرة عامة</a></li>
+<li><a href="../swing-jframe/index.html"><span class="en">Swing</span> - إنشاء نافذة <span class="en">( Frame )</span></a></li>
+<li class="title">عناصر واجهة المستخدم</li>
+<li><a href="../swing-component/index.html"><span class="en">Component - Swing</span></a></li>
+<li><a href="../swing-jlabel/index.html"><span class="en">JLabel - Swing</span></a></li>
+<li><a href="../swing-jbutton/index.html"><span class="en">JButton - Swing</span></a></li>
+<li><a href="../swing-jtextfield/index.html"><span class="en">JTextField - Swing</span></a></li>
+<li><a href="../swing-jpasswordfield/index.html"><span class="en">JPasswordField - Swing</span></a></li>
+<li><a href="../swing-jtextarea/index.html"><span class="en">JTextArea - Swing</span></a></li>
+<li><a href="../swing-jcheckbox/index.html"><span class="en">JCheckBox - Swing</span></a></li>
+<li><a href="../swing-jradiobutton/index.html"><span class="en">JRadioButton - Swing</span></a></li>
+<li><a href="../swing-jcombobox/index.html"><span class="en">JComboBox - Swing</span></a></li>
+<li><a href="index.html"><span class="en">JList - Swing</span></a></li>
+<li><a href="../swing-jspinner/index.html"><span class="en">JSpinner - Swing</span></a></li>
+<li><a href="../swing-jslider/index.html"><span class="en">JSlider - Swing</span></a>
+</li><li><a href="../swing-jtable/index.html"><span class="en">JTable - Swing</span></a></li>
+<li><a href="../swing-jtree/index.html"><span class="en">JTree - Swing</span></a></li>
+<li><a href="../swing-jprogressbar/index.html"><span class="en">JProgressBar - Swing</span></a></li>
+<li><a href="../swing-jpanel/index.html"><span class="en">JPanel - Swing</span></a></li>
+<li><a href="../swing-jtabbedpane/index.html"><span class="en">JTabbedPane - Swing</span></a></li>
+<li><a href="../swing-joptionpane/index.html"><span class="en">JOptionPane - Swing</span></a></li>
+<li><a href="../swing-jdialog/index.html"><span class="en">JDialog - Swing</span></a></li>
+<li><a href="../swing-jcolorchooser/index.html"><span class="en">JColorChooser - Swing</span></a></li>
+<li><a href="../swing-jfilechooser/index.html"><span class="en">JFileChooser - Swing</span></a></li>
+<li><a href="../swing-jsplitpane/index.html"><span class="en">JSplitPane - Swing</span></a></li>
+<li><a href="../swing-jpopumenu/index.html"><span class="en">JPopupMenu - Swing</span></a></li>
+<li><a href="../swing-jmenubar/index.html"><span class="en">JMenuBar - Swing</span></a></li>
+<li class="title">إدارة محتوى النافذة</li>
+<li><a href="../swing-borderlayout/index.html"><span class="en">BorderLayout - Swing</span></a></li>
+<li><a href="../swing-flowlayout/index.html"><span class="en">FlowLayout - Swing</span></a></li>
+<li><a href="../swing-gridlayout/index.html"><span class="en">GridLayout - Swing</span></a></li>
+<li><a href="../swing-gridbaglayout/index.html"><span class="en">GridBagLayout - Swing</span></a></li>
+<li><a href="../swing-cardlayout/index.html"><span class="en">CardLayout - Swing</span></a></li>
+<li><a href="../swing-grouplayout/index.html"><span class="en">GroupLayout - Swing</span></a></li>
+<li><a href="../swing-scroll-layout/index.html"><span class="en">Scroll Layout - Swing</span></a></li>
+<li class="title">الأحداث <span class="en">( Events )</span></li>
+<li><a href="../awt-actionlistener/index.html"><span class="en">ActionListener - Swing</span></a></li>
+<li><a href="../awt-itemlistener/index.html"><span class="en">ItemListener - Swing</span></a></li>
+<li><a href="../awt-keylistener/index.html"><span class="en">KeyListener - Swing</span></a></li>
+<li><a href="../awt-mouselistener/index.html"><span class="en">MouseListener - Swing</span></a></li>
+<li><a href="../awt-mousemotionlistener/index.html"><span class="en">MouseMotionListener - Swing</span></a></li>
+<li><a href="../awt-focuslistener/index.html"><span class="en">FocusListener - Swing</span></a></li>
+<li><a href="../awt-windowlistener/index.html"><span class="en">WindowListener - Swing</span></a></li>
+<li><a href="../awt-adjustmentlistener/index.html"><span class="en">AdjustmentListener - Swing</span></a></li>
+<li><a href="../make-swing-components-synchronized/index.html"><span class="en">Swing</span> - حل مشكلة المزامنة</a></li>
+<li class="title">تعلم بناء تطبيقات و ألعاب</li>
+<li><a href="../swing-projects/index.html"><span class="en">Swing</span> - جميع المشاريع</a></li>
+<li><a href="../swing-color-picker-source-code/index.html"><span class="en">Swing</span> - برنامج إختيار الألوان</a></li>
+<li><a href="../swing-tic-tac-toe-source-code/index.html"><span class="en">Swing</span> - لعبة <span class="en">Tic Tac Toe</span></a></li>
+<li><a href="../swing-calculator-source-code/index.html"><span class="en">Swing</span> - آلة حاسبة بسيطة</a></li>
+<li><a href="../swing-scientific-calculator-source-code/index.html"><span class="en">Swing</span> - ألة حاسبة علمية</a></li>
+<li><a href="../swing-age-calculator-source-code/index.html"><span class="en">Swing</span> - برنامج حساب الأعمار</a></li>
+<li><a href="../swing-snake-2d-source-code/index.html"><span class="en">Swing</span> - لعبة الأفعى <span class="en">Snake 2D</span></a></li>
+<li><a href="../swing-ip-finder-source-code/index.html"><span class="en">Swing</span> - محلل عناوين المواقع</a></li>
+<li><a href="../swing-company-products-manager-source-code/index.html"><span class="en">Swing</span> - برنامج إدارة المحتوى</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java Swing</span>الكلاس <code data-enlighter-language="java">JList</code></h1>
+<article>
+<h2>مقدمة</h2>
+<p>الكلاس <code data-enlighter-language="java">JList</code> يستخدم لإضافة قائمة <span class="inline">(<span class="word">List</span>)</span> في واجهة المستخدم.</p>
+<p>عند التعامل مع الـ <span class="word">List</span> فأنت لا تضع فيها العناصر مباشرةً. بل تضع العناصر في الـ <span class="word">Model</span> الخاصة بها.<br/>
+	إذاً سيكون عليك إنشاء كائن من الكلاس <code data-enlighter-language="java">DefaultListModel</code> و وضعه كـ <span class="word">Model</span> لكائن الـ <code data-enlighter-language="java">JList</code>.<br/>
+	بعدها يمكنك إضافة العدد الذي تريده من العناصر في كائن الـ <code data-enlighter-language="java">DefaultListModel</code> و التي ستظهر بدورها في الـ <span class="word">List</span>.</p>
+<p>يمكنك أيضاً تحديد طريقة عرض العناصر بداخل القائمة, يمكنك جعلها تظهر أفقياً أو عامودياً.<br/>
+	و يمكنك وضعها بداخل <code data-enlighter-language="java">JScrollPane</code> لجعلها تظهر <span class="word">Scroll Bar</span> عند الحاجة.</p>
+<p>لا تقلق ستفهم كل شيء من الأمثلة.</p>
+<br/>
+<h3>بناؤه</h3>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public class JList&lt;E&gt;
+extends JComponent
+implements Scrollable, Accessible 
+	</pre>
+</article>
+<article>
+<h2>كونستركتورات الكلاس <code data-enlighter-language="java">JList</code></h2>
+<p>الجدول التالي يحتوي على كونستركتورات الكلاس <code data-enlighter-language="java">JList</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الكونستركتور مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public JList()</code></span>
+			ينشئ كائن من الكلاس <code data-enlighter-language="java">JList</code> يمثل <span class="word">List</span> فارغة, أي لا تحتوي أي عنصر.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public JList(E[] listData)</code></span>
+			ينشئ كائن من الكلاس <code data-enlighter-language="java">JList</code> يمثل <span class="word">List</span> فيها خيارات جاهزة.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">listData</code> نمرر مصفوفة من أي نوع.<br/>
+			عناصر هذه المصفوفة هي التي ستظهر كخيارات في القائمة.<br/><br/>
+			قد يرمي إستثناء في حال كانت المصفوفة <code data-enlighter-language="java">listData</code> فارغة, أي قيمها تساوي <code class="blue">null</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public JList(ListModel&lt;E&gt; dataModel)</code></span>
+			ينشئ كائن من الكلاس <code data-enlighter-language="java">JList</code> يمثل <span class="word">List</span> فيها خيارات جاهزة.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">dataModel</code> نمرر كائن من الكلاس <code data-enlighter-language="java">ListModel</code>.<br/>
+			عناصر الكائن <code data-enlighter-language="java">dataModel</code> هي التي ستظهر كخيارات في القائمة.<br/><br/>
+			يرمي الإستثناء <span class="code red">IllegalArgumentException</span> في حال كان كائن الـ <code data-enlighter-language="java">dataModel</code> فارغاً, أي قيمته تساوي <code class="blue">null</code>.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>دوال الكلاس <code data-enlighter-language="java">JList</code></h2>
+<p>الجدول التالي يحتوي على بعض دوال الكلاس <code data-enlighter-language="java">JList</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void addListSelectionListener(ListSelectionListener listener)</code></span>
+			تستخدم لتنفيذ أوامر معينة عند النقر على أي خيار موجود في كائن الـ <code data-enlighter-language="java">JList</code> الذي قام بإستدعائها.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">listener</code> نضع كائن من الكلاس <code data-enlighter-language="java">ActionListener</code> و نفعل بداخله <span class="word">Override</span> لدالة إسمها <code data-enlighter-language="java">actionPerformed(ActionEvent ae)</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public E getSelectedValue()</code></span>
+			ترجع قيمة العنصر الذي قام المستخدم باختياره في كائن الـ <code data-enlighter-language="java">JList</code> الذي قام بإستدعائها.<br/>
+			في حال قام المستخدم باختيار أكثر من عنصر, فإنها ترجع قيمة العنصر الذي يملك أصغر <span class="word">index</span> بينهم.<br/>
+			في حال لم يقم المستخدم باختيار أي عنصر, فإنها ترجع القيمة <code class="blue">null</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int getSelectedIndex()</code></span>
+			ترجع رقم يمثل <span class="word">index</span> العنصر الذي قام المستخدم باختياره في كائن الـ <code data-enlighter-language="java">JList</code> الذي قام بإستدعائها.<br/>
+			في حال قام المستخدم باختيار أكثر من عنصر, ترجع <span class="word">index</span> أصغر عنصر بينهم.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int[] getSelectedIndices()</code></span>
+			ترجع مصفوفة أرقام, كل رقم فيها يمثل <span class="word">index</span> عنصر من العناصر التي قام المستخدم باختيارها في كائن الـ <code data-enlighter-language="java">JList</code> الذي قام بإستدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void setModel(ListModel&lt;E&gt; model)</code></span>
+			تستخدم لتحديد <span class="word">Model</span> كائن الـ <code data-enlighter-language="java">JList</code> الذي قام بإستدعائها.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">model</code> نضع كائن من الكلاس <code data-enlighter-language="java">ListModel</code>.<br/><br/>
+			ترمي الإستثناء <span class="code red">IllegalArgumentException</span> في حال كان كائن الـ <code data-enlighter-language="java">dataModel</code> فارغاً, أي قيمته تساوي <code class="blue">null</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public ListModel&lt;E&gt; getModel()</code></span>
+			ترجع نسخة من كائن الـ <code data-enlighter-language="java">ListModel</code> الذي يستخدمه كائن الـ <code data-enlighter-language="java">JList</code> الذي قام بإستدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void setLayoutOrientation(int layoutOrientation)</code></span>
+			تستخدم لتحديد طريقة ظهور العناصر بداخل كائن الـ <code data-enlighter-language="java">JList</code> الذي قام بإستدعائها.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">layoutOrientation</code> نضع إحدى الثوابت الموجودة  في الكلاس <code data-enlighter-language="java">ListModel</code> المخصصة لتحديد طريقة ظهور العناصر بداخل كائن الـ <code data-enlighter-language="java">JList</code>.<br/><br/>
+			الثوابت التي يسمح باستخدامها هي:<br/>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">JList.VERTICAL</code>.</p></li>
+<li><p><code data-enlighter-language="java">JList.VERTICAL_WRAP</code>.</p></li>
+<li><p><code data-enlighter-language="java">JList.HORIZONTAL_WRAP</code>.</p></li>
+</ul>
+<br/>
+			إفتراضياً, الثابت الذي يستخدم هو <code data-enlighter-language="java">JList.VERTICAL</code>.<br/><br/>
+			ترمي الإستثناء <span class="code red">IllegalArgumentException</span> في حال كان الثابت المستخدم غير مناسب للدالة.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void setSelectionMode(int selectionMode)</code></span>
+			تستخدم لتحديد طريقة ظهور العناصر بداخل كائن الـ <code data-enlighter-language="java">JList</code> الذي قام بإستدعائها.<br/>
+			مكان الباراميتر <code data-enlighter-language="java">layoutOrientation</code> نضع إحدى الثوابت الموجودة  في الكلاس <code data-enlighter-language="java">ListSelectionModel</code> المخصصة لتحديد طريقة ظهور العناصر بداخل كائن الـ <code data-enlighter-language="java">JList</code>.<br/><br/>
+			الثوابت التي يسمح باستخدامها هي:<br/>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">ListSelectionModel.SINGLE_SELECTION</code>.</p></li>
+<li><p><code data-enlighter-language="java">ListSelectionModel.SINGLE_INTERVAL_SELECTION</code>.</p></li>
+<li><p><code data-enlighter-language="java">ListSelectionModel.MULTIPLE_INTERVAL_SELECTION</code>.</p></li>
+</ul>
+<br/>
+			إفتراضياً, الثابت الذي يستخدم هو <code data-enlighter-language="java">ListSelectionModel.MULTIPLE_INTERVAL_SELECTION</code>.<br/><br/>
+			ترمي الإستثناء <span class="code red">IllegalArgumentException</span> في حال كان الثابت المستخدم غير مناسب للدالة.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>أمثلة شاملة</h2>
+<p>في جميع الأمثلة سنتعامل مع القائمة كالتالي:</p>
+<ol class="arabic">
+<li><p>سنقوم بتعريف كائن من الكلاس <code data-enlighter-language="java">JList</code> و الذي بدوره يمثل القائمة التي ستظهر في واجهة المستخدم.</p></li>
+<li><p>سنقوم بتعريف كائن من الكلاس <code data-enlighter-language="java">DefaultListModel</code> و الذي سنستخدمه لتخزين العناصر التي ستظهر في القائمة.</p></li>
+<li><p>سنقوم بربط كائن الـ <code data-enlighter-language="java">DefaultListModel</code> بكائن الـ <code data-enlighter-language="java">JList</code>. هنا يمكن ربطهما بطريقتين:<br/>
+		    <span class="point">•</span>من خلال وضع كائن الـ <code data-enlighter-language="java">DefaultListModel</code> في كونستركتور كائن الـ <code data-enlighter-language="java">JList</code>.<br/>
+		    <span class="point">•</span>من خلال إستدعاء الدالة <code data-enlighter-language="java">setModel()</code> و تمرير كائن الـ <code data-enlighter-language="java">DefaultListModel</code> لها كـ <span class="word">Argument</span>.</p></li>
+<li><p>سنقوم بتعريف كائن من الكلاس <code data-enlighter-language="java">JScrollPane</code> و نضع كائن الـ <code data-enlighter-language="java">JList</code> فيه, و بذلك نضمن ظهور <span class="word">Scroll Bar</span> عند الحاجة.</p></li>
+<li><p>في الأخير, سنقوم بوضع كائن الـ <code data-enlighter-language="java">JScrollPane</code> في النافذة, و الذي بدوره أصبح يحتوي على القائمة و جميع العناصر التي فيها.</p></li>
+</ol>
+<br/><br/>
+<h3>المثال الأول</h3>
+<p>المثال التالي يعلمك طريقة إنشاء كائن من الكلاس <code data-enlighter-language="java">JList</code> يحتوي على عناصر.</p>
+<p><a href="jlist_example_1.png" target="_blank"><img alt="طريقة تعريف قائمة في جافا JList و إضافة عناصر فيها" src="jlist_example_1.png"/></a></p>
+<p><a class="open-page" href="example-1.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>المثال التالي يعلمك طريقة تغيير نوع و حجم و لون خط عناصر كائن الـ <code data-enlighter-language="java">JList</code>.</p>
+<p><a href="jlist_example_2.png" target="_blank"><img alt="طريقة تغيير نوع و حجم و لون خط عناصر كائن ال JList في جافا" src="jlist_example_2.png"/></a></p>
+<p><a class="open-page" href="example-2.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الثالث</h3>
+<p>المثال التالي يعلمك طريقة معرفة عدد و قيم العناصر التي قام المستخدم باختيارها في كائن الـ <code data-enlighter-language="java">JList</code>.<br/>
+	هنا النتيجة تتغير مباشرةً أثناء إختيار العناصر من القائمة.</p>
+<p><a href="jlist_example_3.png" target="_blank"><img alt="طريقة معرفة عدد و قيم العناصر التي قام المستخدم باختيارها في القائمة JList في جافا" src="jlist_example_3.png"/></a></p>
+<p><a class="open-page" href="example-3.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الرابع</h3>
+<p>المثال التالي يعلمك طريقة معرفة عدد و قيم العناصر التي قام المستخدم باختيارها في كائن الـ <code data-enlighter-language="java">JList</code> عند النقر على كائن الـ <code data-enlighter-language="java">JButton</code>.</p>
+<p><a href="jlist_example_4.png" target="_blank"><img alt="طريقة معرفة عدد و قيم العناصر التي قام المستخدم باختيارها في القائمة JList في جافا" src="jlist_example_4.png"/></a></p>
+<p><a class="open-page" href="example-4.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الخامس</h3>
+<p>المثال التالي يعلمك طريقة إجبار المستخدم على إختيار قيمة واحدة من القيم الموجودة في كائن الـ <code data-enlighter-language="java">JList</code>.<br/>
+	كما أنك ستتعلم كيف تجلب القيم التي إختارها المستخدم من قائمتين عند النقر على كائن الـ <code data-enlighter-language="java">JButton</code>.</p>
+<p><a href="jlist_example_5.png" target="_blank"><img alt="طريقة معرفة قيم العناصر التي قام المستخدم باختيارها من قائميتن مختلفتين JList في جافا" src="jlist_example_5.png"/></a></p>
+<a class="open-page" href="example-5.html" target="_blank">شاهد المثال »</a>
+<br/><br/>
+<h3>المثال السادس</h3>
+<p>المثال التالي يعلمك طريقة جعل المستخدم يدخل قيم في كائن الـ <code data-enlighter-language="java">JList</code>, بالإضافة إلى جعله قادر على حذف القيم التي أدخلها.</p>
+<p><a href="jlist_example_6.png" target="_blank"><img alt="طريقة جعل المستخدم يضيف و يحذف قيم في القائمة JList في جافا" src="jlist_example_6.png"/></a></p>
+<p><a class="open-page" href="example-6.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال السابع</h3>
+<p>المثال التالي يعلمك تغيير طريقة عرض العناصر بداخل كائن الـ <code data-enlighter-language="java">JList</code>.<br/>
+	هنا قمنا بوضع نفس كائن الـ <code data-enlighter-language="java">DefaultListModel</code> بداخل ثلاث كائنات من الكلاس <code data-enlighter-language="java">JList</code> لكننا قمنا بتغيير طريقة عرض العناصر في كل كائن منهم.</p>
+<p><a href="jlist_example_7.png" target="_blank"><img alt="تغيير طريقة عرض العناصر بداخل القائمة في جافا JList" src="jlist_example_7.png"/></a></p>
+<p><a class="open-page" href="example-7.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الثامن</h3>
+<p>المثال التالي يعلمك تحديد الطريقة التي يسمح فيها للمستخدم بإختيار العناصر من كائن الـ <code data-enlighter-language="java">JList</code>.<br/>
+	هنا قمنا بوضع نفس كائن الـ <code data-enlighter-language="java">DefaultListModel</code> بداخل ثلاث كائنات من الكلاس <code data-enlighter-language="java">JList</code> لكننا قمنا بتغيير الطريقة التي يسمح فيها للمستخدم بإختيار العناصر في كل كائن منهم.</p>
+<p><a href="jlist_example_8.png" target="_blank"><img alt="تحديد الطريقة التي يسمح فيها للمستخدم بتحديد العناصر في ال JList في جافا" src="jlist_example_8.png"/></a></p>
+<p><a class="open-page" href="example-8.html" target="_blank">شاهد المثال »</a></p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

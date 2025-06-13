@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>أنواع البيانات في سي بلاس بلاس</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../cplusplus-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../cplusplus-overview/index.html"><span class="en">++C</span> - نظرة عامة</a></li>
+<li><a href="../cplusplus-environment-setup/index.html"><span class="en">++C</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../cplusplus-basic-syntax/index.html"><span class="en">++C</span> - أسلوب الكتابة</a></li>
+<li><a href="../cplusplus-cout/index.html"><span class="en">++C</span> - أمر الطباعة   &lt;&lt; cout</a></li>
+<li><a href="index.html"><span class="en">++C</span> - أنواع البيانات</a></li>
+<li><a href="../cplusplus-variables/index.html"><span class="en">++C</span> - المتغيرات</a></li>
+<li><a href="../cplusplus-operators/index.html"><span class="en">++C</span> - العوامل</a></li>
+<li><a href="../cplusplus-conditions/index.html"><span class="en">++C</span> - الشروط</a></li>
+<li><a href="../cplusplus-loops/index.html"><span class="en">++C</span> - الحلقات</a></li>
+<li><a href="../cplusplus-numbers/index.html"><span class="en">++C</span> - الأعداد</a></li>
+<li><a href="../cplusplus-strings/index.html"><span class="en">++C</span> - النصوص</a></li>
+<li><a href="../cplusplus-arrays/index.html"><span class="en">++C</span> - المصفوفات</a></li>
+<li><a href="../cplusplus-user-input/index.html"><span class="en">++C</span> - إدخال البيانات</a></li>
+<li><a href="../cplusplus-functions/index.html"><span class="en">++C</span> - الدوال</a></li>
+<li><a href="../cplusplus-references/index.html"><span class="en">++C</span> - المراجع</a></li>
+<li><a href="../cplusplus-pointers/index.html"><span class="en">++C</span> - المؤشرات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../cplusplus-oop/index.html"><span class="en">++C</span> - مفهوم البرمجة كائنية التوجه</a></li>
+<li><a href="../cplusplus-struct/index.html"><span class="en">++C</span> - النوع <span class="en">struct</span></a></li>
+<li><a href="../cplusplus-class/index.html"><span class="en">++C</span> - النوع <span class="en">class</span></a></li>
+<li><a href="../cplusplus-encapsulation/index.html"><span class="en">++Encapsulation - C</span></a></li>
+<li><a href="../cplusplus-inheritance/index.html"><span class="en">++Inheritance - C</span></a></li>
+<li><a href="../cplusplus-overriding/index.html"><span class="en">++Overriding - C</span></a></li>
+<li><a href="../cplusplus-overloading/index.html"><span class="en">++Overloading - C</span></a></li>
+<li><a href="../cplusplus-polymorphism/index.html"><span class="en">++Polymorphism - C</span></a></li>
+<li><a href="../cplusplus-constants/index.html"><span class="en">++C</span> - الثوابت</a></li>
+<li><a href="../cplusplus-enum/index.html"><span class="en">++C</span> - النوع <span class="en">enum</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../cplusplus-exceptions/index.html"><span class="en">++C</span> - الإستثناءات</a></li>
+<!--
+
+<li><a href="../cplusplus-lambda-expressions"><span class="en">Lambda Expressions - ++C</span></a></li>
+<li><a href="../cplusplus-files-io"><span class="en">++C</span> - التعامل مع الملفات</a></li>
+<li><a href="../cplusplus-data-structure"><span class="en">Data Structure - ++C</span></a></li>
+<li><a href="../cplusplus-collection"><span class="en">Collection - ++C</span></a></li>
+<li><a href="../cplusplus-generics"><span class="en">Generics - ++C</span></a></li>
+<li><a href="../cplusplus-networking"><span class="en">++C</span> - الشبكات</a></li>
+<li><a href="../cplusplus-multithreading"><span class="en">++C</span> - تعدد المهام</a></li>
+<li><a href="../cplusplus-jdbc"><span class="en">++C</span> - قواعد البيانات</a></li>
+<li><a href="../cplusplus-serialization"><span class="en">++C</span> - المزامنة</a></li>
+
+
+<li><a href="../cplusplus-date-and-time"><span class="en">++C</span> - التاريخ و الوقت</a></li>
+<li><a href="../cplusplus-regular-expressions"><span class="en">++C</span> - التعابير النمطية</a></li>
+
+<li><a href="../cplusplus-next-step"><span class="en">++C</span> - ما هي خطوتي التالية ؟</a></li>
+-->
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">C++</span>أنواع البيانات</h1>
+<article>
+<h2>مفهوم أنواع البيانات في <span class="word">C++</span></h2>
+<p>أي شيء تتعامل معه في <span class="word">C++</span> له نوع محدد و له طريقة خاصة للتعامل معه فيها; فمثلاً الأرقام لها طريقة للتعامل معها, النصوص لها طريقة للتعامل معها, الدوال لها طريقة للتعامل معها و هكذا.</p>
+<p>في <span class="word">C++</span> يوجد أنواع بيانات بسيطة و جاهزة يمكنك التعامل معها سنطلعك عليها بتفصيل في هذا الدرس, و يوجد أنواع أخرى جاهزة ستتعلمها لاحقاً في الدورة لأنه لأنك غير مستعد لها بعد, كما تستطيع تعريف أنواع جديدة و هذا الأمر ستتعلمه لاحقاً أيضاً.</p>
+<br/>
+<h3>أنواع البيانات في <span class="word">C++</span></h3>
+<p>البيانات في <span class="word">C++</span> تنقسم لثلاث أقسام رئيسية كما في الصورة التالية.</p>
+<p><a href="cpp-data-types.png"><img src="cpp-data-types.png"/></a></p>
+<p>أنواع البيانات الأساسية التي سنتعرف عليها و سنبدأ بالتعامل معها من الآن هي الأنواع الأولية <span class="inline">( <span class="word">Primary</span> )</span> و التي تعتبر نفسها في أغلب لغات البرمجة.<br/>
+	و نود الإشارة إلى أننا سنتعرف على جميع الأنواع الأخرى المذكورة لاحقاً في الدورة عندما نصبح مستعدين لها.</p>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>قد تجد مسميات أخرى تطلق على أنواع البيانات و هذا شيء طبيعي جداً, فمثلاً قد تجد أنواع البيانات الأولية <span class="inline">( <span class="word">Primary</span> )</span> يقال لها أنواع بدائية <span class="inline">( <span class="word">Basic Data type</span> )</span> أو أنواع تأتي ضمن اللغة مباشرةً <span class="inline">( <span class="word">Built-in</span> )</span> و غير ذلك و لكن الفكرة هي نفسها و هذه كلها إختلافات غير مهمة على الإطلاق.</p>
+</div>
+</article>
+<article>
+<h2>أنواع البيانات الأولية في <span class="word">C++</span></h2>
+<p>أهم أنواع البيانات الأولية  في <span class="word">C++</span> و أكثرها استخداماً هي:<br/>
+<code data-enlighter-language="cpp">int</code> - <code data-enlighter-language="cpp">float</code> - <code data-enlighter-language="cpp">double</code> - <code data-enlighter-language="cpp">bool</code> - <code data-enlighter-language="cpp">char</code></p>
+<br/>
+<h3>النوع <code data-enlighter-language="cpp">int</code></h3>
+<p>يستخدم هذا النوع لتخزين عدد صحيح, أي عدد لا يحتوي على فاصلة عشرية.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+int x = 10;
+		</pre>
+</div>
+<br/><br/>
+<h3>النوع <code data-enlighter-language="cpp">float</code></h3>
+<p>يستخدم هذا النوع لتخزين عدد يمكن أن يحتوي على فاصلة عشرية.<br/>
+	يمكن لهذا العدد أن يحتوي على 7 أرقام بعد الفاصلة.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+float x = 12.5;
+		</pre>
+</div>
+<br/><br/>
+<h3>النوع <code data-enlighter-language="cpp">double</code></h3>
+<p>يستخدم هذا النوع لتخزين عدد يمكن أن يحتوي على فاصلة عشرية.<br/>
+	يمكن لهذا العدد أن يحتوي على 15 رقم بعد الفاصلة لهذا يعتبر أكثر دقة من النوع <code data-enlighter-language="cpp">float</code> في العمليات الحسابية الدقيقة.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+double x = 12.5;
+		</pre>
+</div>
+<br/><br/>
+<h3>النوع <code data-enlighter-language="cpp">bool</code></h3>
+<p>يستخدم هذا النوع لتخزين إما القيمة <code data-enlighter-language="cpp">true</code> و إما القيمة <span class="inline"><code data-enlighter-language="cpp">false</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+bool x = true;
+		</pre>
+</div>
+<br/><br/>
+<h3>النوع <code data-enlighter-language="cpp">char</code></h3>
+<p>يستخدم هذا النوع لتخزين حرف أجنبي أو لتخزين عدد صحيح قيمته تمثل حرف نسبةً لرقم الآسكي كود <span class="inline">( <span class="word">ASCII Code</span> )</span> الخاص به.<br/>
+	فمثلاً <code data-enlighter-language="cpp">char x = 65;</code> نفسها تماماً إن كتبت  <span class="inline"><code data-enlighter-language="cpp">char x = 'A';</code>.</span><br/>
+	سبب تحول الرقم <code>65</code> إلى الحرف <code>'A'</code> في الذاكرة هو أنه في نظام <span class="word">ASCII</span> الرقم <code>65</code> يمثل الحرف <span class="inline"><code>'A'</code>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+char x = 'A';
+		</pre>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>النوع <code data-enlighter-language="cpp">char</code> يمكنه تخزين أي حرف أجنبي بدون مشاكل لأن الحرف الأجنبي  يحتاج مساحة <span class="word">1Byte</span> من الذاكرة فقط حتى يتم تخزينه.<br/>
+		بينما الحرف العربي يحتاج مساحة <span class="word">2Bytes</span> من الذاكرة حتى يتم تخزينه بشكل صحيح.</p>
+<p>لهذا السبب, عند التعامل مع الأحرف العربية يستحسن تخزين الحرف الواحد كمصفوفة نوعها <code data-enlighter-language="cpp">char</code> تتألف من عنصرين أو كنص عادي نوعه <span class="inline"><code data-enlighter-language="cpp">string</code>.</span><br/>
+		لا داعي للقلق بشأن تخزين الأحرف العريبة لأن ما ذكرناه الآن سيمر معك في دروس لاحقة.</p>
+</div>
+</article>
+<article>
+<h2>تحديد خصائص أنواع البيانات في <span class="word">C++</span></h2>
+<p>في <span class="word">C++</span> يوجد مجموعة كلمات يقال لها <span class="word">Data Type Modifiers</span> يمكنك استخدامها لتحديد خصائص القيم التي يمكن تخزينها, مثل هي يمكن أن تكون قيم أصغر من صفر أم لا, بالإضافة إلى تكبير حجم المساحة التي يتم تخصيصها لكل نوع في الذاكرة مما يجعلك قادر على تخزين قيم أكبر.</p>
+<p>الأنواع <code data-enlighter-language="cpp">char</code> و <code data-enlighter-language="cpp">int</code> و <code data-enlighter-language="cpp">double</code> يمكن تحديد خصائص القيم التي يمكن تخزينها فيها إذا أضفنا معها إحدى الكلمات التالية:</p>
+<ul class="explain">
+<li><p><code data-enlighter-language="cpp">signed</code> نضيفها لأحد الأنواع السابقة إذا أردنا تحديد أن قيمة المتغير لا يهم إن كانت أكبر, أصغر أو تساوي صفر.</p></li>
+<li><p><code data-enlighter-language="cpp">unsigned</code> نضيفها لأحد الأنواع السابقة إذا أردنا تحديد أن قيمة المتغير لا يمكن أن تكون أصغر من صفر.</p></li>
+<li><p><code data-enlighter-language="cpp">short</code> نضيفها لأحد الأنواع السابقة إذا أردنا تحديد أن حجم الذاكرة التي سيتم تخصيصها للمتغير هو <span class="inline"><span class="word">2Byte</span>.</span></p></li>
+<li><p><code data-enlighter-language="cpp">long</code> نضيفها لأحد الأنواع السابقة إذا أردنا تحديد أن حجم الذاكرة التي سيتم تخصيصها للمتغير هو <span class="inline"><span class="word">8Byte</span>.</span></p></li>
+</ul>
+<br/>
+<h3>معلومة تقنية</h3>
+<p>إفتراضياً الأنواع <code data-enlighter-language="cpp">char</code> - <code data-enlighter-language="cpp">int</code> - <code data-enlighter-language="cpp">float</code> - <code data-enlighter-language="cpp">double</code> جميعا تعتبر <code data-enlighter-language="cpp">signed</code> حتى لو لم تحدد ذلك بنفسك لهذا السبب تستطيع تخزين قيم أصغر من صفر فيها.</p>
+<br/>
+<h3>خصائص أنواع البيانات</h3>
+<p>الجدول التالي يوضح المساحة التي يحتاجها كل نوع في الذاكرة و القيم التي يمكن تخزينها فيه سواء تم استخدام النوع لوحده أو تم تحديد خصائصه.</p>
+<table class="list">
+<tr>
+<th>النوع</th>
+<th>الحجم في الذاكرة</th>
+<th>القيمة التي يمكن تخزينها</th>
+</tr>
+<tr>
+<td class="left"><code data-enlighter-language="cpp">char</code></td>
+<td class="center"><span class="word">1Byte</span></td>
+<td>بين <code>-128</code> و <code>127</code>
+</td></tr>
+<tr>
+<td class="left"><code data-enlighter-language="cpp">unsigned char</code></td>
+<td class="center"><span class="word">1Byte</span></td>
+<td>بين <code>0</code> و <code>127</code>
+</td></tr>
+<tr>
+<td class="left"><code data-enlighter-language="cpp">short int</code></td>
+<td class="center"><span class="word">2Bytes</span></td>
+<td>بين <code>-32768</code> و <code>32767</code>
+</td></tr>
+<tr>
+<td class="left"><code data-enlighter-language="cpp">unsigned short int</code></td>
+<td class="center"><span class="word">2Bytes</span></td>
+<td>بين <code>0</code> و <code>65535</code>
+</td></tr>
+<tr>
+<td class="left"><code data-enlighter-language="cpp">int</code></td>
+<td class="center"><span class="word">4Bytes</span></td>
+<td>بين <code>-2147483648</code> و <code>2147483647</code>
+</td></tr>
+<tr>
+<td class="left"><code data-enlighter-language="cpp">unsigned int</code></td>
+<td class="center"><span class="word">4Bytes</span></td>
+<td>بين <code>0</code> و <code>4294967295</code>
+</td></tr>
+<tr>
+<td class="left"><code data-enlighter-language="cpp">long int</code></td>
+<td class="center"><span class="word">4Bytes</span></td>
+<td>بين <code>-2147483648</code> و <code>2147483647</code>
+</td></tr>
+<tr>
+<td class="left"><code data-enlighter-language="cpp">unsigned long int</code></td>
+<td class="center"><span class="word">4Bytes</span></td>
+<td>بين <code>0</code> و <code>4294967295</code>
+</td></tr>
+<tr>
+<td class="left"><code data-enlighter-language="cpp">long long int</code></td>
+<td class="center"><span class="word">8Bytes</span></td>
+<td>بين <code>-9223372036854775808</code> و <code>9223372036854775807</code>
+</td></tr>
+<tr>
+<td class="left"><code data-enlighter-language="cpp">unsigned long long int</code></td>
+<td class="center"><span class="word">8Bytes</span></td>
+<td>بين <code>0</code> و <code>18446744073709551615</code>
+</td></tr>
+<tr>
+<td class="left"><code data-enlighter-language="cpp">float</code></td>
+<td class="center"><span class="word">4Bytes</span></td>
+<td>بين <code>1.17549e-038</code> و <code>3.40282e+038</code>
+</td></tr>
+<tr>
+<td class="left"><code data-enlighter-language="cpp">double</code></td>
+<td class="center"><span class="word">8Bytes</span></td>
+<td>بين <code>2.22507e-308</code> و <code>1.79769e+308</code>
+</td></tr>
+<tr>
+<td class="left"><code data-enlighter-language="cpp">long double</code></td>
+<td class="center"><span class="word">12Bytes</span></td>
+<td>بين <code>3.3621e-4932</code> و <code>1.18973e+4932</code>
+</td></tr>
+</table>
+<br/>
+<p>في حال أردت استخدام أي نوع مع تحديده خصائصه فيمكنك استخدام أي نوع تم ذكره في الجدول كالتالي.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+// short int هنا استخدامنا النوع
+short int x = 4545;
+
+// long long int هنا استخدامنا النوع
+long long int y = -50050012;
+
+// unsigned long int هنا استخدامنا النوع
+unsigned long int = 880045023;
+		</pre>
+</div>
+<br/>
+<p>هناك الكثير من الأنواع الجاهزة التي يمكنك استخدامها و لكننا تطرقنا لأشهرها و الأكثر استخداماً من بينها. و نود الإشارة إلى أن خصائص الأنواع المذكورة قد تختلف قليلاً بحسب المترجم المستخدم لتفسير كود لغة <span class="word">C++</span> للحاسوب و لكن هذا الأمر ليس شيء عليك القلق بشأنه خاصةً في هذه المرحلة.</p>
+<br/>
+<p>في الدرس التالي ستتعلم جميع الأساليب التي تستطيع اتباعها لتعريف متغيرات تستخدم أنواع البيانات التي تعلمناها في هذا الدرس.</p>
+</article>
+<!--
+<p>الجدول التالي يحتوي على أنواع البيانات الأولية الأكثر استخداماً الموجودة في <span class="inline"><span class="word">C++</span>.</span></p>
+	<table class="list">
+	    <tr>
+			<th>النوع</th>
+			<th>إستخدامه</th>
+		</tr>
+		<tr>
+		    <td class="left"><code data-enlighter-language="cpp">int</code></td>
+		    <td>يستخدم هذا النوع لتخزين عدد صحيح, أي عدد لا يحتوي على فاصلة عشرية.<br>
+			<b>مثال</b> <code data-enlighter-language="cpp">int x = 10;</code></td>
+		</tr>
+		<tr>
+		    <td class="left"><code data-enlighter-language="cpp">float</code></td>
+		    <td>يستخدم هذا النوع لتخزين عدد يمكن أن يحتوي على فاصلة عشرية.<br>
+			<b>مثال</b> <code data-enlighter-language="cpp">float x = 12.5;</code></td>
+		</tr>
+		<tr>
+		    <td class="left"><code data-enlighter-language="cpp">double</code></td>
+		    <td>يستخدم هذا النوع لتخزين عدد يمكن أن يحتوي على فاصلة عشرية.<br>
+			الفرق بينه و بين النوع <code data-enlighter-language="cpp">float</code> أنه يمكنه تخزين رقم حجمه أكبر.<br>
+			<b>مثال</b> <code data-enlighter-language="cpp">double x = 12.5;</code></td>
+		</tr>
+		<tr>
+		    <td class="left"><code data-enlighter-language="cpp">bool</code></td>
+		    <td>يستخدم هذا النوع لتخزين إما القيمة <code data-enlighter-language="cpp">true</code> و إما القيمة <span class="inline"><code data-enlighter-language="cpp">false</code>.</span><br>
+			<b>مثال</b> <code data-enlighter-language="cpp">bool x = true;</code></td>
+		</tr>
+		<tr>
+		    <td class="left"><code data-enlighter-language="cpp">char</code></td>
+		    <td>يستخدم هذا النوع لتخزين حرف أجنبي أو لتخزين عدد صحيح قيمته تمثل حرف نسبةً لرقم الآسكي كود <span class="inline">( <span class="word">ASCII Code</span> )</span> الخاص به.<br>
+			<b>مثال</b> <code data-enlighter-language="cpp">char x = 65;</code> نفسها تماماً إن كتبت <code data-enlighter-language="cpp">char x = 'A';</code><br>
+			سبب تحول الرقم <code>65</code> إلى الحرف <code>'A'</code> في الذاكرة لأنه في نظام <span class="word">ASCII</span> الرقم <code>65</code> يمثل الحرف <code>'A'</code></td>
+		</tr>
+	</table>
+-->
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

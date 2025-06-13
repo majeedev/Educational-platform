@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>التعامل مع قواعد البيانات في بايثون | Python Database</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>التعامل مع قواعد البيانات في بايثون</h1>
+<article>
+<h2>مقدمة</h2>
+<p>في أغلب التطبيقات التجارية التي ستقوم ببنائها مستقبلاً ستقوم حتماً بالتعامل مع قواعد البيانات لتخزين المعلومات بشكل مرتب و منظم.<br/>
+	هناك أنواع عديدة من قواعد البيانات, و كل نوع منهم له موديول خاص و جاهز للتعامل معه.</p>
+<p>في هذا الدرس ستتعلم كيف تتعامل مع قواعد بيانات <span class="word">MySQL</span> من تطبيقاتك التي تطورها بلغة بايثون.</p>
+<br/>
+<h3>معلومة تقنية</h3>
+<p>قواعد بيانات <span class="word">MySQL</span> تعتبر أحد أشهر أنواع قواعد البيانات المجانية التي يستخدمها المطورون و لهذا تم اعتمادها في الشرح.<br/>
+	كما أننا سنفترض أنك قمت مسبقاً بتنصيب قواعد بيانات <span class="word">MySQL</span> على جهازك لأننا في هذا الدرس سنشرح طريقة التعامل معها فقط.</p>
+<br/><br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>في حال كنت لا تملك أي فكرة عن قواعد اليبانات, فننصحك بمشاهدة دورة الأستاذ <b>عبدالله عيد</b> لها في يوتيوب لأنك ستتعلم منها أساسيات التعامل مع قواعد البيانات بالإضافة إلى تنصيب برنامج <span class="word">MySQL Workbench</span> الذي يمكنك استخدامه للتعامل مع قواعد بيانات <span class="inline"><span class="word">MySQL</span>.</span></p>
+<ul class="explain">
+<li><p>دورة تعلم قواعد البيانات للمبتدئين من قناة الأستاذ عبدالله عيد <a class="open-page" href="https://www.youtube.com/watch?v=95R757URa1w&amp;list=PLA410065ED903BCA9" target="_blank">إنتقل للقناة »</a></p></li>
+<li><p>الموقع الرسمي لتحميل قواعد بيانات <span class="word">MySQL</span> و برنامج <span class="word">MySQL Workbench</span> <a class="open-page" href="https://dev.mysql.com/downloads/" target="_blank">إنتقل للموقع »</a> </p></li>
+</ul>
+</div>
+</article>
+<article>
+<h2>تنصيب الحزمة <code data-enlighter-language="python">mysql-connector</code> في بايثون</h2>
+<p>للتعامل مع قواعد بيانات <span class="word">MySQL</span> يجب تنصيب الحزمة <code data-enlighter-language="python">mysql-connector</code> المخصصة للتعامل معها.<br/>
+	لذلك إفتح موجه الأوامر في <span class="word">PyCharm</span> و أكتب الأمر التالي.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+pip install mysql-connector
+	</pre>
+<br/>
+<p>بعد تنصيب الحزمة <code data-enlighter-language="python">mysql-connector</code> بنجاح تصبح قادر على تضمينها و استخدام الدوال الموجودة فيها.</p>
+</article>
+<article>
+<h2>الإتصال بقواعد بيانات <span class="word">MySQL</span> في بايثون</h2>
+<p>أول شيء يجب أن تفعله للإتصال بقاعدة البيانات هو تضمين الموديول <code data-enlighter-language="python">mysql.connector</code> من الحزمة <code data-enlighter-language="python">mysql-connector</code> كالتالي.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+import mysql.connector
+	</pre>
+<br/>
+<p>الآن أصبح بإمكانك استخدام الدوال <span class="inline"><code data-enlighter-language="python">connect()</code>,</span> <span class="inline"><code data-enlighter-language="python">cursor()</code>,</span> <code data-enlighter-language="python">execute()</code> و غيرهم من الدوال الجاهزة في هذا الموديول للتعامل مع قواعد البيانات.</p>
+<br/><br/>
+<h3>الدالة <code data-enlighter-language="python">connect()</code></h3>
+<p>هذه الدالة تستخدم لإنشاء كائن نوعه <code data-enlighter-language="python">MySQLConnection</code> يسمح لنا بالإتصال بقاعدة البيانات. و هي مبنية كالتالي.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+mysql.connector.connect(host='', user='', passwd='', database='')
+	</pre>
+<br/>
+<ul class="explain">
+<li><p>الباراميتر <code data-enlighter-language="python">host</code> نمرر لها المكان الموجود عليه خادم قاعدة البيانات.</p></li>
+<li><p>الباراميتر <code data-enlighter-language="python">user</code> نمرر له إسم المستخدم الذي سنتعامل من خلاله مع قاعدة البيانات.</p></li>
+<li><p>الباراميتر <code data-enlighter-language="python">passwd</code> نمرر له كلمة مرور المستخدم الذي سنتعامل من خلاله مع قاعدة البيانات.</p></li>
+<li><p>الباراميتر <code data-enlighter-language="python">database</code> نمرر له إسم قاعدة البيانات التي ننوي التعامل معها.</p></li>
+</ul>
+<br/><br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>المعلومات الإفتراضي للإتصال بقواعد بيانات <span class="word">MySQL</span> في حال لم تقم أنت بتغييرها هي التالية:</p>
+<ul class="explain">
+<li><p>إسم المستخدم الإفتراضي هو <code data-enlighter-language="python">'root'</code></p></li>
+<li><p>المستخدم الإفتراضي ليس له كلمة مرور, أي كلمة مروره هي <code data-enlighter-language="python">''</code></p></li>
+<li><p>في حال كانت قاعدة البيانات موجودة على حاسوبك, فإن قيمة الباراميتر <code data-enlighter-language="python">host</code> ستكون <code data-enlighter-language="python">'localhost'</code></p></li>
+</ul>
+<p>في كل الأمثلة التي سنقوم فيها بالإتصال بقواعد البيانات سنستخدم هذه المعلومات لإنشاء الإتصال.</p>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا بتضمين الحزمة <span class="inline"><code data-enlighter-language="python">mysql-connector</code>,</span> ثم قمنا باستدعاء الدالة <code data-enlighter-language="python">connect()</code> لإنشاء كائن يسمح لنا بالإتصال بخادم قواعد البيانات.<br/>
+	بعدها قمنا بعرض هذا الكائن للتأكد فقط منه قد تم إنشاء هذا الكائن في الذاكرة.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# connector هنا قمنا بتضمين كل محتوى الموديول
+import mysql.connector
+
+# MySQL حتى ترجع كائن يسمح لنا بالإتصال بقواعد بيانات connect هنا قمنا باستدعاء الدالة
+db = mysql.connector.connect(
+  host='localhost',
+  user='root',
+  passwd=''
+)
+
+# كما هو للتأكد فقط من أن معلومات الإتصال بخادم قواعد البيانات صحيحة لإنها إن لم تكن كذلك سيظهر خطأ db هنا قمنا بطباعة الكائن
+print(db)
+		</pre>
+<p><span class="point">•</span>سنحصل على نتيجة تشبه النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			&lt;mysql.connector.connection.MySQLConnection object at 0x012A18F0&gt;
+		</div>
+</div>
+<br/><br/>
+<h3>الدالة <code data-enlighter-language="python">cursor()</code></h3>
+<p>هذه الدالة تستدعى من الكائن الذي ترجعه الدالة <span class="inline"><code data-enlighter-language="python">connect()</code>,</span> و هي ترجع كائن نوعه <span class="inline"><code data-enlighter-language="python">MySQLCursor</code>.</span><br/>
+	كائن <span class="inline">الـ <code data-enlighter-language="python">MySQLCursor</code></span> يحتوي على دوال جاهزة يمكن استخدامها للأسباب التالية:</p>
+<ul class="explain">
+<li><p>لإرسال إستعلامات <span class="inline">( <span class="word">Queries</span> )</span> إلى خادم قاعدة البيانات.</p></li>
+<li><p>للحصول على النتائج <span class="inline">( <span class="word">Results</span> )</span> التي يرجعها خادم قاعدة البيانات بعد أن يتم تنفيذ الإستعلام.</p></li>
+</ul>
+<p>لا تقلق, ستتعلم طريقة استخدامها لاحقاً من الأمثلة.</p>
+<br/><br/>
+<h3>الدالة <code data-enlighter-language="python">execute(operation)</code></h3>
+<p>هذه الدالة تستدعى من الكائن الذي ترجعه الدالة <span class="inline"><code data-enlighter-language="python">cursor()</code>,</span> من أجل إرسال إستعلامات إلى خادم قاعدة البيانات.<br/>
+	مكان البارميتر <code data-enlighter-language="python">operation</code> نمرر نص يمثل الإستعلام الذي نريد إرساله إلى خادم قاعدة البيانات.</p>
+<p>لا تقلق, ستتعلم طريقة استخدامها لاحقاً من الأمثلة.</p>
+</article>
+<article>
+<h2>أمثلة شاملة حول التعامل مع قواعد البيانات في بايثون</h2>
+<p>ستتعلم من الأمثلة التالية طريقة إنشاء قاعدة بيانات بسيطة إسمها <span class="inline">( <span class="word">company</span> ),</span> ثم سننشئ جدول لتخزين بيانات الموظفين إسمه <span class="inline">( <span class="word">employee</span> ).</span><br/>
+	و سنفترض أن كل موظف له إسم <span class="inline">( <span class="word">name</span> ),</span> يملك رقم هاتف <span class="inline">( <span class="word">phone</span> ),</span> و عنده رقم تعرفة <span class="inline">( <span class="word">id</span> )</span> خاص فيه.</p>
+<p>الأمثلة موضوعة بشكل مترابط و دقيق بحيث تعلمك طريقة إنشاء قاعدة البيانات, إنشاء جداول فيها, تعديل حقول الجدول, تعبئة الجدوال بالبيانات, تعديل بيانات الجدول إلخ..</p>
+<br/>
+<h3>المثال الأول</h3>
+<p>المثال التالي يعلمك طريقة إنشاء قاعدة بيانات.<br/>
+	فعلياً, سنقوم بإنشاء قاعدة بيانات جديدة إسمها <span class="inline"><code data-enlighter-language="python">company</code>.</span></p>
+<p><a class="open-page" href="example-1.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>المثال التالي يعلمك طريقة إنشاء جدول في قاعدة البيانات.<br/>
+	فعلياً, سنقوم بإنشاء جدول إسمه <code data-enlighter-language="python">employee</code> بداخل قاعدة البيانات <code data-enlighter-language="python">company</code> التي قمنا بإنشاءها في المثال السابق.</p>
+<p><a class="open-page" href="example-2.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الثالث</h3>
+<p>المثال التالي يعلمك طريقة إضافة عامود جديد في الجدول.<br/>
+	فعلياً, سنقوم بإضافة عامود جديد إسمه <code data-enlighter-language="python">phone</code> في الجدول <code data-enlighter-language="python">employee</code> الذي قمنا بإنشاءه في المثال السابق.</p>
+<p><a class="open-page" href="example-3.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الرابع</h3>
+<p>المثال التالي يعلمك طريقة إضافة سطر <span class="inline">( أي سجل )</span> في الجدول.<br/>
+	فعلياً, سنقوم بتخزين معلومات موظف في الجدول <code data-enlighter-language="python">employee</code> الذي قمنا بإنشاءه في الأمثلة السابقة.</p>
+<p><a class="open-page" href="example-4.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الخامس</h3>
+<p>المثال التالي يعلمك طريقة إضافة عدة أسطر <span class="inline">( سجلات )</span> في الجدول دفعة واحدة.<br/>
+	فعلياً, سنقوم بتخزين معلومات <span class="number">5</span> موظفين في الجدول <code data-enlighter-language="python">employee</code> الذي قمنا بإنشاءه في الأمثلة السابقة.</p>
+<p><a class="open-page" href="example-5.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال السادس</h3>
+<p>المثال التالي يعلمك طريقة جلب كل البيانات المخزنة في جدول و عرضها بشكل مرتب.<br/>
+	فعلياً, سنقوم بجلب معلومات كل الموظفين الذين قمنا بتخزينهم في الأمثلة السابقة في الجدول <span class="inline"><code data-enlighter-language="python">employee</code>.</span><br/>
+<span class="note">ملاحظة:</span> في الواقع قمنا بوضع ثلاث أمثلة, و كل مثال إعتمدنا فيه طريقة مختلفة للتعامل مع البيانات التي سيتم جلبها.</p>
+<p><a class="open-page" href="example-6.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال السابع</h3>
+<p>المثال التالي يعلمك طريقة جلب البيانات المخزنة في جدول ضمن شروط محددة.<br/>
+<span class="note">ملاحظة:</span> في الواقع قمنا بوضع أربع أمثلة, و كل مثال إعتمدنا فيه طريقة مختلفة للتعامل مع البيانات التي سيتم جلبها.</p>
+<p><a class="open-page" href="example-7.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الثامن</h3>
+<p>المثال التالي يعلمك طريقة تعديل البيانات المخزنة في جدول.<br/>
+	فعلياً, سنقوم بتغيير إسم الموظف الذي يملك رقم <code data-enlighter-language="python">id</code> يساوي <span class="number">3</span> في الجدول <span class="inline"><code data-enlighter-language="python">employee</code>.</span></p>
+<p><a class="open-page" href="example-8.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال التاسع</h3>
+<p>المثال التالي يعلمك طريقة حذف البيانات المخزنة في جدول.<br/>
+<span class="note">ملاحظة:</span> في الواقع قمنا بوضع مثالين. الأول يعلمك طريقة حذف سطر واحد من الجدول, و الثاني يعلمك طريقة حذف كل الأسطر الموجودة في الجدول.</p>
+<p><a class="open-page" href="example-9.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال العاشر</h3>
+<p>المثال التالي يعلمك طريقة التعامل مع قواعد البيانات بأفضل أسلوب ممكن لضمان أن لا يحدث أي خطأ يؤدي إلى إيقاف البرنامج بشكل مفاجئ.</p>
+<p><a class="open-page" href="example-10.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<p>لمزيد من التفاصيل حول التعامل مع قواعد بيانات <span class="word">MySQL</span> ننصحك بتصفح المرجع الرسمي لهذه الحزمة.</p>
+<p><a class="open-page" href="https://dev.mysql.com/doc/" target="_blank">إنتقل للموقع »</a></p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

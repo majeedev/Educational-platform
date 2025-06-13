@@ -1,0 +1,1632 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>تمارين خوارزميات و هياكل البيانات - حساب الـ Big-O Notation</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../algorithms-and-data-structure.png"/></li>
+<li class="title">تعرف على الدورة</li>
+<li><a href="../overview/index.html">نظرة عامة</a></li>
+<li><a href="../how-to-start/index.html">الطريقة الصحيحة للتعلم</a></li>
+<li class="title">رسم أشكال هندسية</li>
+<li><a href="../drawing-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../drawing-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../drawing-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../drawing-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../drawing-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../drawing-test-6/index.html">التحدي السادس</a></li>
+<li><a href="../drawing-test-7/index.html">التحدي السابع</a></li>
+<li><a href="../drawing-test-8/index.html">التحدي الثامن</a></li>
+<li><a href="../drawing-test-9/index.html">التحدي التاسع</a></li>
+<li><a href="../drawing-test-10/index.html">التحدي العاشر</a></li>
+<li class="title">التعامل مع الأرقام و النصوص</li>
+<li><a href="../numbers-and-strings-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../numbers-and-strings-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../numbers-and-strings-test-3/index.html">التحدي الثالث</a></li>
+<li class="title">إجراء عمليات حسابية</li>
+<li><a href="../math-operations-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../math-operations-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../math-operations-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../math-operations-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../math-operations-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../math-operations-test-6/index.html">التحدي السادس</a></li>
+<li><a href="../math-operations-test-7/index.html">التحدي السابع</a></li>
+<li><a href="../math-operations-test-8/index.html">التحدي الثامن</a></li>
+<li><a href="../math-operations-test-9/index.html">التحدي التاسع</a></li>
+<li class="title">التعامل مع المصفوفات</li>
+<li><a href="../arrays-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../arrays-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../arrays-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../arrays-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../arrays-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../arrays-test-6/index.html">التحدي السادس</a></li>
+<li class="title">تراكيب البيانات</li>
+<li><a href="../data-structure-about-section/index.html">حول هذا القسم</a></li>
+<li><a href="../data-structure-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../data-structure-test-2/index.html">التحدي الثاني</a></li>
+<li class="title">حساب وقت الخوارزميات</li>
+<li><a href="../algorithms-complexity/index.html">مفهوم التعقيد ( Complexity )</a></li>
+<li><a href="index.html">حساب الـ Big-O Notation</a></li>
+<li><a href="../choosing-best-algorithms/index.html">إختيار الخوارزمية الأفضل</a></li>
+<li><a href="../calculate-execution-time/index.html">عرض مدة تنفيذ الكود</a></li>
+<li><a href="../useful-resources/index.html">مصادر مفيدة</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Algorithms &amp; Data Structure</span>حساب <span class="inline">الـ <span class="word">Big-O Notation</span></span></h1>
+<article>
+<h2>تقييم أداء الخوارزميات</h2>
+<p>في هذا الدرس ستتعلم كيف تقوم بتقييم أداء الخوارزميات و كيف يتم قراءة التقييم لمعرفة ما إن كان فعال أم لا.<br/>
+	كما أننا سنعلمك كيف تستطيع حساب الوقت الذي يستغرقه الكود حتى يتنفذ بنفسك.</p>
+<p>عندما نقوم بتقدير وقت تنفيذ أي خوارزمية (أكثر وقت تحتاجه) فإن النتيجة النهائية ستكون أحد النتائج المذكورة في الجدول التالي.</p>
+<p><a href="big-o-complexity.png" target="_blank"><img src="big-o-complexity.png"/></a></p>
+<p>ما يجب أن تفهمه من الرسم أنه كلما كان الوقت الذي تستغرقه الخوارزمية منخفض كلما كان أداؤها أفضل.<br/>
+	و بالتالي المعادلة <span class="code">O(<span class="red">1</span>)</span> تعتبر الأفضل بينهم و المعادلة <span class="code">O(<span class="red">n!</span>)</span> تعتبر الأسوء على الإطلاق.</p>
+<p>عند تقدير وقت الخوارزمية, يجب مقارنة أداءها على أساس الرسم السابق.<br/>
+	فمثلاً إذا وجدنا أداء الكود هو <span class="code">O(<span class="red">n!</span>)</span> فسنحاول إيجاد حل آخر يتنفذ بوقت أقل.</p>
+<br/>
+<p>المعادلات التي تشير لتقييم جيد:</p>
+<ul class="explain">
+<li><p><span class="code">O(<span class="red">1</span>)</span></p></li>
+<li><p><span class="code">O(<span class="red">log n</span>)</span></p></li>
+<li><p><span class="code">O(<span class="red">n</span>)</span></p></li>
+<li><p><span class="code">O(<span class="red">n log n</span>)</span></p></li>
+</ul>
+<br/>
+<p>المعادلات التي تشير لتقييم سيء:</p>
+<ul class="explain">
+<li><p><span class="code">O(<span class="red">n<sup>k</sup></span>)</span></p></li>
+<li><p><span class="code">O(<span class="red">k<sup>n</sup></span>)</span></p></li>
+<li><p><span class="code">O(<span class="red">n!</span>)</span></p></li>
+</ul>
+<br/>
+<p>في الصورة التالية وضعنا ترتيب جميع المعادلات من الأفضل إلى الأسوأ بشكل أسهل لك في الحفظ.</p>
+<p><a href="big-o-complexity-order.png" target="_blank"><img src="big-o-complexity-order.png"/></a></p>
+</article>
+<article>
+<h2>مفهوم المعادلة <span class="code">O(<span class="red">1</span>)</span></h2>
+<p>من المهم جداً معرفة أن الرقم <span class="number">1</span> في هذه المعالة لا يشير للقيمة واحد, بل يعني أن كل أمر موضوع في الكود سيتنفذ مرة واحدة فقط.<br/>
+	بمعنى آخر, هذه المعادلة تعني أن الكود لا يحتوي على حلقات <span class="inline">( <span class="word">Loops</span> )</span> و لا على دوال تستدعي نفسها <span class="inline">( <span class="word">Loops</span> ).</span></p>
+<p>إذا كان تقييم الكود هو <span class="code">O(<span class="red">1</span>)</span> فهذا يعني أنه ممتاز و يتنفذ بسرعة عالية جداً و لا يحتاج لأي تحسين.<br/>
+	و هو يعني أيضاً أن الوقت المتوقع لتنفيذ الكود ثابت <span class="inline">( <span class="word">Constant Time</span> )</span> لا يتغير.</p>
+<br/>
+<h3>مثال</h3>
+<pre data-enlighter-group="group1" data-enlighter-language="python" data-enlighter-title="Python">
+def func():     # تعريف الدالة لا يحسب كخطوة
+
+	a = 10      # إسناد القيمة يحسب خطوة
+	b = 20      # إسناد القيمة يحسب خطوة
+	s = a + b   # إسناد القيمة يحسب خطوة
+	
+	return s    # إرجاع القيمة يحسب خطوة
+	
+	# Big-O مجموع الأوامر التي ستتنفذ هو 4 و لكن بما أنها مجرد أوامر عادية لا تتكرر أكثر من مرة فإنها لا تحسب إطلاقاً في معادلة الـ
+	</pre>
+<pre data-enlighter-group="group1" data-enlighter-language="java" data-enlighter-title="Java">
+public int func()   // تعريف الدالة لا يحسب كخطوة
+{
+	int a, b, s;    // تعريف المتغيرات لا يحسب إطلاقاً
+	
+	a = 10;         // إسناد القيمة يحسب خطوة
+	b = 20;         // إسناد القيمة يحسب خطوة
+	s = a + b;      // إسناد القيمة يحسب خطوة
+	
+	return s;       // إرجاع القيمة يحسب خطوة
+	
+	// Big-O مجموع الأوامر التي ستتنفذ هو 4 و لكن بما أنها مجرد أوامر عادية لا تتكرر أكثر من مرة فإنها لا تحسب إطلاقاً في معادلة الـ
+}
+	</pre>
+<pre data-enlighter-group="group1" data-enlighter-language="csharp" data-enlighter-title="C#">
+public int Func()   // تعريف الدالة لا يحسب كخطوة
+{
+    int a, b, s;    // تعريف المتغيرات لا يحسب إطلاقاً
+
+    a = 10;         // إسناد القيمة يحسب خطوة
+    b = 20;         // إسناد القيمة يحسب خطوة
+    s = a + b;      // إسناد القيمة يحسب خطوة
+
+    return s;       // إرجاع القيمة يحسب خطوة
+
+	// Big-O مجموع الأوامر التي ستتنفذ هو 4 و لكن بما أنها مجرد أوامر عادية لا تتكرر أكثر من مرة فإنها لا تحسب إطلاقاً في معادلة الـ
+}
+	</pre>
+<pre data-enlighter-group="group1" data-enlighter-language="cpp" data-enlighter-title="C++">
+int func() {       // تعريف الدالة لا يحسب كخطوة
+	
+	int a, b, s;   // تعريف المتغيرات لا يحسب إطلاقاً
+
+	a = 10;        // إسناد القيمة يحسب خطوة
+	b = 20;        // إسناد القيمة يحسب خطوة
+	s = a + b;     // إسناد القيمة يحسب خطوة
+	
+	return s;      // إرجاع القيمة يحسب خطوة
+
+	// Big-O مجموع الأوامر التي ستتنفذ هو 4 و لكن بما أنها مجرد أوامر عادية لا تتكرر أكثر من مرة فإنها لا تحسب إطلاقاً في معادلة الـ
+
+}
+	</pre>
+<pre data-enlighter-group="group1" data-enlighter-language="c" data-enlighter-title="C">
+int func() {       // تعريف الدالة لا يحسب كخطوة
+	
+	int a, b, s;   // تعريف المتغيرات لا يحسب إطلاقاً
+
+	a = 10;        // إسناد القيمة يحسب خطوة
+	b = 20;        // إسناد القيمة يحسب خطوة
+	s = a + b;     // إسناد القيمة يحسب خطوة
+
+	return s;      // إرجاع القيمة يحسب خطوة
+
+	// Big-O مجموع الأوامر التي ستتنفذ هو 4 و لكن بما أنها مجرد أوامر عادية لا تتكرر أكثر من مرة فإنها لا تحسب إطلاقاً في معادلة الـ
+    
+}
+	</pre>
+<br/>
+<p>طريقة تقييم أداء الكود</p>
+<pre data-enlighter-linenumbers="false">
+Execution Steps = 1 + 1 + 1 + 1 = 4
+Big O of any constant ==&gt; O(1)
+	</pre>
+<br/>
+<p>بما أن جميع الأوامر الموضوعة تتنفذ مرة واحدة فتقييم هذا الكود هو <span class="inline"><span class="code">O(<span class="red">1</span>)</span>.</span><br/>
+	كما تلاحظ فإننا لا نهتم بعدد الخطوات المعروفة عند وضع التقييم النهائي بل نهتم بكم مرة ستكرر هذه الخطوات و في حال كانت لا تتكرر فإنها لا تدخل في التقييم.</p>
+</article>
+<article>
+<h2>مفهوم المعادلة <span class="code">O(<span class="red">n</span>)</span></h2>
+<p>المتغير <code>n</code> في هذه المعالة يعني أن الكود سيتنفذ بعدد قيمة <code>n</code> كما هي الحال عندما نضع الكود بداخل حلقة.<br/>
+	بمعنى آخر, هذه المعادلة تعني أنه كلما كانت قيمة <code>n</code> أكبر, كلما كان الوقت الذي سيستغرقه تنفيذ الكود أكبر.<br/>
+	بما أن الوقت الذي تستغرقه هذه المعادلة يكبر بشكل متوازن مع كبر حجم الأوامر فهنا رسم التقييم سيكون خط مائل متوازن بينهما يسمى <span class="inline">( <span class="word">Linear Time</span> ).</span></p>
+<p>إذا كان تقييم الكود هو <span class="code">O(<span class="red">n</span>)</span> فهذا يعني أنه جيد و مقبول.<br/>
+<span class="note">ملاحظة:</span> إذا كان تقييم الكود جيد و لكن يمكن كتابته بطريقة أخرى أكثر بساطة و لا تتطلب استخدام حلقة, فالأولى أن نقوم بالتخلي عن الحلقة و اعتماد تلك الطريقة.</p>
+<br/>
+<h3>المثال الأول</h3>
+<br/>
+<pre data-enlighter-group="group2" data-enlighter-highlight="8" data-enlighter-language="python" data-enlighter-title="Python">
+# تعريف الدالة لا يحسب كخطوة
+def func(n):
+
+	# كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	s = 0
+	
+	# Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+	for i in range(1, n + 1):
+		s += i
+
+	# كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s
+	</pre>
+<pre data-enlighter-group="group2" data-enlighter-highlight="11" data-enlighter-language="java" data-enlighter-title="Java">
+// تعريف الدالة لا يحسب كخطوة
+public int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+    for (int i = 1; i &lt;= n; i++)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group2" data-enlighter-highlight="11" data-enlighter-language="csharp" data-enlighter-title="C#">
+// تعريف الدالة لا يحسب كخطوة
+public int Func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+    for (int i = 1; i &lt;= n; i++)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group2" data-enlighter-highlight="11" data-enlighter-language="cpp" data-enlighter-title="C++">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+    for (int i = 1; i &lt;= n; i++)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group2" data-enlighter-highlight="11" data-enlighter-language="c" data-enlighter-title="C">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+    for (int i = 1; i &lt;= n; i++)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<br/>
+<p>طريقة تقييم أداء الكود</p>
+<pre data-enlighter-linenumbers="false">
+Execution Steps = 1 + n + 1
+Execution Steps = 2 + n
+
+Big O of 2 + n ==&gt; O(n)
+	</pre>
+<br/>
+<p>كما سبق و قلنا, الخطوات العادية أو الأوامر التي تتنفذ مرة واحدة لا تعتبر مهمة في تقييم أداء الكود.<br/>
+	عند تقييم الكود هنا لاحظ أننا لم نهتم إطلاقاً بعدد الخطوات الثابتة التي ستتنفذ, أي لم نهتم بالرقم <code>2</code> الذي يظهر في <span class="inline">الـ <span class="word">Step Execution</span></span> و لكننا إهتممنا فقط بالمتغير <code>n</code> الموضوع فيها.</p>
+<p>عند تقييم أداء الكود فإننا دائماً ننظر لأعلى قيمة مجهولة ممكنة و في حالتنا هنا يعتبر المتغير  <code>n</code> هو الأعلى لذلك كان التقييم النهائي لهذا الكود هو <span class="inline"><span class="code">O(<span class="red">n</span>)</span>.</span></p>
+<br/>
+<p><span class="question">إذا كانت قيمة <code>n</code> مقسومة على رقم مثل <code>n / 2</code> هل ستتغير المعادلة؟</span><br/>
+	كلا لن تتغير, لأن قيمة <code>n</code> لا تزال مجهولة سواء كانت مقسومة أم لا و هذا ما سنراه في المثال التالي.</p>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<br/>
+<pre data-enlighter-group="group3" data-enlighter-highlight="8" data-enlighter-language="python" data-enlighter-title="Python">
+# تعريف الدالة لا يحسب كخطوة
+def func(n):
+
+	# كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	s = 0
+	
+	# Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+	for i in range(1, int((n + 1) / 2)):
+		s += i
+
+	# كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    return s
+	</pre>
+<pre data-enlighter-group="group3" data-enlighter-highlight="11" data-enlighter-language="java" data-enlighter-title="Java">
+// تعريف الدالة لا يحسب كخطوة
+public int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+    for (int i = 1; i &lt;= n / 2; i++)
+    {
+        s += i;
+    }
+	
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    return s;
+}
+	</pre>
+<pre data-enlighter-group="group3" data-enlighter-highlight="11" data-enlighter-language="csharp" data-enlighter-title="C#">
+// تعريف الدالة لا يحسب كخطوة
+public int Func(int n)
+{
+    // تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+
+    // كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+
+    // Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+    for (int i = 1; i &lt;= n / 2; i++)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    return s;
+}
+	</pre>
+<pre data-enlighter-group="group3" data-enlighter-highlight="11" data-enlighter-language="cpp" data-enlighter-title="C++">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+	int s;
+
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	s = 0;
+
+	// Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+	for (int i = 1; i &lt;= n / 2; i++)
+	{
+		s += i;
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    return s;
+}
+	</pre>
+<pre data-enlighter-group="group3" data-enlighter-highlight="11" data-enlighter-language="c" data-enlighter-title="C">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+	int s;
+
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	s = 0;
+
+	// Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+	for (int i = 1; i &lt;= n / 2; i++)
+	{
+		s += i;
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    return s;
+}
+	</pre>
+<br/>
+<p>طريقة تقييم أداء الكود</p>
+<pre data-enlighter-linenumbers="false">
+Execution Steps = 1 + (n/2) + 1
+Execution Steps = 2 + (n/2)
+
+Big O of 2 + (n/2) ==&gt; O(n)
+	</pre>
+<br/>
+<p>إذاً, سواء كانت الحلقة تتوقف عند <code>n</code> أو تتوقف عند <code>n / 2</code> فتقييم الكود سيبقى كما هو.</p>
+<br/>
+<p><span class="question">ماذا ستكون المعادلة لو كانت الحلقة تسير بشكل عكسي؟</span><br/>
+	لا يؤثر هذا الأمر إطلاقاً على المعادلة, فمثلاً إذا كنت ستذهب من النقطة <code>A</code> إلى النقطة <code>B</code> أو بالعكس من <code>B</code> إلى النقطة <code>A</code> فعدد الخطوات للوصول هنا نفسه تماماً.</p>
+<p><a href="complexity-of-reverse-loop.png" target="_blank"><img src="complexity-of-reverse-loop.png"/></a></p>
+<p>بنفس المنطق إذا أنشأنا حلقة تسير من <code>1</code> إلى <code>n</code> أو أنشأنا حلقة تسير من <code>n</code> إلى <code>1</code> فعدد المرات التي سيتنفذ فيها الكود هو نفسه تماماَ.<br/>
+	لذلك المعادلة <span class="code">O(<span class="red">n</span>)</span> تظل نفسها في كلا الحالتين و هذا ما سنراه في المثال التالي.</p>
+<br/>
+<h3>المثال الثالث</h3>
+<pre data-enlighter-group="group4" data-enlighter-highlight="8" data-enlighter-language="python" data-enlighter-title="Python">
+# تعريف الدالة لا يحسب كخطوة
+def func(n):
+
+	# كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	s = 0
+
+	# Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+	for i in range(n, 0, -1):
+		s += i
+	
+	# كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    return s
+	</pre>
+<pre data-enlighter-group="group4" data-enlighter-highlight="11" data-enlighter-language="java" data-enlighter-title="Java">
+// تعريف الدالة لا يحسب كخطوة
+public int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+    for (int i = n, i &gt; 0; i--)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+}
+	</pre>
+<pre data-enlighter-group="group4" data-enlighter-highlight="11" data-enlighter-language="csharp" data-enlighter-title="C#">
+// تعريف الدالة لا يحسب كخطوة
+public int Func(int n)
+{
+    // تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+
+    // كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+
+    // Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+    for (int i = n, i &gt; 0; i--)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+}
+	</pre>
+<pre data-enlighter-group="group4" data-enlighter-highlight="11" data-enlighter-language="cpp" data-enlighter-title="C++">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+	int s;
+
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	s = 0;
+
+	// Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+	for (int i = n, i &gt; 0; i--)
+	{
+		s += i;
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+}
+	</pre>
+<pre data-enlighter-group="group4" data-enlighter-highlight="11" data-enlighter-language="c" data-enlighter-title="C">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+	int s;
+
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	s = 0;
+
+	// Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+	for (int i = n, i &gt; 0; i--)
+	{
+		s += i;
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+}
+	</pre>
+<br/>
+<p>طريقة تقييم أداء الكود</p>
+<pre data-enlighter-linenumbers="false">
+Execution Steps = 1 + n + 1
+Execution Steps = 2 + n
+
+Big O of 3 + n ==&gt; O(n)
+	</pre>
+<br/><br/>
+<p><span class="question">ماذا لو كانت الحلقة تتنفذ عدد مرات محدد, هل ستتغير المعادلة؟</span><br/>
+	طبعاً لأن شرط المعادلة الأساسي لتكون <span class="code">O(<span class="red">n</span>)</span> هو أن يكون عدد المرات التي سيتنفذ فيها الكود مجهولاً.<br/>
+	إذا كان عدد المرات الذي ستكرر فيه الحلقة معروفاً, فإن تقييم الخوارزمية سيكون <span class="code">O(<span class="red">1</span>)</span> لأنه عدد المرات التي سيتنفذ فيها الكود ثابت لا يتغير و هذا ما سنراه في المثال التالي.</p>
+<br/><br/>
+<h3>المثال الرابع</h3>
+<pre data-enlighter-group="group5" data-enlighter-highlight="8" data-enlighter-language="python" data-enlighter-title="Python">
+# تعريف الدالة لا يحسب كخطوة
+def func(n):
+
+	# كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	s = 0
+	
+	# في الحلقة التالية يوجد أمر واحد سيتنفذ 5 مرات بالضبط (عدد التكرار معروف), أي سيتم حساب الأمر الموضوع كخمس خطوات عادية
+	for i in range(5):
+		s += i
+	
+	# كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s
+	</pre>
+<pre data-enlighter-group="group5" data-enlighter-highlight="11" data-enlighter-language="java" data-enlighter-title="Java">
+// تعريف الدالة لا يحسب كخطوة
+public int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+    for (int i = 1; i &lt;= 5; i++)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+}
+	</pre>
+<pre data-enlighter-group="group5" data-enlighter-highlight="11" data-enlighter-language="csharp" data-enlighter-title="C#">
+// تعريف الدالة لا يحسب كخطوة
+public int Func(int n)
+{
+    // تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+ 
+    // كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+
+    // Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+    for (int i = 1; i &lt;= 5; i++)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+}
+	</pre>
+<pre data-enlighter-group="group5" data-enlighter-highlight="11" data-enlighter-language="cpp" data-enlighter-title="C++">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+	int s;
+
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	s = 0;
+
+	// Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+	for (int i = 1; i &lt;= 5; i++)
+	{
+		s += i;
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+}
+	</pre>
+<pre data-enlighter-group="group5" data-enlighter-highlight="11" data-enlighter-language="c" data-enlighter-title="C">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+	int s;
+
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	s = 0;
+
+	// Big-O ضمن نتيجة الـ n سنضع المتغير - n أي على حسب القيمة التي نضعها في - (n times) بما أنه عندنا حلقة تنفذ الكود الموضوع فيها
+	for (int i = 1; i &lt;= 5; i++)
+	{
+		s += i;
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+}
+	</pre>
+<br/>
+<p>طريقة تقييم أداء الكود</p>
+<pre data-enlighter-linenumbers="false">
+Execution Steps = 1 + 5 + 1
+Execution Steps = 7
+
+Big O of any constant ==&gt; O(1)
+	</pre>
+</article>
+<article>
+<h2>مفهوم المعادلة <span class="code">O(<span class="red">log n</span>)</span></h2>
+<p>المقصود بالمعادلة <code>log n</code> هو عندما تتغير قيمة عداد الحلقة بشكل مضاعف أو مقسوم.</p>
+<br/>
+<h3>المثال الأول</h3>
+<p>في المثال التالي قمنا بجعل عدّاد الحلقة يتم ضربه بإثنين في كل دورة.</p>
+<pre data-enlighter-group="group6" data-enlighter-highlight="9" data-enlighter-language="python" data-enlighter-title="Python">
+# تعريف الدالة لا يحسب كخطوة
+def func(n):
+
+	# كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	s = 0
+	
+	# Big-O ضمن نتيجة الـ log n و بنفس الوقت العداد يتم مضاعفة قيمته في كل دورة, سنضع n بما أنه عندنا حلقة تنفذ الكود الموضوع فيها على حسب قيمة
+	i = 1
+	while i &lt;= n:
+		s += i
+		i *= 2
+
+	# كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s
+	</pre>
+<pre data-enlighter-group="group6" data-enlighter-highlight="11" data-enlighter-language="java" data-enlighter-title="Java">
+// تعريف الدالة لا يحسب كخطوة
+public int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// Big-O ضمن نتيجة الـ log n و بنفس الوقت العداد يتم مضاعفة قيمته في كل دورة, سنضع n بما أنه عندنا حلقة تنفذ الكود الموضوع فيها على حسب قيمة
+    for (int i = 1; i &lt;= n; i *= 2)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group6" data-enlighter-highlight="11" data-enlighter-language="csharp" data-enlighter-title="C#">
+// تعريف الدالة لا يحسب كخطوة
+public int Func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// Big-O ضمن نتيجة الـ log n و بنفس الوقت العداد يتم مضاعفة قيمته في كل دورة, سنضع n بما أنه عندنا حلقة تنفذ الكود الموضوع فيها على حسب قيمة
+    for (int i = 1; i &lt;= n; i *= 2)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group6" data-enlighter-highlight="11" data-enlighter-language="cpp" data-enlighter-title="C++">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// Big-O ضمن نتيجة الـ log n و بنفس الوقت العداد يتم مضاعفة قيمته في كل دورة, سنضع n بما أنه عندنا حلقة تنفذ الكود الموضوع فيها على حسب قيمة
+    for (int i = 1; i &lt;= n; i *= 2)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group6" data-enlighter-highlight="11" data-enlighter-language="c" data-enlighter-title="C">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// Big-O ضمن نتيجة الـ log n و بنفس الوقت العداد يتم مضاعفة قيمته في كل دورة, سنضع n بما أنه عندنا حلقة تنفذ الكود الموضوع فيها على حسب قيمة
+    for (int i = 1; i &lt;= n; i *= 2)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<br/>
+<p>طريقة تقييم أداء الكود</p>
+<pre data-enlighter-linenumbers="false">
+Execution Steps = 1 + log n + 1
+Execution Steps = 2 + log n
+
+Big O of 2 + log n ==&gt; O(log n)
+	</pre>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>في المثال التالي قمنا بجعل عدّاد الحلقة يتم قسمته على اثنين في كل دورة.</p>
+<pre data-enlighter-group="group7" data-enlighter-highlight="9" data-enlighter-language="python" data-enlighter-title="Python">
+# تعريف الدالة لا يحسب كخطوة
+def func(n):
+
+	# كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	s = 0
+	
+	# Big-O ضمن نتيجة الـ log n و بنفس الوقت العداد يتم قسمة قيمته في كل دورة, سنضع n بما أنه عندنا حلقة تنفذ الكود الموضوع فيها على حسب قيمة
+	i = n
+	while i &gt;= 1:
+		s += i
+		i /= 2
+
+	# كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s
+	</pre>
+<pre data-enlighter-group="group7" data-enlighter-highlight="11" data-enlighter-language="java" data-enlighter-title="Java">
+// تعريف الدالة لا يحسب كخطوة
+public int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// Big-O ضمن نتيجة الـ log n و بنفس الوقت العداد يتم قسمة قيمته في كل دورة, سنضع n بما أنه عندنا حلقة تنفذ الكود الموضوع فيها على حسب قيمة
+    for (int i = n; i &gt;= 1; i /= 2)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group7" data-enlighter-highlight="11" data-enlighter-language="csharp" data-enlighter-title="C#">
+// تعريف الدالة لا يحسب كخطوة
+public int Func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// Big-O ضمن نتيجة الـ log n و بنفس الوقت العداد يتم قسمة قيمته في كل دورة, سنضع n بما أنه عندنا حلقة تنفذ الكود الموضوع فيها على حسب قيمة
+    for (int i = n; i &gt;= 1; i /= 2)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group7" data-enlighter-highlight="11" data-enlighter-language="cpp" data-enlighter-title="C++">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// Big-O ضمن نتيجة الـ log n و بنفس الوقت العداد يتم قسمة قيمته في كل دورة, سنضع n بما أنه عندنا حلقة تنفذ الكود الموضوع فيها على حسب قيمة
+    for (int i = n; i &gt;= 1; i /= 2)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group7" data-enlighter-highlight="11" data-enlighter-language="c" data-enlighter-title="C">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// Big-O ضمن نتيجة الـ log n و بنفس الوقت العداد يتم قسمة قيمته في كل دورة, سنضع n بما أنه عندنا حلقة تنفذ الكود الموضوع فيها على حسب قيمة
+    for (int i = n; i &gt;= 1; i /= 2)
+    {
+        s += i;
+    }
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<br/>
+<p>طريقة تقييم أداء الكود</p>
+<pre data-enlighter-linenumbers="false">
+Execution Steps = 1 + log n + 1
+Execution Steps = 2 + log n
+
+Big O of 2 + log n ==&gt; O(log n)
+	</pre>
+</article>
+<article>
+<h2>مفهوم المعادلة <span class="code">O(<span class="red">n<sup>k</sup></span>)</span></h2>
+<p>المقصود بالحرف <code>n</code> هو أن الكود موضوع بداخل حلقة.<br/>
+	المقصود بالحرف <code>k</code> أن الحلقة تحتوي أيضاً على حلقة أو أكثر بشكل متداخل <span class="inline">( <span class="word">Nested Loop</span> ).</span></p>
+<p>عند وضع التقييم للكود, الحرف <code>n</code> نضعه كما هو ليشير أنه يوجد حلقة, أما الحرف <code>k</code> فنضع مكانه عدد الحلقات المتداخلة و إليك بعض الأمثلة:</p>
+<ul class="explain">
+<li><p>إذا كان الكود يتضمن حلقتين متداخلتين نكتب <span class="code">O(<span class="red">n<sup>2</sup></span>)</span></p></li>
+<li><p>إذا كان الكود يتضمن ثلاث حلقات متداخلة نكتب <span class="code">O(<span class="red">n<sup>3</sup></span>)</span></p></li>
+<li><p>إذا كان الكود يتضمن أربع حلقات متداخلة نكتب <span class="code">O(<span class="red">n<sup>4</sup></span>)</span> و هكذا.</p></li>
+</ul>
+<p>لا تقلق ستتضح لك الفكرة من الأمثلة.</p>
+<br/>
+<h3>المثال الأول</h3>
+<p>في المثال التالي قمنا بوضع حلقة بداخل حلقة.</p>
+<pre data-enlighter-group="group8" data-enlighter-highlight="8,10" data-enlighter-language="python" data-enlighter-title="Python">
+# تعريف الدالة لا يحسب كخطوة
+def func(n):
+
+	# كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	s = 0
+	
+	# (n لأنها تبدأ من 1 إلى) n الحلقة الخارجية سيتم تمثيلها بـ
+	for i in range(1, n):
+		# (n لأنها تبدأ من 1 إلى) n الحلقة الداخلية سيتم تمثيلها بـ
+		for j in range(1, n):
+			# n * n الأمر الموضوع في هاتين الحلقتين المتداخلتين سيتم تكراره بمقدار قيمة
+			s += j
+
+	# كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s
+	</pre>
+<pre data-enlighter-group="group8" data-enlighter-highlight="11,13" data-enlighter-language="java" data-enlighter-title="Java">
+// تعريف الدالة لا يحسب كخطوة
+public int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// (n لأنها تبدأ من 1 إلى) n الحلقة الخارجية سيتم تمثيلها بـ
+	for (int i = 1; i &lt;= n; i++) {
+		// (n لأنها تبدأ من 1 إلى) n الحلقة الداخلية سيتم تمثيلها بـ
+		for (int j = 1; j &lt;= n; j++) {
+			// n * n الأمر الموضوع في هاتين الحلقتين المتداخلتين سيتم تكراره بمقدار قيمة
+			s += j;
+		}
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group8" data-enlighter-highlight="11,13" data-enlighter-language="csharp" data-enlighter-title="C#">
+// تعريف الدالة لا يحسب كخطوة
+public int Func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// (n لأنها تبدأ من 1 إلى) n الحلقة الخارجية سيتم تمثيلها بـ
+	for (int i = 1; i &lt;= n; i++) {
+		// (n لأنها تبدأ من 1 إلى) n الحلقة الداخلية سيتم تمثيلها بـ
+		for (int j = 1; j &lt;= n; j++) {
+			// n * n الأمر الموضوع في هاتين الحلقتين المتداخلتين سيتم تكراره بمقدار قيمة
+			s += j;
+		}
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group8" data-enlighter-highlight="11,13" data-enlighter-language="cpp" data-enlighter-title="C++">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// (n لأنها تبدأ من 1 إلى) n الحلقة الخارجية سيتم تمثيلها بـ
+	for (int i = 1; i &lt;= n; i++) {
+		// (n لأنها تبدأ من 1 إلى) n الحلقة الداخلية سيتم تمثيلها بـ
+		for (int j = 1; j &lt;= n; j++) {
+			// n * n الأمر الموضوع في هاتين الحلقتين المتداخلتين سيتم تكراره بمقدار قيمة
+			s += j;
+		}
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group8" data-enlighter-highlight="11,13" data-enlighter-language="c" data-enlighter-title="C">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// (n لأنها تبدأ من 1 إلى) n الحلقة الخارجية سيتم تمثيلها بـ
+	for (int i = 1; i &lt;= n; i++) {
+		// (n لأنها تبدأ من 1 إلى) n الحلقة الداخلية سيتم تمثيلها بـ
+		for (int j = 1; j &lt;= n; j++) {
+			// n * n الأمر الموضوع في هاتين الحلقتين المتداخلتين سيتم تكراره بمقدار قيمة
+			s += j;
+		}
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<br/>
+<p>طريقة تقييم أداء الكود</p>
+<pre data-enlighter-linenumbers="false">
+Execution Steps = 1 + n * n + 1
+Execution Steps = 2 + n^2
+
+Big O of 2 + n^2 ==&gt; O(n^2)
+	</pre>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>في المثال التالي قمنا بوضع ثلاث حلقات متداخلة.</p>
+<pre data-enlighter-group="group9" data-enlighter-highlight="8,10,12" data-enlighter-language="python" data-enlighter-title="Python">
+# تعريف الدالة لا يحسب كخطوة
+def func(n):
+
+	# كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	s = 0
+	
+	# (n لأنها تبدأ من 1 إلى) n الحلقة الأولى سيتم تمثيلها بـ
+	for i in range(1, n):
+		# (n لأنها تبدأ من 1 إلى) n الحلقة الثانية سيتم تمثيلها بـ
+		for j in range(1, n):
+			# (n لأنها تبدأ من 1 إلى) n الحلقة الثالثة سيتم تمثيلها بـ
+			for k in range(1, n):
+				# n * n * n الأمر الموضوع في هذه الحلقات المتدخلة سيتم تكراره بمقدار قيمة
+				s += j
+
+	# كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s
+	</pre>
+<pre data-enlighter-group="group9" data-enlighter-highlight="11,13,15" data-enlighter-language="java" data-enlighter-title="Java">
+// تعريف الدالة لا يحسب كخطوة
+public int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// (n لأنها تبدأ من 1 إلى) n الحلقة الأولى سيتم تمثيلها بـ
+	for (int i = 1; i &lt;= n; i++) {
+		// (n لأنها تبدأ من 1 إلى) n الحلقة الثانية سيتم تمثيلها بـ
+		for (int j = 1; j &lt;= n; j++) {
+			// (n لأنها تبدأ من 1 إلى) n الحلقة الثالثة سيتم تمثيلها بـ
+			for (int k = 1; k &lt;= n; k++) {
+				// n * n * n الأمر الموضوع في هذه الحلقات المتدخلة سيتم تكراره بمقدار قيمة
+				s += j
+			}
+		}
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group9" data-enlighter-highlight="11,13,15" data-enlighter-language="csharp" data-enlighter-title="C#">
+// تعريف الدالة لا يحسب كخطوة
+public int Func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// (n لأنها تبدأ من 1 إلى) n الحلقة الأولى سيتم تمثيلها بـ
+	for (int i = 1; i &lt;= n; i++) {
+		// (n لأنها تبدأ من 1 إلى) n الحلقة الثانية سيتم تمثيلها بـ
+		for (int j = 1; j &lt;= n; j++) {
+			// (n لأنها تبدأ من 1 إلى) n الحلقة الثالثة سيتم تمثيلها بـ
+			for (int k = 1; k &lt;= n; k++) {
+				// n * n * n الأمر الموضوع في هذه الحلقات المتدخلة سيتم تكراره بمقدار قيمة
+				s += j
+			}
+		}
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group9" data-enlighter-highlight="11,13,15" data-enlighter-language="cpp" data-enlighter-title="C++">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// (n لأنها تبدأ من 1 إلى) n الحلقة الأولى سيتم تمثيلها بـ
+	for (int i = 1; i &lt;= n; i++) {
+		// (n لأنها تبدأ من 1 إلى) n الحلقة الثانية سيتم تمثيلها بـ
+		for (int j = 1; j &lt;= n; j++) {
+			// (n لأنها تبدأ من 1 إلى) n الحلقة الثالثة سيتم تمثيلها بـ
+			for (int k = 1; k &lt;= n; k++) {
+				// n * n * n الأمر الموضوع في هذه الحلقات المتدخلة سيتم تكراره بمقدار قيمة
+				s += j
+			}
+		}
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group9" data-enlighter-highlight="11,13,15" data-enlighter-language="c" data-enlighter-title="C">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// (n لأنها تبدأ من 1 إلى) n الحلقة الأولى سيتم تمثيلها بـ
+	for (int i = 1; i &lt;= n; i++) {
+		// (n لأنها تبدأ من 1 إلى) n الحلقة الثانية سيتم تمثيلها بـ
+		for (int j = 1; j &lt;= n; j++) {
+			// (n لأنها تبدأ من 1 إلى) n الحلقة الثالثة سيتم تمثيلها بـ
+			for (int k = 1; k &lt;= n; k++) {
+				// n * n * n الأمر الموضوع في هذه الحلقات المتدخلة سيتم تكراره بمقدار قيمة
+				s += j
+			}
+		}
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<br/>
+<p>طريقة تقييم أداء الكود</p>
+<pre data-enlighter-linenumbers="false">
+Execution Steps = 1 + n * n * n + 1
+Execution Steps = 2 + n^3
+
+Big O of 2 + n^3 ==&gt; O(n^3)
+	</pre>
+</article>
+<article>
+<h2>مفهوم المعادلة <span class="code">O(<span class="red">n log n</span>)</span></h2>
+<p>المقصود بهذا المعادلة أنه يوجد حلقتين متداخلتين.	الحلقة الخارجية تتنفذ بمقدار <code>n</code> تماماً كالمعادلة <span class="inline"><span class="code">O(<span class="red">n</span>)</span>.</span> و الحلقة الداخلية تتنفذ نسبة لقيمة <code>n</code> أيضاً و لكن العداد الخاص بها تتغير قيمته بشكل مضاعف أو مقسوم تماماً كالمعادلة <span class="inline"><span class="code">O(<span class="red">log n</span>)</span>.</span></p>
+<br/>
+<h3>مثال</h3>
+<pre data-enlighter-group="group10" data-enlighter-highlight="8,11" data-enlighter-language="python" data-enlighter-title="Python">
+# تعريف الدالة لا يحسب كخطوة
+def func(n):
+
+	# كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	s = 0
+	
+	# (n لأنها تبدأ من 1 إلى) n الحلقة الخارجية سيتم تمثيلها بـ
+	for i in range(1, n):
+		# لأن العداد يتم مضاعفة قيمته في كل دورة log n الحلقة الداخلية سيتم تمثيلها بـ
+		j = 1
+		while j &lt;= n:
+			# n * n الأمر الموضوع في هاتين الحلقتين المتداخلتين سيتم تكراره بمقدار قيمة
+			s += j
+			j *= 2
+
+	# كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s
+	</pre>
+<pre data-enlighter-group="group10" data-enlighter-highlight="11,13" data-enlighter-language="java" data-enlighter-title="Java">
+// تعريف الدالة لا يحسب كخطوة
+public int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// (n لأنها تبدأ من 1 إلى) n الحلقة الخارجية سيتم تمثيلها بـ
+	for (int i = 1; i &lt;= n; i++) {
+		// أن العداد يتم مضاعفة قيمته في كل دورة log n الحلقة الداخلية سيتم تمثيلها بـ
+		for (int j = 1; j &lt;= n; j *= 2) {
+			// n * n الأمر الموضوع في هاتين الحلقتين المتداخلتين سيتم تكراره بمقدار قيمة
+			s += j;
+		}
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group10" data-enlighter-highlight="11,13" data-enlighter-language="csharp" data-enlighter-title="C#">
+// تعريف الدالة لا يحسب كخطوة
+public int Func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// (n لأنها تبدأ من 1 إلى) n الحلقة الخارجية سيتم تمثيلها بـ
+	for (int i = 1; i &lt;= n; i++) {
+		// أن العداد يتم مضاعفة قيمته في كل دورة log n الحلقة الداخلية سيتم تمثيلها بـ
+		for (int j = 1; j &lt;= n; j *= 2) {
+			// n * n الأمر الموضوع في هاتين الحلقتين المتداخلتين سيتم تكراره بمقدار قيمة
+			s += j;
+		}
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group10" data-enlighter-highlight="11,13" data-enlighter-language="cpp" data-enlighter-title="C++">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// (n لأنها تبدأ من 1 إلى) n الحلقة الخارجية سيتم تمثيلها بـ
+	for (int i = 1; i &lt;= n; i++) {
+		// أن العداد يتم مضاعفة قيمته في كل دورة log n الحلقة الداخلية سيتم تمثيلها بـ
+		for (int j = 1; j &lt;= n; j *= 2) {
+			// n * n الأمر الموضوع في هاتين الحلقتين المتداخلتين سيتم تكراره بمقدار قيمة
+			s += j;
+		}
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<pre data-enlighter-group="group10" data-enlighter-highlight="11,13" data-enlighter-language="c" data-enlighter-title="C">
+// تعريف الدالة لا يحسب كخطوة
+int func(int n)
+{
+	// تعريف المتغيرات لا يحسب إطلاقاً
+    int s;
+    
+	// كما قلنا سابقاً Big-O إسناد أي قيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    s = 0;
+    
+	// (n لأنها تبدأ من 1 إلى) n الحلقة الخارجية سيتم تمثيلها بـ
+	for (int i = 1; i &lt;= n; i++) {
+		// أن العداد يتم مضاعفة قيمته في كل دورة log n الحلقة الداخلية سيتم تمثيلها بـ
+		for (int j = 1; j &lt;= n; j *= 2) {
+			// n * n الأمر الموضوع في هاتين الحلقتين المتداخلتين سيتم تكراره بمقدار قيمة
+			s += j;
+		}
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return s;
+    
+}
+	</pre>
+<br/>
+<p>طريقة تقييم أداء الكود</p>
+<pre data-enlighter-linenumbers="false">
+Execution Steps = 1 + n * log n + 1
+Execution Steps = 2 + n * log n
+
+Big O of 2 + n log n ==&gt; O(n log n)
+	</pre>
+</article>
+<article>
+<h2>مفهوم المعادلة <span class="code">O(<span class="red">n!</span>)</span></h2>
+<p>المقصود بهذه المعادلة أن الدالة ستعيد إستدعاء نفسها بمقدار قيمة <span class="inline"><code>n</code>.</span><br/>
+<span class="note">ملاحظة:</span> الكود الموضوع في المثال التالي تم شرحه بتفصيل ممل في دورة الخوارزميات و بالتحديد في درس <a href="../../algorithms/algorithms-recursion/index.html" target="_blank">تعريف دوال تستدعي نفسها</a></p>
+<br/>
+<h3>مثال</h3>
+<pre data-enlighter-group="group11" data-enlighter-highlight="8" data-enlighter-language="python" data-enlighter-title="Python">
+# تعريف الدالة لا يحسب كخطوة
+def factorial(n):
+
+	# الشرط بحد ذاته لا يحسب خطوة
+    if n &gt; 0:
+		# كخطوة return لنفسها ) سيتم حساب أمر الـ return كل مرة سيتم فيها إعادة استدعاء الدالة لنفسها, ( أي ستفعل
+		# n! فإنه سيتم تمثيلها n بما أن الدالة ستعيد استدعاء نفسها بمقدار قيمة
+        return n * factorial(n - 1)
+
+	# كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+    return 1
+	</pre>
+<pre data-enlighter-group="group11" data-enlighter-highlight="9" data-enlighter-language="java" data-enlighter-title="Java">
+// تعريف الدالة لا يحسب كخطوة
+public int factorial(int n)
+{
+	// الشرط بحد ذاته لا يحسب خطوة
+	if (n &gt; 0)
+	{
+		// كخطوة return لنفسها ) سيتم حساب أمر الـ return كل مرة سيتم فيها إعادة استدعاء الدالة لنفسها, ( أي ستفعل
+		// n! فإنه سيتم تمثيلها n بما أن الدالة ستعيد استدعاء نفسها بمقدار قيمة
+		return n * factorial(n - 1);
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return 1;
+}
+	</pre>
+<pre data-enlighter-group="group11" data-enlighter-highlight="9" data-enlighter-language="csharp" data-enlighter-title="C#">
+// تعريف الدالة لا يحسب كخطوة
+public int Factorial(int n)
+{
+	// الشرط بحد ذاته لا يحسب خطوة
+	if (n &gt; 0)
+	{
+		// كخطوة return لنفسها ) سيتم حساب أمر الـ return كل مرة سيتم فيها إعادة استدعاء الدالة لنفسها, ( أي ستفعل
+		// n! فإنه سيتم تمثيلها n بما أن الدالة ستعيد استدعاء نفسها بمقدار قيمة
+		return n * Factorial(n - 1);
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return 1;
+}
+	</pre>
+<pre data-enlighter-group="group11" data-enlighter-highlight="9" data-enlighter-language="cpp" data-enlighter-title="C++">
+// تعريف الدالة لا يحسب كخطوة
+int factorial(int n)
+{
+	// الشرط بحد ذاته لا يحسب خطوة
+	if (n &gt; 0)
+	{
+		// كخطوة return لنفسها ) سيتم حساب أمر الـ return كل مرة سيتم فيها إعادة استدعاء الدالة لنفسها, ( أي ستفعل
+		// n! فإنه سيتم تمثيلها n بما أن الدالة ستعيد استدعاء نفسها بمقدار قيمة
+		return n * factorial(n - 1);
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return 1;
+}
+	</pre>
+<pre data-enlighter-group="group11" data-enlighter-highlight="9" data-enlighter-language="c" data-enlighter-title="C">
+// تعريف الدالة لا يحسب كخطوة
+int factorial(int n)
+{
+	// الشرط بحد ذاته لا يحسب خطوة
+	if (n &gt; 0)
+	{
+		// كخطوة return لنفسها ) سيتم حساب أمر الـ return كل مرة سيتم فيها إعادة استدعاء الدالة لنفسها, ( أي ستفعل
+		// n! فإنه سيتم تمثيلها n بما أن الدالة ستعيد استدعاء نفسها بمقدار قيمة
+		return n * factorial(n - 1);
+	}
+
+	// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+	return 1;
+}
+	</pre>
+<br/>
+<p>طريقة تقييم أداء الكود</p>
+<pre data-enlighter-linenumbers="false">
+Execution Steps = n! + 1
+
+Big O of n! + 1 ==&gt; O(n!)
+	</pre>
+</article>
+<article>
+<h2>مفهوم المعادلة <span class="code">O(<span class="red">k<sup>n</sup></span>)</span></h2>
+<p>المقصود بهذه المعادلة أن الدالة ستعيد إستدعاء نفسها بمقدار قيمة <span class="inline"><code>n</code></span> و في كل عملية إستدعاء سيتم استدعاءها بشكل مضاعف أيضاً.</p>
+<p>فعلى سبيل المثال, أول مرة تستدعي فيها نفسها, تقوم باستدعاء نفسها مرتين بشكل متوازي.<br/>
+	ثاني مرة تستدعي فيها نفسها, تقوم باستدعاء نفسها <span class="number">4</span> مرات بشكل متوازي.<br/>
+	ثالث مرة تستدعي فيها نفسها, تقوم باستدعاء نفسها <span class="number">8</span> مرات بشكل متوازي.<br/>
+	رابع مرة تستدعي فيها نفسها, تقوم باستدعاء نفسها <span class="number">16</span> مرة بشكل متوازي و هكذا.</p>
+<br/>
+<h3>مثال</h3>
+<p>في المثال التالي سنقوم بتطبيق مبدأ يسمى فايبوناتشي <span class="inline">( <span class="word">Fibonacci</span> ).</span><br/>
+	بكل صراحة فكرة هذا المبدأ تعتبر بسيطة جداً و لكن تطبيقه بهذا الأسلوب سيكون غريب بالنسبة لك و لقد تعمدنا كتابته بهذه الشكل حتى نستخدم المعادلة <span class="code">O(<span class="red">k<sup>n</sup></span>)</span><br/>
+	بشكل عام فكرة الكود أنك في كل مرة ستجمع القيمة ما قبل الأخيرة مع القيمة الأخيرة و تضع الناتج بعدهما كما في الصورة التالية.</p>
+<p><a href="fibonacci.gif" target="_blank"><img src="fibonacci.gif"/></a></p>
+<pre data-enlighter-group="group12" data-enlighter-highlight="17" data-enlighter-language="python" data-enlighter-title="Python">
+# تعريف الدالة لا يحسب كخطوة
+def fibonacci(n):
+
+    # الشرط بحد ذاته لا يحسب خطوة
+    if n &lt;= 0:
+        # كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+        return 0
+
+    # الشرط بحد ذاته لا يحسب خطوة
+    if n &lt;= 2:
+        # كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+        return 1
+		
+    # كخطوتين return لنفسها ) سيتم حساب أمر الـ return كل مرة سيتم فيها إعادة استدعاء الدالة لنفسها, ( أي ستفعل
+    # n و السبب في ذلك أن كل عملية جمع سيتم إرجاعها تتطلب من الدالة أن تستدعي نفسها مرتين مضاعفة بقيمة
+    # O(k^n) بما أن الدالة ستعيد استدعاء نفسها كل مرة بمقدار ضعفين زيادة فإنه سيتم تمثيلها بـ
+    return fibonacci(n - 1) + fibonacci(n - 2)
+	</pre>
+<pre data-enlighter-group="group12" data-enlighter-highlight="21" data-enlighter-language="java" data-enlighter-title="Java">
+// تعريف الدالة لا يحسب كخطوة
+public int fibonacci(int n)
+{
+	// الشرط بحد ذاته لا يحسب خطوة
+	if (n &lt;= 0)
+	{
+		// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+        return 0;
+	}
+	
+	// الشرط بحد ذاته لا يحسب خطوة
+	if (n &lt;= 2)
+	{
+		// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+        return 1;
+	}
+
+	// كخطوتين return لنفسها ) سيتم حساب أمر الـ return كل مرة سيتم فيها إعادة استدعاء الدالة لنفسها, ( أي ستفعل
+    // n و السبب في ذلك أن كل عملية جمع سيتم إرجاعها تتطلب من الدالة أن تستدعي نفسها مرتين مضاعفة بقيمة
+    // O(k^n) بما أن الدالة ستعيد استدعاء نفسها كل مرة بمقدار ضعفين زيادة فإنه سيتم تمثيلها بـ
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+	</pre>
+<pre data-enlighter-group="group12" data-enlighter-highlight="21" data-enlighter-language="csharp" data-enlighter-title="C#">
+// تعريف الدالة لا يحسب كخطوة
+public int Fibonacci(int n)
+{
+	// الشرط بحد ذاته لا يحسب خطوة
+	if (n &lt;= 0)
+	{
+		// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+        return 0;
+	}
+	
+	// الشرط بحد ذاته لا يحسب خطوة
+	if (n &lt;= 2)
+	{
+		// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+        return 1;
+	}
+
+	// كخطوتين return لنفسها ) سيتم حساب أمر الـ return كل مرة سيتم فيها إعادة استدعاء الدالة لنفسها, ( أي ستفعل
+    // n و السبب في ذلك أن كل عملية جمع سيتم إرجاعها تتطلب من الدالة أن تستدعي نفسها مرتين مضاعفة بقيمة
+    // O(k^n) بما أن الدالة ستعيد استدعاء نفسها كل مرة بمقدار ضعفين زيادة فإنه سيتم تمثيلها بـ
+    return Fibonacci(n - 1) + Fibonacci(n - 2);
+}
+	</pre>
+<pre data-enlighter-group="group12" data-enlighter-highlight="21" data-enlighter-language="cpp" data-enlighter-title="C++">
+// تعريف الدالة لا يحسب كخطوة
+int fibonacci(int n)
+{
+	// الشرط بحد ذاته لا يحسب خطوة
+	if (n &lt;= 0)
+	{
+		// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+        return 0;
+	}
+	
+	// الشرط بحد ذاته لا يحسب خطوة
+	if (n &lt;= 2)
+	{
+		// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+        return 1;
+	}
+
+	// كخطوتين return لنفسها ) سيتم حساب أمر الـ return كل مرة سيتم فيها إعادة استدعاء الدالة لنفسها, ( أي ستفعل
+    // n و السبب في ذلك أن كل عملية جمع سيتم إرجاعها تتطلب من الدالة أن تستدعي نفسها مرتين مضاعفة بقيمة
+    // O(k^n) بما أن الدالة ستعيد استدعاء نفسها كل مرة بمقدار ضعفين زيادة فإنه سيتم تمثيلها بـ
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+	</pre>
+<pre data-enlighter-group="group12" data-enlighter-highlight="21" data-enlighter-language="c" data-enlighter-title="C">
+// تعريف الدالة لا يحسب كخطوة
+int fibonacci(int n)
+{
+	// الشرط بحد ذاته لا يحسب خطوة
+	if (n &lt;= 0)
+	{
+		// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+        return 0;
+	}
+	
+	// الشرط بحد ذاته لا يحسب خطوة
+	if (n &lt;= 2)
+	{
+		// كما قلنا سابقاً Big-O إرجاع القيمة يحسب خطوة واحدة و لكن عدد الخطوات غير مهم في تقييم الـ
+        return 1;
+	}
+
+	// كخطوتين return لنفسها ) سيتم حساب أمر الـ return كل مرة سيتم فيها إعادة استدعاء الدالة لنفسها, ( أي ستفعل
+    // n و السبب في ذلك أن كل عملية جمع سيتم إرجاعها تتطلب من الدالة أن تستدعي نفسها مرتين مضاعفة بقيمة
+    // O(k^n) بما أن الدالة ستعيد استدعاء نفسها كل مرة بمقدار ضعفين زيادة فإنه سيتم تمثيلها بـ
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+	</pre>
+<br/>
+<p>طريقة تقييم أداء الكود</p>
+<pre data-enlighter-linenumbers="false">
+Execution Steps = 2^n
+
+Big O of 2^n ==&gt; O(k^n)
+	</pre>
+<br/>
+<p>الفيديو التالي يشرح طريقة عمل الدالة عند استدعاءها و كيف أنها تستدعي نفسها أكثر من مرة في كل عملية إستدعاء.</p>
+<video class="border" controls="">
+<source src="fibonacci-recursive-way.mp4" type="video/mp4"/>
+		متصفحك لا يدعم صيغة الفيديو!
+	</video>
+<br/><br/><br/>
+<p>في الدرس التالي سنضع تمارين يمكن حلها بأكثر من طريقة و لكننا سنعرف أي طريقة هي الأفضل بناءاً على تقييم الكود الذي تعلمنا كيف نحسبه في هذا الدرس.</p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

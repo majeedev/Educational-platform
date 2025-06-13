@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>java io.BufferedReader</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>الكلاس <code data-enlighter-language="java">BufferedReader</code> في جافا</h1>
+<article>
+<p>الكلاس <code data-enlighter-language="java">BufferedReader</code> يقرأ أحرف كائن الـ <code data-enlighter-language="java">InputStreamReader</code> و يضعهم في الـ <span class="word">buffer</span>. و هذا يوفر لك طرق عديدة لقراءة المحتوى من الـ <span class="word">buffer</span>. مثل قراءته حرفاً حرفاً, أو تخزينه في مصفوفة, أو قراءته سطراً سطراً.</p>
+<p>يمكنك تحديد حجم الـ <span class="word">buffer</span>, أو استخدام الحجم الإفتراضي لها و الذي يعتبر جيداً في معظم الحالات.</p>
+<br/>
+<p>الكلاس <code data-enlighter-language="java">BufferedReader</code> يحتوي على الـ <span class="word">constructors</span> المذكورين في الجدول التالي.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الكونستركتور مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">BufferedReader(Reader in)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">BufferedReader</code> يستخدم حجم الـ <span class="word">buffer</span> الإفتراضي.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">BufferedReader(Reader in, int size)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">BufferedReader</code> يستخدم حجم الـ <span class="word">buffer</span> الذي نقوم بتحديده.</td>
+</tr>
+</table>
+<br/><br/>
+<p>بعد أن يصبح كائن الـ <code data-enlighter-language="java">BufferedReader</code> جاهزاً, يمكنك إستخدام الكثير من الدوال الجاهزة للقراءة من الملف أو لفعل أي شيء آخر.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void close() throws IOException</code></span>
+			تغلق الـ <code data-enlighter-language="java">BufferedReader</code> و تقطع الإتصال بين الـ <span class="word">Stream</span> و أي مصدر كان متصلاً فيه.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int read() throws IOException</code></span>
+			في كل مرة تقرأ حرف جديد من أحرف الـ <code data-enlighter-language="java">BufferedReader</code> و ترجعه.<br/>
+			ترجع <span class="number">1-</span> إذا وصلت لنهاية الملف.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int read(char[] cbuf, int offset, int length) throws IOException</code></span>
+			في كل مرة تستدعى فيها تقرأ مجموعة أحرف جديدة من الـ <code data-enlighter-language="java">BufferedReader</code> و تخزنهم في المصفوفة <code data-enlighter-language="java">cbuf</code>.<br/>
+			المتغير <code data-enlighter-language="java">offset</code> يقصد به من أي عنصر في المصفوفة <code data-enlighter-language="java">cbuf</code> سيكتب في الـ <code data-enlighter-language="java">BufferedReader</code>.<br/>
+			المتغير <code data-enlighter-language="java">length</code> يقصد به كم عنصر من عناصر المصفوفة <code data-enlighter-language="java">cbuf</code> سيكتب في الـ <code data-enlighter-language="java">BufferedReader</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String readLine() throws IOException</code></span>
+			في كل مرة تقرأ سطر جديد من أسطر الـ <code data-enlighter-language="java">BufferedReader</code> و ترجعه.<br/>
+			ترجع <code data-enlighter-language="java">null</code> إذا وصلت لنهاية الملف.<br/>
+			السطر يتعبر منتهياً إذا كان ينتهي بـ <code data-enlighter-language="java">\n</code>, أو بـ <code data-enlighter-language="java">\r</code>, أو بالإثنين مع بعض <code data-enlighter-language="java">\n\r</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public long skip(long n) throws IOException</code></span>
+			تتخطى عدد من الأحرف الموجودة في الـ <span class="word">buffer</span>. ثم ترجع عدد الأحرف التي تجاوزتها.<br/>
+			المتغير <code data-enlighter-language="java">N</code> يقصد به عدد الأحرف التي سيتم تجاوزها عند القراءة من الـ <span class="word">buffer</span>.</td>
+</tr>
+</table>
+<br/><br/>
+<div class="example-box">
+<h4>مثال</h4>
+<p><span class="point">•</span>في هذا المثال سنقوم بإنشاء ملف جديد و كتابة نص صغير فيه, ثم سنقوم بقراءة النص من الملف.</p>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.IOException;
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        try {
+            // يشير إلى الملف الذي سنكتب البيانات فيه و في حال لم يكن موجوداً, سيتم إنشاءه FileOutputStream هنا قمنا بإنشاء كائن نوعه
+            FileOutputStream fos = new FileOutputStream("c:\\MyFiles\\test.txt");
+ 
+            // BufferedWriter من أجل كائن الـ buffer لوضعه في الـ OutputStreamWriter هنا قمنا بإنشاء كائن نوعه
+            OutputStreamWriter osw = new OutputStreamWriter( fos, "UTF-16" );
+ 
+            // للكتابة في الملف BufferedWriter هنا قمنا بإنشاء كائن نوعه
+            BufferedWriter bw = new BufferedWriter(osw);
+ 
+            // هنا قمنا بكتابة نص في الملف ثم قمنا بتفريغ الذاكرة و إغلاق الكائن المتصل بالملف
+            bw.write("السطر الأول");
+            bw.newLine();
+            bw.write("السطر الثاني");
+            bw.flush();
+            bw.close();
+ 
+            // يشير إلى الملف الذي ستقرأ البيانات منه FileInputStream هنا قمنا بإنشاء كائن نوعه
+            FileInputStream fis = new FileInputStream("c:\\MyFiles\\test.txt");
+ 
+            // BufferedReader من أجل كائن الـ buffer لوضعه في الـ InputStreamReader هنا قمنا بإنشاء كائن نوعه
+            InputStreamReader isr = new InputStreamReader( fis, "UTF-16" );
+ 
+            // للقراءة من الملف BufferedReader هنا قمنا بإنشاء كائن نوعه
+            BufferedReader br = new BufferedReader(isr);
+ 
+            // هنا قمنا بإنشاء حلقة تمر على جميع أحرف الملف, في كل دورة تقرأ حرف من الملف ثم تعرضه و بعدها قمنا بإغلاق الكائن المتصل بالملف
+            int c;
+            while ((c = br.read()) != -1) {
+                System.out.print((char)c);
+            }
+            br.close();
+        }
+        catch(IOException e) {
+            System.out.println("There is IOException!");
+        }
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+السطر الأول
+السطر الثاني
+		</pre>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

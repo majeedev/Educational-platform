@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>Swing - طريقة تغيير نوع و لون و حجم خط الـ JTextArea</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-swing-icon.png"/></li>
+<li class="title">أساسيات المكتبة</li>
+<li><a href="../swing-overview/index.html"><span class="en">Swing</span> - نظرة عامة</a></li>
+<li><a href="../swing-jframe/index.html"><span class="en">Swing</span> - إنشاء نافذة <span class="en">( Frame )</span></a></li>
+<li class="title">عناصر واجهة المستخدم</li>
+<li><a href="../swing-component/index.html"><span class="en">Component - Swing</span></a></li>
+<li><a href="../swing-jlabel/index.html"><span class="en">JLabel - Swing</span></a></li>
+<li><a href="../swing-jbutton/index.html"><span class="en">JButton - Swing</span></a></li>
+<li><a href="../swing-jtextfield/index.html"><span class="en">JTextField - Swing</span></a></li>
+<li><a href="../swing-jpasswordfield/index.html"><span class="en">JPasswordField - Swing</span></a></li>
+<li><a href="index.html"><span class="en">JTextArea - Swing</span></a></li>
+<li><a href="../swing-jcheckbox/index.html"><span class="en">JCheckBox - Swing</span></a></li>
+<li><a href="../swing-jradiobutton/index.html"><span class="en">JRadioButton - Swing</span></a></li>
+<li><a href="../swing-jcombobox/index.html"><span class="en">JComboBox - Swing</span></a></li>
+<li><a href="../swing-jlist/index.html"><span class="en">JList - Swing</span></a></li>
+<li><a href="../swing-jspinner/index.html"><span class="en">JSpinner - Swing</span></a></li>
+<li><a href="../swing-jslider/index.html"><span class="en">JSlider - Swing</span></a>
+</li><li><a href="../swing-jtable/index.html"><span class="en">JTable - Swing</span></a></li>
+<li><a href="../swing-jtree/index.html"><span class="en">JTree - Swing</span></a></li>
+<li><a href="../swing-jprogressbar/index.html"><span class="en">JProgressBar - Swing</span></a></li>
+<li><a href="../swing-jpanel/index.html"><span class="en">JPanel - Swing</span></a></li>
+<li><a href="../swing-jtabbedpane/index.html"><span class="en">JTabbedPane - Swing</span></a></li>
+<li><a href="../swing-joptionpane/index.html"><span class="en">JOptionPane - Swing</span></a></li>
+<li><a href="../swing-jdialog/index.html"><span class="en">JDialog - Swing</span></a></li>
+<li><a href="../swing-jcolorchooser/index.html"><span class="en">JColorChooser - Swing</span></a></li>
+<li><a href="../swing-jfilechooser/index.html"><span class="en">JFileChooser - Swing</span></a></li>
+<li><a href="../swing-jsplitpane/index.html"><span class="en">JSplitPane - Swing</span></a></li>
+<li><a href="../swing-jpopumenu/index.html"><span class="en">JPopupMenu - Swing</span></a></li>
+<li><a href="../swing-jmenubar/index.html"><span class="en">JMenuBar - Swing</span></a></li>
+<li class="title">إدارة محتوى النافذة</li>
+<li><a href="../swing-borderlayout/index.html"><span class="en">BorderLayout - Swing</span></a></li>
+<li><a href="../swing-flowlayout/index.html"><span class="en">FlowLayout - Swing</span></a></li>
+<li><a href="../swing-gridlayout/index.html"><span class="en">GridLayout - Swing</span></a></li>
+<li><a href="../swing-gridbaglayout/index.html"><span class="en">GridBagLayout - Swing</span></a></li>
+<li><a href="../swing-cardlayout/index.html"><span class="en">CardLayout - Swing</span></a></li>
+<li><a href="../swing-grouplayout/index.html"><span class="en">GroupLayout - Swing</span></a></li>
+<li><a href="../swing-scroll-layout/index.html"><span class="en">Scroll Layout - Swing</span></a></li>
+<li class="title">الأحداث <span class="en">( Events )</span></li>
+<li><a href="../awt-actionlistener/index.html"><span class="en">ActionListener - Swing</span></a></li>
+<li><a href="../awt-itemlistener/index.html"><span class="en">ItemListener - Swing</span></a></li>
+<li><a href="../awt-keylistener/index.html"><span class="en">KeyListener - Swing</span></a></li>
+<li><a href="../awt-mouselistener/index.html"><span class="en">MouseListener - Swing</span></a></li>
+<li><a href="../awt-mousemotionlistener/index.html"><span class="en">MouseMotionListener - Swing</span></a></li>
+<li><a href="../awt-focuslistener/index.html"><span class="en">FocusListener - Swing</span></a></li>
+<li><a href="../awt-windowlistener/index.html"><span class="en">WindowListener - Swing</span></a></li>
+<li><a href="../awt-adjustmentlistener/index.html"><span class="en">AdjustmentListener - Swing</span></a></li>
+<li><a href="../make-swing-components-synchronized/index.html"><span class="en">Swing</span> - حل مشكلة المزامنة</a></li>
+<li class="title">تعلم بناء تطبيقات و ألعاب</li>
+<li><a href="../swing-projects/index.html"><span class="en">Swing</span> - جميع المشاريع</a></li>
+<li><a href="../swing-color-picker-source-code/index.html"><span class="en">Swing</span> - برنامج إختيار الألوان</a></li>
+<li><a href="../swing-tic-tac-toe-source-code/index.html"><span class="en">Swing</span> - لعبة <span class="en">Tic Tac Toe</span></a></li>
+<li><a href="../swing-calculator-source-code/index.html"><span class="en">Swing</span> - آلة حاسبة بسيطة</a></li>
+<li><a href="../swing-scientific-calculator-source-code/index.html"><span class="en">Swing</span> - ألة حاسبة علمية</a></li>
+<li><a href="../swing-age-calculator-source-code/index.html"><span class="en">Swing</span> - برنامج حساب الأعمار</a></li>
+<li><a href="../swing-snake-2d-source-code/index.html"><span class="en">Swing</span> - لعبة الأفعى <span class="en">Snake 2D</span></a></li>
+<li><a href="../swing-ip-finder-source-code/index.html"><span class="en">Swing</span> - محلل عناوين المواقع</a></li>
+<li><a href="../swing-company-products-manager-source-code/index.html"><span class="en">Swing</span> - برنامج إدارة المحتوى</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java Swing</span>طريقة تغيير نوع و لون و حجم خط الـ <code data-enlighter-language="java">JTextArea</code></h1>
+<article>
+<p>المثال التالي يعلمك طريقة تغيير نوع و حجم و لون الخط لكائن الـ <code data-enlighter-language="java">JTextArea</code>.</p>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+import java.awt.Color;
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+import java.awt.Font;
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        JFrame frame = new JFrame("JTextArea demo");            // أي قمنا بإنشاء نافذة مع وضع عنوان لها JFrame هنا أنشأنا كائن من الكلاس
+ 
+        JTextArea textArea = new JTextArea();                   // textArea إسمه JtextArea هنا قمنا بإنشاء
+ 
+        Font newFont = new Font("Arial", Font.BOLD, 16);        // حجمه 16 Arial يمثل نوع خط عريض إسمه Font هنا أنشأنا كائن من الكلاس
+ 
+        textArea.setBounds(40, 40, 200, 100);                   // frame في الـ Text Area هنا قمنا بتحديد حجم و موقع الـ
+        textArea.setFont(newFont);                              // newFont يستخدم الـ textArea هنا جعلنا الـ
+        textArea.setForeground(Color.blue);                     // أزرق textArea هنا جعلنا لون خط الـ
+        textArea.setText("Blue\nText\nArea");                   // textArea هنا قمنا بإدخال نص بداخل الـ
+ 
+        frame.add(textArea);                                    // frame في الـ textArea هنا أضفنا الـ
+ 
+        frame.setSize(300, 250);                                // هنا قمنا بتحديد حجم النافذة. عرضها 300 و طولها 250
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   // هنا جعلنا زر الخروج من النافذة يغلق البرنامج
+        frame.setLayout(null);                                  // الذي قمنا بإضافته سابقاً Text Area لذلك قمنا بتحديد مكان الـ Layout Manager أي لم نستخدم أي null هنا وضعنا
+        frame.setVisible(true);                                 // هنا جعلنا النافذة مرئية
+ 
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>ستظهر لك النافذة التالية عند التشغيل.</p>
+<div class="image-box">
+<a href="jtextarea_example_2.png" target="_blank"><img alt="تغيير لون و حجم و نوع خط ال JtextArea في جافا" src="jtextarea_example_2.png"/></a>
+</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

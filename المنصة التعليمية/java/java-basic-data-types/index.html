@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>أنواع البيانات في جافا | Java basic data types</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>أنواع البيانات في جافا</h1>
+<article>
+<h2>مفهوم المتغيرات</h2>
+<p><b>متغير:</b> تعني <span class="word">variable</span> في اللغة الإنجليزية, الآن نريدك أن تفهم المتغيرات على أنها فقط أماكن يتم حجزها في الذاكرة لتخزين بيانات أثناء تشغيل البرنامج.<br/>
+    النوع الذي نعطيه للمتغير يجعل نظام التشغيل يحدد نوع البيانات الذي يمكن تخزينه في المساحة المحجوزة لهذا المتغير في الذاكرة.</p><br/>
+<p class="b">البيانات في جافا نوعين:</p>
+<ul class="explain">
+<li><p><span class="word">Primitive Data Types</span> و تعني أنواع البيانات البدائية.</p></li>
+<li><p><span class="word">Reference/Object Data Types</span> و تعني أنواع البيانات المرجعية.</p></li>
+</ul>
+</article>
+<article>
+<h2>أنواع البيانات البدائية</h2>
+<p>هناك ثمانية أنواع بدائية في جافا و هي:<br/>
+<code data-enlighter-language="java">byte</code> - <code data-enlighter-language="java">short</code> - <code data-enlighter-language="java">int</code> - <code data-enlighter-language="java">long</code> - <code data-enlighter-language="java">float</code> - <code data-enlighter-language="java">double</code> - <code data-enlighter-language="java">boolean</code> - <code data-enlighter-language="java">char</code>.</p><br/>
+<h3>النوع <code data-enlighter-language="java">byte</code></h3>
+<ul class="explain">
+<li><p>هذا النوع يمثل عدد صحيح يتألف من <span class="word"><span class="number">8</span> bit</span>.</p></li>
+<li><p>أقل قيمة يمكن تخزينها فيه هي <code data-enlighter-language="java">-2^7</code> و هذا يساوي <code data-enlighter-language="java">-128</code>.</p></li>
+<li><p>أكثر قيمة يمكن تخزينها فيه هي <code data-enlighter-language="java">2^7 - 1</code> و هذا يساوي <code data-enlighter-language="java">+127</code>.</p></li>
+<li><p>إذا لم نضع أي قيمة, توضع القيمة <span class="number">0</span> كقيمة إفتراضية.</p></li>
+<li><p>النوع <code data-enlighter-language="java">byte</code> يستخدم لتخزين عدد صغير الحجم لا يحتوي على فاصلة عشرية, أي لتخزين عدد صحيح.</p></li>
+</ul>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+byte a = 123;
+byte b = -70;
+	    </pre>
+</div>
+<br/><br/>
+<h3>النوع <code data-enlighter-language="java">short</code></h3>
+<ul class="explain">
+<li><p>هذا النوع يمثل عدد صحيح يتألف من <span class="word"><span class="number">16</span> bit</span>.</p></li>
+<li><p>أقل قيمة يمكن تخزينها فيه هي <code data-enlighter-language="java">-2^15</code> و هذا يساوي <code data-enlighter-language="java">-32,768</code>.</p></li>
+<li><p>أكثر قيمة يمكن تخزينها فيه هي<code data-enlighter-language="java">2^15 - 1</code> و هذا يساوي <code data-enlighter-language="java">+32,767</code>.</p></li>
+<li><p>إذا لم نضع أي قيمة, توضع القيمة <span class="number">0</span> كقيمة إفتراضية.</p></li>
+<li><p>النوع <code data-enlighter-language="java">short</code> يستخدم لتخزين عدد متوسط الحجم لا يحتوي على فاصلة عشرية, أي لتخزين عدد صحيح.</p></li>
+</ul>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+short a = 12345;
+short b = -7000;
+		</pre>
+</div>
+<br/><br/>
+<h3>النوع <code data-enlighter-language="java">int</code></h3>
+<ul class="explain">
+<li><p>هذا النوع يمثل عدد صحيح يتألف من <span class="word"><span class="number">32</span> bit</span>.</p></li>
+<li><p>أقل قيمة يمكن تخزينها فيه هي <code data-enlighter-language="java">-2^31</code> و هذا يساوي <code data-enlighter-language="java">-2,147,483,647</code>.</p></li>
+<li><p>أكثر قيمة يمكن تخزينها فيه هي <code data-enlighter-language="java">2^31 - 1</code> و هذا يساوي <code data-enlighter-language="java">+2,147,483,646</code>.</p></li>
+<li><p>إذا لم نضع أي قيمة, توضع القيمة <span class="number">0</span> كقيمة إفتراضية.</p></li>
+<li><p>النوع <code data-enlighter-language="java">int</code> يستخدم لتخزين عدد كبير لا يحتوي على فاصلة عشرية, أي لتخزين عدد صحيح.</p></li>
+</ul>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+int a = 1234567;
+int b = -700000;
+		</pre>
+</div>
+<br/><br/>
+<h3>النوع <code data-enlighter-language="java">long</code></h3>
+<ul class="explain">
+<li><p>هذا النوع يمثل عدد صحيح يتألف من <span class="word"><span class="number">64</span> bit</span>.</p></li>
+<li><p>أقل قيمة يمكن تخزينها فيه هي <code data-enlighter-language="java">-2^63</code> و هذا يعني <code data-enlighter-language="java">-9,223,372,036,854,775,808</code>.</p></li>
+<li><p>أكثر قيمة يمكن تخزينها فيه هي <code data-enlighter-language="java">2^63 - 1</code> و هذا يعني <code data-enlighter-language="java">+9,223,372,036,854,775,807</code>.</p></li>
+<li><p>إذا لم نضع أي قيمة, توضع القيمة <code data-enlighter-language="java">0L</code> كقيمة إفتراضية.</p></li>
+<li><p>النوع <code data-enlighter-language="java">long</code> يستخدم لتخزين عدد كبير جداً لا يحتوي على فاصلة عشرية, أي لتخزين عدد صحيح حجمه كبير جداً.</p></li>
+</ul>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+long a = 1234567L;
+long b = -700000L;
+		</pre>
+</div>
+<br/><br/>
+<h3>النوع <code data-enlighter-language="java">float</code></h3>
+<ul class="explain">
+<li><p>هذا النوع يمثل عدد بفاصلة عشرية يتألف من <span class="word"><span class="number">32</span> bit</span>.</p></li>
+<li><p>أقل و أكبر قيمة يمكن تخزينها فيه تحدد بنظام <span class="inline">( <span class="word">single-precision 32-bit IEEE 754 floating point</span> )</span></p></li>
+<li><p>إذا لم نضع أي قيمة, توضع القيمة <code data-enlighter-language="java">0.0f</code> كقيمة إفتراضية.</p></li>
+<li><p>النوع <code data-enlighter-language="java">float</code> يستخدم لتخزين عدد كبير بفاصلة عشرية.</p></li>
+</ul>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+float a = 12.05f;
+float b = -8.123f;
+		</pre>
+</div>
+<br/><br/>
+<h3>النوع <code data-enlighter-language="java">double</code></h3>
+<ul class="explain">
+<li><p>هذا النوع يمثل عدد بفاصلة عشرية يتألف من <span class="word"><span class="number">64</span> bit</span>.</p></li>
+<li><p>أقل و أكبر قيمة يمكن تخزينها فيه تحدد بنظام <span class="inline">( <span class="word">double-precision 64-bit IEEE 754 floating point</span> )</span></p></li>
+<li><p>إذا لم نضع أي قيمة, توضع القيمة <code data-enlighter-language="java">0.0d</code> كقيمة إفتراضية.</p></li>
+<li><p>النوع <code data-enlighter-language="java">double</code> يستخدم لتخزين عدد كبير جداً بفاصلة عشرية.</p></li>
+</ul>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+double a = 50.98794d;
+double b = -100.1d;
+		</pre>
+</div>
+<br/><br/>
+<h3>النوع <code data-enlighter-language="java">boolean</code></h3>
+<ul class="explain">
+<li><p>هذا النوع يمثل معلومة تتألف من <span class="word"><span class="number">1</span> bit</span>.</p></li>
+<li><p>يستطيع أن يحتوي إما على القيمة <code data-enlighter-language="java">true</code> أو على القيمة <code data-enlighter-language="java">false</code>.</p></li>
+<li><p>إذا لم نضع أي قيمة, توضع القيمة <code data-enlighter-language="java">false</code> كقيمة إفتراضية.</p></li>
+<li><p>النوع <code data-enlighter-language="java">boolean</code> يستخدم في الشروط.</p></li>
+</ul><br/>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+boolean check = true;
+boolean found = false;
+		</pre>
+</div>
+<br/><br/>
+<h3>النوع <code data-enlighter-language="java">char</code></h3>
+<ul class="explain">
+<li><p>هذا النوع يمثل معلومة تتألف من <span class="word"><span class="number">16</span> bit</span>.</p></li>
+<li><p>أقل قيمة يمكن تخزينها فيه هي <code data-enlighter-language="java">0</code>.</p></li>
+<li><p>أكثر قيمة يمكن تخزينها فيه هي <code data-enlighter-language="java">65,535</code>.</p></li>
+<li><p>و يستطيع أن يحتوي على أي حرف أو رمز كقيمة.</p></li>
+<li><p>إذا لم نضع أي قيمة, يوضع اليونيكود <code data-enlighter-language="java">'\u0000'</code> كقيمة إفتراضية. و هذا اليونيكود يمثل أصغر قيمة يمكن وضعها في النوع <code data-enlighter-language="java">char</code>.</p></li>
+<li><p>النوع <code data-enlighter-language="java">char</code> يستخدم لتخزين حرف واحد, و يستخدم في الشروط.</p></li>
+</ul>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+char a = 0;
+char b = 1234;
+char letterA = 'A';
+		</pre>
+</div>
+</article>
+<article>
+<h2>أنواع البيانات المرجعية</h2>
+<ul class="explain">
+<li><p>أي نوع أصله كائن من كلاس يعتبر من البيانات المرجعية.</p></li>
+<li><p>أي نوع نضع الكلمة <code data-enlighter-language="java">new</code> عندما نقوم بتعريفه, يعتبر من البيانات المرجعية.</p></li>
+<li><p>جميع أنواع المصفوفات في جافا تعتبر من البيانات المرجعية.</p></li>
+<li><p>إذا لم نضع أي قيمة, توضع القيمة <code data-enlighter-language="java">null</code> كقيمة إفتراضية, و التي تعني فارغ.</p></li>
+</ul>
+<br/>
+<div class="example-box">
+<h4>أمثلة</h4>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+String website   = "www.harmash.com";
+String[] names   = new String[10];
+int[] numbers    = new int[100];
+float[] notes    = new float[5];
+char[] alphabets = new char[26];
+Scanner input    = new Scanner(System.in);
+		</pre>
+</div>
+<br/>
+<p>في الدرس التالي ستتعلم جميع الأساليب التي تستطيع اتباعها لتعريف المتغيرات.</p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

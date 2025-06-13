@@ -1,0 +1,441 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>أسلوب كتابة الكود في بايثون | Python basic syntax</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>أسلوب كتابة الكود في بايثون</h1>
+<article>
+<h2>مبادئ كتابة الكود في بايثون</h2>
+<p>في البداية عليك معرفة أن كل ما ستتعلمه في هذا الدرس عبارة عن شرح نظري لأساليب كتابة الكود.<br/>
+	إذاَ في هذا الدرس ستتعلم كيف تكتب كود بايثون بشكل صحيح يفهمه الكمبيوتر و يفهمه أي شخص يحاول قراءة الكود الذي ستقوم أنت بكتابته مستقبلاً عند بناء تطبيقاتك الخاصة.</p>
+<br/>
+<h3 class="tech-word">Case Sensitivity</h3>
+<p><span class="word">Case Sensitivity</span> تعني أن لغة البرمجة تميز بين الأحرف الكبيرة و الأحرف الصغيرة.</p>
+<p>بايثون تعامل الأسماء التي نستخدمها بتأني سواء كنا نضع هذه الأسماء للمتغيرات, الدوال, الكلاسات, الكائنات إلخ.<br/>
+	مثال: <code data-enlighter-language="python">note</code> و <code data-enlighter-language="python">Note</code> ليسوا شيئاً واحداً.</p>
+<p>بينما في لغات برمجة أخرى مثل <span class="word">HTML</span> لا يهم إذا كانت الأحرف كبيرة أو صغيرة.<br/>
+	مثال: <code data-enlighter-language="python">note</code> و <code data-enlighter-language="python">Note</code> و <code data-enlighter-language="python">NoTe</code> و <code data-enlighter-language="python">NOTE</code> هم شيئاً واحداً.</p>
+<br/><br/>
+<h3>إسم الكلاس</h3>
+<p>دائماً إبدأ إسم الكلاس بحرف كبير و في حال كان إسم الكلاس يتألف من أكثر من كلمة, إجعل أول حرف من كل كلمة كبيراً.<br/>
+<div class="example-box">
+<h4>أمثلة</h4>
+<p><span class="point">•</span>في حال كان إسم الكلاس يتألف من كلمة واحدة.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+class First:
+		</pre>
+<p><span class="point">•</span>في حال كان إسم الكلاس يتألف من أكثر من كلمة.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+class FirstPythonClass:
+		</pre>
+</div>
+<br/><br/>
+<h3>إسم المتغير</h3>
+<p>إستخدم الأحرف الصغيرة عند وضع أسماء للمتغيرات و في حال كان إسم المتغير يتألف من أكثر من كلمة قم بوضع <code data-enlighter-language="python">_</code> بين كل كلمتين.<br/>
+<div class="example-box">
+<h4>أمثلة</h4>
+<p><span class="point">•</span>في حال كان إسم المتغير يتألف من كلمة واحدة.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+average = 10
+		</pre>
+<p><span class="point">•</span>في حال كان إسم المتغير يتألف من أكثر من كلمة.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+total_score = 20
+		</pre>
+</div>
+<br/><br/>
+<h3>إسم الدالة</h3>
+<p>إستخدم الأحرف الصغيرة عند وضع أسماء للدوال و في حال كان إسم الدالة يتألف من أكثر من كلمة قم بوضع <code data-enlighter-language="python">_</code> بين كل كلمتين.<br/>
+<div class="example-box">
+<h4>أمثلة</h4>
+<p><span class="point">•</span>في حال كان إسم الدالة يتألف من كلمة واحدة.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+def display():
+		</pre>
+<p><span class="point">•</span>في حال كان إسم الدالة يتألف من أكثر من كلمة.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+def display_user_info():
+		</pre>
+</div>
+<br/><br/>
+<h3>التعليقات</h3>
+<p>نستخدم التعليقات لنضع ملاحظات حول الكود الذي كتبناه فقط لكي لا ننسى كيف برمجنا الكود في حال أردنا مراجعته أو التعديل عليه بعد وقت طويل.<br/>
+	التعليقات لا تؤثر إطلاقاً على الكود المكتوب الموضوع في البرنامج و يمكن وضع عدد غير محدود من التعليقات.</p>
+<p>لتضع تعليق, ضع الرمز <code data-enlighter-language="python">#</code> ثم أكتب بعده ما شئت.</p>
+<p><span class="note">تذكر:</span> أنت لست مجبراً على وضع تعليقات في برامجك. و لكننا ننصحك بوضع تعليقات دائماً حتى تساعدك في فهم الكود الذي كتبته.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+#     هذا تعليق يتألف من سطر واحد و هو لا يؤثر أبداً على الكود الموضوع
+#  هذا تعليق آخر.. كما تلاحظ, يمكنك وضع العدد الذي تريده من التعليقات
+		</pre>
+</div>
+<p><span class="note">ملاحظة:</span> يمكن وضع تعليقات بطرق أخرى في بايثون, لكن مطوري لغة بايثون في موقعهم الرسمي ينصحوا بإعتماد هذا الأسلوب فقط في وضع التعليقات.</p>
+<br/><br/>
+<h3>كتابة أكثر من أمر واحد على نفس السطر</h3>
+<p>إفتراضياً, بايثون تعتبر أن كل أمر يكتب على سطر واحد.<br/>
+	إذا أردت كتابة أكثر من أمر على نفس السطر قم بوضع فاصلة منقوطة <code data-enlighter-language="python">;</code> بين كل أمرين و هكذا سيفهم مترجم لغة بايثون أن السطر عليه أكثر من أمر.<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<p><span class="point">•</span>هنا قمنا بوضع ثلاث أوامر على سطر واحد. فعلياً, كل أمر هنا عبارة عن تعريف متغير و إعطائه قيمة.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+x = 1; y = 2; z = 3
+		</pre>
+</div>
+<br/><br/>
+<h3>كتابة أمر واحد على أكثر من سطر</h3>
+<p>إذا أردت كتابة أمر واحد على أكثر من سطر قم بوضع الرمز <code data-enlighter-language="python">\</code> في نهاية كل سطر و هكذا سيفهم مترجم لغة بايثون أن الأمر يتألف من أكثر من سطر.<br/>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# هنا قمنا بتعريف ثلاث متغيرات
+item_1 = 10
+item_2 = 20
+item_3 = 30
+
+# الثلاث أسطر التالية عبارة عن أمر واحد
+# total و وضع الناتج في المتغير item_3 و item_2 و item_1 إذا هنا سيتم جمع قيم المتغيرات
+total = item_1 + \
+        item_2 + \
+        item_3
+
+# total هنا قمنا بعرض قيمة المتغير
+print("total contains:", total)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			total contains: 60
+		</div>
+</div>
+<br/>
+<p><span class="note">ملاحظة:</span> الجمل التي تحتوي على الرموز <code data-enlighter-language="python">[]</code> أو <code data-enlighter-language="python">()</code> أو <code data-enlighter-language="python">{}</code> يمكن كتابتها مباشرةً على عدة أسطر. أي لا تحتاج  <code data-enlighter-language="python">\</code> في نهاية كل سطر.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<p><span class="point">•</span>هنا قمنا بتعريف مصفوفة من النصوص.</p>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# الأربعة أسطر التالية عبارة عن أمر واحد
+seasons = ['Autumn',
+           'Winter',
+           'Spring',
+           'Summer']
+
+# seasons هنا قمنا بعرض القيم المخزنة في المصفوفة
+print("Seasons contains:", seasons)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Seasons contains: ['Autumn', 'Winter', 'Spring', 'Summer']
+		</div>
+</div>
+</p></p></p></p></p></article>
+<article>
+<h2>الأحرف المستخدمة في وضع الأسماء في بايثون</h2>
+<p>أي إسم نضعه لمتغير, دالة, كلاس, كائن إلخ.. يسمى <span class="word">identifier</span> في البرمجة.<br/>
+	في بايثون كل عنصر نريد إنشاؤه علينا إعطاؤه إسم خاص, أي علينا تحديد <span class="inline">الـ <span class="word">identifier</span></span> له.<br/>
+	إذاً يتم التمييز بين العناصر في بايثون من خلال أسمائهم, أي من خلال <span class="inline">الـ <span class="word">Identifiers</span>.</span></p>
+<br/>
+<p class="b">قواعد إلزامية عند إعطاء الأسماء</p>
+<ol class="arabic">
+<li><p>الـ <span class="word">Identifiers</span> يجب أن يبدأوا بحرف كبير بين <code data-enlighter-language="python">A-Z</code> أو حرف صغير بين <code data-enlighter-language="python">a-z</code> أو الشحطة <code data-enlighter-language="python">_</code>.</p></li>
+<li><p>يمنع إستخدام أي كلمة من الكلمات المحجوزة <span class="inline">( <span class="word">Keywords</span> ).</span></p></li>
+<li><p>لا تنسى أن بايثون تطبق مبدأ <span class="inline">الـ <span class="word">Case Sensitive</span>.</span></p></li>
+</ol>
+<br/>
+<p class="b">ركز على أول حرف فقط</p>
+<p>أمثلة للأسماء التي <span class="red">يسمح</span> باستخدامها: <span class="code"><span class="red">H</span>armash</span> , <span class="code"><span class="red">n</span>ame</span> , <span class="code"><span class="red">_</span>number</span></p>
+<p>أمثلة للأسماء التي <span class="red">يمنع</span> استخدامها: <span class="code"><span class="red">1</span>st</span> , <span class="code"><span class="red">-</span>cash</span> , <span class="code"><span class="red">@</span>user</span></p>
+</article>
+<article>
+<h2>الكلمات المحجوزة في بايثون</h2>
+<p>جميع الكلمات التالية محجوزة للغة بايثون, أي لا يمكن إستخدامها <span class="inline">كـ <span class="word">Identifiers</span>.</span></p>
+<div class="blue" style="width:100%; text-align:left; background-color:#FFF; padding:20px 0px; font-family:monospace; line-height:25px;">
+<div style="width:80px; margin-left:60px; float:left">and<br/>assert<br/>break<br/>class<br/>continue</div>
+<div style="width:80px; margin-left:60px; float:left">def<br/>del<br/>elif<br/>else<br/>except</div>
+<div style="width:80px; margin-left:60px; float:left">exec<br/>False<br/>finally<br/>for<br/>from</div>
+<div style="width:80px; margin-left:60px; float:left">global<br/>if<br/>import<br/>in<br/>is</div>
+<div style="width:80px; margin-left:60px; float:left">lambda<br/>None<br/>nonlocal<br/>not<br/>or</div>
+<div style="width:80px; margin-left:60px; float:left">pass<br/>print<br/>raise<br/>return<br/>True</div>
+<div style="width:80px; margin-left:60px; float:left">try<br/>while<br/>with<br/>yield</div>
+<div style="clear:both;"></div>
+</div>
+</article>
+<article>
+<h2>قواعد ترتيب الكود في بايثون</h2>
+<p>في البداية إذا كنت تستخدم برنامج <span class="word">PyCharm</span> فإنه سيقوم بتنبيهك إذا خالفت أي قاعدة من قواعد كتابة الكود الإجبارية في بايثون.<br/>
+	قواعد كتابة الكود في بايثون هي التالية:</p>
+<ul class="explain">
+<li><p>لا تقم بإضافة أي مسافة فارغة باستخدام الزر <kbd>TAB</kbd> لأن المسافة التي يعطيها هذا الزر غير مسموح إستخدامها في لغة بايثون.</p></li>
+<li><p>إستخدم <span class="number">4</span> مسافات فارغة <kbd>Space</kbd> عند وضع الكود بشكل متداخل.</p></li>
+<li><p>ضع سطر فارغ على الأقل بين السطر الذي تم فيه تعريف الكلاس و الدوال المعرفة بداخله.</p></li>
+<li><p>ضع سطر فارغ على الأقل بين كل دالتين.</p></li>
+<li><p>ضع سطر فارغ بين كل إثنين بلوك تضيفهما بداخل الدوال.</p></li>
+<li><p>ضع مسافة فارغة حول جمل التحكم و جمل الشرط.</p></li>
+<li><p>عند وضع التعليقات يفضل إستخدام الرمز <kbd>#</kbd> في بداية كل سطر حتى و إن كان التعليق يتألف من عدة أسطر.</p></li>
+<li><p>عدد الأحرف القصوى التي يمكن وضعها في كل سطر هو <span class="number">79</span> حرف.</p></li>
+</ul>
+<br/>
+<h3>مصطلحات تقنية</h3>
+<ul class="explain">
+<li><p><b>بلوك:</b> عبارة عن مجموعة أوامر متسلسلة منطقياً و موضوعة في مكان محدد و لا يوجد بينها أسطر فارغة.</p></li>
+<li><p><b><span class="word">Indentations</span>:</b> عبارة عن المسافات الفارغة التي يتم إضافتها لترتيب و تنسيق كل بلوك يتم إضافته.</p></li>
+</ul>
+</article>
+<article>
+<h2>حل مشكلة إستخدام زر الـ <kbd>TAB</kbd> في بايثون</h2>
+<p>برنامج الـ <span class="word">PyCharm</span> يتيح لك إمكانية إستخدام زر الـ <kbd>TAB</kbd> لإضافة <span class="number">4</span> مسافات فارغة دفعة واحدة و بدون مشاكل بشرط ضبط ذلك يدوياً.</p>
+<p>لجعل زر الـ <kbd>TAB</kbd> يضيف <span class="number">4</span> مسافات فارغة عند النقر عليه بدل إضافة مسافة كبيرة في برنامج <span class="word">PyCharm</span>, قم باتباع الخطوات التالية:</p>
+<ol class="arabic">
+<li><p>أنقر على <kbd>S</kbd> + <kbd>Alt</kbd> + <kbd>Ctrl</kbd> لتفتح صفحة الضبط.</p></li>
+<li><p>أنقر على <span class="word">Code Style</span> ثم <span class="word">Python</span> ثم تأكد من اختيار نفس الخصائص التي في الصورة.</p></li>
+</ol>
+<p><a href="enable-tab-in-pycharm.png" target="_blank"><img alt="enable tab in pycharm" src="enable-tab-in-pycharm.png"/></a></p>
+</article>
+<article>
+<h2>تحويل كل <span class="word">TAB</span> موجودة في ملف البايثون إلى <span class="number">4</span> مسافات فارغة</h2>
+<p>عند نسخ الكود و لصقه في ملف تلاحظ أن المسافات الفارغة التي كانت في الملف تحولت بشكل تلقائي إلى <span class="word">TABS</span>.<br/>
+	لذلك يجب تحويل هذه الـ  <span class="word">TABS</span> مسافات فارغة من جديد حتى لا تخالف شروط كتابة الكود في بايثون.</p>
+<p>برنامج الـ <span class="word">PyCharm</span> يتيح لك إمكانية تحويل كل <kbd>TAB</kbd> موجودة في الكود إلى <span class="number">4</span> مسافات فارغة دفعة واحدة و بدون مشاكل بشرط ضبط ذلك يدوياً.</p>
+<p>لجعل كل <kbd>TAB</kbd> تتحول إلى <span class="number">4</span> مسافات فارغة في برنامج <span class="inline"><span class="word">PyCharm</span>,</span> قم باتباع الخطوات التالية:</p>
+<p><a href="convert-indents-to-spaces-pycharm.png" target="_blank"><img alt="convert indents to spaces in pycharm" src="convert-indents-to-spaces-pycharm.png"/></a></p>
+</article>
+<article>
+<h2>أمثلة حول طريقة كتابة الكود في بايثون</h2>
+<p>الهدف من المثال التالي إظهار كيف يجب ترتيب كود البايثون و ليس معرفة طريقة عمله.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# قيمته 14 note هنا قمنا بتعريف متغير إسمه
+note = 14
+ 
+# أكبر أو تساوي 10 سيتم تنفيذ أمر الطباعة الموضوع بداخلها note هنا وضعنا شرط يعني أنه إذا كانت قيمة المتغير
+if note &gt;= 10:
+    print("Congratulations.. you passed the test!")
+ 
+# أكبر أو تساوي 10 سيتم تنفيذ أمر الطباعة الموضوع بداخلها note هنا لنا أنه إذا لم تكن قيمة المتغير
+else:
+    print("Sorry.. you failed the test!")
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Congratulations.. you passed the test!
+		</div>
+</div>
+<br/>
+<p>في حال كنت تنوي وضع كل الكود السابق بداخل كلاس, يجب أن تضيف <span class="number">4</span> مسافات فارغة قبل كل سطر.
+	<span class="note">تذكر:</span> الهدف من المثال التالي إظهار كيف يجب ترتيب كود البايثون و ليس معرفة طريقة عمله.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# Test هنا قمنا بتعريف كلاس إسمه
+class Test:
+ 
+    # قيمته 14 note هنا قمنا بتعريف متغير إسمه
+    note = 14
+ 
+    # أكبر أو تساوي 10 سيتم تنفيذ أمر الطباعة الموضوع بداخلها note هنا وضعنا شرط يعني أنه إذا كانت قيمة المتغير
+    if note &gt;= 10:
+        print("Congratulations.. you passed the test!")
+ 
+    # أكبر أو تساوي 10 سيتم تنفيذ أمر الطباعة الموضوع بداخلها note هنا كأننا قلنا أنه إذا لم تكن قيمة المتغير
+    else:
+        print("Sorry.. you failed the test!")
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Congratulations.. you passed the test!
+		</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,662 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>تمارين خوارزميات و هياكل البيانات - التحدي الثاني - الحل بلغة بايثون</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../algorithms-and-data-structure.png"/></li>
+<li class="title">تعرف على الدورة</li>
+<li><a href="../overview/index.html">نظرة عامة</a></li>
+<li><a href="../how-to-start/index.html">الطريقة الصحيحة للتعلم</a></li>
+<li class="title">رسم أشكال هندسية</li>
+<li><a href="../drawing-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../drawing-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../drawing-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../drawing-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../drawing-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../drawing-test-6/index.html">التحدي السادس</a></li>
+<li><a href="../drawing-test-7/index.html">التحدي السابع</a></li>
+<li><a href="../drawing-test-8/index.html">التحدي الثامن</a></li>
+<li><a href="../drawing-test-9/index.html">التحدي التاسع</a></li>
+<li><a href="../drawing-test-10/index.html">التحدي العاشر</a></li>
+<li class="title">التعامل مع الأرقام و النصوص</li>
+<li><a href="../numbers-and-strings-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../numbers-and-strings-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../numbers-and-strings-test-3/index.html">التحدي الثالث</a></li>
+<li class="title">إجراء عمليات حسابية</li>
+<li><a href="../math-operations-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../math-operations-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../math-operations-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../math-operations-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../math-operations-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../math-operations-test-6/index.html">التحدي السادس</a></li>
+<li><a href="../math-operations-test-7/index.html">التحدي السابع</a></li>
+<li><a href="../math-operations-test-8/index.html">التحدي الثامن</a></li>
+<li><a href="../math-operations-test-9/index.html">التحدي التاسع</a></li>
+<li class="title">التعامل مع المصفوفات</li>
+<li><a href="../arrays-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../arrays-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../arrays-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../arrays-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../arrays-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../arrays-test-6/index.html">التحدي السادس</a></li>
+<li class="title">تراكيب البيانات</li>
+<li><a href="../data-structure-about-section/index.html">حول هذا القسم</a></li>
+<li><a href="../data-structure-test-1/index.html">التحدي الأول</a></li>
+<li><a href="index.html">التحدي الثاني</a></li>
+<li class="title">حساب وقت الخوارزميات</li>
+<li><a href="../algorithms-complexity/index.html">مفهوم التعقيد ( Complexity )</a></li>
+<li><a href="../big-o-notation/index.html">حساب الـ Big-O Notation</a></li>
+<li><a href="../choosing-best-algorithms/index.html">إختيار الخوارزمية الأفضل</a></li>
+<li><a href="../calculate-execution-time/index.html">عرض مدة تنفيذ الكود</a></li>
+<li><a href="../useful-resources/index.html">مصادر مفيدة</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Algorithms &amp; Data Structure</span>التحدي الثاني - الحل بلغة بايثون</h1>
+<article>
+<h3>فكرة المشروع</h3>
+<p>في هذا التمرين سنفترض أننا نقوم بتخزين بيانات لمؤسسة صغيرة.<br/>
+	البيانات التي نريد تخزينها هي التالية:</p>
+<ul class="explain">
+<li><p>الموظفين الذين يعملون في المؤسسة (الإسم, الهاتف, الجنس, دوام العمل, أيام العمل).</p></li>
+<li><p>الزبائن الذين يشترون من المؤسسة (الإسم, الهاتف, الجنس, البريد الإلكتروني).</p></li>
+<li><p>المنتجات التي تبيعها المؤسسة (إسم المنتج و سعره).</p></li>
+<li><p>الفواتير الخاصة ببيع المنتجات (تاريخ البيع, هل تم الدفع أم لا, بيانات المشتري, المنتجات التي تم شراءها).</p></li>
+</ul>
+<p><span class="note">ملاحظة:</span> رقم التعرفة لكل من الأشخاص, المنتجات, الفواتير يجب أن يتم إعطاؤه لهم بشكل تلقائي.</p>
+<br/>
+<h3>الشكل العام لأقسام المشروع</h3>
+<p><a href="classes-structure.png" target="_blank"><img src="classes-structure.png"/></a></p>
+<br/>
+<h3>شرح أقسام المشروع</h3>
+<p><code>Person</code> يمثل المعلومات المشتركة بين الموظف و الزبون.<br/>
+<code>Client</code> يمثل المعلومات الإضافية الخاصة بالزبون و غير موجودة عند الموظف.<br/>
+<code>Employee</code> يمثل المعلومات الإضافية الخاصة الموظف و غير موجودة عند الزبون.<br/>
+<code>Product</code> يمثل أي منتج تبيعه الشركة.<br/>
+<code>Order</code> يمثل فواتير بيع المنتجات و لاحظ أن كل فاتورة سيتم فيها بيع مجموعة من المنتجات و كل فاتورة سيتم إصدارها لشخص محدد.<br/>
+<code>add_product()</code>: مهمتها إضافة منتج جديد.<br/>
+<code>add_person()</code>: مهمتها إضافة شخص جديد سواء موظف أو زبون.<br/>
+<code>add_order()</code>: مهمتها إضافة فاتورة جديدة.<br/>
+<code>remove_product()</code>: مهمتها حذف منتج من خلال <code>id</code> المنتج الذي نمرره لها عند إستدعاءها.<br/>
+<code>remove_person()</code>: مهمتها حذف شخص من خلال <code>id</code> الشخص الذي نمرره لها عند إستدعاءها.<br/>
+<code>remove_order()</code>: مهمتها حذف فاتورة من خلال <code>id</code> الفاتورة الذي نمرره لها عند إستدعاءها.<br/>
+<code>print_person_info()</code>: مهمتها عرض كل معلومات الشخص من خلال <code>id</code> الشخص الذي نمرره لها عند إستدعاءها.<br/>
+<code>print_product_details()</code>: مهمتها عرض كل معلومات المنتج من خلال <code>id</code> المنتج الذي نمرره لها عند إستدعاءها.<br/>
+<code>print_order_details()</code>: مهمتها عرض كل معلومات الفاتورة من خلال <code>id</code> الفاتورة الذي نمرره لها عند إستدعاءها.<br/>
+<code>print_person_orders()</code>: مهمتها عرض كل فواتير الشخص من خلال <code>id</code> الشخص الذي نمرره لها عند إستدعاءها.<br/>
+<code>print_extra_info()</code>: مهمتها عرض كل المعلومات المتوفرة حول الشخص سواء كان موظف أو زبون.</p>
+<p>قم بتحويل الرسم إلى كود. ثم قم بإنشاء مجموعة موظفين, زبائن, منتجات و فواتير. و قم بتجربة جميع الدوال في البرنامج.</p>
+<br/>
+<h3>معلومة</h3>
+<p>لإعطاء رقم <code>id</code> موحد لكل كائن يتم إنشاؤه, يمكنك تعريف متغير في الكلاس و الأفضل جعله مخفياً <span class="inline">( من خلال وضع الرمز <code>__</code> قبل إسمه )</span> حتى لا يمكن رؤيته مع باقي متغيرات الكلاس من الكائنات التي ننشئها منه. بعدها تقوم فقط بجعل قيمته تزيد <span class="number">1</span> كلما قمت بإنشاء كائن من هذا الكلاس و من ثم تضع قيمته في المتغير <span class="inline"><code>id</code>.</span></p>
+<p><span class="note">ملاحظة:</span> سنقوم بإنشاء متغير إسمه <code>__id_incrementer</code> في الكلاسات <span class="inline"><code>Person</code>,</span> <code>Product</code> و <code>Order</code> من أجل هذا الهدف فقط.</p>
+<br/>
+<div class="example-box">
+<h4>الحل بلغة بايثون</h4>
+<span class="code-title python-file-icon">Person.py</span>
+<pre data-enlighter-language="python">
+# و الذي سيحتوي على جميع الخصائص التي سيمكلها أي شخص Person هنا قمنا بتعريف الكلاس
+class Person:
+    # بتعريفه هنا و هكذا ليكون موحد بالنسبة لجميع الكائنات التي ننشئها من هذا الكلاس idIncrementer المتغير
+    __id_incrementer = 0
+
+    # هنا قمنا بتعريف الخصائص الأساسية التي يجب أن يملكها الشخص و التي يمكننا تحديد قيمها عند إنشاء كائن من هذا الكلاس
+    # الخاسة بالكائن id تزيد 1 في كل مرة و من ثم يتم وضعها في الخاصية idIncrementer لاحظ أننا قمنا بجعل قيمة
+    # القيم الأخرى التي يتم تمريرها للكائن سيتم تخزينها كما هي
+    def __init__(self, name, phone, gender):
+        Person.__id_incrementer += 1
+        self.id = Person.__id_incrementer
+        self.name = name
+        self.phone = phone
+        self.gender = gender
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Client.py</span>
+<pre data-enlighter-language="python">
+from Person import Person
+
+
+# الذي وضعنا فيه المعلومات الأساسية التي يجب أن يملكها أي زبون Client هنا قمنا بتعريف الكلاس
+# email لأن الزبون عبارة عن شخص عادي و لكنه يملك الخاصية الإضافية Person هذا الكلاس يرث من الكلاس
+class Client(Person):
+
+	# هنا قمنا بتعريف كونستركتور للكلاس حتى نستطيع إسناد قيم للخصائص بشكل مباشر بواسطته
+    # super() عن طريق الدالة Person سيتم إسناد قيم لها من خلال كونستركتور الكلاس name, phone, gender الخصائص
+    # id سيتولى أمر توليد قيمة للمتغير Person أيضاَ, لا تنسى أن كونستركتور الكلاس
+    def __init__(self, name, phone, gender, email):
+        super().__init__(name, phone, gender)
+        self.email = email
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Employee.py</span>
+<pre data-enlighter-language="python">
+from Person import Person
+
+
+# الذي وضعنا فيه المعلومات الأساسية التي يجب أن يملكها أي موظف Employee هنا قمنا بتعريف الكلاس
+# workingTime و salary لأن الموظف عبارة عن شخص عادي و لكنه يملك خصائص إضافية هي Person هذا الكلاس يرث من الكلاس
+class Employee(Person):
+
+	# هنا قمنا بتعريف كونستركتور للكلاس حتى نستطيع إسناد قيم للخصائص بشكل مباشر بواسطته
+    # super() عن طريق الدالة Person سيتم إسناد قيم لها من خلال كونستركتور الكلاس name, phone, gender الخصائص
+    # id سيتولى أمر توليد قيمة للمتغير Person أيضاَ, لا تنسى أن كونستركتور الكلاس
+    def __init__(self, name, phone, gender, salary, working_time):
+        super().__init__(name, phone, gender)
+        self.salary = salary
+        self.working_time = working_time
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Product.py</span>
+<pre data-enlighter-language="python">
+# الذي وضعنا فيه المعلومات الأساسية التي يجب أن يملكها أي منتج Product هنا قمنا بتعريف الكلاس
+class Product:
+
+    # بتعريفه هنا و هكذا ليكون موحد بالنسبة لجميع الكائنات التي ننشئها من هذا الكلاس idIncrementer المتغير
+    __id_incrementer = 0
+
+	# هنا قمنا بتعريف الخصائص الأساسية التي يجب أن يملكها المنتج و التي يمكننا تحديد قيمها عند إنشاء كائن من هذا الكلاس
+    # الخاسة بالكائن id تزيد 1 في كل مرة و من ثم يتم وضعها في الخاصية idIncrementer لاحظ أننا قمنا بجعل قيمة
+    # القيم الأخرى التي يتم تمريرها للكائن سيتم تخزينها كما هي
+    def __init__(self, name, price):
+        Product.__id_incrementer += 1
+        self.id = Product.__id_incrementer
+        self.name = name
+        self.price = price
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Order.py</span>
+<pre data-enlighter-language="python">
+# و الذي سيحتوي على جميع الخصائص التي ستملكها أي فاتورة Order هنا قمنا بتعريف الكلاس
+class Order:
+
+    # بتعريفه هنا و هكذا ليكون موحد بالنسبة لجميع الكائنات التي ننشئها من هذا الكلاس idIncrementer المتغير
+    __id_incrementer = 0
+
+    # هنا قمنا بتعريف الخصائص الأساسية التي يجب أن يملكها الفاتورة و التي يمكننا تحديد قيمها عند إنشاء كائن من هذا الكلاس
+    # الخاسة بالكائن id تزيد 1 في كل مرة و من ثم يتم وضعها في الخاصية idIncrementer لاحظ أننا قمنا بجعل قيمة
+    # القيم الأخرى التي يتم تمريرها للكائن سيتم تخزينها كما هي
+    def __init__(self, date, is_paid, person, products):
+        Order.__id_incrementer += 1
+        self.id = Order.__id_incrementer
+        self.date = date
+        self.is_paid = is_paid
+        self.person = person
+        self.products = products
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Company.py</span>
+<pre data-enlighter-language="python">
+from Client import Client
+from Employee import Employee
+
+
+# يمثل كل ما تحتويه المكتبة من كتب و مؤلفين و الدوال التي يمكن استخدامها للتعامل معهم Company هنا قمنا بتعريف الكلاس
+class Company:
+    # سنضع فيها كل معلومات الفواتير orders سنضع فيها كل معلومات الكتب. المصفوفة orders سنضع فيها كل معلومات الأشخاص. المصفوفة persons المصفوفة
+    persons = []
+    products = []
+    orders = []
+
+    # product بداخل المصفوفة Product يمكن استخدامها لإضافة كائن من الكلاس add_product() الدالة
+    def add_product(self, product):
+        self.products.append(product)
+
+    # persons بداخل المصفوفة Person يمكن استخدامها لإضافة كائن من الكلاس add_person() الدالة
+    def add_person(self, person):
+        self.persons.append(person)
+
+    # orders بداخل المصفوفة Order يمكن استخدامها لإضافة كائن من الكلاس add_order() الدالة
+    def add_order(self, order):
+        self.orders.append(order)
+
+    # الخاص به id بالإعتماد على رقم الـ products موضوع بداخل المصفوفة Product يمكن استخدامها لإلغاء كائن من الكلاس remove_product() الدالة
+    def remove_product(self, id):
+        # product و كل كائن نمر عليه سنضعه بشكل مؤقته بداخل الكائن products بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+        for product in self.products:
+            # الذي مررناه للدالة سيتم حذفه و من ثم الخروج من الدالة id يملك نفس رقم الـ product في حال كان الكائن
+            if product.id == id:
+                self.products.remove(product)
+                return
+        # الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ products في حال لم يتم إيجاد أي كائن في المصفوفة
+        print("Product with id", id, "is not found!")
+        print("----------------------")
+
+    # الخاص به id بالإعتماد على رقم الـ persons موضوع بداخل المصفوفة Person يمكن استخدامها لإلغاء كائن من الكلاس remove_person() الدالة
+    def remove_person(self, id):
+        # person و كل كائن نمر عليه سنضعه بشكل مؤقته بداخل الكائن persons بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+        for person in self.persons:
+            # الذي مررناه للدالة سيتم حذفه و من ثم الخروج من الدالة id يملك نفس رقم الـ person في حال كان الكائن
+            if person.id == id:
+                self.persons.remove(person)
+                return
+        # الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ persons في حال لم يتم إيجاد أي كائن في المصفوفة
+        print("Person with id", id, "is not found!")
+        print("----------------------")
+
+    # الخاص به id بالإعتماد على رقم الـ orders موضوع بداخل المصفوفة Order يمكن استخدامها لإلغاء كائن من الكلاس remove_order() الدالة
+    def remove_order(self, id):
+        # order و كل كائن نمر عليه سنضعه بشكل مؤقته بداخل الكائن orders بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+        for order in self.orders:
+            # الذي مررناه للدالة سيتم حذفه و من ثم الخروج من الدالة id يملك نفس رقم الـ order في حال كان الكائن
+            if order.id == id:
+                self.orders.remove(order)
+                return
+        # الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ orders في حال لم يتم إيجاد أي كائن في المصفوفة
+        print("Order with id", id, "is not found!")
+        print("----------------------")
+
+    # الخاص به id بالإعتماد على رقم الـ persons يمكن استخدامها لطباعة كل المعلومات المتوفرة حول شخص موضوع بداخل المصفوفة print_person_info() الدالة
+    def print_person_info(self, id):
+        # person و كل كائن نمر عليه سنضعه بشكل مؤقته بداخل الكائن persons بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+        for person in self.persons:
+            # الذي مررناه للدالة سيتم طباعة كل معلوماته و من ثم الخروج من الدالة id يملك نفس رقم الـ person في حال كان الكائن
+            if person.id == id:
+                print("Person with id", id, "info.")
+                print("Name:", person.name)
+                print("Phone:", person.phone)
+                print("Gender", person.gender)
+
+				# التي يملكها email سيتم طباعة الخاصية Client تم إنشاؤه من الكلاس person إذا كان الكائن
+                if isinstance(person, Client):
+                    print("Email:", person.email)
+
+				# التي يملكها workingTime و salary سيتم طباعة الخاصيتين Employee تم إنشاؤه من الكلاس person إذا كان الكائن
+                elif isinstance(person, Employee):
+                    print("Salary:", person.salary)
+                    print("Working time", person.working_time)
+
+				# بعدها سيتم طباعة خط و الخروج من الدالة
+                print("----------------------")
+                return
+        # الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ persons في حال لم يتم إيجاد أي كائن في المصفوفة
+        print("Person with id", id, "is not found!")
+        print("----------------------")
+
+    # الخاص به id بالإعتماد على رقم الـ products يمكن استخدامها لطباعة كل المعلومات المتوفرة حول منتج موضوع بداخل المصفوفة print_product_details() الدالة
+    def print_product_details(self, id):
+        # product و كل كائن نمر عليه سنضعه بشكل مؤقته بداخل الكائن products بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+        for product in self.products:
+            # الذي مررناه للدالة سيتم طباعة كل معلوماته و من ثم الخروج من الدالة id يملك نفس رقم الـ product في حال كان الكائن
+            if product.id == id:
+                print("Product with id", id, "info.")
+                print("Name:", product.name)
+                print("Price:", str(product.price) + "$")
+                print("----------------------")
+                return
+        # الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ products في حال لم يتم إيجاد أي كائن في المصفوفة
+        print("Product with id", id, "is not found!")
+        print("----------------------")
+
+    # الخاص به id بالإعتماد على رقم الـ orders يمكن استخدامها لطباعة كل المعلومات المتوفرة حول فاتورة موضوعة بداخل المصفوفة print_order_details() الدالة
+    def print_order_details(self, id):
+        # سنستخدمه لحساب ناتج جمع جميع أسعار المنتجات التي نجدها في الفاتورة total_sum المتغير
+        total_sum = 0
+        # order و كل كائن نمر عليه ( و الذي يمثل كتاب ) سنضعه بشكل مؤقته بداخل الكائن orders هنا سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+        for order in self.orders:
+            # الذي مررناه للدالة سيتم طباعة كل معلوماته id يملك نفس رقم الـ order في حال كان الكائن
+            if order.id == id:
+                print("Order with id", id, "details.")
+                print("Date:", order.date)
+                print("Is paid:", "yes" if order.is_paid else "no")
+                print("Ordered by:", order.person.name)
+                print("Products")
+                # order الموضوعة في الكائن products هنا سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+                # product كل كائن نمر عليه ( و الذي يمثل منتج ) سنضعه بشكل مؤقته بداخل الكائن
+                # total_sum سعر كل منتج يتم إيجاده في هذه المصفوفة سيتم إضافته على قيمة المتغير
+                for product in order.products:
+                    total_sum += product.price
+                    print("- " + product.name + ": " + str(product.price) + "$")
+				
+				#  و الذي يمثل ثمن كل المشتريات الموضوعة في الفاتورة و من ثم الخروج من الدالة total_sum هنا سيتم عرض ناتج الجمع الذي تم تخزينه في المتغير
+                print("Total Price: " + str(total_sum) + "$")
+                print("----------------------")
+                return
+        # الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ orders في حال لم يتم إيجاد أي كائن في المصفوفة
+        print("Order with id", id, "is not found!")
+        print("----------------------")
+
+	# الخاص به id بالإعتماد على رقم الـ persons يمكن استخدامها لطباعة كل معلومات الفواتير التابعة لشخص موضوع بداخل المصفوفة print_person_orders() الدالة 
+    def print_person_orders(self, id):
+        # الذي تم تمريره للدالة id يملك رقم الـ persons بهدف التأكد ما إن كان يوجد شخص في المصفوفة isPersonExist سنستخدم المتغير
+        # تابعو لهذا الشخص لأن ذلك سيكون غير منطقي orders لأنه إن لم يكن هناك شخص أصلاً فلن نقوم بالبحث عن فواتير في المصفوفة
+        is_person_exist = False
+        # person و كل كائن نمر عليه سنضعه بشكل مؤقته بداخل الكائن persons هنا سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+        for person in self.persons:
+            # الذي مررناه للدالة سيتم تغيير قيمة id يملك نفس رقم الـ person في حال كان الكائن
+            # persons و إيقاف الحلقة لأننا تأكدنا أن هذا الشخص موجود في المصفوفة True إلى is_person_exist
+            if person.id == id:
+                is_person_exist = True
+                break
+        # persons فهذا يعني أنه لم يتم إيجاد أي كائن في المصفوفة False تساوي is_person_exist في حال بقيت قيمة
+        # الذي تم تمريره للدالة سيتم طباعة الجملة التالية و الخروج من الدالة id يملك نفس رقم الـ
+        if not is_person_exist:
+            print("Person with id", id, "is not found!")
+            print("----------------------")
+            return
+        print("All orders made by person with id " + str(id) + ":")
+        # order و كل كائن نمر عليه سنضعه بشكل مؤقته بداخل الكائن orders بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+        for order in self.orders:
+            # ( الذي مررناه للدالة سيتم طباعة معلوماته ( أي معلومات الفاتورة id يملك نفس رقم الـ order الموضوع في الكائن person في حال كان الكائن
+            if order.person.id == id:
+                print("&gt; Order: #" + str(order.id))
+                print("  Date:", order.date)
+                print("  Is paid:", "yes" if order.is_paid else "no")
+                print("  Ordered by:", order.person.name)
+                print("  Products")
+				# سنستخدمه لحساب ناتج جمع جميع أسعار المنتجات التي نجدها في كل فاتورة total_sum المتغير
+                total_sum = 0
+				# order الموضوعة في الكائن products هنا سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+                # product كل كائن نمر عليه ( و الذي يمثل منتج ) سنضعه بشكل مؤقته بداخل الكائن
+                # totalSum سعر كل منتج يتم إيجاده في هذه المصفوفة سيتم إضافته على قيمة المتغير
+                for product in order.products:
+                    total_sum += product.price
+                    print("  - " + product.name + ": " + str(product.price) + "$")
+				# و الذي يمثل ثمن كل المشتريات الموضوعة في الفاتورة total_sum هنا سيتم عرض ناتج الجمع الذي تم تخزينه في المتغير
+                print("  Total Price: " + str(total_sum) + "$")
+        print("----------------------")
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Main.py</span>
+<pre data-enlighter-language="python">
+from Client import Client
+from Employee import Employee
+from Product import Product
+from Order import Order
+from Company import Company
+
+# أي كأننا قمنا بإنشاء شخصين Person هنا قمنا بإنشاء كائنين من كلاسات ترث من الكلاس
+# و بالتالي فإنه يمثل شخص يعتبر زبون Client عبارة عن كائن من الكلاس person1
+# و بالتالي فإنه يمثل شخص يعتبر موظف Employee عبارة عن كائن من الكلاس person2
+person1 = Client("Mhamad", "+96170123456", "Male", "mhamad@example.com")
+person2 = Employee("Nadine", "+9631249392", "Female", 800, "8:00 AM to 3:00 PM")
+
+# و التي تمثل 6 منتجات Product هنا قمنا بتعريف 6 كائنات من الكلاس
+product1 = Product("Keyboard", 15)
+product2 = Product("Camera", 45)
+product3 = Product("HDD 1TB", 70)
+product4 = Product("SSD 1TB", 274.66)
+product5 = Product("Mouse", 8)
+product6 = Product("Table", 44.55)
+
+# و التي تمثل فواتير Order هنا قمنا بتعريف 3 كائنات من الكلاس
+# person1 وضعناهما لنفس الشخص الذي يمثل الكائن order2 و order1 لاحظ أن الفاتورتين
+order1 = Order("2020-1-1", True, person1, [product1, product2, product3])
+order2 = Order("2020-2-7", True, person1, [product4])
+order3 = Order("2020-5-4", False, person2, [product5, product6])
+
+# لأننا نريد تخزين الأشخاص و المنتجات و الفواتير بشكل مرتب بداخله Company هنا قمنا بإنشاء كائن من الكلاس
+company = Company()
+
+# add_person() بواسطة الدالة company التي يمكلها الكائن persons هنا قمنا بإضافة الشخصين في المصفوفة
+company.add_person(person1)
+company.add_person(person2)
+
+# add_product() بواسطة الدالة company التي يمكلها الكائن products هنا قمنا بإضافة المنتجات في المصفوفة
+company.add_product(product1)
+company.add_product(product2)
+company.add_product(product3)
+company.add_product(product4)
+company.add_product(product5)
+company.add_product(product6)
+
+# add_order() بواسطة الدالة company التي يمكلها الكائن orders هنا قمنا بإضافة الفواتير في المصفوفة
+company.add_order(order1)
+company.add_order(order2)
+company.add_order(order3)
+
+# print_person_info() الخاص بهم و بواسطة الدالة id هنا قمنا بطباعة معلومات كلا الشخصين بالإعتماد على رقم التعرفة
+# تذكر: رقم التعرفة الخاص بكل شخص تم إنشاؤه بشكل تلقائي عند إنشاء كل شخص بداخل الكونستركتور
+company.print_person_info(1)
+company.print_person_info(2)
+
+# print_product_details() الخاص بهم و بواسطة الدالة id هنا قمنا بطباعة معلومات كل المنتجات بالإعتماد على رقم التعرفة
+# تذكر: رقم التعرفة الخاص بكل منتج تم إنشاؤه بشكل تلقائي عند إنشاء كل منتج بداخل الكونستركتور
+company.print_product_details(1)
+company.print_product_details(2)
+company.print_product_details(3)
+company.print_product_details(4)
+company.print_product_details(5)
+company.print_product_details(6)
+
+# print_person_orders() الخاص بهم و بواسطة الدالة id هنا قمنا بطباعة الفواتير التي يملكها كل شخص بالإعتماد على رقم التعرفة
+company.print_person_orders(1)
+company.print_person_orders(2)
+
+# remove_order() هنا قمنا الفاتورة التي تملك رقم التعرفة 1 بواسطة الدالة
+# printOrderDetails() بعدها حاولنا طباعة معلومات الفاتورة التي قمنا بحذفها بواسطة الدالة
+# بعدها قمنا بطباعة جمبع الفواتير التي يمكلها الشخص الذي يملك رقم التعرفة 1 و الذي كان يملك الفاتورة التي تم حذفها
+# لاحظ أن الفاتورة المحذوفة أيضاَ لم تظر ضمن فواتيره
+company.remove_order(1)
+company.print_order_details(1)
+company.print_person_orders(1)
+		</pre>
+<br/>
+<p>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Person with id 1 info. <span class="red">  --&gt; الموضوعة في السطر 49 print_person_info() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Mhamad
+			<br/>Phone: +96170123456
+			<br/>Gender: Male
+			<br/>Email: mhamad@example.com
+			<br/>----------------------
+			<br/>Person with id 2 info. <span class="red">  --&gt; الموضوعة في السطر 50 print_person_info() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Nadine
+			<br/>Phone: +9631249392
+			<br/>Gender: Female
+			<br/>Salary: 800$
+			<br/>Working time: 8:00 AM to 3:00 PM
+			<br/>----------------------
+			<br/>Product with id 1 details. <span class="red">  --&gt; الموضوعة في السطر 54 print_product_details() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Keyboard
+			<br/>Price: 15$
+			<br/>----------------------
+			<br/>Product with id 2 details. <span class="red">  --&gt; الموضوعة في السطر 55 print_product_details() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Camera
+			<br/>Price: 45$
+			<br/>----------------------
+			<br/>Product with id 3 details. <span class="red">  --&gt; الموضوعة في السطر 56 print_product_details() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: HDD 1TB
+			<br/>Price: 70$
+			<br/>----------------------
+			<br/>Product with id 4 details. <span class="red">  --&gt; الموضوعة في السطر 57 print_product_details() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: SSD 1TB
+			<br/>Price: 274.66$
+			<br/>----------------------
+			<br/>Product with id 5 details. <span class="red">  --&gt; الموضوعة في السطر 58 print_product_details() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Mouse
+			<br/>Price: 8$
+			<br/>----------------------
+			<br/>Product with id 6 details. <span class="red">  --&gt; الموضوعة في السطر 59 print_product_details() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Table
+			<br/>Price: 44.55$
+			<br/>----------------------
+			<br/>All orders made by person with id 1: <span class="red">  --&gt; الموضوعة في السطر 62 print_person_orders() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>&gt; Order: #1
+			<br/>  Date: 2020-1-1
+			<br/>  Is paid: yes
+			<br/>  Ordered by: Mhamad
+			<br/>  Products:
+			<br/>  - Keyboard: 15$
+			<br/>  - Camera: 45$
+			<br/>  - HDD 1TB: 70$
+			<br/>  Total Price: 130$
+			<br/>&gt; Order: #2
+			<br/>  Date: 2020-2-7
+			<br/>  Is paid: yes
+			<br/>  Ordered by: Mhamad
+			<br/>  Products:
+			<br/>  - SSD 1TB: 274.66$
+			<br/>  Total Price: 274.66$
+			<br/>----------------------
+			<br/>All orders made by person with id 2: <span class="red">  --&gt; الموضوعة في السطر 63 print_person_orders() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>&gt; Order: #3
+			<br/>  Date: 2020-5-4
+			<br/>  Is paid: no
+			<br/>  Ordered by: Nadine
+			<br/>  Products:
+			<br/>  - Mouse: 8$
+			<br/>  - Table: 44.55$
+			<br/>  Total Price: 52.55$
+			<br/>----------------------
+			<br/>Order with id 1 is not found! <span class="red">  --&gt; الموضوعة في السطر 70 print_order_details() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>----------------------
+			<br/>All orders made by person with id 1: <span class="red">  --&gt; الموضوعة في السطر 71 print_person_orders() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>&gt; Order: #2
+			<br/>  Date: 2020-2-7
+			<br/>  Is paid: yes
+			<br/>  Ordered by: Mhamad
+			<br/>  Products:
+			<br/>  - SSD 1TB: 274.66$
+			<br/>  Total Price: 274.66$
+			<br/>----------------------
+		</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

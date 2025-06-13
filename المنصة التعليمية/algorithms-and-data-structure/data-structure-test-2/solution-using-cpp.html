@@ -1,0 +1,945 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>تمارين خوارزميات و هياكل البيانات - التحدي الثاني - الحل بلغة C++</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../algorithms-and-data-structure.png"/></li>
+<li class="title">تعرف على الدورة</li>
+<li><a href="../overview/index.html">نظرة عامة</a></li>
+<li><a href="../how-to-start/index.html">الطريقة الصحيحة للتعلم</a></li>
+<li class="title">رسم أشكال هندسية</li>
+<li><a href="../drawing-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../drawing-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../drawing-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../drawing-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../drawing-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../drawing-test-6/index.html">التحدي السادس</a></li>
+<li><a href="../drawing-test-7/index.html">التحدي السابع</a></li>
+<li><a href="../drawing-test-8/index.html">التحدي الثامن</a></li>
+<li><a href="../drawing-test-9/index.html">التحدي التاسع</a></li>
+<li><a href="../drawing-test-10/index.html">التحدي العاشر</a></li>
+<li class="title">التعامل مع الأرقام و النصوص</li>
+<li><a href="../numbers-and-strings-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../numbers-and-strings-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../numbers-and-strings-test-3/index.html">التحدي الثالث</a></li>
+<li class="title">إجراء عمليات حسابية</li>
+<li><a href="../math-operations-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../math-operations-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../math-operations-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../math-operations-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../math-operations-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../math-operations-test-6/index.html">التحدي السادس</a></li>
+<li><a href="../math-operations-test-7/index.html">التحدي السابع</a></li>
+<li><a href="../math-operations-test-8/index.html">التحدي الثامن</a></li>
+<li><a href="../math-operations-test-9/index.html">التحدي التاسع</a></li>
+<li class="title">التعامل مع المصفوفات</li>
+<li><a href="../arrays-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../arrays-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../arrays-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../arrays-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../arrays-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../arrays-test-6/index.html">التحدي السادس</a></li>
+<li class="title">تراكيب البيانات</li>
+<li><a href="../data-structure-about-section/index.html">حول هذا القسم</a></li>
+<li><a href="../data-structure-test-1/index.html">التحدي الأول</a></li>
+<li><a href="index.html">التحدي الثاني</a></li>
+<li class="title">حساب وقت الخوارزميات</li>
+<li><a href="../algorithms-complexity/index.html">مفهوم التعقيد ( Complexity )</a></li>
+<li><a href="../big-o-notation/index.html">حساب الـ Big-O Notation</a></li>
+<li><a href="../choosing-best-algorithms/index.html">إختيار الخوارزمية الأفضل</a></li>
+<li><a href="../calculate-execution-time/index.html">عرض مدة تنفيذ الكود</a></li>
+<li><a href="../useful-resources/index.html">مصادر مفيدة</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Algorithms &amp; Data Structure</span>التحدي الثاني - الحل بلغة <span class="word">C++</span></h1>
+<article>
+<h3>فكرة المشروع</h3>
+<p>في هذا التمرين سنفترض أننا نقوم بتخزين بيانات لمؤسسة صغيرة.<br/>
+	البيانات التي نريد تخزينها هي التالية:</p>
+<ul class="explain">
+<li><p>الموظفين الذين يعملون في المؤسسة (الإسم, الهاتف, الجنس, دوام العمل, أيام العمل).</p></li>
+<li><p>الزبائن الذين يشترون من المؤسسة (الإسم, الهاتف, الجنس, البريد الإلكتروني).</p></li>
+<li><p>المنتجات التي تبيعها المؤسسة (إسم المنتج و سعره).</p></li>
+<li><p>الفواتير الخاصة ببيع المنتجات (تاريخ البيع, هل تم الدفع أم لا, بيانات المشتري, المنتجات التي تم شراءها).</p></li>
+</ul>
+<p><span class="note">ملاحظة:</span> رقم التعرفة لكل من الأشخاص, المنتجات, الفواتير يجب أن يتم إعطاؤه لهم بشكل تلقائي.</p>
+<br/>
+<h3>الشكل العام لأقسام المشروع</h3>
+<p><a href="classes-structure.png" target="_blank"><img src="classes-structure.png"/></a></p>
+<br/>
+<h3>شرح أقسام المشروع</h3>
+<p><code>Person</code> يمثل المعلومات المشتركة بين الموظف و الزبون.<br/>
+<code>Client</code> يمثل المعلومات الإضافية الخاصة بالزبون و غير موجودة عند الموظف.<br/>
+<code>Employee</code> يمثل المعلومات الإضافية الخاصة الموظف و غير موجودة عند الزبون.<br/>
+<code>Product</code> يمثل أي منتج تبيعه الشركة.<br/>
+<code>Order</code> يمثل فواتير بيع المنتجات و لاحظ أن كل فاتورة سيتم فيها بيع مجموعة من المنتجات و كل فاتورة سيتم إصدارها لشخص محدد.<br/>
+<code>add_product()</code>: مهمتها إضافة منتج جديد.<br/>
+<code>add_person()</code>: مهمتها إضافة شخص جديد سواء موظف أو زبون.<br/>
+<code>add_order()</code>: مهمتها إضافة فاتورة جديدة.<br/>
+<code>remove_product()</code>: مهمتها حذف منتج من خلال <code>id</code> المنتج الذي نمرره لها عند إستدعاءها.<br/>
+<code>remove_person()</code>: مهمتها حذف شخص من خلال <code>id</code> الشخص الذي نمرره لها عند إستدعاءها.<br/>
+<code>remove_order()</code>: مهمتها حذف فاتورة من خلال <code>id</code> الفاتورة الذي نمرره لها عند إستدعاءها.<br/>
+<code>print_person_info()</code>: مهمتها عرض كل معلومات الشخص من خلال <code>id</code> الشخص الذي نمرره لها عند إستدعاءها.<br/>
+<code>print_product_details()</code>: مهمتها عرض كل معلومات المنتج من خلال <code>id</code> المنتج الذي نمرره لها عند إستدعاءها.<br/>
+<code>print_order_details()</code>: مهمتها عرض كل معلومات الفاتورة من خلال <code>id</code> الفاتورة الذي نمرره لها عند إستدعاءها.<br/>
+<code>print_person_orders()</code>: مهمتها عرض كل فواتير الشخص من خلال <code>id</code> الشخص الذي نمرره لها عند إستدعاءها.<br/>
+<code>print_extra_info()</code>: مهمتها عرض كل المعلومات المتوفرة حول الشخص سواء كان موظف أو زبون.</p>
+<p>قم بتحويل الرسم إلى كود. ثم قم بإنشاء مجموعة موظفين, زبائن, منتجات و فواتير. و قم بتجربة جميع الدوال في البرنامج.</p>
+<br/>
+<h3>إرشادات</h3>
+<p>المشروع يجب أن يحتوي على 6 كلاسات أساسية هي <span class="inline"><code>Person</code>,</span> <span class="inline"><code>Client</code>,</span> <span class="inline"><code>Employee</code>,</span> <span class="inline"><code>Product</code>,</span> <code>Order</code> و <span class="inline"><code>Company</code>.</span></p>
+<p>كل كلاس منهم سيكون هناك ملفين في المشروع من أجله:<br/>
+	- ملف إمتداده <code>.h</code> يمثل الشكل العام لما يحتويه الكلاس.<br/>
+	- و ملف إمتداده <code>.cpp</code> يمثل طريقة عمل كل شيئ تم وضعه في الملف <code>.h</code> و هذا من قواعد لغة <span class="inline"><span class="word">C++</span>.</span></p>
+<p><span class="note">ملاحظة:</span> سنقوم بوضع كود الملفين التابعين لنفس الكلاس <span class="inline">( ملف الـ <code>.h</code> و ملف الـ <code>.cpp</code> )</span> تحت بعضهما حتى نسهّل عليك قراءة الشرح.</p>
+<br/>
+<h3>معلومة</h3>
+<p>لإعطاء رقم <code>id</code> موحد لكل كائن يتم إنشاؤه, يمكنك تعريف متغير ثابت <span class="inline">( <code>static</code> )</span> في الكلاس و جعله أيضاً <code>private</code> حتى لا يمكن تعديل قيمته بشكل يدوي من خارج هذا الكلاس.	بعدها تقوم فقط بجعل قيمته تزيد <span class="number">1</span> كلما قمت بإنشاء كائن من هذا الكلاس و من ثم تضع قيمته في المتغير <span class="inline"><code>id</code>.</span></p>
+<p><span class="note">ملاحظة:</span> سنقوم بإنشاء متغير نوعه <code data-enlighter-language="csharp">private static</code> إسمه <code>idIncrementer</code> في الكلاسات <span class="inline"><code>Person</code>,</span> <code>Product</code> و <code>Order</code> من أجل هذا الهدف فقط.</p>
+<p>الكائنات التي سننشئها من الكلاسات <code>Client</code> و <code>Employee</code> و التي ترث من الكلاس <code>Person</code> ستلاحظ أننا سنتعامل معها من خلال المؤشرات <span class="inline">( <span class="word">Pointers</span> )</span> لأننا سنحتاج ذلك من أجل تطبيق مبدأ تعدد الأشكال <span class="inline">( <span class="word">Polymorphism</span> ).</span> مبدأ تعدد الأشكال سنطبقه في هذا المشروع عندما نجهز الكود للتعامل بشكل أساسي مع الكلاس <code>Person</code> و مع أي كلاس يرث منه. و هنا سنفعل ذلك من أجل الكلاس <code>Client</code> و الكلاس <span class="inline"><code>Employee</code>.</span></p>
+<br/>
+<div class="example-box">
+<h4>الحل بلغة ++C</h4>
+<span class="code-title cpp-file-icon">Person.h</span>
+<pre data-enlighter-language="cpp">
+#ifndef PERSON_H
+#define PERSON_H
+
+#include &lt;string&gt;
+#include &lt;iostream&gt;
+using namespace std;
+
+// الذي يمثل المعلومات الأساسية التي سيملكها أي شخص Person هنا قمنا بذكر الخصائص, الدوال و الكونستركتور الذي يحتويه الكلاس
+class Person
+{
+    public:
+        // هنا قمنا بتعريف الخصائص الأساسية التي يجب أن يملكها أي شخص
+        int id;
+        string name;
+        string phone;
+        string gender;
+		
+		// هنا قمنا بتحديد شكل كونستركتور الكلاس و الذي سنستخدمه لإسناد قيم للكائن الذي ننشئه من هذا الكلاس بشكل مباشر
+        Person(string name, string phone, string gender);
+		
+		// السبب في ذلك أننا سنجعل Person هنا قمنا بتعريف هذا الدالة لأننا نريد أن تكون موجودة في أي كلاس يرث من الكلاس
+		// Person حتى يطبع المعلومات الأخرى التي يملكها بالإضافة إلى التي ورثها من الكلاس Override أي كلاس يرثها يفعل لها
+        virtual void printExtraInfo();
+
+    private:
+        // لأننا بنفس الوقت نريده أن يكون موحداً لجميع private و static قمنا بتعريفه كـ idIncrementer الثابت
+        // الكائنات التي ننشئها من هذا الكلاس و الكلاسات التي ترث منه و لا يمكن التعامل معه بشكل مباشر من أي كلاس آخر
+        static int idIncrementer;
+};
+
+#endif
+		</pre>
+<br/>
+<span class="code-title cpp-file-icon">Person.cpp</span>
+<pre data-enlighter-language="cpp">
+#include "Person.h"
+
+// idIncrementer هنا قمنا بتحديد القيمة الأولية للثابت
+int Person::idIncrementer = 0;
+
+// Person هنا قمنا بتحديد كيف سيتم إسناد القيم الأولية عند إنشاء كائن من الكلاس
+// id تزيد 1 في كل مرة و من ثم يتم وضعها في الخاصية idIncrementer لاحظ أننا جعلنا قيمة
+// الخاصة بالكائن. القيم الأخرى التي سيتم تمريرها للكائن سيتم تخزينها بشكل مباشر في خصائص الكائن
+Person::Person(string name, string phone, string gender)
+{
+    idIncrementer++;
+    this-&gt;id = idIncrementer;
+    this-&gt;name = name;
+    this-&gt;phone = phone;
+    this-&gt;gender = gender;
+}
+
+// لأننا لا ننوي استدعاءها بشكل مباشر من هذا الكلاس printExtraInfo() لاحظ أننا أبقينا الدالة
+// الكلاسات التي ترث من هذا الكلاس Override التي ستفعل لها printExtraInfo() بل ننوي استدعاء الدالة
+void Person::printExtraInfo() { }
+		</pre>
+<br/>
+<span class="code-title cpp-file-icon">Client.h</span>
+<pre data-enlighter-language="cpp">
+#ifndef CLIENT_H
+#define CLIENT_H
+
+#include "Person.h"  // حتى نستطيع الوراثة منه Person.h قمنا بتضمين الملف
+
+// الذي يمثل المعلومات الأساسية التي سيملكها أي زبون Client هنا قمنا بذكر الخصائص, الدوال و الكونستركتور الذي يحتويه الكلاس
+// email لأن الزبون عبارة عن شخص عادي و لكنه يملك خصاصية إضافية هي الخاصية Person لاحظ أننا جعلناه يرث من الكلاس
+class Client: public Person
+{
+    public:
+		// هنا قمنا بتعريف الخاصية الإضافية التي سيملكها الموظف
+		// id, name, phone, gender, salary, workingTime :أصبح يملك الخصائص التالية Client إذاً الكلاس
+        string email;
+		
+		// email مضافاً إليه الخاصية Person لاحظ أن شكل كونستركتور الكلاس هو نفسه شكل كونستركتور الكلاس
+        Client(string name, string phone, string gender, string email);
+
+		// Person التي ورثها هذا الكلاس من الكلاس printExtraInfo() للدالة Override لأننا ننوي أن نفعل printExtraInfo() هنا قمنا بتعريف الدالة
+        void printExtraInfo();
+};
+
+#endif
+		</pre>
+<br/>
+<span class="code-title cpp-file-icon">Client.cpp</span>
+<pre data-enlighter-language="cpp">
+#include "Client.h"
+
+// Client هنا قمنا بتحديد كيف سيتم إسناد القيم الأولية عند إنشاء كائن من الكلاس
+// Client و هو سيتولى أمر تخزينها في الخصائص التي ورثها الكلاس Person سيتم تمريرها لكونستكتور الكلاس gender و phone ,name القيم التي يتم تمريرها للباراميترات
+// Client سيتم إسنادها بشكل مباشر للخاصية التي تم تعريفها بداخل الكلاس email القيمة التي يتم تمريرها مكان الباراميتر
+Client::Client(string name, string phone, string gender, string email)
+: Person(name, phone, gender)
+{
+    this-&gt;email = email;
+}
+
+// Person التي تم وراثتها من الكلاس printExtraInfo() للدالة Override هنا كأننا فعلنا
+// Client عند استدعاء الدالة من كائن أصله من الكلاس email قمنا بتعريف هذه الدالة بهدف طباعة قيمة الخاصية
+void Client::printExtraInfo()
+{
+    cout &lt;&lt; "Email: " &lt;&lt; this-&gt;email &lt;&lt; "\n";
+}
+		</pre>
+<br/>
+<span class="code-title cpp-file-icon">Employee.h</span>
+<pre data-enlighter-language="cpp">
+#ifndef EMPLOYEE_H
+#define EMPLOYEE_H
+
+#include "Person.h"  // حتى نستطيع الوراثة منه Person.h قمنا بتضمين الملف
+
+// الذي يمثل المعلومات الأساسية التي سيملكها أي موظف Employee هنا قمنا بذكر الخصائص, الدوال و الكونستركتور الذي يحتويه الكلاس
+// workingTime و salary لأن الموظف عبارة عن شخص عادي و لكنه يملك خصائص إضافية هي Person لاحظ أننا جعلناه يرث من الكلاس
+class Employee: public Person
+{
+    public:
+		// هنا قمنا بتعريف الخصائص الإضافية التي سيملكها الموظف
+		// id, name, phone, gender, salary, workingTime :أصبح يملك الخصائص التالية Employee إذاً الكلاس
+        float salary;
+        string workingTime;
+		
+		// salary و workingTime مضافاً إليه الخاصيتين Person لاحظ أن شكل كونستركتور الكلاس هو نفسه شكل كونستركتور الكلاس
+        Employee(string name, string phone, string gender, float salary, string workingTime);
+
+		// Person التي ورثها هذا الكلاس من الكلاس printExtraInfo() للدالة Override لأننا ننوي أن نفعل printExtraInfo() هنا قمنا بتعريف الدالة
+        void printExtraInfo();
+};
+
+#endif
+		</pre>
+<br/>
+<span class="code-title cpp-file-icon">Employee.cpp</span>
+<pre data-enlighter-language="cpp">
+#include "Employee.h"
+
+// Employee هنا قمنا بتحديد كيف سيتم إسناد القيم الأولية عند إنشاء كائن من الكلاس
+// Employee و هو سيتولى أمر تخزينها في الخصائص التي ورثها الكلاس Person سيتم تمريرها لكونستكتور الكلاس gender و phone ,name القيم التي يتم تمريرها للباراميترات
+// Employee سيتم إسنادها بشكل مباشر للخصائص التي تم تعريفها بداخل الكلاس workingTime و salary القيم التي يتم تمريرها مكان الباراميترين
+Employee::Employee(string name, string phone, string gender, float salary, string workingTime)
+: Person(name, phone, gender)
+{
+    this-&gt;salary = salary;
+    this-&gt;workingTime = workingTime;
+}
+
+// Person التي تم وراثتها من الكلاس printExtraInfo() للدالة Override هنا كأننا فعلنا
+// Employee عند استدعاء الدالة من كائن أصله من الكلاس workingTime و salary قمنا بتعريف هذه الدالة بهدف طباعة قيم الخصائص 
+void Employee::printExtraInfo()
+{
+    cout &lt;&lt; "Salary: " &lt;&lt; this-&gt;salary &lt;&lt; "$\n";
+    cout &lt;&lt; "Working time: " &lt;&lt; this-&gt;workingTime &lt;&lt; "\n";
+}
+		</pre>
+<br/>
+<span class="code-title cpp-file-icon">Product.h</span>
+<pre data-enlighter-language="cpp">
+#ifndef PRODUCT_H
+#define PRODUCT_H
+
+#include &lt;string&gt;
+using namespace std;
+
+// الذي يمثل المنتج Product هنا قمنا بذكر الخصائص, الدوال و الكونستركتور الذي يحتويه الكلاس
+class Product
+{
+    public:
+        // هنا قمنا بتعريف الخصائص الأساسية التي يجب أن يملكها أي منتج
+        int id;
+        string name;
+        float price;
+		
+        // هنا قمنا بتحديد شكل كونستركتور الكلاس و الذي سنستخدمه لإسناد قيم للكائن الذي ننشئه من هذا الكلاس بشكل مباشر		
+        Product(string name, float price);
+
+    private:
+        // لأننا بنفس الوقت نريده أن يكون موحداً private و static قمنا بتعريفه كـ idIncrementer الثابت
+        // لجميع الكائنات التي ننشئها من هذا الكلاس و لا يمكن التعامل معه بشكل مباشر من أي كلاس آخر
+        static int idIncrementer;
+};
+
+#endif
+		</pre>
+<br/>
+<span class="code-title cpp-file-icon">Product.cpp</span>
+<pre data-enlighter-language="cpp">
+#include "Product.h"
+
+// idIncrementer هنا قمنا بتحديد القيمة الأولية للثابت
+int Product::idIncrementer = 0;
+
+// Product هنا قمنا بتحديد كيف سيتم إسناد القيم الأولية عند إنشاء كائن من الكلاس
+// id تزيد 1 في كل مرة و من ثم يتم وضعها في الخاصية idIncrementer لاحظ أننا جعلنا قيمة
+// الخاصة بالكائن. القيم الأخرى التي سيتم تمريرها للكائن سيتم تخزينها بشكل مباشر في خصائص الكائن
+Product::Product(string name, float price)
+{
+    idIncrementer++;
+    this-&gt;id = idIncrementer;
+    this-&gt;name = name;
+    this-&gt;price = price;
+}
+		</pre>
+<br/>
+<span class="code-title cpp-file-icon">Order.h</span>
+<pre data-enlighter-language="cpp">
+#ifndef ORDER_H
+#define ORDER_H
+
+// كل فاتورة ستضمن شخص (صاحب الفاتور) و مصفوفة من المنتجات لذلك قمنا بتضمين الكلاسات التالية
+#include "Person.h"
+#include "Product.h"
+#include &lt;vector&gt;
+
+// الذي يمثل المنتج Order هنا قمنا بذكر الخصائص, الدوال و الكونستركتور الذي يحتويه الكلاس
+class Order
+{
+    public:
+        // هنا قمنا بتعريف الخصائص الأساسية التي يجب أن يملكها أي منتج
+        int id;
+        string date;
+        bool isPaid;
+        Person *person;   // كل فاتورة ستملك مؤشر للشخص الذي يمثل صاحب الفاتورة
+        vector&lt;Product&gt; products;   // كل فاتورة ستملك مصفوفة من المنتجات
+
+        // هنا قمنا بتحديد شكل كونستركتور الكلاس و الذي سنستخدمه لإسناد قيم للكائن الذي ننشئه من هذا الكلاس بشكل مباشر		
+        Order(string date, bool isPaid, Person *person, vector&lt;Product&gt; products);
+
+    private:
+        // لأننا بنفس الوقت نريده أن يكون موحداً private و static قمنا بتعريفه كـ idIncrementer المتغير
+        // لجميع الكائنات التي ننشئها من هذا الكلاس و لا يمكن التعامل معه بشكل مباشر من أي كلاس آخر
+        static int idIncrementer;
+};
+
+#endif
+		</pre>
+<br/>
+<span class="code-title cpp-file-icon">Order.cpp</span>
+<pre data-enlighter-language="cpp">
+#include "Order.h"
+
+// idIncrementer هنا قمنا بتحديد القيمة الأولية للثابت
+int Order::idIncrementer = 0;
+
+// Order هنا قمنا بتحديد كيف سيتم إسناد القيم الأولية عند إنشاء كائن من الكلاس
+// id تزيد 1 في كل مرة و من ثم يتم وضعها في الخاصية idIncrementer لاحظ أننا جعلنا قيمة
+// الخاصة بالكائن. القيم الأخرى التي سيتم تمريرها للكائن سيتم تخزينها بشكل مباشر في خصائص الكائن
+Order::Order(string date, bool isPaid, Person* person, vector&lt;Product&gt; products)
+{
+    idIncrementer++;
+    this-&gt;id = idIncrementer;
+    this-&gt;date = date;
+    this-&gt;isPaid = isPaid;
+    this-&gt;person = person;
+    this-&gt;products = products;
+}
+		</pre>
+<br/>
+<span class="code-title cpp-file-icon">Company.h</span>
+<pre data-enlighter-language="cpp">
+#ifndef COMPANY_H
+#define COMPANY_H
+
+// Product و Employee ,Client ,Person حتى نستطيع التعامل معه و مع جميع الكلاسات التي يتضمنها, أي مع Order.h قمنا بتضمين الملف
+#include "Order.h"
+
+// يمثل كل ما تحتويه الشركة من أشخاص و منتجات و فواتير و الدوال التي يمكن استخدامها للتعامل معهم Company الكلاس
+class Company
+{
+    public:
+        vector&lt;Person*&gt; persons;   // سنضع فيه كل الأشخاص الذين ننشئهم persons الكائن
+        vector&lt;Product&gt; products;  // سنضع فيه كل المنتجات التي ننشئها products الكائن
+        vector&lt;Order&gt; orders;      // سنضع فيه كل الفواتير التي ننشئها products الكائن
+        
+		void addProduct(const Product&amp; product);
+        void addPerson(Person* person);
+        void addOrder(const Order&amp; Order);
+        void removeProduct(int id);
+        void removePerson(int id);
+        void removeOrder(int id);
+        void printPersonInfo(int id);
+        void printProductDetails(int id);
+        void printOrderDetails(int id);
+        void printPersonOrders(int id);
+};
+
+#endif
+		</pre>
+<br/>
+<span class="code-title cpp-file-icon">Company.cpp</span>
+<pre data-enlighter-language="cpp">
+#include "Company.h"
+#include &lt;iostream&gt;
+
+vector&lt;Person*&gt; persons;
+vector&lt;Product&gt; products;
+vector&lt;Order&gt; orders;
+
+// products بداخل المصفوفة product يمكن استخدامها لإضافة كائن من الكلاس addProduct() الدالة
+void Company::addProduct(const Product&amp; product)
+{
+    products.push_back(product);
+}
+
+// persons بداخل المصفوفة Persons يمكن استخدامها لإضافة مؤشر كائن من الكلاس addPerson() الدالة
+void Company::addPerson(Person *person)
+{
+    persons.push_back(person);
+}
+
+// orders بداخل المصفوفة Order يمكن استخدامها لإضافة كائن من الكلاس addOrder() الدالة
+void Company::addOrder(const Order&amp; order)
+{
+    orders.push_back(order);
+}
+
+// الخاص به id بالإعتماد على رقم الـ products موضوع بداخل المصفوفة Product يمكن استخدامها لإلغاء كائن من الكلاس removeProduct() الدالة
+void Company::removeProduct(int id)
+{
+    // products بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+    for (unsigned i = 0; i &lt; products.size(); i++)
+    {
+        // الذي مررناه للدالة سيتم حذفه و من ثم الخروج من الدالة id الحالي يملك نفس رقم الـ products[i] في حال كان الكائن
+        if (products[i].id == id)
+        {
+            products.erase(products.begin() + i);
+            return;
+        }
+    }
+    // الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ products في حال لم يتم إيجاد أي كائن في المصفوفة
+    cout &lt;&lt; "Product with id " &lt;&lt; id &lt;&lt; " is not found!\n";
+    cout &lt;&lt; "----------------------\n";
+}
+
+// الخاص به id بالإعتماد على رقم الـ persons أو من أحد الكلاسات التي ترث منه و موضوع بداخل المصفوفة Person يمكن استخدامها لإلغاء مؤشر كائن من الكلاس removePerson() الدالة
+void Company::removePerson(int id)
+{
+    // persons بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+    for (unsigned i = 0; i &lt; persons.size(); i++)
+    {
+        // الذي مررناه للدالة سيتم حذفه و من ثم الخروج من الدالة id الحالي يملك نفس رقم الـ persons[i] في حال كان الكائن
+        if (persons[i]-&gt;id == id)
+        {
+            persons.erase(persons.begin() + i);
+            return;
+        }
+    }
+    // الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ persons في حال لم يتم إيجاد أي كائن في المصفوفة
+    cout &lt;&lt; "Person with id " &lt;&lt; id &lt;&lt; " is not found!\n";
+    cout &lt;&lt; "----------------------\n";
+}
+
+// الخاص به id بالإعتماد على رقم الـ orders موضوع بداخل المصفوفة Order يمكن استخدامها لإلغاء كائن من الكلاس removeOrder() الدالة
+void Company::removeOrder(int id)
+{
+    // orders بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+    for (unsigned i = 0; i &lt; orders.size(); i++)
+    {
+        // الذي مررناه للدالة سيتم حذفه و من ثم الخروج من الدالة id الحالي يملك نفس رقم الـ orders[i] في حال كان الكائن
+        if (orders[i].id == id)
+        {
+            orders.erase(orders.begin() + i);
+            return;
+        }
+    }
+    // الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ orders في حال لم يتم إيجاد أي كائن في المصفوفة
+    cout &lt;&lt; "Order with id " &lt;&lt; id &lt;&lt; " is not found!\n";
+    cout &lt;&lt; "----------------------\n";
+}
+
+// الخاص به id بالإعتماد على رقم الـ persons يمكن استخدامها لطباعة كل المعلومات المتوفرة حول شخص موضوع مؤشره بداخل المصفوفة printPersonInfo() الدالة
+void Company::printPersonInfo(int id)
+{
+    // persons بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+    for (unsigned i = 0; i &lt; persons.size(); i++)
+    {
+        // الذي مررناه للدالة سيتم طباعة كل معلوماته و من ثم الخروج من الدالة id الحالي يملك نفس رقم الـ persons[i] في حال كان الكائن
+        if (persons[i]-&gt;id == id)
+        {
+            cout &lt;&lt; "Person with id " &lt;&lt; id &lt;&lt; " info.\n";
+            cout &lt;&lt; "Name: " &lt;&lt; persons[i]-&gt;name &lt;&lt; "\n";
+            cout &lt;&lt; "Phone: " &lt;&lt; persons[i]-&gt;phone &lt;&lt; "\n";
+            cout &lt;&lt; "Gender: " &lt;&lt; persons[i]-&gt;gender &lt;&lt; "\n";
+
+			// لطباعة المعلومات الإضافية المتوفرة عن الشخص printExtraInfo() هنا قمنا باستدعاء الدالة
+			// Client الموجودة في الكلاس printExtraInfo() سيتم إستدعاء الدالة Client إذا كان الشخص عبارة عن كائن أصله من الكلاس
+			// Employee الموجودة في الكلاس printExtraInfo() سيتم إستدعاء الدالة Employee إذا كان الشخص عبارة عن كائن أصله من الكلاس
+            persons[i]-&gt;printExtraInfo();
+
+            cout &lt;&lt; "----------------------\n";
+            return;
+        }
+    }
+    // الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ persons في حال لم يتم إيجاد أي كائن في المصفوفة
+    cout &lt;&lt; "Person with id " &lt;&lt; id &lt;&lt; " is not found!\n";
+    cout &lt;&lt; "----------------------\n";
+}
+
+// الخاص به id بالإعتماد على رقم الـ products يمكن استخدامها لطباعة كل المعلومات المتوفرة حول منتج موضوع بداخل المصفوفة printProductDetails() الدالة
+void Company::printProductDetails(int id)
+{
+    // products بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+    for (unsigned i = 0; i &lt; products.size(); i++)
+    {
+        // الذي مررناه للدالة سيتم طباعة كل معلوماته و من ثم الخروج من الدالة id الحالي يملك نفس رقم الـ products[i] في حال كان الكائن
+        if (products[i].id == id)
+        {
+            cout &lt;&lt; "Product with id " &lt;&lt; id &lt;&lt; " details.\n";
+            cout &lt;&lt; "Name: " &lt;&lt; products[i].name &lt;&lt; "\n";
+            cout &lt;&lt; "Price: " &lt;&lt; products[i].price &lt;&lt; "$\n";
+            cout &lt;&lt; "----------------------\n";
+            return;
+        }
+    }
+    // الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ products في حال لم يتم إيجاد أي كائن في المصفوفة
+    cout &lt;&lt; "Product with id " &lt;&lt; id &lt;&lt; " is not found!\n";
+    cout &lt;&lt; "----------------------\n";
+}
+
+// الخاص به id بالإعتماد على رقم الـ orders يمكن استخدامها لطباعة كل المعلومات المتوفرة حول فاتورة موضوعة بداخل المصفوفة printOrderDetails() الدالة
+void Company::printOrderDetails(int id)
+{
+    // سنستخدمه لحساب ناتج جمع جميع أسعار المنتجات التي نجدها في الفاتورة totalSum المتغير
+    float totalSum = 0;
+
+    // orders بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+    for (unsigned i = 0; i &lt; orders.size(); i++)
+    {
+        // الذي مررناه للدالة سيتم طباعة كل معلوماته و من ثم الخروج من الدالة id الحالي يملك نفس رقم الـ orders[i] في حال كان الكائن
+        if (orders[i].id == id)
+        {
+            cout &lt;&lt; "Order with id " &lt;&lt; id &lt;&lt; " details.\n";
+            cout &lt;&lt; "Date: " &lt;&lt; orders[i].date &lt;&lt; "\n";
+            cout &lt;&lt; "Is paid: " &lt;&lt; ((orders[i].isPaid)? "Yes": "no") &lt;&lt; "\n";
+            cout &lt;&lt; "Ordered by: " &lt;&lt; orders[i].person-&gt;name &lt;&lt; "\n";
+            cout &lt;&lt; "Products:\n";
+
+            // orders[i] التي تملكها الفاتورة products بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+			// و سنطبع إسمه و سعره totalSum كل منتج نمر عليه, سنقوم بإضافة ثمنه على قيمة المتغير
+            for (unsigned j = 0; j &lt; orders[i].products.size(); j++)
+            {
+                totalSum += orders[i].products[j].price;
+                cout &lt;&lt; "- " &lt;&lt; orders[i].products[j].name &lt;&lt; ": " &lt;&lt; orders[i].products[j].price &lt;&lt; "$\n";
+            }
+			
+			// بعد أن يتم حساب ناتج جمع جميع أسعار المنتجات الموضوعة في الفاتورة سيتم عرض الناتج و من ثم الخروج من الدالة
+            cout &lt;&lt; "Total: " &lt;&lt; totalSum &lt;&lt; "$\n";
+            cout &lt;&lt; "----------------------\n";
+            return;
+        }
+    }
+    // الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ orders في حال لم يتم إيجاد أي كائن في المصفوفة
+    cout &lt;&lt; "Order with id " &lt;&lt; id &lt;&lt; " is not found!\n";
+    cout &lt;&lt; "----------------------\n";
+}
+
+// الخاص به id بالإعتماد على رقم الـ orders يمكن استخدامها لطباعة كل المعلومات المتوفرة حول فواتير شخص موضوع بداخل المصفوفة printPersonOrders() الدالة
+void Company::printPersonOrders(int id)
+{
+    // persons بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+    for (unsigned i = 0; i &lt; persons.size(); i++)
+    {
+        // الذي مررناه للدالة سيتم المرور على جميع فواتيره id الحالي يملك نفس رقم الـ persons[i] في حال كان الكائن
+        if (persons[i]-&gt;id == id)
+        {
+            cout &lt;&lt; "All orders made by person with id " &lt;&lt; id &lt;&lt; ":\n";
+
+			// orders بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+            for (unsigned j = 0; j &lt; orders.size(); j++)
+            {
+                // الذي مررناه للدالة سيتم طباعة كل معلوماته و من ثم الخروج من الدالة  id الحالي يملك نفس رقم الـ orders[i] في حال كان الكائن
+                if (orders[j].person-&gt;id == id)
+                {
+                    cout &lt;&lt; "&gt; Order with id " &lt;&lt; id &lt;&lt; " details.\n";
+                    cout &lt;&lt; "  Date: " &lt;&lt; orders[j].date &lt;&lt; "\n";
+                    cout &lt;&lt; "  Is paid: " &lt;&lt; ((orders[j].isPaid)? "Yes": "no") &lt;&lt; "\n";
+                    cout &lt;&lt; "  Ordered by: " &lt;&lt; orders[j].person-&gt;name &lt;&lt; "\n";
+                    cout &lt;&lt; "  Products:\n";
+
+                    // سنستخدمه لحساب ناتج جمع جميع أسعار المنتجات التي نجدها في كل فاتورة totalSum المتغير
+                    float totalSum = 0;
+
+                    // orders[j] التي تملكها الفاتورة products بواسطة هذه الحلقة سنمر على جميع الكائنات المخزنة بداخل المصفوفة
+					// و سنطبع إسمه و سعره totalSum كل منتج نمر عليه, سنقوم بإضافة ثمنه على قيمة المتغير
+					for (unsigned k = 0; k &lt; orders[j].products.size(); k++)
+                    {
+                        totalSum += orders[j].products[k].price;
+                        cout &lt;&lt; "- " &lt;&lt; orders[j].products[k].name &lt;&lt; ": " &lt;&lt; orders[j].products[k].price &lt;&lt; "$\n";
+                    }
+
+					// بعد أن يتم حساب ناتج جمع جميع أسعار المنتجات الموضوعة في الفاتورة سيتم عرض الناتج
+                    cout &lt;&lt; "Total: " &lt;&lt; totalSum &lt;&lt; "$\n";
+                }
+            }
+
+			// بعد طباعة جميع الفواتير سيتم الخروج من الدالة
+            cout &lt;&lt; "----------------------\n";
+            return;
+        }
+    }
+
+    // الذي تم تمريره للدالة سيتم طباعة الجملة التالية id يملك نفس رقم الـ authors في حال لم يتم إيجاد أي كائن في المصفوفة
+    cout &lt;&lt; "Person with id " &lt;&lt; id &lt;&lt; " is not found!\n";
+    cout &lt;&lt; "----------------------\n";
+}
+		</pre>
+<br/>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+#include "Client.h"
+#include "Employee.h"
+#include "Product.h"
+#include "Order.h"
+#include "Company.h"
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main()
+{
+    // أي كأننا قمنا بإنشاء شخصين Person هنا قمنا بإنشاء كائنين من كلاسات ترث من الكلاس
+    // و بالتالي فإنه يمثل شخص يعتبر زبون Client عبارة عن كائن من الكلاس person1
+    // و بالتالي فإنه يمثل شخص يعتبر موظف Employee عبارة عن كائن من الكلاس person2
+    Client person1("Mhamad", "+96170123456", "Male", "mhamad@example.com");
+    Employee person2("Nadine", "+9631249392", "Female", 800, "8:00 AM to 3:00 PM");
+
+	// company الموجودة في الكائن persons لأننا ننوي تمريرهم بعد قليل للمصفوفة person2 و مؤشر للكائن person1 هنا قمنا بإنشاء مؤشر للكائن
+    Client *person1_pointer = &amp;person1
+    Employee *person2_pointer = &amp;person2
+
+    // و التي تمثل 6 منتجات Product هنا قمنا بتعريف 6 كائنات من الكلاس
+    Product product1 = Product("Keyboard", 15);
+    Product product2 = Product("Camera", 45);
+    Product product3 = Product("HDD 1TB", 70);
+    Product product4 = Product("SSD 1TB", 274.66);
+    Product product5 = Product("Mouse", 8);
+    Product product6 = Product("Table", 44.55);
+
+    // product3 و product2 و product1 وضعنا فيه الكائنات vector هنا قمنا بتعريف كائن من الكلاس
+    // و الذي سننئه بعد قليل order1 لأننا ننوي وضعها في مصفوفة المنتجات التي تم شراءها في الفاتورة التي يمثلها الكائن
+    vector&lt;Product&gt; order1Products;
+    order1Products.push_back(product1);
+    order1Products.push_back(product2);
+    order1Products.push_back(product3);
+
+    // product4 وضعنا فيه الكائن vector هنا قمنا بتعريف كائن من الكلاس
+    // و الذي سننئه بعد قليل order2 لأننا ننوي وضعه في مصفوفة المنتجات التي تم شراءها في الفاتورة التي يمثلها الكائن
+    vector&lt;Product&gt; order2Products;
+    order2Products.push_back(product4);
+
+    // product5 و product6 وضعنا فيه الكائنات vector هنا قمنا بتعريف كائن من الكلاس
+    // و الذي سننئه بعد قليل order3 لأننا ننوي وضعها في مصفوفة المنتجات التي تم شراءها في الفاتورة التي يمثلها الكائن
+    vector&lt;Product&gt; order3Products;
+    order3Products.push_back(product5);
+    order3Products.push_back(product6);
+
+    // و التي تمثل فواتير Order هنا قمنا بتعريف 3 كائنات من الكلاس
+    // person1 وضعناهما لنفس الشخص الذي يمثله مؤشر الكائن order2 و order1 لاحظ أن الفاتورتين
+    Order order1 = Order("2020-1-1", true, person1_pointer, order1Products);
+    Order order2 = Order("2020-2-7", true, person1_pointer, order2Products);
+    Order order3 = Order("2020-5-4", false, person2_pointer, order3Products);
+
+    // لأننا نريد تخزين الأشخاص و المنتجات و الفواتير بشكل مرتب بداخله Company هنا قمنا بإنشاء كائن من الكلاس
+    Company company = Company();
+
+    // addPerson() بواسطة الدالة company التي يمكلها الكائن persons هنا قمنا بإضافة الشخصين من خلال مؤشراتهم في المصفوفة
+    company.addPerson(person1_pointer);
+    company.addPerson(person2_pointer);
+
+    // addProduct() بواسطة الدالة company التي يمكلها الكائن products هنا قمنا بإضافة المنتجات في المصفوفة
+    company.addProduct(product1);
+    company.addProduct(product2);
+    company.addProduct(product3);
+    company.addProduct(product4);
+    company.addProduct(product5);
+    company.addProduct(product6);
+
+    // addOrder() بواسطة الدالة company التي يمكلها الكائن orders هنا قمنا بإضافة الفواتير في المصفوفة
+    company.addOrder(order1);
+    company.addOrder(order2);
+    company.addOrder(order3);
+
+    // printPersonInfo() الخاص بهم و بواسطة الدالة id هنا قمنا بطباعة معلومات كلا الشخصين بالإعتماد على رقم التعرفة
+    // تذكر: رقم التعرفة الخاص بكل شخص تم إنشاؤه بشكل تلقائي عند إنشاء كل شخص بداخل الكونستركتور
+    company.printPersonInfo(1);
+    company.printPersonInfo(2);
+
+    // printProductDetails() الخاص بهم و بواسطة الدالة id هنا قمنا بطباعة معلومات كل المنتجات بالإعتماد على رقم التعرفة
+    // تذكر: رقم التعرفة الخاص بكل منتج تم إنشاؤه بشكل تلقائي عند إنشاء كل منتج بداخل الكونستركتور
+    company.printProductDetails(1);
+    company.printProductDetails(2);
+    company.printProductDetails(3);
+    company.printProductDetails(4);
+    company.printProductDetails(5);
+    company.printProductDetails(6);
+
+    // printPersonOrders() الخاص بهم و بواسطة الدالة id هنا قمنا بطباعة الفواتير التي يملكها كل شخص بالإعتماد على رقم التعرفة
+    company.printPersonOrders(1);
+    company.printPersonOrders(2);
+
+    // removeOrder() هنا قمنا الفاتورة التي تملك رقم التعرفة 1 بواسطة الدالة
+    // printOrderDetails() بعدها حاولنا طباعة معلومات الفاتورة التي قمنا بحذفها بواسطة الدالة
+    // بعدها قمنا بطباعة جمبع الفواتير التي يمكلها الشخص الذي يملك رقم التعرفة 1 و الذي كان يملك الفاتورة التي تم حذفها
+    // لاحظ أن الفاتورة المحذوفة أيضاَ لم تظر ضمن فواتيره
+    company.removeOrder(1);
+    company.printOrderDetails(1);
+    company.printPersonOrders(1);
+
+    return 0;
+}
+		</pre>
+<br/>
+<p>سنحصل على النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+			Person with id 1 info. <span class="red">  --&gt; الموضوعة في السطر 77 printPersonInfo() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Mhamad
+			<br/>Phone: +96170123456
+			<br/>Gender: Male
+			<br/>Email: mhamad@example.com
+			<br/>----------------------
+			<br/>Person with id 2 info. <span class="red">  --&gt; الموضوعة في السطر 78 printPersonInfo() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Nadine
+			<br/>Phone: +9631249392
+			<br/>Gender: Female
+			<br/>Salary: 800.0$
+			<br/>Working time: 8:00 AM to 3:00 PM
+			<br/>----------------------
+			<br/>Product with id 1 details. <span class="red">  --&gt; الموضوعة في السطر 82 printProductDetails() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Keyboard
+			<br/>Price: 15.0$
+			<br/>----------------------
+			<br/>Product with id 2 details. <span class="red">  --&gt; الموضوعة في السطر 83 printProductDetails() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Camera
+			<br/>Price: 45.0$
+			<br/>----------------------
+			<br/>Product with id 3 details. <span class="red">  --&gt; الموضوعة في السطر 84 printProductDetails() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: HDD 1TB
+			<br/>Price: 70.0$
+			<br/>----------------------
+			<br/>Product with id 4 details. <span class="red">  --&gt; الموضوعة في السطر 85 printProductDetails() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: SSD 1TB
+			<br/>Price: 274.66$
+			<br/>----------------------
+			<br/>Product with id 5 details. <span class="red">  --&gt; الموضوعة في السطر 86 printProductDetails() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Mouse
+			<br/>Price: 8.0$
+			<br/>----------------------
+			<br/>Product with id 6 details. <span class="red">  --&gt; الموضوعة في السطر 87 printProductDetails() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>Name: Table
+			<br/>Price: 44.55$
+			<br/>----------------------
+			<br/>All orders made by person with id 1: <span class="red">  --&gt; الموضوعة في السطر 90 printPersonOrders() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>&gt; Order: #1
+			<br/>  Date: 2020-1-1
+			<br/>  Is paid: yes
+			<br/>  Ordered by: Mhamad
+			<br/>  Products:
+			<br/>  - Keyboard: 15.0$
+			<br/>  - Camera: 45.0$
+			<br/>  - HDD 1TB: 70.0$
+			<br/>  Total Price: 130.0$
+			<br/>&gt; Order: #2
+			<br/>  Date: 2020-2-7
+			<br/>  Is paid: yes
+			<br/>  Ordered by: Mhamad
+			<br/>  Products:
+			<br/>  - SSD 1TB: 274.66$
+			<br/>  Total Price: 274.66$
+			<br/>----------------------
+			<br/>All orders made by person with id 2: <span class="red">  --&gt; الموضوعة في السطر 91 printPersonOrders() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>&gt; Order: #3
+			<br/>  Date: 2020-5-4
+			<br/>  Is paid: no
+			<br/>  Ordered by: Nadine
+			<br/>  Products:
+			<br/>  - Mouse: 8.0$
+			<br/>  - Table: 44.55$
+			<br/>  Total Price: 52.55$
+			<br/>----------------------
+			<br/>Order with id 1 is not found! <span class="red">  --&gt; الموضوعة في السطر 98 printOrderDetails() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>----------------------
+			<br/>All orders made by person with id 1: <span class="red">  --&gt; الموضوعة في السطر 99 printPersonInfo() تم عرض هذا المحتوى بسبب استدعاء الدالة</span>
+<br/>&gt; Order: #2
+			<br/>  Date: 2020-2-7
+			<br/>  Is paid: yes
+			<br/>  Ordered by: Mhamad
+			<br/>  Products:
+			<br/>  - SSD 1TB: 274.66$
+			<br/>  Total Price: 274.66$
+			<br/>----------------------
+		</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

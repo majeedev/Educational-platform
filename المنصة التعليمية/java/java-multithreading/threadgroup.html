@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>الكلاس ThreadGroup في جافا | Java util.Thread</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>الكلاس <code data-enlighter-language="java">ThreadGroup</code> في جافا</h1>
+<article>
+<h2>مقدمة</h2>
+<p>الكلاس <code data-enlighter-language="java">ThreadGroup</code> يجعلك قادراً على التحكم بطريقة عمل مجموعة كائنات <code data-enlighter-language="java">Thread</code> دفعة واحدة.</p>
+<p>فمثلاُ في حال قمت ببناء لعبة فيها إثنين <span class="word">Thread</span> يعملان في نفس الوقت أثناء تشغيلها, الأول يعرض المدة المتبقية لإنتهاء المرحلة و الثاني يشغل أغنية حماسية يسمعها اللاعب أثناء اللعب. هنا بما أن الـ <span class="word">Thread</span> الأول و الـ <span class="word">Thread</span> الثاني يعملان و يتوقفان مع بعض, فإنه من الأفضل و الأسهل لك أن تضعهما في مجموعة واحدة للتحكم بهما دفعة واحدة بدل أن تقوم بتشغيل و إيقاف كل <span class="word">Thread</span> منهما على حدة.</p>
+<p>كائن الـ <code data-enlighter-language="java">ThreadGroup</code> الواحد يستطيع إحتواء عدة كائنات <code data-enlighter-language="java">Thread</code>, بالإضافة إلى أنه قادر على إحتواء كائنات <code data-enlighter-language="java">ThreadGroup</code> أيضاً.</p>
+<br/>
+<h2>بناؤه</h2>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+public class ThreadGroup
+extends Object
+implements Thread.UncaughtExceptionHandler
+	</pre>
+</article>
+<article>
+<h2>التعامل مع الكلاس <code data-enlighter-language="java">ThreadGroup</code></h2>
+<p>لجعل كائن الـ <code data-enlighter-language="java">Thread</code> ينتمي لكائن <code data-enlighter-language="java">ThreadGroup</code> محدد <span class="inline">( أي لمجموعة محددة )</span>, عليك ربطه به ككائن نوعه <code data-enlighter-language="java">Runnable</code>.</p>
+<br/>
+<h3>خطوات بناء كلاس يطبق الإنترفيس <code data-enlighter-language="java">Runnable</code></h3>
+<p>الكلاس الذي يطبق الإنترفيس <code data-enlighter-language="java">Runnable</code> عليه القيام بالخطوات التالية:</p>
+<ol class="arabic">
+<li><p>تطبيق الإنترفيس <code data-enlighter-language="java">Runnable</code>, أي أن يفعل له <code data-enlighter-language="java">implements</code>.</p></li>
+<li><p>كتابة محتوى الدالة <code data-enlighter-language="java">run()</code>, أي أن يفعل لها <span class="word">Override</span> و يضع فيها جميع الأوامر التي يريدها أن تتنفذ عند تشغيل كائن الـ <code data-enlighter-language="java">Thread</code>.</p></li>
+</ol>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">MyRunnable.java</span>
+<pre data-enlighter-language="java">
+public class MyRunnable implements Runnable {
+
+    @Override
+    public void run(){
+        // Thread من كائن من الكلاس start() هنا تضع الأوامر التي تريد تنفيذها عند إستدعاء الدالة
+    }
+
+}
+		</pre>
+</div>
+<br/><br/>
+<h3>خطوات إنشاء كائن من الكلاس <code data-enlighter-language="java">ThreadGroup</code> لإدارة عمل مجموعة كائنات من الكلاس <code data-enlighter-language="java">Thread</code></h3>
+<p>لإنشاء كائن من الكلاس الذي يطبق الإنترفيس <code data-enlighter-language="java">Runnable</code> و ضمه إلى مجموعة محددة, عليك إتباع الخطوات التالية:</p>
+<ol class="arabic">
+<li><p>إنشاء كائن من الكلاس <code data-enlighter-language="java">ThreadGroup</code>, أي إنشاء مجموعة جديدة.</p></li>
+<li><p>إنشاء كائن من الكلاس الذي يرث من الإنترفيس <code data-enlighter-language="java">Runnable</code>.</p></li>
+<li><p>إنشاء كائن من الكلاس <code data-enlighter-language="java">Thread</code>, و تمرير كائن الـ <code data-enlighter-language="java">Runnable</code> و كائن الـ <code data-enlighter-language="java">ThreadGroup</code> كـ <span class="word">Arguments</span> له.</p></li>
+<li><p>تشغيل كائن الـ <code data-enlighter-language="java">Thread</code> بواسطة الدالة <code data-enlighter-language="java">start()</code>.</p></li>
+<li><p>بعدها يمكنك التعامل مع الكائن <code data-enlighter-language="java">ThreadGroup</code> للتحكم بجميع كائنات الـ <code data-enlighter-language="java">Thread</code> التي تنتمي إليه.</p></li>
+</ol>
+<br/>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">MainThreadGroup.java</span>
+<pre data-enlighter-language="java">
+public class MainThreadGroup {
+
+    public static void main(Strigns[] args)){
+
+        ThreadGroup tg = new ThreadGroup("tg group");     // tg group و قمنا بتسمية هذه المجموعة tg إسمه ThreadGroup هنا قمنا بإنشاء كائن من الكلاس
+
+        MyRunnable mr = new MyRunnable();                 // MyRunnable هنا قمنا بإنشاء كائن من الكلاس الذي يطبق الإنترفيس
+
+        Thread t = new Thread(tg, mr);                    // tg و بالمجموعة mr و ربطه بالكائن Thread هنا قمنا بإنشاء كائن من الكلاس
+
+        t.start();                                        // start() بواسطة الدالة run() هنا قمنا بتشغيل أوامر الدالة
+
+    }
+
+} 
+		</pre>
+</div>
+</article>
+<article>
+<h2>كونستركتورات الكلاس <code data-enlighter-language="java">ThreadGroup</code></h2>
+<p>في الجدول التالي ذكرنا جميع كونستركتورات الكلاس <code data-enlighter-language="java">ThreadGroup</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الكونستركتور مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public ThreadGroup(String name)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">ThreadGroup</code> مع تحديد إسمه.<br/>
+			الأب لهذا الكائن يكون الـ <code data-enlighter-language="java">Thread</code> الحالي الذي قام بإنشائه.<br/>
+			يرمي الإستثناء <span class="code red">SecurityException</span> في حال كان الـ <code data-enlighter-language="java">Thread</code> الحالي لا يملك صلاحية إنشاء كائن <code data-enlighter-language="java">ThreadGroup</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public ThreadGroup(ThreadGroup group, String name)</code></span>
+			ينشئ كائن نوعه <code data-enlighter-language="java">ThreadGroup</code> و يضعه ضمن مجموعة محددة, مع تحديد إسمه.<br/><br/>
+<b>باراميترات</b>
+<ul class="explain">
+<li><p><code data-enlighter-language="java">group</code> عبارة عن كائن نوعه <code data-enlighter-language="java">ThreadGroup</code> يمثل المجموعة التي سيتم وضع هذا الكائن فيها.</p></li>
+<li><p><code data-enlighter-language="java">name</code> عبارة عن إسم يتم إعطاءه لكائن الـ <code data-enlighter-language="java">ThreadGroup</code> الذي سيتم إنشاءه و وضعه ضمن المجموعة المذكورة.</p></li>
+</ul><br/>
+			يرمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">Thread</code> الحالي لا يملك صلاحية إنشاء كائن <code data-enlighter-language="java">ThreadGroup</code> جديد بداخل المجموعة المشار إليها.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>دوال الكلاس <code data-enlighter-language="java">ThreadGroup</code></h2>
+<p>الجدول التالي يحتوي على دوال الكلاس <code data-enlighter-language="java">ThreadGroup</code>.</p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final String getName()</code></span>
+			ترجع إسم كائن الـ <code data-enlighter-language="java">ThreadGroup</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String toString()</code></span>
+			ترجع نص يمثل معلومات كائن الـ <code data-enlighter-language="java">ThreadGroup</code> الذي قام باستدعائها. المعلومات عبارة عن <span class="inline">( <span class="word">Priority</span> - <span class="word">Name</span> )</span>.<br/>
+<ul class="explain">
+<li><p><span class="word">Name</span>: هو إسم كائن الـ <code data-enlighter-language="java">ThreadGroup</code>.</p></li>
+<li><p><span class="word">Priority</span>: هو أولية التفيذ المعطاة لكائن الـ <code data-enlighter-language="java">ThreadGroup</code>.</p></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final ThreadGroup getParent()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">ThreadGroup</code> يمثل الـ <code data-enlighter-language="java">ThreadGroup</code> الأب الذي تم فيه إنشاء هذا الكائن أو المجموعة التي ينتمي لها كائن <code data-enlighter-language="java">ThreadGroup</code> الذي قام باستدعائها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int activeCount()</code></span>
+			تستخدم لمعرفة عدد الـ <span class="word">threads</span> الذين يعملون ضمن كائن الـ <code data-enlighter-language="java">ThreadGroup</code> لحظة استدعائها.<br/>
+			تستخدم فقط في حالة الـ <span class="word">Debugging</span>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final void setDaemon(boolean on)</code></span>
+			تستخدم لتحويل كائن الـ <code data-enlighter-language="java">ThreadGroup</code> الذي قام باستدعائها إلى <span class="word">Daemon ThreadGroup</span>.<br/>
+			الـ <span class="word">Daemon ThreadGroup</span> يستدعي الدالة <code data-enlighter-language="java">destroy()</code> عندما لا يبقى أي <code data-enlighter-language="java">Thread</code> في حالة التنفيذ.<br/>
+			في حال قمت بتمرير القيمة <code data-enlighter-language="java">true</code> لها كـ <span class="word">Argument</span>, سيتم معاملة كائن الـ <code data-enlighter-language="java">ThreadGroup</code> كــ <span class="word">Daemon ThreadGroup</span>.<br/>
+			غير ذلك سيتم إعتباره كائن <code data-enlighter-language="java">ThreadGroup</code> عادي.<br/><br/>
+			ترمي الإستثناء <span class="code red">IllegalArgumentException</span> في حال كان كائن الـ <code data-enlighter-language="java">ThreadGroup</code> شغالا أثناء استدعاءها.<br/>
+			و ترمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">ThreadGroup</code> الحالي لا يملك صلاحية تغييرها.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final boolean isDaemon()</code></span>
+			تستخدم لمعرفة إذا كان كائن الـ <code data-enlighter-language="java">ThreadGroup</code> الذي قام باستدعائها هو <span class="word">Daemon ThreadGroup</span> أم لا.<br/>
+			ترجع <code data-enlighter-language="java">true</code> إذا كان كذلك, غير ذلك ترجع <code data-enlighter-language="java">false</code>.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final void suspend()</code></span>
+			توقف تنفيذ أوامر جميع كائنات الـ <code data-enlighter-language="java">Thread</code> و الـ <code data-enlighter-language="java">ThreadGroup</code> التابعة للكائن <code data-enlighter-language="java">ThreadGroup</code> الذي قام باستدعائها لمدة غير محددة, بحيث لا يمكنهم العودة للعمل من جديد إلا إذا قام باستدعاء الدالة <code data-enlighter-language="java">resume()</code> بعدها.<br/>
+			ترمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">ThreadGroup</code> لا يملك صلاحية التعديل على كائنات الـ <code data-enlighter-language="java">Thread</code> أو الـ <code data-enlighter-language="java">ThreadGroup</code> التابعة له و المتوقفة عن العمل.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final void resume()</code></span>
+			تكمل تنفيذ أوامر جميع كائنات الـ <code data-enlighter-language="java">Thread</code> و الـ <code data-enlighter-language="java">ThreadGroup</code> التابعة للكائن <code data-enlighter-language="java">ThreadGroup</code> بعد أن كان قد قام بإيقاف تنفيذهم في حال قام بإيقافهم بواسطة الدالة <code data-enlighter-language="java">suspend()</code>.<br/>
+			ترمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">ThreadGroup</code> لا يملك صلاحية التعديل على كائنات الـ <code data-enlighter-language="java">Thread</code> أو الـ <code data-enlighter-language="java">ThreadGroup</code> التابعة له و المتوقفة عن العمل.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final void stop()</code></span>
+			توقف جميع كائنات الـ <code data-enlighter-language="java">Thread</code> و الـ <code data-enlighter-language="java">ThreadGroup</code> التابعة للكائن<code data-enlighter-language="java">ThreadGroup</code> الذي قام باستدعائها, بحيث لا يمكنهم العودة للعمل من جديد.<br/>
+			ترمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">ThreadGroup</code> لا يملك صلاحية التعديل على كائنات الـ <code data-enlighter-language="java">Thread</code> أو الـ <code data-enlighter-language="java">ThreadGroup</code> التابعة له و المتوقفة عن العمل.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public final void interrupt()</code></span>
+			ترسل إشارة إلى الـ <span class="word">JVM</span> لمقاطعة عمل جميع كائنات الـ <code data-enlighter-language="java">Thread</code> و الـ <code data-enlighter-language="java">ThreadGroup</code> التابعة للكائن <code data-enlighter-language="java">ThreadGroup</code> الذي قام باستدعائها.<br/>
+			في حال كان كائن الـ <code data-enlighter-language="java">ThreadGroup</code> غير شغال بعد لا تؤثر عليه أيضاً.<br/><br/>
+			ترمي الإستثناء <span class="code red">SecurityException</span> في حال كان كائن الـ <code data-enlighter-language="java">ThreadGroup</code> الحالي لا يملك صلاحية التعديل على كائنات الـ <code data-enlighter-language="java">Thread</code> و الـ <code data-enlighter-language="java">ThreadGroup</code> التابعة له.</td>
+</tr>
+</table>
+</article>
+<article>
+<h2>مثال شامل</h2>
+<p>في المثال التالي قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">MyRunnable</code> يطبق الإنترفيس <code data-enlighter-language="java">Runnable</code>.<br/>
+	بعدها فعلنا <span class="word">Override</span> للدالة <code data-enlighter-language="java">run()</code> لجعلها تطبع إسم كائن الـ <code data-enlighter-language="java">Thread</code> الذي قام باستدعائها بدون أن تتوقف.</p>
+<p>ثم قمنا بإنشاء كلاس إسمه <code data-enlighter-language="java">Main</code> لتجربة إنشاء <code data-enlighter-language="java">ThreadGroup</code> و وضع كائنات من الـ <code data-enlighter-language="java">Thread</code> فيه.</p><br/>
+<div class="example-box">
+<span class="code-title java-file-icon">MyRunnable.java</span>
+<pre data-enlighter-language="java">
+public class MyRunnable implements Runnable {
+ 
+    @Override
+    public void run() {
+        // true ترجع isInterrupted() طالما أن الدالة
+        while(!Thread.currentThread().isInterrupted())
+        {
+            // الذي يتم تنفيذ محتواه في الوقت الحالي Thread سيتم طباعة إسم كائن الـ
+            System.out.println(Thread.currentThread().getName());
+        }
+    }
+ 
+}
+		</pre>
+<br/>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // tg إسمه ThreadGroup هنا قمنا بإنشاء كائن من الكلاس
+        ThreadGroup tg = new ThreadGroup("tg group");
+ 
+        // tg ثم جعلناه ينتمي لمجموعة الكائن t1 إسمه Thread و ربطناه بكائن من الكلاس MyRunnable هنا قمنا بإنشاء كائن من الكلاس
+        Thread t1 = new Thread(tg, new MyRunnable(), "Thread 1");
+ 
+        // tg ثم جعلناه ينتمي لمجموعة الكائن t2 إسمه Thread و ربطناه بكائن من الكلاس MyRunnable هنا قمنا بإنشاء كائن من الكلاس
+        Thread t2 = new Thread(tg, new MyRunnable(), "Thread 2");
+ 
+        // t1 هنا قمنا بتشغيل الكائن
+        t1.start();
+ 
+        // t2 هنا قمنا بتشغيل الكائن
+        t2.start();
+ 
+        // يعدها سيتم إيقاف تنفيذ باقي الأوامر الموجودة في البرنامج مدة ثانية واحدة
+        try {
+            Thread.sleep(1000);
+        }
+        catch(Exception e) {
+            System.out.println(e.getMessage());
+        }
+ 
+        // tg تابع للكائن Thread بعد إنقضاء الثانية سيتم إيقاف تنفيذ كل
+        tg.interrupt();
+ 
+        // في الأخير سيتم عرض الجملة التالية
+        System.out.println("All Threads in 'tg group' are interrupted!");
+ 
+    }
+ 
+}
+		</pre>
+<br/>
+<p><span class="point">•</span> سنحصل على نتيجة تشبه النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Thread 2
+Thread 1
+Thread 1
+Thread 2
+Thread 2
+Thread 2
+Thread 1
+Thread 2
+Thread 2
+Thread 2
+Thread 2
+Thread 1
+Thread 1
+Thread 1
+All Threads in 'tg group' are interrupted!
+		</pre>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

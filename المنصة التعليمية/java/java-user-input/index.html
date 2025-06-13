@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>إدخال البيانات في جافا | Input data from user in java</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="../java-multithreading/index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>إدخال البيانات في جافا</h1>
+<article>
+<h2>مفهوم إدخال البيانات في جافا</h2>
+<p>في الدروس السابقة, كنا نكتب الكود ثم نقوم بتجربته فيتنفذ كما هو, بمعنى أننا كنا أصلاً نعرف ما سيظهر عند تشغيل الكود لأننا قمنا بإدخال القيم في المتغيرات قبل تشغيل البرنامج.<br/>
+	في هذا الدرس ستتعلم كيف تنشئ برنامح يتفاعل مع المستخدم, حيث أنك عندما تقوم بتشغيله سيطلب من المستخدم إدخال بيانات, و بعد إدخالها سيقوم البرنامج بمعالجتها و فعل شيء معين بها.</p>
+<p>الكلاس <code data-enlighter-language="java">Scanner</code> هو كلاس جاهز في جافا, يستخدم بشكل عام لجعل البرنامج يستقبل بيانات من المستخدم بالإضافة إلى إمكانية تحويل نوع هذه البيانات و التعديل عليها. و هو كبير جداُ حيث أنه يتألف من <span class="number">9</span> كونستركتورات و أكثر من <span class="number">50</span> دالة.</p><br/>
+<h3>أنواع البيانات التي يمكن إستقبالها باستخدام الكلاس <code data-enlighter-language="java">Scanner</code></h3>
+<ul class="explain">
+<li><p>أعداد صحيحة, أي أعداد لا تقبل الفاصلة, مثال: <code data-enlighter-language="java">123</code></p></li>
+<li><p>أعداد تقبل الفاصلة العشرية, مثال: <code data-enlighter-language="java">10.55</code></p></li>
+<li><p>حرف واحد ( سواء حرف, رقم, رمز ), مثال: <code data-enlighter-language="java">a</code> أو <code class="number">3</code> أو <code data-enlighter-language="java">@</code></p></li>
+<li><p>كلمة واحدة, مثل <code data-enlighter-language="java">harmash</code></p></li>
+<li><p>سطر كامل ( أي أكثر من كلمة ), مثال: <code data-enlighter-language="java">harmash.com is one of the best sites to learn programming</code></p></li>
+<li><p>صح أو خطأ, أي إجبار المستخدم على إدخال كلمة واحدة و هي إما <code data-enlighter-language="java">true</code> و إما <code data-enlighter-language="java">false</code></p></li>
+</ul>
+<br/>
+<p>إذاً كل نوع بيانات تريد إستقباله في البرنامج له دالة خاصة ستتعرف عليها لاحقاً.</p>
+<br/>
+<h3>مصطلحات تقنية</h3>
+<ul class="explain">
+<li><p><span class="word">Delimiter</span> تعني <span class="inline">الـ <span class="word">Pattern</span></span> المستخدمة في تحديد شكل المسافات الفارغة <span class="inline"><span class="word">White Spaces</span>.</span><br/>
+		سترى لاحقاً أنه بإمكانك جعل مترجم جافا يعتبر حرف أو كلمة أو جملة ما تبدو و كأنها مسافة فارغة <span class="inline"><span class="word">White Space</span>.</span></p></li>
+<li><p><span class="word">Console Application</span> تعني البرنامج الذي يعمل بدون واجهة مستخدم <span class="inline">( أي بدون <span class="word">GUI</span>).</span><br/>
+	    إذاً جميع البرامج التي فعلناها في الدروس السابقة تسمى <span class="word">Console Application</span> لأن النتيجة التي كنا نراها عند تشغيل البرنامج, كانت تظهر في ما يسمى <span class="inline"><span class="word">Console</span>.</span></p></li>
+</ul>
+</article>
+<article>
+<h2>طريقة جعل البرنامج يستقبل بيانات من المستخدم في جافا</h2>
+<p>في لغة جافا لكي تجعل البرنامج يستقبل معلومات من المستخدم عليك إتباع <span class="red">ثلاث</span> خطوات أساسية:</p>
+<ol class="arabic">
+<li><p>إستدعاء الكلاس <code data-enlighter-language="java">Scanner</code> الذي يحتوي على دوال إدخال المعلومات من المستخدمين.</p></li>
+<li><p>إنشاء كائن من هذا الكلاس لأنك لا تستطيع إستخدام دوال الكلاس <code data-enlighter-language="java">Scanner</code> إلا من خلال الكائن الذي يشير إليه.</p></li>
+<li><p>إستدعاء إحدى دوال إدخال المعلومات من هذا الكائن.</p></li>
+</ol>
+<br/><br/>
+<p>إذاً ستحتاج إلى الأوامر التالية في كل برنامج <span class="inline">( يعتبر <span class="word">Console Application</span> )</span> تطلب فيه من المستخدم إدخال بيانات من لوحة المفاتيح.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<ol class="arabic">
+<li><p>إستدعاء الكلاس <code data-enlighter-language="java">Scanner</code> حتى نستطيع إنشاء كائن منه.</p></li>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+import java.util.Scanner; 
+			</pre>
+<br/>
+<li><p>إنشاء كائن من الكلاس <span class="inline"><code data-enlighter-language="java">Scanner</code>,</span> هنا قمنا بتسميته <code data-enlighter-language="java">input</code>.</p></li>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+Scanner input = new Scanner(System.in); 
+			</pre>
+<br/>
+<li><p>إستدعاء إحدى دوال إدخال البيانات من خلال كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> الذي يفترض أنك قمت بإنشائه سابقاً.<br/>
+			هنا قمنا بإستدعاء الدالة <code data-enlighter-language="java">nextInt()</code> من هذا الكائن و التي تعني أنه عند تشغيل البرنامج و عندما يأتي لتنفيذ هذا الكود, سيقوم بإنتظار المستخدم لإدخال عدد صحيح من لوحة المفاتيح, بعدها سيتم تخزين ما أدخله المستخدم في المتغير <span class="inline"><code data-enlighter-language="java">a</code>.</span></p></li>
+<pre data-enlighter-language="java" data-enlighter-linenumbers="false">
+int a = input.nextInt();
+			</pre>
+</ol>
+</div>
+<br/>
+<h3 class="note-title">إنتبه</h3>
+<div class="note-box">
+<p>دائماً ضع دوال إستقبال البيانات بداخل الجملة <span class="inline"><code data-enlighter-language="java">try</code>,</span> و لا تنسى ايضاً إغلاق كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> بواسطة الدالة <code data-enlighter-language="java">close()</code> مباشرةً عند الإنتهاء منه لتضمن عدم حدوث أي أخطاء من شأنها تعليق البرنامج.</p>
+</div>
+</article>
+<article>
+<h2>أمثلة شاملة حول إدخال بيانات من المستخدم في جافا</h2>
+<br/>
+<h3>المثال الأول</h3>
+<p>هنا قمنا بإنشاء برنامج يطلب من المستخدم إدخال إسمه و عمره و مهنته.</p>
+<p><a class="open-page" href="scanner-example-1.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>هنا قمنا بإنشاء برنامج يطلب من المستخدم إدخال علاماته المدرسية و يخزنها في مصفوفة.</p>
+<p><a class="open-page" href="scanner-example-2.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الثالث</h3>
+<p>هنا قمنا بإنشاء برنامج يطلب من المستخدم إدخال معلومات, بعد إدخالها يتم تخزينها في ملف ثم يتم عرضها من هذا الملف من جديد.</p>
+<p><a class="open-page" href="scanner-example-3.html" target="_blank">شاهد المثال »</a></p>
+</article>
+<article>
+<h2>كونستركتورات الكلاس <code data-enlighter-language="java">Scanner</code> في جافا</h2>
+<p>الجدول التالي يحتوي على جميع الـ <span class="word">constructors</span> الموجودين في الكلاس <span class="inline"><code data-enlighter-language="java">Scanner</code>.</span></p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الكونستركتور مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Scanner(File Source)</code></span>
+			يستخدم هذا الكونستركتور لقراءة البيانات من ملف معين.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Scanner(File Source, String charsetName)</code></span>
+			يستخدم هذا الكونستركتور لقراءة البيانات من ملف معين, مع تحديد الترميز المستخدم عند قراءتهم.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Scanner(InputStream source)</code></span>
+			يستخدم هذا الكونستركتور لقراءة البيانات من كائن نوعه <code data-enlighter-language="java">InputStream</code></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Scanner(InputStream source, String charsetName)</code></span>
+			يستخدم هذا الكونستركتور لقراءة البيانات من كائن نوعه <code data-enlighter-language="java">InputStream</code> مع تحديد الترميز المستخدم عند قراءتهم.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Scanner(Path source)</code></span>
+			يستخدم هذا الكونستركتور لقراءة البيانات من الملف الذي يشير له كائن <span class="inline">الـ <code data-enlighter-language="java">Path</code></span></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Scanner(Path source, String charsetName)</code></span>
+			يستخدم هذا الكونستركتور لقراءة البيانات من الملف الذي يشير له كائن <span class="inline">الـ <code data-enlighter-language="java">Path</code></span> مع تحديد الترميز المستخدم عند قراءتهم.</td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Scanner(Readable Source)</code></span>
+			يستخدم هذا الكونستركتور لقراءة البيانات من كائن نوعه <code data-enlighter-language="java">Readable</code></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Scanner(ReadableByteChannel source)</code></span>
+			يستخدم هذا الكونستركتور لقراءة البيانات من كائن نوعه <code data-enlighter-language="java">ReadableByteChannel</code></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Scanner(ReadableByteChannel source, String charsetName)</code></span>
+			يستخدم هذا الكونستركتور لقراءة البيانات من كائن نوعه <code data-enlighter-language="java">ReadableByteChannel</code> مع تحديد الترميز المستخدم عند قراءتهم.</td>
+</tr>
+</table>
+<br/>
+<p>لاحقاً سنستخدم ثابت جاهز في جافا إسمه <code data-enlighter-language="java">System.in</code> لقراءة البيانات التي يدخلها المستخدم من لوحة المفاتيح <span class="inline">(<span class="word">Keyboard</span>).</span><br/>
+	الـ <code data-enlighter-language="java">System.in</code> عبارة عن <code data-enlighter-language="java">InputStream</code> يستخدم لجعل البرنامج يستقبل بيانات المستخدم من لوحة المفاتيح وقت التشغيل.</p>
+</article>
+<article>
+<h2>دوال الكلاس <code data-enlighter-language="java">Scanner</code> في جافا</h2>
+<p><span class="note">ملاحظة:</span> في أغلب الأمثلة الموضوعة في الجدول التالي سنستخدم كونستركتور الكلاس <code data-enlighter-language="java">Scanner</code> الذي يأخذ <code data-enlighter-language="java">String</code> <span class="inline">كـ <span class="word">Argument</span></span> حتى ندخل بيانات مباشرةً في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> بدل إدخالها بواسطة دوال الإدخال. و النتيجة هي نفسها.<br/>
+	كما أننا لن نقوم باستخدام الجمل <span class="inline">( <code data-enlighter-language="java">try</code>, <code data-enlighter-language="java">catch</code>, <code data-enlighter-language="java">finally</code> )</span> حتى يكون التركيز فقط على الدوال التي نريدك أن تركز عليها.</p>
+<p>عند التعامل مع الكلاس <span class="inline"><code data-enlighter-language="java">Scanner</code>,</span> كل دالة تبدأ بكلمة <code data-enlighter-language="java">next</code> تعتبر دالة من دوال الإدخال.<br/>
+<b>أمثلة:</b> <code data-enlighter-language="java">next()</code> - <code data-enlighter-language="java">nextLine()</code> - <code data-enlighter-language="java">nextInt()</code> - <code data-enlighter-language="java">nextFloat()</code> إلخ..</p>
+<br/>
+<p>الجدول التالي يحتوي على دوال الإدخال الموجودة في الكلاس <span class="inline"><code data-enlighter-language="java">java</code>.</span></p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String next()</code></span>
+		    ترجع الكلمة التالية التي تم إدخالها في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code>.</span><br/>
+			و تستخدم ايضاً لإستقبال كلمة واحدة من المستخدم.<br/>
+<a class="open-page" href="scanner-next.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String next(Pattern pattern)</code></span>						
+		    ترجع الكلمة التالية التي تم إدخالها في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> في حال كانت تتطابق مع كائن <span class="inline">الـ <code data-enlighter-language="java">Pattern</code></span> الذي نمرره لها <span class="inline">كـ <span class="word">Argument</span>.</span><br/>
+			و تستخدم ايضاً لإستقبال كلمة واحدة من المستخدم.<br/>
+<a class="open-page" href="scanner-next-pattern.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String next(String pattern)</code></span>	
+			ترجع الكلمة التالية التي تم إدخالها في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> في حال كانت تتطابق مع <span class="inline">الـ <code data-enlighter-language="java">String</code></span> الذي نمرره لها <span class="inline">كـ <span class="word">Argument</span></span> و الذي يمثل <span class="inline"><span class="word">Pattern</span>.</span><br/>
+			و تستخدم ايضاً لإستقبال كلمة واحدة من المستخدم.<br/>
+<a class="open-page" href="scanner-next-string.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String nextLine()</code></span>
+			ترجع السطر التالي الذي تم إدخاله في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code>.</span><br/>
+			و تستخدم ايضاً لإستقبال سطر كامل من المعلومات من المستخدم.<br/>
+<a class="open-page" href="scanner-nextline.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean nextBoolean()</code></span>
+			ترجع القيمة التالية التي تم إدخالها في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> في حال كانت هذه القيمة تعتبر من النوع <span class="inline"><code data-enlighter-language="java">boolean</code>,</span> أي في حال كانت هذه القيمة <code data-enlighter-language="java">true</code> أو <code data-enlighter-language="java">false</code> ستقوم بإرجاعها.<br/>
+			و تستخدم ايضاً لإستقبال قيمة نوعها <code data-enlighter-language="java">boolean</code> من المستخدم.<br/>
+<a class="open-page" href="scanner-nextboolean.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public byte nextByte()</code></span>
+			ترجع القيمة التالية التي تم إدخالها في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> في حال كانت هذه القيمة تعتبر من النوع <span class="inline"><code data-enlighter-language="java">byte</code>.</span><br/>
+			و تستخدم ايضاً لإستقبال قيمة نوعها <code data-enlighter-language="java">byte</code> من المستخدم.<br/>
+<a class="open-page" href="scanner-nextbyte.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public byte nextByte(int radix)</code></span>
+			ترجع القيمة التالية التي تم إدخالها في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> في حال كانت هذه القيمة تعتبر من النوع <code data-enlighter-language="java">byte</code> و كانت تتطابق مع <span class="inline">الـ <code data-enlighter-language="java">radix</code></span> الذي نمرره لها <span class="inline">كـ <span class="word">Argument</span>.</span><br/>
+			و تستخدم ايضاً لإستقبال قيمة نوعها <code data-enlighter-language="java">byte</code> من المستخدم.<br/>
+<a class="open-page" href="scanner-nextbyte-radix.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public double nextDouble()</code></span>
+			ترجع القيمة التالية التي تم إدخالها في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> في حال كانت هذه القيمة تعتبر من النوع <span class="inline"><code data-enlighter-language="java">double</code>.</span><br/>
+			و تستخدم ايضاً لإستقبال قيمة نوعها <code data-enlighter-language="java">double</code> من المستخدم.<br/>
+<a class="open-page" href="scanner-nextdouble.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public float nextFloat()</code></span>
+			ترجع القيمة التالية التي تم إدخالها في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> في حال كانت هذه القيمة تعتبر من النوع <code data-enlighter-language="java">float</code>.<br/>
+			و تستخدم ايضاً لإستقبال قيمة نوعها <code data-enlighter-language="java">float</code> من المستخدم.<br/>
+<a class="open-page" href="scanner-nextfloat.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int nextInt()</code></span>
+			ترجع القيمة التالية التي تم إدخالها في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> في حال كانت هذه القيمة تعتبر من النوع <code data-enlighter-language="java">int</code>.<br/>
+			و تستخدم ايضاً لإستقبال قيمة نوعها <code data-enlighter-language="java">int</code> من المستخدم.<br/>
+<a class="open-page" href="scanner-nextint.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int nextInt(int radix)</code></span>
+			ترجع القيمة التالية التي تم إدخالها في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> في حال كانت هذه القيمة تعتبر من النوع <code data-enlighter-language="java">int</code> و كانت تتطابق مع <span class="inline">الـ <code data-enlighter-language="java">radix</code></span> الذي نمرره لها <span class="inline">كـ <span class="word">Argument</span>.</span><br/>
+            و تستخدم ايضاً لإستقبال قيمة نوعها <code data-enlighter-language="java">int</code> من المستخدم.<br/>
+<a class="open-page" href="scanner-nextint-radix.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public long nextLong()</code></span>
+			ترجع القيمة التالية التي تم إدخالها في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> في حال كانت هذه القيمة تعتبر من النوع <span class="inline"><code data-enlighter-language="java">long</code>.</span><br/>
+			و تستخدم ايضاً لإستقبال قيمة نوعها <code data-enlighter-language="java">long</code> من المستخدم.<br/>
+<a class="open-page" href="scanner-nextlong.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public long nextLong(int radix)</code></span>
+			ترجع القيمة التالية التي تم إدخالها في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> في حال كانت هذه القيمة تعتبر من النوع <code data-enlighter-language="java">long</code> و كانت تتطابق مع <span class="inline">الـ <span class="word">radix</span></span> الذي نمرره لها <span class="inline">كـ <span class="word">Argument</span>.</span><br/>
+            و تستخدم ايضاً لإستقبال قيمة نوعها <code data-enlighter-language="java">long</code> من المستخدم.<br/>
+<a class="open-page" href="scanner-nextlong-radix.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public short nextShort()</code></span>
+			ترجع القيمة التالية التي تم إدخالها في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> في حال كانت هذه القيمة تعتبر من النوع <span class="inline"><code data-enlighter-language="java">short</code>.</span><br/>
+			و تستخدم ايضاً لإستقبال قيمة نوعها <code data-enlighter-language="java">short</code> من المستخدم.<br/>
+<a class="open-page" href="scanner-nextshort.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public short nextShort(int radix)</code></span>
+			ترجع القيمة التالية التي تم إدخالها في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> في حال كانت هذه القيمة تعتبر من النوع <code data-enlighter-language="java">short</code> و كانت تتطابق مع <span class="inline">الـ <code data-enlighter-language="java">radix</code></span> الذي نمرره لها <span class="inline">كـ <span class="word">Argument</span>.</span><br/>
+            و تستخدم ايضاً لإستقبال قيمة نوعها <code data-enlighter-language="java">short</code> من المستخدم.<br/>
+<a class="open-page" href="scanner-nextshort-radix.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+</table>
+<br/><br/>
+<p>الجدول التالي يحتوي على دوال البحث الموجودة في الكلاس <span class="inline"><code data-enlighter-language="java">Scanner</code>.</span></p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String findInLine(Pattern pattern)</code></span>
+			تبحث في <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> الذي قام باستدعائها عن أول مكان يتطابق مع <span class="inline">الـ <code data-enlighter-language="java">Pattern</code></span> التي نمررها لها <span class="inline">كـ <span class="word">Argument</span></span> و ترجعه.<br/>
+<a class="open-page" href="scanner-findinline.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String findInLine(String pattern)</code></span>
+			تبحث في <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> الذي قام باستدعائها عن أول مكان يتطابق مع <span class="inline">الـ <code data-enlighter-language="java">String</code></span> <span class="inline">(التي تمثل <span class="word">Pattern</span>)</span> التي نمررها لها <span class="inline">كـ <span class="word">Argument</span></span> و ترجعه.<br/>
+<a class="open-page" href="scanner-findinline.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String findWithinHorizon(Pattern pattern, int horizon)</code></span>
+			تبحث  في <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> الذي قام باستدعائها عن أول مكان يتطابق مع <span class="inline">الـ <code data-enlighter-language="java">Pattern</code>,</span> و تتوقف في البحث قبل <span class="inline">الـ <span class="word">index</span></span> الذي نضعه في الباراميتر الثاني.<br/>
+<a class="open-page" href="scanner-findwithinhorizon.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String findWithinHorizon(String pattern, int horizon)</code></span>
+			تبحث  في <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> الذي قام باستدعائها عن أول مكان يتطابق مع <span class="inline">الـ <code data-enlighter-language="java">String</code></span> <span class="inline">(الذي يمثل <span class="word">Pattern</span>),</span> و تتوقف في البحث قبل <span class="inline">الـ <span class="word">index</span></span> الذي نضعه في الباراميتر الثاني.<br/>
+<a class="open-page" href="scanner-findwithinhorizon.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public MatchResult match()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">MatchResult</code> يمثل نتيجة آخر عملية بحث تم إجرائها على كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> مع شرح مفصل.<br/>
+			و ترجع <code data-enlighter-language="java">null</code> في حال عدم حدوث أي إستثناء بسبب كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code>.</span><br/>
+<a class="open-page" href="scanner-match.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+</table>
+<br/><br/>
+<p>الجدول التالي يحتوي على دوال التشييك الموجودة في الكلاس <span class="inline"><code data-enlighter-language="java">Scanner</code>.</span></p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean hasNext()</code></span>
+			ترجع <code data-enlighter-language="java">true</code> في حال كان يوجد كلمة تالية في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code>.</span><br/>
+<a class="open-page" href="scanner-hasnext.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean hasNext(Pattern pattern)</code></span>
+			ترجع <code data-enlighter-language="java">true</code> في حال كان يوجد نص تالي في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> قيمته تساوي قيمة نص <span class="inline">الـ <span class="word">Pattern</span></span> التي نمررها لها <span class="inline">كـ <span class="word">Argument</span>.</span><br/>
+<a class="open-page" href="scanner-hasnext-pattern.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean hasNext(String pattern)</code></span>
+			ترجع <code data-enlighter-language="java">true</code> في حال كان يوجد نص تالي في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> قيمته تساوي قيمة <span class="inline">الـ <code data-enlighter-language="java">String</code></span> <span class="inline">(التي تمثل <span class="word">Pattern</span>)</span> التي نمررها لها <span class="inline">كـ <span class="word">Argument</span>.</span><br/>
+<a class="open-page" href="scanner-hasnext-string.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean hasNextInt()</code></span>
+			ترجع <code data-enlighter-language="java">true</code> في حال كان يوجد قيمة تالية في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> يمكن التعامل معها <span class="inline">كـ <code data-enlighter-language="java">int</code>.</span><br/>
+<a class="open-page" href="scanner-hasnextint.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean hasNextInt(int radix)</code></span>
+			ترجع <code data-enlighter-language="java">true</code> في حال كان يوجد قيمة تالية في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> يمكن التعامل معها كـ <code data-enlighter-language="java">int</code> و تتطابق مع <span class="inline">الـ <span class="word">radix</span></span> الذي نمرره لها <span class="inline">كـ <span class="word">Argument</span>.</span><br/>
+<a class="open-page" href="scanner-hasnextint-radix.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public boolean hasNextLine()</code></span>
+			ترجع <code data-enlighter-language="java">true</code> في حال كان يوجد سطر تالي في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code>.</span><br/>
+<a class="open-page" href="scanner-hasnextline.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+</table>
+<br/><br/>
+<p>الجدول التالي يحتوي على دوال المعالجة الموجودة في الكلاس <span class="inline"><code data-enlighter-language="java">Scanner</code>.</span></p>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الدالة مع تعريفها</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public void close()</code></span>
+			تغلق <span class="inline">الـ <code data-enlighter-language="java">Scanner</code>,</span> أي تمنع إدخال أي بيانات جديدة في البرنامج عن طريق كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code>.</span><br/>
+<a class="open-page" href="scanner-close.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Pattern delimiter()</code></span>
+			ترجع <span class="inline">الـ <code data-enlighter-language="java">Pattern</code></span> الذي يستخدمه كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> في تحديد شكل المسافات الفارغة.<br/>
+<a class="open-page" href="scanner-delimiter.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Locale locale()</code></span>
+			ترجع كائن نوعه <code data-enlighter-language="java">Locale</code> يمثل نوع الترميز الذي يستخدمه كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> عند قراءة و تخزين البيانات.<br/>
+<a class="open-page" href="scanner-locale.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public int radix()</code></span>
+			ترجع <span class="inline">الـ <span class="word">radix</span></span> الإفتراضية لكائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code>.</span><br/>
+<a class="open-page" href="scanner-radix.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Scanner reset()</code></span>
+			ترجع الخصائص الإفتراضية لكائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code>.</span><br/>
+<a class="open-page" href="scanner-reset.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Scanner skip(Pattern pattern)</code></span>
+			تتخطى النص التالي في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> في حال كان يتطابق مع كائن <span class="inline">الـ <code data-enlighter-language="java">Pattern</code></span> مع تجاهل <span class="inline">الـ <span class="word">delimiters</span>.</span><br/>
+<a class="open-page" href="scanner-skip-pattern.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Scanner skip(String pattern)</code></span>
+			تتخطى النص التالي في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> في حال كان يتطابق مع <span class="inline">الـ <code data-enlighter-language="java">String</code></span> الذي نمرره لها <span class="inline">كـ <span class="word">Argument</span></span> و الذي يمثل <span class="word">Pattern</span> مع تجاهل <span class="inline">الـ <span class="word">delimiters</span>.</span><br/>
+<a class="open-page" href="scanner-skip-string.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public String toString()</code></span>
+			ترجع <code data-enlighter-language="java">String</code> تمثل كافة معلومات كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code>.</span><br/>
+<a class="open-page" href="scanner-tostring.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Scanner useDelimiter(Pattern pattern)</code></span>
+			تستخدم لجعل حرف أو كلمة أو جملة تبدو كمسافة فارغة  في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code>.</span><br/>
+<a class="open-page" href="scanner-usedelimiter-pattern.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Scanner useDelimiter(String pattern)</code></span>
+			تستخدم لجعل حرف أو كلمة أو جملة تبدو كمسافة فارغة  في كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code>.</span><br/>
+<a class="open-page" href="scanner-usedelimiter-string.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Scanner useLocale(Locale locale)</code></span>
+			تستخدم لتحديد الترميز الذي سيستخدمه كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> عند قراءة و تخزين البيانات.<br/>
+<a class="open-page" href="scanner-uselocale.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public Scanner useRadix(int radix)</code></span>
+			تستخدم لتحديد <span class="inline">الـ <span class="word">radix</span></span> الذي سيستخدمه كائن <span class="inline">الـ <code data-enlighter-language="java">Scanner</code></span> عند قراءة و تخزين أي رقم.<br/>
+<a class="open-page" href="scanner-useradix.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+</table>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

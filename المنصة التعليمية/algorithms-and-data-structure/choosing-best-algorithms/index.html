@@ -1,0 +1,870 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>تمارين خوارزميات و هياكل البيانات - إختيار الخوارزمية الأفضل</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../algorithms-and-data-structure.png"/></li>
+<li class="title">تعرف على الدورة</li>
+<li><a href="../overview/index.html">نظرة عامة</a></li>
+<li><a href="../how-to-start/index.html">الطريقة الصحيحة للتعلم</a></li>
+<li class="title">رسم أشكال هندسية</li>
+<li><a href="../drawing-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../drawing-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../drawing-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../drawing-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../drawing-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../drawing-test-6/index.html">التحدي السادس</a></li>
+<li><a href="../drawing-test-7/index.html">التحدي السابع</a></li>
+<li><a href="../drawing-test-8/index.html">التحدي الثامن</a></li>
+<li><a href="../drawing-test-9/index.html">التحدي التاسع</a></li>
+<li><a href="../drawing-test-10/index.html">التحدي العاشر</a></li>
+<li class="title">التعامل مع الأرقام و النصوص</li>
+<li><a href="../numbers-and-strings-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../numbers-and-strings-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../numbers-and-strings-test-3/index.html">التحدي الثالث</a></li>
+<li class="title">إجراء عمليات حسابية</li>
+<li><a href="../math-operations-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../math-operations-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../math-operations-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../math-operations-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../math-operations-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../math-operations-test-6/index.html">التحدي السادس</a></li>
+<li><a href="../math-operations-test-7/index.html">التحدي السابع</a></li>
+<li><a href="../math-operations-test-8/index.html">التحدي الثامن</a></li>
+<li><a href="../math-operations-test-9/index.html">التحدي التاسع</a></li>
+<li class="title">التعامل مع المصفوفات</li>
+<li><a href="../arrays-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../arrays-test-2/index.html">التحدي الثاني</a></li>
+<li><a href="../arrays-test-3/index.html">التحدي الثالث</a></li>
+<li><a href="../arrays-test-4/index.html">التحدي الرابع</a></li>
+<li><a href="../arrays-test-5/index.html">التحدي الخامس</a></li>
+<li><a href="../arrays-test-6/index.html">التحدي السادس</a></li>
+<li class="title">تراكيب البيانات</li>
+<li><a href="../data-structure-about-section/index.html">حول هذا القسم</a></li>
+<li><a href="../data-structure-test-1/index.html">التحدي الأول</a></li>
+<li><a href="../data-structure-test-2/index.html">التحدي الثاني</a></li>
+<li class="title">حساب وقت الخوارزميات</li>
+<li><a href="../algorithms-complexity/index.html">مفهوم التعقيد ( Complexity )</a></li>
+<li><a href="../big-o-notation/index.html">حساب الـ Big-O Notation</a></li>
+<li><a href="index.html">إختيار الخوارزمية الأفضل</a></li>
+<li><a href="../calculate-execution-time/index.html">عرض مدة تنفيذ الكود</a></li>
+<li><a href="../useful-resources/index.html">مصادر مفيدة</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Algorithms &amp; Data Structure</span>إختيار الخوارزمية الأفضل</h1>
+<article>
+<h2>مقدمة</h2>
+<p>في الدرس السابق تعلمنا كيف يتم تقييم أداء الكود و متى يتم إعتباره ممتازاً, جيداً, مقبولاً و سيئاً.</p>
+<p>الآن سنتفق على أننا دائماً يجب أن نكتب الكود بأفضل شكل ممكن حتى نحصل على أفضل أداء ممكن من ناحية الوقت الذي يحتاجه الكود حتى يتنفذ بالكامل.<br/>
+	في هذا الدرس سنضع عدة تمارين يمكن حلها بأكثر من طريقة و سنحدد أي الطرق هي الطرق الأفضل بناءاً على قواعد تقييم الكود التي تعلمناها في الدرس السابق.</p>
+</article>
+<article>
+<h2>المثال الأول</h2>
+<p>لنفترض أننا نريد حساب ناتج جمع جميع الأعداد الموجودة بين <code>1</code> و <span class="inline"><code>n</code>.</span></p>
+<br/>
+<h3>الحل الأول</h3>
+<p>لحل هذا التمرين يمكن تجهيز متغير إسمه <code>s</code> لحفظ المجموع النهائي, ثم ننشئ حلقة من <code>1</code> إلى <code>n</code> و في كل دورة فيها نقوم بإضافة قيمة العداد <code>i</code> على قيمة المتغير <span class="inline"><code>s</code>.</span><br/>
+	الحل التالي هو الحل التقليدي و الذي اعتدنا أن نفعله, و بالمناسبة فإن تقييم هذا الحل هو <span class="code">O(<span class="red">n</span>)</span> لأن الحلقة تعيد تنفيذ الموضوع فيها بمقدار قيمة <span class="inline"><code>n</code>.</span></p>
+<pre data-enlighter-group="group1" data-enlighter-highlight="4-5" data-enlighter-language="python" data-enlighter-title="Python">
+s = 0
+n = int(input("Enter n: "))
+
+for i in range(1, n + 1):
+    s += i
+
+print("s =", s)
+
+	</pre>
+<pre data-enlighter-group="group1" data-enlighter-highlight="14-17" data-enlighter-language="java" data-enlighter-title="Java">
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String args[])
+	{
+        Scanner input = new Scanner(System.in);
+        int s = 0;
+        int n;
+        
+        System.out.print("Enter n: ");
+        n = input.nextInt();
+        
+        for (int i = 1; i &lt;= n ; i++)
+        {
+            s += i;
+        }
+        
+        System.out.println("s = " + s);
+    }
+
+}
+	</pre>
+<pre data-enlighter-group="group1" data-enlighter-highlight="13-16" data-enlighter-language="csharp" data-enlighter-title="C#">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int s = 0;
+        int n;
+
+        Console.Write("Enter n: ");
+        n = int.Parse(Console.ReadLine());
+
+        for (int i = 1; i &lt;= n; i++)
+        {
+            s += i;
+        }
+
+        Console.WriteLine("s = " + s);
+
+        Console.ReadKey();
+    }
+    
+}
+	</pre>
+<pre data-enlighter-group="group1" data-enlighter-highlight="13-16" data-enlighter-language="cpp" data-enlighter-title="C++">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    int s = 0;
+    int n;
+
+    cout &lt;&lt; "Enter n: ";
+    cin &gt;&gt; n;
+
+    for (int i = 1; i &lt;= n; i++)
+    {
+        s += i;
+    }
+
+    cout &lt;&lt; "s = " &lt;&lt; s;
+
+    return 0;
+}
+	</pre>
+<pre data-enlighter-group="group1" data-enlighter-highlight="11-14" data-enlighter-language="c" data-enlighter-title="C">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	int s = 0;
+	int n;
+
+	printf("Enter n: ");
+	scanf("%d", &amp;n);
+
+	for (int i = 1; i &lt;= n; i++)
+	{
+		s += i;
+	}
+
+	printf("s = %d", s);
+}
+	</pre>
+<br/><br/>
+<p class="question">هل هذا الحل هو الحل الأفضل أم يمكن إيجاد حل أفضل يستغرق وقت أقل في التنفيذ؟</p>
+<p>الجواب هو كلا, لأنه يمكن حساب ناتج جمع كل الأرقام الموجودة من <code>1</code> إلى <code>n</code> بدون استخدام حلقة و بأمر واحد فقط!<br/>
+	هذا ما سنراه في الحل الثاني.</p>
+<br/>
+<h3>الحل الثاني</h3>
+<p>لحساب ناتج جمع جميع الأرقام الموجودة من <code>1</code> إلى <code>n</code> سنستخدم القاعدة <code>n * (n + 1) / 2</code> و التي ندرسها في مادة الرياضيات.<br/>
+	إذاً سنكتب أمر يتنفذ مرة واحدة فقط بدل استخدام حلقة و بالتالي فإن الخوارزمية تعتبر أسرع و أفضل خوارزمية ممكنة لأن وقت تنفيذها ثابت.<br/>
+	بمعنى أخر, تقييم الكود التالي هو <span class="inline"><span class="code">O(<span class="red">n</span>)</span>.</span></p>
+<pre data-enlighter-group="group2" data-enlighter-highlight="3" data-enlighter-language="python" data-enlighter-title="Python">
+n = int(input("Enter n: "))
+
+s = n * (n + 1) / 2
+
+print("s =", s)
+	</pre>
+<pre data-enlighter-group="group2" data-enlighter-highlight="13" data-enlighter-language="java" data-enlighter-title="Java">
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String args[])
+	{
+        Scanner input = new Scanner(System.in);
+        int s, n;
+        
+        System.out.print("Enter n: ");
+        n = input.nextInt();
+        
+        s = n * (n + 1) / 2;
+        
+        System.out.println("s = " + s);
+    }
+
+}
+	</pre>
+<pre data-enlighter-group="group2" data-enlighter-highlight="12" data-enlighter-language="csharp" data-enlighter-title="C#">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int s, n;
+
+        Console.Write("Enter n: ");
+        n = int.Parse(Console.ReadLine());
+
+        s = n * (n + 1) / 2;
+
+        Console.WriteLine("s = " + s);
+
+        Console.ReadKey();
+    }
+    
+}
+	</pre>
+<pre data-enlighter-group="group2" data-enlighter-highlight="12" data-enlighter-language="cpp" data-enlighter-title="C++">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    int s, n;
+
+    cout &lt;&lt; "Enter n: ";
+    cin &gt;&gt; n;
+
+    s = n * (n + 1) / 2;
+
+    cout &lt;&lt; "s = " &lt;&lt; s;
+
+    return 0;
+}
+	</pre>
+<pre data-enlighter-group="group2" data-enlighter-highlight="10" data-enlighter-language="c" data-enlighter-title="C">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+    int s, n;
+
+	printf("Enter n: ");
+	scanf("%d", &amp;n);
+
+	s = n * (n + 1) / 2;
+
+    printf("s = %d", s);
+}
+	</pre>
+</article>
+<article>
+<h2>المثال الثاني</h2>
+<p>لنفترض أننا نريد حساب قيمة <span class="inline"><code>n!</code>.</span></p>
+<br/>
+<h3>الحل الأول</h3>
+<p>لحل هذا التمرين يمكن إستخدام أسلوب <span class="inline">الـ <span class="word">Recursion</span>,</span> أي تعريف دالة تستدعي نفسها.<br/>
+	الحل التالي هو الحل التقليدي و لكنه يعتبر الأسوأ على الإطلاق لأن تقييم هذا الحل هو <span class="code">O(<span class="red">n!</span>)</span> و هذا يعتبر أسوء تقييم ممكن.</p>
+<pre data-enlighter-group="group3" data-enlighter-highlight="3" data-enlighter-language="python" data-enlighter-title="Python">
+def factorial(n):
+    if n &gt; 0:
+        return n * factorial(n - 1)
+    return 1
+
+
+n = int(input("Enter n: "))
+print(str(n) + '! =', factorial(n))
+	</pre>
+<pre data-enlighter-group="group3" data-enlighter-highlight="9" data-enlighter-language="java" data-enlighter-title="Java">
+import java.util.Scanner;
+
+public class Main
+{
+    public static int factorial(int n)
+	{
+		if (n &gt; 0)
+		{
+            return n * factorial(n - 1);
+        }
+        
+		return 1;
+    }
+	
+    public static void main(String args[])
+	{
+        Scanner input = new Scanner(System.in);
+        int n;
+        
+        System.out.print("Enter n: ");
+        n = input.nextInt();
+        
+        System.out.println(n + "! = " + factorial(n));
+        
+    }
+}
+	</pre>
+<pre data-enlighter-group="group3" data-enlighter-highlight="9" data-enlighter-language="csharp" data-enlighter-title="C#">
+using System;
+
+class Program
+{
+    static int Factorial(int n)
+    {
+        if (n &gt; 0)
+        {
+            return n * Factorial(n - 1);
+        }
+
+        return 1;
+    }
+
+    static void Main(string[] args)
+    {
+        int n;
+
+        Console.Write("Enter n: ");
+        n = int.Parse(Console.ReadLine());
+        
+        Console.WriteLine(n + "! = " + Factorial(n));
+
+        Console.ReadKey();
+    }
+}
+	</pre>
+<pre data-enlighter-group="group3" data-enlighter-highlight="9" data-enlighter-language="cpp" data-enlighter-title="C++">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int factorial(int n)
+{
+    if (n &gt; 0)
+    {
+        return n * factorial(n - 1);
+    }
+
+    return 1;
+}
+
+
+int main()
+{
+    int n;
+
+    cout &lt;&lt; "Enter n: ";
+    cin &gt;&gt; n;
+
+    cout &lt;&lt; n &lt;&lt; "! = " &lt;&lt; factorial(n);
+
+    return 0;
+}
+	</pre>
+<pre data-enlighter-group="group3" data-enlighter-highlight="7" data-enlighter-language="c" data-enlighter-title="C">
+#include &lt;stdio.h&gt;
+
+int factorial(int n)
+{
+    if ( n &gt; 0 )
+    {
+        return n * factorial(n - 1);
+    }
+
+    return 1;
+}
+
+void main()
+{
+    int n;
+
+	printf("Enter n: ");
+	scanf("%d", &amp;n);
+
+    printf("%d! = %d", n, factorial(n));
+}
+	</pre>
+<br/><br/>
+<h3>الحل الثاني</h3>
+<p>يمكن حل التمرين السابق باستخدام حلقة عادية بدل تعريف دالة تستدعي نفسها.<br/>
+	الحل التالي أفضل من الحل السابق و يعتبر حل مقبول أيضاً لأن تقييم هذا الحل هو <span class="inline"><span class="code">O(<span class="red">n</span>)</span>.</span></p>
+<pre data-enlighter-group="group4" data-enlighter-highlight="3-4" data-enlighter-language="python" data-enlighter-title="Python">
+def factorial(n):
+    f = 1
+    for i in range(1, n + 1):
+        f *= i
+    return f
+
+
+n = int(input("Enter n: "))
+print(str(n) + '! =', factorial(n))
+	</pre>
+<pre data-enlighter-group="group4" data-enlighter-highlight="9-12" data-enlighter-language="java" data-enlighter-title="Java">
+import java.util.Scanner;
+
+public class Main {
+    
+    public static int factorial(int n)
+    {
+        int f = 1;
+        
+        for (int i = 1; i &lt;= n; i++) 
+        {
+            f *= i;
+        }
+        
+        return f;
+    }
+    
+    public static void main(String args[])
+    {
+        
+        Scanner input = new Scanner(System.in);
+        int n;
+        
+        System.out.print("Enter n: ");
+        n = input.nextInt();
+        
+        System.out.println(n + "! = " + factorial(n));
+    }
+
+}
+
+	</pre>
+<pre data-enlighter-group="group4" data-enlighter-highlight="9-12" data-enlighter-language="csharp" data-enlighter-title="C#">
+using System;
+
+class Program
+{
+    static int Factorial(int n)
+    {
+        int f = 1;
+
+        for (int i = 1; i &lt;= n; i++)
+        {
+            f *= i;
+        }
+
+        return f;
+    }
+
+    static void Main(string[] args)
+    {
+        int n;
+
+        Console.Write("Enter n: ");
+        n = int.Parse(Console.ReadLine());
+        
+        Console.WriteLine(n + "! = " + Factorial(n));
+
+        Console.ReadKey();
+    }
+    
+}
+	</pre>
+<pre data-enlighter-group="group4" data-enlighter-highlight="9-12" data-enlighter-language="cpp" data-enlighter-title="C++">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int factorial(int n)
+{
+    int f = 1;
+        
+    for (int i = 1; i &lt;= n; i++) 
+    {
+        f *= i;
+    }
+        
+    return f;
+}
+
+int main()
+{
+    int n;
+
+    cout &lt;&lt; "Enter n: ";
+    cin &gt;&gt; n;
+
+    cout &lt;&lt; n &lt;&lt; "! = " &lt;&lt; factorial(n);
+
+    return 0;
+}
+	</pre>
+<pre data-enlighter-group="group4" data-enlighter-highlight="7-10" data-enlighter-language="c" data-enlighter-title="C">
+#include &lt;stdio.h&gt;
+
+int factorial(int n)
+{
+    int f = 1;
+        
+    for (int i = 1; i &lt;= n; i++) 
+    {
+        f *= i;
+    }
+        
+    return f;
+}
+
+void main()
+{
+
+    int n;
+
+	printf("Enter n: ");
+	scanf("%d", &amp;n);
+
+    printf("%d! = %d", n, factorial(n));
+
+}
+	</pre>
+</article>
+<article>
+<h2>المثال الثالث</h2>
+<p>لنفترض أننا نريد طباعة جميع الأرقام المزدوجة الموجودة من <code>0</code> إلى <span class="inline"><code>n</code>.</span></p>
+<br/>
+<h3>الحل الأول</h3>
+<p>لحل هذا التمرين يمكن إنشاء حلقة من <code>0</code> إلى <code>n</code> و في كل دورة نشيّك على قيمة العداد <code>i</code> لمعرفة ما إن كان باقي القسمة يساوي <code>0</code> أم لا.<br/>
+	إذا كان باقي القسمة هو <code>0</code> فمعنى ذلك أن قيمة العداد <code>i</code> عبارة عن عدد مزدوج و بالتالي سنقوم بطباعتها.<br/>
+	تقييم هذا الحل هو <span class="code">O(<span class="red">n</span>)</span> و لكنه لا يعتبر الحل الأفضل لأنه كان بالإمكان تقليص وقت التنفيذ إلى النصف, أي إلى <span class="code">O(<span class="red">n/2</span>)</span> كما سترى في الحل الثاني.</p>
+<pre data-enlighter-group="group5" data-enlighter-highlight="3-6" data-enlighter-language="python" data-enlighter-title="Python">
+n = int(input("Enter n: "))
+
+for i in range(n + 1):
+    if i % 2 == 0:
+        print(i, end=" ")
+	</pre>
+<pre data-enlighter-group="group5" data-enlighter-highlight="13-19" data-enlighter-language="java" data-enlighter-title="Java">
+import java.util.Scanner;
+
+public class Main {
+    
+    public static void main(String args[])
+    {
+        Scanner input = new Scanner(System.in);
+        int n;
+        
+        System.out.print("Enter n: ");
+        n = input.nextInt();
+        
+        for (int i = 0; i &lt;= n; i++)
+        {
+            if (i % 2 == 0)
+            {
+                System.out.print(i + " ");
+            }
+        }
+    }
+
+}
+	</pre>
+<pre data-enlighter-group="group5" data-enlighter-highlight="12-18" data-enlighter-language="csharp" data-enlighter-title="C#">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int n;
+
+        Console.Write("Enter n: ");
+        n = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i &lt;= n; i++)
+        {
+            if (i % 2 == 0)
+            {
+                Console.Write(i + " ");
+            }
+        }
+
+        Console.ReadKey();
+    }
+    
+}
+
+	</pre>
+<pre data-enlighter-group="group5" data-enlighter-highlight="12-18" data-enlighter-language="cpp" data-enlighter-title="C++">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    int n;
+
+    cout &lt;&lt; "Enter n: ";
+    cin &gt;&gt; n;
+
+    for (int i = 0; i &lt;= n; i++)
+    {
+        if (i % 2 == 0)
+        {
+            cout &lt;&lt; i &lt;&lt; " ";
+        }
+    }
+
+    return 0;
+}
+	</pre>
+<pre data-enlighter-group="group5" data-enlighter-highlight="11-17" data-enlighter-language="c" data-enlighter-title="C">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+
+    int n;
+
+	printf("Enter n: ");
+	scanf("%d", &amp;n);
+	
+    for (int i = 0; i &lt;= n; i++)
+    {
+        if (i % 2 == 0)
+        {
+            printf("%d ", i);
+        }
+    }
+
+}
+	</pre>
+<br/><br/>
+<h3>الحل الثاني</h3>
+<p>يمكنك حل التمرين السابق بطريقة أسهل و أكثر كفاءة.<br/>
+	ببساطة يمكنك إنشاء حلقة من <code>0</code> إلى <code>n</code> و جعل قيمة العداد <code>i</code> تزيد <code>2</code> في كل دورة.<br/>
+	بما أن قيمة العداد ستزيد <code>2</code> في كل دورة بدل <code>1</code> فهذا يعني أن عدد الخطوات التي سيتم تنفيذها هو النصف و بالتالي تقييم الكود سيكون <span class="inline"><span class="code">O(<span class="red">n/2</span>)</span>.</span></p>
+<pre data-enlighter-group="group6" data-enlighter-highlight="3,4" data-enlighter-language="python" data-enlighter-title="Python">
+n = int(input("Enter n: "))
+
+for i in range(0, n + 1, 2):
+    print(i, end=" ")
+	</pre>
+<pre data-enlighter-group="group6" data-enlighter-highlight="13-16" data-enlighter-language="java" data-enlighter-title="Java">
+import java.util.Scanner;
+
+public class Main {
+    
+    public static void main(String args[])
+    {
+        Scanner input = new Scanner(System.in);
+        int n;
+        
+        System.out.print("Enter n: ");
+        n = input.nextInt();
+        
+        for (int i = 0; i &lt;= n; i += 2)
+        {
+            System.out.print(i + " ");
+        }
+    }
+
+}
+	</pre>
+<pre data-enlighter-group="group6" data-enlighter-highlight="12-15" data-enlighter-language="csharp" data-enlighter-title="C#">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int n;
+
+        Console.Write("Enter n: ");
+        n = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i &lt;= n; i += 2)
+        {
+            Console.Write(i + " ");
+        }
+
+        Console.ReadKey();
+    }
+    
+}
+	</pre>
+<pre data-enlighter-group="group6" data-enlighter-highlight="12-15" data-enlighter-language="cpp" data-enlighter-title="C++">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    int n;
+
+    cout &lt;&lt; "Enter n: ";
+    cin &gt;&gt; n;
+
+    for (int i = 0; i &lt;= n; i += 2)
+    {
+        cout &lt;&lt; i &lt;&lt; " ";
+    }
+
+    return 0;
+}
+	</pre>
+<pre data-enlighter-group="group6" data-enlighter-highlight="11-14" data-enlighter-language="c" data-enlighter-title="C">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+
+    int n;
+
+	printf("Enter n: ");
+	scanf("%d", &amp;n);
+	
+    for (int i = 0; i &lt;= n; i += 2)
+    {
+        printf("%d ", i);
+    }
+
+}
+	</pre>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

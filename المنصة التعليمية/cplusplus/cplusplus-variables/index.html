@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>المتغيرات في سي بلاس بلاس</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../cplusplus-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../cplusplus-overview/index.html"><span class="en">++C</span> - نظرة عامة</a></li>
+<li><a href="../cplusplus-environment-setup/index.html"><span class="en">++C</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../cplusplus-basic-syntax/index.html"><span class="en">++C</span> - أسلوب الكتابة</a></li>
+<li><a href="../cplusplus-cout/index.html"><span class="en">++C</span> - أمر الطباعة   &lt;&lt; cout</a></li>
+<li><a href="../cplusplus-data-types/index.html"><span class="en">++C</span> - أنواع البيانات</a></li>
+<li><a href="index.html"><span class="en">++C</span> - المتغيرات</a></li>
+<li><a href="../cplusplus-operators/index.html"><span class="en">++C</span> - العوامل</a></li>
+<li><a href="../cplusplus-conditions/index.html"><span class="en">++C</span> - الشروط</a></li>
+<li><a href="../cplusplus-loops/index.html"><span class="en">++C</span> - الحلقات</a></li>
+<li><a href="../cplusplus-numbers/index.html"><span class="en">++C</span> - الأعداد</a></li>
+<li><a href="../cplusplus-strings/index.html"><span class="en">++C</span> - النصوص</a></li>
+<li><a href="../cplusplus-arrays/index.html"><span class="en">++C</span> - المصفوفات</a></li>
+<li><a href="../cplusplus-user-input/index.html"><span class="en">++C</span> - إدخال البيانات</a></li>
+<li><a href="../cplusplus-functions/index.html"><span class="en">++C</span> - الدوال</a></li>
+<li><a href="../cplusplus-references/index.html"><span class="en">++C</span> - المراجع</a></li>
+<li><a href="../cplusplus-pointers/index.html"><span class="en">++C</span> - المؤشرات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../cplusplus-oop/index.html"><span class="en">++C</span> - مفهوم البرمجة كائنية التوجه</a></li>
+<li><a href="../cplusplus-struct/index.html"><span class="en">++C</span> - النوع <span class="en">struct</span></a></li>
+<li><a href="../cplusplus-class/index.html"><span class="en">++C</span> - النوع <span class="en">class</span></a></li>
+<li><a href="../cplusplus-encapsulation/index.html"><span class="en">++Encapsulation - C</span></a></li>
+<li><a href="../cplusplus-inheritance/index.html"><span class="en">++Inheritance - C</span></a></li>
+<li><a href="../cplusplus-overriding/index.html"><span class="en">++Overriding - C</span></a></li>
+<li><a href="../cplusplus-overloading/index.html"><span class="en">++Overloading - C</span></a></li>
+<li><a href="../cplusplus-polymorphism/index.html"><span class="en">++Polymorphism - C</span></a></li>
+<li><a href="../cplusplus-constants/index.html"><span class="en">++C</span> - الثوابت</a></li>
+<li><a href="../cplusplus-enum/index.html"><span class="en">++C</span> - النوع <span class="en">enum</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../cplusplus-exceptions/index.html"><span class="en">++C</span> - الإستثناءات</a></li>
+<!--
+
+<li><a href="../cplusplus-lambda-expressions"><span class="en">Lambda Expressions - ++C</span></a></li>
+<li><a href="../cplusplus-files-io"><span class="en">++C</span> - التعامل مع الملفات</a></li>
+<li><a href="../cplusplus-data-structure"><span class="en">Data Structure - ++C</span></a></li>
+<li><a href="../cplusplus-collection"><span class="en">Collection - ++C</span></a></li>
+<li><a href="../cplusplus-generics"><span class="en">Generics - ++C</span></a></li>
+<li><a href="../cplusplus-networking"><span class="en">++C</span> - الشبكات</a></li>
+<li><a href="../cplusplus-multithreading"><span class="en">++C</span> - تعدد المهام</a></li>
+<li><a href="../cplusplus-jdbc"><span class="en">++C</span> - قواعد البيانات</a></li>
+<li><a href="../cplusplus-serialization"><span class="en">++C</span> - المزامنة</a></li>
+
+
+<li><a href="../cplusplus-date-and-time"><span class="en">++C</span> - التاريخ و الوقت</a></li>
+<li><a href="../cplusplus-regular-expressions"><span class="en">++C</span> - التعابير النمطية</a></li>
+
+<li><a href="../cplusplus-next-step"><span class="en">++C</span> - ما هي خطوتي التالية ؟</a></li>
+-->
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">C++</span>المتغيرات</h1>
+<article>
+<h2>مفهوم المتغيرات في <span class="word">C++</span></h2>
+<p>المتغيرات <span class="inline">( <span class="word">variable</span> )</span> عبارة عن أماكن يتم حجزها في الذاكرة بهدف تخزين بيانات فيها أثناء تشغيل البرنامج.<br/>
+    النوع الذي نعطيه للمتغير يجعل نظام التشغيل يحدد نوع البيانات الذي يمكن تخزينه في المساحة المحجوزة لهذا المتغير في الذاكرة.</p>
+<p>على سبيل المثال, إذا أردت تخزين رقم في متغير, يجب أن يكون نوع المتغير في الأساس مخصص لتخزين الأرقام حتى يسمح لك بذلك.<br/>
+	و إذا أردت تخزين نص في المتغير يجب أن يكون نوع المتغير في الأساس مخصص لتخزين النصوص و هكذا.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+	int a = 10;             // قيمته تساوي 10 a هنا قمنا بتعريف متغير إسمه
+    cout &lt;&lt; "a = " &lt;&lt; a;    // a هنا قمنا بطباعة قيمة المتغير
+	
+    return 0;
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+a = 10
+		</pre>
+</div></article>
+<article>
+<h2>أساليب تعريف المتغيرات في <span class="word">C++</span></h2>
+<p>في البداية أنواع المتغيرات هي نفسها أنواع البيانات الأولية التي ذكرناها في الدرس السابق و هي:<br/>
+<code data-enlighter-language="cpp">int</code> - <code data-enlighter-language="cpp">float</code> - <code data-enlighter-language="cpp">double</code> - <code data-enlighter-language="cpp">bool</code> - <code data-enlighter-language="cpp">char</code></p>
+<p>الآن, من خلال الأمثلة سنعلمك عدة أساليب يمكنك إتباعها لتعريف المتغيرات و تصغير حجم الكود.</p>
+<br/>
+<h3>المثال الأول</h3>
+<p>في حال كنت تريد تعريف عدة متغيرات من نفس النوع و بدون إعطائهم قيم أولية.</p>
+<div class="example-box">
+<p><span class="point">•</span>تستطيع تعريفهم هكذا.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+int a;
+int b;
+int c;
+		</pre>
+<p><span class="point">•</span>و تستطيع إختصار الكود كالتالي.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+int a, b, c;
+		</pre>
+</div>
+<br/>
+<h3>المثال الثاني</h3>
+<p>في حال كنت تريد تعريف عدة متغيرات من نفس النوع و إعطائهم قيم مباشرةً عند إنشائهم.</p>
+<div class="example-box">
+<p><span class="point">•</span>تستطيع تعريفهم هكذا.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+int a = 10;
+int b = 20;
+int c = 30;
+		</pre>
+<p><span class="point">•</span>و تستطيع إختصار الكود كالتالي.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+int a=10, b=20, c=30;
+		</pre>
+</div>
+<br/>
+<h3>المثال الثالث</h3>
+<p>في حال كنت تريد تعريف عدة متغيرات من نفس النوع و لكن طبيعتهم مختلفة و بدون قيم.<br/>
+	هنا بالرغم من أن <code>a</code> عبارة عن متغير, <code>b</code> عبارة عن مصفوفة أحادية, و <code>c</code> عبارة عن مصفوفة ثنائية; إلَا أنهم جميعهم نوعهم <span class="inline"><code data-enlighter-language="cpp">int</code>.</span></p>
+<div class="example-box">
+<p><span class="point">•</span>تستطيع تعريفهم هكذا.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+int a;
+int b[5];
+int c[3][4];
+		</pre>
+<p><span class="point">•</span>و تستطيع إختصار الكود كالتالي.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+int a, b[5], c[3][4];
+		</pre>
+</div>
+</article>
+<article>
+<h2>مصطلحات مهمة حول المتغيرات في <span class="word">C++</span></h2>
+<p>ركز جيداً على المفاهيم التالية لكي تعرف كيف تصحح الأخطاء التي قد تتعرض لها عند كتابة الكود.</p>
+<ul class="explain">
+<li><p>عملية تعريف متغير بدون إعطائه قيمة تسمى <span class="inline"><span class="word">Declaration</span>.</span></p></li>
+<li><p>عملية إعطاء قيمة لمتغير تم إنشاؤه سابقاً تسمى <span class="inline"><span class="word">Assigning</span>.</span></p></li>
+<li><p>عملية تعريف متغير و إعطائه قيمة مباشرةً عند إنشائه تسمى <span class="inline"><span class="word">Initialisation</span>.</span></p></li>
+</ul>
+<br/>
+<h3>أمثلة شاملة</h3>
+<div class="example-box">
+<p><span class="point">•</span>هنا فعلنا <span class="word">Declare</span> لمتغير جديد, أي قمنا بتعريف متغير جديد بدون إعطائه قيمة أولية.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+int a;
+		</pre>
+<p><span class="point">•</span>هنا فعلنا <span class="word">Assign</span> لمتغير, أي قمنا بإعطاء قيمة لمتغير كان في الأصل موجوداً.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+a = 10;
+		</pre>
+<p><span class="point">•</span>هنا فعلنا <span class="word">Initialise</span> لمتغير جديد, أي قمنا بإنشاء متغير جديد و إعطائه قيمة أولية.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+double Sum = 0;
+		</pre>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>إذا قمت بتعريف متغير بدون إعطائه أي قيمة, ثم حاولت طباعة قيمته فإن مترجم لغة <span class="word">C++</span> يقوم بإرجاع آخر قيمة كانت موجودة في الذاكرة مكان هذا المتغير.<br/>
+		إذاً هذا الأمر يحدث في حال حاولت طباعة قيمة متغير لم تفعل له سوى <span class="inline"><span class="word">Declare</span>.</span></p>
+</div>
+</article>
+<article>
+<h2>إرشادات مهمة لمعالجة الأخطاء في <span class="word">C++</span></h2>
+<p>بعد أن فهمت المصطلحات الأساسية الخاصة بالمتغيرات, سنقوم الآن بإعطائك بعض الأمثلة التي تحتوي على أخطاء مقصودة لتعليمك كيف تعرف طبيعة الخطأ و بالتالي كيف تصلح الخطأ بنفسك.</p>
+<br/>
+<h3>الخطأ الأول</h3>
+<p>أحياناً يقوم المبرمج بتعريف متغير و عرض قيمته قبل أن يعطيه أي قيمة فيظهر له قيم عشوائية فيه.<br/>
+	أي المشكلة أنه حاول عرض قيمة متغير فعل له <span class="word">Declare</span> فقط بدون أن يفعل له <span class="inline"><span class="word">Assign</span>.</span></p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+	int a;                  // بدون إعطائه أي قيمة أولية a هنا قمنا بتعريف متغير إسمه
+    cout &lt;&lt; "a = " &lt;&lt; a;    // a هنا قمنا بطباعة قيمة المتغير
+	
+    return 0;
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على نتيجة تشبه النتيجة التالية عند التشغيل.<br/>
+<span class="point">•</span>القيمة التي تظهر في المتغير <code>a</code> هي قيمة عشوائية كانت موجودة في الذاكرة كما ذكرنا قبل قليل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+a = 4360638
+		</pre>
+<br/>
+<p><span class="point">•</span>في برنامج <span class="word">CodeBlocks</span> سيظهر لك التحذير التالي الذي يعني أنك تحاول طباعة قيمة متغير لا يملك قيمة في الأساس.</p>
+<div class="code-box">
+<span class="blue">warning: 'a' is used uninitialized in this function [-Wuninitialized]</span>
+</div>
+</div>
+<br/><br/>
+<h3>الخطأ الثاني</h3>
+<p>أحياناً يقوم المبرمج بوضع إسم متغير بدون أن يكون قد قام بتعريف هذا المتغير من قبل.<br/>
+	أي المشكلة أنه نسيَ أن يفعل له <span class="inline"><span class="word">Declare</span>.</span> من الأساس و هذا الأمر يؤدي لعدم تشغيل البرنامج كله.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    cout &lt;&lt; "a = " &lt;&lt; a;    // مع أننا لم نقم بتعريفه بالأساس a هنا قمنا بطباعة قيمة
+	
+    return 0;
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سيظهر لك الخطأ التالي عند التشغيل و الذي يعني أنك تحاول طباعة قيمة متغير لم تقم بتعريفه بالأساس.</p>
+<div class="code-box">
+<span class="red">error: 'a' was not declared in this scope</span>
+</div>
+</div>
+<br/>
+<h3>الخطأ الثالث</h3>
+<p>في الدرس السابق شاهدنا أن كل نوع بيانات يمكنه أن يحتوي على قيم محددة حيث شاهدنا أصغر و أكبر قيمة يمكن تخزينها فيه.</p>
+<p>الأن عليك معرفة أنه في حال كانت القيمة التي تحاول تخزينها في المتغير أكبر من القيمة التي يمكن تخزينها فيه, سيتم وضع جزء منها في المتغير و ليس القيمة التي كنت تريد تخزينها فيه و بالتالي ستخسر القيمة الحقيقية التي كنت تريد تخزينها. هذا الأمر يجب أن تنتبه له جيداً حتى تخزّن البيانات بشكل صحيح بدون فقدان أي جزء منها.</p>
+<p>الآن, بما أن النوع <code data-enlighter-language="cpp">int</code> يمكنه أن يخزن القيمة <code>2147483647</code> كحد أقصى كما شاهدنا في الدرس السابق, لاحظ ما سيحدث إن حاولنا تخزين قيمة أكبر من القيمة القصوى التي يمكن أن يستوعبها فيه.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+	int a = 10000000000000;     // و نحن ندرك أنه لا يمكن تخزين هذه القيمة الكبيرة فيه a هنا قمنا بوضع قيمة في المتغير
+    cout &lt;&lt; "a = " &lt;&lt; a;
+	
+    return 0;
+}
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على نتيجة تشبه النتيجة التالية عند التشغيل.<br/>
+<span class="point">•</span>القيمة التي تظهر في المتغير <code>a</code> هي جزء من القيمة التي كنت تحاول تخزينها في المتغير كما ذكرنا قبل قليل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+a = 1316134912
+		</pre>
+<br/>
+<p><span class="point">•</span>في برنامج <span class="word">CodeBlocks</span> سيظهر لك التحذير <code>[Overflow]</code> الذي يعني أن المساحة المخصصة للمتغير في الذاكرة لا يمكنها أن تستوعب القيمة التي تحاول تخزينها فيه.</p>
+<div class="code-box">
+<span class="blue">warning: overflow in implicit constant conversion [-Woverflow]</span>
+</div>
+</div>
+<br/>
+<p>في الدرس التالي سنتعرف على الرموز التي يمكن أن نستخدمها في الكود و التي تسمى بالعوامل.</p>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

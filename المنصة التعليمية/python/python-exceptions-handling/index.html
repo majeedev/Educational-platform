@@ -1,0 +1,674 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس ستتعلم كيف تعالج الأخطاء البرمجية و بالتالي ستتعلم كيف تجعل برنامجك خالياً من المشاكل و لا يعلق. وضعنا الكثير من الأمثلة التي ستجعلك تفهمه بكل سهولة" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>معالجة الأخطاء في بايثون</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="../python-overriding/index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>معالجة الأخطاء في بايثون</h1>
+<article>
+<h2>مفهوم معالجة الأخطاء في بايثون</h2>
+<p>معالجة الأخطاء <span class="inline">( <span class="word">Exceptions Handling</span> )</span> يقصد منها كتابة الكود الذي قد يسبب أي مشكلة في البرنامج بطريقة تضمن أنه إذا حدث الخطأ المتوقع أو أي خطأ آخر فإن البرنامج لن يعلّق أو يتم إغلاقه بشكل فجائي.</p>
+<p>ظهور خطأ في البرنامج بشكل مفاجئ هو أمر سيئ جداً لأنه يؤدي إلى نفور عدد كبير من المستخدمين و عدم رغبتهم في العودة إلى استخدام هذا البرنامج مجدداً.</p>
+<br/>
+<h3>أنواع الأخطاء</h3>
+<ul class="explain">
+<li><p>أخطاء تظهر لك أثناء كتابة الكود. هذه الأخطاء يقال لها أخطاء لغوية <span class="inline">( <span class="word">Syntax Errors</span> ).</span></p></li>
+<li><p>أخطاء تحدث أثناء تشغيل البرنامج مما يؤدي إلى تعليقه و إيقافه بشكل غير طبيعي. هذه الأخطاء يقال لها إستثناءات <span class="inline">( <span class="word">Exceptions</span> ).</span></p></li>
+<li><p>أخطاء منطقية <span class="inline">( <span class="word">Logical Errors</span> ),</span> و يقصد منها أن الكود يعمل بدون أي مشاكل لكن نتيجة تشغيل هذا الكود غير صحيحة.</p></li>
+</ul>
+<p>إذاً, أي خطأ برمجي يحدث معك أثناء تشغيل البرنامج يقال له إستثناء <span class="inline">( <span class="word">Exception</span> )</span> حتى إن كان إسم الخطأ يحتوي على كلمة <span class="inline"><code data-enlighter-language="python">Error</code>.</span><br/>
+	بمعنى آخر, أي <span class="word">Error</span> يظهر لك أثناء تشغيل البرنامج يعتبر <span class="inline"><span class="word">Exception</span>.</span></p>
+<p>في هذا الدرس ستتعلم كيف تتجنب حدوث أخطاء في البرامج التي تكتبها, و فعلياً ستتعلم كيف تجهز البرنامج للتعامل مع الأخطاء التي قد تحدث أثناء تشغيله لجعل البرنامج شغال دائماً في نظر المستخدم و لا يظهر له أي أخطاء.</p>
+<br/><br/>
+<h3>بعض الأسباب التي تسبب حدوث إستثناء</h3>
+<ul class="explain">
+<li><p>في حال إدخال رقم <span class="word">index</span> غير موجود في مصفوفة أو في متغير نصي.</p></li>
+<li><p>في حال كان البرنامج يتصل بالشبكة و فجأةً إنقطع الإتصال.</p></li>
+<li><p>في حال كان البرنامج يحاول قراءة معلومات من ملف نصي, و كان هذا الملف غير موجود.</p></li>
+</ul>
+</article>
+<article>
+<h2>أمثلة على أنواع الأخطاء في بايثون</h2>
+<br/>
+<h3>مثال يتضمن خطأ لغوي <span class="inline">( <span class="word">Syntax Error</span> )</span></h3>
+<p>في المثال التالي وضعنا قوس إضافي لدالة الطباعة, حيث أننا كتبنا <code data-enlighter-language="python">print())</code> بدلاً من <span class="inline"><code data-enlighter-language="python">print()</code>.</span><p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+x = 10
+print(x))
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+<span class="red">File "</span><span class="blue">C:/Users/Mhamad/PycharmProjects/myapp/Test.py</span><span class="red">", line 2<br/>
+			    print(x))<br/>
+                        ^<br/><br/>
+			SyntaxError: invalid syntax</span>
+</div>
+</div>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>برنامج <span class="word">PyCharm</span> يضع لك خطأ أحمر يوضح لك تماماً أين يوجد خطأ لغوي قبل تشغيل البرنامج.<br/>
+		في حال تشغيل البرنامج بدون إصلاح الخطأ ستجد أن مفسر لغة بايثون أيضاً يضع لك سهم أحمر <span class="code red">^</span> يخبرك أين وجد عندك خطأ لغوي في الكود عندما حاول تنفيذه.</p>
+</div>
+<br/><br/>
+<h3>أمثلة تتضمن أخطاء برمجية <span class="inline">( <span class="word">Exceptions</span> )</span></h3>
+<p>في المثال التالي قمنا بطباعة قيمة متغير لم نقوم أصلاً بإعطاءه قيمة!<br/>
+<span class="note">ملاحظة:</span> هنا سيحدث الخطأ وقت التشغيل عندما يكتشف مفسّر لغة بايثون أن المتغير لا يحتوي على قيمة.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+print(x)
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+<span class="red">File "</span><span class="blue">C:/Users/Mhamad/PycharmProjects/myapp/Test.py</span><span class="red">", line 1, in &lt;module&gt;<br/><br/>
+			NameError: name 'x' is not defined</span>
+</div>
+</div>
+<br/>
+<p>في المثال التالي قمنا بتعريف <code data-enlighter-language="python">list</code> إسمه <span class="inline"><code data-enlighter-language="python">aList</code>,</span> و يتألف من <span class="number">4</span> عناصر.<br/>
+	بعدها حاولنا طباعة قيمة كل عنصر فيه و حاولنا طباعة قيمة عنصر غير موجود!<br/>
+<span class="note">ملاحظة:</span> هنا سيحدث الخطأ وقت التشغيل عندما يكتشف مفسّر لغة بايثون أنه لا يوجد عنصر يملك <span class="word">Index</span> يساوي <span class="number">4</span> في الكائن <span class="inline"><code data-enlighter-language="python">aList</code>.</span></p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# و يتألف من 4 عناصر aList إسمه list هنا قمنا بتعريف
+aList = [10, 20, 30, 40]
+
+# list هنا قمنا بطباعة قيم عناصر الكائن
+print(aList[0])
+print(aList[1])
+print(aList[2])
+print(aList[3])
+
+# و هذا ما سيؤدي لحدوث خطأ برمجي وقت التشغيل list هنا قمنا بطباعة قيمة عنصر غير موجود أصلاً في الكائن
+print(aList[4])
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+			10<br/>
+			20<br/>
+			30<br/>
+			40<br/>
+<span class="red">File "</span><span class="blue">C:/Users/Mhamad/PycharmProjects/myapp/Test.py</span><span class="red">", line 8, in &lt;module&gt;<br/>
+			    print(aList[4])<br/><br/>
+			IndexError: list index out of range
+		</span></div>
+</div>
+<br/><br/>
+<h3>مثال يتضمن خطأ منطقي <span class="inline">( <span class="word">Logical Error</span> )</span></h3>
+<p>في المثال التالي قمنا بإنشاء برنامج يطبع للطالب ما إذا كان ناجحاً أو راسباً بناءاً على معدله النهائي.<br/>
+	من المفترض أنه يتم إعتبار الطالب راسب في حال كان معدله بين <span class="number">0</span> و <span class="inline"><span class="number">9.9</span>.</span> و يتم إعتباره ناجح في حال كان معدله <span class="number">10</span> و <span class="inline"><span class="number">20</span>.</span><br/>
+	الخطأ المنطقي الذي وضعناه هو أننا عند طباعة نتيجة الطالب لم نتأكد ما إذا كان المعدل بين <span class="number">0</span> كحد أدنى و <span class="number">20</span> كحد أقصى.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+average = 25
+
+if average &lt; 10:
+    print('The student failed the exam')
+
+elif average &gt;= 10:
+    print('The student passed the exam')
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+			The student passed the exam
+		</div>
+<p><span class="point">•</span>نلاحظ أنه لا يوجد مشكلة برمجية سببت إيقاف الكود لكننا نعلم أن هناك مشكلة منطقية في الكود.<br/>
+		المشكلة المنطقية هنا هي أن المعدل الذي تم على أساسه طباعة جملة النجاح هو معدل مستحيل أن يكون حقيقي.</p>
+</div>
+</p></p></article>
+<article>
+<h2>الجمل <code data-enlighter-language="python">try</code> و <code data-enlighter-language="python">except</code> و <code data-enlighter-language="python">finally</code> و <code data-enlighter-language="python">else</code> في بايثون</h2>
+<p>نستخدم هذه الجمل للأسباب التالية:</p>
+<ul class="explain">
+<li><p>أي كود تشك بأنه قد يسبب خطأ يجب وضعه بداخل بلوك الجملة <code data-enlighter-language="python">try</code> لضمان أن لا يعلق البرنامج أو يظهر خطأ مفاجئ أثناء التشغيل.</p></li>
+<li><p>أي كود تريد تنفيذه لمعالجة الخطأ الذي حدث في الجملة <code data-enlighter-language="python">try</code> تضعه بداخل بلوك الجملة <span class="inlnie"><code data-enlighter-language="python">except</code>.</span></p></li>
+<li><p>أي كود تريد تنفيذه في حال لم يحدث خطأ في الجملة <code data-enlighter-language="python">try</code> تضعه بداخل بلوك الجملة <span class="inlnie"><code data-enlighter-language="python">else</code>.</span></p></li>
+<li><p>أي كود تريد تنفيذه سواء حدث أو لم يحدث خطأ في الجملة <code data-enlighter-language="python">try</code> تضعه بداخل بلوك الجملة <span class="inlnie"><code data-enlighter-language="python">finally</code>.</span></p></li>
+</ul>
+<br/><br/>
+<h3>معلومة تقنية</h3>
+<p>بمجرد أن تضع الكود بداخل <code data-enlighter-language="python">try</code> ستكون مجبراً على وضع الجملة <code data-enlighter-language="python">except</code> أو الجملة <code data-enlighter-language="python">finally</code> بعدها أو وضع كلا الجملتين.<br/>
+	كما أن  برنامج <span class="word">PyCharm</span> سيظهر لك تنتبيه بمجرد أن تضع الكود بداخل <code data-enlighter-language="python">try</code> يخبرك فيه أنك يجب أن تضع إحدى هاتين الجملتين بعدها.</p>
+<p>بعد الجملة <code data-enlighter-language="python">except</code> يمكنك وضع الجملة <code data-enlighter-language="python">finally</code> أو الجملة <code data-enlighter-language="python">else</code> إن أردت لكن لا يمكنك وضع كلاهما في وقت واحد.</p>
+<p>في حال كنت تكتب كود يمكن أن يسبب عدة أنواع من المشاكل, يمكنك وضع أكثر من جملة <code data-enlighter-language="python">except</code> حتى تعالج كل نوع من المشاكل التي قد تحدث على حدا.</p>
+<br/>
+<p>إذاً في حال أردت استخدام الجمل <code data-enlighter-language="python">try</code> و <code data-enlighter-language="python">except</code> و <code data-enlighter-language="python">finally</code> سيكون شكل الكود كالتالي.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+try:
+	# Something
+except:
+	# Handle Errors
+finally:
+	# Optional Clean Up Code
+	</pre>
+<br/><br/>
+<p>إذاً في حال أردت استخدام الجمل <code data-enlighter-language="python">try</code> و <code data-enlighter-language="python">except</code> و <code data-enlighter-language="python">else</code> سيكون شكل الكود كالتالي.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+try:
+	# Something
+except:
+	# Handle Errors
+else:
+	# If No Errors, Do Extra Things
+	</pre>
+<br/><br/>
+<p>في المثال التالي إستخدمنا الجملتين <code data-enlighter-language="python">try</code> و <code data-enlighter-language="python">except</code> و لم نضع أي خطأ متعمد في الكود.<br/>
+<span class="note">تذكر:</span> بما أنه لن يحدث أي خطأ بداخل الجملة <code data-enlighter-language="python">try</code> فهذا يعني أنه لن يتم تنفيذ أي أمر موضوع في الجملة <span class="inline"><code data-enlighter-language="python">except</code>.</span><br/>
+	بعدها سيتم إكمال تنفيذ أي أوامر موضوعة في البرنامج.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+x = 10
+
+# except و بما أنه لا يوجد أي مشكلة هنا فهذا يعني أنه لن يتم تنفيذ أمر الطباعة الموضوع في الجملة ,x حاولنا طباعة قيمة try في الجملة
+try:
+    print('x =', x)
+except:
+    print('An exception occurred')
+
+# سيتم تنفيذ أمر الطباعة التالي في حال كان البرنامج لا يوجد فيه أي مشكلة أو حدثت مشكلة سابقاً و تم معالجتها
+print('Program still work')
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+			x = 10<br/>
+			Program still work
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي إستخدمنا الجملتين <code data-enlighter-language="python">try</code> و <code data-enlighter-language="python">except</code> و وضعنا خطأ متعمد في الكود.<br/>
+<span class="note">تذكر:</span> بما أنه سيحدث خطأ بداخل الجملة <code data-enlighter-language="python">try</code> فهذا يعني أنه سيتم الإنتقال إلى الجملة <code data-enlighter-language="python">except</code> عند حدوث الخطأ.<br/>
+	بعدها, سيتم تنفيذ الأوامر الموضوعة فيها, و من ثم إكمال تنفيذ أي أوامر موضوعة في البرنامج.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# و الذي لم نخزن أي قيمة فيه بعد. بما أن هذا الأمر سيؤدي لحدوث خطأ x حاولنا طباعة قيمة try في الجملة
+# و تنفيذ أي أمر موضوع فيها except و الإنتقال إلى الجملة try فهذا يعني أنه سيتم الخروج من الجملة
+try:
+    print('x =', x)
+except:
+    print('An exception occurred')
+
+# سيتم تنفيذ أمر الطباعة التالي في حال كان البرنامج لا يوجد فيه أي مشكلة أو حدثت مشكلة سابقاً و تم معالجتها
+print('Program still work')
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+			An exception occurred<br/>
+			Program still work
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي إستخدمنا الجملتين <code data-enlighter-language="python">try</code> و <code data-enlighter-language="python">except</code> و وضعنا خطأ متعمد في الكود.<br/>
+<span class="note">ملاحظة:</span> هنا توقعنا حدوث خطأ محدد و إمكانية حدوث أي خطأ آخر.</p>
+<div class="example-box">
+<h4>المثال الثالث</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# و الذي لم نخزن أي قيمة فيه بعد و بالتالي سيحدث خطأ x حاولنا طباعة قيمة try في الجملة
+try:
+    print('x =', x)
+	
+# سيتم تنفيذ الكود التالي - NameError إذا كان سبب الخطأ هو محاولة عرض قيمة متغير لم يتم تعريفه سابقاً - أي خطأء من النوع
+except NameError:
+    print('x is not defined')
+
+# سيتم تنفيذ الكود التالي - NameError إذا كان سبب الخطأ هو خطأ من أي نوع آخر - غير النوع
+except:
+    print('An exception occurred')
+
+# سيتم تنفيذ أمر الطباعة التالي في حال كان البرنامج لا يوجد فيه أي مشكلة أو حدثت مشكلة سابقاً و تم معالجتها
+print('Program still work')
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+			x is not defined<br/>
+			Program still work
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي إستخدمنا الجمل الثلاثة <code data-enlighter-language="python">try</code> و <code data-enlighter-language="python">except</code> و <code data-enlighter-language="python">finally</code> و لم نضع أي خطأ متعمد في الكود.<br/>
+<span class="note">تذكر:</span> الجملة <code data-enlighter-language="python">finally</code> يتم تنفيذ أي أمر موضوع فيها سواء حدث خطأ أو لم يحدث.</p>
+<div class="example-box">
+<h4>المثال الرابع</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+x = 10
+
+try:
+    print('x =', x)
+	
+except:
+    print('An exception occurred')
+
+# try سيتم تنفيذه في حال حدوث أو عدم حدوث خطأ في الجملة finally أي أمر موضوع في الجملة
+finally:
+	print('Finally block always executed')
+
+# سيتم تنفيذ أمر الطباعة التالي في حال كان البرنامج لا يوجد فيه أي مشكلة أو حدثت مشكلة سابقاً و تم معالجتها
+print('Program still work')
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+			x = 10<br/>
+			Finally block always executed<br/>
+			Program still work
+		</div>
+</div>
+<br/><br/>
+<p>في المثال التالي إستخدمنا الجمل الثلاثة <code data-enlighter-language="python">try</code> و <code data-enlighter-language="python">except</code> و <code data-enlighter-language="python">else</code> و لم نضع أي خطأ متعمد في الكود.<br/>
+<span class="note">تذكر:</span> الجملة <code data-enlighter-language="python">else</code> يتم تنفيذ أي أمر موضوع فيها سواء لم يحدث خطأ فقط.</p>
+<div class="example-box">
+<h4>المثال الخامس</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+x = 10
+
+try:
+    print('x =', x)
+	
+except:
+    print('An exception occurred')
+	
+# try يتم تنفيذها فقط في حال عدم حدوث خطأ في الجملة else الأوامر التي نضعها في الجملة
+else:
+	print('Else block executed only when no exception occurred')
+
+# سيتم تنفيذ أمر الطباعة التالي في حال كان البرنامج لا يوجد فيه أي مشكلة أو حدثت مشكلة سابقاً و تم معالجتها
+print('Program still work')
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+			x = 10<br/>
+			Else block executed only when no exception occurred<br/>
+			Program still work
+		</div>
+</div>
+</article>
+<article>
+<h2>الإستثناءات الجاهزة في بايثون</h2>
+<p>تم تقسيم الإستثناءات أو الأخطاء الأساسية في بايثون إلى عدة أنواع و كل نوع تم تمثيله في كلاس خاص.<br/>
+	جميع هذه الكلاسات ترث من كلاس أساسي إسمه <span class="inline"><code data-enlighter-language="python">BaseException</code>.</span><br/>
+	و هذا يعني أنك إذا أردت تعريف إستثناء خاص فيك في المستقبل سيكون عليك إنشاء كلاس يرث من هذا الكلاس أو من إحدى الكلاسات التي ترث منه.</p>
+<p>إذاً, أي كلاس يرث من الكلاس <code data-enlighter-language="python">BaseException</code> هو كلاس يمثل إستثناء معين.</p>
+<pre data-enlighter-language="python" data-enlighter-linenumbers="false">
+BaseException
+ +-- SystemExit
+ +-- KeyboardInterrupt
+ +-- GeneratorExit
+ +-- Exception
+      +-- StopIteration
+      +-- StandardError
+      |    +-- BufferError
+      |    +-- ArithmeticError
+      |    |    +-- FloatingPointError
+      |    |    +-- OverflowError
+      |    |    +-- ZeroDivisionError
+      |    +-- AssertionError
+      |    +-- AttributeError
+      |    +-- EnvironmentError
+      |    |    +-- IOError
+      |    |    +-- OSError
+      |    |         +-- WindowsError (Windows)
+      |    |         +-- VMSError (VMS)
+      |    +-- EOFError
+      |    +-- ImportError
+      |    +-- LookupError
+      |    |    +-- IndexError
+      |    |    +-- KeyError
+      |    +-- MemoryError
+      |    +-- NameError
+      |    |    +-- UnboundLocalError
+      |    +-- ReferenceError
+      |    +-- RuntimeError
+      |    |    +-- NotImplementedError
+      |    +-- SyntaxError
+      |    |    +-- IndentationError
+      |    |         +-- TabError
+      |    +-- SystemError
+      |    +-- TypeError
+      |    +-- ValueError
+      |         +-- UnicodeError
+      |              +-- UnicodeDecodeError
+      |              +-- UnicodeEncodeError
+      |              +-- UnicodeTranslateError
+      +-- Warning
+           +-- DeprecationWarning
+           +-- PendingDeprecationWarning
+           +-- RuntimeWarning
+           +-- SyntaxWarning
+           +-- UserWarning
+           +-- FutureWarning
+		   +-- ImportWarning
+		   +-- UnicodeWarning
+		   +-- BytesWarning
+	</pre>
+</article>
+<article>
+<h2>طباعة رسالة الخطأ الذي حدث في بايثون</h2>
+<p>عندما يحدث خطأ في الجملة <span class="inline"><code data-enlighter-language="python">try</code>,</span> يقوم مفسر بايثون ينشئ كائن يمثل نوع الخطأ الذي حدث في هذه الجملة.<br/>
+	بعدها يمر على كل جملة <code data-enlighter-language="python">except</code> موضوعة بعدها, و يقارن نوع الكائن الذي تم إنشاؤه في الجملة <code data-enlighter-language="python">try</code> مع نوع الخطأ ( الذي هو في الأصل عبارة عن إسم الكلاس الذي يمثل الخطأ المتوقع حصوله ) الذي تعامله كل جملة <code data-enlighter-language="python">except</code> حتى يجد الجملة التي تعالج هذا النوع من الأخطاء و ينفذ الأوامر الموضوعة فيها.</p>
+<p>الآن, في حال أردت طباعة رسالة الخطأ الذي حدث في الجملة <code data-enlighter-language="python">try</code> و التي بدورها أرسلته إلى الجملة <code data-enlighter-language="python">except</code> فكل ما عليك فعله هو إستقبال رسالة الخطأ من هذا الكائن و وضعها في متغير بواسطة الكلمة المفتاحية <span class="inline"><code data-enlighter-language="python">as</code>.</span></p>
+<br/><br/>
+<p>المثال التالي يعلمك طريقة طباعة رسالة الخطأ الجاهزة في الكائن الذي يمثل الخطأ المحدد الذي قد يحدث.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# لأننا حاولنا طباعة قيمة متغير لا يملك قيمة أصلاً NameError الكود هنا يسبب خطأ من النوع
+try:
+    print('x =', x)
+
+# و من ثم عرضها msg سيتم تخزين رسالة الخطأ الجاهزة في هذا الكائن و وضعها بشكل مؤقت في المتغير NameError هنا قلنا أن أي خطأ نوعه
+except NameError as msg :
+    print('Error Message:', msg)
+
+# سيتم تنفيذ أمر الطباعة التالي في حال كان البرنامج لا يوجد فيه أي مشكلة أو حدثت مشكلة سابقاً و تم معالجتها
+print('Program still work')
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+			Error Message: name 'x' is not defined<br/>
+			Program still work
+		</div>
+</div>
+<br/><br/>
+<p>المثال التالي يعلمك طريقة طباعة رسالة الخطأ الجاهزة مهما كان نوع الخطأ الذي حدث في الجملة <span class="inline"><code data-enlighter-language="python">try</code>.</span><br/>
+<span class="note">ملاحظة:</span> قمنا بإعادة نفس المثال السابق مع تبديل الكلاس <code data-enlighter-language="python">NameError</code> بالكلاس <span class="inline"><code data-enlighter-language="python">BaseException</code>.</span><br/>
+	الفكرة لأساسية هنا هي أنه بما أن الكلاس <code data-enlighter-language="python">BaseException</code> يعتبر الكلاس الأساسي لأي خطأ قد يحدث, فهذا يعني أنه يمكننا إعتبار الخطأ الذي حدث عبارة عن كائن منه لأنه سيكون من كلاس يرث منه.</p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# لأننا حاولنا طباعة قيمة متغير لا يملك قيمة أصلاً NameError الكود هنا يسبب خطأ من النوع
+try:
+    print('x =', x)
+
+# و من ثم عرضها msg سيتم تخزين رسالة الخطأ الجاهزة في هذا الكائن و وضعها بشكل مؤقت في المتغير NameError هنا قلنا أن أي خطأ نوعه
+except BaseException as msg :
+    print('Error Message:', msg)
+
+# سيتم تنفيذ أمر الطباعة التالي في حال كان البرنامج لا يوجد فيه أي مشكلة أو حدثت مشكلة سابقاً و تم معالجتها
+print('Program still work')
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+			Error Message: name 'x' is not defined<br/>
+			Program still work
+		</div>
+</div>
+</article>
+<article>
+<h2>الكلمة المفتاحية <code data-enlighter-language="python">raise</code> في بايثون</h2>
+<p>في حال أردت بناء دالة ترمي إستثناء في حال حدوث خطأ معين, كل ما عليك فعله هو جعل هذه الدالة تفعل <code data-enlighter-language="python">raise</code> لكائن من الكلاس <code data-enlighter-language="python">Exception</code> يحتوي على رسالة الخطأ التي تريد إظهارها.</p>
+<br/><br/>
+<p>في المثال التالي قمنا ببناء دالة ترمي إستثناء في حال تم تمرير قيمة أصغر من <span class="number">0</span> لها عند استدعاءها.<br/>
+	بعدها قمنا باستدعاء الدالة و تمرير قيمة أصغر من <span class="number">0</span> لها فتسبب ذلك بإيقاف البرنامج.</p>
+<div class="example-box">
+<h4>المثال الأول</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# تأخذ قيمة عند استدعاءها func هنا قمنا بتعريف دالة إسمها
+# إذا تم تمرير قيمة أصغر من 0 لها, ترمي إستثناء. غير ذلك تطبع القيمة التي تم تمريرها لها
+def func(x):
+    if x &lt; 0:
+        raise Exception("Error: Passed value can't be negative")
+
+    print(x, "Acceptable value")
+
+
+# و تمرير قيمة أكبر من 0 لها. نلاحظ أنها تقوم بطباعتها و لا يسبب ذلك أي مشكلة في الكود func() هنا قمنا باستدعاء الدالة
+func(5)
+
+# و تمرير قيمة أصغر من 0 لها. نلاحظ أن هذا الأمر سبب مشكلة في الكود و أدى إلى إيقاف البرنامج func() هنا قمنا باستدعاء الدالة
+func(-1)
+
+# سيتم تنفيذ أمر الطباعة التالي في حال كان البرنامج لا يوجد فيه أي مشكلة أو حدثت مشكلة سابقاً و تم معالجتها
+print('Program still work')
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+			5 Acceptable value<br/>
+<span class="red">File "</span><span class="blue">C:/Users/Mhamad/PycharmProjects/myapp/Test.py</span><span class="red">", line 14, in &lt;module&gt;<br/>
+			    func(-1)<br/>
+<span class="red">File "</span><span class="blue">C:/Users/Mhamad/PycharmProjects/myapp/Test.py</span><span class="red">", line 5, in func<br/>
+			    raise Exception("Error: Passed value can't be negative")<br/><br/>
+			Exception: Error: Passed value can't be negative</span>
+</span></div>
+</div>
+<br/><br/>
+<p>في المثال التالي قمنا ببناء دالة ترمي إستثناء في حال تم تمرير قيمة أصغر من <span class="number">0</span> لها عند استدعاءها.<br/>
+	بعدها قمنا باستدعاء الدالة بداخل بلوك <code data-enlighter-language="python">try</code> مع تمرير قيمة أصغر من <span class="number">0</span> لها و من ثم معالجة الخطأ الذي ستسببه بداخل بلوك <span class="inline"><code data-enlighter-language="python">except</code>.</span></p>
+<div class="example-box">
+<h4>المثال الثاني</h4>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# تأخذ قيمة عند استدعاءها func هنا قمنا بتعريف دالة إسمها
+# إذا تم تمرير قيمة أصغر من 0 لها, ترمي إستثناء. غير ذلك تطبع القيمة التي تم تمريرها لها
+def func(x):
+    if x &lt; 0:
+        raise Exception("Error: Passed value can't be negative")
+
+    print(x, "Acceptable value")
+
+
+# مرتين func() هنا قمنا بمحاولة إستدعاء الدالة
+try:
+    func(5)
+    func(-1)
+
+# هنا قمنا بالتقاط أي خطأ قد يحدث سببه أن القيمة التي تم تمريرها للدالة أصغر من 0, و من ثم طباعة رسالة الخطأ
+except Exception as msg:
+    print(msg)
+
+
+# سيتم تنفيذ أمر الطباعة التالي في حال كان البرنامج لا يوجد فيه أي مشكلة أو حدثت مشكلة سابقاً و تم معالجتها
+print('Program still work')
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code>Test</code>.</span></p>
+<div class="code-box">
+			5 Acceptable value<br/>
+			Error: Passed value can't be negative<br/>
+			Program still work
+		</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

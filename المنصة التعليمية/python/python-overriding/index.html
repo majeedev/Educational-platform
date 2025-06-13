@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس شرحنا مفهوم الـ Overriding في بايثون بتفصيل شامل, و وضعنا مثال شامل لتوضيح فائدة الـ Overriding, و ذكرنا أهم شروط الـ Overriding" name="description"/>
+<meta content="Overriding in java,Override in java,Overriding conditions in java,فائدة overriding في بايثون,مفهوم ال overriding في بايثون, مثال عن overriding في بايثون,override للدوال,لماذا نفعل override للدوال" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>مفهوم الـ overriding في بايثون | Python overriding</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../python-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../python-overview/index.html"><span class="en">Python</span> - نظرة عامة</a></li>
+<li><a href="../python-environment-setup/index.html"><span class="en">Python</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../python-basic-syntax/index.html"><span class="en">Python</span> - أسلوب الكتابة</a></li>
+<li><a href="../python-variables-types/index.html"><span class="en">Python</span> - أنواع المتغيرات</a></li>
+<li><a href="../python-operators/index.html"><span class="en">Python</span> - العوامل</a></li>
+<li><a href="../python-conditions/index.html"><span class="en">Python</span> - الشروط</a></li>
+<li><a href="../python-loops/index.html"><span class="en">Python</span> - الحلقات</a></li>
+<li><a href="../python-numbers/index.html"><span class="en">Python</span> - الأرقام</a></li>
+<li><a href="../python-strings/index.html"><span class="en">Python</span> - النصوص</a></li>
+<li><a href="../python-lists/index.html"><span class="en">Lists</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-tuples/index.html"><span class="en">Tuples</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-sets/index.html"><span class="en">Sets</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-dictionaries/index.html"><span class="en">Dictionaries</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-functions/index.html"><span class="en">Python</span> - الدوال</a></li>
+<li><a href="../python-modules/index.html"><span class="en">Modules</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-date-and-time/index.html"><span class="en">Python</span> - التاريخ و الوقت</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../python-class-and-object/index.html"><span class="en">Python</span> - الكلاس و الكائن</a></li>
+<li><a href="../python-inheritance/index.html"><span class="en">Python</span> - الوراثة</a></li>
+<li><a href="index.html"><span class="en">Overriding</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-static-methods/index.html"><span class="en">Python</span> - الدوال الثابتة</a></li>
+<li><a href="../python-abc/index.html"><span class="en">Python</span> - التجريد</a></li>
+<li><a href="../python-polymorphism/index.html"><span class="en">Python</span> - تعدد الأشكال</a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../python-input/index.html"><span class="en">Python</span> - إدخال البيانات</a></li>
+<li><a href="../python-iterators/index.html"><span class="en">Iterators</span> - <span class="en">Python</span></a></li>
+<li><a href="../python-regular-expressions/index.html"><span class="en">Python</span> - التعابير النمطية</a></li>
+<li><a href="../python-exceptions-handling/index.html"><span class="en">Python</span> - معالجة الأخطاء</a></li>
+<li><a href="../python-files-handling/index.html"><span class="en">Python</span> - التعامل مع الملفات</a></li>
+<li><a href="../python-pip/index.html"><span class="en">Python</span> - مدير الحزم ( <span class="en">PIP</span> ) </a></li>
+<li><a href="../python-database/index.html"><span class="en">Python</span> - قواعد البيانات</a></li>
+<li><a href="../python-multithreading/index.html"><span class="en">Python</span> - تعدد المهام</a></li>
+<li><a href="../python-next-step/index.html"><span class="en">Python</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<!--<li><a href="https://harmash.com/blog/?s=python"><span class="en">Java</span> - مقالات بايثون</a></li>-->
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Python</span> - الخوارزميات و هياكل البيانات</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Python</span>مفهوم الـ <span class="word">Overriding</span></h1>
+<article>
+<h2>مفهوم <span class="inline">الـ <span class="word">Overriding</span></span> في بايثون</h2>
+<p>في الدرس السابق, شاهدت كيف أن الكلاس الإبن <span class="inline">( <span class="word">Subclass</span> )</span> يرث كل المتغيرات و الدوال الموجودة في الكلاس الأب <span class="inline">( <span class="word">Superclass</span> ).</span> و تعلمت أيضاً طريقة تطبيق مبدأ إخفاء البيانات من أجل ضمان أن لا يحدث تضارب في أسماء المتغيرات و الدوال الموجودة في الكلاس الإبن و الكلاس الأب.<br/>
+	مبدأ إخفاء البيانات يتيح لنا الوصول للأشياء الموجودة في الكائن سواء أصلها من الكلاس الإبن أو الكلاس الأب.</p>
+<p><span class="word">Override</span>: تعني تعريف الدالة التي ورثها الكلاس الإبن من الكلاس الأب من جديد, هذه الدالة الجديدة تكون مشابهة للدالة الموروثة من حيث الشكل فقط, أي لها نفس الإسم و النوع و عدد الباراميترات, لكن محتواها مختلف.<br/>
+	إذاً, الهدف الحقيقي من <span class="inline">الـ <span class="word">Overriding</span></span> هو إتاحة الفرصة للكلاس الإبن لأن يعرف الدوال حسب حاجته.</p>
+<p>في دروس لاحقة, سنرث من كلاسات جاهزة في بايثون, و نفعل <span class="word">Override</span> للدوال الموجودة فيها لكي تناسب التطبيقات التي سنقوم ببنائها.</p>
+<br/>
+<h3>شروط <span class="inline">الـ <span class="word">Overriding</span></span></h3>
+<ul class="explain">
+<li><p>لا يمكنك أن تفعل <span class="word">Override</span> لدالة معرفة في الأساس بشكل خفي لأن إخفاء الأسماء يضمن عدم حدوث مشكلة في تضارب الأسماء.</p></li>
+<li><p>عدد و نوع باراميترات الدالة الجديدة يجب أن يطابق عدد و نوع باراميترات الدالة القديمة.</p></li>
+</ul>
+<p>عدم تحقق هذين الشرطين يعني أنك تعرف دالة جديدة في الكلاس الإبن و الدالة التي ورثها من الكلاس الأب يستطيع الكائن الذي تنشئه من الكلاس الإبن أن يقوم باستدعائها.</p>
+<br/><br/>
+<h3>مثال</h3>
+<p>الآن لنفترض أننا قمنا بتعريف كلاس إسمه <span class="inline"><code data-enlighter-language="java">CountryInfo</code>,</span> يحتوي على دالة إسمها <span class="inline"><code data-enlighter-language="java">print_language()</code>.</span><br/>
+	بعدها قمنا بتعريف ثلاث كلاسات, و كلها ترث من الكلاس <span class="inline"><code data-enlighter-language="java">CountryInfo</code>.</span> إذاً كل كلاس منهم سيحتوي على الدالة <span class="inline"><code data-enlighter-language="java">print_language()</code>.</span><br/>
+	هنا الفكرة أن أي كلاس يرث من كلاس <code data-enlighter-language="java">CountryInfo</code> قد يضطر إلى تعريف الدالة <code data-enlighter-language="java">print_language()</code> من جديد حتى تناسبه.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">CountryInfo.py</span>
+<pre data-enlighter-language="python">
+# هذا الكلاس يعتبر الكلاس الأساسي لأي دولة في العالم, إذاً يجب أن يرثه أي كلاس يمثل دولة
+class CountryInfo:
+
+    def print_language(self):
+        print('English')        # هنا قمنا بوضع اللغة الإنجليزية كلغة إفتراضية لجميع البلدان
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Australia.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه PrintInfo.py الموجود في الملف PrintInfo هنا قمنا بتضمين الكلاس
+from CountryInfo import CountryInfo
+
+
+# 'English' التي تطبع كلمة print_language() و بالتالي ورث الدالة CountryInfo يرث من الكلاس Australia هنا قمنا بتعريف كلاس إسمه
+class Australia(CountryInfo):
+    pass
+	
+	# من جديد لأن اللغة الإنجليزية هي لغة أستراليا print_language() هنا لا داعي لتعريف الدالة
+	</pre>
+<br/>
+<span class="code-title python-file-icon">Lebanon.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه PrintInfo.py الموجود في الملف PrintInfo هنا قمنا بتضمين الكلاس
+from CountryInfo import CountryInfo
+
+
+# 'English' التي تطبع كلمة print_language() و بالتالي ورث الدالة CountryInfo يرث من الكلاس Lebanon هنا قمنا بتعريف كلاس إسمه
+class Lebanon(CountryInfo):
+
+	# لأن اللغة العربية هي لغة لبنان 'English' بدل كلمة 'Arabic' من جديد لجعلها تطبع كلمة print_language() هنا يجب تعريف الدالة
+    def print_language(self):
+        print('Arabic')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Spain.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه PrintInfo.py الموجود في الملف PrintInfo هنا قمنا بتضمين الكلاس
+from CountryInfo import CountryInfo
+
+
+# 'English' التي تطبع كلمة print_language() و بالتالي ورث الدالة CountryInfo يرث من الكلاس Spain هنا قمنا بتعريف كلاس إسمه
+class Spain(CountryInfo):
+
+	# لأن اللغة الإسبانية هي لغة إسبانيا 'English' بدل كلمة 'Spanish' من جديد لجعلها تطبع كلمة print_language() هنا يجب تعريف الدالة
+    def print_language(self):
+        print('Spanish')
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع إنشاء كائنات منهم Spain و Lebanon ,Australia هنا قمنا بتضمين الكلاسات
+from Australia import Australia
+from Lebanon import Lebanon
+from Spain import Spain
+
+
+# Spain و Lebanon ,Australia هنا قمنا بإنشاء كائنات من البلدان الثلاثة
+au = Australia()
+lb = Lebanon()
+sp = Spain()
+
+# من كل كائن لعرض لغة كل بلد print_language() هنا قمنا باستدعاء الدالة
+au.print_language()
+lb.print_language()
+sp.print_language()
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			English<br/>
+			Arabic<br/>
+			Spanish 
+		</div>
+</div>
+<br/>
+<p>إذا فهمت المثال السابق جيداً, فأنت الآن فهمت حتماً لما قد تحتاج أن تفعل <span class="word">Override</span> للدوال في الكلاس الإبن.</p>
+<br/>
+<h3>معلومة تقنية</h3>
+<p>إذا عدت للكلاس <span class="inline"><code data-enlighter-language="python">Lebanon</code>,</span> ستجد أننا فعلنا <span class="word">Override</span> للدالة <code data-enlighter-language="python">print_language()</code> لكي تطبع كلمة <code class="brown">Arabic</code> بدل كلمة <code class="brown">English</code> في حال إنشاء كائن من الكلاس <code data-enlighter-language="python">Lebanon</code> و إستدعاءها منه.</p>
+<p>فعلياً, الكلاس <code data-enlighter-language="python">Lebanon</code> أصبح يملك دالتين إٍسمهما <code data-enlighter-language="python">print_language()</code> و ليس دالة واحدة كالتالي:</p>
+<ul class="explain">
+<li><p>الأولى هي التي ورثها في الأساس من الكلاس <span class="inline"><code data-enlighter-language="python">CountryInfo</code>.</span></p></li>
+<li><p>الثانية هي التي قمنا بتعريفها فيه من جديد في الكلاس <code data-enlighter-language="python">Lebanon</code> <span class="inline">( أي عندما فعلنا <span class="word">Override</span> ).</span></p></li>
+</ul>
+<p>بما أن الكلاس <code data-enlighter-language="python">Lebanon</code> يملك دالتين لهما نفس الإسم و عدد الباراميترات, كيف عرف مفسّر بايثون أي دالة منهما سينفذ عند تشغيل الكود؟</p>
+<p>مفسّر بايثون يبحث في المرتبة الأولى عن الدالة التي قمت باستدعائها في الكلاس الذي تم منه إنشاء الكائن.<br/>
+	إذا وجد الدالة في الكلاس فإنه يقوم بتنفيذها. إن لم يجد يجدها يبحث عنها في الكلاس الأب. إن وجدها في الكلاس الأب يقوم بتنفيذها.</p>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>في الكلاس <code data-enlighter-language="python">Lebanon</code> يمكنك إستدعاء الدالة <code data-enlighter-language="python">print_language()</code> التي ورثها من الكلاس <code data-enlighter-language="python">CountryInfo</code> بالإعتماد على دالة إسمها <span class="inline"><code data-enlighter-language="python">super()</code>.</span><br/>
+		لا تقلق إذا لم تفهم المقصود الآن لأنك ستتعرف على هذه الدالة بعد قليل.</p>
+</div>
+</article>
+<article>
+<h2>الدالة <code data-enlighter-language="python">super()</code> في بايثون</h2>
+<p>هذه الدالة تجعلك قادر على الوصول إلى الدالة المعرفة في الكلاس الأب <span class="inline">( <span class="word">Superclass</span> )</span> من الكلاس الإبن <span class="inline">( <span class="word">Subclass</span> )</span> سواء كان يوجد تضارب في الأسماء أو لا يوجد و بالتالي يصبح الكلاس الإبن قادر على أن يعيد كتابة الدالة التي ورثها من الكلاس الأب و أن يصل للدالة التي ورثها من الكلاس الأب أيضاً.</p>
+<p>و بمعنى آخر فإن هذه الدالة أن تجعل المبرمج قادر على الإستفادة من الدالة الموجودة في الكلاس الأب و إضافة أشياء جديدة عليها في الكلاس الإبن.<br/>
+	ستتعلم من المثال التالي كيف تقوم باستدعاء الدالة <code data-enlighter-language="python">__init__()</code> الموجودة في الكلاس الأب بشكل تلقائي من الدالة <code data-enlighter-language="python">__init__()</code> الموجودة في الكلاس الإبن.</p>
+<br/>
+<h3 class="note-title">تذكر</h3>
+<div class="note-box">
+<p>الباراميترات التي تعرفها بداخل الدالة <code data-enlighter-language="java">__init__()</code> يتم تحويلها إلى خصائص للكائن الذي يتم إنشاؤه و هذه الدالة تستدعى بشكل تلقائي عند إنشاء الكائن.</p>
+</div>
+<br/>
+<h3>مثال</h3>
+<p>الآن لنفترض أننا قمنا بتعريف كلاس إسمه <span class="inline"><code data-enlighter-language="java">Person</code>,</span> يحتوي على خاصيّتين <span class="inline">( <code data-enlighter-language="java">name</code> و <code data-enlighter-language="java">age</code> )</span> يتم إنشاؤهما في لحظة إنشاء كائن من الكلاس لأننا وضعناهما في الدالة <span class="inline"><code data-enlighter-language="java">__init__()</code>.</span></p>
+<p>بعدها قمنا بتعريف كلاس إسمه <code data-enlighter-language="java">Student</code> يرث من الكلاس <span class="inline"><code data-enlighter-language="java">Person</code>.</span> في هذا الكلاس قمنا بتعريف الدالة <code data-enlighter-language="java">__init__()</code> من جديد و وضعنا فيها نفس الباراميترات الموجودة في الدالة <code data-enlighter-language="java">__init__()</code> التي ورثها الكلاس و أضفنا فيها باراميتر جديد إسمه <span class="inline"><code data-enlighter-language="java">specialization</code>.</span><br/>
+	كما أننا قمنا بتعريف دالة إسمها <code data-enlighter-language="java">print_info()</code> تعرض كل قيم الخصائص الموجودة في الكلاس.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title python-file-icon">Person.py</span>
+<pre data-enlighter-language="python">
+# هذا الكلاس يعتبر الكلاس الأساسي لأي إنسان حيث أن كل إنسان يملك إسم و عمر
+class Person:
+
+	# التي سيملكها أي كائن ننشئه منه Person التي وضعنا فيها خصائص الكلاس __init__() هنا قمنا بتعريف الدالة
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Student.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع الوراثة منه Person.py الموجود في الملف Person هنا قمنا بتضمين الكلاس
+from Person import Person
+
+
+# لأنه يمكنه الإستفادة منه Person يعتبر الكلاس الأساسي لإنشاء أي طالب, هذا الكلاس جعلناه يرث من الكلاس Student هنا قمنا بتعريف كلاس إسمه
+class Student(Person):
+
+	# و التي سيملكها أي كائن ننشئه منه Student التي وضعنا فيها خصائص الكلاس __init__() هنا قمنا بتعريف الدالة
+    def __init__(self, name, age, specialization):
+		# اللتين ندخلهما عند إنشاء كائن age و قيمة الباراميتر name و مررنا لها قيمة البارميتر Person الموجودة في الكلاس __init__() هنا قمنا باستدعاء الدالة 
+        super().__init__(name, age)
+		# التي ذكرناها في هذا الكلاس سيتم إعطائها آخر قيمة نمررها في أقواس الكائن الذي ننشئه من هذا الكلاس specialization الخاصية
+		self.specialization = specialization
+
+	# Student هنا قمنا بتعريف دالة تطبع كل قيم الخصائص التي يملكها أي كائن ننشئه من الكلاس
+    def print_info(self):
+        print('name:', self.name)
+        print('age:', self.age)
+        print('specialization:', self.specialization)
+		</pre>
+<br/>
+<span class="code-title python-file-icon">Test.py</span>
+<pre data-enlighter-language="python">
+# حتى نستطيع إنشاء كائن منه Student.py الموجود في الملف Student هنا قمنا بتضمين الكلاس
+from Student import Student
+
+# s و خزناه في Student هنا قمنا بإنشاء كائن من الكلاس
+s = Student('Mhamad', 24, 'Computer Science')
+
+# حتى تعرض قيم خصائصه s من الكائن print_info() هنا قمنا باستدعاء الدالة
+s.print_info()
+		</pre>
+<br/>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند تشغيل الملف <span class="inline"><code data-enlighter-language="python">Test</code>.</span></p>
+<div class="code-box">
+			name: Mhamad<br/>
+			age: 24<br/>
+			specialization: Computer Science
+		</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

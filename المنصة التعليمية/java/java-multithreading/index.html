@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>تعدد المهام في جافا | Java Multithreading</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../java-overview/index.html"><span class="en">Java</span> - نظرة عامة</a></li>
+<li><a href="../java-environment-setup/index.html"><span class="en">Java</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../java-basics/index.html"><span class="en">Java</span> - أساسيات لغة جافا</a></li>
+<li><a href="../java-basic-syntax/index.html"><span class="en">Java</span> - أسلوب الكتابة</a></li>
+<li><a href="../java-start-coding/index.html"><span class="en">Java</span> - أول برنامج لك</a></li>
+<li><a href="../java-basic-data-types/index.html"><span class="en">Java</span> - أنواع البيانات</a></li>
+<li><a href="../java-variables-type/index.html"><span class="en">Java</span> - المتغيرات</a></li>
+<li><a href="../java-methods/index.html"><span class="en">Java</span> - الدوال</a></li>
+<li><a href="../java-operators/index.html"><span class="en">Java</span> - العوامل</a></li>
+<li><a href="../java-loops/index.html"><span class="en">Java</span> - الحلقات</a></li>
+<li><a href="../java-conditions/index.html"><span class="en">Java</span> - الشروط</a></li>
+<li><a href="../java-numbers/index.html"><span class="en">Java</span> - الأعداد</a></li>
+<li><a href="../java-characters/index.html"><span class="en">Java</span> - الأحرف</a></li>
+<li><a href="../java-strings/index.html"><span class="en">Java</span> - النصوص</a></li>
+<li><a href="../java-arrays/index.html"><span class="en">Java</span> - المصفوفات</a></li>
+<li><a href="../java-date-and-time/index.html"><span class="en">Java</span> - التاريخ و الوقت</a></li>
+<li><a href="../java-regular-expressions/index.html"><span class="en">Java</span> - التعابير النمطية</a></li>
+<li><a href="../java-exceptions/index.html"><span class="en">Java</span> - الإستثناءات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../java-class-and-object/index.html"><span class="en">Class &amp; Object - Java</span></a></li>
+<li><a href="../java-modifiers/index.html"><span class="en">Modifiers - Java</span></a></li>
+<li><a href="../java-encapsulation/index.html"><span class="en">Encapsulation - Java</span></a></li>
+<li><a href="../java-inheritance/index.html"><span class="en">Inheritance - Java</span></a></li>
+<li><a href="../java-overriding/index.html"><span class="en">Overriding - Java</span></a></li>
+<li><a href="../java-overloading/index.html"><span class="en">Overloading - Java</span></a></li>
+<li><a href="../java-type-casting/index.html"><span class="en">Type Casting - Java</span></a></li>
+<li><a href="../java-abstraction/index.html"><span class="en">Abstraction - Java</span></a></li>
+<li><a href="../java-interfaces/index.html"><span class="en">Interfaces - Java</span></a></li>
+<li><a href="../java-polymorphism/index.html"><span class="en">Polymorphism - Java</span></a></li>
+<li><a href="../java-nested-classes/index.html"><span class="en">Nested Classes - Java</span></a></li>
+<li><a href="../java-enum/index.html"><span class="en">Enum - Java</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../java-user-input/index.html"><span class="en">Java</span> - إدخال البيانات</a></li>
+<li><a href="../java-files-io/index.html"><span class="en">Java</span> - التعامل مع الملفات</a></li>
+<li><a href="../java-serialization/index.html"><span class="en">Java</span> - المزامنة</a></li>
+<li><a href="../java-data-structure/index.html"><span class="en">Data Structure - Java</span></a></li>
+<li><a href="../java-collection/index.html"><span class="en">Collection - Java</span></a></li>
+<li><a href="../java-generics/index.html"><span class="en">Generics - Java</span></a></li>
+<li><a href="../java-networking/index.html"><span class="en">Java</span> - الشبكات</a></li>
+<li><a href="index.html"><span class="en">Java</span> - تعدد المهام</a></li>
+<li><a href="../java-jdbc/index.html"><span class="en">Java</span> - قواعد البيانات</a></li>
+<li><a href="../java-lambda-expressions/index.html"><span class="en">Lambda Expressions - Java</span></a></li>
+<li><a href="../java-next-step/index.html"><span class="en">Java</span> - ما هي خطوتي التالية ؟</a></li>
+<li class="title">تعلم المزيد</li>
+<li><a href="../../blog/category/%d8%ac%d8%a7%d9%81%d8%a7/index.html"><span class="en">Java</span> - مقالات جافا</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span class="en">Java</span> - الخوارزميات و هياكل البيانات</a></li>
+<!--<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java</span>تعدد المهام في جافا</h1>
+<article>
+<h2>مقدمة</h2>
+<p>عندما تستخدم هاتفك أو حاسوبك, ترى أنه يمكنك تشغيل عدة برامج مع بعض في وقت واحد, كل برنامج شغال في الذاكرة يعتبر <span class="word">Process</span>, فمثلاً إذا قمت بتشغيل خمسة برامج مع بعض فهذا يعني أن نظام التشغيل ينظم عمل خمسة <span class="word">Processes</span> مع بعض. آلية تشغيل عدة برامج مع بعض تسمى <span class="word">Multiprocessing</span>.</p>
+<p>من جهة اخرى, في البرنامج الواحد يمكنك تنفيذ عدة أوامر مع بعض و جعل المستخدم يشعر كأنها تتنفذ في وقت واحد, فمثلاً في حال كنت تلعب لعبة مثل لعبة كرة القدم, تجد أنه هناك عدة أشياء تحدث في وقت واحد, فمثلاُ عند تشغيل اللعبة تسمع عدة أصوات ( مثل أغنية حماسية, صوت المعلق, صوت المشجعين, صوت صفارة الحكم في حال وقع خطأ إلخ.. ), بالإضافة إلى أنه يمكنك تحريك اللاعب و مشاهدة توقيت المبارة و الكثير من التفاصيل الأخرى التي تحدث كلها في نفس الوقت لتصنع لك لعبة رائعة. هذه الآلية تسمى <span class="word">Multithreading</span>, لأن كل جزء شغال في البرنامج يكون عبارة عن مجموعة أوامر موضوعة بداخل <span class="word">Thread</span> خاص.</p>
+<p>إذاً نستخدم آلية <span class="word">Multithreading</span> لجعل البرنامج قادر على تنفيذ عدة أوامر مع بعض و كأنها تتنفذ في وقت واحد, و هذا ما سنتعلمه في هذا الدرس.</p><br/>
+<h3>معلومة تقنية</h3>
+<p>فعلياً, في البرنامج الواحد لا يمكن تنفيذ عدة أوامر في نفس الوقت, لكن يمكن جعل نظام التشغيل يعيد تنفيذ أوامر محددة عدة مرات خلال أجزاء من الثانية, مما يجعل المستخدم يظن أن جميع الأشياء الموجودة في البرنامج تعمل في وقت واحد لأنه غير قادر على ملاحظة ما الذي يعمل و ما الذي لا يعمل خلال أجزاء من الثانية, فتبدو له و كأنها كلها تعمل مع بعضها دفعة واحدة.</p>
+</article>
+<article>
+<h2>الفرق بين الـ <span class="word">Process</span> و الـ <span class="word">Thread</span></h2>
+<p><span class="word">Process</span> تعني برنامج شغال حالياً, و قد قام نظام التشغيل بحجز مساحة خاصة له في الذاكرة.</p>
+<p><span class="word">Thread</span> عبارة عن مجموعة أوامر يتم تنفيذها أثناء تنفيذ أوامر أخرى في نفس البرنامج. يمكنك تشغيل أكثر من <span class="word">Thread</span> في نفس الوقت في البرنامج, و يمكن أيضاً مشاركة المعلومات بينهم. مع ملاحظة أنه يتم إنشاء جميع الـ <span class="word">Threads</span> من ضمن المساحة المحجوزة للـ <span class="word">Process</span> في الذاكرة.</p>
+<a href="difference-between-process-and-threads.png" target="_blank"><img alt="الفرق بين ال process و ال thread" src="difference-between-process-and-threads.png"/></a>
+</article>
+<article>
+<h2>فوائد الـ <span class="word">Multithreading</span></h2>
+<ul class="explain">
+<li><p>جعل المستخدم قادر على تنفيذ عدة عمليات مع بعض في نفس الوقت.</p></li>
+<li><p>جعل تصميم التطبيقات أجمل و إضافة مؤثرات فيه.</p></li>
+<li><p>كل <span class="word">Thread</span> تقوم بتشغيله, يعمل بشكل منعزل عن باقي الأوامر الموجودة في البرنامج, و بالتالي فإنه في حال وقوع أي خطأ في الـ <span class="word">Thread</span> فإنه لن يؤثر على باقي الأوامر الموجود في البرنامج, كما أنه لا يؤثر على أي <span class="word">Thread</span> آخر شغال في البرنامج.</p></li>
+</ul>
+</article>
+<article>
+<h2>دورة حياة الـ <span class="word">Thread</span> ( <span class="word">Thread Life Cycle</span> )</h2>
+<p>الـ <span class="word">Thread</span> لا يعمل مباشرةً عند إنشاءه, بل يمر بعدة مراحل تباعاً حتى يعمل و ينفذ الأوامر الموضوعة بداخله, و هو ينتقل من مرحلة إلى أخرى من خلال دوال معينة كما في الصورة التالية.</p>
+<p><a href="thread-life-cycle.png" target="_blank"><img alt="المراحل التي يمر بها ال thread" src="thread-life-cycle.png"/></a></p>
+<br/>
+<ol class="arabic">
+<li><p>المرحلة <span class="word">New</span>: هي المرحلة التي يتم فيها إنشاء كائن الـ <code data-enlighter-language="java">Thread</code>.</p></li>
+<li><p>المرحلة <span class="word">Runnable</span>: تبدأ هذه المرحلة بعد إستدعاء الدالة <code data-enlighter-language="java">run()</code>, و هي تعني أن كائن الـ <code data-enlighter-language="java">Thread</code> جاهزاً لينفذ الأوامر الموضوعة فيه.</p></li>
+<li><p>المرحلة <span class="word">Running</span>: تبدأ هذه المرحلة بعد إستدعاء الدالة <code data-enlighter-language="java">start()</code>, و هي تعني أن كائن الـ <code data-enlighter-language="java">Thread</code> يبدأ بتنفيذ الأوامر الموضوعة فيه.</p></li>
+<li><p>المرحلة <span class="word">Waiting</span>: تبدأ هذه المرحلة بعد إستدعاء الدالة <code data-enlighter-language="java">wait()</code> أو <code data-enlighter-language="java">sleep()</code>, و هي تعني أن كائن الـ <code data-enlighter-language="java">Thread</code> متوقف لمدة معينة.</p></li>
+<li><p>المرحلة <span class="word">Dead</span>: يقال لها <span class="word">Terminated</span> أيضاً, و هي تعني إيقاف كائن الـ <code data-enlighter-language="java">Thread</code> كلياُ عن العمل و مسحه من الذاكرة, تبدأ هذه المرحلة بعد إستدعاء الدالة <code data-enlighter-language="java">interrupt()</code>.</p></li>
+</ol>
+<br/>
+<h3 class="note-title">ملاحظة</h3>
+<div class="note-box">
+<p>الهدف هنا فقط توضيح آلية عمل الـ <code data-enlighter-language="java">Thread</code> حتى لا تجد صعوبة في فهمها.<br/>
+		ركز قليلا على الدوال التي تنقل الـ <code data-enlighter-language="java">Thread</code> من مرحلة لأخرى, لكن لا تحفظ أسماء المراحل.</p>
+</div>
+</article>
+<article>
+<h2>مفهوم الـ <span class="word">Main Thread</span></h2>
+<p>عندما تقوم بتشغيل أي برنامج في جافا, فإن جافا تعامله كـ <span class="word">Thread</span>, لأن كل برنامج تقوم بإنشائه يمر بالمراحل التي ذكرناها.</p>
+<p>فمثلاً, تخيل أنك قمت ببناء برنامج بسيط يطلب من المستخدم إدخال عددين, بعدها يقوم البرنامج بطباعة ناتج هذين العددين للمستخدم, هنا سيحدث التالي عند تشغيله:</p>
+<ol class="arabic">
+<li><p>سيتم فحص كود البرنامج للتأكد من عدم وجود أي خطأ.</p></li>
+<li><p>بعدها سيتم البحث عن الدالة <code data-enlighter-language="java">main()</code> التي تعتبر نقطة البداية في البرنامج.</p></li>
+<li><p>بعدها سيتم تنفيذ الأوامر الموضوعة في الدالة <code data-enlighter-language="java">main()</code> بالترتيب الموضوعين فيه. و بالتالي سيطلب البرنامج من المستخدم إدخال عددين.</p></li>
+<li><p>بعدها سيقوم البرنامج بإنتظار المستخدم لإدخال العددين.</p></li>
+<li><p>بعد إدخالهما سيقوم بجمع العددين و طباعة الناتج. و عندها ينتهي البرنامج و يتم مسحه من الذاكرة بشكل تلقائي.</p></li>
+</ol>
+<br/><br/>
+<p>لتتأكد أكثر, قمنا ببناء برنامج فيه خطأ متعمد. لاحظ أنه عند تشغيل البرنامج سيخبرك أنه توجد مشكلة في الـ <span class="number">thread</span> الذي إسمه <span class="number">main</span>.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        // و وضعنا فيه نص بدل أن نضع فيه رقم int كـ x هنا يوجد خطأ في الكود و هو أننا قمنا بتعريف المتغير
+        int x = "i am a string!";
+ 
+    }
+
+}
+		</pre>
+<p><span class="point">•</span> سنحصل على نتيجة تشبه النتيجة التالية عند التشغيل.</p>
+<div class="code-box">
+<span class="red">Exception in <span class="yellow-bg">thread "main"</span> java.lang.RuntimeException: Uncompilable source code - incompatible types<br/>
+			  required: int<br/>
+			  found:    java.lang.String</span>
+</div>
+<p><span class="point">•</span> لاحظ أنه أخبرك أن المشكلة حدثت في الـ <code data-enlighter-language="java">thread "main"</code>.</p>
+</div>
+</article>
+<article>
+<h2>الكلاسات المصممة للتعامل مع الـ <span class="word">Thread</span></h2>
+<p>الجدول التالي يحتوي على كلاسات مصممة خصيصاً لإنشاء <span class="word">Thread</span> و التحكم بطريقة عمله.<br/>
+<span class="note">ملاحظة:</span> جميع هذه الكلاسات مرتبطة مع بعضها و موضوعة بترتيب منظم, لذلك عليك قراءتهم واحداً تلو الآخر لتفهمهم جيداً.</p>
+<br/>
+<table class="list full-width rows-numbers">
+<tr>
+<th colspan="2">الكلاس مع تعريفه</th>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public class Thread</code></span>
+			يمكنك إنشاء الـ <span class="word">Thread</span> من خلال وراثة الكلاس <code data-enlighter-language="java">Thread</code>.<br/>
+<a class="open-page" href="thread.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public interface Runnable</code></span>
+			المشكلة الوحيدة التي تواجهها عند إنشاء الـ <span class="word">Thread</span> من خلال وراثة الكلاس <code data-enlighter-language="java">Thread</code> هي أن الكلاس يصبح غير قادر على أن يرث من كلاس آخر, لأن جافا لا تدعم تعدد الوراثة, و بالتالي لا يستطيع الكلاس أن يفعل <code data-enlighter-language="java">extends</code> لأكثر من كلاس.<br/>
+    		لحل مشكلة تعدد الوراثة, يمكنك جعل الكلاس يفعل <code data-enlighter-language="java">implements</code> للإنترفيس <code data-enlighter-language="java">Runnable</code> و تنشئ كائن من الكلاس <code data-enlighter-language="java">Thread</code> بداخله.<br/>
+<a class="open-page" href="runnable.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public class ThreadGroup</code></span>
+			يمكنك أيضاً استخدام الكلاس <code data-enlighter-language="java">ThreadGroup</code> لإنشاء أكثر من <span class="word">Thread</span> و وضعهم في مجموعة واحدة, مما يجعلك قادراً على التعامل معهم جميعاً دفعة واحدة.<br/>
+<a class="open-page" href="threadgroup.html" target="_blank">تابع القراءة »</a></td>
+</tr>
+<tr>
+<td><span class="code-title"><code data-enlighter-language="java">public class Executors  +  public interface ExecutorService</code></span>
+<span class="note">ملاحظة:</span> هناك العديد من الكلاسات و الإنترفيسات الأخرى التي تستخدم لإنشاء <span class="word">Threads</span> و التعامل معهم بطرق مختلفة.<br/>
+	        هنا وضعنا مثال طبقنا فيه مبدأ يسمى <span class="word">Thread Pool</span>, حيث أننا إستخدمنا فيه الكلاس <code data-enlighter-language="java">Executors</code> و الإنترفيس <code data-enlighter-language="java">ExecutorService</code> لإنشاء خمسة <span class="word">Thread</span> من نفس الـ <span class="word">Thread</span> و تشغيلهم دفعة واحدة, بدل إنشاء كل <span class="word">Thread</span> على حدة و تشغيله.<br/>
+<a class="open-page" href="thread-pool.html" target="_blank">شاهد المثال »</a></td>
+</tr>
+</table>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="في هذا الدرس ستتعرف على أساليب ربط المعلومات المخزنة في الجدول نفسه عندما تقوم باسترجاعها" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>SQL Self Join | طرق ربط معلومات الجدول نفسه عند جلبها في SQL</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../database-icon.png"/></li>
+<li class="title">كيف أبدأ بالتعلم</li>
+<li><a href="../sql-overview/index.html"><span class="en">SQL</span> - نظرة عامة</a></li>
+<li><a href="../sql-environment-setup/index.html"><span class="en">SQL</span> - تجهيز بيئة العمل</a></li>
+<li><a href="../sql-basic-syntax/index.html"><span class="en">SQL</span> - أسلوب كتابة الأوامر</a></li>
+<li><a href="../sql-comments/index.html"><span class="en">SQL</span> - التعليقات</a></li>
+<li><a href="../sql-write-first-query/index.html"><span class="en">SQL</span> - كتابة أول إستعلام</a></li>
+<li><a href="../sql-refresh-databases-panel/index.html"><span class="en">SQL</span> - تحديث قائمة قواعد البيانات</a></li>
+<li><a href="../sql-databases-structure-in-general/index.html"><span class="en">SQL</span> - مفاهيم و مصطلحات مهمة</a></li>
+<li class="title">أوامر و دوال SQL</li>
+<li><a href="../sql-create-database/index.html"><span class="en">SQL</span> - أمر إنشاء قاعدة بيانات</a></li>
+<li><a href="../sql-drop-database/index.html"><span class="en">SQL</span> - أمر حذف قاعدة بيانات</a></li>
+<li><a href="../sql-data-types/index.html"><span class="en">SQL</span> - أهم أنواع البيانات</a></li>
+<li><a href="../sql-create-table/index.html"><span class="en">SQL</span> - أمر إنشاء جدول</a></li>
+<li><a href="../sql-drop-table/index.html"><span class="en">SQL</span> - أمر حذف جدول</a></li>
+<li><a href="../sql-use/index.html"><span class="en">SQL</span> - أمر تحديد قاعدة البيانات</a></li>
+<li><a href="../sql-insert-into/index.html"><span class="en">SQL</span> - أمر إضافة سطر في الجدول</a></li>
+<li><a href="../sql-auto-increment/index.html"><span class="en">SQL</span> - الترقيم التلقائي للأسطر</a></li>
+<li><a href="../sql-select/index.html"><span class="en">SQL</span> - أمر جلب بيانات من الجدول</a></li>
+<li><a href="../sql-select-with-concat/index.html"><span class="en">SQL</span> - دمج الأعمدة عند جلبها</a></li>
+<li><a href="../sql-select-repeat-columns-name/index.html"><span class="en">SQL</span> - تكرار إسم الأعمدة في الإستعلام</a></li>
+<li><a href="../sql-select-with-where/index.html"><span class="en">SQL</span> - جلب البيانات ضمن شروط</a></li>
+<li><a href="../sql-select-with-order/index.html"><span class="en">SQL</span> - جلب البيانات مع ترتيبها</a></li>
+<li><a href="../sql-select-distinct/index.html"><span class="en">SQL</span> - جلب بيانات خالية من التكرار</a></li>
+<li><a href="../sql-union/index.html"><span class="en">SQL</span> - دمج الجداول في جدول واحد</a></li>
+<li><a href="../sql-delete/index.html"><span class="en">SQL</span> - أمر حذف بيانات من الجدول</a></li>
+<li><a href="../sql-update/index.html"><span class="en">SQL</span> - أمر تحديث بيانات الجدول</a></li>
+<li><a href="../sql-select-with-limit/index.html"><span class="en">SQL</span> - تحديد عدد الأسطر التي سترجع</a></li>
+<li><a href="../sql-null-values/index.html"><span class="en">SQL</span> - التعامل مع الحقول الفارغة</a></li>
+<li><a href="../sql-min/index.html"><span class="en">SQL</span> - جلب أصغر قيمة في العامود</a></li>
+<li><a href="../sql-max/index.html"><span class="en">SQL</span> - جلب أكبر قيمة في العامود</a></li>
+<li><a href="../sql-count/index.html"><span class="en">SQL</span> - حساب عدد أسطر الجدول</a></li>
+<li><a href="../sql-sum/index.html"><span class="en">SQL</span> - حساب ناتج جمع قيم العامود</a></li>
+<li><a href="../sql-avg/index.html"><span class="en">SQL</span> - حساب متوسط قيم العامود</a></li>
+<li><a href="../sql-select-with-group-by/index.html"><span class="en">SQL</span> - تجميع قيم الحقول المشتركة</a></li>
+<li><a href="../sql-select-with-having/index.html"><span class="en">SQL</span> - شروط على الحقول المجمعة</a></li>
+<li><a href="../sql-insert-into-select/index.html"><span class="en">SQL</span> - نسخ البيانات في جدول آخر</a></li>
+<li><a href="../sql-case/index.html"><span class="en">SQL</span> - وضع قيمة إفتراضية لكل حالة</a></li>
+<li><a href="../sql-unique/index.html"><span class="en">SQL</span> - تخزين قيم موحدة في العامود</a></li>
+<li class="title">العلاقات بين الجداول</li>
+<li><a href="../sql-how-to-relate-tables/index.html"><span class="en">SQL</span> - كيف يتم ربط الجداول</a></li>
+<li><a href="../sql-relationships-types/index.html"><span class="en">SQL</span> - أنواع العلاقات بين الجدوال</a></li>
+<li><a href="../sql-joins/index.html"><span class="en">SQL</span> - طرق ربط معلومات الجداول</a></li>
+<li><a href="../sql-alias-for-tables/index.html"><span class="en">SQL</span> - وضع أسماء مختصرة للجداول</a></li>
+<li><a href="index.html"><span class="en">SQL</span> - ربط المعلومات في نفس الجدول</a></li>
+<li class="title">معلومات متقدمة</li>
+<li><a href="../sql-alter/index.html"><span class="en">SQL</span> - تعديل بنية الجدول بعد إنشائه</a></li>
+<li><a href="../sql-default/index.html"><span class="en">SQL</span> - وضع قيم إفتراضية للحقول</a></li>
+<li><a href="../sql-primary-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح رئيسي</a></li>
+<li><a href="../sql-foreign-key/index.html"><span class="en">SQL</span> - تعيين العامود كمفتاح أجنبي</a></li>
+<li><a href="../sql-check/index.html"><span class="en">SQL</span> - وضع شروط لتخزين القيم</a></li>
+<li><a href="../sql-transactions/index.html"><span class="en">SQL</span> - تنفيذ كل الأوامر أو إلغاءها كلها</a></li>
+<li><a href="../sql-indexes/index.html"><span class="en">SQL</span> - الفهارس و أنواعها</a></li>
+<li><a href="../sql-like/index.html"><span class="en">SQL</span> - البحث في الأعمدة النصية</a></li>
+<li><a href="../sql-sub-queries/index.html"><span class="en">SQL</span> - كتابة إستعلامات متداخلة</a></li>
+<li><a href="../sql-connect-to-database/index.html"><span class="en">SQL</span> - الإتصال بقاعدة البيانات عن بعد</a></li>
+<li class="title">بناء قواعد بيانات لمشاريع</li>
+<li><a href="../sql-building-database-from-scratch/index.html"><span class="en">SQL</span> - تصميم قاعدة بيانات من الصفر</a></li>
+<li><a href="../sql-download-ready-made-database/index.html"><span class="en">SQL</span> - تحميل قواعد بيانات جاهزة</a></li>
+<!--
+<li><a href="../sql-backup-database"><span class="en">SQL</span> - إنشاء نسخة من قاعدة البيانات</a></li>
+<li><a href="../sql-stored-procedures"><span class="en">SQL</span> - تعريف دوال و استدعائها</a></li>
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+-->
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">SQL</span>طرق ربط معلومات الجدول نفسه عند جلبها</h1>
+<article>
+<p>في حال كان الجدول نفسه يحتوي على أعمدة قيمها مترابطة ببعضها البعض و تريد إسترجاعها بشكل مرتب, هنا يجب أن تربط الأعمدة مع بعضها بأسلوب يقال له الربط الذاتي <span class="inline">( <span class="word">Self Join</span> )</span> لأننا نتعامل مع أعمدة موجودة في نفس الجدول.</p>
+<p><a href="self-join.png" target="_blank"><img src="self-join.png"/></a></p>
+<br/>
+<h3>حالات نطبق فيها الربط الذاتي</h3>
+<p>في مواقع التواصل الإجتماعي مثل فيسبوك يمكنك وضع تعليق <span class="inline">( <span class="word">Comment</span> )</span> على أي منشور <span class="inline">( <span class="word">Post</span> )</span> تراه و بعدها يمكن لشخص أخر أن يضع تعليق آخر كردّ على تعليقك أنت. إذاً هنا عندنا ربط ذاتي لأن التعليق الجديد مرتبط بالتعليق الأول و كلاهما موضوع في نفس الجدول.</p>
+<p>في صفحات الويب نفسها أحياناً تلاحظ أن صفحات الموقع نفسها مربوطة ببعضها فمثلاً تجد الموضع يظهر لك أن الصفحة الفلانية تابعة لصفحة أخرى.<br/>
+	في هذه الحالة أيضاً يوجد ربط ذاتي لأن الصفحة التي يظهر لك أنها تابعة لصفحة أخرى, هي صفحة مرتبطة بها و كلاهما موضوع في نفس الجدول.</p>
+</article>
+<article>
+<h2>تجهيز قاعدة البيانات التي سنطبق عليها</h2>
+<p>قم بتنفيذ الإستعلام التالي حتى تنشئ قاعدة بيانات جديدة إسمها <code>harmash</code> و تنشئ فيها جدول إسمه <code>employees</code> يحتوي على بيانات 5 موظفين.</p>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+-- سيتم حذفها harmash في حال كان يوجد بالأساس قاعدة بيانات إسمها
+DROP DATABASE IF EXISTS harmash;
+
+-- harmash هنا قمنا بإنشاء قاعدة بيانات جديدة إسمها
+CREATE DATABASE harmash;
+
+-- harmash هنا قمنا بتحديد أن أي إستعلام جديد سيتم تنفيذه على قاعدة البيانات
+USE harmash;
+
+-- يتألف من 5 أعمدة users هنا قمنا بإنشاء جدول جديد إسمه
+-- لأننا قمنا بتحديدها قبل إستدعاء هذا الأمر harmash سيتم إنشاء هذا الجدول بداخل قاعدة البيانات
+CREATE TABLE employees (
+    id         INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name       VARCHAR(50),
+    manager_id INT
+);
+
+-- هنا قمنا بإضافة 10 أسطر في الجدول, أي أضفنا معلومات 10 مستخدمين
+-- لاحظ أننا لم نحدد أسماء الأعمدة التي سنضع فيها البيانات لأننا قمنا بملئ جميع المعلومات
+-- في البداية هو حتى يكون عدد القيم الموضوعة يساوي عدد أعمدة الجدول null سبب وضع الكلمة
+-- ستقوم قاعدة البيانات بوضع رقم تعرفة مختلف لكل سطر null مكان الكلمة
+INSERT INTO employees VALUES (null, "Rami", null);
+INSERT INTO employees VALUES (null, "Ahmad", 1);
+INSERT INTO employees VALUES (null, "Hanan", 1);
+INSERT INTO employees VALUES (null, "Saly", 1);
+INSERT INTO employees VALUES (null, "Samir", 1);
+		</pre>
+</div>
+<br/>
+<p>بعد تنفيذ الإستعلام السابق في <span class="word">phpMyAdmin</span> سيتم إنشاء قاعدة البيانات <code>harmash</code> و إنشاء الجدول <code>employees</code> بداخلها.<br/>
+	قم بالنقر على إسم قاعدة البيانات <code>harmash</code> من القائمة اليسرى حتى تبدأ بالتعامل معها و تطبيق ما ستتعلمه في هذا الدرس.</p>
+<br/>
+<p>البيانات التي قمنا بإضافتها بشكل إفتراضي في الجدول <span class="inline"><code>employees</code>.</span></p>
+<div class="responsive-table" style="max-width: 200px;">
+<table class="ltr left">
+<tr>
+<th>id</th> <th>name</th> <th>manager_id</th>
+</tr>
+<tr>
+<td>1</td> <td>Rami</td> <td class="i gray">NULL</td>
+</tr>
+<tr>
+<td>2</td> <td>Ahmad</td> <td>1</td>
+</tr>
+<tr>
+<td>3</td> <td>Hanan</td> <td>1</td>
+</tr>
+<tr>
+<td>4</td> <td>Saly</td> <td>1</td>
+</tr>
+<tr>
+<td>5</td> <td>Samir</td> <td>1</td>
+</tr>
+</table>
+</div>
+<br/>
+<p>نلاحظ أن جدول الموظفين يتضمن عامودين متشابهين هما <code>id</code> و <code>manager_id</code> و فكرتهما هي التالية:</p>
+<ul class="explain">
+<li><p>العامود <code>id</code> يحتوي على رقم تعرفة كل موظف.</p></li>
+<li><p>العامود <code>manager_id</code> يحتوي على رقم تعرفة الموظف الذي يعتبر المدير بالنسبة للموظف.</p></li>
+</ul>
+<br/>
+<h3>قراءة بيانات الموظفين</h3>
+<ul class="explain">
+<li><p>الموظف <span class="inline"><code>Rami</code>,</span> لا يوجد عنده <code>manager_id</code> و هذا يعني أنه هو المدير.<br/>
+		    بالمنطق إذا كنت موظف في شركة و لا يوجد مدير مسؤول عنك, فهذا يعني أنك أنت نفسك مدير الشركة.</p></li>
+<li><p>الموظف <span class="inline"><code>Ahmad</code>,</span> مديره هو الموظف الذي يملك رقم <code>id</code> يساوي <span class="inline"><code>1</code>,</span> أي الموظف <code>Rami</code> هو مديره.</p></li>
+<li><p>الموظفة <span class="inline"><code>Hanan</code>,</span> مديرها هو الموظف الذي يملك رقم <code>id</code> يساوي <span class="inline"><code>1</code>,</span> أي الموظف <code>Rami</code> هو مديره.</p></li>
+<li><p>الموظفة <span class="inline"><code>Saly</code>,</span> مديرها هو الموظف الذي يملك رقم <code>id</code> يساوي <span class="inline"><code>1</code>,</span> أي الموظف <code>Rami</code> هو مديره.</p></li>
+<li><p>الموظف <span class="inline"><code>Samir</code>,</span> مديره هو الموظف الذي يملك رقم <code>id</code> يساوي <span class="inline"><code>1</code>,</span> أي الموظف <code>Rami</code> هو مديره.</p></li>
+</ul>
+</article>
+<article>
+<h2>طريقة ربط معلومات الجدول نفسه ببعضها عند جلبها</h2>
+<p>في البداية عند ربط قيم الجداول عند جلبها, سبق و عرفنا أنه يوجد 4 أشكال أساسية لربط قيمهم كما في الصورة التالية.</p>
+<p><a href="type-of-joins.png" target="_blank"><img src="type-of-joins.png"/></a></p>
+<br/>
+<p>الآن لربط قيم الجدول نفسه ببعضها عند جلبها, نقوم بجلب قيم الجدول نفسه مرتين و من ثم نربطهما ببعضهما كأنهما جدولين منفصلين عن بعضهما بالضبط كما كنا نربط الجداول مع بعضها.</p>
+<p>حتى تتمكن من جلب قيم الجدول نفسه مرتين, يجب أن تذكر إسم الجدول مرتين و تعطيه إسمين مختلفين. عندها يمكنك أن تتعامل معه و كأنه جدولين منفصلين.<br/>
+	في مثالنا الحالي, النسخة الأولى من الجدول <code>employees</code> سنقوم بتسميتها <span class="inline"><code>e1</code>,</span> و النسخة الثانية سنقوم بتسميتها <span class="inline"><code>e2</code>.</span></p>
+<p><a href="e1-and-e2-relation.png" target="_blank"><img src="e1-and-e2-relation.png"/></a></p>
+</article>
+<article>
+<h2>أمثلة حول ربط معلومات الجدول نفسه ببعضها عند جلبها</h2>
+<br/>
+<h3>المثال الأول</h3>
+<p>الإستعلام التالي يقوم بجلب <code>id</code> و <code>name</code> كل موظف لديه مدير بالإضافة إلى <code>name</code> الموظف الذي يعتبر مدير الشخص.</p>
+<p>ما فعلناه لربط القيم المشتركة في الجدول نفسه ببعضها هو إعطاء الجدول إسمين مختلفين هما <code>e1</code> و <code>e2</code> مع وضع الكلمة <code data-enlighter-language="sql">JOIN</code> بينهما.<br/>
+	الصورة التالية توضح كيف سيتم ربط قيم الجدولين.</p>
+<p><a href="inner-join.png" target="_blank"><img src="inner-join.png"/></a></p>
+<p>إذاً سيتم جلب قيم العامودين <code>id</code> و <code>name</code> من الجدول <span class="inline"><code>e1</code>,</span> و قيم العامود <code>name</code> من الجدول <span class="inline"><code>e2</code>.</span></p>
+<br/>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT                                      -- هنا قمنا بتحديد الأعمدة التي نريد الحصول علي قيمها مع تحديد كل عامود من أي جدول سيتم جلبه
+	e1.id AS 'Employee Id',                 -- الموظف فيه id لأننا سنعرض Employee Id هذا العامود قمنا بتسميته
+	e1.name AS Employee,                    -- لأننا سنعرض إسم الموظف فيه Employee هذا العامود قمنا بتسميته
+	e2.name AS Manager                      -- لأننا سنعرض إسم الموظف الذي يعتبر بمثابة مدير للموظف Manager هذا العامود قمنا بتسميته
+FROM
+	employees AS e1 JOIN employees AS e2    -- مع القيم المشتركة بينهما فقط e2 و في جدول آخر إسمه e1 في جدول إسمه employees هنا قمنا بتحديد أننا نريد كل قيم الجدول
+ON
+	e1.manager_id = e2.id;                  -- e2 الموجودة في الجدول id هي قيم العامود e1 الموجودة في الجدول manager_id هنا حددنا أن قيم العامود
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 300px;">
+<table class="ltr left">
+<tr>
+<th>Employee ID</th> <th>Employee</th> <th>Manager</th>
+</tr>
+<tr>
+<td>2</td> <td>Ahmad</td> <td>Rami</td>
+</tr>
+<tr>
+<td>3</td> <td>Hanan</td> <td>Rami</td>
+</tr>
+<tr>
+<td>4</td> <td>Saly</td> <td>Rami</td>
+</tr>
+<tr>
+<td>5</td> <td>Samir</td> <td>Rami</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>الإستعلام التالي يقوم بجلب <code>id</code> و <code>name</code> كل موظف بالإضافة إلى <code>name</code> الموظف الذي يعتبر مدير الشخص.</p>
+<p>ما فعلناه لربط كل القيم الموجودة في الجدول نفسه ببعضها هو إعطاء الجدول إسمين مختلفين هما <code>e1</code> و <code>e2</code> مع وضع الكلمة <code data-enlighter-language="sql">LEFT JOIN</code> بينهما.<br/>
+	الصورة التالية توضح كيف سيتم ربط قيم الجدولين.</p>
+<p><a href="left-join.png" target="_blank"><img src="left-join.png"/></a></p>
+<p>إذاً سيتم جلب قيم العامودين <code>id</code> و <code>name</code> من الجدول <span class="inline"><code>e1</code>,</span> و قيم العامود <code>name</code> من الجدول <span class="inline"><code>e2</code>.</span></p>
+<br/>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT                                           -- هنا قمنا بتحديد الأعمدة التي نريد الحصول علي قيمها مع تحديد كل عامود من أي جدول سيتم جلبه
+	e1.id AS 'Employee Id',                      -- الموظف فيه id لأننا سنعرض Employee Id هذا العامود قمنا بتسميته
+	e1.name AS Employee,                         -- لأننا سنعرض إسم الموظف فيه Employee هذا العامود قمنا بتسميته
+	e2.name AS Manager                           -- لأننا سنعرض إسم الموظف الذي يعتبر بمثابة مدير للموظف Manager هذا العامود قمنا بتسميته
+FROM
+	employees AS e1 LEFT JOIN employees AS e2    -- e2 و القيم المشتركة معها فقط من e1 مع كل قيم  e2 و في جدول آخر إسمه e1 في جدول إسمه employees هنا قمنا بتحديد أننا نريد كل قيم الجدول
+ON
+	e1.manager_id = e2.id;                       -- e2 الموجودة في الجدول id هي قيم العامود e1 الموجودة في الجدول manager_id هنا حددنا أن قيم العامود
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 300px;">
+<table class="ltr left">
+<tr>
+<th>Employee ID</th> <th>Employee</th> <th>Manager</th>
+</tr>
+<tr>
+<td>1</td> <td>Rami</td> <td class="i gray">NULL</td>
+</tr>
+<tr>
+<td>2</td> <td>Ahmad</td> <td>Rami</td>
+</tr>
+<tr>
+<td>3</td> <td>Hanan</td> <td>Rami</td>
+</tr>
+<tr>
+<td>4</td> <td>Saly</td> <td>Rami</td>
+</tr>
+<tr>
+<td>5</td> <td>Samir</td> <td>Rami</td>
+</tr>
+</table>
+</div>
+<br/><br/>
+<h3>المثال الثالث</h3>
+<p>الإستعلام التالي هو نفس الإستعلام الموضوع في المثال الثاني تماماً مع فرق واحد و هو أنه في حال كان الموظف لا يوجد عنده مدير - أي الحقل <code>Manager</code> عنده يساوي <span class="inline"><code data-enlighter-language="sql">NULL</code> -</span> سيتم تبديل قيمته بعبارة <span class="inline"><code data-enlighter-language="sql">'No Manager'</code>.</span></p>
+<br/>
+<div class="example-box">
+<h4>الإستعلام</h4>
+<pre data-enlighter-language="sql">
+SELECT
+	e1.id AS 'Employee Id',
+	e1.name AS Employee,
+	IFNULL(e2.name, 'No Manager') AS Manager     -- 'No Manager' فارغاً سيتم تبديله بعبارة Manager في حال كان الحقل الموضوع في العامود
+FROM
+	employees AS e1 LEFT JOIN employees AS e2
+ON
+	e1.manager_id = e2.id;
+		</pre>
+</div>
+<p>سنحصل على النتيجة التالية عند تنفيذ الإستعلام.</p>
+<div class="responsive-table" style="max-width: 320px;">
+<table class="ltr left">
+<tr>
+<th>Employee ID</th> <th>Employee</th> <th>Manager</th>
+</tr>
+<tr>
+<td>1</td> <td>Rami</td> <td>No Manager</td>
+</tr>
+<tr>
+<td>2</td> <td>Ahmad</td> <td>Rami</td>
+</tr>
+<tr>
+<td>3</td> <td>Hanan</td> <td>Rami</td>
+</tr>
+<tr>
+<td>4</td> <td>Saly</td> <td>Rami</td>
+</tr>
+<tr>
+<td>5</td> <td>Samir</td> <td>Rami</td>
+</tr>
+</table>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

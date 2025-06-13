@@ -1,0 +1,1133 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>Swing - طريقة إنشاء لعبة Tic Tac Toe</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../java-swing-icon.png"/></li>
+<li class="title">أساسيات المكتبة</li>
+<li><a href="../swing-overview/index.html"><span class="en">Swing</span> - نظرة عامة</a></li>
+<li><a href="../swing-jframe/index.html"><span class="en">Swing</span> - إنشاء نافذة <span class="en">( Frame )</span></a></li>
+<li class="title">عناصر واجهة المستخدم</li>
+<li><a href="../swing-component/index.html"><span class="en">Component - Swing</span></a></li>
+<li><a href="../swing-jlabel/index.html"><span class="en">JLabel - Swing</span></a></li>
+<li><a href="../swing-jbutton/index.html"><span class="en">JButton - Swing</span></a></li>
+<li><a href="../swing-jtextfield/index.html"><span class="en">JTextField - Swing</span></a></li>
+<li><a href="../swing-jpasswordfield/index.html"><span class="en">JPasswordField - Swing</span></a></li>
+<li><a href="../swing-jtextarea/index.html"><span class="en">JTextArea - Swing</span></a></li>
+<li><a href="../swing-jcheckbox/index.html"><span class="en">JCheckBox - Swing</span></a></li>
+<li><a href="../swing-jradiobutton/index.html"><span class="en">JRadioButton - Swing</span></a></li>
+<li><a href="../swing-jcombobox/index.html"><span class="en">JComboBox - Swing</span></a></li>
+<li><a href="../swing-jlist/index.html"><span class="en">JList - Swing</span></a></li>
+<li><a href="../swing-jspinner/index.html"><span class="en">JSpinner - Swing</span></a></li>
+<li><a href="../swing-jslider/index.html"><span class="en">JSlider - Swing</span></a>
+</li><li><a href="../swing-jtable/index.html"><span class="en">JTable - Swing</span></a></li>
+<li><a href="../swing-jtree/index.html"><span class="en">JTree - Swing</span></a></li>
+<li><a href="../swing-jprogressbar/index.html"><span class="en">JProgressBar - Swing</span></a></li>
+<li><a href="../swing-jpanel/index.html"><span class="en">JPanel - Swing</span></a></li>
+<li><a href="../swing-jtabbedpane/index.html"><span class="en">JTabbedPane - Swing</span></a></li>
+<li><a href="../swing-joptionpane/index.html"><span class="en">JOptionPane - Swing</span></a></li>
+<li><a href="../swing-jdialog/index.html"><span class="en">JDialog - Swing</span></a></li>
+<li><a href="../swing-jcolorchooser/index.html"><span class="en">JColorChooser - Swing</span></a></li>
+<li><a href="../swing-jfilechooser/index.html"><span class="en">JFileChooser - Swing</span></a></li>
+<li><a href="../swing-jsplitpane/index.html"><span class="en">JSplitPane - Swing</span></a></li>
+<li><a href="../swing-jpopumenu/index.html"><span class="en">JPopupMenu - Swing</span></a></li>
+<li><a href="../swing-jmenubar/index.html"><span class="en">JMenuBar - Swing</span></a></li>
+<li class="title">إدارة محتوى النافذة</li>
+<li><a href="../swing-borderlayout/index.html"><span class="en">BorderLayout - Swing</span></a></li>
+<li><a href="../swing-flowlayout/index.html"><span class="en">FlowLayout - Swing</span></a></li>
+<li><a href="../swing-gridlayout/index.html"><span class="en">GridLayout - Swing</span></a></li>
+<li><a href="../swing-gridbaglayout/index.html"><span class="en">GridBagLayout - Swing</span></a></li>
+<li><a href="../swing-cardlayout/index.html"><span class="en">CardLayout - Swing</span></a></li>
+<li><a href="../swing-grouplayout/index.html"><span class="en">GroupLayout - Swing</span></a></li>
+<li><a href="../swing-scroll-layout/index.html"><span class="en">Scroll Layout - Swing</span></a></li>
+<li class="title">الأحداث <span class="en">( Events )</span></li>
+<li><a href="../awt-actionlistener/index.html"><span class="en">ActionListener - Swing</span></a></li>
+<li><a href="../awt-itemlistener/index.html"><span class="en">ItemListener - Swing</span></a></li>
+<li><a href="../awt-keylistener/index.html"><span class="en">KeyListener - Swing</span></a></li>
+<li><a href="../awt-mouselistener/index.html"><span class="en">MouseListener - Swing</span></a></li>
+<li><a href="../awt-mousemotionlistener/index.html"><span class="en">MouseMotionListener - Swing</span></a></li>
+<li><a href="../awt-focuslistener/index.html"><span class="en">FocusListener - Swing</span></a></li>
+<li><a href="../awt-windowlistener/index.html"><span class="en">WindowListener - Swing</span></a></li>
+<li><a href="../awt-adjustmentlistener/index.html"><span class="en">AdjustmentListener - Swing</span></a></li>
+<li><a href="../make-swing-components-synchronized/index.html"><span class="en">Swing</span> - حل مشكلة المزامنة</a></li>
+<li class="title">تعلم بناء تطبيقات و ألعاب</li>
+<li><a href="../swing-projects/index.html"><span class="en">Swing</span> - جميع المشاريع</a></li>
+<li><a href="../swing-color-picker-source-code/index.html"><span class="en">Swing</span> - برنامج إختيار الألوان</a></li>
+<li><a href="index.html"><span class="en">Swing</span> - لعبة <span class="en">Tic Tac Toe</span></a></li>
+<li><a href="../swing-calculator-source-code/index.html"><span class="en">Swing</span> - آلة حاسبة بسيطة</a></li>
+<li><a href="../swing-scientific-calculator-source-code/index.html"><span class="en">Swing</span> - ألة حاسبة علمية</a></li>
+<li><a href="../swing-age-calculator-source-code/index.html"><span class="en">Swing</span> - برنامج حساب الأعمار</a></li>
+<li><a href="../swing-snake-2d-source-code/index.html"><span class="en">Swing</span> - لعبة الأفعى <span class="en">Snake 2D</span></a></li>
+<li><a href="../swing-ip-finder-source-code/index.html"><span class="en">Swing</span> - محلل عناوين المواقع</a></li>
+<li><a href="../swing-company-products-manager-source-code/index.html"><span class="en">Swing</span> - برنامج إدارة المحتوى</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Java Swing</span>طريقة إنشاء لعبة <span class="word">Tic Tac Toe</span></h1>
+<article>
+<p>المثال التالي يعلمك طريقة إنشاء لعبة <span class="inline">( <span class="word">Tic Tac Toe</span> )</span> إحترافية باستخدام إطار الـ <span class="word">Swing</span>.</p>
+<p><a href="java-swing-tic-tac-toe-source-code.png" target="_blank"><img alt="java swing tic tac toe source code تحميل كود لعبة tic tac toe في جافا" src="java-swing-tic-tac-toe-source-code.png"/></a></p>
+<br/><br/>
+<h3>مميزات اللعبة</h3>
+<ul class="explain">
+<li><p>يمكن لعب هذه اللعبة مع صديق أو ضد الكمبيوتر نفسه.</p></li>
+<li><p>يمكن تعديل تصميمها بكل سهولة من داخل اللعبة.</p></li>
+</ul>
+<br/><br/>
+<h3>بناء اللعبة</h3>
+<p>في هذا المشروع قمنا بوضع ملف الجافا بداخل مجلد إسمه <code data-enlighter-language="java">tic_tac_toe</code>.<br/>
+	و قمنا بوضع الصور بداخل مجلد إسمه <code data-enlighter-language="java">images</code> كما في الصورة التالية.</p>
+<p><a href="java-swing-tic-tac-toe-add-images.png" target="_blank"><img src="java-swing-tic-tac-toe-add-images.png"/></a></p>
+<p><a class="open-page" href="java-swing-tic-tac-toe.jar">⇓ تحميل اللعبة</a>
+<a class="open-page" href="java-swing-tic-tac-toe-project.zip">⇓ تحميل المشروع كاملاً</a>
+<a class="open-page" href="java-swing-tic-tac-toe-images.zip">⇓ تحميل مجلد الصور فقط</a>
+</p>
+<br/><br/>
+<div class="example-box">
+<h4>كود اللعبة</h4>
+<span class="code-title java-file-icon">Main.java</span>
+<pre data-enlighter-language="java">
+//  tic_tac_toe  موجود بداخل المجلد  Main.java   هنا ذكرنا أن الملف
+package tic_tac_toe;
+
+import java.awt.CardLayout;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.Random;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
+ 
+// و بالتالي أصبح إنشاء كائن منه يمثل إنشاء نافذة JFrame يرث من الكلاس Main هنا جعلنا الكلاس
+public class Main extends JFrame {
+ 
+    // و الأشياء التي سنضعها فيها startPage هنا قمنا بتعريف الـ
+    JPanel startPage;
+    JButton startPage_singlePlayer;
+    JButton startPage_multiPlayer;
+    JButton startPage_settings;
+    JButton startPage_about;
+    JButton startPage_exit;
+ 
+    // و الأشياء التي سنضعها فيها singlePlayerPage هنا قمنا بتعريف الـ
+    JPanel singlePlayerPage;
+    JLabel singlePlayerPage_label;
+    JTextField singlePlayerPage_playerName;
+    JButton singlePlayerPage_start;
+    JButton singlePlayerPage_back;
+ 
+    // و الأشياء التي سنضعها فيها multiPlayerPage هنا قمنا بتعريف الـ
+    JPanel multiPlayerPage;
+    JLabel multiPlayerPage_firstLabel;
+    JLabel multiPlayerPage_secondLabel;
+    JTextField multiPlayerPage_firstPlayerName;
+    JTextField multiPlayerPage_secondPlayerName;
+    JButton multiPlayerPage_start;
+    JButton multiPlayerPage_back;
+ 
+    // و الأشياء التي سنضعها فيها settingsPage هنا قمنا بتعريف الـ
+    JPanel settingsPage;
+    JLabel settingsPage_selectedBoardLabel;
+    JComboBox settingsPage_selectedBoardValue;
+    JLabel settingsPage_selectedFontSizeLabel;
+    JComboBox settingsPage_selectedFontSizeValue;
+    JButton settingsPage_reset;
+    JButton settingsPage_back;
+ 
+    // و الأشياء التي سنضعها فيها gamePage هنا قمنا بتعريف الـ
+    JPanel gamePage;
+    JPanel gamePage_boardPanel;
+    JLabel[] gamePage_boardLabels;
+    JLabel gamePage_boardBackground;
+    JLabel gamePage_firstPlayerName;
+    JLabel gamePage_secondPlayerName;
+    JLabel gamePage_firstPlayerScore;
+    JLabel gamePage_secondPlayerScore;
+    JLabel gamePage_currentPlayerIcon;
+    JButton gamePage_back;
+    JButton gamePage_restart;
+ 
+    // هنا قمنا بتعريف نوع الخط و حجم الخط و الألوان التي سنستخدمها في اللعبة
+    Font defaultFont = new Font("Arial", Font.BOLD, 16);
+    Color defaultButtonBackgroundColor = Color.lightGray;
+    Color defaultButtonTextColor = Color.black;
+    Color xForeground = Color.blue;
+    Color oForeground = Color.red;
+    Color winnerSquaresBackground = Color.yellow;
+ 
+    // سنستخدم هذا المتغير لتحديد ما إذا كان شخص واحد سيلعب اللعبة أو إثنين
+    boolean challengeComputer = false;
+ 
+    // سنستخدم هذا المتغير لتحديد دور من في اللعب
+    boolean isFirstPlayerTurn = true;
+ 
+    // سنستخدم هذا المتغير لحساب عدد النقرات و بالتالي لتحديد ما إذا كان سيتم إيقاف اللعبة أم لا
+    int XOCounter = 0;
+ 
+    // سنستخدم هذا المتغير أيضاً لتحديد ما إذا كان سيتم إيقاف اللعبة بسبب فوز أحد اللاعبين
+    boolean isGameEnds = false;
+ 
+    // randomNumber لتوليد أرقام عشوائية عند اللعب ضد الكمبيوتر. و سنخزن الرقم في المتغير random سنستخدم الكائن
+    Random random = new Random();
+    int randomNumber;
+ 
+ 
+    // سنستخدم هذه الدالة كلما أردنا تغيير حجم خط جميع الأزرار و النصوص الموجودة في اللعبة دفعة واحدة
+    private void setNewFont(Font font) {
+ 
+        startPage_singlePlayer.setFont(font);
+        startPage_multiPlayer.setFont(font);
+        startPage_settings.setFont(font);
+        startPage_about.setFont(font);
+        startPage_exit.setFont(font);
+        singlePlayerPage_label.setFont(font);
+        singlePlayerPage_playerName.setFont(font);
+        singlePlayerPage_start.setFont(font);
+        singlePlayerPage_back.setFont(font);
+        multiPlayerPage_firstLabel.setFont(font);
+        multiPlayerPage_secondLabel.setFont(font);
+        multiPlayerPage_firstPlayerName.setFont(font);
+        multiPlayerPage_secondPlayerName.setFont(font);
+        multiPlayerPage_start.setFont(font);
+        multiPlayerPage_back.setFont(font);
+        settingsPage_selectedBoardLabel.setFont(font);
+        settingsPage_selectedBoardValue.setFont(font);
+        settingsPage_selectedFontSizeLabel.setFont(font);
+        settingsPage_selectedFontSizeValue.setFont(font);
+        settingsPage_reset.setFont(font);
+        settingsPage_back.setFont(font);
+        gamePage_boardPanel.setFont(font);
+        gamePage_firstPlayerName.setFont(font);
+        gamePage_secondPlayerName.setFont(font);
+        gamePage_firstPlayerScore.setFont(font);
+        gamePage_secondPlayerScore.setFont(font);
+        gamePage_back.setFont(font);
+        gamePage_restart.setFont(font);
+ 
+    }
+ 
+ 
+    // سنستخدم هذه الدالة كلما أردنا تغيير ألوان أزرار التطبيق
+    private void setThemeColors(Color textColor, Color backgroundColor) {
+ 
+        startPage_singlePlayer.setForeground(textColor);
+        startPage_multiPlayer.setForeground(textColor);
+        startPage_settings.setForeground(textColor);
+        startPage_about.setForeground(textColor);
+        startPage_exit.setForeground(textColor);
+        startPage_singlePlayer.setBackground(backgroundColor);
+        startPage_multiPlayer.setBackground(backgroundColor);
+        startPage_settings.setBackground(backgroundColor);
+        startPage_about.setBackground(backgroundColor);
+        startPage_exit.setBackground(backgroundColor);
+ 
+        singlePlayerPage_label.setForeground(textColor);
+        singlePlayerPage_playerName.setForeground(textColor);
+        singlePlayerPage_start.setForeground(textColor);
+        singlePlayerPage_back.setForeground(textColor);
+        singlePlayerPage_start.setBackground(backgroundColor);
+        singlePlayerPage_back.setBackground(backgroundColor);
+ 
+        multiPlayerPage_firstLabel.setForeground(textColor);
+        multiPlayerPage_firstPlayerName.setForeground(textColor);
+        multiPlayerPage_secondLabel.setForeground(textColor);
+        multiPlayerPage_secondPlayerName.setForeground(textColor);
+        multiPlayerPage_start.setForeground(textColor);
+        multiPlayerPage_back.setForeground(textColor);
+        multiPlayerPage_start.setBackground(backgroundColor);
+        multiPlayerPage_back.setBackground(backgroundColor);
+ 
+        gamePage_firstPlayerName.setForeground(textColor);
+        gamePage_secondPlayerName.setForeground(textColor);
+        gamePage_firstPlayerScore.setForeground(textColor);
+        gamePage_secondPlayerScore.setForeground(textColor);
+        gamePage_back.setForeground(textColor);
+        gamePage_restart.setForeground(textColor);
+        gamePage_restart.setBackground(backgroundColor);
+        gamePage_back.setBackground(backgroundColor);
+ 
+        settingsPage_selectedBoardLabel.setForeground(textColor);
+        settingsPage_selectedBoardValue.setForeground(textColor);
+        settingsPage_selectedFontSizeLabel.setForeground(textColor);
+        settingsPage_selectedFontSizeValue.setForeground(textColor);
+        settingsPage_reset.setForeground(textColor);
+        settingsPage_back.setForeground(textColor);
+        settingsPage_reset.setBackground(backgroundColor);
+        settingsPage_back.setBackground(backgroundColor);
+ 
+    }
+ 
+ 
+    // startPage سنستخدم هذه الدالة لخلق محتوى الصفحة
+    private void createStartPage() {
+ 
+        // هنا أنشأنا الحاوية الأساسية و الأشياء التي سنضعها فيها
+        startPage = new JPanel(null);
+        startPage_singlePlayer = new JButton("Single Player");
+        startPage_multiPlayer = new JButton("Multi Player");
+        startPage_settings = new JButton("Settings");
+        startPage_about = new JButton("About");
+        startPage_exit = new JButton("Exit");
+ 
+        // هنا وضعنا كل شيء بداخل الحاوية
+        startPage.add(startPage_singlePlayer);
+        startPage.add(startPage_multiPlayer);
+        startPage.add(startPage_settings);
+        startPage.add(startPage_about);
+        startPage.add(startPage_exit);
+ 
+        // هنا قمنا بتحديد حجم و موقع كل شيء أضفناه في الحاوية
+        startPage_singlePlayer.setBounds(80, 110, 240, 40);
+        startPage_multiPlayer.setBounds(80, 170, 240, 40);
+        startPage_settings.setBounds(80, 230, 240, 40);
+        startPage_about.setBounds(80, 290, 240, 40);
+        startPage_exit.setBounds(80, 350, 240, 40);
+ 
+    }
+ 
+ 
+    // singlePlayerPage سنستخدم هذه الدالة لخلق محتوى الصفحة
+    private void createSinglePlayerPage() {
+ 
+        // هنا أنشأنا الحاوية الأساسية و الأشياء التي سنضعها فيها
+        singlePlayerPage = new JPanel(null);
+        singlePlayerPage_label = new JLabel("Player Name");
+        singlePlayerPage_playerName = new JTextField("player");
+        singlePlayerPage_start = new JButton("Start");
+        singlePlayerPage_back = new JButton("Back");
+ 
+        // هنا وضعنا كل شيء بداخل الحاوية
+        singlePlayerPage.add(singlePlayerPage_label);
+        singlePlayerPage.add(singlePlayerPage_playerName);
+        singlePlayerPage.add(singlePlayerPage_start);
+        singlePlayerPage.add(singlePlayerPage_back);
+ 
+        // هنا قمنا بتحديد حجم و موقع كل شيء أضفناه في الحاوية
+        singlePlayerPage_label.setBounds(80, 170, 100, 30);
+        singlePlayerPage_playerName.setBounds(190, 170, 130, 30);
+        singlePlayerPage_start.setBounds(80, 220, 240, 40);
+        singlePlayerPage_back.setBounds(80, 280, 240, 40);
+ 
+    }
+ 
+ 
+    // multiPlayerPage سنستخدم هذه الدالة لخلق محتوى الصفحة
+    private void createMultiPlayerPage() {
+ 
+        // هنا أنشأنا الحاوية الأساسية و الأشياء التي سنضعها فيها
+        multiPlayerPage = new JPanel(null);
+        multiPlayerPage_firstLabel = new JLabel("Player X");
+        multiPlayerPage_secondLabel = new JLabel("Player O");
+        multiPlayerPage_firstPlayerName = new JTextField("player 1", 8);
+        multiPlayerPage_secondPlayerName = new JTextField("player 2", 8);
+        multiPlayerPage_start = new JButton("Start");
+        multiPlayerPage_back = new JButton("Back");
+ 
+        // هنا وضعنا كل شيء بداخل الحاوية
+        multiPlayerPage.add(multiPlayerPage_firstLabel);
+        multiPlayerPage.add(multiPlayerPage_secondLabel);
+        multiPlayerPage.add(multiPlayerPage_firstPlayerName);
+        multiPlayerPage.add(multiPlayerPage_secondPlayerName);
+        multiPlayerPage.add(multiPlayerPage_start);
+        multiPlayerPage.add(multiPlayerPage_back);
+ 
+        // هنا قمنا بتحديد حجم و موقع كل شيء أضفناه في الحاوية
+        multiPlayerPage_firstLabel.setBounds(80, 130, 70, 30);
+        multiPlayerPage_firstPlayerName.setBounds(160, 130, 160, 30);
+        multiPlayerPage_secondLabel.setBounds(80, 190, 70, 30);
+        multiPlayerPage_secondPlayerName.setBounds(160, 190, 160, 30);
+        multiPlayerPage_start.setBounds(80, 250, 240, 40);
+        multiPlayerPage_back.setBounds(80, 310, 240, 40);
+ 
+    }
+ 
+ 
+    // settingsPage سنستخدم هذه الدالة لخلق محتوى الصفحة
+    private void createSettingsPage() {
+ 
+        // هنا أنشأنا الحاوية الأساسية و الأشياء التي سنضعها فيها
+        settingsPage = new JPanel(null);
+        settingsPage_selectedBoardLabel = new JLabel("Game Board");
+        settingsPage_selectedBoardValue = new JComboBox(new String[]{"Board 1", "Board 2", "Board 3", "Board 4"});
+        settingsPage_selectedFontSizeLabel = new JLabel("Font Size");
+        settingsPage_selectedFontSizeValue = new JComboBox(new String[]{"Small", "Meduim", "Large"});
+        settingsPage_selectedFontSizeValue.setSelectedIndex(1);
+        settingsPage_reset = new JButton("Reset Default Settings");
+        settingsPage_back = new JButton("Back");
+ 
+        // هنا وضعنا كل شيء بداخل الحاوية
+        settingsPage.add(settingsPage_selectedBoardLabel);
+        settingsPage.add(settingsPage_selectedBoardValue);
+        settingsPage.add(settingsPage_selectedFontSizeLabel);
+        settingsPage.add(settingsPage_selectedFontSizeValue);
+        settingsPage.add(settingsPage_reset);
+        settingsPage.add(settingsPage_back);
+ 
+        // هنا قمنا بتحديد حجم و موقع كل شيء أضفناه في الحاوية
+        settingsPage_selectedBoardLabel.setBounds(80, 130, 100, 30);
+        settingsPage_selectedBoardValue.setBounds(200, 130, 120, 30);
+        settingsPage_selectedFontSizeLabel.setBounds(80, 190, 100, 30);
+        settingsPage_selectedFontSizeValue.setBounds(200, 190, 120, 30);
+        settingsPage_reset.setBounds(80, 250, 240, 40);
+        settingsPage_back.setBounds(80, 310, 240, 40);
+ 
+    }
+ 
+ 
+    // gamePage سنستخدم هذه الدالة لخلق محتوى الصفحة
+    private void createGamePage() {
+ 
+        // هنا أنشأنا الحاوية الأساسية و الأشياء التي سنضعها فيها
+        gamePage = new JPanel(null);
+        gamePage_firstPlayerName = new JLabel("", JLabel.CENTER);
+        gamePage_secondPlayerName = new JLabel("", JLabel.CENTER);
+        gamePage_firstPlayerScore = new JLabel("0", JLabel.CENTER);
+        gamePage_secondPlayerScore = new JLabel("0", JLabel.CENTER);
+        gamePage_currentPlayerIcon = new JLabel("", JLabel.CENTER);
+        gamePage_boardPanel = new JPanel(new GridLayout(3, 3, 8, 8));
+        gamePage_boardLabels = new JLabel[9];
+        gamePage_back = new JButton("Back");
+        gamePage_restart = new JButton("Restart");
+        gamePage_boardBackground = new JLabel();
+ 
+        // JLabels التي سنضع فيها 9 gamePage_boardPanel فقط لوضع الصورة خلف الـ Label سنستخدم هذا الـ
+        gamePage_boardBackground.setIcon(new ImageIcon(this.getClass().getResource("/images/board_1.png")));
+ 
+        // مع تحديد بعض خصائصهم gamePage_boardPanel في الحاوية JLabels هنا وضعنا الـ 9
+        for (int i = 0; i &lt; gamePage_boardLabels.length; i++) {
+            gamePage_boardLabels[i] = new JLabel("", JLabel.CENTER);
+            gamePage_boardLabels[i].setFont(new Font("Arial", Font.BOLD, 40));
+            gamePage_boardLabels[i].setBackground(winnerSquaresBackground);     // Opaque ملحوظة: هذا اللون لن يظهر إلى إذا جعلنا الخلفية صلبة
+            gamePage_boardPanel.add(gamePage_boardLabels[i]);
+        }
+ 
+        // هنا قمنا بمناداة هذه الدالة لتحديد رمز اللاعب الذي سيلعب الآن على حسب دوره
+        setCurrentPlayerIcon();
+ 
+        // هنا وضعنا كل شيء بداخل الحاوية
+        gamePage.add(gamePage_firstPlayerName);
+        gamePage.add(gamePage_secondPlayerName);
+        gamePage.add(gamePage_firstPlayerScore);
+        gamePage.add(gamePage_secondPlayerScore);
+        gamePage.add(gamePage_currentPlayerIcon);
+        gamePage.add(gamePage_boardBackground);
+        gamePage.add(gamePage_boardPanel);
+        gamePage.add(gamePage_back);
+        gamePage.add(gamePage_restart);
+ 
+        // هنا قمنا بتحديد حجم و موقع كل شيء أضفناه في الحاوية
+        gamePage_firstPlayerName.setBounds(0, 10, 150, 30);
+        gamePage_secondPlayerName.setBounds(250, 10, 150, 30);
+        gamePage_firstPlayerScore.setBounds(0, 40, 150, 30);
+        gamePage_secondPlayerScore.setBounds(250, 40, 150, 30);
+        gamePage_currentPlayerIcon.setBounds(120, 25, 150, 30);
+        gamePage_boardBackground.setBounds(45, 105, 300, 300);
+        gamePage_boardPanel.setBounds(45, 105, 300, 300);
+        gamePage_back.setBounds(20, 475, 140, 30);
+        gamePage_restart.setBounds(230, 475, 140, 30);
+ 
+    }
+ 
+ 
+    // سنستخدم هذه الدالة لإظهار لون خلفية المربعات التي بسببها فاز اللاعب و لإيقاف اللعبة
+    private void colorBackgroundWinnerLabels(JLabel l1, JLabel l2, JLabel l3) {
+        l1.setOpaque(true);
+        l2.setOpaque(true);
+        l3.setOpaque(true);
+        isGameEnds = true;
+    }
+ 
+ 
+    // سنستخدم هذه الدالة في كل مرة يلعب فيها اللاعبون للتأكد إذا كان هناك فائز أم لا
+    // لجعل لون خلفية المربعات التي كانت سبب فوز الاعب ملونة colorBackgroundWinnerLabels في حال كان يوجد فائز سيتم مناداة الدالة
+    // لإيقاف اللعبة. و سيتم إضافة واحد في نتيجة اللاعب الفائز true إلى isGameEnds و لتغيير قيمة المتغير
+    private void checkIfThereIsAWinner() {
+ 
+        String c0 = gamePage_boardLabels[0].getText();
+        String c1 = gamePage_boardLabels[1].getText();
+        String c2 = gamePage_boardLabels[2].getText();
+        String c3 = gamePage_boardLabels[3].getText();
+        String c4 = gamePage_boardLabels[4].getText();
+        String c5 = gamePage_boardLabels[5].getText();
+        String c6 = gamePage_boardLabels[6].getText();
+        String c7 = gamePage_boardLabels[7].getText();
+        String c8 = gamePage_boardLabels[8].getText();
+ 
+        int firstPlayerScore = Integer.valueOf(gamePage_firstPlayerScore.getText());
+        int secondPlayerScore = Integer.valueOf(gamePage_secondPlayerScore.getText());
+ 
+        if (c0.equals(c1) &amp;&amp; c0.equals(c2) &amp;&amp; !c0.equals("")) {
+            if (c0.equals("X"))
+                gamePage_firstPlayerScore.setText((firstPlayerScore+1)+"");
+            else
+                gamePage_secondPlayerScore.setText((secondPlayerScore+1)+"");
+            colorBackgroundWinnerLabels(gamePage_boardLabels[0], gamePage_boardLabels[1], gamePage_boardLabels[2]);
+        }
+ 
+        if (c3.equals(c4) &amp;&amp; c3.equals(c5) &amp;&amp; !c3.equals("")) {
+            if (c3.equals("X"))
+                gamePage_firstPlayerScore.setText((firstPlayerScore+1)+"");
+            else
+                gamePage_secondPlayerScore.setText((secondPlayerScore+1)+"");
+            colorBackgroundWinnerLabels(gamePage_boardLabels[3], gamePage_boardLabels[4], gamePage_boardLabels[5]);
+        }
+ 
+        if (c6.equals(c7) &amp;&amp; c6.equals(c8) &amp;&amp; !c6.equals("")) {
+            if (c6.equals("X"))
+                gamePage_firstPlayerScore.setText((firstPlayerScore+1)+"");
+            else
+                gamePage_secondPlayerScore.setText((secondPlayerScore+1)+"");
+            colorBackgroundWinnerLabels(gamePage_boardLabels[6], gamePage_boardLabels[7], gamePage_boardLabels[8]);
+        }
+ 
+        if (c0.equals(c3) &amp;&amp; c0.equals(c6) &amp;&amp; !c0.equals("")) {
+            if (c0.equals("X"))
+                gamePage_firstPlayerScore.setText((firstPlayerScore+1)+"");
+            else
+                gamePage_secondPlayerScore.setText((secondPlayerScore+1)+"");
+            colorBackgroundWinnerLabels(gamePage_boardLabels[0], gamePage_boardLabels[3], gamePage_boardLabels[6]);
+        }
+ 
+        if (c1.equals(c4) &amp;&amp; c1.equals(c7) &amp;&amp; !c1.equals("")) {
+            if (c1.equals("X"))
+                gamePage_firstPlayerScore.setText((firstPlayerScore+1)+"");
+            else
+                gamePage_secondPlayerScore.setText((secondPlayerScore+1)+"");
+            colorBackgroundWinnerLabels(gamePage_boardLabels[1], gamePage_boardLabels[4], gamePage_boardLabels[7]);
+        }
+ 
+        if (c2.equals(c5) &amp;&amp; c2.equals(c8) &amp;&amp; !c2.equals("")) {
+            if (c2.equals("X"))
+                gamePage_firstPlayerScore.setText((firstPlayerScore+1)+"");
+            else
+                gamePage_secondPlayerScore.setText((secondPlayerScore+1)+"");
+            colorBackgroundWinnerLabels(gamePage_boardLabels[2], gamePage_boardLabels[5], gamePage_boardLabels[8]);
+        }
+ 
+        if (c0.equals(c4) &amp;&amp; c0.equals(c8) &amp;&amp; !c0.equals("")) {
+            if (c0.equals("X"))
+                gamePage_firstPlayerScore.setText((firstPlayerScore+1)+"");
+            else
+                gamePage_secondPlayerScore.setText((secondPlayerScore+1)+"");
+            colorBackgroundWinnerLabels(gamePage_boardLabels[0], gamePage_boardLabels[4], gamePage_boardLabels[8]);
+        }
+ 
+        if (c2.equals(c4) &amp;&amp; c2.equals(c6) &amp;&amp; !c2.equals("")) {
+            if (c2.equals("X"))
+                gamePage_firstPlayerScore.setText((firstPlayerScore+1)+"");
+            else
+                gamePage_secondPlayerScore.setText((secondPlayerScore+1)+"");
+            colorBackgroundWinnerLabels(gamePage_boardLabels[2], gamePage_boardLabels[4], gamePage_boardLabels[6]);
+        }
+ 
+        gamePage.repaint();
+    }
+ 
+ 
+    // نستخدم هذه الدالة لتحديد دور اللاعب الحالي في حال كان هناك شخصين يلعبان اللعبة
+    private boolean isTowPlayerGameEnds(JLabel pressedLabel) {
+ 
+        if (pressedLabel.getText().equals("")) {
+ 
+            if (isFirstPlayerTurn == true) {
+                pressedLabel.setText("X");
+                pressedLabel.setForeground(xForeground);
+                isFirstPlayerTurn = false;
+            } else {
+                pressedLabel.setText("O");
+                pressedLabel.setForeground(oForeground);
+                isFirstPlayerTurn = true;
+            }
+ 
+            gamePage.repaint();
+            checkIfThereIsAWinner();
+ 
+            XOCounter++;
+ 
+            if (XOCounter == 9 || isGameEnds == true) {
+                removeXOListener();
+                XOCounter = 0;
+            }
+        }
+ 
+        return isGameEnds;
+    }
+ 
+ 
+    // نستخدم هذه الدالة لتحديد كيف سيلعب الكمبيوتر في حال كان شخص واحد يلعب اللعبة
+    private boolean isOnePlayerGameEnds(JLabel pressedLabel) {
+ 
+        if (XOCounter &lt; 9 &amp;&amp; pressedLabel.getText().equals("")) {
+ 
+            pressedLabel.setText("X");
+            pressedLabel.setForeground(xForeground);
+ 
+            XOCounter++;
+ 
+            repaint();
+            checkIfThereIsAWinner();
+ 
+            if (XOCounter &lt; 9 &amp;&amp; isGameEnds == false) {
+                for (;;) {
+                    randomNumber = random.nextInt(9);
+                    if (gamePage_boardLabels[randomNumber].getText().equals("")) {
+ 
+                        gamePage_boardLabels[randomNumber].setText("O");
+                        gamePage_boardLabels[randomNumber].setForeground(oForeground);
+ 
+                        gamePage.repaint();
+ 
+                        XOCounter++;
+                        checkIfThereIsAWinner();
+                        break;
+                    }
+                }
+            }
+ 
+        }
+ 
+        if (XOCounter &gt;= 9 || isGameEnds == true) {
+            removeXOListener();
+            repaint();
+            return true;
+        }
+ 
+        return false;
+ 
+    }
+ 
+    // غير قابلين للنقر عند إيقاف اللعبة Label نستخدم هذه الدالة لجعل الـ
+    private void removeXOListener() {
+        for (JLabel gamePage_boardLabel : gamePage_boardLabels) {
+            gamePage_boardLabel.removeMouseListener(XOListener);
+        }
+    }
+ 
+    // سنستخدم هذه الدالة لتحديد رمز اللاعب الذي سيلعب الآن على حسب دوره
+    private void setCurrentPlayerIcon() {
+        if (isFirstPlayerTurn == true) {
+            gamePage_currentPlayerIcon.setText("X");
+            gamePage_currentPlayerIcon.setForeground(xForeground);
+        }
+        else {
+            gamePage_currentPlayerIcon.setText("O");
+            gamePage_currentPlayerIcon.setForeground(oForeground);
+        }
+        repaint();
+    }
+ 
+ 
+    // XOListener هنا قمنا بتحديد ما يحدث عندما يقوم المستخدم بالنقر على أزرار الفأرة في الكائن
+    MouseListener XOListener = new MouseListener() {
+        @Override
+        public void mousePressed(MouseEvent e) {
+            JLabel pressedLabel = (JLabel) e.getSource();
+            if (isGameEnds == false) {
+                if (challengeComputer == true)
+                    isOnePlayerGameEnds(pressedLabel);
+                else if (challengeComputer == false)
+                    isTowPlayerGameEnds(pressedLabel);
+            }
+        }
+ 
+        @Override
+        public void mouseClicked(MouseEvent e) { }
+ 
+        @Override
+        public void mouseReleased(MouseEvent e) { }
+ 
+        @Override
+        public void mouseEntered(MouseEvent e) { }
+ 
+        @Override
+        public void mouseExited(MouseEvent e) { }
+    };
+ 
+ 
+    // XOListener نستخدم هذه الدالة عند بدء تحديد جديد لتصفير لوح اللعب و ربط الفأرة بالكائن
+    private void startNewGame() {
+ 
+        isGameEnds = false;
+        XOCounter = 0;
+ 
+        setCurrentPlayerIcon();
+ 
+        gamePage_boardLabels[0].setOpaque(false);
+        gamePage_boardLabels[1].setOpaque(false);
+        gamePage_boardLabels[2].setOpaque(false);
+        gamePage_boardLabels[3].setOpaque(false);
+        gamePage_boardLabels[4].setOpaque(false);
+        gamePage_boardLabels[5].setOpaque(false);
+        gamePage_boardLabels[6].setOpaque(false);
+        gamePage_boardLabels[7].setOpaque(false);
+        gamePage_boardLabels[8].setOpaque(false);
+ 
+        gamePage_boardLabels[0].setText("");
+        gamePage_boardLabels[1].setText("");
+        gamePage_boardLabels[2].setText("");
+        gamePage_boardLabels[3].setText("");
+        gamePage_boardLabels[4].setText("");
+        gamePage_boardLabels[5].setText("");
+        gamePage_boardLabels[6].setText("");
+        gamePage_boardLabels[7].setText("");
+        gamePage_boardLabels[8].setText("");
+ 
+        repaint();
+ 
+        gamePage_boardLabels[0].addMouseListener(XOListener);
+        gamePage_boardLabels[1].addMouseListener(XOListener);
+        gamePage_boardLabels[2].addMouseListener(XOListener);
+        gamePage_boardLabels[3].addMouseListener(XOListener);
+        gamePage_boardLabels[4].addMouseListener(XOListener);
+        gamePage_boardLabels[5].addMouseListener(XOListener);
+        gamePage_boardLabels[6].addMouseListener(XOListener);
+        gamePage_boardLabels[7].addMouseListener(XOListener);
+        gamePage_boardLabels[8].addMouseListener(XOListener);
+ 
+    }
+ 
+ 
+    // فقط createAndShowGUI() سيقوم الكونستركتور بإستدعاء الدالة Main عند إنشاء كائن من الكلاس
+    public Main() {
+        createAndShowGUI();
+    }
+ 
+ 
+    // هذه الدالة تقوم ببناء كل شيء في اللعبة و تحدد ماذا سيحدث عندما يتفاعل المستخدم مع محتوى النافذة
+    private void createAndShowGUI() {
+ 
+    // هنا قمن بإستدعاء الدوال التي ستخلق جميع الصفحات في البرنامج
+        createStartPage();
+        createSinglePlayerPage();
+        createMultiPlayerPage();
+        createSettingsPage();
+        createGamePage();
+ 
+        // لجعل الصفحات موضوعة وراء بعضها البعض CardLayout هنا جعلنا النافذة تستخدم الـ
+        CardLayout card = new CardLayout();
+        Container container = getContentPane();
+        container.setLayout(card);
+ 
+        // هنا أضفنا جميع الصفحات (الحاويات) في النافذة
+        add(startPage);
+        add(singlePlayerPage);
+        add(multiPlayerPage);
+        add(settingsPage);
+        add(gamePage);
+ 
+        // هنا وضعنا إسم لكل صفحة (حاوية) لنصبح قادرين على تحديد الصفحة التي سيتم عرضها من خلال إسمها
+        container.getLayout().addLayoutComponent("startPage", startPage);
+        container.getLayout().addLayoutComponent("singlePlayerPage", singlePlayerPage);
+        container.getLayout().addLayoutComponent("multiPlayerPage", multiPlayerPage);
+        container.getLayout().addLayoutComponent("settingsPage", settingsPage);
+        container.getLayout().addLayoutComponent("gamePage", gamePage);
+ 
+        setThemeColors(defaultButtonTextColor, defaultButtonBackgroundColor);
+        setNewFont(defaultFont);
+ 
+ 
+        // لجعلهم قابلين للنقر XOListener بالكائن Labels هنا ربطنا الـ 9
+        for (JLabel gamePage_boardLabel : gamePage_boardLabels) {
+            gamePage_boardLabel.addMouseListener(XOListener);
+        }
+ 
+ 
+        // تظهر كأول صفحة في النافذة startPage هنا جعلنا الحاوية
+        startPage_singlePlayer.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                card.show(container, "singlePlayerPage");
+            }
+        });
+ 
+ 
+        // ظاهرة multiPlayerPage يجعل الحاوية startPage_multiPlayer هنا جعلنا الزر
+        startPage_multiPlayer.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            card.show(container, "multiPlayerPage");
+            }
+        });
+ 
+ 
+        // ظاهرة settingsPage يجعل الحاوية startPage_settings هنا جعلنا الزر
+        startPage_settings.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                card.show(container, "settingsPage");
+            }
+        });
+ 
+ 
+        // يعرض نافذة منبثقة فيها بعض المعلومات حول اللعبة startPage_about هنا جعلنا الزر
+        startPage_about.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String aboutGame
+                        = "&lt;html&gt;"
+                        + "&lt;big&gt;TIC TAC TOE&lt;/big&gt;&lt;br&gt;&lt;br&gt;"
+                        + "&lt;p&gt;Prepared by a &lt;b&gt;Mhamad Harmush&lt;/b&gt;&lt;br&gt;&lt;br&gt;"
+                        + "If you have any comments, ideas.. just let know&lt;br&gt;&lt;br&gt;"
+                        + "email:   mhamad.harmush@gmail.com&lt;br&gt;"
+                        + "twitter &amp; facebook:   @MhamadHarmush&lt;br&gt;&lt;br&gt;"
+                        + "&lt;u&gt;Note&lt;/u&gt;&lt;br&gt;"
+                        + "I used JDK 1.8 to compile the source code.&lt;br&gt;&lt;br&gt;&lt;br&gt;"
+                        + "&lt;p&gt;&lt;i&gt;© Copyright 2017 harmash.com - All Rights Reserved&lt;/i&gt;&lt;/p&gt;"
+                        + "&lt;html&gt;";
+ 
+                JOptionPane.showMessageDialog(getContentPane(), aboutGame, "About Tic Tac Toe", JOptionPane.PLAIN_MESSAGE);
+            }
+        });
+ 
+ 
+        // يقوم بالخروج من اللعبة startPage_exit هنا جعلنا الزر
+        startPage_exit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+ 
+ 
+        // للعب ضد الكمبيوتر gamePage يفتح الصفحة singlePlayerPage_start هنا جعلنا الزر
+        singlePlayerPage_start.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gamePage_firstPlayerName.setText("X - " + singlePlayerPage_playerName.getText());
+                gamePage_secondPlayerName.setText("O - Computer");
+                challengeComputer = true;
+                gamePage_firstPlayerScore.setText("0");
+                gamePage_secondPlayerScore.setText("0");
+                card.show(container, "gamePage");
+            }
+        });
+ 
+ 
+        // startPage يعود للصفحة singlePlayerPage_back هنا جعلنا الزر
+        singlePlayerPage_back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                card.show(container, "startPage");
+            }
+        });
+ 
+ 
+        // للعب شخصين ضد بعضهما gamePage يفتح الصفحة multiPlayerPage_start هنا جعلنا الزر
+        multiPlayerPage_start.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gamePage_firstPlayerName.setText("X - " + multiPlayerPage_firstPlayerName.getText());
+                gamePage_secondPlayerName.setText("O - " + multiPlayerPage_secondPlayerName.getText());
+                challengeComputer = false;
+                gamePage_firstPlayerScore.setText("0");
+                gamePage_secondPlayerScore.setText("0");
+                card.show(container, "gamePage");
+            }
+        });
+ 
+ 
+        // startPage يعود للصفحة multiPlayerPage_back هنا جعلنا الزر
+        multiPlayerPage_back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                card.show(container, "startPage");
+            }
+        });
+ 
+ 
+        // على حسب الصفحة التي كانت مفتوحة multiPlayerPage أو singlePlayerPage يعود للصفحة gamePage_back هنا جعلنا الزر
+        gamePage_back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (challengeComputer == true) {
+                    card.show(container, "singlePlayerPage");
+                } else {
+                    card.show(container, "multiPlayerPage");
+                }
+                startNewGame();
+            }
+        });
+ 
+ 
+        // موجود في على اللوح O و X يزيل أي gamePage_restart هنا جعلنا الزر
+        gamePage_restart.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                startNewGame();
+            }
+        });
+ 
+ 
+        // gamePage_boardBackground يجعل المستخدم قادر على تغيير الصورة الموضوعة للـ settingsPage_selectedBoardValue هنا جعلنا الزر
+        settingsPage_selectedBoardValue.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+ 
+                String imageName = "";
+ 
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    String selectedItem = e.getItem().toString();
+ 
+                    switch (selectedItem) {
+                        case "Board 1":
+                            imageName = "board_1.png";
+                            break;
+                        case "Board 2":
+                            imageName = "board_2.png";
+                            break;
+                        case "Board 3":
+                            imageName = "board_3.png";
+                            break;
+                        case "Board 4":
+                            imageName = "board_4.png";
+                            break;
+                    }
+                    imageName = "/images/" + imageName;
+                    gamePage_boardBackground.setIcon(new ImageIcon(this.getClass().getResource(imageName)));
+                    repaint();
+                }
+            }
+        });
+ 
+ 
+        // يجعل المستخدم قادر على تغيير حجم الخط المستخدم في اللعبة settingsPage_selectedFontSizeValue هنا جعلنا الزر
+        settingsPage_selectedFontSizeValue.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+ 
+                int fontSize = 0;
+ 
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    String selectedItem = e.getItem().toString();
+ 
+                    switch (selectedItem) {
+                        case "Small":
+                            fontSize = 15;
+                            break;
+                        case "Meduim":
+                            fontSize = 16;
+                            break;
+                        case "Large":
+                            fontSize = 17;
+                            break;
+                    }
+ 
+                    setNewFont(new Font("Arial", Font.BOLD, fontSize));
+                }
+            }
+        });
+ 
+ 
+        // يعيد حجم الخط و صورة اللوح الإفتراضيين settingsPage_reset هنا جعلنا الزر
+        settingsPage_reset.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                settingsPage_selectedBoardValue.setSelectedItem("Board 1");
+                settingsPage_selectedFontSizeValue.setSelectedItem("Meduim");
+                gamePage_boardBackground.setIcon(new ImageIcon(this.getClass().getResource("/images/board_1.png")));
+                setNewFont(new Font("Arial", Font.BOLD, 16));
+            }
+        });
+ 
+ 
+        // startPage يعود للصفحة multiPlayerPage_back هنا جعلنا الزر
+        settingsPage_back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                card.show(container, "startPage");
+            }
+        });
+ 
+ 
+        // هنا قمنا بتحديد بعض خصائص النافذة و جعلناها مرئية
+        setTitle("Tic Tac Toe");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(400, 550);
+        setLocationRelativeTo(null);
+        setResizable(false);
+        setVisible(true);
+ 
+ 
+    }
+ 
+ 
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                // التي ستنشئ النافذة createAndShowGUI() و بالتالي سيتم إستدعاء الدالة Main هنا قمنا بإنشاء كائن من الكلاس
+                new Main();
+            }
+        });
+    }
+ 
+}
+		</pre>
+<p><span class="point">•</span>هذه الصور جميعها من اللعبة.</p>
+<div class="image-box">
+<a href="java-swing-tic-tac-toe-all-panels.png" target="_blank"><img alt="java swing tic tac toe source code تحميل كود لعبة tic tac toe في جافا" src="java-swing-tic-tac-toe-all-panels.png"/></a>
+</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

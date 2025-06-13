@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>المؤشرات في سي بلاس بلاس | C++ Pointers</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../cplusplus-icon.png"/></li>
+<li class="title">أساسيات اللغة</li>
+<li><a href="../cplusplus-overview/index.html"><span class="en">++C</span> - نظرة عامة</a></li>
+<li><a href="../cplusplus-environment-setup/index.html"><span class="en">++C</span> - تهيئة بيئة التطوير</a></li>
+<li><a href="../cplusplus-basic-syntax/index.html"><span class="en">++C</span> - أسلوب الكتابة</a></li>
+<li><a href="../cplusplus-cout/index.html"><span class="en">++C</span> - أمر الطباعة   &lt;&lt; cout</a></li>
+<li><a href="../cplusplus-data-types/index.html"><span class="en">++C</span> - أنواع البيانات</a></li>
+<li><a href="../cplusplus-variables/index.html"><span class="en">++C</span> - المتغيرات</a></li>
+<li><a href="../cplusplus-operators/index.html"><span class="en">++C</span> - العوامل</a></li>
+<li><a href="../cplusplus-conditions/index.html"><span class="en">++C</span> - الشروط</a></li>
+<li><a href="../cplusplus-loops/index.html"><span class="en">++C</span> - الحلقات</a></li>
+<li><a href="../cplusplus-numbers/index.html"><span class="en">++C</span> - الأعداد</a></li>
+<li><a href="../cplusplus-strings/index.html"><span class="en">++C</span> - النصوص</a></li>
+<li><a href="../cplusplus-arrays/index.html"><span class="en">++C</span> - المصفوفات</a></li>
+<li><a href="../cplusplus-user-input/index.html"><span class="en">++C</span> - إدخال البيانات</a></li>
+<li><a href="../cplusplus-functions/index.html"><span class="en">++C</span> - الدوال</a></li>
+<li><a href="../cplusplus-references/index.html"><span class="en">++C</span> - المراجع</a></li>
+<li><a href="index.html"><span class="en">++C</span> - المؤشرات</a></li>
+<li class="title">برمجة الكائنات</li>
+<li><a href="../cplusplus-oop/index.html"><span class="en">++C</span> - مفهوم البرمجة كائنية التوجه</a></li>
+<li><a href="../cplusplus-struct/index.html"><span class="en">++C</span> - النوع <span class="en">struct</span></a></li>
+<li><a href="../cplusplus-class/index.html"><span class="en">++C</span> - النوع <span class="en">class</span></a></li>
+<li><a href="../cplusplus-encapsulation/index.html"><span class="en">++Encapsulation - C</span></a></li>
+<li><a href="../cplusplus-inheritance/index.html"><span class="en">++Inheritance - C</span></a></li>
+<li><a href="../cplusplus-overriding/index.html"><span class="en">++Overriding - C</span></a></li>
+<li><a href="../cplusplus-overloading/index.html"><span class="en">++Overloading - C</span></a></li>
+<li><a href="../cplusplus-polymorphism/index.html"><span class="en">++Polymorphism - C</span></a></li>
+<li><a href="../cplusplus-constants/index.html"><span class="en">++C</span> - الثوابت</a></li>
+<li><a href="../cplusplus-enum/index.html"><span class="en">++C</span> - النوع <span class="en">enum</span></a></li>
+<li class="title">برمجة متقدمة</li>
+<li><a href="../cplusplus-exceptions/index.html"><span class="en">++C</span> - الإستثناءات</a></li>
+<!--
+
+<li><a href="../cplusplus-lambda-expressions"><span class="en">Lambda Expressions - ++C</span></a></li>
+<li><a href="../cplusplus-files-io"><span class="en">++C</span> - التعامل مع الملفات</a></li>
+<li><a href="../cplusplus-data-structure"><span class="en">Data Structure - ++C</span></a></li>
+<li><a href="../cplusplus-collection"><span class="en">Collection - ++C</span></a></li>
+<li><a href="../cplusplus-generics"><span class="en">Generics - ++C</span></a></li>
+<li><a href="../cplusplus-networking"><span class="en">++C</span> - الشبكات</a></li>
+<li><a href="../cplusplus-multithreading"><span class="en">++C</span> - تعدد المهام</a></li>
+<li><a href="../cplusplus-jdbc"><span class="en">++C</span> - قواعد البيانات</a></li>
+<li><a href="../cplusplus-serialization"><span class="en">++C</span> - المزامنة</a></li>
+
+
+<li><a href="../cplusplus-date-and-time"><span class="en">++C</span> - التاريخ و الوقت</a></li>
+<li><a href="../cplusplus-regular-expressions"><span class="en">++C</span> - التعابير النمطية</a></li>
+
+<li><a href="../cplusplus-next-step"><span class="en">++C</span> - ما هي خطوتي التالية ؟</a></li>
+-->
+<p class="center red b" style="padding-top: 20px; font-size: 14px;">لا زلنا نعمل على إعداد دروس جديدة</p>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">C++</span>المؤشرات</h1>
+<article>
+<h2>مفهوم المؤشرات <span class="word">C++</span></h2>
+<p>في الدرس السابق تعرفنا على المراجع <span class="inline">( <span class="word">References</span> )</span> و تعلمنا كيف أنها تستخدم بهدف جعلنا قادرين على الوصول إلى الأشياء المعرفة في الذاكرة بشكل مباشر.<br/>
+	المؤشرات <span class="inline">( <span class="word">Pointers</span> )</span> تستخدم أيضاً للوصول لأي شيء يتم تعريفه في الذاكرة و هي تعطينا المزيد من المزايا في التحكم.</p>
+<br/>
+<h3>الفرق بين المرجع و المؤشر</h3>
+<p>الفرق الأساسي بينهما هو أن المؤشر يقوم بحجز مساحة في الذاكرة لتخزين عنوان الشيء الذي يؤشر إليه.<br/>
+	بالإضافة إلى ذلك, فإن المؤشر يمكنه الإشارة لأي شيء موجود في الذاكرة في أي وقت و لست مجبراً على تحديد الشيء الذي يشير إليه لحظة إنشاءه.</p>
+<p>في هذا الدرس ستفهم الفرق بين المراجع و المؤشرات بالنسبة للذاكرة و ستتعرف على المزايا الإضافية التي توفرها المؤشرات.</p>
+</article>
+<article>
+<h2>تعريف مؤشر في <span class="word">C++</span></h2>
+<p>لتعريف مؤشر جديد نستخدم الرمز <code data-enlighter-language="cpp">*</code> مع الإشارة إلى أن نوع المؤشر يجب أن يكون نفس نوع الشيء الذي سيشير له في الذاكرة.</p>
+<p>إذا اردنا تعريف مؤشر نوعه <code data-enlighter-language="cpp">int</code> و إسمه <code>x</code> فعندنا ثلاث خيارات كالتالي.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+// الأسلوب الأول و الذي يعتبر الأكثر استخداماً
+int* x;
+
+// الأسلوب الثاني
+int *x;
+
+// الأسلوب الثالث
+int * x;
+	</pre>
+<br/><br/>
+<p>الآن, لتعريف مؤشر و جعله يشير لقيمة شيئ موجود في الذاكرة, يجب أن نقوم بتمرير عنوان هذا الشيء كقيمة للمؤشر و عندها سيصبح المؤشر قادر على الوصول لقيمته و عنوانه كما سنرى في المثال التالي.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    // "Arabic" و قيمته language هنا قمنا بتعريف متغير إسمه
+    string language = "Arabic";
+	
+	// في الذاكرة language هنا قمنا بتعريف مؤشر لعنوان المتغير
+	string* ptr = &amp;language;
+	
+    // language هنا قمنا بطباعة قيمة المتغير
+    cout &lt;&lt; "language = " &lt;&lt; language &lt;&lt; endl;
+	
+    // في الذاكرة language هنا قمنا بطباعة عنوان المتغير
+    cout &lt;&lt; "Address of language = " &lt;&lt; &amp;language &lt;&lt; endl;
+	
+    // في الذاكرة ptr هنا قمنا بطباعة عنوان المؤشر
+    cout &lt;&lt; "Address of ptr in memory = " &lt;&lt; &amp;ptr &lt;&lt; endl;
+	
+    // language و التي هي عنوان المتغير ptr هنا قمنا بطباعة القيمة الموجودة في المؤشر
+    cout &lt;&lt; "Value of ptr in memory = " &lt;&lt; ptr &lt;&lt; endl;
+	
+    // language في الذاكرة و التي هي قيمة المتغير ptr هنا قمنا بطباعة القيمة التي يشير إليها عنوان المؤشر
+	cout &lt;&lt; "Value that ptr point to = " &lt;&lt; *ptr;
+	
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على نتيجة تشبه النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+language = Arabic
+Address of language = 0x61fde0
+Address of ptr in memory = 0x61fdd8
+Value of ptr in memory = 0x61fde0
+Value that ptr point to = Arabic
+		</pre>
+</div>
+<br/>
+<p>الصورة التالية تظهر كيف تم تخزين عنوان و قيمة المتغير <code>language</code> و المؤشر <code>ptr</code> في الذاكرة.</p>
+<p><a href="how-pointer-stored-in-memory.png" target="_blank"><img src="how-pointer-stored-in-memory.png"/></a></p>
+<br/>
+<p>من المهم جداً أن تلاحظ الطريقة التي يتم فيها إنشاء المؤشر في الذاكرة حتى تعرف كيف تتعامل معه بسهولة.</p>
+<ul class="explain">
+<li><p>المؤشر <code>ptr</code> تم تخصيص مساحة خاصة له في الذاكرة و هذه المساحة لها عنوان و قيمة أيضاً.</p></li>
+<li><p>قيمة المؤشر <code>ptr</code> هي عنوان المتغير <code>lanugage</code> في الذاكرة, و هذا يعني أن قيمة المؤشر دائماً تكون عنوان الشيء الذي يشير إليه في الذاكرة.</p></li>
+</ul>
+<br/>
+<p>بالنسبة للتعامل مع المؤشر فلاحظنا التالي:</p>
+<ul class="explain">
+<li><p>نكتب إسم المؤشر فقط في حال أردنا الوصول لقيمته, كمثال <code>ptr</code></p></li>
+<li><p>نضع <code>&amp;</code> قبل إسم المؤشر في حال أردنا الوصول لعنوانه في الذاكرة, كمثال <code>&amp;ptr</code></p></li>
+<li><p>نضع <code>*</code> قبل إسم المؤشر في حال أردنا الوصول لقيمة الشيئ الذي يشير إليه, كمثال <code>*ptr</code></p></li>
+</ul>
+</article>
+<article>
+<h2>تحديد الشيء الذي يتم الإشارة إليه في <span class="word">C++</span></h2>
+<p>في المثال السابق لاحظنا أن المؤشر في الذاكرة يشبه كثيراً الشيء الذي يشير إليه حيث يملك قيمة و عنوان خاص في الذاكرة.<br/>
+	و لاحظنا أيضاً أننا في المؤشر لا نضع قيم عادية, حيث أن قيمته تكون عنوان الشيء الذي يشير إليه في الذاكرة و الذي من خلاله يمكننا الوصول لقيمته.</p>
+<p>الآن إذا أردت جعل المؤشر يشير إلى شيء آخر موجود في الذاكرة, فكل ما عليك فعله هو تمرير عنوان الشيء الآخر له كقيمة.</p>
+<br/>
+<p>في المثال التالي قمنا بتعريف متغيرين إسمهما <code>x</code> و <span class="inline"><code>y</code>.</span><br/>
+	بعدها قمنا بتعريف مؤشر إسمه <code>ptr</code> جعلناه يشير للمتغير <code>x</code> و عرضنا التي يشير إليها.<br/>
+	ثم جعلنا <code>ptr</code> يشير للمتغير <code>y</code> و عرضنا القيمة التي يشير إليها.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	// قيمته 2 y قيمته 1 و متغير x هنا قمنا بتعريف متغير
+    int x = 1;
+    int y = 2;
+
+	// ptr هنا قمنا بتعريف مؤشر إسمه
+    int* ptr;
+
+	// x يشير إلى عنوان المتغير ptr هنا قمنا بجعل المؤشر
+    ptr = &amp;x
+
+	// x و التي هي قيمة المتغير ptr هنا قمنا بطباعة قيمة المتغير الذي يشير إليه
+    cout &lt;&lt; "*ptr = " &lt;&lt; *ptr &lt;&lt; endl;
+
+	// y يشير إلى عنوان المتغير ptr هنا قمنا بجعل المؤشر
+    ptr = &amp;y
+
+	// y من جديد و التي أصبحت قيمة المتغير ptr هنا قمنا بطباعة قيمة المتغير الذي يشير إليه
+    cout &lt;&lt; "*ptr = " &lt;&lt; *ptr &lt;&lt; endl;
+
+    return 0;
+}
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+*ptr = 1
+*ptr = 2
+		</pre>
+</div>
+<br/>
+<p>الفيديو التالي يظهر كيف تم تغيير قيمة المؤشر <code>ptr</code> حيث تم جعله يشير لعنوان المتغير <code>x</code> و من ثم يشير لعنوان المتغير <span class="inline"><code>y</code>.</span></p>
+<video controls="">
+<source id="video" src="pointers.mp4" type="video/mp4"/>
+		متصفحك لا يدعم صيغة الفيديو!
+	</video>
+</article>
+<article>
+<h2>تغيير قيمة الشيء الذي يشير إليه المؤشر في <span class="word">C++</span></h2>
+<p>في المثال التالي قمنا بتعريف متغير إسمه <code>x</code> قيمته <code>1</code> و مؤشر إسمه <code>ptr</code> يشير للمتغير <span class="inline"><code>x</code>.</span><br/>
+	من خلال المؤشر <code>ptr</code> قمنا بتغيير قيمة المتغير <code>x</code> و من بعدها قمنا بطباعة قيمته للتأكد.</p>
+<div class="example-box">
+<h4>مثال</h4>
+<span class="code-title cpp-file-icon">main.cpp</span>
+<pre data-enlighter-language="cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    // و قيمته 1 x هنا قمنا بتعريف متغير إسمه
+    int x = 1;
+
+    // في الذاكرة x و جعلناه يشير لعنوان المتغير ptr هنا قمنا بتعريف مؤشر إسمه
+    int* ptr = &amp;x;
+
+	// إلى 5 ptr هنا قمنا بتغير قيمة المتغير الذي يشير إليه المؤشر
+    *ptr = 5;
+
+	// للتأكد ما إن كانت قد تغيرت أم لا x هنا قمنا بطباعة قيمة المتغير
+    cout &lt;&lt; "x = " &lt;&lt; x &lt;&lt; endl;
+
+    // x و التي هي نفسها قيمة المتغير ptr هنا قمنا بطباعة قيمة المتغير الذي يشير إليه
+    cout &lt;&lt; "*ptr = " &lt;&lt; *ptr;
+
+    return 0;
+}
+
+		</pre>
+<p><span class="point">•</span>سنحصل على النتيجة التالية عند التشغيل.</p>
+<pre data-enlighter-language="cpp" data-enlighter-linenumbers="false">
+x = 5
+*ptr = 5
+		</pre>
+</div>
+</article>
+<article>
+<h2>أمثلة حول مزايا استخدام المؤشرات في <span class="word">C++</span></h2>
+<br/>
+<h3>المثال الأول</h3>
+<p>هنا وضعنا مثال حول كيفية إنشاء مؤشر لا يملك قيمة <span class="inline">( <span class="word">Null Pointer</span> )</span> بالإضافة إلى كيفية التشييك على المؤشر لمعرفة ما إن كان يملك قيمة أم لا.</p>
+<p><a class="open-page" href="null-pointer.html" target="_blank">شاهد الأمثلة »</a></p>
+<br/><br/>
+<h3>المثال الثاني</h3>
+<p>هنا وضعنا مثال حول كيفية جعل المؤشر يشير لقيم عناصر المصفوفة باستخدام العوامل الحسابية <span class="inline">( <span class="word">Arithmetic Operator</span> )</span> الأربعة <span class="inline"><code>-</code>,</span> <span class="inline"><code>--</code>,</span> <span class="inline"><code>+</code>,</span> <span class="inline"><code>++</code>.</span></p>
+<p><a class="open-page" href="pointer-arithmetic.html" target="_blank">شاهد المثال »</a></p>
+<br/><br/>
+<h3>المثال الثالث</h3>
+<p>المثال التالي مهم جداً و منه ستتعلم كيف تنشئ دالة تأخذ باراميتر عبارة عن مؤشر و كيف نقوم بتمرير قيمة للبارامتير عند استدعاءها.</p>
+<p><a class="open-page" href="pass-value-by-pointer.html" target="_blank">شاهد المثال »</a></p>
+<!--
+	<br><br>
+	<h3>المثال الرابع</h3>
+	<p>هنا وضعنا مثال حول تعريف مؤشر ليس له نوع محدد <span class="inline">( <span class="word">Void Pointer</span> ).</span></p>
+	<p><a class="open-page" href="void-pointer.php" target="_blank">شاهد المثال »</a></p>
+	-->
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>

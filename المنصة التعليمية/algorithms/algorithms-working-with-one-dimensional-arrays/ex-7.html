@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Google Analytics -->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-66898688-2');
+    </script>
+<!-- web style -->
+
+<link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
+<!-- jquery -->
+<script src="../../template/js/jquery.min.js"></script>
+<!-- web scripts -->
+<script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
+<!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
+<link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<title>التعامل مع المصفوفة ذات البعد الواحد في الخوارزميات - التمرين السابع</title>
+<style>
+    #hsoub_ad {
+        margin: 10px 0 25px 0;
+    }
+
+    #hsoub_ad>div {
+        background: white;
+        padding: 15px;
+        line-height: 34px;
+        margin: 0 15px;
+        box-shadow: 0 0 10px lightgray;
+        border-radius: 5px;
+    }
+
+    #hsoub_ad>div>div {
+        position: relative;
+    }
+
+    #hsoub_ad>div a {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        color: #444;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        font-family: droid_arabic_naskh_regular;
+        font-size: 14px;
+    }
+
+    .its-ad {
+        display: inline-block !important;
+        font-size: 14px !important;
+        position: absolute !important;
+        left: 5px !important;
+        color: black !important;
+        font-family: droid_arabic_naskh_regular !important;
+        font-weight: bold !important;
+    }
+
+    #hsoub_ad>div a:hover {
+        color: black;
+    }
+    </style>
+</meta></head>
+<body>
+<div id="header">
+<ul>
+<li id="menu"><img src="../../template/images/ic_menu.png"/></li>
+<li id="library">المكتبة ▾</li>
+<li id="search"><img src="../../template/images/ic_search.png"/></li>
+
+
+
+</ul>
+</div>
+<div id="container">
+<div id="container_row">
+<div id="side_nav">
+<ul><li id="method_img"><img src="../algo-icon.png"/></li>
+<li class="title">دروس تمهيدية</li>
+<li><a href="../algorithms-introduction/index.html">مفهوم الخوارزميات</a></li>
+<li><a href="../algorithms-environment-setup/index.html">تجهيز بيئة العمل</a></li>
+<li><a href="../algorithms-the-print-method/index.html">دالة الطباعة <span class="en">Print</span></a></li>
+<li><a href="../algorithms-concatenation/index.html">الدمج أثناء الطباعة</a></li>
+<li><a href="../algorithms-variables/index.html">المتغيرات</a></li>
+<li class="title">الحلقات و الشروط</li>
+<li><a href="../algorithms-loops/index.html">الحلقات و أنواعها</a></li>
+<li><a href="../algorithms-for-loop/index.html">الحلقة <span class="en">For</span></a></li>
+<li><a href="../algorithms-while-and-do-while-loops/index.html">الحلقتين <span class="en">While</span> و <span class="en">Do While</span></a></li>
+<li><a href="../algorithms-setting-conditions/index.html">جمل الشرط</a></li>
+<li><a href="../algorithms-operators/index.html">العوامل</a></li>
+<li><a href="../algorithms-nested-loops/index.html">الحلقات المتداخلة</a></li>
+<li class="title">إدخال بيانات من المستخدم</li>
+<li><a href="../algorithms-the-read-method/index.html">دالة الإدخال <span class="en">Read</span></a></li>
+<li><a href="../algorithms-calculate-the-factorial/index.html">حساب قيمة الـ <span class="en">Factorial</span> للعدد</a></li>
+<li><a href="../algorithms-calculate-the-power/index.html">حساب قيمة الـ <span class="en">Power</span> للعدد</a></li>
+<li class="title">المصفوفات</li>
+<li><a href="../algorithms-arrays-types/index.html">المصفوفات و أنواعها</a></li>
+<li><a href="../algorithms-one-dimensional-arrays/index.html">تعريف مصفوفة ذات بعد واحد</a></li>
+<li><a href="../algorithms-one-dimensional-arrays-length/index.html">حجم المصفوفة ذات البعد الواحد</a></li>
+<li><a href="index.html">التعامل مع مصفوفة ذات بعد واحد</a></li>
+<li><a href="../algorithms-two-dimensional-arrays/index.html">تعريف مصفوفة ذات بعدين</a></li>
+<li><a href="../algorithms-two-dimensional-arrays-length/index.html">حجم المصفوفة ذات البعدين</a></li>
+<li><a href="../algorithms-working-with-two-dimensional-arrays/index.html">التعامل مع مصفوفة ذات بعدين</a></li>
+<li class="title">الدوال</li>
+<li><a href="../algorithms-methods/index.html">تعريف دوال جديدة</a></li>
+<li><a href="../algorithms-parameters/index.html">التعامل مع الباراميترات</a></li>
+<li><a href="../algorithms-recursion/index.html">تعريف دوال تستدعي نفسها</a></li>
+<li class="title">أكتب الكود كالمحترفين</li>
+<li><a href="../algorithms-write-less-code/index.html">تقليص حجم الكود</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="loader_box">
+<div class="lds-facebook">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div id="top_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+
+<h1><span class="session">Algorithms</span>التعامل مع المصفوفة ذات البعد الواحد في الخوارزميات - التمرين السابع</h1>
+<article>
+<h3>المطلوب</h3>
+<p>هذا التمرين مقسّم إلى أربع أفكار رئيسية, عليك اتباع التقسيم التالي خطوة خطوة حتى تنجز البرنامج.</p>
+<ol class="arabic">
+<li><p>أكتب برنامج يعرّف ثلاث مصفوفات <code data-enlighter-language="java">A</code> و <code data-enlighter-language="java">B</code> و <code data-enlighter-language="java">C</code>.</p></li>
+<li><p>ثم يطلب من المستخدم إدخال العدد الذي يمثل عدد عناصر المصفوفتين <code data-enlighter-language="java">A</code> و <code data-enlighter-language="java">B</code>.</p></li>
+<li><p>بعدها يطلب من المستخدم إعطاء قيم للمصفوفتين <code data-enlighter-language="java">A</code> و <code data-enlighter-language="java">B</code> و يخزنهم في المصفوفة <code data-enlighter-language="java">C</code>.</p></li>
+<li><p>في الأخير يعرض للمستخدم القيم التي أصبحت تحتويها المصفوفة <code data-enlighter-language="java">C</code>.</p></li>
+</ol>
+<br/>
+<h3>إرشادات</h3>
+<p>يجب أن يتم جمع قيم عناصر المصفوفتين <code data-enlighter-language="java">A</code> و <code data-enlighter-language="java">B</code> قي المصفوفة <code data-enlighter-language="java">C</code> كالتالي.</p>
+<p><a href="ex-7-pic-1.png" target="_blank"><img alt="" src="ex-7-pic-1.png"/></a></p>
+<br/>
+<div class="example-box">
+<h4>النتيجة المطلوبة</h4>
+<p>لنفترض أن المستخدم أراد حجم المصفوفتين <code data-enlighter-language="java">A</code> و <code data-enlighter-language="java">B</code> يساوي " <span class="number">4</span> " و أدخل نفس القيم كما في الصورة السابقة.</p>
+<div class="image-box">
+<a href="ex-7-pic-2.png" target="_blank"><img alt="" src="ex-7-pic-2.png"/></a>
+</div>
+</div>
+<div class="example-box">
+<h4>الخوارزمية</h4>
+<div class="image-box">
+<a href="ex-7-pic-3.png" target="_blank"><img alt="" src="ex-7-pic-3.png"/></a>
+</div>
+</div>
+<div class="example-box">
+<h4>كود الجافا</h4>
+<pre data-enlighter-language="java">
+import java.util.Scanner;
+ 
+public class Vector {
+ 
+    public static void main (String[] args) {
+ 
+        Scanner input = new Scanner(System.in);
+ 
+        int N;
+        int[] A;
+        int[] B;
+        int[] C;
+        int k = 0;     // C سنستخدم هذا المتغير كعداد للوصول لعناصر المصفوفة
+ 
+        do
+        {
+            System.out.print("Enter the length for vectors ( A ) and ( B ): ");
+            N = input.nextInt();
+        }
+        while ( N  &lt;= 0 );
+ 
+        A = new int[N];
+        B = new int[N];
+        C = new int[N*2];
+ 
+        System.out.print("\n");
+ 
+        for (int i=0; i &lt;=N-1; i++)
+        {
+            System.out.print("Enter A[" +i+ "]: ");
+            A[i] = input.nextInt();
+ 
+            System.out.print("Enter B[" +i+ "]: ");
+            B[i] = input.nextInt();
+        }
+ 
+        System.out.print("\n");
+ 
+        for (int i=0; i &lt;=N-1; i++)
+        {
+            C[k] = A[i];
+            C[k+1] = B[i];
+ 
+            k = k+2;
+        }
+ 
+        System.out.print("\n");
+ 
+        for (int i=0; i &lt;=(N*2)-1; i++)
+        {
+            System.out.print("C[" +i+ "]: " + C[i] +"\n");
+        }
+ 
+        System.out.print("\n");
+ 
+    }
+ 
+}
+		</pre>
+</div>
+<div class="example-box">
+<h4>شرح الكود</h4>
+<div class="explaining-box">
+<ul>
+<br/>
+<pre data-enlighter-language="java" data-enlighter-lineoffset="9">
+		int N;
+		int[] A;
+		int[] B;
+		int[] C;
+		int k = 0;
+				</pre>
+<li><p>هنا قمنا بتجهيز المتغير <code data-enlighter-language="java">N</code> لتخزين عدد عناصر المصفوفتين <code data-enlighter-language="java">A</code> و <code data-enlighter-language="java">B</code>, و هو أول شيء سيطلب من المستخدم إدخاله.</p></li>
+<li><p>و المصفوفات <code data-enlighter-language="java">A</code> و <code data-enlighter-language="java">B</code> و <code data-enlighter-language="java">C</code> و لم نحدد عدد عناصرهم.</p></li>
+<li><p>و المتغير <code data-enlighter-language="java">k</code> الذي أعطيناه القيمة <span class="number">0</span> كقيمة أولية لأننا سنستخدمه كعداد للوصول إلى عناصر المصفوفة <code data-enlighter-language="java">C</code>.</p></li>
+<br/><br/>
+<pre data-enlighter-language="java" data-enlighter-lineoffset="15">
+		do
+		{
+			System.out.print("Enter the length for vectors ( A ) and ( B ): ");
+			N = input.nextInt();
+		}
+		while ( N  &lt;= 0 );
+				</pre>
+<li><p>هنا سيطلب من المستخدم إدخال عدد عناصر المصفوفتين<code data-enlighter-language="java">A</code> و <code data-enlighter-language="java">B</code>, بعدها سيتم تخزينه في المتغير <code data-enlighter-language="java">N</code>.</p></li>
+<li><p>بعدها سيتم فحص قيمة المتغير <code data-enlighter-language="java">N</code>. إذا كانت أصغر أو تساوي <span class="number">0</span>, سيطلب من المستخدم إدخال العدد من جديد.</p></li>
+<li><p>إذاً هذه الحلقة تضمن أن لا يقوم المستخدم بإدخال عدد أصغر أو يساوي <span class="number">0</span>.</p></li>
+<br/><br/>
+<pre data-enlighter-language="java" data-enlighter-lineoffset="22">
+		A = new int[N];
+		B = new int[N];
+		C = new int[N*2];
+				</pre>
+<li><p>هنا سيتم تحديد عدد عناصر المصفوفات الثلاثة كالتالي:</p></li>
+<ul type="square">
+<li><p>عدد عناصر المصفوفتان <code data-enlighter-language="java">A</code> و <code data-enlighter-language="java">B</code> يساوي قيمة المتغير <code data-enlighter-language="java">N</code>.</p></li>
+<li><p>عدد عناصر المصفوفة <code data-enlighter-language="java">c</code> يساوي عدد عناصر المصفوفتين <code data-enlighter-language="java">A</code> و <code data-enlighter-language="java">B</code> مع بعض, أي يساوي قيمة المتغير <code data-enlighter-language="java">N*2</code>.<br/>
+<span class="note">ملاحظة:</span> عدد عناصر المصفوفة <code data-enlighter-language="java">C</code> يمكن تحديدها بأكثر من طريقة, فمثلاً يمكنك أن تكتب <code data-enlighter-language="java">N+N</code> أو <code data-enlighter-language="java">A.length + B.length</code> بدل <code data-enlighter-language="java">N*2</code>.</p></li>
+</ul>
+<br/><br/>
+<pre data-enlighter-language="java" data-enlighter-lineoffset="28">
+		for (int i=0; i &lt;=N-1; i++)
+		{
+			System.out.print("Enter A[" +i+ "]: ");
+			A[i] = input.nextInt();
+		
+			System.out.print("Enter B[" +i+ "]: ");
+			B[i] = input.nextInt();
+		}
+				</pre>
+<li><p>هنا أنشأنا حلقة تبدأ من <span class="word">index</span> العنصر الأول في كلا المصفوفتين, أي العنصر رقم <span class="number">0</span>, إلى آخر عنصر موجود فيهما و الذي يملك الـ <span class="word">index</span> الأخير, أي <code data-enlighter-language="java">N-1</code>.</p></li>
+<li><p>في كل دورة من دورات الحلقة <code data-enlighter-language="java">i</code> سيطلب من المستخدم إدخال قيمة لعنصر في المصفوفة <code data-enlighter-language="java">A</code>, و قيمة لعنصر في المصفوفة <code data-enlighter-language="java">B</code>.<br/>
+				    فمثلاً, عندما تكون قيمة العداد <code data-enlighter-language="java">i</code> تساوي <span class="number">0</span> , سيطلب منه	إدخال قيمة للعنصر <code data-enlighter-language="java">A[0]</code> و العنصر <code data-enlighter-language="java">B[0]</code>.</p></li>
+<br/><br/>
+<pre data-enlighter-language="java" data-enlighter-lineoffset="39">
+		for (int i=0; i &lt;=N-1; i++)
+		{
+			C[k] = A[i];
+			C[k+1] = B[i];
+		
+			k = k+2;
+		}
+				</pre>
+<li><p>هنا أنشأنا حلقة تبدأ من <span class="word">index</span> العنصر الأول في كل المصفوفات, أي العنصر رقم <span class="number">0</span>, إلى آخر عنصر موجود في المصفوفات و الذي يملك الـ <span class="word">index</span> الأخير, أي <code data-enlighter-language="java">N-1</code>.</p></li>
+<li><p>في كل دورة من دورات الحلقة <code data-enlighter-language="java">i</code> سيحدث التالي في المصفوفة <code data-enlighter-language="java">C</code> من خلال العداد <code data-enlighter-language="java">k</code>:<br/>
+<ul type="square">
+<li><p>سيتم وضع قيمة عنصر المصفوفة <code data-enlighter-language="java">A</code> في عنصر جديد في المصفوفة <code data-enlighter-language="java">C</code>.</p></li>
+<li><p>ثم وضع قيمة عنصر المصفوفة <code data-enlighter-language="java">B</code> في العنصر التالي في المصفوفة <code data-enlighter-language="java">C</code>.</p></li>
+<li><p>ثم سيتم زيادة قيمة المتغير <code data-enlighter-language="java">k</code> إثنين لتجاوز الخانتين السابقتين اللتين تم وضع القيم فيهما.</p></li>
+<li><p>طريقة عمل الكود:</p></li>
+<ul type="circle">
+<li><p>في البداية, قيمة العداد <code data-enlighter-language="java">i</code> تساوي <span class="number">0</span>, لذلك سيتم وضع قيمة العنصر <code data-enlighter-language="java">A[0]</code> في العنصر <code data-enlighter-language="java">C[0]</code>, ثم قيمة العنصر <code data-enlighter-language="java">B[0]</code> في العنصر <code data-enlighter-language="java">C[1]</code>.</p></li>
+<li><p>بعد أن تم إضافة <span class="number">2</span> على قيمة المتغير <code data-enlighter-language="java">k</code> و أصبحت قيمة العداد <code data-enlighter-language="java">i</code> تساوي <span class="number">1</span>, سيتم وضع قيمة العنصر <code data-enlighter-language="java">A[1]</code> في العنصر <code data-enlighter-language="java">C[2]</code>, ثم قيمة العنصر <code data-enlighter-language="java">B[1]</code> في العنصر <code data-enlighter-language="java">C[3]</code>.</p></li>
+<li><p>بعد أن تم إضافة <span class="number">2</span> على قيمة المتغير <code data-enlighter-language="java">k</code> و أصبحت قيمة العداد <code data-enlighter-language="java">i</code> تساوي <span class="number">2</span>, سيتم وضع قيمة العنصر <code data-enlighter-language="java">A[2]</code> في العنصر <code data-enlighter-language="java">C[4]</code>, ثم قيمة العنصر <code data-enlighter-language="java">B[2]</code> في العنصر <code data-enlighter-language="java">C[5]</code>.</p></li>
+<li><p>بعد أن تم إضافة <span class="number">2</span> على قيمة المتغير <code data-enlighter-language="java">k</code> و أصبحت قيمة العداد <code data-enlighter-language="java">i</code> تساوي <span class="number">3</span>, سيتم وضع قيمة العنصر <code data-enlighter-language="java">A[3]</code> في العنصر <code data-enlighter-language="java">C[6]</code>, ثم قيمة العنصر <code data-enlighter-language="java">B[3]</code> في العنصر <code data-enlighter-language="java">C[7]</code>.</p></li>
+<li><p>مهما كان حجم المصفوفات فإن الكود سيعمل بنفس الطريقة.</p></li>
+</ul>
+</ul>
+</p></li></ul>
+<ul class="explain">
+<br/><br/>
+<pre data-enlighter-language="java" data-enlighter-lineoffset="49">
+		for (int i=0; i &lt;=(N*2)-1; i++)
+		{
+			System.out.print("C[" +i+ "]: " + C[i] +"\n");
+		}
+				</pre>
+<li><p>هنا أنشأنا حلقة تبدأ من <span class="word">index</span> العنصر الأول في المصفوفة <code data-enlighter-language="java">C</code> إلى آخر عنصر موجود فيها بهدف عرض قيمة كل عنصر أصبح فيها.</p></li>
+<li><p>في كل دورة من دورات الحلقة <code data-enlighter-language="java">i</code> سيطبع للمستخدم أن العنصر رقم كذا قيمته كذا.</p></li>
+</ul>
+</div>
+</div>
+</article>
+<div id="bottom_ads"></div>
+<div class="next-and-previous-lessons">
+<a class="next-page">
+<span class="next-page-text"></span><span class="cursor">»</span>
+</a>
+<a class="previous-page">
+<span class="cursor">»</span><span class="previous-page-text"></span>
+</a>
+</div>
+</div><!-- end main -->
+</div><!-- end container_row -->
+</div><!-- end container -->
+
+<div id="library_box">
+<h3>دورات</h3>
+<ul>
+<li><a href="../../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
+<li><a href="../index.html"><span>»</span>الخوارزميات</a></li>
+<li><a href="../../sql/index.html"><span>»</span>قواعد البيانات</a></li>
+<li><a href="../../python/index.html"><span>»</span>لغة بايثون</a></li>
+<li><a href="../../java/index.html"><span>»</span>لغة جافا</a></li>
+<li><a href="../../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
+<li><a href="../../swing/index.html"><span>»</span>جافا Swing</a></li>
+<li><a href="../../javafx/index.html"><span>»</span>جافا FX</a></li>
+<li><a href="../../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
+<li><a href="../../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
+</ul>
+<div style="clear:both; padding:20px 0px;"></div>
+<h3>أدوات</h3>
+<ul>
+<li><a href="../../web-editor/index.html"><img src="../../template/images/ic-web-editor.png"/>محرر الويب</a></li>
+<li><a href="../../color-picker/index.html"><img src="../../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
+<li><a href="../../units-converter/index.html"><img src="../../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
+<li><a href="../../ip-analyzer/index.html"><img src="../../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
+</ul>
+<div style="clear:both; padding:10px 0px;"></div> </div>
+<div id="search_box"></div>
+
+<script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
+<script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
+</body>
+
+</html>
