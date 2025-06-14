@@ -1,181 +1,571 @@
-
 <!DOCTYPE html>
-
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="موقع تعليمي مجاني يهتم بعلوم الكمبيوتر و يقدم إليك المعرفة بشكل مبسط و مفصل, و هو المكان المناسب لأي شخص يطمح لأن يصبح مبرمجاً محترفاً و مبدعاً في العالم الرقمي." name="description"/>
 <meta content="Algorithm,Java,c,c++,vb,vb.net,c#,c#.net,Android,HTML,CSS,JavaScript,PHP,SQL,CMD,Linux,Networks,security,hacking,color picker, harmash color picker,تعلم البرمجة من الصفر حتى الإحتراف,أفضل موقع لتعلم البرمجة,تعلم البرمجة من المحترفين,أفضل موقع عربي لتعليم البرمجة,أهم موقع لتعلم البرمجة,تعلم البرمجة ببساطة" name="keywords"/>
-<!-- Google Analytics -->
 
-<script>
-    window.dataLayer = window.dataLayer || [];
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-66898688-2');
-    </script>
-<!-- web css -->
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+  }
 
-<link href="../template-for-special-pages/css/style-2020-6-12.min.css" rel="stylesheet" type="text/css">
-<!-- jquery  -->
-<script src="../template/js/jquery.min.js"></script>
-<!-- web scripts -->
-<script src="../template-for-special-pages/js/screen-adjustment-2020-6-12.min.js"></script>
-<!-- web style -->
-<link href="page-style.css" rel="stylesheet" type="text/css"/>
-<title>أفضل موقع عربي لتعلم البرمجة و الأنظمة و الشبكات مجاناً</title>
-</link></head>
+  body {
+    background-color: #f5f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #3b82f6;
+  }
+
+  nav a {
+    margin: 0 1rem;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .language {
+    margin-left: 1rem;
+    font-weight: 600;
+    color: #374151;
+  }
+
+  .cta-button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .cta-button:hover {
+    background-color: #2563eb;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #eef2ff, #f0f9ff);
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    color: #4b5563;
+  }
+
+  .hero-buttons button {
+    margin: 0 0.5rem;
+  }
+
+  .features {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .features span {
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+  }
+
+  .why-section {
+    padding: 3rem 2rem;
+    background-color: #fff;
+    text-align: center;
+  }
+
+  .why-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .why-grid div {
+    background-color: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f3f4f6;
+  }
+
+  .stats div {
+    text-align: center;
+  }
+
+  .stats h3 {
+    font-size: 1.8rem;
+    color: #3b82f6;
+  }
+
+  footer {
+  background-color: #1f2937; 
+  color: white;  
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;   
+}
+
+.footer-content h1 {  
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;  
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;  
+  margin-top: 0.5rem;
+}
+
+.social-icons img {  
+  width: 30px;  
+  height: 30px;
+}
+
+ 
+.social-icons i {
+  font-size: 2rem;  
+  color: #333;
+}
+
+
+.copyright {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+  
+  .home-methods-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+  }
+
+  .home-method-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: #1f2937;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .home-method-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .home-method-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #3b82f6;
+  }
+
+  .home-logo-box {
+    margin-bottom: 1rem;
+  }
+
+  .home-logo-box img {
+    width: 80px;     height: 80px;     object-fit: contain;
+  }
+
+  .home-method-explaining-box p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+
+  .home-method-explaining-box span {
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 0.4rem 0.8rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  
+  .tools-section {
+    padding: 3rem 2rem;
+    background-color: #fff;
+    text-align: center;
+  }
+
+  .tools-section h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;     margin: 0 auto;
+  }
+
+  .tools-grid a {
+    background-color: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #1f2937;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .tools-grid a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .tools-grid a img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.8rem;
+  }
+
+  .tools-grid a span {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  footer {
+  background-color: #1f2937;  
+  color: white;  
+  padding: 4rem 2rem;  
+  text-align: center;
+  line-height: 1.8;  
+}
+
+ 
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;  
+}
+
+ 
+.footer-grid h4 { 
+  font-size: 3.8rem;  
+  margin-bottom: 1rem; 
+  color: #ffffff;  
+  font-weight: bold;  
+  letter-spacing: 0.05em;  
+}
+
+ 
+.footer-content h1 {  
+  font-size: 2.8rem;  
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;  
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #a0aec0;  
+  font-size: 1.2rem;  
+  transition: color 0.3s ease;  
+}
+
+.footer-nav a:hover {
+  color: #ffffff;  
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;  
+  margin-top: 1rem;  
+}
+
+.social-icons img {
+  width: 35px;  
+  height: 35px;
+}
+
+.social-icons i {
+  font-size: 2.5rem;  
+  color: #a0aec0;  
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: #ffffff;  
+}
+
+ 
+.footer-grid p {
+  line-height: 1.8;   margin-bottom: 1rem; }
+
+.footer-bottom {
+    line-height: 1.8;   margin-top: 1.5rem; }
+
+.footer-bottom > div {
+    margin-bottom: 0.5rem; }
+
+.footer-bottom a {
+    color: #ffffff; }
+</style>
+<title>أفضل موقع عربي لتعلم اساسيات البرمجةالشبكات مجاناً</title>
+</head>
 <body>
-<div id="header">
-<ul>
-<li id="library">المكتبة ▾</li>
-<li id="search"><img src="../template/images/ic_search.png"/></li>
+<header data-aos="fade-down">
+  <div class="logo">majeedev</div>
+  <div>
+    <span class="language">الموقع الرسمي</span>
+    <a href="https://majeedev.github.io/portfolio/" target="_blank" class="cta-button" style="text-decoration: none;">
+   <i class="fas fa-globe"></i>
+    </a>
+  </div>
+</header>
 
+<section class="hero">
+  <h1>أفضل موقع عربي لتعلم  اساسات البرمجة  مجاناً</h1>
+  <p>
+   تعلم البرمجة من الصفر إلى الاحتراف، مع محتوى متكامل يغطي كل لغة وتقنية، وتجارب عملية تفاعلية تساعدك على بناء مهارات حقيقية
+   
+  </p>
+  
+</section>
 
-</ul>
-</div>
-<div id="container">
-<div id="content">
-<h1>أفضل موقع عربي لتعلم البرمجة و الأنظمة و الشبكات مجاناً</h1>
 <div class="home-methods-container">
-<p class="center" style="padding: 0px 2%;">نعمل دائماً على إضافة دروس جديدة و كلما أنهينا دورة نبدأ بدورة جديدة على
-        الفور<br/>
-        عند إضافة أي درس جديد نبلغكم على حساب الموقع في تويتر و فيسبوك و تيليغرام</p>
-<p class="center" style="padding: 0px 2%;">حسابات الموقع تجدها في أسفل الصفحة</p>
-<br/>
-<!-- Database -->
-<a class="home-method-box" href="../sql/index.html">
-<h3>قواعد البيانات</h3>
-<div class="home-logo-box">
-<img src="pictures/database-management.png"/>
+  <a class="home-method-box" href="../sql/index.html" data-aos="zoom-in">
+    <h3>قواعد البيانات</h3>
+    <div class="home-logo-box">
+      <img src="pictures/database-management.png"/>
+    </div>
+    <div class="home-method-explaining-box">
+      <p>سلسلة من المفاهيم و الدروس الشاملة لقواعد البيانات ستتعلم منها كيفية تصميم قواعد بيانات من الصفر و كتابة إستعلامات و غير ذلك من الأمور المهمة.</p>
+      <span>إبدأ الدرس »</span>
+    </div>
+  </a>
+  <a class="home-method-box" href="../algorithms/algorithms-introduction/index.html" data-aos="zoom-in" data-aos-delay="100">
+    <h3 class="home-method-title ar">الخوارزميات</h3>
+    <div class="home-logo-box">
+      <img src="pictures/algo-icon.png"/>
+    </div>
+    <div class="home-method-explaining-box">
+      <p>مدخل لعالم البرمجة حيث تتعلم منها المفاهيم الأساسية المشتركة بين جميع لغات البرمجة و منها تتعلم كيف تحلل و تكتب الكود بأكثر من طريقة.</p>
+      <span>إبدأ الدرس »</span>
+    </div>
+  </a>
+  <a class="home-method-box" href="../algorithms-and-data-structure/overview/index.html" data-aos="zoom-in" data-aos-delay="200">
+    <h3 class="home-method-title ar">تمارين خوارزميات و هياكل البيانات</h3>
+    <div class="home-logo-box">
+      <img src="pictures/algorithms-and-data-structure.png"/>
+    </div>
+    <div class="home-method-explaining-box">
+      <p>إذا أردت اختبار نفسك في البرمجة، فهذه الدورة هي ما تبحث عنه بالضبط حيث تضمن تمارين متقدمة و متنوعة في الخوارزميات و هياكل البيانات مع الحلول.</p>
+      <span>إبدأ الدرس »</span>
+    </div>
+  </a>
+  <a class="home-method-box" href="../python/index.html" data-aos="zoom-in" data-aos-delay="300">
+    <h3>Python</h3>
+    <div class="home-logo-box">
+      <img src="pictures/python.png"/>
+    </div>
+    <div class="home-method-explaining-box">
+      <p>لغة برمجة يمكن إستخدامها في عدة مجالات مثل إنشاء تطبيقات، ألعاب، سكريبتات للتعامل مع ملفات أنظمة التشغيل و هي مهمة للمهتمين بالإختراق.</p>
+      <span>إبدأ الدرس »</span>
+    </div>
+  </a>
+  <a class="home-method-box" href="../java/index.html" data-aos="zoom-in" data-aos-delay="400">
+    <h3>JAVA</h3>
+    <div class="home-logo-box">
+      <img src="pictures/Apps-Java-icon.png"/>
+    </div>
+    <div class="home-method-explaining-box">
+      <p>واحدة من أشهر لغات البرمجة المستخدمة حالياً و تستخدم لإنشاء تطبيقات للكمبيوتر، تطبيقات للهواتف التي تعمل بنظام إندرويد، ألعاب إلخ.</p>
+      <span>إبدأ الدرس »</span>
+    </div>
+  </a>
+  <a class="home-method-box" href="../cplusplus/index.html" data-aos="zoom-in" data-aos-delay="500">
+    <h3>++C</h3>
+    <div class="home-logo-box">
+      <img src="pictures/c-plus-plus.png"/>
+    </div>
+    <div class="home-method-explaining-box">
+      <p>من أقوى و أشهر لغات البرمجة المستخدمة في بناء أنظمة التشغيل، تطبيقات و ألعاب الكمبيوتر، ألعاب الإندرويد و الأيفون إلخ.</p>
+      <span>إبدأ الدرس »</span>
+    </div>
+  </a>
+  <a class="home-method-box" href="../swing/index.html" data-aos="zoom-in" data-aos-delay="600">
+    <h3>JAVA Swing</h3>
+    <div class="home-logo-box">
+      <img src="pictures/java-swing-icon.png"/>
+    </div>
+    <div class="home-method-explaining-box">
+      <p>إطار جاهز في جافا يمكنك إستخدامه لإنشاء تطبيقات و ألعاب سطح المكتب بالإعتماد على لغة جافا</p>
+      <span>إبدأ الدرس »</span>
+    </div>
+  </a>
+  <a class="home-method-box" href="../javafx/index.html" data-aos="zoom-in" data-aos-delay="700">
+    <h3>JavaFX</h3>
+    <div class="home-logo-box">
+      <img src="pictures/javafx-icon.png"/>
+    </div>
+    <div class="home-method-explaining-box">
+      <p>أقوى و آخر إطار في جافا يمكنك إستخدامه لإنشاء تطبيقات و ألعاب سطح المكتب بالإعتماد على لغة جافا</p>
+      <span>إبدأ الدرس »</span>
+    </div>
+  </a>
+  <a class="home-method-box" href="../learn-typing/index.html" data-aos="zoom-in" data-aos-delay="800">
+    <h3 class="home-method-title ar">الطباعة على الكمبيوتر</h3>
+    <div class="home-logo-box">
+      <img src="pictures/typing.png"/>
+    </div>
+    <div class="home-method-explaining-box">
+      <p>تعلم الطباعة على الحاسوب بدون النظر إلى لوحة المفاتيح و بدون تحميل أي برنامج.</p>
+      <span>إبدأ الدرس »</span>
+    </div>
+  </a>
 </div>
-<div class="home-method-explaining-box">
-<p>سلسلة من المفاهيم و الدروس الشاملة لقواعد البيانات ستتعلم منها كيفية تصميم قواعد بيانات من الصفر و كتابة إستعلامات و غير ذلك من الأمور المهمة.</p>
-<span>إبدأ الدرس »</span>
-</div>
-</a>
-<!-- Algorithm -->
-<a class="home-method-box" href="../algorithms/algorithms-introduction/index.html">
-<h3 class="home-method-title ar">الخوارزميات</h3>
-<div class="home-logo-box">
-<img src="pictures/algo-icon.png"/>
-</div>
-<div class="home-method-explaining-box">
-<p>مدخل لعالم البرمجة حيث تتعلم منها المفاهيم الأساسية المشتركة بين جميع لغات البرمجة و منها تتعلم كيف تحلل و تكتب الكود بأكثر من طريقة.</p>
-<span>إبدأ الدرس »</span>
-</div>
-</a>
-<!-- Algorithm & Data Structure -->
-<a class="home-method-box" href="../algorithms-and-data-structure/overview/index.html">
-<h3 class="home-method-title ar">تمارين خوارزميات و هياكل البيانات</h3>
-<div class="home-logo-box">
-<img src="pictures/algorithms-and-data-structure.png"/>
-</div>
-<div class="home-method-explaining-box">
-<p>إذا أردت اختبار نفسك في البرمجة, فهذه الدورة هي ما تبحث عنه بالضبط حيث تضمن تمارين متقدمة و متنوعة في
-                الخوارزميات و هياكل البيانات مع الحلول.</p>
-<span>إبدأ الدرس »</span>
-</div>
-</a>
-<!-- Python -->
-<a class="home-method-box" href="../python/index.html">
-<h3>Python</h3>
-<div class="home-logo-box">
-<img src="pictures/python.png"/><!--<img-->
-</div>
-<div class="home-method-explaining-box">
-<p>لغة برمجة يمكن إستخدامها في عدة مجالات مثل إنشاء تطبيقات, ألعاب, سكريبتات للتعامل مع ملفات أنظمة التشغيل
-                و هي مهمة للمهتمين بالإختراق</p>
-<span>إبدأ الدرس »</span>
-</div>
-</a>
-<!-- Java -->
-<a class="home-method-box" href="../java/index.html">
-<h3>JAVA</h3>
-<div class="home-logo-box">
-<img src="pictures/Apps-Java-icon.png"/>
-</div>
-<div class="home-method-explaining-box">
-<p>واحدة من أشهر لغات البرمجة المستخدمة حالياً و تستخدم لإنشاء تطبيقات للكمبيوتر, تطبيقات للهواتف التي تعمل
-                بنظام إندرويد, ألعاب إلخ..</p>
-<span>إبدأ الدرس »</span>
-</div>
-</a>
-<!-- C++ -->
-<a class="home-method-box" href="../cplusplus/index.html">
-<h3>++C</h3>
-<div class="home-logo-box">
-<img src="pictures/c-plus-plus.png"/>
-</div>
-<div class="home-method-explaining-box">
-<p>من أقوى و أشهر لغات البرمجة المستخدمة في بناء أنظمة التشغيل, تطبيقات و ألعاب الكمبيوتر, ألعاب الإندرويد و الأيفون إلخ..</p>
-<span>إبدأ الدرس »</span>
-</div>
-</a>
-<!-- Swing -->
-<a class="home-method-box" href="../swing/index.html">
-<h3>JAVA Swing</h3>
-<div class="home-logo-box">
-<img src="pictures/java-swing-icon.png"/>
-</div>
-<div class="home-method-explaining-box">
-<p>إطار جاهز في جافا يمكنك إستخدامه لإنشاء تطبيقات و ألعاب سطح المكتب بالإعتماد على لغة جافا</p>
-<span>إبدأ الدرس »</span>
-</div>
-</a>
-<!-- JavaFX -->
-<a class="home-method-box" href="../javafx/index.html">
-<h3>JavaFX</h3>
-<div class="home-logo-box">
-<img src="pictures/javafx-icon.png"/>
-</div>
-<div class="home-method-explaining-box">
-<p>أقوى و آخر إطار في جافا يمكنك إستخدامه لإنشاء تطبيقات و ألعاب سطح المكتب بالإعتماد على لغة جافا</p>
-<span>إبدأ الدرس »</span>
-</div>
-</a>
-<!-- typing App -->
-<a class="home-method-box" href="../learn-typing/index.html">
-<h3 class="home-method-title ar">الطباعة على الكمبيوتر</h3>
-<div class="home-logo-box">
-<img src="pictures/typing.png"/>
-</div>
-<div class="home-method-explaining-box">
-<p>تعلم الطباعة على الحاسوب بدون النظر إلى لوحة المفاتيح و بدون تحميل أي برنامج.</p>
-<span>إبدأ الدرس »</span>
-</div>
-</a>
-</div>
-</div>
-</div>
-<div id="library_box">
-<h3>دورات</h3>
-<ul>
-<li><a href="../learn-typing/index.html"><span>»</span>تعلم الطباعة</a></li>
-<li><a href="../algorithms/index.html"><span>»</span>الخوارزميات</a></li>
-<li><a href="../sql/index.html"><span>»</span>قواعد البيانات</a></li>
-<li><a href="../python/index.html"><span>»</span>لغة بايثون</a></li>
-<li><a href="../java/index.html"><span>»</span>لغة جافا</a></li>
-<li><a href="../cplusplus/index.html"><span>»</span>لغة ++C</a></li>
-<li><a href="../swing/index.html"><span>»</span>جافا Swing</a></li>
-<li><a href="../javafx/index.html"><span>»</span>جافا FX</a></li>
-<li><a href="../algorithms-and-data-structure/index.html"><span>»</span>الخوارزميات و هياكل البيانات</a></li>
-<li><a href="../quran/index.html"><span>»</span>القرآن الكريم و الأذكار</a></li>
-</ul>
-<div style="clear:both; padding:20px 0px;"></div>
-<h3>أدوات</h3>
-<ul>
-<li><a href="../web-editor/index.html"><img src="../template/images/ic-web-editor.png"/>محرر الويب</a></li>
-<li><a href="../color-picker/index.html"><img src="../template/images/ic-color-picker.png"/>نظام الألوان</a></li>
-<li><a href="../units-converter/index.html"><img src="../template/images/ic-units-converter.png"/>محول الوحدات</a></li>
-<li><a href="../ip-analyzer/index.html"><img src="../template/images/ic-ip-analyzer.png"/>محلل عناوين الشبكات</a></li>
-</ul>
-<div style="clear:both; padding:10px 0px;"></div> </div>
-<div id="search_box"></div>
+
+<section class="tools-section">
+  <h3>أدوات</h3>
+  <div class="tools-grid">
+    <a href="../web-editor/index.html" data-aos="flip-up">
+      <img src="../template/images/ic-web-editor.png"/>
+      <span>محرر الويب</span>
+    </a>
+    <a href="../color-picker/index.html" data-aos="flip-up" data-aos-delay="100">
+      <img src="../template/images/ic-color-picker.png"/>
+      <span>نظام الألوان</span>
+    </a>
+    <a href="../units-converter/index.html" data-aos="flip-up" data-aos-delay="200">
+      <img src="../template/images/ic-units-converter.png"/>
+      <span>محول الوحدات</span>
+    </a>
+    <a href="../ip-analyzer/index.html" data-aos="flip-up" data-aos-delay="300">
+      <img src="../template/images/ic-ip-analyzer.png"/>
+      <span>محلل عناوين الشبكات</span>
+    </a>
+  </div>
+</section>
+
+<footer data-aos="fade-up">
+  <div class="footer-grid">
+    <div>
+      <h4>majeedev</h4>
+      <p>نمنح المتعلمين حول العالم تعليمًا عالي الجودة وتجارب تعليمية مبتكرة.</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+    <div>
+          © 2025 majeedev. جميع الحقوق محفوظة. 
+    </div> 
+
+    <div style="display: flex; gap: 1rem; font-size: 1.2rem;">
+      <a href="https://github.com/majeedev" target="_blank" aria-label="GitHub" style="color: #ffffff;">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://majeedev.github.io/" target="_blank" aria-label="Portfolio Website" style="color: #ffffff;">
+        <i class="fas fa-globe"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
-<script src="page-script.js"></script>
 </html>

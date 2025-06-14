@@ -149,28 +149,92 @@
       color: #3b82f6;
     }
 
-    footer {
-      background-color: #1f2937;
-      color: white;
-      padding: 2rem;
-    }
+  footer {
+  background-color: #1f2937;  
+  color: white;  
+  padding: 4rem 2rem;  
+  text-align: center;
+  line-height: 1.8;  
+}
 
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-    }
+ 
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;  
+}
 
-    .footer-grid h4 {
-      margin-bottom: 1rem;
-    }
+ 
+.footer-grid h4 { 
+  font-size: 3.8rem;  
+  margin-bottom: 1rem; 
+  color: #ffffff;  
+  font-weight: bold;  
+  letter-spacing: 0.05em;  
+}
 
-    .footer-bottom {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #9ca3af;
-    }
+ 
+.footer-content h1 {  
+  font-size: 2.8rem;  
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;  
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #a0aec0;  
+  font-size: 1.2rem;  
+  transition: color 0.3s ease;  
+}
+
+.footer-nav a:hover {
+  color: #ffffff;  
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;  
+  margin-top: 1rem;  
+}
+
+.social-icons img {
+  width: 35px;  
+  height: 35px;
+}
+
+.social-icons i {
+  font-size: 2.5rem;  
+  color: #a0aec0;  
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: #ffffff;  
+}
+
+ 
+.footer-grid p {
+  line-height: 1.8;   margin-bottom: 1rem; }
+
+.footer-bottom {
+    line-height: 1.8;   margin-top: 1.5rem; }
+
+.footer-bottom > div {
+    margin-bottom: 0.5rem; }
+
+.footer-bottom a {
+    color: #ffffff; }
   </style>
 </head>
 <body>
@@ -206,7 +270,7 @@
 </section>
 
 <section class="why-section" data-aos="fade-up">
-  <h2>لماذا تختار منصتنا؟</h2>
+  <h2>لماذا اختيار هذه المنصة؟</h2>
   <div class="why-grid">
     <div>
       <strong>منهج شامل</strong>
@@ -254,23 +318,22 @@
       <h4>majeedev</h4>
       <p>نمنح المتعلمين حول العالم تعليمًا عالي الجودة وتجارب تعليمية مبتكرة.</p>
     </div>
-   
   </div>
 
   <div class="footer-bottom" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
-  <div>
-    &#169; 2025 majeedev. All rights reserved.
-  </div>
-  <div style="display: flex; gap: 1rem; font-size: 1.2rem;">
-    <a href="https://github.com/majeedev" target="_blank" aria-label="GitHub" style="color: #ffffff;">
-      <i class="fab fa-github"></i>
-    </a>
-    <a href="https://majeedev.github.io/" target="_blank" aria-label="Portfolio Website" style="color: #ffffff;">
-      <i class="fas fa-globe"></i>
-    </a>
-  </div>
-</div>
+    <div>
+          © 2025 majeedev. جميع الحقوق محفوظة. 
+    </div> 
 
+    <div style="display: flex; gap: 1rem; font-size: 1.2rem;">
+      <a href="https://github.com/majeedev" target="_blank" aria-label="GitHub" style="color: #ffffff;">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://majeedev.github.io/" target="_blank" aria-label="Portfolio Website" style="color: #ffffff;">
+        <i class="fas fa-globe"></i>
+      </a>
+    </div>
+  </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

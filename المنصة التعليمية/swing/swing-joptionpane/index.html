@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 
 <html lang="ar">
-
 <!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
@@ -10,7 +9,6 @@
 <meta content="" name="description"/>
 <meta content="" name="keywords"/>
 <!-- Google Analytics -->
-
 <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -21,7 +19,6 @@
     gtag('config', 'UA-66898688-2');
     </script>
 <!-- web style -->
-
 <link href="../../template/css/style-2020-6-21.min.css" rel="stylesheet" type="text/css"/>
 <!-- jquery -->
 <script src="../../template/js/jquery.min.js"></script>
@@ -29,7 +26,7 @@
 <script src="../../template/js/screen-adjustment-2020-6-18.min.js"></script>
 <!-- Include EnlighterJS Styles + MooTools + Initialize EnlighterJS  -->
 <link href="../../template/css/EnlighterJS.min.css" rel="stylesheet" type="text/css"/>
-<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS">
+<meta content="Advanced javascript based syntax highlighting" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-theme="Enlighter" name="EnlighterJS"/>
 <title>Swing - الكلاس JOptionPane</title>
 <style>
     #hsoub_ad {
@@ -76,15 +73,12 @@
         color: black;
     }
     </style>
-</meta></head>
+</head>
 <body>
 <div id="header">
 <ul>
 <li id="menu"><img src="../../template/images/ic_menu.png"/></li>
 <li id="library">المكتبة ▾</li>
-<li id="search"><img src="../../template/images/ic_search.png"/></li>
-
-
 
 </ul>
 </div>
@@ -167,7 +161,6 @@
 <span class="cursor">»</span><span class="previous-page-text"></span>
 </a>
 </div>
-
 <h1><span class="session">Java Swing</span>الكلاس <code data-enlighter-language="java">JOptionPane</code></h1>
 <article>
 <h2>مقدمة</h2>
@@ -410,32 +403,32 @@ implements Accessible
 <article>
 <h2>أشكال الـ <code data-enlighter-language="java">JOptionPane</code></h2>
 <br/>
-<img src="joptionpane_plain_message_dialog.png">
+<img src="joptionpane_plain_message_dialog.png"/>
 <pre data-enlighter-language="java" data-enlighter-linenumbers="false">
 JOptionPane.showMessageDialog(null, "This is a plain message", "Plain Message", JOptionPane.PLAIN_MESSAGE);
 	</pre>
 <br/><br/>
-<img src="joptionpane_information_message_dialog.png">
+<img src="joptionpane_information_message_dialog.png"/>
 <pre data-enlighter-language="java" data-enlighter-linenumbers="false">
 JOptionPane.showMessageDialog(null, "This is an information message", "Information Message", JOptionPane.INFORMATION_MESSAGE);
 	</pre>
 <br/><br/>
-<img src="joptionpane_warning_message_dialog.png">
+<img src="joptionpane_warning_message_dialog.png"/>
 <pre data-enlighter-language="java" data-enlighter-linenumbers="false">
 JOptionPane.showMessageDialog(null, "This is a warning message", "Warning Message", JOptionPane.WARNING_MESSAGE);
 	</pre>
 <br/><br/>
-<img src="joptionpane_error_message_dialog.png">
+<img src="joptionpane_error_message_dialog.png"/>
 <pre data-enlighter-language="java" data-enlighter-linenumbers="false">
 JOptionPane.showMessageDialog(null, "This is an error message", "Error Message", JOptionPane.ERROR_MESSAGE);
 	</pre>
 <br/><br/>
-<img src="joptionpane_question_message_dialog.png">
+<img src="joptionpane_question_message_dialog.png"/>
 <pre data-enlighter-language="java" data-enlighter-linenumbers="false">
 JOptionPane.showMessageDialog(null, "This is a question message", "Quesiton Message", JOptionPane.QUESTION_MESSAGE);
 	</pre>
 <br/><br/>
-<img src="joptionpane_confirm_dialog_yes_no_cancel.png">
+<img src="joptionpane_confirm_dialog_yes_no_cancel.png"/>
 <pre data-enlighter-language="java" data-enlighter-linenumbers="false">
 JOptionPane.showConfirmDialog(null,
                               "You are going to delete you history.\nAre you sure?",
@@ -444,7 +437,7 @@ JOptionPane.showConfirmDialog(null,
                               JOptionPane.WARNING_MESSAGE);
 	</pre>
 <br/><br/>
-<img src="joptionpane_confirm_dialog_yes_no.png">
+<img src="joptionpane_confirm_dialog_yes_no.png"/>
 <pre data-enlighter-language="java" data-enlighter-linenumbers="false">
 JOptionPane.showConfirmDialog(null,
                               "Do you like programming?",
@@ -453,7 +446,7 @@ JOptionPane.showConfirmDialog(null,
                               JOptionPane.QUESTION_MESSAGE);
 	</pre>
 <br/><br/>
-<img src="joptionpane_confirm_dialog_ok_cancel.png">
+<img src="joptionpane_confirm_dialog_ok_cancel.png"/>
 <pre data-enlighter-language="java" data-enlighter-linenumbers="false">
 JOptionPane.showConfirmDialog(null,
                               "Close The program now?",
@@ -462,17 +455,17 @@ JOptionPane.showConfirmDialog(null,
                               JOptionPane.WARNING_MESSAGE);
 	</pre>
 <br/><br/>
-<img src="joptionpane_input_dialog_with_text_field.png">
+<img src="joptionpane_input_dialog_with_text_field.png"/>
 <pre data-enlighter-language="java" data-enlighter-linenumbers="false">
 JOptionPane.showInputDialog(null, "Enter value:", "", JOptionPane.PLAIN_MESSAGE);
 	</pre>
 <br/><br/>
-<img src="joptionpane_input_dialog_with_combo_box.png">
+<img src="joptionpane_input_dialog_with_combo_box.png"/>
 <pre data-enlighter-language="java" data-enlighter-linenumbers="false">
 Object[] values = {"java", "css", "c++", "android"};
 JOptionPane.showInputDialog(null, "Select value", "", JOptionPane.PLAIN_MESSAGE, null, values, values[0]);
 	</pre>
-</img></img></img></img></img></img></img></img></img></img></article>
+</article>
 <article>
 <h2>أمثلة شاملة</h2>
 <br/>
@@ -506,7 +499,6 @@ JOptionPane.showInputDialog(null, "Select value", "", JOptionPane.PLAIN_MESSAGE,
 </div><!-- end main -->
 </div><!-- end container_row -->
 </div><!-- end container -->
-
 <div id="library_box">
 <h3>دورات</h3>
 <ul>
@@ -531,9 +523,7 @@ JOptionPane.showInputDialog(null, "Select value", "", JOptionPane.PLAIN_MESSAGE,
 </ul>
 <div style="clear:both; padding:10px 0px;"></div> </div>
 <div id="search_box"></div>
-
 <script src="../../template/js/MooTools-Core-1.6.0.min.js" type="text/javascript"></script>
 <script src="../../template/js/EnlighterJS.min.js" type="text/javascript"></script>
 </body>
-
 </html>
